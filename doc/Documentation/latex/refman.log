@@ -1,0 +1,5492 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.4)  11 SEP 2011 14:01
+entering extended mode
+ %&-line parsing enabled.
+**refman.tex
+(./refman.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/bk10.clo
+File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf-texlive/tex/latex/tools/multicol.sty
+Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
+\c@tracingmulticols=\count89
+\mult@box=\box26
+\multicol@leftmargin=\dimen105
+\c@unbalance=\count90
+\c@collectmore=\count91
+\doublecol@number=\count92
+\multicoltolerance=\count93
+\multicolpretolerance=\count94
+\full@width=\dimen106
+\page@free=\dimen107
+\premulticols=\dimen108
+\postmulticols=\dimen109
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box27
+\last@line=\box28
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count95
+\c@finalcolumnbadness=\count96
+\last@try=\dimen110
+\multicolovershoot=\dimen111
+\multicolundershoot=\dimen112
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+)
+(/usr/share/texmf-texlive/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count97
+\float@exts=\toks15
+\float@box=\box52
+\@float@everytoks=\toks16
+\@floatcapt=\box53
+)
+(/usr/share/texmf-texlive/tex/latex/listings/listings.sty
+\lst@mode=\count98
+\lst@gtempboxa=\box54
+\lst@token=\toks17
+\lst@length=\count99
+\lst@currlwidth=\dimen113
+\lst@column=\count100
+\lst@pos=\count101
+\lst@lostspace=\dimen114
+\lst@width=\dimen115
+\lst@newlines=\count102
+\lst@lineno=\count103
+\lst@maxwidth=\dimen116
+
+(/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count104
+\lst@skipnumbers=\count105
+\lst@framebox=\box55
+)
+(/usr/share/texmf-texlive/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texmf-texlive/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
+
+(/usr/share/texmf-texlive/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen117
+\extrarowheight=\dimen118
+\NC@list=\toks18
+\extratabsurround=\skip45
+\backup@length=\skip46
+)
+\everycr=\toks19
+\minrowclearance=\skip47
+)
+LaTeX Info: Redefining \color on input line 702.
+\rownum=\count106
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texmf-texlive/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/share/texmf-texlive/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+)
+(/usr/share/texmf-texlive/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)
+(/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2009/10/09 v6.79a Hypertext links for LaTeX
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/hycolor.sty
+Package: hycolor 2009/10/02 v1.5 Code for color options of hyperref/bookmark (H
+O)
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty
+Package: xcolor-patch 2009/10/02 xcolor patch
+))
+\@linkdim=\dimen119
+\Hy@linkcounter=\count107
+\Hy@pagecounter=\count108
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)
+(/usr/share/texmf-texlive/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
+t (HO)
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 2864.
+Package hyperref Info: Option `unicode' set `true' on input line 2864.
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/puenc.def
+File: puenc.def 2009/10/09 v6.79a Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 2975.
+Package hyperref Info: Link nesting OFF on input line 2980.
+Package hyperref Info: Hyper index ON on input line 2983.
+Package hyperref Info: Plain pages OFF on input line 2990.
+Package hyperref Info: Backreferencing ON on input line 2993.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3191.
+(/usr/share/texmf-texlive/tex/latex/hyperref/backref.sty
+Package: backref 2006/09/05 v1.28 Bibliographical back referencing
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 3428.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bitset.sty
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/intcalc.sty
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bigintcalc.sty
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2009/09/23 v0.6 LuaTeX support for pdfTeX utility functions
+ (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO
+)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)))
+\Fld@menulength=\count109
+\Field@Width=\dimen120
+\Fld@charsize=\dimen121
+\Field@toks=\toks20
+Package hyperref Info: Hyper figures OFF on input line 4377.
+Package hyperref Info: Link nesting OFF on input line 4382.
+Package hyperref Info: Hyper index ON on input line 4385.
+Package hyperref Info: backreferencing ON on input line 4390.
+Package hyperref Info: Link coloring ON on input line 4395.
+Package hyperref Info: Link coloring with OCG OFF on input line 4402.
+Package hyperref Info: PDF/A mode OFF on input line 4407.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+)
+\Hy@abspage=\count110
+\c@Item=\count111
+\c@Hfootnote=\count112
+)
+*hyperref using driver hpdftex*
+(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
+\Fld@listcount=\count113
+)
+(/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
+
+(/usr/share/texmf-texlive/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texmf-texlive/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texmf-texlive/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/share/texmf-texlive/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texmf-texlive/tex/latex/psnfss/mathptmx.sty
+Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
+LaTeX Info: Redefining \hbar on input line 50.
+)
+(/usr/share/texmf-texlive/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/share/texmf-texlive/tex/latex/psnfss/courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+) (./doxygen.sty
+Package: doxygen 
+
+(/usr/share/texmf-texlive/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count114
+\calc@Bcount=\count115
+\calc@Adimen=\dimen122
+\calc@Bdimen=\dimen123
+\calc@Askip=\skip48
+\calc@Bskip=\skip49
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count116
+\calc@Cskip=\skip50
+)
+(/usr/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip51
+\f@ncyO@elh=\skip52
+\f@ncyO@erh=\skip53
+\f@ncyO@olh=\skip54
+\f@ncyO@orh=\skip55
+\f@ncyO@elf=\skip56
+\f@ncyO@erf=\skip57
+\f@ncyO@olf=\skip58
+\f@ncyO@orf=\skip59
+)
+(/usr/share/texmf-texlive/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip60
+\LTright=\skip61
+\LTpre=\skip62
+\LTpost=\skip63
+\LTchunksize=\count117
+\LTcapwidth=\dimen124
+\LT@head=\box56
+\LT@firsthead=\box57
+\LT@foot=\box58
+\LT@lastfoot=\box59
+\LT@cols=\count118
+\LT@rows=\count119
+\c@LT@tables=\count120
+\c@LT@chunks=\count121
+\LT@p@ftn=\toks23
+)
+(/usr/share/texmf-texlive/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks24
+\verbatim@line=\toks25
+\verbatim@in@stream=\read1
+)
+(/usr/share/texmf-texlive/tex/latex/sectsty/sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+)
+(/usr/share/texmf-texlive/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2009/09/04 v2.3d parameterised ToC, etc., typesetting
+
+
+Package tocloft Note: The document has chapter divisions.
+
+\cftparskip=\skip64
+\cftbeforetoctitleskip=\skip65
+\cftaftertoctitleskip=\skip66
+\cftbeforepartskip=\skip67
+\cftpartnumwidth=\skip68
+\cftpartindent=\skip69
+\cftbeforechapskip=\skip70
+\cftchapindent=\skip71
+\cftchapnumwidth=\skip72
+\cftbeforesecskip=\skip73
+\cftsecindent=\skip74
+\cftsecnumwidth=\skip75
+\cftbeforesubsecskip=\skip76
+\cftsubsecindent=\skip77
+\cftsubsecnumwidth=\skip78
+\cftbeforesubsubsecskip=\skip79
+\cftsubsubsecindent=\skip80
+\cftsubsubsecnumwidth=\skip81
+\cftbeforeparaskip=\skip82
+\cftparaindent=\skip83
+\cftparanumwidth=\skip84
+\cftbeforesubparaskip=\skip85
+\cftsubparaindent=\skip86
+\cftsubparanumwidth=\skip87
+\cftbeforeloftitleskip=\skip88
+\cftafterloftitleskip=\skip89
+\cftbeforefigskip=\skip90
+\cftfigindent=\skip91
+\cftfignumwidth=\skip92
+\c@lofdepth=\count122
+\c@lotdepth=\count123
+\cftbeforelottitleskip=\skip93
+\cftafterlottitleskip=\skip94
+\cftbeforetabskip=\skip95
+\cfttabindent=\skip96
+\cfttabnumwidth=\skip97
+)
+\tmplength=\skip98
+ (/usr/share/texmf-texlive/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)))
+(/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+)
+\@indexfile=\write3
+\openout3 = `refman.idx'.
+
+
+Writing index file refman.idx
+No file refman.aux.
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 38.
+(/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 38.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count124
+\scratchdimen=\dimen125
+\scratchbox=\box60
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen126
+\MPnumerator=\count128
+\everyMPtoPDFconversion=\toks27
+)
+\c@lstlisting=\count129
+Package hyperref Info: Link coloring ON on input line 38.
+ (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+\c@section@level=\count130
+)
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
+\@outlinefile=\write4
+\openout4 = `refman.out'.
+
+\AtBeginShipoutBox=\box61
+\big@size=\dimen127
+Package hyperref Info: Option `pageanchor' set `false' on input line 39.
+ [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 52.
+\tf@toc=\write5
+\openout5 = `refman.toc'.
+
+ [1] [2
+
+]
+Package hyperref Info: Option `pageanchor' set `true' on input line 55.
+
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 56.
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
+(Font)              scaled to size 18.66588pt on input line 56.
+LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
+(Font)              scaled to size 22.39185pt on input line 56.
+
+(./_div_win_explanation.tex
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 20.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Underfull \vbox (badness 6741) has occurred while \output is active []
+
+ [1
+
+])
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 60.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 60.
+
+[2]
+Chapter 2.
+(./c_kernel_explanation.tex) [3
+
+] [4
+
+]
+Chapter 3.
+(./_core_examples.tex [5]
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 65
+.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 65
+.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 65
+.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 65
+.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 65.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+) [6] [7] [8
+
+]
+Chapter 4.
+(./_process_explanation.tex [9]
+Overfull \hbox (9.09552pt too wide) in paragraph at lines 59--60
+[]\T1/ptm/m/n/10 Sleeping a Pro-cess: A Pro-cess can be sent to sleep by call-i
+ng the [][]cSig-nal::Signal(SIGNAL
+ []
+
+) [10]
+Chapter 5.
+(./_render_object_explanation.tex) [11
+
+] [12
+
+]
+Chapter 6.
+(./_matrix4_explanation.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14])
+[15] [16
+
+]
+Chapter 7.
+(./_file_handler_explanation.tex) [17] [18
+
+]
+Chapter 8.
+(./_input_system_explanation.tex) [19] [20
+
+]
+Chapter 9.
+(./_audio.tex) [21] [22
+
+]
+Chapter 10.
+(./_signal_explanation.tex
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 10.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)) [23] [24
+
+]
+Chapter 11.
+(./_collision_object_examples.tex
+Overfull \hbox (43.80025pt too wide) in paragraph at lines 21--21
+[]  \T1/pcr/m/n/8 cCollisionList* lpList=_COLLISION_HANDLER->GenerateCollisionL
+ist(mpHullColl);//[] 
+ []
+
+) [25] [26
+
+]
+Chapter 12.
+(./_render_node_explanation.tex) [27] [28
+
+]
+Chapter 13.
+(./_i_m_f_files.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29])
+[30]
+Chapter 14.
+(./_macro_list.tex
+Overfull \hbox (25.95673pt too wide) in paragraph at lines 14--14
+[]\T1/ptm/m/n/10 Function for load-ing a file. Takes the file-name as an in-put
+. Same as _-LOAD(FileName); 
+ []
+
+[31
+
+]
+Overfull \hbox (2.58693pt too wide) in paragraph at lines 34--34
+[]\T1/ptm/m/n/10 Function telling the sys-tem to used the fixed func-tion pipel
+ine and not use shaders. 
+ []
+
+[32]) [33] [34
+
+]
+Chapter 15.
+(./_settings_list.tex
+Overfull \hbox (2.40788pt too wide) in paragraph at lines 9--10
+[]\T1/ptm/m/n/10 WT_-COLLISION_-HANDLER_-TYPE WT_-COLLISION_-HANDLER_-TYPE_-
+ []
+
+
+Overfull \hbox (7.2274pt too wide) in paragraph at lines 10--10
+\T1/ptm/m/n/10 set to ei-ther WT_-COLLISION_-HANDLER_-TYPE_-TYPE or WT_-COLLISI
+ON_-
+ []
+
+
+Overfull \hbox (37.1182pt too wide) in paragraph at lines 18--18
+\T1/ptm/m/n/10 3) WT_-COLLISION_-HANDLER_-DIMENSIONS_-1D,WT_-COLLISION_-HANDLER
+_-
+ []
+
+[35]) [36]
+Chapter 16.
+(./_key_identifiers_list.tex [37
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39])
+[40]
+Chapter 17.
+(./namespaces.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+
+
+LaTeX Warning: Reference `namespacec_i_m_f' on page 41 undefined on input line 
+3.
+
+) [41
+
+] [42
+
+]
+Chapter 18.
+(./hierarchy.tex
+
+LaTeX Warning: Reference `classc2_d_vf' on page 43 undefined on input line 3.
+
+
+LaTeX Warning: Reference `classc2_d_vi' on page 43 undefined on input line 4.
+
+
+LaTeX Warning: Reference `classc3_d_vf' on page 43 undefined on input line 5.
+
+
+LaTeX Warning: Reference `classc3_d_vi' on page 43 undefined on input line 6.
+
+
+LaTeX Warning: Reference `classc_audio_buffer' on page 43 undefined on input li
+ne 7.
+
+
+LaTeX Warning: Reference `classc_wav' on page 43 undefined on input line 9.
+
+
+LaTeX Warning: Reference `classc_audio_device' on page 43 undefined on input li
+ne 11.
+
+
+LaTeX Warning: Reference `classc_audio_object' on page 43 undefined on input li
+ne 12.
+
+
+LaTeX Warning: Reference `classc_camera_matrix4' on page 43 undefined on input 
+line 13.
+
+
+LaTeX Warning: Reference `classc_camera' on page 43 undefined on input line 15.
+
+
+
+LaTeX Warning: Reference `classc_camera_painter' on page 43 undefined on input 
+line 17.
+
+
+LaTeX Warning: Reference `classc_cluster' on page 43 undefined on input line 20
+.
+
+
+LaTeX Warning: Reference `classc_collision_handler' on page 43 undefined on inp
+ut line 21.
+
+
+LaTeX Warning: Reference `classc_collision_handler_type' on page 43 undefined o
+n input line 23.
+
+
+LaTeX Warning: Reference `classc_collision_handler_b_s_p' on page 43 undefined 
+on input line 25.
+
+
+LaTeX Warning: Reference `classc_collision_list' on page 43 undefined on input 
+line 28.
+
+
+LaTeX Warning: Reference `classc_collision_list_object' on page 43 undefined on
+ input line 29.
+
+
+LaTeX Warning: Reference `classc_event_handler' on page 43 undefined on input l
+ine 30.
+
+
+LaTeX Warning: Reference `class_c_exception' on page 43 undefined on input line
+ 31.
+
+
+LaTeX Warning: Reference `classc_face' on page 43 undefined on input line 32.
+
+
+LaTeX Warning: Reference `classc_full_face_data' on page 43 undefined on input 
+line 34.
+
+
+LaTeX Warning: Reference `classc_file_handler' on page 43 undefined on input li
+ne 36.
+
+
+LaTeX Warning: Reference `classc_fog' on page 43 undefined on input line 37.
+
+
+LaTeX Warning: Reference `classc_frame_rate' on page 43 undefined on input line
+ 38.
+
+
+LaTeX Warning: Reference `classc_i_m_f_loader' on page 43 undefined on input li
+ne 39.
+
+
+LaTeX Warning: Reference `classc_mesh_array' on page 43 undefined on input line
+ 41.
+
+
+LaTeX Warning: Reference `classc_mesh_file_collision' on page 43 undefined on i
+nput line 42.
+
+
+LaTeX Warning: Reference `classc_kernel' on page 43 undefined on input line 44.
+
+
+
+LaTeX Warning: Reference `classc_key_store' on page 43 undefined on input line 
+45.
+
+[43]
+
+LaTeX Warning: Reference `classc_light_handler' on page 44 undefined on input l
+ine 46.
+
+
+LaTeX Warning: Reference `classc_light_spot' on page 44 undefined on input line
+ 47.
+
+
+LaTeX Warning: Reference `classc_limited_list' on page 44 undefined on input li
+ne 48.
+
+
+LaTeX Warning: Reference `classc_limited_list' on page 44 undefined on input li
+ne 49.
+
+
+LaTeX Warning: Reference `classc_cluster_list' on page 44 undefined on input li
+ne 51.
+
+
+LaTeX Warning: Reference `classc_limited_list' on page 44 undefined on input li
+ne 53.
+
+
+LaTeX Warning: Reference `classc_full_face_list' on page 44 undefined on input 
+line 55.
+
+
+LaTeX Warning: Reference `classc_limited_list' on page 44 undefined on input li
+ne 57.
+
+
+LaTeX Warning: Reference `classc_plane_list' on page 44 undefined on input line
+ 59.
+
+
+LaTeX Warning: Reference `classc_limited_list' on page 44 undefined on input li
+ne 61.
+
+
+LaTeX Warning: Reference `classc_polygon_list' on page 44 undefined on input li
+ne 63.
+
+
+LaTeX Warning: Reference `classc_limited_list' on page 44 undefined on input li
+ne 65.
+
+
+LaTeX Warning: Reference `classc_vertex_list' on page 44 undefined on input lin
+e 67.
+
+
+LaTeX Warning: Reference `classc_limited_pointer_list' on page 44 undefined on 
+input line 69.
+
+
+LaTeX Warning: Reference `classc_linked_list' on page 44 undefined on input lin
+e 70.
+
+
+LaTeX Warning: Reference `classc_linked_node' on page 44 undefined on input lin
+e 71.
+
+
+LaTeX Warning: Reference `classc_main_thread' on page 44 undefined on input lin
+e 72.
+
+
+LaTeX Warning: Reference `classc_material' on page 44 undefined on input line 7
+3.
+
+
+LaTeX Warning: Reference `classc_landscape' on page 44 undefined on input line 
+75.
+
+
+LaTeX Warning: Reference `classc_model_list' on page 44 undefined on input line
+ 76.
+
+
+LaTeX Warning: Reference `classc_textured_model' on page 44 undefined on input 
+line 77.
+
+
+LaTeX Warning: Reference `classc_matrix' on page 44 undefined on input line 79.
+
+
+
+LaTeX Warning: Reference `classc_matrix4' on page 44 undefined on input line 80
+.
+
+
+LaTeX Warning: Reference `classv_render_object' on page 44 undefined on input l
+ine 82.
+
+
+LaTeX Warning: Reference `classc_render_node' on page 44 undefined on input lin
+e 84.
+
+
+LaTeX Warning: Reference `classc_render_object' on page 44 undefined on input l
+ine 85.
+
+
+LaTeX Warning: Reference `classc_beam_mesh' on page 44 undefined on input line 
+87.
+
+
+LaTeX Warning: Reference `classc_image' on page 44 undefined on input line 88.
+
+
+LaTeX Warning: Reference `classc_landscape' on page 44 undefined on input line 
+89.
+
+
+LaTeX Warning: Reference `classc_line' on page 44 undefined on input line 90.
+
+
+LaTeX Warning: Reference `classc_model_list' on page 44 undefined on input line
+ 91.
+
+
+LaTeX Warning: Reference `classc_particle_group' on page 44 undefined on input 
+line 92.
+
+
+LaTeX Warning: Reference `classc_particle_handler' on page 44 undefined on inpu
+t line 93.
+
+
+LaTeX Warning: Reference `classc_point' on page 44 undefined on input line 94.
+
+
+LaTeX Warning: Reference `classc_text' on page 44 undefined on input line 95.
+
+
+LaTeX Warning: Reference `classc_textured_model' on page 44 undefined on input 
+line 96.
+
+
+LaTeX Warning: Reference `classc_mesh_tree_array' on page 44 undefined on input
+ line 100.
+
+
+LaTeX Warning: Reference `classc_mesh_tree_node' on page 44 undefined on input 
+line 101.
+
+
+LaTeX Warning: Reference `classc_min_l_l' on page 44 undefined on input line 10
+2.
+
+
+LaTeX Warning: Reference `classc_min_l_n' on page 44 undefined on input line 10
+3.
+
+
+LaTeX Warning: Reference `classcm_landscape_array' on page 44 undefined on inpu
+t line 104.
+
+
+LaTeX Warning: Reference `classc_model_list_node' on page 44 undefined on input
+ line 105.
+
+
+LaTeX Warning: Reference `classc_mouse' on page 44 undefined on input line 106.
+
+
+
+LaTeX Warning: Reference `classc_painter' on page 44 undefined on input line 10
+7.
+
+
+LaTeX Warning: Reference `classc_parent_stack' on page 44 undefined on input li
+ne 108.
+
+
+LaTeX Warning: Reference `classc_particle_for_group' on page 44 undefined on in
+put line 109.
+
+
+LaTeX Warning: Reference `classc_gravity_particle' on page 44 undefined on inpu
+t line 111.
+
+
+LaTeX Warning: Reference `classc_particle' on page 44 undefined on input line 1
+12.
+
+[44]
+
+LaTeX Warning: Reference `classc_wind_and_gravity_particle' on page 45 undefine
+d on input line 113.
+
+
+LaTeX Warning: Reference `classc_particle_settings' on page 45 undefined on inp
+ut line 115.
+
+
+LaTeX Warning: Reference `classc_plane' on page 45 undefined on input line 116.
+
+
+
+LaTeX Warning: Reference `classc_polygon' on page 45 undefined on input line 11
+7.
+
+
+LaTeX Warning: Reference `classc_push_pop_stack' on page 45 undefined on input 
+line 118.
+
+
+LaTeX Warning: Reference `classc_reference_list' on page 45 undefined on input 
+line 119.
+
+
+LaTeX Warning: Reference `classc_render_pointer' on page 45 undefined on input 
+line 120.
+
+
+LaTeX Warning: Reference `classc_settings' on page 45 undefined on input line 1
+21.
+
+
+LaTeX Warning: Reference `classc_shader_array' on page 45 undefined on input li
+ne 122.
+
+
+LaTeX Warning: Reference `classc_signal' on page 45 undefined on input line 123
+.
+
+
+LaTeX Warning: Reference `classc_collision_object' on page 45 undefined on inpu
+t line 125.
+
+
+LaTeX Warning: Reference `classc_particle' on page 45 undefined on input line 1
+26.
+
+
+LaTeX Warning: Reference `classv_process' on page 45 undefined on input line 12
+7.
+
+
+LaTeX Warning: Reference `classc_process' on page 45 undefined on input line 12
+9.
+
+
+LaTeX Warning: Reference `classv_render_object' on page 45 undefined on input l
+ine 131.
+
+
+LaTeX Warning: Reference `classc_sync' on page 45 undefined on input line 133.
+
+
+LaTeX Warning: Reference `classc_texture_array' on page 45 undefined on input l
+ine 134.
+
+
+LaTeX Warning: Reference `classc_user_signal' on page 45 undefined on input lin
+e 135.
+
+
+LaTeX Warning: Reference `classv_process' on page 45 undefined on input line 13
+7.
+
+
+LaTeX Warning: Reference `classc_vertex' on page 45 undefined on input line 139
+.
+
+
+LaTeX Warning: Reference `classc_window' on page 45 undefined on input line 140
+.
+
+
+LaTeX Warning: Reference `classdw_log' on page 45 undefined on input line 141.
+
+
+LaTeX Warning: Reference `classv2_d_polygon' on page 45 undefined on input line
+ 142.
+
+
+LaTeX Warning: Reference `classv_collision_data' on page 45 undefined on input 
+line 143.
+
+
+LaTeX Warning: Reference `classc_sphere_collision' on page 45 undefined on inpu
+t line 145.
+
+
+LaTeX Warning: Reference `classc_beam_collision' on page 45 undefined on input 
+line 147.
+
+
+LaTeX Warning: Reference `classc_ray_collision' on page 45 undefined on input l
+ine 149.
+
+
+LaTeX Warning: Reference `classc_mesh_collision' on page 45 undefined on input 
+line 151.
+
+
+LaTeX Warning: Reference `classc_mesh_file_collision' on page 45 undefined on i
+nput line 153.
+
+
+LaTeX Warning: Reference `classv_file' on page 45 undefined on input line 157.
+
+
+LaTeX Warning: Reference `classc_file' on page 45 undefined on input line 159.
+
+
+LaTeX Warning: Reference `classc_landscape_mesh_file' on page 45 undefined on i
+nput line 161.
+
+
+LaTeX Warning: Reference `classc_mesh_file_collision' on page 45 undefined on i
+nput line 162.
+
+
+LaTeX Warning: Reference `classc_shader_program' on page 45 undefined on input 
+line 163.
+
+
+LaTeX Warning: Reference `classc_wav' on page 45 undefined on input line 164.
+
+
+LaTeX Warning: Reference `classv_mesh' on page 45 undefined on input line 165.
+
+
+LaTeX Warning: Reference `classc_mesh' on page 45 undefined on input line 167.
+
+
+LaTeX Warning: Reference `classv_mesh_tree' on page 45 undefined on input line 
+169.
+
+
+LaTeX Warning: Reference `classc_mesh_tree' on page 45 undefined on input line 
+171.
+
+
+LaTeX Warning: Reference `classv_shader' on page 45 undefined on input line 175
+.
+
+
+LaTeX Warning: Reference `classc_shader' on page 45 undefined on input line 177
+.
+
+
+LaTeX Warning: Reference `classv_texture' on page 45 undefined on input line 17
+9.
+
+
+LaTeX Warning: Reference `classc_texture' on page 45 undefined on input line 18
+1.
+
+
+LaTeX Warning: Reference `classv_font' on page 45 undefined on input line 183.
+
+
+LaTeX Warning: Reference `classc_font' on page 45 undefined on input line 185.
+
+
+LaTeX Warning: Reference `classv_light' on page 45 undefined on input line 191.
+
+
+
+LaTeX Warning: Reference `classc_light' on page 45 undefined on input line 193.
+
+
+
+LaTeX Warning: Reference `classc_spot_light' on page 45 undefined on input line
+ 195.
+
+[45]
+
+LaTeX Warning: Reference `classvm_landscape' on page 46 undefined on input line
+ 198.
+
+
+LaTeX Warning: Reference `classcm_landscape' on page 46 undefined on input line
+ 200.
+
+
+LaTeX Warning: Reference `classc_landscape_mesh_file' on page 46 undefined on i
+nput line 202.
+
+
+LaTeX Warning: Reference `classv_shader_program' on page 46 undefined on input 
+line 205.
+
+
+LaTeX Warning: Reference `classc_shader_program' on page 46 undefined on input 
+line 207.
+
+) [46]
+Chapter 19.
+(./annotated.tex
+
+LaTeX Warning: Reference `classc2_d_vf' on page 47 undefined on input line 3.
+
+
+LaTeX Warning: Reference `classc2_d_vi' on page 47 undefined on input line 4.
+
+
+LaTeX Warning: Reference `classc3_d_vf' on page 47 undefined on input line 5.
+
+
+LaTeX Warning: Reference `classc3_d_vi' on page 47 undefined on input line 6.
+
+
+LaTeX Warning: Reference `classc_audio_buffer' on page 47 undefined on input li
+ne 7.
+
+
+LaTeX Warning: Reference `classc_audio_device' on page 47 undefined on input li
+ne 8.
+
+
+LaTeX Warning: Reference `classc_audio_object' on page 47 undefined on input li
+ne 9.
+
+
+LaTeX Warning: Reference `classc_beam_collision' on page 47 undefined on input 
+line 10.
+
+
+LaTeX Warning: Reference `classc_beam_mesh' on page 47 undefined on input line 
+11.
+
+
+LaTeX Warning: Reference `classc_camera' on page 47 undefined on input line 12.
+
+
+
+LaTeX Warning: Reference `classc_camera_matrix4' on page 47 undefined on input 
+line 13.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47
+
+]
+
+LaTeX Warning: Reference `classc_camera_painter' on page 48 undefined on input 
+line 14.
+
+
+LaTeX Warning: Reference `classc_cluster' on page 48 undefined on input line 15
+.
+
+
+LaTeX Warning: Reference `classc_cluster_list' on page 48 undefined on input li
+ne 16.
+
+
+LaTeX Warning: Reference `classc_collision_handler' on page 48 undefined on inp
+ut line 17.
+
+
+LaTeX Warning: Reference `classc_collision_handler_b_s_p' on page 48 undefined 
+on input line 18.
+
+
+LaTeX Warning: Reference `classc_collision_handler_type' on page 48 undefined o
+n input line 19.
+
+
+LaTeX Warning: Reference `classc_collision_list' on page 48 undefined on input 
+line 20.
+
+
+LaTeX Warning: Reference `classc_collision_list_object' on page 48 undefined on
+ input line 21.
+
+
+LaTeX Warning: Reference `classc_collision_object' on page 48 undefined on inpu
+t line 22.
+
+
+LaTeX Warning: Reference `classc_event_handler' on page 48 undefined on input l
+ine 23.
+
+
+LaTeX Warning: Reference `class_c_exception' on page 48 undefined on input line
+ 24.
+
+
+LaTeX Warning: Reference `classc_face' on page 48 undefined on input line 25.
+
+
+LaTeX Warning: Reference `classc_file' on page 48 undefined on input line 26.
+
+
+LaTeX Warning: Reference `classc_file_handler' on page 48 undefined on input li
+ne 27.
+
+
+LaTeX Warning: Reference `classc_fog' on page 48 undefined on input line 28.
+
+
+LaTeX Warning: Reference `classc_font' on page 48 undefined on input line 29.
+
+Runaway argument?
+{\hyperlink {classc_frame_rate}{cFrameRate} (This class will store da\ETC.
+! Paragraph ended before \contentsline was complete.
+<to be read again> 
+                   \par 
+l.30 ...several settings that can be adjusted:\par
+                                                  
+? 
+! Extra }, or forgotten \endgroup.
+l.36 ...going to be changed this can be ignored )}
+                                                  {\pageref{classc_frame_rat...
+
+? 
+
+LaTeX Warning: Reference `classc_frame_rate' on page 48 undefined on input line
+ 36.
+
+[48]
+
+LaTeX Warning: Reference `classc_full_face_data' on page 49 undefined on input 
+line 37.
+
+
+LaTeX Warning: Reference `classc_full_face_list' on page 49 undefined on input 
+line 38.
+
+
+LaTeX Warning: Reference `classc_gravity_particle' on page 49 undefined on inpu
+t line 39.
+
+
+LaTeX Warning: Reference `classc_image' on page 49 undefined on input line 40.
+
+
+LaTeX Warning: Reference `classc_i_m_f_loader' on page 49 undefined on input li
+ne 41.
+
+
+LaTeX Warning: Reference `classc_kernel' on page 49 undefined on input line 42.
+
+
+
+LaTeX Warning: Reference `classc_key_store' on page 49 undefined on input line 
+43.
+
+
+LaTeX Warning: Reference `classc_landscape' on page 49 undefined on input line 
+44.
+
+
+LaTeX Warning: Reference `classc_landscape_mesh_file' on page 49 undefined on i
+nput line 45.
+
+
+LaTeX Warning: Reference `classc_light' on page 49 undefined on input line 46.
+
+
+LaTeX Warning: Reference `classc_light_handler' on page 49 undefined on input l
+ine 47.
+
+
+LaTeX Warning: Reference `classc_light_spot' on page 49 undefined on input line
+ 48.
+
+
+LaTeX Warning: Reference `classc_limited_list' on page 49 undefined on input li
+ne 49.
+
+
+LaTeX Warning: Reference `classc_limited_pointer_list' on page 49 undefined on 
+input line 50.
+
+
+LaTeX Warning: Reference `classc_line' on page 49 undefined on input line 51.
+
+
+LaTeX Warning: Reference `classc_linked_list' on page 49 undefined on input lin
+e 52.
+
+
+LaTeX Warning: Reference `classc_linked_node' on page 49 undefined on input lin
+e 53.
+
+
+Overfull \hbox (7.81268pt too wide) in paragraph at lines 53--53
+ [][] [][]\T1/ptm/m/n/10 cLinkedNode$\OML/ztmcm/m/it/10 <$ \T1/ptm/m/n/10 T $\O
+ML/ztmcm/m/it/10 >$[][] \T1/ptm/m/n/10 (This is a node class to al-low tem-plat
+-ing of the [][]cLinkedList[][] 
+ []
+
+
+LaTeX Warning: Reference `classc_main_thread' on page 49 undefined on input lin
+e 54.
+
+
+LaTeX Warning: Reference `classc_material' on page 49 undefined on input line 5
+5.
+
+
+Underfull \vbox (badness 3701) has occurred while \output is active []
+
+ [49]
+
+LaTeX Warning: Reference `classc_matrix' on page 50 undefined on input line 56.
+
+
+
+LaTeX Warning: Reference `classc_matrix4' on page 50 undefined on input line 57
+.
+
+
+LaTeX Warning: Reference `classc_mesh' on page 50 undefined on input line 58.
+
+
+LaTeX Warning: Reference `classc_mesh_array' on page 50 undefined on input line
+ 59.
+
+
+LaTeX Warning: Reference `classc_mesh_collision' on page 50 undefined on input 
+line 60.
+
+
+LaTeX Warning: Reference `classc_mesh_file_collision' on page 50 undefined on i
+nput line 61.
+
+
+LaTeX Warning: Reference `classc_mesh_tree' on page 50 undefined on input line 
+62.
+
+
+LaTeX Warning: Reference `classc_mesh_tree_array' on page 50 undefined on input
+ line 63.
+
+
+Overfull \hbox (21.40353pt too wide) in paragraph at lines 63--63
+ \T1/ptm/m/n/10 handed to a cMeshTree() This ob-ject will store the data for a 
+cMeshTree() 
+ []
+
+
+LaTeX Warning: Reference `classc_mesh_tree_node' on page 50 undefined on input 
+line 64.
+
+
+Overfull \hbox (18.92279pt too wide) in paragraph at lines 64--64
+ [][] [][]\T1/ptm/m/n/10 cMeshTreeN-ode[][] (This ob-ject will store the data f
+or a sin-gle item in a cMeshTree(). 
+ []
+
+
+LaTeX Warning: Reference `classc_min_l_l' on page 50 undefined on input line 65
+.
+
+
+LaTeX Warning: Reference `classc_min_l_n' on page 50 undefined on input line 66
+.
+
+
+LaTeX Warning: Reference `classcm_landscape' on page 50 undefined on input line
+ 67.
+
+
+LaTeX Warning: Reference `classcm_landscape_array' on page 50 undefined on inpu
+t line 68.
+
+
+LaTeX Warning: Reference `classc_model_list' on page 50 undefined on input line
+ 69.
+
+
+LaTeX Warning: Reference `classc_model_list_node' on page 50 undefined on input
+ line 70.
+
+
+LaTeX Warning: Reference `classc_mouse' on page 50 undefined on input line 71.
+
+
+LaTeX Warning: Reference `classc_painter' on page 50 undefined on input line 72
+.
+
+
+LaTeX Warning: Reference `classc_parent_stack' on page 50 undefined on input li
+ne 73.
+
+
+LaTeX Warning: Reference `classc_particle' on page 50 undefined on input line 7
+4.
+
+
+LaTeX Warning: Reference `classc_particle_for_group' on page 50 undefined on in
+put line 75.
+
+
+LaTeX Warning: Reference `classc_particle_group' on page 50 undefined on input 
+line 76.
+
+
+LaTeX Warning: Reference `classc_particle_handler' on page 50 undefined on inpu
+t line 77.
+
+
+LaTeX Warning: Reference `classc_particle_settings' on page 50 undefined on inp
+ut line 78.
+
+
+LaTeX Warning: Reference `classc_plane' on page 50 undefined on input line 79.
+
+
+LaTeX Warning: Reference `classc_plane_list' on page 50 undefined on input line
+ 80.
+
+
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+ [50]
+
+LaTeX Warning: Reference `classc_point' on page 51 undefined on input line 81.
+
+
+LaTeX Warning: Reference `classc_polygon' on page 51 undefined on input line 82
+.
+
+
+LaTeX Warning: Reference `classc_polygon_list' on page 51 undefined on input li
+ne 83.
+
+
+LaTeX Warning: Reference `classc_process' on page 51 undefined on input line 84
+.
+
+
+LaTeX Warning: Reference `classc_push_pop_stack' on page 51 undefined on input 
+line 85.
+
+
+LaTeX Warning: Reference `classc_ray_collision' on page 51 undefined on input l
+ine 86.
+
+
+LaTeX Warning: Reference `classc_reference_list' on page 51 undefined on input 
+line 87.
+
+
+LaTeX Warning: Reference `classc_render_node' on page 51 undefined on input lin
+e 88.
+
+
+LaTeX Warning: Reference `classc_render_object' on page 51 undefined on input l
+ine 89.
+
+
+LaTeX Warning: Reference `classc_render_pointer' on page 51 undefined on input 
+line 90.
+
+
+LaTeX Warning: Reference `classc_settings' on page 51 undefined on input line 9
+1.
+
+
+LaTeX Warning: Reference `classc_shader' on page 51 undefined on input line 92.
+
+
+
+LaTeX Warning: Reference `classc_shader_array' on page 51 undefined on input li
+ne 93.
+
+
+LaTeX Warning: Reference `classc_shader_program' on page 51 undefined on input 
+line 94.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51]
+
+LaTeX Warning: Reference `classc_signal' on page 52 undefined on input line 95.
+
+
+
+LaTeX Warning: Reference `classc_sphere_collision' on page 52 undefined on inpu
+t line 96.
+
+
+LaTeX Warning: Reference `classc_spot_light' on page 52 undefined on input line
+ 97.
+
+
+LaTeX Warning: Reference `classc_sync' on page 52 undefined on input line 98.
+
+
+LaTeX Warning: Reference `classc_text' on page 52 undefined on input line 99.
+
+
+LaTeX Warning: Reference `classc_texture' on page 52 undefined on input line 10
+0.
+
+
+LaTeX Warning: Reference `classc_texture_array' on page 52 undefined on input l
+ine 101.
+
+
+LaTeX Warning: Reference `classc_textured_model' on page 52 undefined on input 
+line 102.
+
+
+LaTeX Warning: Reference `classc_user_signal' on page 52 undefined on input lin
+e 103.
+
+
+LaTeX Warning: Reference `classc_vertex' on page 52 undefined on input line 104
+.
+
+
+LaTeX Warning: Reference `classc_vertex_list' on page 52 undefined on input lin
+e 105.
+
+
+LaTeX Warning: Reference `classc_wav' on page 52 undefined on input line 106.
+
+
+LaTeX Warning: Reference `classc_wind_and_gravity_particle' on page 52 undefine
+d on input line 107.
+
+
+Overfull \hbox (5.9234pt too wide) in paragraph at lines 107--107
+ [][] [][]\T1/ptm/m/n/10 cWin-dAnd-Grav-i-ty-Par-ti-cle[][] (CGrav-i-ty-Par-ti-
+cles which are also af-fected by Wind. 
+ []
+
+
+Overfull \hbox (0.72409pt too wide) in paragraph at lines 107--107
+ \T1/ptm/m/n/10 WIND_-X,_-WIND_-Y and _-WIND_-Z. [][]Up-datePos()[][] will ac-c
+ount use 
+ []
+
+
+LaTeX Warning: Reference `classc_window' on page 52 undefined on input line 108
+.
+
+
+LaTeX Warning: Reference `classdw_log' on page 52 undefined on input line 109.
+
+
+LaTeX Warning: Reference `classv2_d_polygon' on page 52 undefined on input line
+ 110.
+
+
+LaTeX Warning: Reference `classv_collision_data' on page 52 undefined on input 
+line 111.
+
+
+LaTeX Warning: Reference `classv_file' on page 52 undefined on input line 112.
+
+
+LaTeX Warning: Reference `classv_font' on page 52 undefined on input line 113.
+
+[52]
+
+LaTeX Warning: Reference `classv_light' on page 53 undefined on input line 114.
+
+
+
+LaTeX Warning: Reference `classv_mesh' on page 53 undefined on input line 115.
+
+
+LaTeX Warning: Reference `classv_mesh_tree' on page 53 undefined on input line 
+116.
+
+
+LaTeX Warning: Reference `classvm_landscape' on page 53 undefined on input line
+ 117.
+
+
+LaTeX Warning: Reference `classv_process' on page 53 undefined on input line 11
+8.
+
+
+LaTeX Warning: Reference `classv_render_object' on page 53 undefined on input l
+ine 119.
+
+
+LaTeX Warning: Reference `classv_shader' on page 53 undefined on input line 120
+.
+
+
+LaTeX Warning: Reference `classv_shader_program' on page 53 undefined on input 
+line 121.
+
+
+LaTeX Warning: Reference `classv_texture' on page 53 undefined on input line 12
+2.
+
+) [53] [54
+
+]
+Chapter 20.
+(./namespacec_i_m_f.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 10.
+LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
+(Font)              scaled to size 10.79993pt on input line 10.
+LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 28.
+LaTeX Font Info:    Font shape `OT1/phv/bc/it' in size <10> not available
+(Font)              Font shape `OT1/phv/bc/sl' tried instead on input line 28.
+LaTeX Font Info:    Font shape `OT1/phv/bc/sl' will be
+(Font)              scaled to size 8.99994pt on input line 28.
+) [55] [56
+
+]
+Chapter 21.
+(./classc2_d_vf.tex [57]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 94.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+
+LaTeX Font Warning: Font shape `OT1/pcr/bc/n' undefined
+(Font)              using `OT1/pcr/m/n' instead on input line 94.
+
+) (./classc2_d_vi.tex [58]) (./classc3_d_vf.tex [59]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 102.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 102.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 102.
+
+[60]) (./classc3_d_vi.tex [61]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 77.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 77.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 77.
+
+) (./classc_audio_buffer.tex [62]
+
+pdfTeX warning: pdflatex (file ./classc_audio_buffer__inherit__graph.pdf): PDF 
+inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_audio_buffer__inherit__graph.pdf, id=862, 152.57pt x 160.6pt>
+File: classc_audio_buffer__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_audio_buffer__inherit__graph.pdf> [63 <./classc_audio_buffer__inher
+it__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+) (./classc_audio_device.tex
+
+pdfTeX warning: pdflatex (file ./classc_audio_device__coll__graph.pdf): PDF inc
+lusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_audio_device__coll__graph.pdf, id=891, 226.8475pt x 102.3825pt>
+File: classc_audio_device__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_audio_device__coll__graph.pdf>
+Underfull \vbox (badness 3557) has occurred while \output is active []
+
+ [64]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 66.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 66.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 66.
+
+[65 <./classc_audio_device__coll__graph.pdf>]) (./classc_audio_object.tex
+
+pdfTeX warning: pdflatex (file ./classc_audio_object__coll__graph.pdf): PDF inc
+lusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_audio_object__coll__graph.pdf, id=931, 157.58875pt x 174.6525pt>
+File: classc_audio_object__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_audio_object__coll__graph.pdf> [66 <./classc_audio_object__coll__gr
+aph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 86.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 86.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 86.
+
+[67]) (./classc_beam_collision.tex
+
+pdfTeX warning: pdflatex (file ./classc_beam_collision__inherit__graph.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_beam_collision__inherit__graph.pdf, id=974, 170.6375pt x 277.035pt>
+File: classc_beam_collision__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_beam_collision__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_beam_collision__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_beam_collision__coll__graph.pdf, id=976, 170.6375pt x 218.8175pt>
+File: classc_beam_collision__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_beam_collision__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [68 <./classc_beam_collision__inherit__graph.pdf>] [69 <./classc_beam_collisio
+n__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 83.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 83.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 83.
+
+[70]) (./classc_beam_mesh.tex
+
+pdfTeX warning: pdflatex (file ./classc_beam_mesh__inherit__graph.pdf): PDF inc
+lusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_beam_mesh__inherit__graph.pdf, id=1051, 200.75pt x 277.035pt>
+File: classc_beam_mesh__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_beam_mesh__inherit__graph.pdf> [71]
+
+pdfTeX warning: pdflatex (file ./classc_beam_mesh__coll__graph.pdf): PDF inclus
+ion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_beam_mesh__coll__graph.pdf, id=1069, 1459.4525pt x 436.63126pt>
+File: classc_beam_mesh__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_beam_mesh__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+[72 <./classc_beam_mesh__inherit__graph.pdf> <./classc_beam_mesh__coll__graph.p
+df>]
+
+LaTeX Font Warning: Font shape `OT1/pcr/bc/it' undefined
+(Font)              using `OT1/pcr/bc/n' instead on input line 77.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 94.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 94.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 94.
+
+[73] [74]) (./classc_camera.tex
+
+pdfTeX warning: pdflatex (file ./classc_camera__inherit__graph.pdf): PDF inclus
+ion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_camera__inherit__graph.pdf, id=1143, 168.63pt x 218.8175pt>
+File: classc_camera__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_camera__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_camera__coll__graph.pdf): PDF inclusion
+: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_camera__coll__graph.pdf, id=1145, 470.75874pt x 509.905pt>
+File: classc_camera__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_camera__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+[75 <./classc_camera__inherit__graph.pdf>] [76 <./classc_camera__coll__graph.pd
+f>] [77]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 115.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 115.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 115.
+
+[78] [79]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 328--337
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 337
+ []
+
+[80]) (./classc_camera_matrix4.tex
+
+pdfTeX warning: pdflatex (file ./classc_camera_matrix4__inherit__graph.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_camera_matrix4__inherit__graph.pdf, id=1281, 168.63pt x 218.8175pt>
+File: classc_camera_matrix4__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_camera_matrix4__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_camera_matrix4__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_camera_matrix4__coll__graph.pdf, id=1283, 225.84375pt x 102.3825pt>
+File: classc_camera_matrix4__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_camera_matrix4__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [81 <./classc_camera_matrix4__inherit__graph.pdf>] [82 <./classc_camera_matrix
+4__coll__graph.pdf>] [83] [84] [85] [86] [87] [88] [89] [90] [91]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 779.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 779.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 779.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 796.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 796.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 796.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 813.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 813.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 813.
+
+
+Overfull \hbox (21.88861pt too wide) in alignment at lines 820--823
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 823
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 835.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 835.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 835.
+
+
+Overfull \hbox (21.88861pt too wide) in alignment at lines 842--845
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 845
+ []
+
+
+Underfull \vbox (badness 4686) has occurred while \output is active []
+
+ [92]
+[93] [94] [95]) (./classc_camera_painter.tex
+
+pdfTeX warning: pdflatex (file ./classc_camera_painter__inherit__graph.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_camera_painter__inherit__graph.pdf, id=1597, 168.63pt x 218.8175pt>
+File: classc_camera_painter__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_camera_painter__inherit__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [96]
+
+pdfTeX warning: pdflatex (file ./classc_camera_painter__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_camera_painter__coll__graph.pdf, id=1608, 470.75874pt x 570.13pt>
+File: classc_camera_painter__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_camera_painter__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 21--23
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [97 <./classc_camera_painter__inherit__graph.pdf>] [98 <./classc_camera_painte
+r__coll__graph.pdf>]) (./classc_cluster.tex
+
+pdfTeX warning: pdflatex (file ./classc_cluster__coll__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_cluster__coll__graph.pdf, id=1640, 194.7275pt x 246.9225pt>
+File: classc_cluster__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_cluster__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 70.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 70.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 70.
+
+[100 <./classc_cluster__coll__graph.pdf>] [101]) (./classc_cluster_list.tex
+
+pdfTeX warning: pdflatex (file ./classc_cluster_list__inherit__graph.pdf): PDF 
+inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_cluster_list__inherit__graph.pdf, id=1717, 204.765pt x 160.6pt>
+File: classc_cluster_list__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_cluster_list__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_cluster_list__coll__graph.pdf): PDF inc
+lusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_cluster_list__coll__graph.pdf, id=1719, 204.765pt x 379.4175pt>
+File: classc_cluster_list__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_cluster_list__coll__graph.pdf>
+Underfull \vbox (badness 2205) has occurred while \output is active []
+
+ [102 <./classc_cluster_list__inherit__graph.pdf>] [103 <./classc_cluster_list_
+_coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 76.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 76.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 76.
+
+) (./classc_collision_handler.tex [104]
+
+pdfTeX warning: pdflatex (file ./classc_collision_handler__inherit__graph.pdf):
+ PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+<classc_collision_handler__inherit__graph.pdf, id=1792, 194.7275pt x 218.8175pt
+>
+File: classc_collision_handler__inherit__graph.pdf Graphic file (type pdf)
+ <use classc_collision_handler__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_collision_handler__coll__graph.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_collision_handler__coll__graph.pdf, id=1794, 806.01125pt x 349.305pt>
+File: classc_collision_handler__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_collision_handler__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+[105 <./classc_collision_handler__inherit__graph.pdf> <./classc_collision_handl
+er__coll__graph.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+[106]
+Overfull \hbox (32.22725pt too wide) in paragraph at lines 91--92
+\T1/ptm/m/n/10 (de-fined by set-ting WT_-COLLISION_-HANDLER_-TYPE to WT_-COLLIS
+ION_-HANDLER_-
+ []
+
+[107]
+Overfull \hbox (72.37491pt too wide) in paragraph at lines 95--96
+[]\T1/ptm/m/n/10 Type searches are fil-tered by type. cCol-li-sionOb-ject's are
+ given a [][]cCol-li-sionOb-ject::CollisionFilter(uint32
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 124.
+
+
+Underfull \vbox (badness 2065) has occurred while \output is active []
+
+ [108]
+[109] [110]) (./classc_collision_handler_b_s_p.tex
+
+pdfTeX warning: pdflatex (file ./classc_collision_handler_b_s_p__inherit__graph
+.pdf): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowe
+d
+
+<classc_collision_handler_b_s_p__inherit__graph.pdf, id=1970, 194.7275pt x 218.
+8175pt>
+File: classc_collision_handler_b_s_p__inherit__graph.pdf Graphic file (type pdf
+)
+ <use classc_collision_handler_b_s_p__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_collision_handler_b_s_p__coll__graph.pd
+f): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+<classc_collision_handler_b_s_p__coll__graph.pdf, id=1972, 782.925pt x 409.53pt
+>
+File: classc_collision_handler_b_s_p__coll__graph.pdf Graphic file (type pdf)
+ <use classc_collision_handler_b_s_p__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 21--23
+ [] 
+ []
+
+[111 <./classc_collision_handler_b_s_p__inherit__graph.pdf>]
+Overfull \hbox (9.97597pt too wide) in paragraph at lines 28--29
+[][][]\T1/ptm/m/n/10 cCollisionList[][] $\OMS/ztmcm/m/n/10 ^^C$ [][]\T1/ptm/m/n
+/10 Gen-er-ate-Col-li-sion-List[][] ([][]cCol-li-sionOb-ject[][] $\OMS/ztmcm/m/
+n/10 ^^C$\T1/ptm/m/n/10 lpObj, uint32 lp-Type=0)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+[112 <./classc_collision_handler_b_s_p__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 92.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 92.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 92.
+
+[113] [114]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 263.
+
+ (/usr/share/texmf-texlive/tex/latex/psnfss/omsphv.fd
+File: omsphv.fd 
+)
+
+LaTeX Font Warning: Font shape `OMS/phv/bc/n' undefined
+(Font)              using `OMS/phv/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 263.
+
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 263.
+LaTeX Font Info:    Font shape `OMS/phv/bc/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 263.
+) (./classc_collision_handler_type.tex
+
+pdfTeX warning: pdflatex (file ./classc_collision_handler_type__inherit__graph.
+pdf): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+
+<classc_collision_handler_type__inherit__graph.pdf, id=2060, 194.7275pt x 218.8
+175pt>
+File: classc_collision_handler_type__inherit__graph.pdf Graphic file (type pdf)
+
+ <use classc_collision_handler_type__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_collision_handler_type__coll__graph.pdf
+): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+<classc_collision_handler_type__coll__graph.pdf, id=2062, 782.925pt x 349.305pt
+>
+File: classc_collision_handler_type__coll__graph.pdf Graphic file (type pdf)
+ <use classc_collision_handler_type__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 21--23
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [115 <./classc_collision_handler_type__inherit__graph.pdf>] [116 <./classc_col
+lision_handler_type__coll__graph.pdf>]
+Overfull \hbox (21.48917pt too wide) in paragraph at lines 65--65
+[]\T1/ptm/m/it/9 This is the cur-rent cur-sor po-si-tion (the cur-rent [][]cLin
+kedNode[][]) in the List mpList[]miTypeCur[]. 
+ []
+
+[117]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 105.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 105.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 105.
+
+
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+ [118]
+[119] [120]
+Overfull \hbox (19.9063pt too wide) in paragraph at lines 434--435
+\T1/ptm/m/n/10 This is the cur-rent cur-sor po-si-tion (the cur-rent [][]cLinke
+dNode[][]) in the List mpList[]miTypeCur[]. 
+ []
+
+) (./classc_collision_list.tex
+
+pdfTeX warning: pdflatex (file ./classc_collision_list__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_collision_list__coll__graph.pdf, id=2197, 711.65875pt x 433.62pt>
+File: classc_collision_list__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_collision_list__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 11--13
+ [] 
+ []
+
+[121 <./classc_collision_list__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+[122]) (./classc_collision_list_object.tex
+
+pdfTeX warning: pdflatex (file ./classc_collision_list_object__coll__graph.pdf)
+: PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_collision_list_object__coll__graph.pdf, id=2247, 538.01pt x 433.62pt>
+File: classc_collision_list_object__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_collision_list_object__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 11--13
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [123]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [124 <./classc_collision_list_object__coll__graph.pdf>]) (./classc_collision_o
+bject.tex
+
+pdfTeX warning: pdflatex (file ./classc_collision_object__inherit__graph.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_collision_object__inherit__graph.pdf, id=2278, 168.63pt x 160.6pt>
+File: classc_collision_object__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_collision_object__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_collision_object__coll__graph.pdf): PDF
+ inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_collision_object__coll__graph.pdf, id=2280, 521.95pt x 433.62pt>
+File: classc_collision_object__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_collision_object__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 21--23
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [125 <./classc_collision_object__inherit__graph.pdf>] [126 <./classc_collision
+_object__coll__graph.pdf>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
+ [127] [128]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 178.
+
+
+Overfull \hbox (12.94629pt too wide) in paragraph at lines 196--197
+\T1/ptm/m/n/10 ob-jects re-turn true to Sphere. This ap-plies to all the func-t
+ions [][]Sphere()[][],Box(),[][]Mesh()[][],[][]Ray()[][]
+ []
+
+[129]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 231--234
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+[130]
+Overfull \hbox (12.94629pt too wide) in paragraph at lines 468--469
+\T1/ptm/m/n/10 ob-jects re-turn true to Sphere. This ap-plies to all the func-t
+ions [][]Sphere()[][],Box(),[][]Mesh()[][],[][]Ray()[][]
+ []
+
+[131]
+Overfull \hbox (12.94629pt too wide) in paragraph at lines 580--581
+\T1/ptm/m/n/10 ob-jects re-turn true to Sphere. This ap-plies to all the func-t
+ions [][]Sphere()[][],Box(),[][]Mesh()[][],[][]Ray()[][]
+ []
+
+[132]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 641--644
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 644
+ []
+
+[133]
+Overfull \hbox (16.16856pt too wide) in paragraph at lines 797--798
+\T1/ptm/m/n/10 _-S_-SLEEP,_-S_-WAKE,_-S_-KILL,_-S_-SLEEP_-TREE, _-S_-WAKE_-TREE
+,_-S_-KILL_-TREE. 
+ []
+
+
+Overfull \hbox (12.94629pt too wide) in paragraph at lines 816--817
+\T1/ptm/m/n/10 ob-jects re-turn true to Sphere. This ap-plies to all the func-t
+ions [][]Sphere()[][],Box(),[][]Mesh()[][],[][]Ray()[][]
+ []
+
+[134]) (./classc_event_handler.tex
+
+pdfTeX warning: pdflatex (file ./classc_event_handler__coll__graph.pdf): PDF in
+clusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_event_handler__coll__graph.pdf, id=2559, 320.19624pt x 770.88pt>
+File: classc_event_handler__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_event_handler__coll__graph.pdf> [135]
+Overfull \vbox (35.16492pt too high) has occurred while \output is active []
+
+
+[136 <./classc_event_handler__coll__graph.pdf>]) (./class_c_exception.tex
+[137]) (./classc_face.tex
+
+pdfTeX warning: pdflatex (file ./classc_face__inherit__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_face__inherit__graph.pdf, id=2612, 160.6pt x 160.6pt>
+File: classc_face__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_face__inherit__graph.pdf> [138]
+
+pdfTeX warning: pdflatex (file ./classc_face__coll__graph.pdf): PDF inclusion: 
+found PDF version <1.5>, but at most version <1.4> allowed
+<classc_face__coll__graph.pdf, id=2631, 194.7275pt x 174.6525pt>
+File: classc_face__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_face__coll__graph.pdf> [139 <./classc_face__inherit__graph.pdf> <./
+classc_face__coll__graph.pdf>]) (./classc_file.tex
+
+pdfTeX warning: pdflatex (file ./classc_file__inherit__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_file__inherit__graph.pdf, id=2673, 678.535pt x 393.47pt>
+File: classc_file__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_file__inherit__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 16--18
+ [] 
+ []
+
+[140]
+
+pdfTeX warning: pdflatex (file ./classc_file__coll__graph.pdf): PDF inclusion: 
+found PDF version <1.5>, but at most version <1.4> allowed
+<classc_file__coll__graph.pdf, id=2690, 321.2pt x 505.89pt>
+File: classc_file__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_file__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [141 <./classc_file__inherit__graph.pdf>] [142 <./classc_file__coll__graph.pdf
+>] [143]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 94.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 94.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 94.
+
+[144]) (./classc_file_handler.tex
+
+pdfTeX warning: pdflatex (file ./classc_file_handler__coll__graph.pdf): PDF inc
+lusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_file_handler__coll__graph.pdf, id=2768, 436.63126pt x 349.305pt>
+File: classc_file_handler__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_file_handler__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 16--18
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [145]
+[146 <./classc_file_handler__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 57.
+
+[147]) (./classc_fog.tex [148] [149]) (./classc_font.tex
+
+pdfTeX warning: pdflatex (file ./classc_font__inherit__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_font__inherit__graph.pdf, id=2864, 134.5025pt x 393.47pt>
+File: classc_font__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_font__inherit__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [150]
+
+pdfTeX warning: pdflatex (file ./classc_font__coll__graph.pdf): PDF inclusion: 
+found PDF version <1.5>, but at most version <1.4> allowed
+<classc_font__coll__graph.pdf, id=2875, 321.2pt x 746.79pt>
+File: classc_font__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_font__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [151 <./classc_font__inherit__graph.pdf>]
+Overfull \vbox (35.16492pt too high) has occurred while \output is active []
+
+
+[152 <./classc_font__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 62.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 62.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 62.
+
+[153]) (./classc_frame_rate.tex
+
+pdfTeX warning: pdflatex (file ./classc_frame_rate__coll__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_frame_rate__coll__graph.pdf, id=2934, 220.825pt x 102.3825pt>
+File: classc_frame_rate__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_frame_rate__coll__graph.pdf> [154 <./classc_frame_rate__coll__graph
+.pdf>] [155]) (./classc_full_face_data.tex [156]
+
+pdfTeX warning: pdflatex (file ./classc_full_face_data__inherit__graph.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_full_face_data__inherit__graph.pdf, id=2988, 160.6pt x 160.6pt>
+File: classc_full_face_data__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_full_face_data__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_full_face_data__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_full_face_data__coll__graph.pdf, id=2990, 194.7275pt x 234.8775pt>
+File: classc_full_face_data__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_full_face_data__coll__graph.pdf> [157 <./classc_full_face_data__inh
+erit__graph.pdf> <./classc_full_face_data__coll__graph.pdf>] [158] [159])
+(./classc_full_face_list.tex
+
+pdfTeX warning: pdflatex (file ./classc_full_face_list__inherit__graph.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_full_face_list__inherit__graph.pdf, id=3072, 230.8625pt x 160.6pt>
+File: classc_full_face_list__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_full_face_list__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_full_face_list__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_full_face_list__coll__graph.pdf, id=3074, 230.8625pt x 367.3725pt>
+File: classc_full_face_list__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_full_face_list__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [160 <./classc_full_face_list__inherit__graph.pdf>] [161 <./classc_full_face_l
+ist__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 77.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 77.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 77.
+
+) (./classc_gravity_particle.tex [162]
+
+pdfTeX warning: pdflatex (file ./classc_gravity_particle__inherit__graph.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_gravity_particle__inherit__graph.pdf, id=3135, 174.6525pt x 160.6pt>
+File: classc_gravity_particle__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_gravity_particle__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_gravity_particle__coll__graph.pdf): PDF
+ inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_gravity_particle__coll__graph.pdf, id=3137, 174.6525pt x 160.6pt>
+File: classc_gravity_particle__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_gravity_particle__coll__graph.pdf> [163 <./classc_gravity_particle_
+_inherit__graph.pdf> <./classc_gravity_particle__coll__graph.pdf>])
+(./classc_image.tex
+
+pdfTeX warning: pdflatex (file ./classc_image__inherit__graph.pdf): PDF inclusi
+on: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_image__inherit__graph.pdf, id=3165, 200.75pt x 277.035pt>
+File: classc_image__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_image__inherit__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [164]
+
+pdfTeX warning: pdflatex (file ./classc_image__coll__graph.pdf): PDF inclusion:
+ found PDF version <1.5>, but at most version <1.4> allowed
+<classc_image__coll__graph.pdf, id=3178, 1603.9925pt x 656.4525pt>
+File: classc_image__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_image__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+[165 <./classc_image__inherit__graph.pdf> <./classc_image__coll__graph.pdf>]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 57--60
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 60
+ []
+
+
+Overfull \hbox (21.88861pt too wide) in alignment at lines 82--85
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 85
+ []
+
+
+Overfull \vbox (3.66351pt too high) has occurred while \output is active []
+
+
+[166]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 114.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 114.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 114.
+
+[167]) (./classc_i_m_f_loader.tex
+
+pdfTeX warning: pdflatex (file ./classc_i_m_f_loader__inherit__graph.pdf): PDF 
+inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_i_m_f_loader__inherit__graph.pdf, id=3261, 264.99pt x 160.6pt>
+File: classc_i_m_f_loader__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_i_m_f_loader__inherit__graph.pdf>) (./classc_kernel.tex [168 <./cla
+ssc_i_m_f_loader__inherit__graph.pdf>]
+
+pdfTeX warning: pdflatex (file ./classc_kernel__coll__graph.pdf): PDF inclusion
+: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_kernel__coll__graph.pdf, id=3289, 453.695pt x 361.35pt>
+File: classc_kernel__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_kernel__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 16--18
+ [] 
+ []
+
+[169 <./classc_kernel__coll__graph.pdf>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 61.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 61.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 61.
+
+[170]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 114--117
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 117
+ []
+
+) (./classc_key_store.tex [171] [172pdfTeX warning (ext4): destination with the
+ same identifier (name{classc_key_store_a338766086dd09a48b8cefd33fb35bc7a}) has
+ been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.85 D
+      efinition at line 15 of file WTcKeyStore.h.]) (./classc_landscape.tex
+[173pdfTeX warning (ext4): destination with the same identifier (name{classc_ke
+y_store_a3b0392ad57c07042454ab913b80d4711}) has been already used, duplicate ig
+nored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.12 I
+      nheritance diagram for cLandscape:]
+
+pdfTeX warning: pdflatex (file ./classc_landscape__inherit__graph.pdf): PDF inc
+lusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_landscape__inherit__graph.pdf, id=3394, 256.96pt x 277.035pt>
+File: classc_landscape__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_landscape__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_landscape__coll__graph.pdf): PDF inclus
+ion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_landscape__coll__graph.pdf, id=3396, 1638.12pt x 656.4525pt>
+File: classc_landscape__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_landscape__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+[174 <./classc_landscape__inherit__graph.pdf> <./classc_landscape__coll__graph.
+pdf>] [175] [176]) (./classc_landscape_mesh_file.tex
+
+pdfTeX warning: pdflatex (file ./classc_landscape_mesh_file__inherit__graph.pdf
+): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+<classc_landscape_mesh_file__inherit__graph.pdf, id=3467, 212.795pt x 218.8175p
+t>
+File: classc_landscape_mesh_file__inherit__graph.pdf Graphic file (type pdf)
+ <use classc_landscape_mesh_file__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_landscape_mesh_file__coll__graph.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+<classc_landscape_mesh_file__coll__graph.pdf, id=3469, 408.52625pt x 566.115pt>
+File: classc_landscape_mesh_file__coll__graph.pdf Graphic file (type pdf)
+<use classc_landscape_mesh_file__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [177 <./classc_landscape_mesh_file__inherit__graph.pdf>]
+Underfull \vbox (badness 5274) has occurred while \output is active []
+
+ [178 <./classc_landscape_mesh_file__coll__graph.pdf>]) (./classc_light.tex
+
+pdfTeX warning: pdflatex (file ./classc_light__inherit__graph.pdf): PDF inclusi
+on: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_light__inherit__graph.pdf, id=3500, 142.5325pt x 218.8175pt>
+File: classc_light__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_light__inherit__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [179]
+
+pdfTeX warning: pdflatex (file ./classc_light__coll__graph.pdf): PDF inclusion:
+ found PDF version <1.5>, but at most version <1.4> allowed
+<classc_light__coll__graph.pdf, id=3516, 300.12125pt x 517.935pt>
+File: classc_light__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_light__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [180 <./classc_light__inherit__graph.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [181 <./classc_light__coll__graph.pdf>] [182]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 115.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 115.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 115.
+
+[183]
+Underfull \vbox (badness 1803) has occurred while \output is active []
+
+ [184])
+(./classc_light_handler.tex [185]
+
+pdfTeX warning: pdflatex (file ./classc_light_handler__coll__graph.pdf): PDF in
+clusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_light_handler__coll__graph.pdf, id=3644, 318.18875pt x 445.665pt>
+File: classc_light_handler__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_light_handler__coll__graph.pdf> [186 <./classc_light_handler__coll_
+_graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 59.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 59.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 59.
+
+[187]) (./classc_light_spot.tex
+
+pdfTeX warning: pdflatex (file ./classc_light_spot__coll__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_light_spot__coll__graph.pdf, id=3695, 146.5475pt x 174.6525pt>
+File: classc_light_spot__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_light_spot__coll__graph.pdf> [188 <./classc_light_spot__coll__graph
+.pdf>]) (./classc_limited_list.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+
+pdfTeX warning: pdflatex (file ./classc_limited_list__coll__graph.pdf): PDF inc
+lusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_limited_list__coll__graph.pdf, id=3717, 178.6675pt x 174.6525pt>
+File: classc_limited_list__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_limited_list__coll__graph.pdf> [189 <./classc_limited_list__coll__g
+raph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 96.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 96.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 96.
+
+[190] [191]) (./classc_limited_pointer_list.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 52.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 52.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 52.
+
+[192]) (./classc_line.tex
+
+pdfTeX warning: pdflatex (file ./classc_line__inherit__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_line__inherit__graph.pdf, id=3826, 200.75pt x 277.035pt>
+File: classc_line__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_line__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_line__coll__graph.pdf): PDF inclusion: 
+found PDF version <1.5>, but at most version <1.4> allowed
+<classc_line__coll__graph.pdf, id=3828, 1459.4525pt x 436.63126pt>
+File: classc_line__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_line__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+[193 <./classc_line__inherit__graph.pdf>] [194 <./classc_line__coll__graph.pdf>
+] [195] [196]) (./classc_linked_list.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+[197] [198]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 103.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 103.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 103.
+
+[199] [200]) (./classc_linked_node.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+
+pdfTeX warning: pdflatex (file ./classc_linked_node__coll__graph.pdf): PDF incl
+usion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_linked_node__coll__graph.pdf, id=4033, 231.86626pt x 178.6675pt>
+File: classc_linked_node__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_linked_node__coll__graph.pdf> [201 <./classc_linked_node__coll__gra
+ph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 89.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 89.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 89.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 89.
+
+[202]) (./classc_main_thread.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 51.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 51.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 51.
+
+) (./classc_material.tex [203pdfTeX warning (ext4): destination with the same i
+dentifier (name{classc_main_thread_a6eb20e854fb31291be7cd3ca35a2c68c}) has been
+ already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4 }
+     ]
+
+pdfTeX warning: pdflatex (file ./classc_material__inherit__graph.pdf): PDF incl
+usion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_material__inherit__graph.pdf, id=4104, 335.2525pt x 160.6pt>
+File: classc_material__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_material__inherit__graph.pdf> [204 <./classc_material__inherit__gra
+ph.pdf>]) (./classc_matrix.tex [205]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 106.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 106.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 106.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 115.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 115.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 115.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 124.
+
+[206]) (./classc_matrix4.tex
+
+pdfTeX warning: pdflatex (file ./classc_matrix4__inherit__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_matrix4__inherit__graph.pdf, id=4215, 497.86pt x 463.7325pt>
+File: classc_matrix4__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_matrix4__inherit__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 11--13
+ [] 
+ []
+
+
+Underfull \vbox (badness 7186) has occurred while \output is active []
+
+ [207]
+
+pdfTeX warning: pdflatex (file ./classc_matrix4__coll__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_matrix4__coll__graph.pdf, id=4232, 191.71625pt x 102.3825pt>
+File: classc_matrix4__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_matrix4__coll__graph.pdf> [208 <./classc_matrix4__inherit__graph.pd
+f> <./classc_matrix4__coll__graph.pdf>] [209] [210] [211] [212] [213] [214]
+[215]
+Overfull \hbox (1.2864pt too wide) in paragraph at lines 399--400
+\T1/ptm/m/n/10 This will re-turn the dis-tance be-tween this ma-trix and the []
+[]cMa-trix4[][] pointed to by lpOther. 
+ []
+
+[216] [217] [218] [219] [220]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1019.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 1019.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1019.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1036.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 1036.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1036.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1053.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 1053.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1053.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1070.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 1070.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1070.
+
+[221] [222] [223] [224] [225]) (./classc_mesh.tex [226]
+
+pdfTeX warning: pdflatex (file ./classc_mesh__inherit__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_mesh__inherit__graph.pdf, id=4650, 144.54pt x 393.47pt>
+File: classc_mesh__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_mesh__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_mesh__coll__graph.pdf): PDF inclusion: 
+found PDF version <1.5>, but at most version <1.4> allowed
+<classc_mesh__coll__graph.pdf, id=4652, 321.2pt x 626.34pt>
+File: classc_mesh__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_mesh__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [227 <./classc_mesh__inherit__graph.pdf>]
+Overfull \vbox (35.16492pt too high) has occurred while \output is active []
+
+
+[228 <./classc_mesh__coll__graph.pdf>] [229]
+Overfull \hbox (22.82341pt too wide) in paragraph at lines 77--77
+\T1/ptm/m/it/9 FORMAT_-UVS, WT_-MESH_-FORMAT_-NORMALS and WT_-MESH_-FORMAT_-POS
+ITIVE. 
+ []
+
+
+Overfull \hbox (21.88861pt too wide) in alignment at lines 102--105
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 105
+ []
+
+
+Overfull \vbox (5.42145pt too high) has occurred while \output is active []
+
+
+[230]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 154.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 154.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 154.
+
+[231] [232] [233] [234]) (./classc_mesh_array.tex
+
+pdfTeX warning: pdflatex (file ./classc_mesh_array__inherit__graph.pdf): PDF in
+clusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_mesh_array__inherit__graph.pdf, id=4862, 148.555pt x 160.6pt>
+File: classc_mesh_array__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_mesh_array__inherit__graph.pdf> [235]
+
+pdfTeX warning: pdflatex (file ./classc_mesh_array__coll__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_mesh_array__coll__graph.pdf, id=4876, 148.555pt x 160.6pt>
+File: classc_mesh_array__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_mesh_array__coll__graph.pdf> [236 <./classc_mesh_array__inherit__gr
+aph.pdf> <./classc_mesh_array__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 86.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 86.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 86.
+
+[237]) (./classc_mesh_collision.tex
+
+pdfTeX warning: pdflatex (file ./classc_mesh_collision__inherit__graph.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_mesh_collision__inherit__graph.pdf, id=4934, 178.6675pt x 277.035pt>
+File: classc_mesh_collision__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_mesh_collision__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_mesh_collision__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_mesh_collision__coll__graph.pdf, id=4936, 483.8075pt x 544.0325pt>
+File: classc_mesh_collision__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_mesh_collision__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 21--23
+ [] 
+ []
+
+[238 <./classc_mesh_collision__inherit__graph.pdf>] [239 <./classc_mesh_collisi
+on__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 93.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 93.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 93.
+
+[240] [241]) (./classc_mesh_file_collision.tex
+
+pdfTeX warning: pdflatex (file ./classc_mesh_file_collision__inherit__graph.pdf
+): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+<classc_mesh_file_collision__inherit__graph.pdf, id=5030, 312.16624pt x 277.035
+pt>
+File: classc_mesh_file_collision__inherit__graph.pdf Graphic file (type pdf)
+ <use classc_mesh_file_collision__inherit__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [242]
+
+pdfTeX warning: pdflatex (file ./classc_mesh_file_collision__coll__graph.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_mesh_file_collision__coll__graph.pdf, id=5044, 1405.25pt x 409.53pt>
+File: classc_mesh_file_collision__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_mesh_file_collision__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+[243 <./classc_mesh_file_collision__inherit__graph.pdf> <./classc_mesh_file_col
+lision__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 69.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 69.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 69.
+
+) (./classc_mesh_tree.tex
+
+pdfTeX warning: pdflatex (file ./classc_mesh_tree__inherit__graph.pdf): PDF inc
+lusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_mesh_tree__inherit__graph.pdf, id=5073, 144.54pt x 393.47pt>
+File: classc_mesh_tree__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_mesh_tree__inherit__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [244]
+
+pdfTeX warning: pdflatex (file ./classc_mesh_tree__coll__graph.pdf): PDF inclus
+ion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_mesh_tree__coll__graph.pdf, id=5086, 345.29pt x 758.835pt>
+File: classc_mesh_tree__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_mesh_tree__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [245 <./classc_mesh_tree__inherit__graph.pdf>]
+Overfull \vbox (35.16492pt too high) has occurred while \output is active []
+
+
+[246 <./classc_mesh_tree__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+[247]) (./classc_mesh_tree_array.tex
+
+pdfTeX warning: pdflatex (file ./classc_mesh_tree_array__coll__graph.pdf): PDF 
+inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_mesh_tree_array__coll__graph.pdf, id=5147, 321.2pt x 710.655pt>
+File: classc_mesh_tree_array__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_mesh_tree_array__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [248]
+Overfull \vbox (35.16492pt too high) has occurred while \output is active []
+
+
+[249 <./classc_mesh_tree_array__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 70.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 70.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 70.
+
+[250]) (./classc_mesh_tree_node.tex
+
+pdfTeX warning: pdflatex (file ./classc_mesh_tree_node__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_mesh_tree_node__coll__graph.pdf, id=5196, 321.2pt x 638.385pt>
+File: classc_mesh_tree_node__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_mesh_tree_node__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [251]
+Overfull \vbox (35.16492pt too high) has occurred while \output is active []
+
+
+[252 <./classc_mesh_tree_node__coll__graph.pdf>] [253]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 96.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 96.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 96.
+
+[254] [255]) (./classc_min_l_l.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+[256]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 83.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 83.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 83.
+
+[257]) (./classc_min_l_n.tex [258]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+
+pdfTeX warning: pdflatex (file ./classc_min_l_n__coll__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_min_l_n__coll__graph.pdf, id=5379, 207.77625pt x 178.6675pt>
+File: classc_min_l_n__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_min_l_n__coll__graph.pdf>
+Underfull \vbox (badness 1412) has occurred while \output is active []
+
+ [259 <./classc_min_l_n__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+) (./classcm_landscape.tex
+
+pdfTeX warning: pdflatex (file ./classcm_landscape__inherit__graph.pdf): PDF in
+clusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classcm_landscape__inherit__graph.pdf, id=5408, 188.705pt x 218.8175pt>
+File: classcm_landscape__inherit__graph.pdf Graphic file (type pdf)
+
+<use classcm_landscape__inherit__graph.pdf>
+Underfull \vbox (badness 6032) has occurred while \output is active []
+
+ [260]
+
+pdfTeX warning: pdflatex (file ./classcm_landscape__coll__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classcm_landscape__coll__graph.pdf, id=5425, 156.585pt x 160.6pt>
+File: classcm_landscape__coll__graph.pdf Graphic file (type pdf)
+
+<use classcm_landscape__coll__graph.pdf> [261 <./classcm_landscape__inherit__gr
+aph.pdf> <./classcm_landscape__coll__graph.pdf>] [262] [263]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 182--185
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 185
+ []
+
+
+Overfull \hbox (21.88861pt too wide) in alignment at lines 207--216
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 216
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 228.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 228.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 228.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [264]
+[265] [266] [267] [268] [269]) (./classcm_landscape_array.tex [270]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 66.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 66.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 66.
+
+[271]) (./classc_model_list.tex
+
+pdfTeX warning: pdflatex (file ./classc_model_list__inherit__graph.pdf): PDF in
+clusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_model_list__inherit__graph.pdf, id=5713, 254.9525pt x 277.035pt>
+File: classc_model_list__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_model_list__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_model_list__coll__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_model_list__coll__graph.pdf, id=5715, 1923.185pt x 683.55376pt>
+File: classc_model_list__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_model_list__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+
+Underfull \vbox (badness 1975) has occurred while \output is active []
+
+ [272 <./classc_model_list__inherit__graph.pdf>] [273 <./classc_model_list__col
+l__graph.pdf>]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 71--76
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 76
+ []
+
+
+Overfull \hbox (21.88861pt too wide) in alignment at lines 98--101
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 101
+ []
+
+[274]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 121--126
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 126
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 173.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 173.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 173.
+
+
+Overfull \hbox (21.88861pt too wide) in alignment at lines 196--199
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 199
+ []
+
+[275] [276]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 349--354
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 354
+ []
+
+
+Overfull \hbox (21.88861pt too wide) in alignment at lines 374--379
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 379
+ []
+
+
+Overfull \hbox (21.88861pt too wide) in alignment at lines 399--404
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 404
+ []
+
+
+Overfull \hbox (21.88861pt too wide) in alignment at lines 424--429
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 429
+ []
+
+) (./classc_model_list_node.tex
+Underfull \vbox (badness 4001) has occurred while \output is active []
+
+ [277]
+
+pdfTeX warning: pdflatex (file ./classc_model_list_node__coll__graph.pdf): PDF 
+inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_model_list_node__coll__graph.pdf, id=5861, 1636.1125pt x 799.98875pt>
+File: classc_model_list_node__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_model_list_node__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 16--18
+ [] 
+ []
+
+[278 <./classc_model_list_node__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+) (./classc_mouse.tex
+
+pdfTeX warning: pdflatex (file ./classc_mouse__coll__graph.pdf): PDF inclusion:
+ found PDF version <1.5>, but at most version <1.4> allowed
+<classc_mouse__coll__graph.pdf, id=5894, 321.2pt x 698.61pt>
+File: classc_mouse__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_mouse__coll__graph.pdf>
+Underfull \vbox (badness 2538) has occurred while \output is active []
+
+ [279]
+Overfull \vbox (35.16492pt too high) has occurred while \output is active []
+
+
+[280 <./classc_mouse__coll__graph.pdf>] [281]
+Overfull \hbox (9.67628pt too wide) in paragraph at lines 118--119
+\T1/ptm/m/n/10 This will lock the mouse cur-sor to the cen-tre of the win-dow (
+al-low-ing un-lim-ited scrolling). 
+ []
+
+[282] [283] [284]) (./classc_painter.tex
+
+pdfTeX warning: pdflatex (file ./classc_painter__coll__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_painter__coll__graph.pdf, id=6003, 1284.8pt x 524.96124pt>
+File: classc_painter__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_painter__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 11--13
+ [] 
+ []
+
+[285 <./classc_painter__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 64.
+
+[286]) (./classc_parent_stack.tex [287]
+
+pdfTeX warning: pdflatex (file ./classc_parent_stack__coll__graph.pdf): PDF inc
+lusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_parent_stack__coll__graph.pdf, id=6081, 483.8075pt x 361.35pt>
+File: classc_parent_stack__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_parent_stack__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 16--18
+ [] 
+ []
+
+[288 <./classc_parent_stack__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 79.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 79.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 79.
+
+[289]) (./classc_particle.tex
+
+pdfTeX warning: pdflatex (file ./classc_particle__inherit__graph.pdf): PDF incl
+usion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_particle__inherit__graph.pdf, id=6144, 240.9pt x 160.6pt>
+File: classc_particle__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_particle__inherit__graph.pdf> [290]
+
+pdfTeX warning: pdflatex (file ./classc_particle__coll__graph.pdf): PDF inclusi
+on: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_particle__coll__graph.pdf, id=6158, 240.9pt x 160.6pt>
+File: classc_particle__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_particle__coll__graph.pdf>
+Overfull \hbox (14.4612pt too wide) in paragraph at lines 35--35
+[]\T1/ptm/m/it/9 This is the func-tion that will up-date a cPar-ti-cles Po-si-t
+ion. if WT_-PARTICLE_-HANDLER_-
+ []
+
+[291 <./classc_particle__inherit__graph.pdf> <./classc_particle__coll__graph.pd
+f>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 72.
+
+[292]
+Overfull \hbox (16.59647pt too wide) in paragraph at lines 155--156
+\T1/ptm/m/n/10 This is the func-tion that will up-date a cPar-ti-cles Po-si-tio
+n. if WT_-PARTICLE_-HANDLER_-
+ []
+
+) (./classc_particle_for_group.tex
+
+pdfTeX warning: pdflatex (file ./classc_particle_for_group__inherit__graph.pdf)
+: PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+<classc_particle_for_group__inherit__graph.pdf, id=6220, 383.4325pt x 160.6pt>
+File: classc_particle_for_group__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_particle_for_group__inherit__graph.pdf>
+Overfull \hbox (37.0pt too wide) in paragraph at lines 11--13
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [293]
+[294 <./classc_particle_for_group__inherit__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 91.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 91.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 91.
+
+[295]) (./classc_particle_group.tex [296]
+
+pdfTeX warning: pdflatex (file ./classc_particle_group__inherit__graph.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_particle_group__inherit__graph.pdf, id=6317, 200.75pt x 277.035pt>
+File: classc_particle_group__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_particle_group__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_particle_group__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_particle_group__coll__graph.pdf, id=6319, 1473.505pt x 503.8825pt>
+File: classc_particle_group__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_particle_group__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 21--23
+ [] 
+ []
+
+[297 <./classc_particle_group__inherit__graph.pdf> <./classc_particle_group__co
+ll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 87.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 87.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 87.
+
+[298] [299]) (./classc_particle_handler.tex
+
+pdfTeX warning: pdflatex (file ./classc_particle_handler__inherit__graph.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_particle_handler__inherit__graph.pdf, id=6403, 200.75pt x 277.035pt>
+File: classc_particle_handler__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_particle_handler__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_particle_handler__coll__graph.pdf): PDF
+ inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+<classc_particle_handler__coll__graph.pdf, id=6405, 1491.5725pt x 522.95375pt>
+File: classc_particle_handler__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_particle_handler__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 21--23
+ [] 
+ []
+
+
+Underfull \vbox (badness 7722) has occurred while \output is active []
+
+ [300 <./classc_particle_handler__inherit__graph.pdf>] [301 <./classc_particle_
+handler__coll__graph.pdf>] [302]) (./classc_particle_settings.tex [303] [304])
+(./classc_plane.tex [305] [306] [307] [308]) (./classc_plane_list.tex
+
+pdfTeX warning: pdflatex (file ./classc_plane_list__inherit__graph.pdf): PDF in
+clusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_plane_list__inherit__graph.pdf, id=6654, 196.735pt x 160.6pt>
+File: classc_plane_list__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_plane_list__inherit__graph.pdf> [309]
+
+pdfTeX warning: pdflatex (file ./classc_plane_list__coll__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_plane_list__coll__graph.pdf, id=6668, 196.735pt x 234.8775pt>
+File: classc_plane_list__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_plane_list__coll__graph.pdf> [310 <./classc_plane_list__inherit__gr
+aph.pdf> <./classc_plane_list__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 75.
+
+[311]) (./classc_point.tex
+
+pdfTeX warning: pdflatex (file ./classc_point__inherit__graph.pdf): PDF inclusi
+on: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_point__inherit__graph.pdf, id=6716, 200.75pt x 277.035pt>
+File: classc_point__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_point__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_point__coll__graph.pdf): PDF inclusion:
+ found PDF version <1.5>, but at most version <1.4> allowed
+<classc_point__coll__graph.pdf, id=6718, 1459.4525pt x 436.63126pt>
+File: classc_point__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_point__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [312 <./classc_point__inherit__graph.pdf>] [313 <./classc_point__coll__graph.p
+df>]
+[314]) (./classc_polygon.tex
+
+pdfTeX warning: pdflatex (file ./classc_polygon__coll__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_polygon__coll__graph.pdf, id=6793, 246.9225pt x 319.1925pt>
+File: classc_polygon__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_polygon__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [315]
+[316 <./classc_polygon__coll__graph.pdf>]
+Overfull \hbox (0.12408pt too wide) in paragraph at lines 46--46
+[]\T1/ptm/m/it/9 Returns the num-ber of Verte-ces that are shared with the [][]
+cFull-Face-Data[][] ob-ject lpOther. 
+ []
+
+[317]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 127.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 127.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 127.
+
+[318] [319] [320]) (./classc_polygon_list.tex
+
+pdfTeX warning: pdflatex (file ./classc_polygon_list__inherit__graph.pdf): PDF 
+inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_polygon_list__inherit__graph.pdf, id=6954, 208.78pt x 160.6pt>
+File: classc_polygon_list__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_polygon_list__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_polygon_list__coll__graph.pdf): PDF inc
+lusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_polygon_list__coll__graph.pdf, id=6956, 246.9225pt x 451.6875pt>
+File: classc_polygon_list__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_polygon_list__coll__graph.pdf>
+Underfull \vbox (badness 1817) has occurred while \output is active []
+
+ [321 <./classc_polygon_list__inherit__graph.pdf>] [322 <./classc_polygon_list_
+_coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 89.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 89.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 89.
+
+[323] [324]) (./classc_process.tex
+
+pdfTeX warning: pdflatex (file ./classc_process__inherit__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_process__inherit__graph.pdf, id=7056, 216.81pt x 218.8175pt>
+File: classc_process__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_process__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_process__coll__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_process__coll__graph.pdf, id=7058, 511.9125pt x 509.905pt>
+File: classc_process__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_process__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [325 <./classc_process__inherit__graph.pdf>] [326 <./classc_process__coll__gra
+ph.pdf>]
+[327]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [328]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 138.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 138.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 138.
+
+[329]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 283--286
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 286
+ []
+
+
+Underfull \vbox (badness 2269) has occurred while \output is active []
+
+ [330])
+(./classc_push_pop_stack.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 50.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 50.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 50.
+
+[331]) (./classc_ray_collision.tex
+
+pdfTeX warning: pdflatex (file ./classc_ray_collision__inherit__graph.pdf): PDF
+ inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_ray_collision__inherit__graph.pdf, id=7222, 170.6375pt x 277.035pt>
+File: classc_ray_collision__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_ray_collision__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_ray_collision__coll__graph.pdf): PDF in
+clusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_ray_collision__coll__graph.pdf, id=7224, 170.6375pt x 277.035pt>
+File: classc_ray_collision__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_ray_collision__coll__graph.pdf>
+Underfull \vbox (badness 1132) has occurred while \output is active []
+
+ [332 <./classc_ray_collision__inherit__graph.pdf>] [333 <./classc_ray_collisio
+n__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+) (./classc_reference_list.tex [334]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 57.
+
+[335]) (./classc_render_node.tex
+
+pdfTeX warning: pdflatex (file ./classc_render_node__inherit__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_render_node__inherit__graph.pdf, id=7306, 200.75pt x 218.8175pt>
+File: classc_render_node__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_render_node__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_render_node__coll__graph.pdf): PDF incl
+usion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_render_node__coll__graph.pdf, id=7308, 453.695pt x 437.635pt>
+File: classc_render_node__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_render_node__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [336 <./classc_render_node__inherit__graph.pdf>] [337 <./classc_render_node__c
+oll__graph.pdf>] [338]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 125.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 125.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 125.
+
+[339] [340]) (./classc_render_object.tex
+
+pdfTeX warning: pdflatex (file ./classc_render_object__inherit__graph.pdf): PDF
+ inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_render_object__inherit__graph.pdf, id=7450, 497.86pt x 463.7325pt>
+File: classc_render_object__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_render_object__inherit__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 16--18
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [341]
+
+pdfTeX warning: pdflatex (file ./classc_render_object__coll__graph.pdf): PDF in
+clusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_render_object__coll__graph.pdf, id=7465, 1459.4525pt x 436.63126pt>
+File: classc_render_object__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_render_object__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+
+Underfull \vbox (badness 1194) has occurred while \output is active []
+
+ [342 <./classc_render_object__inherit__graph.pdf> <./classc_render_object__col
+l__graph.pdf>] [343]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 88--98
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 98
+ []
+
+[344]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 147.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 147.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 147.
+
+[345] [346] [347]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 439--442
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 442
+ []
+
+[348]) (./classc_render_pointer.tex
+
+pdfTeX warning: pdflatex (file ./classc_render_pointer__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_render_pointer__coll__graph.pdf, id=7688, 1284.8pt x 585.18625pt>
+File: classc_render_pointer__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_render_pointer__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 16--18
+ [] 
+ []
+
+[349 <./classc_render_pointer__coll__graph.pdf>]
+Overfull \hbox (37.33682pt too wide) in paragraph at lines 37--38
+[]\T1/ptm/m/n/10 void [][]Se-tAll[][] ([][]cRen-der-Ob-ject[][] $\OMS/ztmcm/m/n
+/10 ^^C$\T1/ptm/m/n/10 lpObject, uint32 liTex-ture=0, [][]vShader-Pro-gram[][] 
+$\OMS/ztmcm/m/n/10 ^^C$\T1/ptm/m/n/10 lpShader=0,
+ []
+
+[350] [351]) (./classc_settings.tex [352]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 49.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 49.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 49.
+
+) (./classc_shader.tex
+
+pdfTeX warning: pdflatex (file ./classc_shader__inherit__graph.pdf): PDF inclus
+ion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_shader__inherit__graph.pdf, id=7797, 132.495pt x 277.035pt>
+File: classc_shader__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_shader__inherit__graph.pdf> [353]
+
+pdfTeX warning: pdflatex (file ./classc_shader__coll__graph.pdf): PDF inclusion
+: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_shader__coll__graph.pdf, id=7819, 321.2pt x 626.34pt>
+File: classc_shader__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_shader__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [354 <./classc_shader__inherit__graph.pdf>]
+Overfull \vbox (35.16492pt too high) has occurred while \output is active []
+
+
+[355 <./classc_shader__coll__graph.pdf>] [356]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 96.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 96.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 96.
+
+[357]) (./classc_shader_array.tex [358]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 76.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 76.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 76.
+
+[359]) (./classc_shader_program.tex [360]
+
+pdfTeX warning: pdflatex (file ./classc_shader_program__inherit__graph.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_shader_program__inherit__graph.pdf, id=7967, 224.84pt x 218.8175pt>
+File: classc_shader_program__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_shader_program__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_shader_program__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_shader_program__coll__graph.pdf, id=7969, 402.50375pt x 698.61pt>
+File: classc_shader_program__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_shader_program__coll__graph.pdf>
+Overfull \hbox (0.7104pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [361 <./classc_shader_program__inherit__graph.pdf>]
+Overfull \vbox (36.16492pt too high) has occurred while \output is active []
+
+
+[362 <./classc_shader_program__coll__graph.pdf>] [363]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 92.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 92.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 92.
+
+[364]) (./classc_signal.tex [365]
+
+pdfTeX warning: pdflatex (file ./classc_signal__inherit__graph.pdf): PDF inclus
+ion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_signal__inherit__graph.pdf, id=8073, 499.8675pt x 463.7325pt>
+File: classc_signal__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_signal__inherit__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 16--18
+ [] 
+ []
+
+[366 <./classc_signal__inherit__graph.pdf>] [367]
+Overfull \hbox (16.16856pt too wide) in paragraph at lines 198--199
+\T1/ptm/m/n/10 _-S_-SLEEP,_-S_-WAKE,_-S_-KILL,_-S_-SLEEP_-TREE, _-S_-WAKE_-TREE
+,_-S_-KILL_-TREE. 
+ []
+
+[368]) (./classc_sphere_collision.tex
+
+pdfTeX warning: pdflatex (file ./classc_sphere_collision__inherit__graph.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+<classc_sphere_collision__inherit__graph.pdf, id=8149, 276.03125pt x 277.035pt>
+File: classc_sphere_collision__inherit__graph.pdf Graphic file (type pdf)
+<use classc_sphere_collision__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_sphere_collision__coll__graph.pdf): PDF
+ inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_sphere_collision__coll__graph.pdf, id=8151, 170.6375pt x 160.6pt>
+File: classc_sphere_collision__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_sphere_collision__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [369 <./classc_sphere_collision__inherit__graph.pdf>] [370 <./classc_sphere_co
+llision__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 85.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 85.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 85.
+
+
+Overfull \hbox (0.73624pt too wide) in paragraph at lines 130--131
+\T1/ptm/m/n/10 Will re-turn the Col-li-sion Size Value, which is the ra-dius of
+ the Col-li-sion Sphere squared. 
+ []
+
+[371]) (./classc_spot_light.tex
+Underfull \vbox (badness 3884) has occurred while \output is active []
+
+ [372]
+
+pdfTeX warning: pdflatex (file ./classc_spot_light__inherit__graph.pdf): PDF in
+clusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_spot_light__inherit__graph.pdf, id=8248, 142.5325pt x 218.8175pt>
+File: classc_spot_light__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_spot_light__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_spot_light__coll__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_spot_light__coll__graph.pdf, id=8250, 300.12125pt x 578.16pt>
+File: classc_spot_light__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_spot_light__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [373 <./classc_spot_light__inherit__graph.pdf>]
+Overfull \vbox (11.21504pt too high) has occurred while \output is active []
+
+
+[374 <./classc_spot_light__coll__graph.pdf>]) (./classc_sync.tex
+
+pdfTeX warning: pdflatex (file ./classc_sync__coll__graph.pdf): PDF inclusion: 
+found PDF version <1.5>, but at most version <1.4> allowed
+<classc_sync__coll__graph.pdf, id=8282, 194.7275pt x 102.3825pt>
+File: classc_sync__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_sync__coll__graph.pdf> [375]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 67.
+
+[376 <./classc_sync__coll__graph.pdf>]) (./classc_text.tex
+
+pdfTeX warning: pdflatex (file ./classc_text__inherit__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_text__inherit__graph.pdf, id=8326, 200.75pt x 277.035pt>
+File: classc_text__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_text__inherit__graph.pdf>
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [377]
+
+pdfTeX warning: pdflatex (file ./classc_text__coll__graph.pdf): PDF inclusion: 
+found PDF version <1.5>, but at most version <1.4> allowed
+<classc_text__coll__graph.pdf, id=8340, 1756.5625pt x 655.44875pt>
+File: classc_text__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_text__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+[378 <./classc_text__inherit__graph.pdf> <./classc_text__coll__graph.pdf>]
+[379] [380]) (./classc_texture.tex
+
+pdfTeX warning: pdflatex (file ./classc_texture__inherit__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_texture__inherit__graph.pdf, id=8407, 134.5025pt x 393.47pt>
+File: classc_texture__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_texture__inherit__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [381]
+
+pdfTeX warning: pdflatex (file ./classc_texture__coll__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_texture__coll__graph.pdf, id=8417, 321.2pt x 626.34pt>
+File: classc_texture__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_texture__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [382 <./classc_texture__inherit__graph.pdf>]
+Overfull \vbox (35.16492pt too high) has occurred while \output is active []
+
+
+[383 <./classc_texture__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 104.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 104.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 104.
+
+[384] [385]) (./classc_texture_array.tex [386]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 55.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 55.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 55.
+
+) (./classc_textured_model.tex
+
+pdfTeX warning: pdflatex (file ./classc_textured_model__inherit__graph.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_textured_model__inherit__graph.pdf, id=8538, 256.96pt x 277.035pt>
+File: classc_textured_model__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_textured_model__inherit__graph.pdf>
+Underfull \vbox (badness 1721) has occurred while \output is active []
+
+ [387]
+
+pdfTeX warning: pdflatex (file ./classc_textured_model__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_textured_model__coll__graph.pdf, id=8555, 1640.1275pt x 669.50125pt>
+File: classc_textured_model__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_textured_model__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 26--28
+ [] 
+ []
+
+[388 <./classc_textured_model__inherit__graph.pdf> <./classc_textured_model__co
+ll__graph.pdf>] [389]) (./classc_user_signal.tex [390]
+
+pdfTeX warning: pdflatex (file ./classc_user_signal__inherit__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_user_signal__inherit__graph.pdf, id=8628, 150.5625pt x 218.8175pt>
+File: classc_user_signal__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_user_signal__inherit__graph.pdf> [391 <./classc_user_signal__inheri
+t__graph.pdf>]) (./classc_vertex.tex [392] [393] [394])
+(./classc_vertex_list.tex
+
+pdfTeX warning: pdflatex (file ./classc_vertex_list__inherit__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_vertex_list__inherit__graph.pdf, id=8743, 200.75pt x 160.6pt>
+File: classc_vertex_list__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_vertex_list__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classc_vertex_list__coll__graph.pdf): PDF incl
+usion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_vertex_list__coll__graph.pdf, id=8745, 200.75pt x 234.8775pt>
+File: classc_vertex_list__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_vertex_list__coll__graph.pdf> [395 <./classc_vertex_list__inherit__
+graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 78.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 78.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 78.
+
+[396 <./classc_vertex_list__coll__graph.pdf>]) (./classc_wav.tex
+
+pdfTeX warning: pdflatex (file ./classc_wav__inherit__graph.pdf): PDF inclusion
+: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_wav__inherit__graph.pdf, id=8801, 208.78pt x 218.8175pt>
+File: classc_wav__inherit__graph.pdf Graphic file (type pdf)
+
+<use classc_wav__inherit__graph.pdf> [397]
+
+pdfTeX warning: pdflatex (file ./classc_wav__coll__graph.pdf): PDF inclusion: f
+ound PDF version <1.5>, but at most version <1.4> allowed
+<classc_wav__coll__graph.pdf, id=8817, 375.4025pt x 566.115pt>
+File: classc_wav__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_wav__coll__graph.pdf>
+Overfull \hbox (29.0pt too wide) in paragraph at lines 21--23
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [398 <./classc_wav__inherit__graph.pdf>]
+Overfull \vbox (0.19672pt too high) has occurred while \output is active []
+
+
+[399 <./classc_wav__coll__graph.pdf>]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 56--59
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 59
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+) (./classc_wind_and_gravity_particle.tex
+
+pdfTeX warning: pdflatex (file ./classc_wind_and_gravity_particle__inherit__gra
+ph.pdf): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allo
+wed
+
+<classc_wind_and_gravity_particle__inherit__graph.pdf, id=8847, 206.7725pt x 16
+0.6pt>
+File: classc_wind_and_gravity_particle__inherit__graph.pdf Graphic file (type p
+df)
+ <use classc_wind_and_gravity_particle__inherit__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [400]
+
+pdfTeX warning: pdflatex (file ./classc_wind_and_gravity_particle__coll__graph.
+pdf): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+
+<classc_wind_and_gravity_particle__coll__graph.pdf, id=8862, 206.7725pt x 160.6
+pt>
+File: classc_wind_and_gravity_particle__coll__graph.pdf Graphic file (type pdf)
+
+ <use classc_wind_and_gravity_particle__coll__graph.pdf> [401 <./classc_wind_an
+d_gravity_particle__inherit__graph.pdf> <./classc_wind_and_gravity_particle__co
+ll__graph.pdf>]) (./classc_window.tex
+Overfull \hbox (7.8462pt too wide) in paragraph at lines 14--14
+[]\T1/ptm/m/it/9 This will cre-ate a new [][]cWin-dow[][] class. Cre-ate a desk
+-top win-dow and [][]Ini-tialiseOpenGL()[][].
+ []
+
+
+Overfull \hbox (7.8462pt too wide) in paragraph at lines 16--16
+[]\T1/ptm/m/it/9 This will cre-ate a new [][]cWin-dow[][] class. Cre-ate a desk
+-top win-dow and [][]Ini-tialiseOpenGL()[][].
+ []
+
+[402] [403]
+Overfull \hbox (5.13742pt too wide) in paragraph at lines 97--98
+[]\T1/ptm/m/n/10 static int [][]Dis-play-At-tributes[][] []5[] = { GLX_-RGBA, G
+LX_-DEPTH_-SIZE, 24, GLX_-
+ []
+
+
+Overfull \hbox (4.23654pt too wide) in paragraph at lines 120--121
+\T1/ptm/m/n/10 This will cre-ate a new [][]cWin-dow[][] class. Cre-ate a desk-t
+op win-dow and [][]Ini-tialiseOpenGL()[][].
+ []
+
+[404]
+Overfull \hbox (4.23654pt too wide) in paragraph at lines 133--134
+\T1/ptm/m/n/10 This will cre-ate a new [][]cWin-dow[][] class. Cre-ate a desk-t
+op win-dow and [][]Ini-tialiseOpenGL()[][].
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 146.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 146.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 146.
+
+[405] [406] [407] [408]) (./classdw_log.tex [409]) (./classv2_d_polygon.tex
+[410] [411]) (./classv_collision_data.tex [412]
+
+pdfTeX warning: pdflatex (file ./classv_collision_data__inherit__graph.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_collision_data__inherit__graph.pdf, id=9127, 276.03125pt x 277.035pt>
+File: classv_collision_data__inherit__graph.pdf Graphic file (type pdf)
+
+<use classv_collision_data__inherit__graph.pdf> [413 <./classv_collision_data__
+inherit__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Overfull \hbox (0.73624pt too wide) in paragraph at lines 108--109
+\T1/ptm/m/n/10 Will re-turn the Col-li-sion Size Value, which is the ra-dius of
+ the Col-li-sion Sphere squared. 
+ []
+
+[414]) (./classv_file.tex
+
+pdfTeX warning: pdflatex (file ./classv_file__inherit__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_file__inherit__graph.pdf, id=9184, 678.535pt x 393.47pt>
+File: classv_file__inherit__graph.pdf Graphic file (type pdf)
+
+<use classv_file__inherit__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 16--18
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [415]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 46.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 46.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 46.
+
+[416 <./classv_file__inherit__graph.pdf>]) (./classv_font.tex
+
+pdfTeX warning: pdflatex (file ./classv_font__inherit__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_font__inherit__graph.pdf, id=9218, 134.5025pt x 393.47pt>
+File: classv_font__inherit__graph.pdf Graphic file (type pdf)
+
+<use classv_font__inherit__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [417]
+
+pdfTeX warning: pdflatex (file ./classv_font__coll__graph.pdf): PDF inclusion: 
+found PDF version <1.5>, but at most version <1.4> allowed
+<classv_font__coll__graph.pdf, id=9228, 321.2pt x 686.565pt>
+File: classv_font__coll__graph.pdf Graphic file (type pdf)
+
+<use classv_font__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [418 <./classv_font__inherit__graph.pdf>]
+Overfull \vbox (35.16492pt too high) has occurred while \output is active []
+
+
+[419 <./classv_font__coll__graph.pdf>]) (./classv_light.tex
+
+pdfTeX warning: pdflatex (file ./classv_light__inherit__graph.pdf): PDF inclusi
+on: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_light__inherit__graph.pdf, id=9255, 142.5325pt x 218.8175pt>
+File: classv_light__inherit__graph.pdf Graphic file (type pdf)
+
+<use classv_light__inherit__graph.pdf> [420 <./classv_light__inherit__graph.pdf
+>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 45.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 45.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 45.
+
+) (./classv_mesh.tex
+
+pdfTeX warning: pdflatex (file ./classv_mesh__inherit__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_mesh__inherit__graph.pdf, id=9288, 144.54pt x 393.47pt>
+File: classv_mesh__inherit__graph.pdf Graphic file (type pdf)
+
+<use classv_mesh__inherit__graph.pdf>
+Underfull \vbox (badness 6575) has occurred while \output is active []
+
+ [421]
+
+pdfTeX warning: pdflatex (file ./classv_mesh__coll__graph.pdf): PDF inclusion: 
+found PDF version <1.5>, but at most version <1.4> allowed
+<classv_mesh__coll__graph.pdf, id=9303, 321.2pt x 566.115pt>
+File: classv_mesh__coll__graph.pdf Graphic file (type pdf)
+
+<use classv_mesh__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [422 <./classv_mesh__inherit__graph.pdf>] [423 <./classv_mesh__coll__graph.pdf
+>] [424]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 82.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 82.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 82.
+
+[425] [426]) (./classv_mesh_tree.tex
+
+pdfTeX warning: pdflatex (file ./classv_mesh_tree__inherit__graph.pdf): PDF inc
+lusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_mesh_tree__inherit__graph.pdf, id=9406, 144.54pt x 393.47pt>
+File: classv_mesh_tree__inherit__graph.pdf Graphic file (type pdf)
+
+<use classv_mesh_tree__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classv_mesh_tree__coll__graph.pdf): PDF inclus
+ion: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_mesh_tree__coll__graph.pdf, id=9408, 321.2pt x 686.565pt>
+File: classv_mesh_tree__coll__graph.pdf Graphic file (type pdf)
+
+<use classv_mesh_tree__coll__graph.pdf> [427 <./classv_mesh_tree__inherit__grap
+h.pdf>]
+Overfull \vbox (35.16492pt too high) has occurred while \output is active []
+
+
+[428 <./classv_mesh_tree__coll__graph.pdf>] [429]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 84.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 84.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 84.
+
+[430] [431]) (./classvm_landscape.tex
+
+pdfTeX warning: pdflatex (file ./classvm_landscape__inherit__graph.pdf): PDF in
+clusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classvm_landscape__inherit__graph.pdf, id=9501, 188.705pt x 218.8175pt>
+File: classvm_landscape__inherit__graph.pdf Graphic file (type pdf)
+
+<use classvm_landscape__inherit__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [432]
+[433 <./classvm_landscape__inherit__graph.pdf>] [434]) (./classv_process.tex
+[435]
+
+pdfTeX warning: pdflatex (file ./classv_process__inherit__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_process__inherit__graph.pdf, id=9574, 216.81pt x 218.8175pt>
+File: classv_process__inherit__graph.pdf Graphic file (type pdf)
+
+<use classv_process__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classv_process__coll__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_process__coll__graph.pdf, id=9576, 216.81pt x 160.6pt>
+File: classv_process__coll__graph.pdf Graphic file (type pdf)
+
+<use classv_process__coll__graph.pdf>
+Underfull \vbox (badness 6047) has occurred while \output is active []
+
+ [436 <./classv_process__inherit__graph.pdf> <./classv_process__coll__graph.pdf
+>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 62.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 62.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 62.
+
+[437]) (./classv_render_object.tex
+
+pdfTeX warning: pdflatex (file ./classv_render_object__inherit__graph.pdf): PDF
+ inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_render_object__inherit__graph.pdf, id=9631, 497.86pt x 463.7325pt>
+File: classv_render_object__inherit__graph.pdf Graphic file (type pdf)
+
+<use classv_render_object__inherit__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 16--18
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [438]
+
+pdfTeX warning: pdflatex (file ./classv_render_object__coll__graph.pdf): PDF in
+clusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_render_object__coll__graph.pdf, id=9642, 257.96375pt x 174.6525pt>
+File: classv_render_object__coll__graph.pdf Graphic file (type pdf)
+
+<use classv_render_object__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [439 <./classv_render_object__inherit__graph.pdf>] [440 <./classv_render_objec
+t__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 75.
+
+[441]) (./classv_shader.tex [442]
+
+pdfTeX warning: pdflatex (file ./classv_shader__inherit__graph.pdf): PDF inclus
+ion: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_shader__inherit__graph.pdf, id=9757, 132.495pt x 277.035pt>
+File: classv_shader__inherit__graph.pdf Graphic file (type pdf)
+
+<use classv_shader__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classv_shader__coll__graph.pdf): PDF inclusion
+: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_shader__coll__graph.pdf, id=9759, 321.2pt x 566.115pt>
+File: classv_shader__coll__graph.pdf Graphic file (type pdf)
+
+<use classv_shader__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [443 <./classv_shader__inherit__graph.pdf>] [444 <./classv_shader__coll__graph
+.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 54.
+
+) (./classv_shader_program.tex
+
+pdfTeX warning: pdflatex (file ./classv_shader_program__inherit__graph.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_shader_program__inherit__graph.pdf, id=9787, 168.63pt x 160.6pt>
+File: classv_shader_program__inherit__graph.pdf Graphic file (type pdf)
+
+<use classv_shader_program__inherit__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [445]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 46.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 46.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 46.
+
+[446 <./classv_shader_program__inherit__graph.pdf>]) (./classv_texture.tex
+
+pdfTeX warning: pdflatex (file ./classv_texture__inherit__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_texture__inherit__graph.pdf, id=9824, 134.5025pt x 393.47pt>
+File: classv_texture__inherit__graph.pdf Graphic file (type pdf)
+
+<use classv_texture__inherit__graph.pdf>
+
+pdfTeX warning: pdflatex (file ./classv_texture__coll__graph.pdf): PDF inclusio
+n: found PDF version <1.5>, but at most version <1.4> allowed
+<classv_texture__coll__graph.pdf, id=9826, 321.2pt x 566.115pt>
+File: classv_texture__coll__graph.pdf Graphic file (type pdf)
+
+<use classv_texture__coll__graph.pdf> [447 <./classv_texture__inherit__graph.pd
+f>] [448 <./classv_texture__coll__graph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 61.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 61.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 61.
+
+[449])
+No file refman.ind.
+[450] (./refman.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 16050 strings out of 495061
+ 357623 string characters out of 1182622
+ 240975 words of memory out of 3000000
+ 14499 multiletter control sequences out of 15000+50000
+ 82336 words of font info for 125 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 41i,13n,58p,1161b,1526s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{_w_tc_flags_8h_source} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{_w_tc_render_node_8h_source} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{_key_identifiers_list} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{_w_tc_file_8h_source} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{_w_tc_render_object_8h_source} has been referenced 
+but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{_w_tc_process_8h_source} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{_w_t_kernel_8h_source} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{_w_t_div_win_8h_source} has been referenced but doe
+s not exist, replaced by a fixed one
+
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/couri
+er/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8ac.pfb></
+usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/share/texmf
+-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1
+/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on refman.pdf (454 pages, 7380464 bytes).
+PDF statistics:
+ 10754 PDF objects out of 12825 (max. 8388607)
+ 4080 named destinations out of 4296 (max. 500000)
+ 731 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,82 @@
+\hyperlink{_w_tc_process_8h_source}{WTcProcess.h}
+
+Using William Thorley’s Process Handler System
+
+When properly implemented the process handler automatically links and runs all processes. A process must inherit \hyperlink{classc_process}{cProcess}. It must also define the virtual function Run() a process without a Run() function is useless, and will be deleted during the frame it is created.
+
+Declaring a new process class called player: 
+\begin{DoxyCode}
+ //This is the same as _PROCESS(player)
+ *class player : public cProcess
+ *{
+         *public :
+         void Run();
+         *};
+         *
+\end{DoxyCode}
+
+
+void \hyperlink{classc_process_a3e0fab4ccc0a8fb065d50eb88b6a0dd5}{cProcess::Run()}; The function Run() is a virtual function already defined. This function is called every time the process must run its code (usually once a frame). The code that defines how the process acts goes in Run().
+
+Creating a Process: Call the macro \_\-CREATE(Type); This will return a pointer to the new process of type Type. 
+\begin{DoxyCode}
+ player *mpNewProcessPointer;
+ NewProcessPointer=_CREATE(player());
+ _CREATE(AnotherProcess(Argument1,Argument2));
+\end{DoxyCode}
+
+
+Killing a Process: Process' must not be destroyed by deleting the process. Processes can be be deleted either by calling the macro \_\-KILL(); or by calling the Function Signal(SIGNAL lsFlags) with the flag \_\-S\_\-KILL. if \_\-KILL() is called without a pointer it will automatically use the pointer this. Process' will not be destroyed when the signal is sent, they will be deacticated, but the memory will remain allocated until \hyperlink{classc_kernel}{cKernel} reaches the correct stage to delete the object. Objects can remain allocated into the next frame, but not the frame after that. Both pieces of following code have the same effect. The Process pointed to by mpPointerToAnotherProcess is Killed and then this process is killed. 
+\begin{DoxyCode}
+ void player::Run()
+ {
+
+ if(_KEY(KEY_k))
+ {
+ mpPointerToAnotherProcess->Signal(_S_KILL);
+ _KILL(this);
+ }
+
+ }
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+ void player::Run()
+ {
+
+ if(_KEY(KEY_k))
+ {
+ _KILL(mpPointerToAnotherProcess);
+ _KILL();
+ }
+
+ }
+\end{DoxyCode}
+
+
+Sleeping a Process: A Process can be sent to sleep by calling the \hyperlink{classc_signal_a77af8271fc7ffb8696ba73a01e213808}{cSignal::Signal(SIGNAL lsFlags)} function with the value \_\-S\_\-SLEEP. Sleeping a process leaves the process in the process list, but stops the Run() function being called every frame. This allows the Signal(SIGNAL lsFlags) function to be used to return it to ‘active duty’. The memory will remain allocated. Sending repeated Sleep calls to a process will not affect the process or the stability of the system, the Process will remain asleep.
+
+Waking a Process: A Process can be awakend by calling the \hyperlink{classc_signal_a77af8271fc7ffb8696ba73a01e213808}{cSignal::Signal(SIGNAL lsFlags)} function with the value \_\-S\_\-WAKE. Sending repeated Waking calls to a process will not affect the process or the stability of the system, the Process will remain awake. 
+\begin{DoxyCode}
+ void player::Run()
+ {
+
+ if(_KEY(KEY_s)) mpPointerToAnotherProcess->Signal(_S_SLEEP);
+ if(_KEY(KEY_w)) mpPointerToAnotherProcess->Signal(_S_WAKE);
+
+ }
+\end{DoxyCode}
+
+
+Removing a Process: A Process can be killed by the \hyperlink{classc_kernel}{cKernel} object. Calling the \hyperlink{classc_kernel_a59c9a956e6a6666a57c2d85e463381d8}{cKernel::Remove()} function will kill the process and free the memory. This must not be done to the currently running process or the system may crash. Use on the current process at your peril. The pointer is to the \hyperlink{classc_linked_node}{cLinkedNode$<$vProcess$>$} which owns this process. Each Process has a pointer (mpNode) to its \hyperlink{classc_linked_node}{cLinkedNode$<$vProcess$>$}. $\ast$ 
+\begin{DoxyCode}
+ void player::Run()
+ {
+
+ if(_KEY(KEY_k)) _KERNEL->Remove(mpPointerToAProcessesNode);
+
+ }
+\end{DoxyCode}
+ 

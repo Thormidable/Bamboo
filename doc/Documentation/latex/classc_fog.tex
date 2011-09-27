@@ -1,0 +1,201 @@
+\hypertarget{classc_fog}{
+\section{cFog Class Reference}
+\label{classc_fog}\index{cFog@{cFog}}
+}
+
+
+This class will create and control an OpenGL scenes fog effect.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_fog_a8d87f9ec7b741a27236b89f134f46104}{cFog} ()
+\begin{DoxyCompactList}\small\item\em Creates a clear fog effect. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_fog_a546279d0cae73376c9b254b727c32a50}{cFog} (float lfStart, float lfEnd)
+\begin{DoxyCompactList}\small\item\em Creates a new fog object between distance lfStart and lfEnd. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_fog_a6df07427d17c1ebae3d9fda3a8c35071}{SetColor} (float lfRed, float lfGreen, float lfBlue, float lfAlpha)
+\begin{DoxyCompactList}\small\item\em Will set the RGBA color of the fog. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_fog_a295ed5f6c4d99814a14740a4527d090f}{SetMode} (char ltMode)
+\begin{DoxyCompactList}\small\item\em Will set the fog equation the fog effect will use. (GL\_\-EXP, GL\_\-EXP2, GL\_\-LINEAR) \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_fog_a0de4a3634f298570163182df50813e90}{SetDensity} (float lfDensity)
+\begin{DoxyCompactList}\small\item\em Will set the effect the fog has on the screen colors. 1.0f is Opaque, 0.0f is completely transparent. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_fog_a94f49aea8c21e90755fb365c1aa6d443}{SetRange} (float lfStart, float lfEnd)
+\begin{DoxyCompactList}\small\item\em Will set the near and far distances, from the camera, of the fog effect. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_fog_a00959c3267cb56abf20e0e9bf0cec329}{On} ()
+\begin{DoxyCompactList}\small\item\em Will return whether the fog effect is on or off. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_fog_a948265685f32d2e08a7e67632419f73b}{SetOn} ()
+\begin{DoxyCompactList}\small\item\em Will set the fog effect on. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_fog_a784bb1ece1382e294dfce8b6bb52d033}{SetOff} ()
+\begin{DoxyCompactList}\small\item\em Will set the fog effect off. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will create and control an OpenGL scenes fog effect. 
+
+Definition at line 7 of file WTcFog.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_fog_a8d87f9ec7b741a27236b89f134f46104}{
+\index{cFog@{cFog}!cFog@{cFog}}
+\index{cFog@{cFog}!cFog@{cFog}}
+\subsubsection[{cFog}]{\setlength{\rightskip}{0pt plus 5cm}cFog::cFog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_fog_a8d87f9ec7b741a27236b89f134f46104}
+
+
+Creates a clear fog effect. 
+
+
+
+Definition at line 3 of file WTcFog.cpp.
+
+\hypertarget{classc_fog_a546279d0cae73376c9b254b727c32a50}{
+\index{cFog@{cFog}!cFog@{cFog}}
+\index{cFog@{cFog}!cFog@{cFog}}
+\subsubsection[{cFog}]{\setlength{\rightskip}{0pt plus 5cm}cFog::cFog (
+\begin{DoxyParamCaption}
+\item[{float}]{lfStart, }
+\item[{float}]{lfEnd}
+\end{DoxyParamCaption}
+)}}
+\label{classc_fog_a546279d0cae73376c9b254b727c32a50}
+
+
+Creates a new fog object between distance lfStart and lfEnd. 
+
+
+
+Definition at line 18 of file WTcFog.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_fog_a00959c3267cb56abf20e0e9bf0cec329}{
+\index{cFog@{cFog}!On@{On}}
+\index{On@{On}!cFog@{cFog}}
+\subsubsection[{On}]{\setlength{\rightskip}{0pt plus 5cm}bool cFog::On (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_fog_a00959c3267cb56abf20e0e9bf0cec329}
+
+
+Will return whether the fog effect is on or off. 
+
+
+
+Definition at line 77 of file WTcFog.cpp.
+
+\hypertarget{classc_fog_a6df07427d17c1ebae3d9fda3a8c35071}{
+\index{cFog@{cFog}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!cFog@{cFog}}
+\subsubsection[{SetColor}]{\setlength{\rightskip}{0pt plus 5cm}void cFog::SetColor (
+\begin{DoxyParamCaption}
+\item[{float}]{lfRed, }
+\item[{float}]{lfGreen, }
+\item[{float}]{lfBlue, }
+\item[{float}]{lfAlpha}
+\end{DoxyParamCaption}
+)}}
+\label{classc_fog_a6df07427d17c1ebae3d9fda3a8c35071}
+
+
+Will set the RGBA color of the fog. 
+
+
+
+Definition at line 50 of file WTcFog.cpp.
+
+\hypertarget{classc_fog_a0de4a3634f298570163182df50813e90}{
+\index{cFog@{cFog}!SetDensity@{SetDensity}}
+\index{SetDensity@{SetDensity}!cFog@{cFog}}
+\subsubsection[{SetDensity}]{\setlength{\rightskip}{0pt plus 5cm}void cFog::SetDensity (
+\begin{DoxyParamCaption}
+\item[{float}]{lfDensity}
+\end{DoxyParamCaption}
+)}}
+\label{classc_fog_a0de4a3634f298570163182df50813e90}
+
+
+Will set the effect the fog has on the screen colors. 1.0f is Opaque, 0.0f is completely transparent. 
+
+
+
+Definition at line 64 of file WTcFog.cpp.
+
+\hypertarget{classc_fog_a295ed5f6c4d99814a14740a4527d090f}{
+\index{cFog@{cFog}!SetMode@{SetMode}}
+\index{SetMode@{SetMode}!cFog@{cFog}}
+\subsubsection[{SetMode}]{\setlength{\rightskip}{0pt plus 5cm}void cFog::SetMode (
+\begin{DoxyParamCaption}
+\item[{char}]{ltMode}
+\end{DoxyParamCaption}
+)}}
+\label{classc_fog_a295ed5f6c4d99814a14740a4527d090f}
+
+
+Will set the fog equation the fog effect will use. (GL\_\-EXP, GL\_\-EXP2, GL\_\-LINEAR) 
+
+
+
+Definition at line 58 of file WTcFog.cpp.
+
+\hypertarget{classc_fog_a784bb1ece1382e294dfce8b6bb52d033}{
+\index{cFog@{cFog}!SetOff@{SetOff}}
+\index{SetOff@{SetOff}!cFog@{cFog}}
+\subsubsection[{SetOff}]{\setlength{\rightskip}{0pt plus 5cm}void cFog::SetOff (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_fog_a784bb1ece1382e294dfce8b6bb52d033}
+
+
+Will set the fog effect off. 
+
+
+
+Definition at line 45 of file WTcFog.cpp.
+
+\hypertarget{classc_fog_a948265685f32d2e08a7e67632419f73b}{
+\index{cFog@{cFog}!SetOn@{SetOn}}
+\index{SetOn@{SetOn}!cFog@{cFog}}
+\subsubsection[{SetOn}]{\setlength{\rightskip}{0pt plus 5cm}void cFog::SetOn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_fog_a948265685f32d2e08a7e67632419f73b}
+
+
+Will set the fog effect on. 
+
+
+
+Definition at line 34 of file WTcFog.cpp.
+
+\hypertarget{classc_fog_a94f49aea8c21e90755fb365c1aa6d443}{
+\index{cFog@{cFog}!SetRange@{SetRange}}
+\index{SetRange@{SetRange}!cFog@{cFog}}
+\subsubsection[{SetRange}]{\setlength{\rightskip}{0pt plus 5cm}void cFog::SetRange (
+\begin{DoxyParamCaption}
+\item[{float}]{lfStart, }
+\item[{float}]{lfEnd}
+\end{DoxyParamCaption}
+)}}
+\label{classc_fog_a94f49aea8c21e90755fb365c1aa6d443}
+
+
+Will set the near and far distances, from the camera, of the fog effect. 
+
+
+
+Definition at line 71 of file WTcFog.cpp.
+

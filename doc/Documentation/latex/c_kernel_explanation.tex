@@ -1,0 +1,7 @@
+\hyperlink{_w_t_kernel_8h_source}{WTKernel.h}
+
+Using the kernel system by William Thorley
+
+The kernel will create itself as soon as any Process is created. It will automatically link the process, and sort their run order. A Pointer to the \hyperlink{classc_kernel}{cKernel} can always be found by calling the macro \_\-KERNEL (\hyperlink{classc_kernel_a5bd65ef494632b9fd585a6f6cae375e7}{cKernel::Instance()}). If this function is called and there is no \hyperlink{classc_kernel}{cKernel}, the function will create one. The Constructor is private, so there can be only one \hyperlink{classc_kernel}{cKernel}. The Kernel is entirely automatic and should require no inputs from the user. However it can supply useful information and functionality to the user. KillAll(): Calling KillAll() will kill every running process. This will cause Update() to exit, and traditionally end the program. However it is possible to KillAll(), then create a new core process, and call Update() again, thereby ‘restarting’ the program.
+
+\_\-FIND\_\-PROCESS(TYPE) Calling \_\-FIND\_\-PROCESS() will automatically search the \hyperlink{classc_kernel}{cKernel} for any processes of class type TYPE. It will return a pointer to the next process of class type TYPE everytime it is called. When there are no more processes of class type TYPE it will return 0. 

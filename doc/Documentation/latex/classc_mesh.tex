@@ -1,0 +1,679 @@
+\hypertarget{classc_mesh}{
+\section{cMesh Class Reference}
+\label{classc_mesh}\index{cMesh@{cMesh}}
+}
+
+
+This class stores the data for a 3D model.  
+
+
+
+
+Inheritance diagram for cMesh:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classc_mesh__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cMesh:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{classc_mesh__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_mesh_a1b689b9d00f34fe7e4cbf8910bb310f9}{cMesh} ()
+\begin{DoxyCompactList}\small\item\em This will create an empty mesh. No verteces, no faces, nothing. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_mesh_ae24161941f8538d55caa144d76b535bc}{cMesh} (\hyperlink{classc_mesh_array}{cMeshArray} $\ast$lpMesh)
+\begin{DoxyCompactList}\small\item\em This will load the data in lpMesh to be used by this object. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_mesh_a3148f48c2bb9a7d5c2626f03bfa1586f}{$\sim$cMesh} ()
+\item 
+void \hyperlink{classc_mesh_a8dd2a8840d8e2c6aaefa95884a2f9f68}{SetFormat} ()
+\begin{DoxyCompactList}\small\item\em This will return the models rendering format. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_a5f35c2b9245d765b7958f91379d63e7d}{CreateNormalArray} ()
+\begin{DoxyCompactList}\small\item\em This will produce an array of vertex normal data for a mesh. This will require the mesh to have vertex and face data and produces normal vectors for all the verteces. \item\end{DoxyCompactList}\item 
+uint32 \hyperlink{classc_mesh_a1a58ae1ab68b816b36188ac769ac50fd}{Vertex} ()
+\begin{DoxyCompactList}\small\item\em This will return the number of verteces in the vertex position array mpVertex. \item\end{DoxyCompactList}\item 
+uint32 \hyperlink{classc_mesh_a5f1b578685730d581301f3b5dbb2f83c}{Faces} ()
+\begin{DoxyCompactList}\small\item\em This will return the number of faces in the face array mpFaces. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_mesh_a22dfd977d522b15185837426b444d7b7}{VertexData} ()
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the vertex position array. \item\end{DoxyCompactList}\item 
+uint16 $\ast$ \hyperlink{classc_mesh_a49725e65f20af64f20442389fe616282}{FaceData} ()
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the face array.. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_mesh_a65a3a31f9d6b718b7ea161f434f2b3da}{NormalData} ()
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the array of vertex normals. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_mesh_a20b38f2c9a4646b8aa2e81210b4136c5}{UVData} ()
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the array of texture co-\/ordinates. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_a022d36f1b2f456b5edb50d32956960e0}{Position} (float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will move the objects centre of rotation by lfX,lfY,lfZ. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_a4d0f5cbdb12f1bc7fb8899c61d2328d5}{PositionX} (float lfX)
+\begin{DoxyCompactList}\small\item\em This will move the objects centre of rotation along its X axis lfX distance. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_a031dd39f3c8aa1643a978b42bfc68ddc}{PositionY} (float lfY)
+\begin{DoxyCompactList}\small\item\em This will move the objects centre of rotation along its Y axis lfY distance. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_a75062dccdd861877dd206f81ac2f9ec0}{PositionZ} (float lfZ)
+\begin{DoxyCompactList}\small\item\em This will move the objects centre of rotation along its Z axis lfZ distance. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_a6b4d72718fa9a90fae3ee30dbe5f2575}{ResetPosition} ()
+\begin{DoxyCompactList}\small\item\em This will restore the objects original centre of rotation. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_a0dcd88ab580fcd6a67edb1d2decfffd9}{BufferMesh} ()
+\begin{DoxyCompactList}\small\item\em This will move the mesh data to the graphics card memory. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_aebed7b4b906c1ca62ea594c48eb803cf}{RenderMesh} ()
+\begin{DoxyCompactList}\small\item\em This will render the mesh directly from graphics memory. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_mesh_a93bdde998cfebc274b7573444dc98d34}{GetSize} ()
+\begin{DoxyCompactList}\small\item\em This will return the size of the Mesh. Size being the radius of the sphere required to contain the \hyperlink{classc_mesh}{cMesh} object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_abaa10891ab82ca5988bb255fda7cfdae}{FindSize} ()
+\begin{DoxyCompactList}\small\item\em This will calculate the size of the Mesh. Size being the radius of the sphere required to contain the \hyperlink{classc_mesh}{cMesh} object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8 \hyperlink{classc_mesh_a6a9c96e41eef3faed3c43ab69e8be5c6}{miFormat}
+\begin{DoxyCompactList}\small\item\em This stores the format which determines what data is used to render the model. The flags in this variable determine what data is present to be used by the renderer $\ast$ relative to this object. see flags WT\_\-MESH\_\-FORMAT\_\-VERTECES, WT\_\-MESH\_\-FORMAT\_\-UVS, WT\_\-MESH\_\-FORMAT\_\-NORMALS and WT\_\-MESH\_\-FORMAT\_\-POSITIVE. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_mesh_a57db8cac8c3af0a47aec90d64cd8b582}{mpVertex}
+\item 
+float $\ast$ \hyperlink{classc_mesh_a84d273677bbeb936a53b60853d036321}{mpNormals}
+\item 
+float $\ast$ \hyperlink{classc_mesh_a631948d3ab58799de048697800d354ce}{mpUV}
+\item 
+uint16 $\ast$ \hyperlink{classc_mesh_af8a4896437c76d1a858fe5474ae9b5a3}{mpFaces}
+\item 
+uint32 \hyperlink{classc_mesh_a39c398b0ee0776f87a0ae9d7086ffa07}{miVertex}
+\item 
+uint32 \hyperlink{classc_mesh_ab740f62d6b44cc814481197be7669a3b}{miFaces}
+\item 
+float \hyperlink{classc_mesh_a98f60437f290f6476170b765aea19a91}{miModelCentre} \mbox{[}3\mbox{]}
+\item 
+float \hyperlink{classc_mesh_a15202141e9b35f71708fc0f35182f261}{mfSize}
+\item 
+GLuint \hyperlink{classc_mesh_a5de7b00f4575c394fe1fbcb0f15ef020}{mBuffer1}
+\item 
+GLuint \hyperlink{classc_mesh_aa24b95dee85706686fc1d46d34bc88ae}{mBuffer2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class stores the data for a 3D model. 
+\begin{DoxyParams}{Parameters}
+{\em lpMesh} & This is a pointer to a \hyperlink{classc_mesh_array}{cMeshArray} object which holds the mesh data for this object. This holds the data for a 3D model in a format suitable for rendering. The data is stored in 2 large arrays with the face data stored in the array mpFaces while all the remaining data stored is stored consecutively in mpVertex. mpVertex points to the start of the array while mpNormals and mpUV point to the start of their respective data blocks. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file WTcMesh.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_mesh_a1b689b9d00f34fe7e4cbf8910bb310f9}{
+\index{cMesh@{cMesh}!cMesh@{cMesh}}
+\index{cMesh@{cMesh}!cMesh@{cMesh}}
+\subsubsection[{cMesh}]{\setlength{\rightskip}{0pt plus 5cm}cMesh::cMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_a1b689b9d00f34fe7e4cbf8910bb310f9}
+
+
+This will create an empty mesh. No verteces, no faces, nothing. 
+
+
+
+Definition at line 237 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_ae24161941f8538d55caa144d76b535bc}{
+\index{cMesh@{cMesh}!cMesh@{cMesh}}
+\index{cMesh@{cMesh}!cMesh@{cMesh}}
+\subsubsection[{cMesh}]{\setlength{\rightskip}{0pt plus 5cm}cMesh::cMesh (
+\begin{DoxyParamCaption}
+\item[{{\bf cMeshArray} $\ast$}]{lpMesh}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_ae24161941f8538d55caa144d76b535bc}
+
+
+This will load the data in lpMesh to be used by this object. 
+
+
+
+Definition at line 58 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a3148f48c2bb9a7d5c2626f03bfa1586f}{
+\index{cMesh@{cMesh}!$\sim$cMesh@{$\sim$cMesh}}
+\index{$\sim$cMesh@{$\sim$cMesh}!cMesh@{cMesh}}
+\subsubsection[{$\sim$cMesh}]{\setlength{\rightskip}{0pt plus 5cm}cMesh::$\sim$cMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_a3148f48c2bb9a7d5c2626f03bfa1586f}
+
+
+Definition at line 79 of file WTcMesh.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_mesh_a0dcd88ab580fcd6a67edb1d2decfffd9}{
+\index{cMesh@{cMesh}!BufferMesh@{BufferMesh}}
+\index{BufferMesh@{BufferMesh}!cMesh@{cMesh}}
+\subsubsection[{BufferMesh}]{\setlength{\rightskip}{0pt plus 5cm}void cMesh::BufferMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a0dcd88ab580fcd6a67edb1d2decfffd9}
+
+
+This will move the mesh data to the graphics card memory. 
+
+
+
+Implements \hyperlink{classv_mesh_a1ead99a315b0ccb9731a30d9fa1150c5}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_a6f507b0c56f6e18ac88a2a60f649ad3e}{vMeshTree}.
+
+
+
+Definition at line 188 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a5f35c2b9245d765b7958f91379d63e7d}{
+\index{cMesh@{cMesh}!CreateNormalArray@{CreateNormalArray}}
+\index{CreateNormalArray@{CreateNormalArray}!cMesh@{cMesh}}
+\subsubsection[{CreateNormalArray}]{\setlength{\rightskip}{0pt plus 5cm}void cMesh::CreateNormalArray (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a5f35c2b9245d765b7958f91379d63e7d}
+
+
+This will produce an array of vertex normal data for a mesh. This will require the mesh to have vertex and face data and produces normal vectors for all the verteces. 
+
+
+
+Implements \hyperlink{classv_mesh_a811160d031f2b47fad584ae5e9fad2dc}{vMesh}.
+
+
+
+Definition at line 160 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a49725e65f20af64f20442389fe616282}{
+\index{cMesh@{cMesh}!FaceData@{FaceData}}
+\index{FaceData@{FaceData}!cMesh@{cMesh}}
+\subsubsection[{FaceData}]{\setlength{\rightskip}{0pt plus 5cm}uint16 $\ast$ cMesh::FaceData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a49725e65f20af64f20442389fe616282}
+
+
+This will return a pointer to the face array.. 
+
+
+
+Implements \hyperlink{classv_mesh_acca058c53ec4af8cf0abccec5bd0537a}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_a9a485afe644254eb4f1affc731f0a6b9}{vMeshTree}.
+
+
+
+Definition at line 248 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a5f1b578685730d581301f3b5dbb2f83c}{
+\index{cMesh@{cMesh}!Faces@{Faces}}
+\index{Faces@{Faces}!cMesh@{cMesh}}
+\subsubsection[{Faces}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cMesh::Faces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a5f1b578685730d581301f3b5dbb2f83c}
+
+
+This will return the number of faces in the face array mpFaces. 
+
+
+
+Implements \hyperlink{classv_mesh_a66714f612afa9ea82649e3f825392493}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_a1ed307021481e5f663def1170d72e4e7}{vMeshTree}.
+
+
+
+Definition at line 244 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_abaa10891ab82ca5988bb255fda7cfdae}{
+\index{cMesh@{cMesh}!FindSize@{FindSize}}
+\index{FindSize@{FindSize}!cMesh@{cMesh}}
+\subsubsection[{FindSize}]{\setlength{\rightskip}{0pt plus 5cm}void cMesh::FindSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_abaa10891ab82ca5988bb255fda7cfdae}
+
+
+This will calculate the size of the Mesh. Size being the radius of the sphere required to contain the \hyperlink{classc_mesh}{cMesh} object. 
+
+
+
+Reimplemented in \hyperlink{classc_mesh_tree_a66008bdef8db37c172502b0c7de87e31}{cMeshTree}.
+
+
+
+Definition at line 223 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a93bdde998cfebc274b7573444dc98d34}{
+\index{cMesh@{cMesh}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!cMesh@{cMesh}}
+\subsubsection[{GetSize}]{\setlength{\rightskip}{0pt plus 5cm}float cMesh::GetSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a93bdde998cfebc274b7573444dc98d34}
+
+
+This will return the size of the Mesh. Size being the radius of the sphere required to contain the \hyperlink{classc_mesh}{cMesh} object. 
+
+
+
+Implements \hyperlink{classv_mesh_a19cfa6839cb3dff82d2a5ef8d77d5ceb}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classc_mesh_tree_a3c82682fe2453aed6c5cdcf0316894bd}{cMeshTree}.
+
+
+
+Definition at line 218 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a65a3a31f9d6b718b7ea161f434f2b3da}{
+\index{cMesh@{cMesh}!NormalData@{NormalData}}
+\index{NormalData@{NormalData}!cMesh@{cMesh}}
+\subsubsection[{NormalData}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ cMesh::NormalData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a65a3a31f9d6b718b7ea161f434f2b3da}
+
+
+This will return a pointer to the array of vertex normals. 
+
+
+
+Implements \hyperlink{classv_mesh_a542840c478d401b696ad0249138c0864}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_a661aab5444f7d4a888825d3cc3099359}{vMeshTree}.
+
+
+
+Definition at line 250 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a022d36f1b2f456b5edb50d32956960e0}{
+\index{cMesh@{cMesh}!Position@{Position}}
+\index{Position@{Position}!cMesh@{cMesh}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cMesh::Position (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a022d36f1b2f456b5edb50d32956960e0}
+
+
+This will move the objects centre of rotation by lfX,lfY,lfZ. 
+
+
+
+Implements \hyperlink{classv_mesh_a9a554bf498f103a80511407cbc773611}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_adc47897475d306706531a28cfb65d7e7}{vMeshTree}.
+
+
+
+Definition at line 89 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a4d0f5cbdb12f1bc7fb8899c61d2328d5}{
+\index{cMesh@{cMesh}!PositionX@{PositionX}}
+\index{PositionX@{PositionX}!cMesh@{cMesh}}
+\subsubsection[{PositionX}]{\setlength{\rightskip}{0pt plus 5cm}void cMesh::PositionX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a4d0f5cbdb12f1bc7fb8899c61d2328d5}
+
+
+This will move the objects centre of rotation along its X axis lfX distance. 
+
+
+
+Implements \hyperlink{classv_mesh_a7142dee14ef4cfcb1549cea1ea1683bd}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_a0f8d9ed827b6512ea4c39e85a972a433}{vMeshTree}.
+
+
+
+Definition at line 105 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a031dd39f3c8aa1643a978b42bfc68ddc}{
+\index{cMesh@{cMesh}!PositionY@{PositionY}}
+\index{PositionY@{PositionY}!cMesh@{cMesh}}
+\subsubsection[{PositionY}]{\setlength{\rightskip}{0pt plus 5cm}void cMesh::PositionY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfY}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a031dd39f3c8aa1643a978b42bfc68ddc}
+
+
+This will move the objects centre of rotation along its Y axis lfY distance. 
+
+
+
+Implements \hyperlink{classv_mesh_a4acf04a59788dfd36ed7c9aa7d7b65a6}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_ae245573465036da4cf45e9da0b113d86}{vMeshTree}.
+
+
+
+Definition at line 116 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a75062dccdd861877dd206f81ac2f9ec0}{
+\index{cMesh@{cMesh}!PositionZ@{PositionZ}}
+\index{PositionZ@{PositionZ}!cMesh@{cMesh}}
+\subsubsection[{PositionZ}]{\setlength{\rightskip}{0pt plus 5cm}void cMesh::PositionZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a75062dccdd861877dd206f81ac2f9ec0}
+
+
+This will move the objects centre of rotation along its Z axis lfZ distance. 
+
+
+
+Implements \hyperlink{classv_mesh_a027a53a9b040178831df3db1b26b750e}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_a7059fe190e656b0be3b9606da928198f}{vMeshTree}.
+
+
+
+Definition at line 127 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_aebed7b4b906c1ca62ea594c48eb803cf}{
+\index{cMesh@{cMesh}!RenderMesh@{RenderMesh}}
+\index{RenderMesh@{RenderMesh}!cMesh@{cMesh}}
+\subsubsection[{RenderMesh}]{\setlength{\rightskip}{0pt plus 5cm}void cMesh::RenderMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_aebed7b4b906c1ca62ea594c48eb803cf}
+
+
+This will render the mesh directly from graphics memory. 
+
+
+
+Implements \hyperlink{classv_mesh_a06ed7e6fcece13d2103c20386cfeb053}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_aefab80fa35b702814fe188b63ab5541e}{vMeshTree}.
+
+
+
+Definition at line 204 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a6b4d72718fa9a90fae3ee30dbe5f2575}{
+\index{cMesh@{cMesh}!ResetPosition@{ResetPosition}}
+\index{ResetPosition@{ResetPosition}!cMesh@{cMesh}}
+\subsubsection[{ResetPosition}]{\setlength{\rightskip}{0pt plus 5cm}void cMesh::ResetPosition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a6b4d72718fa9a90fae3ee30dbe5f2575}
+
+
+This will restore the objects original centre of rotation. 
+
+
+
+Implements \hyperlink{classv_mesh_ad45df1e9f8569b2d7d0c8c227fbc5ce0}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_a2b765505de480f6fe22f2ce83ea626ef}{vMeshTree}.
+
+
+
+Definition at line 138 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a8dd2a8840d8e2c6aaefa95884a2f9f68}{
+\index{cMesh@{cMesh}!SetFormat@{SetFormat}}
+\index{SetFormat@{SetFormat}!cMesh@{cMesh}}
+\subsubsection[{SetFormat}]{\setlength{\rightskip}{0pt plus 5cm}void cMesh::SetFormat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_a8dd2a8840d8e2c6aaefa95884a2f9f68}
+
+
+This will return the models rendering format. 
+
+
+
+Definition at line 150 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a20b38f2c9a4646b8aa2e81210b4136c5}{
+\index{cMesh@{cMesh}!UVData@{UVData}}
+\index{UVData@{UVData}!cMesh@{cMesh}}
+\subsubsection[{UVData}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ cMesh::UVData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a20b38f2c9a4646b8aa2e81210b4136c5}
+
+
+This will return a pointer to the array of texture co-\/ordinates. 
+
+
+
+Implements \hyperlink{classv_mesh_ad5cd715eac3c7adb7fb40dcdb30c7194}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_a4baeb8fe7fa4adc70bca9f57e44340f0}{vMeshTree}.
+
+
+
+Definition at line 252 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a1a58ae1ab68b816b36188ac769ac50fd}{
+\index{cMesh@{cMesh}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!cMesh@{cMesh}}
+\subsubsection[{Vertex}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cMesh::Vertex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a1a58ae1ab68b816b36188ac769ac50fd}
+
+
+This will return the number of verteces in the vertex position array mpVertex. 
+
+
+
+Implements \hyperlink{classv_mesh_aabeab7681d42365740ca4bcd91255863}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_a3dce3413d17c131f29aa2a7ed65f56d5}{vMeshTree}.
+
+
+
+Definition at line 242 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_a22dfd977d522b15185837426b444d7b7}{
+\index{cMesh@{cMesh}!VertexData@{VertexData}}
+\index{VertexData@{VertexData}!cMesh@{cMesh}}
+\subsubsection[{VertexData}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ cMesh::VertexData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_mesh_a22dfd977d522b15185837426b444d7b7}
+
+
+This will return a pointer to the vertex position array. 
+
+
+
+Implements \hyperlink{classv_mesh_a2614d8ad0d2a3cc991375fe49868e752}{vMesh}.
+
+
+
+Reimplemented in \hyperlink{classv_mesh_tree_a83e604d02695f55496ba5b385e951181}{vMeshTree}.
+
+
+
+Definition at line 246 of file WTcMesh.cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_mesh_a5de7b00f4575c394fe1fbcb0f15ef020}{
+\index{cMesh@{cMesh}!mBuffer1@{mBuffer1}}
+\index{mBuffer1@{mBuffer1}!cMesh@{cMesh}}
+\subsubsection[{mBuffer1}]{\setlength{\rightskip}{0pt plus 5cm}GLuint {\bf cMesh::mBuffer1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_mesh_a5de7b00f4575c394fe1fbcb0f15ef020}
+
+
+Definition at line 72 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_aa24b95dee85706686fc1d46d34bc88ae}{
+\index{cMesh@{cMesh}!mBuffer2@{mBuffer2}}
+\index{mBuffer2@{mBuffer2}!cMesh@{cMesh}}
+\subsubsection[{mBuffer2}]{\setlength{\rightskip}{0pt plus 5cm}GLuint {\bf cMesh::mBuffer2}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_mesh_aa24b95dee85706686fc1d46d34bc88ae}
+
+
+Definition at line 73 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_a15202141e9b35f71708fc0f35182f261}{
+\index{cMesh@{cMesh}!mfSize@{mfSize}}
+\index{mfSize@{mfSize}!cMesh@{cMesh}}
+\subsubsection[{mfSize}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cMesh::mfSize}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_mesh_a15202141e9b35f71708fc0f35182f261}
+
+
+Definition at line 70 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_ab740f62d6b44cc814481197be7669a3b}{
+\index{cMesh@{cMesh}!miFaces@{miFaces}}
+\index{miFaces@{miFaces}!cMesh@{cMesh}}
+\subsubsection[{miFaces}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cMesh::miFaces}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_mesh_ab740f62d6b44cc814481197be7669a3b}
+
+
+Definition at line 64 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_a6a9c96e41eef3faed3c43ab69e8be5c6}{
+\index{cMesh@{cMesh}!miFormat@{miFormat}}
+\index{miFormat@{miFormat}!cMesh@{cMesh}}
+\subsubsection[{miFormat}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf cMesh::miFormat}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_mesh_a6a9c96e41eef3faed3c43ab69e8be5c6}
+
+
+This stores the format which determines what data is used to render the model. The flags in this variable determine what data is present to be used by the renderer $\ast$ relative to this object. see flags WT\_\-MESH\_\-FORMAT\_\-VERTECES, WT\_\-MESH\_\-FORMAT\_\-UVS, WT\_\-MESH\_\-FORMAT\_\-NORMALS and WT\_\-MESH\_\-FORMAT\_\-POSITIVE. 
+
+
+
+Definition at line 52 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_a98f60437f290f6476170b765aea19a91}{
+\index{cMesh@{cMesh}!miModelCentre@{miModelCentre}}
+\index{miModelCentre@{miModelCentre}!cMesh@{cMesh}}
+\subsubsection[{miModelCentre}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cMesh::miModelCentre}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_mesh_a98f60437f290f6476170b765aea19a91}
+
+
+Definition at line 68 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_a39c398b0ee0776f87a0ae9d7086ffa07}{
+\index{cMesh@{cMesh}!miVertex@{miVertex}}
+\index{miVertex@{miVertex}!cMesh@{cMesh}}
+\subsubsection[{miVertex}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cMesh::miVertex}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_mesh_a39c398b0ee0776f87a0ae9d7086ffa07}
+
+
+Definition at line 62 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_af8a4896437c76d1a858fe5474ae9b5a3}{
+\index{cMesh@{cMesh}!mpFaces@{mpFaces}}
+\index{mpFaces@{mpFaces}!cMesh@{cMesh}}
+\subsubsection[{mpFaces}]{\setlength{\rightskip}{0pt plus 5cm}uint16$\ast$ {\bf cMesh::mpFaces}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_mesh_af8a4896437c76d1a858fe5474ae9b5a3}
+
+
+Definition at line 60 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_a84d273677bbeb936a53b60853d036321}{
+\index{cMesh@{cMesh}!mpNormals@{mpNormals}}
+\index{mpNormals@{mpNormals}!cMesh@{cMesh}}
+\subsubsection[{mpNormals}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf cMesh::mpNormals}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_mesh_a84d273677bbeb936a53b60853d036321}
+
+
+Definition at line 56 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_a631948d3ab58799de048697800d354ce}{
+\index{cMesh@{cMesh}!mpUV@{mpUV}}
+\index{mpUV@{mpUV}!cMesh@{cMesh}}
+\subsubsection[{mpUV}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf cMesh::mpUV}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_mesh_a631948d3ab58799de048697800d354ce}
+
+
+Definition at line 58 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_a57db8cac8c3af0a47aec90d64cd8b582}{
+\index{cMesh@{cMesh}!mpVertex@{mpVertex}}
+\index{mpVertex@{mpVertex}!cMesh@{cMesh}}
+\subsubsection[{mpVertex}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf cMesh::mpVertex}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_mesh_a57db8cac8c3af0a47aec90d64cd8b582}
+
+
+Definition at line 54 of file WTcMesh.h.
+

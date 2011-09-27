@@ -1,0 +1,182 @@
+\hypertarget{classc_collision_list}{
+\section{cCollisionList Class Reference}
+\label{classc_collision_list}\index{cCollisionList@{cCollisionList}}
+}
+
+
+Collaboration diagram for cCollisionList:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_collision_list__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_collision_list_a1b84b682ec105262682532b0a90754c2}{cCollisionList} ()
+\begin{DoxyCompactList}\small\item\em The Constructor for \hyperlink{classc_collision_list}{cCollisionList}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_collision_list_ace525d10fc1a38477cee11e14714b476}{AddCollision} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpObject)
+\begin{DoxyCompactList}\small\item\em This will Add the object lpObject to the list of objects colliding with the current searching object. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_collision_object}{cCollisionObject} $\ast$ \hyperlink{classc_collision_list_a52b7906c944e28ae8c97f93c81fb6d95}{NextCollisionItem} ()
+\begin{DoxyCompactList}\small\item\em This will return the next item from the list mpCollisionList that has been stocked by GenerateCollisionList() as a CollisionObject pointer. \item\end{DoxyCompactList}\item 
+\hyperlink{classv_process}{vProcess} $\ast$ \hyperlink{classc_collision_list_a58249799702049c2ca64bc60df20b596}{NextCollisionP} ()
+\begin{DoxyCompactList}\small\item\em This will return the process owning renderable object creating the next detected collision. \item\end{DoxyCompactList}\item 
+\hyperlink{classv_render_object}{vRenderObject} $\ast$ \hyperlink{classc_collision_list_a789c6669b21ab76af2cb9b8456d3e89a}{NextCollisionR} ()
+\begin{DoxyCompactList}\small\item\em This will return the renderable object involved in the next detected collision. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_collision_list_ac04316a4e8d0e3c5c3213c20bd7897cc}{ResetList} ()
+\begin{DoxyCompactList}\small\item\em This will reset the collision search to the start of mpList. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_collision_list_a628ed6510cd89c192a402be0a64ea111}{$\sim$cCollisionList} ()
+\begin{DoxyCompactList}\small\item\em This is the destructor for \hyperlink{classc_collision_list}{cCollisionList}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_collision_list_ae279c0239ead11e2d6c3647495347cc4}{SortByDistance} ()
+\begin{DoxyCompactList}\small\item\em This will sort the list of collisionobjects into distance from the colliding object order. This allows the user to resolve the collisions in 'Chronological' order. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 13 of file WTcCollisionList.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_collision_list_a1b84b682ec105262682532b0a90754c2}{
+\index{cCollisionList@{cCollisionList}!cCollisionList@{cCollisionList}}
+\index{cCollisionList@{cCollisionList}!cCollisionList@{cCollisionList}}
+\subsubsection[{cCollisionList}]{\setlength{\rightskip}{0pt plus 5cm}cCollisionList::cCollisionList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_collision_list_a1b84b682ec105262682532b0a90754c2}
+
+
+The Constructor for \hyperlink{classc_collision_list}{cCollisionList}. 
+
+
+
+Definition at line 61 of file WTcCollisionList.cpp.
+
+\hypertarget{classc_collision_list_a628ed6510cd89c192a402be0a64ea111}{
+\index{cCollisionList@{cCollisionList}!$\sim$cCollisionList@{$\sim$cCollisionList}}
+\index{$\sim$cCollisionList@{$\sim$cCollisionList}!cCollisionList@{cCollisionList}}
+\subsubsection[{$\sim$cCollisionList}]{\setlength{\rightskip}{0pt plus 5cm}cCollisionList::$\sim$cCollisionList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_collision_list_a628ed6510cd89c192a402be0a64ea111}
+
+
+This is the destructor for \hyperlink{classc_collision_list}{cCollisionList}. 
+
+
+
+Definition at line 55 of file WTcCollisionList.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_collision_list_ace525d10fc1a38477cee11e14714b476}{
+\index{cCollisionList@{cCollisionList}!AddCollision@{AddCollision}}
+\index{AddCollision@{AddCollision}!cCollisionList@{cCollisionList}}
+\subsubsection[{AddCollision}]{\setlength{\rightskip}{0pt plus 5cm}void cCollisionList::AddCollision (
+\begin{DoxyParamCaption}
+\item[{{\bf cCollisionObject} $\ast$}]{lpObject}
+\end{DoxyParamCaption}
+)}}
+\label{classc_collision_list_ace525d10fc1a38477cee11e14714b476}
+
+
+This will Add the object lpObject to the list of objects colliding with the current searching object. 
+
+
+
+Definition at line 5 of file WTcCollisionList.cpp.
+
+\hypertarget{classc_collision_list_a52b7906c944e28ae8c97f93c81fb6d95}{
+\index{cCollisionList@{cCollisionList}!NextCollisionItem@{NextCollisionItem}}
+\index{NextCollisionItem@{NextCollisionItem}!cCollisionList@{cCollisionList}}
+\subsubsection[{NextCollisionItem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCollisionObject} $\ast$ cCollisionList::NextCollisionItem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_collision_list_a52b7906c944e28ae8c97f93c81fb6d95}
+
+
+This will return the next item from the list mpCollisionList that has been stocked by GenerateCollisionList() as a CollisionObject pointer. 
+
+
+
+Definition at line 10 of file WTcCollisionList.cpp.
+
+\hypertarget{classc_collision_list_a58249799702049c2ca64bc60df20b596}{
+\index{cCollisionList@{cCollisionList}!NextCollisionP@{NextCollisionP}}
+\index{NextCollisionP@{NextCollisionP}!cCollisionList@{cCollisionList}}
+\subsubsection[{NextCollisionP}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vProcess} $\ast$ cCollisionList::NextCollisionP (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_collision_list_a58249799702049c2ca64bc60df20b596}
+
+
+This will return the process owning renderable object creating the next detected collision. 
+
+
+
+Definition at line 22 of file WTcCollisionList.cpp.
+
+\hypertarget{classc_collision_list_a789c6669b21ab76af2cb9b8456d3e89a}{
+\index{cCollisionList@{cCollisionList}!NextCollisionR@{NextCollisionR}}
+\index{NextCollisionR@{NextCollisionR}!cCollisionList@{cCollisionList}}
+\subsubsection[{NextCollisionR}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vRenderObject} $\ast$ cCollisionList::NextCollisionR (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_collision_list_a789c6669b21ab76af2cb9b8456d3e89a}
+
+
+This will return the renderable object involved in the next detected collision. 
+
+
+
+Definition at line 34 of file WTcCollisionList.cpp.
+
+\hypertarget{classc_collision_list_ac04316a4e8d0e3c5c3213c20bd7897cc}{
+\index{cCollisionList@{cCollisionList}!ResetList@{ResetList}}
+\index{ResetList@{ResetList}!cCollisionList@{cCollisionList}}
+\subsubsection[{ResetList}]{\setlength{\rightskip}{0pt plus 5cm}void cCollisionList::ResetList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_collision_list_ac04316a4e8d0e3c5c3213c20bd7897cc}
+
+
+This will reset the collision search to the start of mpList. 
+
+
+
+Definition at line 49 of file WTcCollisionList.cpp.
+
+\hypertarget{classc_collision_list_ae279c0239ead11e2d6c3647495347cc4}{
+\index{cCollisionList@{cCollisionList}!SortByDistance@{SortByDistance}}
+\index{SortByDistance@{SortByDistance}!cCollisionList@{cCollisionList}}
+\subsubsection[{SortByDistance}]{\setlength{\rightskip}{0pt plus 5cm}void cCollisionList::SortByDistance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_collision_list_ae279c0239ead11e2d6c3647495347cc4}
+
+
+This will sort the list of collisionobjects into distance from the colliding object order. This allows the user to resolve the collisions in 'Chronological' order. 
+
+
+
+Definition at line 68 of file WTcCollisionList.cpp.
+

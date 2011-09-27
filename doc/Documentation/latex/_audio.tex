@@ -1,0 +1,16 @@
+How to use the Audio System by William Thorley.
+
+The class \hyperlink{classc_audio_object}{cAudioObject} are used to play sounds from the sound card. Currently sound files are loaded by creating a new cWav() with the file path and name as the first argument. They will be added to the file list in \hyperlink{classc_file_handler}{cFileHandler} and can be found by searching the list for the filepath and name, once sound files are added to IMF files they will be loaded with the \_\-LOAD() macro.. A Sound file is passed to the buffer and played with the Play() command. When the sound is played it will take up a channel on the sound card.
+
+
+\begin{DoxyCode}
+  * // Load the Sound file
+ mWav = new cWav("./User/Audio/wave1.wav");
+ //Create the cAudioObject to buffer the sound file in.
+ mAO = new cAudioObject;
+ //Load the sound file into the buffer
+ mAO->SetBuffer(mWav);
+ //Play the sound
+ mAO->Play();
+\end{DoxyCode}
+ 

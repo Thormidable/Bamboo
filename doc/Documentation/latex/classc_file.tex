@@ -1,0 +1,215 @@
+\hypertarget{classc_file}{
+\section{cFile Class Reference}
+\label{classc_file}\index{cFile@{cFile}}
+}
+
+
+This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inherit this class. It is best used for media files. This code will automatically add newly loaded files to \hyperlink{classc_file_handler}{cFileHandler}. The files can be loaded using the filename or if loaded from an IMF file using the reference for each file.  
+
+
+
+
+Inheritance diagram for cFile:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_file__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cFile:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classc_file__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_file_a5bb81f36e954af61b581e3c1fd06e0de}{cFile} ()
+\begin{DoxyCompactList}\small\item\em This constructor will automatically load the file from memory and add it to the list in cFilehandler. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_file_aac7799c109a165b8f67c8be10ce91e1c}{$\sim$cFile} ()
+\item 
+char $\ast$ \hyperlink{classc_file_aafa7dfeb503f6c3946b82f3b29242ee5}{FileName} ()
+\begin{DoxyCompactList}\small\item\em This will return the files filename. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_file_aa5891f6208183a26e7fde7d8dee62ffc}{Load} ()
+\begin{DoxyCompactList}\small\item\em This is the function that will actually load the file from a hdd. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_file_ab2e74ccc027ccb92ea577cd7bb9b5f5c}{Delete} ()
+\begin{DoxyCompactList}\small\item\em This will delete the file from memory. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classv_file}{vFile} $>$ $\ast$ \hyperlink{classc_file_aed51bea596b50e6c8a03dd1593298681}{mpNode}
+\begin{DoxyCompactList}\small\item\em This is a pointer to the \hyperlink{classc_linked_node}{cLinkedNode} which owns this file. \item\end{DoxyCompactList}\item 
+char \hyperlink{classc_file_a5e3add41cacddcc489ca9aa185e3b066}{mpFileName} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em This will store the files filename. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_file_handler}{cFileHandler} $\ast$ \hyperlink{classc_file_ae54eca20c29d2fcd5649aac33d1dba9a}{mpFileHandler}
+\begin{DoxyCompactList}\small\item\em This is a pointer to the \hyperlink{classc_file_handler}{cFileHandler} which owns this file. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classc_file_a70d0eacda2243b6345feb400aef70378}{cFileHandler}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inherit this class. It is best used for media files. This code will automatically add newly loaded files to \hyperlink{classc_file_handler}{cFileHandler}. The files can be loaded using the filename or if loaded from an IMF file using the reference for each file. 
+
+Definition at line 11 of file WTcFile.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_file_a5bb81f36e954af61b581e3c1fd06e0de}{
+\index{cFile@{cFile}!cFile@{cFile}}
+\index{cFile@{cFile}!cFile@{cFile}}
+\subsubsection[{cFile}]{\setlength{\rightskip}{0pt plus 5cm}cFile::cFile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_file_a5bb81f36e954af61b581e3c1fd06e0de}
+
+
+This constructor will automatically load the file from memory and add it to the list in cFilehandler. 
+
+
+
+Definition at line 8 of file WTcFile.cpp.
+
+\hypertarget{classc_file_aac7799c109a165b8f67c8be10ce91e1c}{
+\index{cFile@{cFile}!$\sim$cFile@{$\sim$cFile}}
+\index{$\sim$cFile@{$\sim$cFile}!cFile@{cFile}}
+\subsubsection[{$\sim$cFile}]{\setlength{\rightskip}{0pt plus 5cm}cFile::$\sim$cFile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_file_aac7799c109a165b8f67c8be10ce91e1c}
+
+
+Definition at line 17 of file WTcFile.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_file_ab2e74ccc027ccb92ea577cd7bb9b5f5c}{
+\index{cFile@{cFile}!Delete@{Delete}}
+\index{Delete@{Delete}!cFile@{cFile}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}void cFile::Delete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_file_ab2e74ccc027ccb92ea577cd7bb9b5f5c}
+
+
+This will delete the file from memory. 
+
+
+
+Definition at line 22 of file WTcFile.cpp.
+
+\hypertarget{classc_file_aafa7dfeb503f6c3946b82f3b29242ee5}{
+\index{cFile@{cFile}!FileName@{FileName}}
+\index{FileName@{FileName}!cFile@{cFile}}
+\subsubsection[{FileName}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ cFile::FileName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_file_aafa7dfeb503f6c3946b82f3b29242ee5}
+
+
+This will return the files filename. 
+
+
+
+Implements \hyperlink{classv_file_a34a809462f9074a0b82a913f3c9bd955}{vFile}.
+
+
+
+Definition at line 27 of file WTcFile.cpp.
+
+\hypertarget{classc_file_aa5891f6208183a26e7fde7d8dee62ffc}{
+\index{cFile@{cFile}!Load@{Load}}
+\index{Load@{Load}!cFile@{cFile}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void cFile::Load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_file_aa5891f6208183a26e7fde7d8dee62ffc}
+
+
+This is the function that will actually load the file from a hdd. 
+
+
+
+Implements \hyperlink{classv_file_a7478cc6459dfe5c11bcf55555f652f3d}{vFile}.
+
+
+
+Definition at line 32 of file WTcFile.cpp.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classc_file_a70d0eacda2243b6345feb400aef70378}{
+\index{cFile@{cFile}!cFileHandler@{cFileHandler}}
+\index{cFileHandler@{cFileHandler}!cFile@{cFile}}
+\subsubsection[{cFileHandler}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf cFileHandler}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classc_file_a70d0eacda2243b6345feb400aef70378}
+
+
+Definition at line 15 of file WTcFile.h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_file_ae54eca20c29d2fcd5649aac33d1dba9a}{
+\index{cFile@{cFile}!mpFileHandler@{mpFileHandler}}
+\index{mpFileHandler@{mpFileHandler}!cFile@{cFile}}
+\subsubsection[{mpFileHandler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cFileHandler}$\ast$ {\bf cFile::mpFileHandler}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_file_ae54eca20c29d2fcd5649aac33d1dba9a}
+
+
+This is a pointer to the \hyperlink{classc_file_handler}{cFileHandler} which owns this file. 
+
+
+
+Definition at line 37 of file WTcFile.h.
+
+\hypertarget{classc_file_a5e3add41cacddcc489ca9aa185e3b066}{
+\index{cFile@{cFile}!mpFileName@{mpFileName}}
+\index{mpFileName@{mpFileName}!cFile@{cFile}}
+\subsubsection[{mpFileName}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf cFile::mpFileName}\mbox{[}64\mbox{]}}}
+\label{classc_file_a5e3add41cacddcc489ca9aa185e3b066}
+
+
+This will store the files filename. 
+
+
+
+Definition at line 24 of file WTcFile.h.
+
+\hypertarget{classc_file_aed51bea596b50e6c8a03dd1593298681}{
+\index{cFile@{cFile}!mpNode@{mpNode}}
+\index{mpNode@{mpNode}!cFile@{cFile}}
+\subsubsection[{mpNode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cLinkedNode}$<${\bf vFile}$>$$\ast$ {\bf cFile::mpNode}}}
+\label{classc_file_aed51bea596b50e6c8a03dd1593298681}
+
+
+This is a pointer to the \hyperlink{classc_linked_node}{cLinkedNode} which owns this file. 
+
+
+
+Definition at line 17 of file WTcFile.h.
+

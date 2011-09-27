@@ -1,0 +1,349 @@
+\hypertarget{classc_mesh_tree_node}{
+\section{cMeshTreeNode Class Reference}
+\label{classc_mesh_tree_node}\index{cMeshTreeNode@{cMeshTreeNode}}
+}
+
+
+This object will store the data for a single item in a cMeshTree(). This stores the Position, Rotation, Mesh, Texture, Tree Level, for this object.  
+
+
+
+
+Collaboration diagram for cMeshTreeNode:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{classc_mesh_tree_node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_mesh_tree_node_aa0506651f17427bfdbababeb406eb8f3}{cMeshTreeNode} ()
+\item 
+\hyperlink{classc_mesh_tree_node_a6879af803641d312d8ba07d5361198b3}{$\sim$cMeshTreeNode} ()
+\item 
+void \hyperlink{classc_mesh_tree_node_a043efc30a09c9a474d75b7c5e79abccc}{Initialise} ()
+\begin{DoxyCompactList}\small\item\em This will Initialise the objects data. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_tree_node_ac75b9a8974308873997ad6fcc5baa0da}{RemoveMesh} ()
+\begin{DoxyCompactList}\small\item\em This will Remove and Delete the Mesh. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_tree_node_ab3c5c436df69d8f6ef8a5348e76f5784}{RemoveTexture} ()
+\begin{DoxyCompactList}\small\item\em This will Remove and Delete the Texture. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_tree_node_a289e7a882f0304a0e2738a7cca5db60d}{RemoveStackLevel} ()
+\begin{DoxyCompactList}\small\item\em This will reset the Tree Level. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_tree_node_ad9659fb0be5e1300bcda2265d651dd97}{RemovePosition} ()
+\begin{DoxyCompactList}\small\item\em This will Reset the Position. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_tree_node_a9ea8fa642a22c047b2e6d559976b615b}{RemoveRotation} ()
+\begin{DoxyCompactList}\small\item\em This will Reset the Rotation. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mesh_tree_node_a1ca09fa05700321ca076d327fa99220b}{ReadIMF} (ifstream \&FileStream)
+\begin{DoxyCompactList}\small\item\em This will Load a \hyperlink{classc_mesh_tree_node_aa0506651f17427bfdbababeb406eb8f3}{cMeshTreeNode()} from an IMF File. FileStream should just have reached the start of the Mesh Tree Node. \item\end{DoxyCompactList}\item 
+\hyperlink{classv_mesh}{vMesh} $\ast$ \hyperlink{classc_mesh_tree_node_a3056c26a6ce6ba8565dccef3ea15f5b5}{Mesh} ()
+\begin{DoxyCompactList}\small\item\em This will return the Mesh for this object. \item\end{DoxyCompactList}\item 
+\hyperlink{classv_texture}{vTexture} $\ast$ \hyperlink{classc_mesh_tree_node_ac0f2bde8c7a25e243841f6b4edcdeb82}{Texture} ()
+\begin{DoxyCompactList}\small\item\em This will return the Texture for this object. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_mesh_tree_node_a9e00261118c3ed9076abc38907a2e8d3}{GetSize} ()
+\begin{DoxyCompactList}\small\item\em This will return the Spatial Size for this object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32 \hyperlink{classc_mesh_tree_node_acba14d5e2688149f7891ea14816392d2}{miFormat}
+\item 
+char $\ast$ \hyperlink{classc_mesh_tree_node_af94ac50e58c5d1b29f7d971746d2b217}{mpMesh}
+\item 
+\hyperlink{classv_mesh}{vMesh} $\ast$ \hyperlink{classc_mesh_tree_node_a5207bf917599f81dcdd19877876a3987}{mpMeshPoint}
+\item 
+char $\ast$ \hyperlink{classc_mesh_tree_node_ade5fa05534442fd9a55a50741ddfd32e}{mpTexture}
+\item 
+\hyperlink{classv_texture}{vTexture} $\ast$ \hyperlink{classc_mesh_tree_node_a2c26ffbd7a3eade15a8e1943dc5eff40}{mpTexturePoint}
+\item 
+uint32 \hyperlink{classc_mesh_tree_node_a849588f1cad1d35030b1b7e148e5776b}{miLevel}
+\item 
+float $\ast$ \hyperlink{classc_mesh_tree_node_a70182df675cd9e665453177ff5959e92}{mpPosition}
+\item 
+float $\ast$ \hyperlink{classc_mesh_tree_node_a24e4bf28242619afb11daf82bd930a6d}{mpRotation}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This object will store the data for a single item in a cMeshTree(). This stores the Position, Rotation, Mesh, Texture, Tree Level, for this object. 
+
+Definition at line 7 of file WTcMeshTreeNode.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_mesh_tree_node_aa0506651f17427bfdbababeb406eb8f3}{
+\index{cMeshTreeNode@{cMeshTreeNode}!cMeshTreeNode@{cMeshTreeNode}}
+\index{cMeshTreeNode@{cMeshTreeNode}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{cMeshTreeNode}]{\setlength{\rightskip}{0pt plus 5cm}cMeshTreeNode::cMeshTreeNode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_tree_node_aa0506651f17427bfdbababeb406eb8f3}
+
+
+Definition at line 16 of file WTcMeshTreeNode.cpp.
+
+\hypertarget{classc_mesh_tree_node_a6879af803641d312d8ba07d5361198b3}{
+\index{cMeshTreeNode@{cMeshTreeNode}!$\sim$cMeshTreeNode@{$\sim$cMeshTreeNode}}
+\index{$\sim$cMeshTreeNode@{$\sim$cMeshTreeNode}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{$\sim$cMeshTreeNode}]{\setlength{\rightskip}{0pt plus 5cm}cMeshTreeNode::$\sim$cMeshTreeNode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_tree_node_a6879af803641d312d8ba07d5361198b3}
+
+
+Definition at line 21 of file WTcMeshTreeNode.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_mesh_tree_node_a9e00261118c3ed9076abc38907a2e8d3}{
+\index{cMeshTreeNode@{cMeshTreeNode}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{GetSize}]{\setlength{\rightskip}{0pt plus 5cm}float cMeshTreeNode::GetSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_tree_node_a9e00261118c3ed9076abc38907a2e8d3}
+
+
+This will return the Spatial Size for this object. 
+
+
+
+Definition at line 121 of file WTcMeshTreeNode.cpp.
+
+\hypertarget{classc_mesh_tree_node_a043efc30a09c9a474d75b7c5e79abccc}{
+\index{cMeshTreeNode@{cMeshTreeNode}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{Initialise}]{\setlength{\rightskip}{0pt plus 5cm}void cMeshTreeNode::Initialise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_tree_node_a043efc30a09c9a474d75b7c5e79abccc}
+
+
+This will Initialise the objects data. 
+
+
+
+Definition at line 6 of file WTcMeshTreeNode.cpp.
+
+\hypertarget{classc_mesh_tree_node_a3056c26a6ce6ba8565dccef3ea15f5b5}{
+\index{cMeshTreeNode@{cMeshTreeNode}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{Mesh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vMesh} $\ast$ cMeshTreeNode::Mesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_tree_node_a3056c26a6ce6ba8565dccef3ea15f5b5}
+
+
+This will return the Mesh for this object. 
+
+
+
+Definition at line 98 of file WTcMeshTreeNode.cpp.
+
+\hypertarget{classc_mesh_tree_node_a1ca09fa05700321ca076d327fa99220b}{
+\index{cMeshTreeNode@{cMeshTreeNode}!ReadIMF@{ReadIMF}}
+\index{ReadIMF@{ReadIMF}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{ReadIMF}]{\setlength{\rightskip}{0pt plus 5cm}void cMeshTreeNode::ReadIMF (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_tree_node_a1ca09fa05700321ca076d327fa99220b}
+
+
+This will Load a \hyperlink{classc_mesh_tree_node_aa0506651f17427bfdbababeb406eb8f3}{cMeshTreeNode()} from an IMF File. FileStream should just have reached the start of the Mesh Tree Node. 
+
+
+
+Definition at line 48 of file WTcMeshTreeNode.cpp.
+
+\hypertarget{classc_mesh_tree_node_ac75b9a8974308873997ad6fcc5baa0da}{
+\index{cMeshTreeNode@{cMeshTreeNode}!RemoveMesh@{RemoveMesh}}
+\index{RemoveMesh@{RemoveMesh}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{RemoveMesh}]{\setlength{\rightskip}{0pt plus 5cm}void cMeshTreeNode::RemoveMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_tree_node_ac75b9a8974308873997ad6fcc5baa0da}
+
+
+This will Remove and Delete the Mesh. 
+
+
+
+Definition at line 30 of file WTcMeshTreeNode.cpp.
+
+\hypertarget{classc_mesh_tree_node_ad9659fb0be5e1300bcda2265d651dd97}{
+\index{cMeshTreeNode@{cMeshTreeNode}!RemovePosition@{RemovePosition}}
+\index{RemovePosition@{RemovePosition}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{RemovePosition}]{\setlength{\rightskip}{0pt plus 5cm}void cMeshTreeNode::RemovePosition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_tree_node_ad9659fb0be5e1300bcda2265d651dd97}
+
+
+This will Reset the Position. 
+
+
+
+Definition at line 41 of file WTcMeshTreeNode.cpp.
+
+\hypertarget{classc_mesh_tree_node_a9ea8fa642a22c047b2e6d559976b615b}{
+\index{cMeshTreeNode@{cMeshTreeNode}!RemoveRotation@{RemoveRotation}}
+\index{RemoveRotation@{RemoveRotation}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{RemoveRotation}]{\setlength{\rightskip}{0pt plus 5cm}void cMeshTreeNode::RemoveRotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_tree_node_a9ea8fa642a22c047b2e6d559976b615b}
+
+
+This will Reset the Rotation. 
+
+
+
+Definition at line 44 of file WTcMeshTreeNode.cpp.
+
+\hypertarget{classc_mesh_tree_node_a289e7a882f0304a0e2738a7cca5db60d}{
+\index{cMeshTreeNode@{cMeshTreeNode}!RemoveStackLevel@{RemoveStackLevel}}
+\index{RemoveStackLevel@{RemoveStackLevel}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{RemoveStackLevel}]{\setlength{\rightskip}{0pt plus 5cm}void cMeshTreeNode::RemoveStackLevel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_tree_node_a289e7a882f0304a0e2738a7cca5db60d}
+
+
+This will reset the Tree Level. 
+
+
+
+Definition at line 36 of file WTcMeshTreeNode.cpp.
+
+\hypertarget{classc_mesh_tree_node_ab3c5c436df69d8f6ef8a5348e76f5784}{
+\index{cMeshTreeNode@{cMeshTreeNode}!RemoveTexture@{RemoveTexture}}
+\index{RemoveTexture@{RemoveTexture}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{RemoveTexture}]{\setlength{\rightskip}{0pt plus 5cm}void cMeshTreeNode::RemoveTexture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_tree_node_ab3c5c436df69d8f6ef8a5348e76f5784}
+
+
+This will Remove and Delete the Texture. 
+
+
+
+Definition at line 33 of file WTcMeshTreeNode.cpp.
+
+\hypertarget{classc_mesh_tree_node_ac0f2bde8c7a25e243841f6b4edcdeb82}{
+\index{cMeshTreeNode@{cMeshTreeNode}!Texture@{Texture}}
+\index{Texture@{Texture}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vTexture} $\ast$ cMeshTreeNode::Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_tree_node_ac0f2bde8c7a25e243841f6b4edcdeb82}
+
+
+This will return the Texture for this object. 
+
+
+
+Definition at line 110 of file WTcMeshTreeNode.cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_mesh_tree_node_acba14d5e2688149f7891ea14816392d2}{
+\index{cMeshTreeNode@{cMeshTreeNode}!miFormat@{miFormat}}
+\index{miFormat@{miFormat}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{miFormat}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cMeshTreeNode::miFormat}}}
+\label{classc_mesh_tree_node_acba14d5e2688149f7891ea14816392d2}
+
+
+Definition at line 20 of file WTcMeshTreeNode.h.
+
+\hypertarget{classc_mesh_tree_node_a849588f1cad1d35030b1b7e148e5776b}{
+\index{cMeshTreeNode@{cMeshTreeNode}!miLevel@{miLevel}}
+\index{miLevel@{miLevel}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{miLevel}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cMeshTreeNode::miLevel}}}
+\label{classc_mesh_tree_node_a849588f1cad1d35030b1b7e148e5776b}
+
+
+Definition at line 25 of file WTcMeshTreeNode.h.
+
+\hypertarget{classc_mesh_tree_node_af94ac50e58c5d1b29f7d971746d2b217}{
+\index{cMeshTreeNode@{cMeshTreeNode}!mpMesh@{mpMesh}}
+\index{mpMesh@{mpMesh}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{mpMesh}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf cMeshTreeNode::mpMesh}}}
+\label{classc_mesh_tree_node_af94ac50e58c5d1b29f7d971746d2b217}
+
+
+Definition at line 21 of file WTcMeshTreeNode.h.
+
+\hypertarget{classc_mesh_tree_node_a5207bf917599f81dcdd19877876a3987}{
+\index{cMeshTreeNode@{cMeshTreeNode}!mpMeshPoint@{mpMeshPoint}}
+\index{mpMeshPoint@{mpMeshPoint}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{mpMeshPoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vMesh}$\ast$ {\bf cMeshTreeNode::mpMeshPoint}}}
+\label{classc_mesh_tree_node_a5207bf917599f81dcdd19877876a3987}
+
+
+Definition at line 22 of file WTcMeshTreeNode.h.
+
+\hypertarget{classc_mesh_tree_node_a70182df675cd9e665453177ff5959e92}{
+\index{cMeshTreeNode@{cMeshTreeNode}!mpPosition@{mpPosition}}
+\index{mpPosition@{mpPosition}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{mpPosition}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf cMeshTreeNode::mpPosition}}}
+\label{classc_mesh_tree_node_a70182df675cd9e665453177ff5959e92}
+
+
+Definition at line 26 of file WTcMeshTreeNode.h.
+
+\hypertarget{classc_mesh_tree_node_a24e4bf28242619afb11daf82bd930a6d}{
+\index{cMeshTreeNode@{cMeshTreeNode}!mpRotation@{mpRotation}}
+\index{mpRotation@{mpRotation}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{mpRotation}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf cMeshTreeNode::mpRotation}}}
+\label{classc_mesh_tree_node_a24e4bf28242619afb11daf82bd930a6d}
+
+
+Definition at line 27 of file WTcMeshTreeNode.h.
+
+\hypertarget{classc_mesh_tree_node_ade5fa05534442fd9a55a50741ddfd32e}{
+\index{cMeshTreeNode@{cMeshTreeNode}!mpTexture@{mpTexture}}
+\index{mpTexture@{mpTexture}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{mpTexture}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf cMeshTreeNode::mpTexture}}}
+\label{classc_mesh_tree_node_ade5fa05534442fd9a55a50741ddfd32e}
+
+
+Definition at line 23 of file WTcMeshTreeNode.h.
+
+\hypertarget{classc_mesh_tree_node_a2c26ffbd7a3eade15a8e1943dc5eff40}{
+\index{cMeshTreeNode@{cMeshTreeNode}!mpTexturePoint@{mpTexturePoint}}
+\index{mpTexturePoint@{mpTexturePoint}!cMeshTreeNode@{cMeshTreeNode}}
+\subsubsection[{mpTexturePoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vTexture}$\ast$ {\bf cMeshTreeNode::mpTexturePoint}}}
+\label{classc_mesh_tree_node_a2c26ffbd7a3eade15a8e1943dc5eff40}
+
+
+Definition at line 24 of file WTcMeshTreeNode.h.
+

@@ -1,0 +1,28 @@
+\hyperlink{_w_tc_render_node_8h_source}{WTcRenderNode.h}
+
+How to use Render Nodes by William Thorley.
+
+RenderNodes are a special type of Render Object. Render Nodes have no visual rendering to screen. Instead they manipulate other Render Objects. Specifically, a Translation applied to a Render Node will affect any Render Objects Controlled by the RenderNode. This means the objects controlled by the Render Node will move as if the Render Nodes position was 0,0,0.
+
+
+\begin{DoxyCode}
+ mpNodePoint=_CREATE(cRenderNode());
+ mpNodePoint->Position(0.0f,0.0f,0.0f);
+ mpModel=_CREATE(cTexturedModel(mpNodePoint));
+ mpModel->Position(10.0f,0.0f,0.0f);
+
+ // mpModel is now at 10.0f,0.0f,0.0f.
+
+ mpNodePoint->Position(10.0f,0.0f,10.0f);
+
+ // mpModel is now at 20.0f,0.0f,10.0f.
+
+ mpNodePoint->RotateY(3.1416); //(rotate 90 degrees)
+
+ //Model is now at 0.0f,0.0f,-10.0f.
+\end{DoxyCode}
+
+
+To control a Render Object by a Render Node object pass a pointer to the Render Node as the first argument in the Render Objects Constructor. Render Node objects can control any Render Object, including Render Nodes. This means that there can be many levels of Render Nodes before reaching a Renderable Object, making positioning of complex positional relationships easy.
+
+See Also: \hyperlink{classc_model_list}{cModelList} 

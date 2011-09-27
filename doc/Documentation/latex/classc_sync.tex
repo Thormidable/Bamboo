@@ -1,0 +1,160 @@
+\hypertarget{classc_sync}{
+\section{cSync Class Reference}
+\label{classc_sync}\index{cSync@{cSync}}
+}
+
+
+This is the timer class. It allows the user to time events and pause the system.  
+
+
+
+
+Collaboration diagram for cSync:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classc_sync__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_sync_aba0244265b49127f64ce61ba18d95373}{cSync} ()
+\item 
+\hyperlink{classc_sync_a6c112644cb433030b18a3379aabaf1f4}{$\sim$cSync} ()
+\item 
+void \hyperlink{classc_sync_ae0599d8020e8169a1a7a874a5b96499c}{Tick} ()
+\begin{DoxyCompactList}\small\item\em This will tick the system and recalculate the current system speed. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_sync_a59d51ce11e57b7829cbb00ec27b2869d}{SleepWrap} (uint32 lMS)
+\begin{DoxyCompactList}\small\item\em This will will sleep wrap the system by liMS miliseconds. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_sync_ac0a3f43667b9046a51860c2aa6140265}{GetTimeMod} ()
+\begin{DoxyCompactList}\small\item\em This will return mfTimeMod. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_sync_a44cc58ad37a1a59e4ccfcf1900ca0f61}{GetTimeAcc} ()
+\begin{DoxyCompactList}\small\item\em This will reutrn mfTimeAcc. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_sync_aab98fbafcb5f4a59d697b0225edaaa3c}{GetCPS} ()
+\begin{DoxyCompactList}\small\item\em This will return mfCPS. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the timer class. It allows the user to time events and pause the system. 
+
+Definition at line 46 of file WTcSync.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_sync_aba0244265b49127f64ce61ba18d95373}{
+\index{cSync@{cSync}!cSync@{cSync}}
+\index{cSync@{cSync}!cSync@{cSync}}
+\subsubsection[{cSync}]{\setlength{\rightskip}{0pt plus 5cm}cSync::cSync (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_sync_aba0244265b49127f64ce61ba18d95373}
+
+
+Definition at line 56 of file WTcSync.cpp.
+
+\hypertarget{classc_sync_a6c112644cb433030b18a3379aabaf1f4}{
+\index{cSync@{cSync}!$\sim$cSync@{$\sim$cSync}}
+\index{$\sim$cSync@{$\sim$cSync}!cSync@{cSync}}
+\subsubsection[{$\sim$cSync}]{\setlength{\rightskip}{0pt plus 5cm}cSync::$\sim$cSync (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_sync_a6c112644cb433030b18a3379aabaf1f4}
+
+
+Definition at line 73 of file WTcSync.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_sync_aab98fbafcb5f4a59d697b0225edaaa3c}{
+\index{cSync@{cSync}!GetCPS@{GetCPS}}
+\index{GetCPS@{GetCPS}!cSync@{cSync}}
+\subsubsection[{GetCPS}]{\setlength{\rightskip}{0pt plus 5cm}float cSync::GetCPS (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_sync_aab98fbafcb5f4a59d697b0225edaaa3c}
+
+
+This will return mfCPS. 
+
+
+
+Definition at line 88 of file WTcSync.h.
+
+\hypertarget{classc_sync_a44cc58ad37a1a59e4ccfcf1900ca0f61}{
+\index{cSync@{cSync}!GetTimeAcc@{GetTimeAcc}}
+\index{GetTimeAcc@{GetTimeAcc}!cSync@{cSync}}
+\subsubsection[{GetTimeAcc}]{\setlength{\rightskip}{0pt plus 5cm}float cSync::GetTimeAcc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_sync_a44cc58ad37a1a59e4ccfcf1900ca0f61}
+
+
+This will reutrn mfTimeAcc. 
+
+
+
+Definition at line 86 of file WTcSync.h.
+
+\hypertarget{classc_sync_ac0a3f43667b9046a51860c2aa6140265}{
+\index{cSync@{cSync}!GetTimeMod@{GetTimeMod}}
+\index{GetTimeMod@{GetTimeMod}!cSync@{cSync}}
+\subsubsection[{GetTimeMod}]{\setlength{\rightskip}{0pt plus 5cm}float cSync::GetTimeMod (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_sync_ac0a3f43667b9046a51860c2aa6140265}
+
+
+This will return mfTimeMod. 
+
+
+
+Definition at line 84 of file WTcSync.h.
+
+\hypertarget{classc_sync_a59d51ce11e57b7829cbb00ec27b2869d}{
+\index{cSync@{cSync}!SleepWrap@{SleepWrap}}
+\index{SleepWrap@{SleepWrap}!cSync@{cSync}}
+\subsubsection[{SleepWrap}]{\setlength{\rightskip}{0pt plus 5cm}void cSync::SleepWrap (
+\begin{DoxyParamCaption}
+\item[{uint32}]{lMS}
+\end{DoxyParamCaption}
+)}}
+\label{classc_sync_a59d51ce11e57b7829cbb00ec27b2869d}
+
+
+This will will sleep wrap the system by liMS miliseconds. 
+
+
+
+Definition at line 44 of file WTcSync.cpp.
+
+\hypertarget{classc_sync_ae0599d8020e8169a1a7a874a5b96499c}{
+\index{cSync@{cSync}!Tick@{Tick}}
+\index{Tick@{Tick}!cSync@{cSync}}
+\subsubsection[{Tick}]{\setlength{\rightskip}{0pt plus 5cm}void cSync::Tick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_sync_ae0599d8020e8169a1a7a874a5b96499c}
+
+
+This will tick the system and recalculate the current system speed. 
+
+
+
+Definition at line 83 of file WTcSync.cpp.
+

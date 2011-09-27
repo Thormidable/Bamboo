@@ -1,0 +1,80 @@
+\hypertarget{classc_wav}{
+\section{cWav Class Reference}
+\label{classc_wav}\index{cWav@{cWav}}
+}
+
+
+Inheritance diagram for cWav:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classc_wav__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cWav:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=374pt]{classc_wav__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_wav_a1093e4172a5339d3142b44152b6f1600}{cWav} (char $\ast$lpPath)
+\begin{DoxyCompactList}\small\item\em This constructor will load the wav file from the file lpPath. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_wav_a871e6bb68160caeafba970fdf44963f9}{$\sim$cWav} ()
+\begin{DoxyCompactList}\small\item\em This will free the wav file from memory and destroy the OpenAL buffer. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This will load and store a wav file into memory. It is itself an OpenAL buffer, so does not need to be added. It can be played by linking to an \hyperlink{classc_audio_object}{cAudioObject} and calling Play() 
+
+Definition at line 6 of file WTcWav.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_wav_a1093e4172a5339d3142b44152b6f1600}{
+\index{cWav@{cWav}!cWav@{cWav}}
+\index{cWav@{cWav}!cWav@{cWav}}
+\subsubsection[{cWav}]{\setlength{\rightskip}{0pt plus 5cm}cWav::cWav (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{lpPath}
+\end{DoxyParamCaption}
+)}}
+\label{classc_wav_a1093e4172a5339d3142b44152b6f1600}
+
+
+This constructor will load the wav file from the file lpPath. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lpPath} & This is the file path of the wav file. The file lpPath will be loaded into an OpenAL buffer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file WTcWav.cpp.
+
+\hypertarget{classc_wav_a871e6bb68160caeafba970fdf44963f9}{
+\index{cWav@{cWav}!$\sim$cWav@{$\sim$cWav}}
+\index{$\sim$cWav@{$\sim$cWav}!cWav@{cWav}}
+\subsubsection[{$\sim$cWav}]{\setlength{\rightskip}{0pt plus 5cm}cWav::$\sim$cWav (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_wav_a871e6bb68160caeafba970fdf44963f9}
+
+
+This will free the wav file from memory and destroy the OpenAL buffer. 
+
+
+
+Definition at line 69 of file WTcWav.cpp.
+

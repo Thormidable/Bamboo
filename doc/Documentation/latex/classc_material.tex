@@ -1,0 +1,114 @@
+\hypertarget{classc_material}{
+\section{cMaterial Class Reference}
+\label{classc_material}\index{cMaterial@{cMaterial}}
+}
+
+
+A class to store material data for an object. Defines the 'reflectiveness' of the surface.  
+
+
+
+
+Inheritance diagram for cMaterial:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classc_material__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_material_acccfb25dd445a8279f0452dbe53f5079}{cMaterial} ()
+\begin{DoxyCompactList}\small\item\em Will create a new material object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_material_aa08385e14417f023b8529ec491f5df38}{SetSpecular} (float lfRed, float lfGreen, float lfBlue, float lfAlpha)
+\begin{DoxyCompactList}\small\item\em Will set the RGBA color of Specular reflections of this material (RGBA). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_material_a7b3a800d84e017b955fd9faa9d7fda15}{SetShine} (float lfShine)
+\begin{DoxyCompactList}\small\item\em Will set the shininess of this material (0.0f -\/ 1.0f). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_material_af08e6f579a6c0e41490721320355a2f4}{PrepareMaterial} ()
+\begin{DoxyCompactList}\small\item\em Will bind the material to OpenGL ready to be used. Once all the material variables are set, call this to prepare the material. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class to store material data for an object. Defines the 'reflectiveness' of the surface. 
+
+Definition at line 5 of file WTcMaterial.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_material_acccfb25dd445a8279f0452dbe53f5079}{
+\index{cMaterial@{cMaterial}!cMaterial@{cMaterial}}
+\index{cMaterial@{cMaterial}!cMaterial@{cMaterial}}
+\subsubsection[{cMaterial}]{\setlength{\rightskip}{0pt plus 5cm}cMaterial::cMaterial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_material_acccfb25dd445a8279f0452dbe53f5079}
+
+
+Will create a new material object. 
+
+
+
+Definition at line 4 of file WTcMaterial.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_material_af08e6f579a6c0e41490721320355a2f4}{
+\index{cMaterial@{cMaterial}!PrepareMaterial@{PrepareMaterial}}
+\index{PrepareMaterial@{PrepareMaterial}!cMaterial@{cMaterial}}
+\subsubsection[{PrepareMaterial}]{\setlength{\rightskip}{0pt plus 5cm}void cMaterial::PrepareMaterial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_material_af08e6f579a6c0e41490721320355a2f4}
+
+
+Will bind the material to OpenGL ready to be used. Once all the material variables are set, call this to prepare the material. 
+
+
+
+Definition at line 26 of file WTcMaterial.cpp.
+
+\hypertarget{classc_material_a7b3a800d84e017b955fd9faa9d7fda15}{
+\index{cMaterial@{cMaterial}!SetShine@{SetShine}}
+\index{SetShine@{SetShine}!cMaterial@{cMaterial}}
+\subsubsection[{SetShine}]{\setlength{\rightskip}{0pt plus 5cm}void cMaterial::SetShine (
+\begin{DoxyParamCaption}
+\item[{float}]{lfShine}
+\end{DoxyParamCaption}
+)}}
+\label{classc_material_a7b3a800d84e017b955fd9faa9d7fda15}
+
+
+Will set the shininess of this material (0.0f -\/ 1.0f). 
+
+
+
+Definition at line 21 of file WTcMaterial.cpp.
+
+\hypertarget{classc_material_aa08385e14417f023b8529ec491f5df38}{
+\index{cMaterial@{cMaterial}!SetSpecular@{SetSpecular}}
+\index{SetSpecular@{SetSpecular}!cMaterial@{cMaterial}}
+\subsubsection[{SetSpecular}]{\setlength{\rightskip}{0pt plus 5cm}void cMaterial::SetSpecular (
+\begin{DoxyParamCaption}
+\item[{float}]{lfRed, }
+\item[{float}]{lfGreen, }
+\item[{float}]{lfBlue, }
+\item[{float}]{lfAlpha}
+\end{DoxyParamCaption}
+)}}
+\label{classc_material_aa08385e14417f023b8529ec491f5df38}
+
+
+Will set the RGBA color of Specular reflections of this material (RGBA). 
+
+
+
+Definition at line 13 of file WTcMaterial.cpp.
+

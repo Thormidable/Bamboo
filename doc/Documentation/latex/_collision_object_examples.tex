@@ -1,0 +1,31 @@
+Collision Objects will only collide with other collision objects, NOT Render Objects. When a Collision Object is created it must be passed a pointer to a Render Object which will define it's translation. This should be the first argument passed to a Collision Object.
+
+Collision Objects are created using the \_\-CREATE() Macro and killed using the \_\-KILL() Macro, as per a process. They can be slept and woken. Collision Objects need a media type to define how and when they collide. This is defined using the Type Function which gives the Collision Object the data it needs and sets the type of collision Object it will be. A Collision object should also be linked to a Process so that processes can transfer information or signals in the event of a collision.
+
+Types of Collision Object: cCollisionSphere \hyperlink{classc_mesh_collision}{cMeshCollision} cCollisionRay cCollisionBeam cCollisionBox cCollisionBoxFile
+
+
+\begin{DoxyCode}
+ MyProcess::MyProcess()
+ {
+  mpRender=_CREATE(TexturedModel());
+  mpCollision=_CREATE(cCollisionObject(mpRender));
+
+  mpCollision->SetLink(this);
+  mpCollision->SetType(10.0f);
+ }
+
+ void MyProcess::Run()
+ {
+  vProcess *lpProc;
+  cCollisionList* lpList=_COLLISION_HANDLER->GenerateCollisionList(mpHullColl);//
+      ,WT_ENEMY_UNIT
+        _COLLISION_PROCESS_LIST(lpList,lpProc)
+        {
+                                _KILL(lpProc);
+        }
+        delete lpList;
+
+ }
+\end{DoxyCode}
+ 

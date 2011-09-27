@@ -1,0 +1,1773 @@
+\hypertarget{classc_matrix4}{
+\section{cMatrix4 Class Reference}
+\label{classc_matrix4}\index{cMatrix4@{cMatrix4}}
+}
+
+
+Inheritance diagram for cMatrix4:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_matrix4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cMatrix4:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classc_matrix4__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classc_matrix4_a072c31c505d176d93d73101c06084d9d}{UpdateMatrix} ()
+\begin{DoxyCompactList}\small\item\em This will update the OpenGL matrix on the top of matrix stack to be identical to this matrix. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a2c449ca9f08213ba86d53b04440ae210}{UpdateMatrix} (float $\ast$lpMatrix)
+\begin{DoxyCompactList}\small\item\em This appears to multiply this matrix by the matrix lpMatrix and equate this matrix to the result. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4_a51d8e6bf6bbb6b998878fe978c748e14}{cMatrix4} ()
+\begin{DoxyCompactList}\small\item\em This will create a \hyperlink{classc_matrix4}{cMatrix4} object and will initialise all the static data required. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_matrix4_a39cf7cefa0672684e69eb4af89366270}{Determinant} ()
+\begin{DoxyCompactList}\small\item\em This will return the determinant of this objects matrix. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a7473299a57ffcfe284e6fd9005b98592}{InvertRotationMatrix} ()
+\begin{DoxyCompactList}\small\item\em THis will find the inverse of the matrix if it is a standard rotation / translation matrix. (0,1,2,4,5,6,8,9,10 are orthogonal. 3,7,11 are zero. 12,13,14 are position and 15 is one.) \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_ac8b6f1a9352943cd86ef4c088c438307}{Transpose} ()
+\begin{DoxyCompactList}\small\item\em This will return the transpose of this objects matrix. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_matrix4_a8697973a28e45b0866cce4cdba2e216d}{Matrix} ()
+\begin{DoxyCompactList}\small\item\em This will return a pointer to this objects matrix data. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_matrix4_a1e70788aed256a22cf62b11a12e0db74}{Matrix} (uint8 lcData)
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the float numbered lcData in this objects matrix. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_matrix4_a7b0917b0f0a69d73ed41d05fd37d52ac}{Position} ()
+\begin{DoxyCompactList}\small\item\em This will reutrn a pointer to this objects matrices position vector. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_matrix4_aff5d7d1cf3cf0b9ddb9e55e2f799012f}{X} ()
+\begin{DoxyCompactList}\small\item\em This will return this objects X position value. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_matrix4_aa22f36646d19566a438a297cb9a9bfb5}{Y} ()
+\begin{DoxyCompactList}\small\item\em This will return this objects Y position value. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_matrix4_a8b62f500f8194b06dab12e85e57fd9ef}{Z} ()
+\begin{DoxyCompactList}\small\item\em This will return this objects Z position value. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_matrix4_a958689f28a118eac91104f5a847ac0fd}{XVect} ()
+\begin{DoxyCompactList}\small\item\em This will return the vector along this objects local X axis. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_matrix4_acff0242ac76b2ccd854eeec0d4913abe}{YVect} ()
+\begin{DoxyCompactList}\small\item\em This will return the vector along this objects local Y axis. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_matrix4_ab3d5e1a9ca6652c84265d4d164494699}{ZVect} ()
+\begin{DoxyCompactList}\small\item\em This will return the vector along this objects local Z axis. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a6aa4f58a001499cd666f9d65f3a821a0}{Identity} ()
+\begin{DoxyCompactList}\small\item\em This will restore this objects matrix to an identity matrix. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_acf16f37d849137d2e410ec20f2b4e74d}{Zero} ()
+\begin{DoxyCompactList}\small\item\em This will set every float in this objects matrix to be equal to zero. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a2370d66d55b851b1e720f7e9cfe751b8}{operator$\ast$} (float \&lVal)
+\begin{DoxyCompactList}\small\item\em This will multiply every float in this objects matrix by lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_ad615ac415cde0d33c39928cf94573903}{operator$\ast$} (const float lVal)
+\begin{DoxyCompactList}\small\item\em This will multiply every float in this objects matrix by lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} $\ast$ \hyperlink{classc_matrix4_aa202a3e23b2d693672265d15304f92e0}{operator$\ast$} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lVal)
+\begin{DoxyCompactList}\small\item\em This will multiply this objects matrix by the matrix lVal. Returns This.lVal . \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a53abd84689f1a69f2aca3e51956956f6}{operator$\ast$} (\hyperlink{classc_matrix4}{cMatrix4} lVal)
+\begin{DoxyCompactList}\small\item\em This will multiply this objects matrix by the matrix lVal. Returns This.lVal . \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a219d42de683b8bb377e8fe2bbabf9a67}{operator/} (float \&lVal)
+\begin{DoxyCompactList}\small\item\em This will divide every float in this objects matrix by lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a889631de90fa981083badaef363e579b}{operator/} (const float lVal)
+\begin{DoxyCompactList}\small\item\em This will divide every float in this objects matrix by lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a107b1006370869b4315364a20982333d}{operator+} (float \&lVal)
+\begin{DoxyCompactList}\small\item\em This will add lVal to every float in this objects matrix. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a10aeb2ece864e892e7a15361b5747a79}{operator+} (const float lVal)
+\begin{DoxyCompactList}\small\item\em This will add lVal to every float in this objects matrix. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a8fa6ac58cb376b1ad4c59eaea1d959bd}{operator+} (\hyperlink{classc_matrix4}{cMatrix4} \&lVal)
+\begin{DoxyCompactList}\small\item\em This will add this matrix and the matrix lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a86c7c478cbcad8c7a6d28837d905ac40}{operator-\/} (float \&lVal)
+\begin{DoxyCompactList}\small\item\em This will deduct lVal from every float in this objects matrix. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a2d89805bd611edabd1732f206f2486fb}{operator-\/} (const float lVal)
+\begin{DoxyCompactList}\small\item\em This will deduct lVal from every float in this objects matrix. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_abd270ecc06edf1cfe865bfffbce80ac7}{operator-\/} (\hyperlink{classc_matrix4}{cMatrix4} \&lVal)
+\begin{DoxyCompactList}\small\item\em This will subtract the matrix lVal from this matrix. \item\end{DoxyCompactList}\item 
+float \& \hyperlink{classc_matrix4_ae6620b907e34e5def3027958cc283528}{operator\mbox{[}$\,$\mbox{]}} (uint16 liPos)
+\begin{DoxyCompactList}\small\item\em This will return the float in position liPos in mpData. \item\end{DoxyCompactList}\item 
+float \& \hyperlink{classc_matrix4_a5d46493267b557040a30013c1aa18cdc}{operator()} (uint16 liColumn, uint16 liRow)
+\begin{DoxyCompactList}\small\item\em This will return the float in position \mbox{[}liColumn,liRow\mbox{]} in mpData. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_matrix4_ab80c930c0411334cc255112c8db84e61}{operator=} (float \&lVal)
+\begin{DoxyCompactList}\small\item\em This will equate every float in mpData to lVal. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_matrix4_ab027828400b348f735863af5de9103e7}{operator=} (const float lVal)
+\begin{DoxyCompactList}\small\item\em This will equate every float in mpData to lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} $\ast$ \hyperlink{classc_matrix4_ad94edb7acda68ebad375ce919dc282ad}{operator=} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lVal)
+\begin{DoxyCompactList}\small\item\em This will equate the data in mpData to the data in lVal.mpData. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_ab60d884663cacecfd8e5f68e3c317f78}{operator=} (\hyperlink{classc_matrix4}{cMatrix4} lVal)
+\begin{DoxyCompactList}\small\item\em This will equate the data in mpData to the data in lVal.mpData. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_matrix4_a7298504da2a4942e9f5c18f4db755481}{operator=} (float $\ast$lVal)
+\item 
+void \hyperlink{classc_matrix4_ac182a447e047d9071b035b374e8abf45}{Position} (\hyperlink{classc2_d_vf}{c2DVf} $\ast$lpPosition)
+\begin{DoxyCompactList}\small\item\em This will position the current object to the 2D Vector lpPosition. (X,Y) \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a81cd364d37dc5eae6f968551331ad7a3}{Position} (float lfX, float lfY)
+\begin{DoxyCompactList}\small\item\em This will position the current object to lfX,lfY. (X,Y) \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a8a49976693c27e4fbb5fce427eb6bcf5}{Position} (\hyperlink{classc3_d_vf}{c3DVf} $\ast$lpPosition)
+\begin{DoxyCompactList}\small\item\em This will position the current object to the 3D Vector lpPosition. (X,Y,Z) \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_ae404d9b94cb676d9896385fef1eda422}{Position} (float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will position the current object to lfX,lfY,lfX. (X,Y,Z) \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_ae3bb670db30cee45d59aef1599289086}{Position} (float $\ast$lpPos)
+\begin{DoxyCompactList}\small\item\em This will take 2 or three floats depending if this \hyperlink{classc_matrix4}{cMatrix4} is set to 2D or 3D operations and set the position of the object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_adf27db7265e42ccbbb5a6779800c39ea}{PositionX} (float lfX)
+\begin{DoxyCompactList}\small\item\em This will set the objects X position to be equal to lfX. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a4f7469486d7557e158ebc70a261c853c}{PositionY} (float lfY)
+\begin{DoxyCompactList}\small\item\em This will set the objects Y position to be equal to lfX. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a6baf253feb5e27b5e3e81971d9f5d718}{PositionZ} (float lfZ)
+\begin{DoxyCompactList}\small\item\em This will set the objects Z position to be equal to lfX. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_aa23f7d55e4eddcba673f8a6e44f63c3e}{AdvanceX} (float lfDistance)
+\begin{DoxyCompactList}\small\item\em This will advance the object along its local X axis by lfDistance. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_ae28d0f2cfe996ec5422cdaec98f30c9a}{AdvanceY} (float lfDistance)
+\begin{DoxyCompactList}\small\item\em This will advance the object along its local Y axis by lfDistance. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a31d0d26e3b91628365871ad10dc33f8e}{AdvanceZ} (float lfDistance)
+\begin{DoxyCompactList}\small\item\em This will advance the object along its local Z axis by lfDistance. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a00d27c2daab0e05c403c8fb86445fb81}{Advance} (float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will advance the object along its local X, Y and Z axis by lfX, lfY and lfZ. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a6796b615c465903d48fe0c8094b1f7c1}{GAdvanceX} (float lfX)
+\begin{DoxyCompactList}\small\item\em This will advance the object along the global X axis by lfX. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_af4453f95ef875b0c5002d72bade65bb1}{GAdvanceY} (float lfX)
+\begin{DoxyCompactList}\small\item\em This will advance the object along the global Y axis by lfX. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a0fd4e894762e73050e8e2e38acdfaf0d}{GAdvanceZ} (float lfX)
+\begin{DoxyCompactList}\small\item\em This will advance the object along the global Z axis by lfX. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_ac1c16ceb7ac4c2f771fc0d4662df643c}{GAdvance} (float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will advance the object along the global X, Y and Z axis by lfX, lfY and lfZ. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a90faa594754991420b1fda110f4b144f}{LRotate} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around its local Z axis by lfAngle radians. Suitable for 2D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_ac02520811181e0593e77e55753602c47}{LRotateX} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around its local X axis by lfAngle radians. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_af13f02ca53d8689f8a23df333bde6f15}{LRotateY} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around its local Y axis by lfAngle radians. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a203f986c0ab6d0abaf4dda01b88f0558}{LRotateZ} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around its local Z axis by lfAngle radians. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a0be08400d130f819bbedbb35f551d4c7}{GRotateX} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around its global X axis by lfAngle radians. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a0ae1a3c85f3b00127217b67c7d75a7cc}{GRotateY} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around its global X axis by lfAngle radians. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a1d082ca0f1c634d262309eb75a9e2df5}{GRotateZ} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around its global X axis by lfAngle radians. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a517140950c736c74a44d34704b44c83d}{GRotateX} (float lfAngle, float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around the global X axis at point lfX,lfY,lfZ by lfAngle radians. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a5b1505c43d9382bc625fc1eb53d44360}{GRotateY} (float lfAngle, float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around the global Y axis at point lfX,lfY,lfZ by lfAngle radians. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a5b357f5686b74e0feeff7eaae070f566}{GRotateZ} (float lfAngle, float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around the global Z axis at point lfX,lfY,lfZ by lfAngle radians. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a3ddcb503ea46911e194a9b881a6f0bee}{GRotateOriginX} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around the global X axis at point 0,0,0 by lfAngle radians. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_abe68a204b91201b33adc32f5b354631e}{GRotateOriginY} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around the global Y axis at point 0,0,0 by lfAngle radians. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_af5ecfcfab719acf23ddb1148ad24825a}{GRotateOriginZ} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object around the global Z axis at point 0,0,0 by lfAngle radians. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a4785b8464f65d9784db634f3a6f34e52}{Resize} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale the object by a factor of lfScale. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_af87d56540f23692fd69d0b245ad404e6}{LResizeX} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale the object along its local X axis by a factor of lfScale. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a76758088b43a4a6f37d3953f9daa2d08}{LResizeY} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale the object along its local Y axis by a factor of lfScale. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a9f8ea70fb545b786ecc4575d0173baf1}{LResizeZ} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale the object along its local Z axis by a factor of lfScale. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_ac2be3e4653b0c8324c6a505e54544043}{GResizeX} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale the object along its global X axis by a factor of lfScale. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a13fda6e0dc1b19f7f136c1963bbdac77}{GResizeY} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale the object along its global Y axis by a factor of lfScale. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a74217e4c12e8f5623a572535ba443bc4}{GResizeZ} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale the object along its global Z axis by a factor of lfScale. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_matrix4_acd04bb06d1d12807b203b0aaf9e9b608}{Distance} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lpOther)
+\begin{DoxyCompactList}\small\item\em This will return the distance between this matrix and the \hyperlink{classc_matrix4}{cMatrix4} pointed to by lpOther. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_matrix4_a83fd4655f67a81cb42f3c50262ec593e}{Distance} (float $\ast$lpOther)
+\item 
+double \hyperlink{classc_matrix4_afb4a1edc36d2de9330e48bd182fe2a9b}{DistanceSq} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lpOther)
+\begin{DoxyCompactList}\small\item\em This will return the square of the distance between this matrix and the \hyperlink{classc_matrix4}{cMatrix4} pointed to by lpOther. \item\end{DoxyCompactList}\item 
+double \hyperlink{classc_matrix4_ad225d8db157a99b593f774e08c266722}{DistanceSq} (\hyperlink{classc_matrix4}{cMatrix4} lpOther)
+\item 
+double \hyperlink{classc_matrix4_ac524fac9525c6ff780e95c648b229e41}{DistanceSq} (float $\ast$lpOther)
+\item 
+void \hyperlink{classc_matrix4_ab956ec27a465b889126632475fd7d703}{Advance} (float lfX, float lfY)
+\begin{DoxyCompactList}\small\item\em This will move this matrix along its local X and Y axis by lfX and lfY respectively. Suitable for 2D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a2dc12cbe708c7bc63ca2beff47c0c835}{GAdvance} (float lfX, float lfY)
+\begin{DoxyCompactList}\small\item\em This will move this matrix along its global X and Y axis by lfX and lfY respectively. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_ac86eb165802e359a11ace5db20b73c72}{Angle} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will set the angle of rotation about this matrices X axis to lfAngle radians. Suitable for 2D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_ab21d0553250b8ca4b0388105afc79478}{Rotate} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate this matrix about its X axis by lfAngle radians. Suitable for 2D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a04a196147274eb6b3d1aca1782c26091}{GRotateOrigin} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate this matrix in the X axis through 0,0 by lfAngle radians. Suitable for 2D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a5115db44a0c51d97be3d5791fb19d18a}{GRotate} (float lfAngle, float lfX, float lfY)
+\begin{DoxyCompactList}\small\item\em This will rotate this matrix in the X axis through lfX,lfY by lfAngle radians. Suitable for 2D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_ad24236403317622459c3309938be9d21}{Set2D} ()
+\begin{DoxyCompactList}\small\item\em This will set the current matrix to operate as if it is a 2D object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a746ce09337cbf6a3292cbe15991efd79}{Set3D} ()
+\begin{DoxyCompactList}\small\item\em This will set the current matrix to operate as if it is a 3D object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_matrix4_a9f75b6af81c8cc0de8168d4179e362d1}{Display} ()
+\begin{DoxyCompactList}\small\item\em This will display the current matrix Textually. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_matrix4}{cMatrix4} $\ast$ \hyperlink{classc_matrix4_accc00afa5ecbdbe0b4db65e345adc6db}{Equals} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lpOther)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a93af3ea9ca6f3d38ad65b8ebc75ed7ba}{mpTemp}
+\begin{DoxyCompactList}\small\item\em This is a static \hyperlink{classc_matrix4}{cMatrix4} used to store data for operands. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classc_matrix4_a317862be8d837351569f993a32fc687c}{mpData} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em This stores a 4x4 matrix of floats representing the current translation of the objet. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_matrix4_ac0ebba0d10d97c6657dccd1575f761ab}{mb3D}
+\begin{DoxyCompactList}\small\item\em This si a boolean flag to define whether the object is 3D or 2D. True is 3D. False is 2D. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classc_matrix4_ad892cad8874ae954d2e9de55b17ded93}{cCameraMatrix4}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 12 of file WTcMatrix4.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_matrix4_a51d8e6bf6bbb6b998878fe978c748e14}{
+\index{cMatrix4@{cMatrix4}!cMatrix4@{cMatrix4}}
+\index{cMatrix4@{cMatrix4}!cMatrix4@{cMatrix4}}
+\subsubsection[{cMatrix4}]{\setlength{\rightskip}{0pt plus 5cm}cMatrix4::cMatrix4 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a51d8e6bf6bbb6b998878fe978c748e14}
+
+
+This will create a \hyperlink{classc_matrix4}{cMatrix4} object and will initialise all the static data required. 
+
+
+
+Definition at line 7 of file WTcMatrix4.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_matrix4_a00d27c2daab0e05c403c8fb86445fb81}{
+\index{cMatrix4@{cMatrix4}!Advance@{Advance}}
+\index{Advance@{Advance}!cMatrix4@{cMatrix4}}
+\subsubsection[{Advance}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Advance (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a00d27c2daab0e05c403c8fb86445fb81}
+
+
+This will advance the object along its local X, Y and Z axis by lfX, lfY and lfZ. 
+
+
+
+Definition at line 756 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ab956ec27a465b889126632475fd7d703}{
+\index{cMatrix4@{cMatrix4}!Advance@{Advance}}
+\index{Advance@{Advance}!cMatrix4@{cMatrix4}}
+\subsubsection[{Advance}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Advance (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ab956ec27a465b889126632475fd7d703}
+
+
+This will move this matrix along its local X and Y axis by lfX and lfY respectively. Suitable for 2D objects. 
+
+
+
+Definition at line 1155 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_aa23f7d55e4eddcba673f8a6e44f63c3e}{
+\index{cMatrix4@{cMatrix4}!AdvanceX@{AdvanceX}}
+\index{AdvanceX@{AdvanceX}!cMatrix4@{cMatrix4}}
+\subsubsection[{AdvanceX}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::AdvanceX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfDistance}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_aa23f7d55e4eddcba673f8a6e44f63c3e}
+
+
+This will advance the object along its local X axis by lfDistance. 
+
+
+
+Definition at line 735 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ae28d0f2cfe996ec5422cdaec98f30c9a}{
+\index{cMatrix4@{cMatrix4}!AdvanceY@{AdvanceY}}
+\index{AdvanceY@{AdvanceY}!cMatrix4@{cMatrix4}}
+\subsubsection[{AdvanceY}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::AdvanceY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfDistance}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ae28d0f2cfe996ec5422cdaec98f30c9a}
+
+
+This will advance the object along its local Y axis by lfDistance. 
+
+
+
+Definition at line 742 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a31d0d26e3b91628365871ad10dc33f8e}{
+\index{cMatrix4@{cMatrix4}!AdvanceZ@{AdvanceZ}}
+\index{AdvanceZ@{AdvanceZ}!cMatrix4@{cMatrix4}}
+\subsubsection[{AdvanceZ}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::AdvanceZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfDistance}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a31d0d26e3b91628365871ad10dc33f8e}
+
+
+This will advance the object along its local Z axis by lfDistance. 
+
+
+
+Definition at line 749 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ac86eb165802e359a11ace5db20b73c72}{
+\index{cMatrix4@{cMatrix4}!Angle@{Angle}}
+\index{Angle@{Angle}!cMatrix4@{cMatrix4}}
+\subsubsection[{Angle}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Angle (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ac86eb165802e359a11ace5db20b73c72}
+
+
+This will set the angle of rotation about this matrices X axis to lfAngle radians. Suitable for 2D objects. 
+
+
+
+Definition at line 1167 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a39cf7cefa0672684e69eb4af89366270}{
+\index{cMatrix4@{cMatrix4}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!cMatrix4@{cMatrix4}}
+\subsubsection[{Determinant}]{\setlength{\rightskip}{0pt plus 5cm}float cMatrix4::Determinant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a39cf7cefa0672684e69eb4af89366270}
+
+
+This will return the determinant of this objects matrix. 
+
+
+
+Definition at line 390 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a9f75b6af81c8cc0de8168d4179e362d1}{
+\index{cMatrix4@{cMatrix4}!Display@{Display}}
+\index{Display@{Display}!cMatrix4@{cMatrix4}}
+\subsubsection[{Display}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a9f75b6af81c8cc0de8168d4179e362d1}
+
+
+This will display the current matrix Textually. 
+
+
+
+Definition at line 1242 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_acd04bb06d1d12807b203b0aaf9e9b608}{
+\index{cMatrix4@{cMatrix4}!Distance@{Distance}}
+\index{Distance@{Distance}!cMatrix4@{cMatrix4}}
+\subsubsection[{Distance}]{\setlength{\rightskip}{0pt plus 5cm}float cMatrix4::Distance (
+\begin{DoxyParamCaption}
+\item[{{\bf cMatrix4} $\ast$}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_acd04bb06d1d12807b203b0aaf9e9b608}
+
+
+This will return the distance between this matrix and the \hyperlink{classc_matrix4}{cMatrix4} pointed to by lpOther. 
+
+
+
+Definition at line 1145 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a83fd4655f67a81cb42f3c50262ec593e}{
+\index{cMatrix4@{cMatrix4}!Distance@{Distance}}
+\index{Distance@{Distance}!cMatrix4@{cMatrix4}}
+\subsubsection[{Distance}]{\setlength{\rightskip}{0pt plus 5cm}float cMatrix4::Distance (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a83fd4655f67a81cb42f3c50262ec593e}
+
+
+Definition at line 1134 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_afb4a1edc36d2de9330e48bd182fe2a9b}{
+\index{cMatrix4@{cMatrix4}!DistanceSq@{DistanceSq}}
+\index{DistanceSq@{DistanceSq}!cMatrix4@{cMatrix4}}
+\subsubsection[{DistanceSq}]{\setlength{\rightskip}{0pt plus 5cm}double cMatrix4::DistanceSq (
+\begin{DoxyParamCaption}
+\item[{{\bf cMatrix4} $\ast$}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_afb4a1edc36d2de9330e48bd182fe2a9b}
+
+
+This will return the square of the distance between this matrix and the \hyperlink{classc_matrix4}{cMatrix4} pointed to by lpOther. 
+
+
+
+Definition at line 1112 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ad225d8db157a99b593f774e08c266722}{
+\index{cMatrix4@{cMatrix4}!DistanceSq@{DistanceSq}}
+\index{DistanceSq@{DistanceSq}!cMatrix4@{cMatrix4}}
+\subsubsection[{DistanceSq}]{\setlength{\rightskip}{0pt plus 5cm}double cMatrix4::DistanceSq (
+\begin{DoxyParamCaption}
+\item[{{\bf cMatrix4}}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ad225d8db157a99b593f774e08c266722}
+
+
+Definition at line 1100 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ac524fac9525c6ff780e95c648b229e41}{
+\index{cMatrix4@{cMatrix4}!DistanceSq@{DistanceSq}}
+\index{DistanceSq@{DistanceSq}!cMatrix4@{cMatrix4}}
+\subsubsection[{DistanceSq}]{\setlength{\rightskip}{0pt plus 5cm}double cMatrix4::DistanceSq (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ac524fac9525c6ff780e95c648b229e41}
+
+
+Definition at line 1123 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_accc00afa5ecbdbe0b4db65e345adc6db}{
+\index{cMatrix4@{cMatrix4}!Equals@{Equals}}
+\index{Equals@{Equals}!cMatrix4@{cMatrix4}}
+\subsubsection[{Equals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4}$\ast$ cMatrix4::Equals (
+\begin{DoxyParamCaption}
+\item[{{\bf cMatrix4} $\ast$}]{lpOther}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_matrix4_accc00afa5ecbdbe0b4db65e345adc6db}
+
+
+Definition at line 241 of file WTcMatrix4.h.
+
+\hypertarget{classc_matrix4_a2dc12cbe708c7bc63ca2beff47c0c835}{
+\index{cMatrix4@{cMatrix4}!GAdvance@{GAdvance}}
+\index{GAdvance@{GAdvance}!cMatrix4@{cMatrix4}}
+\subsubsection[{GAdvance}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GAdvance (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a2dc12cbe708c7bc63ca2beff47c0c835}
+
+
+This will move this matrix along its global X and Y axis by lfX and lfY respectively. 
+
+
+
+Definition at line 1161 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ac1c16ceb7ac4c2f771fc0d4662df643c}{
+\index{cMatrix4@{cMatrix4}!GAdvance@{GAdvance}}
+\index{GAdvance@{GAdvance}!cMatrix4@{cMatrix4}}
+\subsubsection[{GAdvance}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GAdvance (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ac1c16ceb7ac4c2f771fc0d4662df643c}
+
+
+This will advance the object along the global X, Y and Z axis by lfX, lfY and lfZ. 
+
+
+
+Definition at line 772 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a6796b615c465903d48fe0c8094b1f7c1}{
+\index{cMatrix4@{cMatrix4}!GAdvanceX@{GAdvanceX}}
+\index{GAdvanceX@{GAdvanceX}!cMatrix4@{cMatrix4}}
+\subsubsection[{GAdvanceX}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GAdvanceX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a6796b615c465903d48fe0c8094b1f7c1}
+
+
+This will advance the object along the global X axis by lfX. 
+
+
+
+Definition at line 763 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_af4453f95ef875b0c5002d72bade65bb1}{
+\index{cMatrix4@{cMatrix4}!GAdvanceY@{GAdvanceY}}
+\index{GAdvanceY@{GAdvanceY}!cMatrix4@{cMatrix4}}
+\subsubsection[{GAdvanceY}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GAdvanceY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_af4453f95ef875b0c5002d72bade65bb1}
+
+
+This will advance the object along the global Y axis by lfX. 
+
+
+
+Definition at line 766 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a0fd4e894762e73050e8e2e38acdfaf0d}{
+\index{cMatrix4@{cMatrix4}!GAdvanceZ@{GAdvanceZ}}
+\index{GAdvanceZ@{GAdvanceZ}!cMatrix4@{cMatrix4}}
+\subsubsection[{GAdvanceZ}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GAdvanceZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a0fd4e894762e73050e8e2e38acdfaf0d}
+
+
+This will advance the object along the global Z axis by lfX. 
+
+
+
+Definition at line 769 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ac2be3e4653b0c8324c6a505e54544043}{
+\index{cMatrix4@{cMatrix4}!GResizeX@{GResizeX}}
+\index{GResizeX@{GResizeX}!cMatrix4@{cMatrix4}}
+\subsubsection[{GResizeX}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GResizeX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ac2be3e4653b0c8324c6a505e54544043}
+
+
+This will scale the object along its global X axis by a factor of lfScale. 
+
+
+
+Definition at line 891 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a13fda6e0dc1b19f7f136c1963bbdac77}{
+\index{cMatrix4@{cMatrix4}!GResizeY@{GResizeY}}
+\index{GResizeY@{GResizeY}!cMatrix4@{cMatrix4}}
+\subsubsection[{GResizeY}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GResizeY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a13fda6e0dc1b19f7f136c1963bbdac77}
+
+
+This will scale the object along its global Y axis by a factor of lfScale. 
+
+
+
+Definition at line 898 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a74217e4c12e8f5623a572535ba443bc4}{
+\index{cMatrix4@{cMatrix4}!GResizeZ@{GResizeZ}}
+\index{GResizeZ@{GResizeZ}!cMatrix4@{cMatrix4}}
+\subsubsection[{GResizeZ}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GResizeZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a74217e4c12e8f5623a572535ba443bc4}
+
+
+This will scale the object along its global Z axis by a factor of lfScale. 
+
+
+
+Definition at line 906 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a5115db44a0c51d97be3d5791fb19d18a}{
+\index{cMatrix4@{cMatrix4}!GRotate@{GRotate}}
+\index{GRotate@{GRotate}!cMatrix4@{cMatrix4}}
+\subsubsection[{GRotate}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GRotate (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle, }
+\item[{float}]{lfX, }
+\item[{float}]{lfY}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a5115db44a0c51d97be3d5791fb19d18a}
+
+
+This will rotate this matrix in the X axis through lfX,lfY by lfAngle radians. Suitable for 2D objects. 
+
+
+
+Definition at line 1210 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a04a196147274eb6b3d1aca1782c26091}{
+\index{cMatrix4@{cMatrix4}!GRotateOrigin@{GRotateOrigin}}
+\index{GRotateOrigin@{GRotateOrigin}!cMatrix4@{cMatrix4}}
+\subsubsection[{GRotateOrigin}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GRotateOrigin (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a04a196147274eb6b3d1aca1782c26091}
+
+
+This will rotate this matrix in the X axis through 0,0 by lfAngle radians. Suitable for 2D objects. 
+
+
+
+Definition at line 1191 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a3ddcb503ea46911e194a9b881a6f0bee}{
+\index{cMatrix4@{cMatrix4}!GRotateOriginX@{GRotateOriginX}}
+\index{GRotateOriginX@{GRotateOriginX}!cMatrix4@{cMatrix4}}
+\subsubsection[{GRotateOriginX}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GRotateOriginX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a3ddcb503ea46911e194a9b881a6f0bee}
+
+
+This will rotate the object around the global X axis at point 0,0,0 by lfAngle radians. 
+
+
+
+Definition at line 915 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_abe68a204b91201b33adc32f5b354631e}{
+\index{cMatrix4@{cMatrix4}!GRotateOriginY@{GRotateOriginY}}
+\index{GRotateOriginY@{GRotateOriginY}!cMatrix4@{cMatrix4}}
+\subsubsection[{GRotateOriginY}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GRotateOriginY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_abe68a204b91201b33adc32f5b354631e}
+
+
+This will rotate the object around the global Y axis at point 0,0,0 by lfAngle radians. 
+
+
+
+Definition at line 944 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_af5ecfcfab719acf23ddb1148ad24825a}{
+\index{cMatrix4@{cMatrix4}!GRotateOriginZ@{GRotateOriginZ}}
+\index{GRotateOriginZ@{GRotateOriginZ}!cMatrix4@{cMatrix4}}
+\subsubsection[{GRotateOriginZ}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GRotateOriginZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_af5ecfcfab719acf23ddb1148ad24825a}
+
+
+This will rotate the object around the global Z axis at point 0,0,0 by lfAngle radians. 
+
+
+
+Definition at line 973 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a517140950c736c74a44d34704b44c83d}{
+\index{cMatrix4@{cMatrix4}!GRotateX@{GRotateX}}
+\index{GRotateX@{GRotateX}!cMatrix4@{cMatrix4}}
+\subsubsection[{GRotateX}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GRotateX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle, }
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a517140950c736c74a44d34704b44c83d}
+
+
+This will rotate the object around the global X axis at point lfX,lfY,lfZ by lfAngle radians. 
+
+
+
+Definition at line 1002 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a0be08400d130f819bbedbb35f551d4c7}{
+\index{cMatrix4@{cMatrix4}!GRotateX@{GRotateX}}
+\index{GRotateX@{GRotateX}!cMatrix4@{cMatrix4}}
+\subsubsection[{GRotateX}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GRotateX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a0be08400d130f819bbedbb35f551d4c7}
+
+
+This will rotate the object around its global X axis by lfAngle radians. 
+
+
+
+Definition at line 779 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a0ae1a3c85f3b00127217b67c7d75a7cc}{
+\index{cMatrix4@{cMatrix4}!GRotateY@{GRotateY}}
+\index{GRotateY@{GRotateY}!cMatrix4@{cMatrix4}}
+\subsubsection[{GRotateY}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GRotateY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a0ae1a3c85f3b00127217b67c7d75a7cc}
+
+
+This will rotate the object around its global X axis by lfAngle radians. 
+
+
+
+Definition at line 804 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a5b1505c43d9382bc625fc1eb53d44360}{
+\index{cMatrix4@{cMatrix4}!GRotateY@{GRotateY}}
+\index{GRotateY@{GRotateY}!cMatrix4@{cMatrix4}}
+\subsubsection[{GRotateY}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GRotateY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle, }
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a5b1505c43d9382bc625fc1eb53d44360}
+
+
+This will rotate the object around the global Y axis at point lfX,lfY,lfZ by lfAngle radians. 
+
+
+
+Definition at line 1035 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a1d082ca0f1c634d262309eb75a9e2df5}{
+\index{cMatrix4@{cMatrix4}!GRotateZ@{GRotateZ}}
+\index{GRotateZ@{GRotateZ}!cMatrix4@{cMatrix4}}
+\subsubsection[{GRotateZ}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GRotateZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a1d082ca0f1c634d262309eb75a9e2df5}
+
+
+This will rotate the object around its global X axis by lfAngle radians. 
+
+
+
+Definition at line 828 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a5b357f5686b74e0feeff7eaae070f566}{
+\index{cMatrix4@{cMatrix4}!GRotateZ@{GRotateZ}}
+\index{GRotateZ@{GRotateZ}!cMatrix4@{cMatrix4}}
+\subsubsection[{GRotateZ}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::GRotateZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle, }
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a5b357f5686b74e0feeff7eaae070f566}
+
+
+This will rotate the object around the global Z axis at point lfX,lfY,lfZ by lfAngle radians. 
+
+
+
+Definition at line 1068 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a6aa4f58a001499cd666f9d65f3a821a0}{
+\index{cMatrix4@{cMatrix4}!Identity@{Identity}}
+\index{Identity@{Identity}!cMatrix4@{cMatrix4}}
+\subsubsection[{Identity}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Identity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a6aa4f58a001499cd666f9d65f3a821a0}
+
+
+This will restore this objects matrix to an identity matrix. 
+
+
+
+Definition at line 342 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a7473299a57ffcfe284e6fd9005b98592}{
+\index{cMatrix4@{cMatrix4}!InvertRotationMatrix@{InvertRotationMatrix}}
+\index{InvertRotationMatrix@{InvertRotationMatrix}!cMatrix4@{cMatrix4}}
+\subsubsection[{InvertRotationMatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::InvertRotationMatrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a7473299a57ffcfe284e6fd9005b98592}
+
+
+THis will find the inverse of the matrix if it is a standard rotation / translation matrix. (0,1,2,4,5,6,8,9,10 are orthogonal. 3,7,11 are zero. 12,13,14 are position and 15 is one.) 
+
+
+
+Definition at line 399 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_af87d56540f23692fd69d0b245ad404e6}{
+\index{cMatrix4@{cMatrix4}!LResizeX@{LResizeX}}
+\index{LResizeX@{LResizeX}!cMatrix4@{cMatrix4}}
+\subsubsection[{LResizeX}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::LResizeX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_af87d56540f23692fd69d0b245ad404e6}
+
+
+This will scale the object along its local X axis by a factor of lfScale. 
+
+
+
+Definition at line 868 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a76758088b43a4a6f37d3953f9daa2d08}{
+\index{cMatrix4@{cMatrix4}!LResizeY@{LResizeY}}
+\index{LResizeY@{LResizeY}!cMatrix4@{cMatrix4}}
+\subsubsection[{LResizeY}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::LResizeY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a76758088b43a4a6f37d3953f9daa2d08}
+
+
+This will scale the object along its local Y axis by a factor of lfScale. 
+
+
+
+Definition at line 875 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a9f8ea70fb545b786ecc4575d0173baf1}{
+\index{cMatrix4@{cMatrix4}!LResizeZ@{LResizeZ}}
+\index{LResizeZ@{LResizeZ}!cMatrix4@{cMatrix4}}
+\subsubsection[{LResizeZ}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::LResizeZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a9f8ea70fb545b786ecc4575d0173baf1}
+
+
+This will scale the object along its local Z axis by a factor of lfScale. 
+
+
+
+Definition at line 883 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a90faa594754991420b1fda110f4b144f}{
+\index{cMatrix4@{cMatrix4}!LRotate@{LRotate}}
+\index{LRotate@{LRotate}!cMatrix4@{cMatrix4}}
+\subsubsection[{LRotate}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::LRotate (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a90faa594754991420b1fda110f4b144f}
+
+
+This will rotate the object around its local Z axis by lfAngle radians. Suitable for 2D objects. 
+
+\hypertarget{classc_matrix4_ac02520811181e0593e77e55753602c47}{
+\index{cMatrix4@{cMatrix4}!LRotateX@{LRotateX}}
+\index{LRotateX@{LRotateX}!cMatrix4@{cMatrix4}}
+\subsubsection[{LRotateX}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::LRotateX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ac02520811181e0593e77e55753602c47}
+
+
+This will rotate the object around its local X axis by lfAngle radians. 
+
+
+
+Definition at line 675 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_af13f02ca53d8689f8a23df333bde6f15}{
+\index{cMatrix4@{cMatrix4}!LRotateY@{LRotateY}}
+\index{LRotateY@{LRotateY}!cMatrix4@{cMatrix4}}
+\subsubsection[{LRotateY}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::LRotateY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_af13f02ca53d8689f8a23df333bde6f15}
+
+
+This will rotate the object around its local Y axis by lfAngle radians. 
+
+
+
+Definition at line 694 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a203f986c0ab6d0abaf4dda01b88f0558}{
+\index{cMatrix4@{cMatrix4}!LRotateZ@{LRotateZ}}
+\index{LRotateZ@{LRotateZ}!cMatrix4@{cMatrix4}}
+\subsubsection[{LRotateZ}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::LRotateZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a203f986c0ab6d0abaf4dda01b88f0558}
+
+
+This will rotate the object around its local Z axis by lfAngle radians. 
+
+
+
+Definition at line 715 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a1e70788aed256a22cf62b11a12e0db74}{
+\index{cMatrix4@{cMatrix4}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!cMatrix4@{cMatrix4}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ cMatrix4::Matrix (
+\begin{DoxyParamCaption}
+\item[{uint8}]{lcData}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_matrix4_a1e70788aed256a22cf62b11a12e0db74}
+
+
+This will return a pointer to the float numbered lcData in this objects matrix. 
+
+
+
+Definition at line 55 of file WTcMatrix4.h.
+
+\hypertarget{classc_matrix4_a8697973a28e45b0866cce4cdba2e216d}{
+\index{cMatrix4@{cMatrix4}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!cMatrix4@{cMatrix4}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ cMatrix4::Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_matrix4_a8697973a28e45b0866cce4cdba2e216d}
+
+
+This will return a pointer to this objects matrix data. 
+
+
+
+Definition at line 53 of file WTcMatrix4.h.
+
+\hypertarget{classc_matrix4_a5d46493267b557040a30013c1aa18cdc}{
+\index{cMatrix4@{cMatrix4}!operator()@{operator()}}
+\index{operator()@{operator()}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}float \& cMatrix4::operator() (
+\begin{DoxyParamCaption}
+\item[{uint16}]{liColumn, }
+\item[{uint16}]{liRow}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a5d46493267b557040a30013c1aa18cdc}
+
+
+This will return the float in position \mbox{[}liColumn,liRow\mbox{]} in mpData. 
+
+
+
+Definition at line 602 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a2370d66d55b851b1e720f7e9cfe751b8}{
+\index{cMatrix4@{cMatrix4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{float \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a2370d66d55b851b1e720f7e9cfe751b8}
+
+
+This will multiply every float in this objects matrix by lVal. 
+
+
+
+Definition at line 176 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ad615ac415cde0d33c39928cf94573903}{
+\index{cMatrix4@{cMatrix4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const float}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ad615ac415cde0d33c39928cf94573903}
+
+
+This will multiply every float in this objects matrix by lVal. 
+
+
+
+Definition at line 199 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_aa202a3e23b2d693672265d15304f92e0}{
+\index{cMatrix4@{cMatrix4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} $\ast$ cMatrix4::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf cMatrix4} $\ast$}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_aa202a3e23b2d693672265d15304f92e0}
+
+
+This will multiply this objects matrix by the matrix lVal. Returns This.lVal . 
+
+
+
+Definition at line 571 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a53abd84689f1a69f2aca3e51956956f6}{
+\index{cMatrix4@{cMatrix4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf cMatrix4}}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a53abd84689f1a69f2aca3e51956956f6}
+
+
+This will multiply this objects matrix by the matrix lVal. Returns This.lVal . 
+
+
+
+Definition at line 545 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a107b1006370869b4315364a20982333d}{
+\index{cMatrix4@{cMatrix4}!operator+@{operator+}}
+\index{operator+@{operator+}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::operator+ (
+\begin{DoxyParamCaption}
+\item[{float \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a107b1006370869b4315364a20982333d}
+
+
+This will add lVal to every float in this objects matrix. 
+
+
+
+Definition at line 89 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a10aeb2ece864e892e7a15361b5747a79}{
+\index{cMatrix4@{cMatrix4}!operator+@{operator+}}
+\index{operator+@{operator+}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::operator+ (
+\begin{DoxyParamCaption}
+\item[{const float}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a10aeb2ece864e892e7a15361b5747a79}
+
+
+This will add lVal to every float in this objects matrix. 
+
+
+
+Definition at line 111 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a8fa6ac58cb376b1ad4c59eaea1d959bd}{
+\index{cMatrix4@{cMatrix4}!operator+@{operator+}}
+\index{operator+@{operator+}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf cMatrix4} \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a8fa6ac58cb376b1ad4c59eaea1d959bd}
+
+
+This will add this matrix and the matrix lVal. 
+
+
+
+Definition at line 347 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a86c7c478cbcad8c7a6d28837d905ac40}{
+\index{cMatrix4@{cMatrix4}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{float \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a86c7c478cbcad8c7a6d28837d905ac40}
+
+
+This will deduct lVal from every float in this objects matrix. 
+
+
+
+Definition at line 132 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a2d89805bd611edabd1732f206f2486fb}{
+\index{cMatrix4@{cMatrix4}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const float}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a2d89805bd611edabd1732f206f2486fb}
+
+
+This will deduct lVal from every float in this objects matrix. 
+
+
+
+Definition at line 155 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_abd270ecc06edf1cfe865bfffbce80ac7}{
+\index{cMatrix4@{cMatrix4}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf cMatrix4} \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_abd270ecc06edf1cfe865bfffbce80ac7}
+
+
+This will subtract the matrix lVal from this matrix. 
+
+
+
+Definition at line 368 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a219d42de683b8bb377e8fe2bbabf9a67}{
+\index{cMatrix4@{cMatrix4}!operator/@{operator/}}
+\index{operator/@{operator/}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::operator/ (
+\begin{DoxyParamCaption}
+\item[{float \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a219d42de683b8bb377e8fe2bbabf9a67}
+
+
+This will divide every float in this objects matrix by lVal. 
+
+
+
+Definition at line 221 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a889631de90fa981083badaef363e579b}{
+\index{cMatrix4@{cMatrix4}!operator/@{operator/}}
+\index{operator/@{operator/}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::operator/ (
+\begin{DoxyParamCaption}
+\item[{const float}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a889631de90fa981083badaef363e579b}
+
+
+This will divide every float in this objects matrix by lVal. 
+
+
+
+Definition at line 243 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ad94edb7acda68ebad375ce919dc282ad}{
+\index{cMatrix4@{cMatrix4}!operator=@{operator=}}
+\index{operator=@{operator=}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} $\ast$ cMatrix4::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf cMatrix4} $\ast$}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ad94edb7acda68ebad375ce919dc282ad}
+
+
+This will equate the data in mpData to the data in lVal.mpData. 
+
+This will equate the data in mpData to the data in lVal-\/$>$mpData. 
+
+Definition at line 331 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ab027828400b348f735863af5de9103e7}{
+\index{cMatrix4@{cMatrix4}!operator=@{operator=}}
+\index{operator=@{operator=}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}float cMatrix4::operator= (
+\begin{DoxyParamCaption}
+\item[{const float}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ab027828400b348f735863af5de9103e7}
+
+
+This will equate every float in mpData to lVal. 
+
+
+
+Definition at line 302 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a7298504da2a4942e9f5c18f4db755481}{
+\index{cMatrix4@{cMatrix4}!operator=@{operator=}}
+\index{operator=@{operator=}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ cMatrix4::operator= (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a7298504da2a4942e9f5c18f4db755481}
+
+
+Definition at line 266 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ab60d884663cacecfd8e5f68e3c317f78}{
+\index{cMatrix4@{cMatrix4}!operator=@{operator=}}
+\index{operator=@{operator=}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf cMatrix4}}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ab60d884663cacecfd8e5f68e3c317f78}
+
+
+This will equate the data in mpData to the data in lVal.mpData. 
+
+
+
+Definition at line 272 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ab80c930c0411334cc255112c8db84e61}{
+\index{cMatrix4@{cMatrix4}!operator=@{operator=}}
+\index{operator=@{operator=}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}float cMatrix4::operator= (
+\begin{DoxyParamCaption}
+\item[{float \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ab80c930c0411334cc255112c8db84e61}
+
+
+This will equate every float in mpData to lVal. 
+
+
+
+Definition at line 278 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ae6620b907e34e5def3027958cc283528}{
+\index{cMatrix4@{cMatrix4}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!cMatrix4@{cMatrix4}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}float \& cMatrix4::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{uint16}]{liPos}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ae6620b907e34e5def3027958cc283528}
+
+
+This will return the float in position liPos in mpData. 
+
+
+
+Definition at line 597 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ac182a447e047d9071b035b374e8abf45}{
+\index{cMatrix4@{cMatrix4}!Position@{Position}}
+\index{Position@{Position}!cMatrix4@{cMatrix4}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Position (
+\begin{DoxyParamCaption}
+\item[{{\bf c2DVf} $\ast$}]{lpPosition}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ac182a447e047d9071b035b374e8abf45}
+
+
+This will position the current object to the 2D Vector lpPosition. (X,Y) 
+
+
+
+Definition at line 626 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a81cd364d37dc5eae6f968551331ad7a3}{
+\index{cMatrix4@{cMatrix4}!Position@{Position}}
+\index{Position@{Position}!cMatrix4@{cMatrix4}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Position (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a81cd364d37dc5eae6f968551331ad7a3}
+
+
+This will position the current object to lfX,lfY. (X,Y) 
+
+
+
+Definition at line 607 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a8a49976693c27e4fbb5fce427eb6bcf5}{
+\index{cMatrix4@{cMatrix4}!Position@{Position}}
+\index{Position@{Position}!cMatrix4@{cMatrix4}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Position (
+\begin{DoxyParamCaption}
+\item[{{\bf c3DVf} $\ast$}]{lpPosition}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a8a49976693c27e4fbb5fce427eb6bcf5}
+
+
+This will position the current object to the 3D Vector lpPosition. (X,Y,Z) 
+
+
+
+Definition at line 631 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ae404d9b94cb676d9896385fef1eda422}{
+\index{cMatrix4@{cMatrix4}!Position@{Position}}
+\index{Position@{Position}!cMatrix4@{cMatrix4}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Position (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ae404d9b94cb676d9896385fef1eda422}
+
+
+This will position the current object to lfX,lfY,lfX. (X,Y,Z) 
+
+
+
+Reimplemented in \hyperlink{classc_line_a6abc4fedc3f30a6fb45ce4dd83070082}{cLine}.
+
+
+
+Definition at line 613 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a7b0917b0f0a69d73ed41d05fd37d52ac}{
+\index{cMatrix4@{cMatrix4}!Position@{Position}}
+\index{Position@{Position}!cMatrix4@{cMatrix4}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ cMatrix4::Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_matrix4_a7b0917b0f0a69d73ed41d05fd37d52ac}
+
+
+This will reutrn a pointer to this objects matrices position vector. 
+
+
+
+Reimplemented in \hyperlink{classc_line_abe4306d62f5a0744508cbead16245bf7}{cLine}.
+
+
+
+Definition at line 57 of file WTcMatrix4.h.
+
+\hypertarget{classc_matrix4_ae3bb670db30cee45d59aef1599289086}{
+\index{cMatrix4@{cMatrix4}!Position@{Position}}
+\index{Position@{Position}!cMatrix4@{cMatrix4}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Position (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lpPos}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ae3bb670db30cee45d59aef1599289086}
+
+
+This will take 2 or three floats depending if this \hyperlink{classc_matrix4}{cMatrix4} is set to 2D or 3D operations and set the position of the object. 
+
+
+
+Reimplemented in \hyperlink{classc_line_acfefe5128253475e8291d110f004095b}{cLine}.
+
+
+
+Definition at line 620 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_adf27db7265e42ccbbb5a6779800c39ea}{
+\index{cMatrix4@{cMatrix4}!PositionX@{PositionX}}
+\index{PositionX@{PositionX}!cMatrix4@{cMatrix4}}
+\subsubsection[{PositionX}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::PositionX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_adf27db7265e42ccbbb5a6779800c39ea}
+
+
+This will set the objects X position to be equal to lfX. 
+
+
+
+Definition at line 636 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a4f7469486d7557e158ebc70a261c853c}{
+\index{cMatrix4@{cMatrix4}!PositionY@{PositionY}}
+\index{PositionY@{PositionY}!cMatrix4@{cMatrix4}}
+\subsubsection[{PositionY}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::PositionY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfY}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a4f7469486d7557e158ebc70a261c853c}
+
+
+This will set the objects Y position to be equal to lfX. 
+
+
+
+Definition at line 640 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a6baf253feb5e27b5e3e81971d9f5d718}{
+\index{cMatrix4@{cMatrix4}!PositionZ@{PositionZ}}
+\index{PositionZ@{PositionZ}!cMatrix4@{cMatrix4}}
+\subsubsection[{PositionZ}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::PositionZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a6baf253feb5e27b5e3e81971d9f5d718}
+
+
+This will set the objects Z position to be equal to lfX. 
+
+
+
+Definition at line 644 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a4785b8464f65d9784db634f3a6f34e52}{
+\index{cMatrix4@{cMatrix4}!Resize@{Resize}}
+\index{Resize@{Resize}!cMatrix4@{cMatrix4}}
+\subsubsection[{Resize}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Resize (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a4785b8464f65d9784db634f3a6f34e52}
+
+
+This will scale the object by a factor of lfScale. 
+
+
+
+Definition at line 853 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ab21d0553250b8ca4b0388105afc79478}{
+\index{cMatrix4@{cMatrix4}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!cMatrix4@{cMatrix4}}
+\subsubsection[{Rotate}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Rotate (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ab21d0553250b8ca4b0388105afc79478}
+
+
+This will rotate this matrix about its X axis by lfAngle radians. Suitable for 2D objects. 
+
+
+
+Definition at line 1174 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ad24236403317622459c3309938be9d21}{
+\index{cMatrix4@{cMatrix4}!Set2D@{Set2D}}
+\index{Set2D@{Set2D}!cMatrix4@{cMatrix4}}
+\subsubsection[{Set2D}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Set2D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ad24236403317622459c3309938be9d21}
+
+
+This will set the current matrix to operate as if it is a 2D object. 
+
+
+
+Definition at line 1229 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a746ce09337cbf6a3292cbe15991efd79}{
+\index{cMatrix4@{cMatrix4}!Set3D@{Set3D}}
+\index{Set3D@{Set3D}!cMatrix4@{cMatrix4}}
+\subsubsection[{Set3D}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Set3D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a746ce09337cbf6a3292cbe15991efd79}
+
+
+This will set the current matrix to operate as if it is a 3D object. 
+
+
+
+Definition at line 1236 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ac8b6f1a9352943cd86ef4c088c438307}{
+\index{cMatrix4@{cMatrix4}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!cMatrix4@{cMatrix4}}
+\subsubsection[{Transpose}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} cMatrix4::Transpose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_ac8b6f1a9352943cd86ef4c088c438307}
+
+
+This will return the transpose of this objects matrix. 
+
+
+
+Definition at line 493 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a072c31c505d176d93d73101c06084d9d}{
+\index{cMatrix4@{cMatrix4}!UpdateMatrix@{UpdateMatrix}}
+\index{UpdateMatrix@{UpdateMatrix}!cMatrix4@{cMatrix4}}
+\subsubsection[{UpdateMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::UpdateMatrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a072c31c505d176d93d73101c06084d9d}
+
+
+This will update the OpenGL matrix on the top of matrix stack to be identical to this matrix. 
+
+
+
+Definition at line 56 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_a2c449ca9f08213ba86d53b04440ae210}{
+\index{cMatrix4@{cMatrix4}!UpdateMatrix@{UpdateMatrix}}
+\index{UpdateMatrix@{UpdateMatrix}!cMatrix4@{cMatrix4}}
+\subsubsection[{UpdateMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::UpdateMatrix (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lpMatrix}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_a2c449ca9f08213ba86d53b04440ae210}
+
+
+This appears to multiply this matrix by the matrix lpMatrix and equate this matrix to the result. 
+
+
+
+Definition at line 63 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_aff5d7d1cf3cf0b9ddb9e55e2f799012f}{
+\index{cMatrix4@{cMatrix4}!X@{X}}
+\index{X@{X}!cMatrix4@{cMatrix4}}
+\subsubsection[{X}]{\setlength{\rightskip}{0pt plus 5cm}float cMatrix4::X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_matrix4_aff5d7d1cf3cf0b9ddb9e55e2f799012f}
+
+
+This will return this objects X position value. 
+
+
+
+Definition at line 59 of file WTcMatrix4.h.
+
+\hypertarget{classc_matrix4_a958689f28a118eac91104f5a847ac0fd}{
+\index{cMatrix4@{cMatrix4}!XVect@{XVect}}
+\index{XVect@{XVect}!cMatrix4@{cMatrix4}}
+\subsubsection[{XVect}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ cMatrix4::XVect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_matrix4_a958689f28a118eac91104f5a847ac0fd}
+
+
+This will return the vector along this objects local X axis. 
+
+
+
+Definition at line 66 of file WTcMatrix4.h.
+
+\hypertarget{classc_matrix4_aa22f36646d19566a438a297cb9a9bfb5}{
+\index{cMatrix4@{cMatrix4}!Y@{Y}}
+\index{Y@{Y}!cMatrix4@{cMatrix4}}
+\subsubsection[{Y}]{\setlength{\rightskip}{0pt plus 5cm}float cMatrix4::Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_matrix4_aa22f36646d19566a438a297cb9a9bfb5}
+
+
+This will return this objects Y position value. 
+
+
+
+Definition at line 61 of file WTcMatrix4.h.
+
+\hypertarget{classc_matrix4_acff0242ac76b2ccd854eeec0d4913abe}{
+\index{cMatrix4@{cMatrix4}!YVect@{YVect}}
+\index{YVect@{YVect}!cMatrix4@{cMatrix4}}
+\subsubsection[{YVect}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ cMatrix4::YVect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_matrix4_acff0242ac76b2ccd854eeec0d4913abe}
+
+
+This will return the vector along this objects local Y axis. 
+
+
+
+Definition at line 68 of file WTcMatrix4.h.
+
+\hypertarget{classc_matrix4_a8b62f500f8194b06dab12e85e57fd9ef}{
+\index{cMatrix4@{cMatrix4}!Z@{Z}}
+\index{Z@{Z}!cMatrix4@{cMatrix4}}
+\subsubsection[{Z}]{\setlength{\rightskip}{0pt plus 5cm}float cMatrix4::Z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_matrix4_a8b62f500f8194b06dab12e85e57fd9ef}
+
+
+This will return this objects Z position value. 
+
+
+
+Definition at line 63 of file WTcMatrix4.h.
+
+\hypertarget{classc_matrix4_acf16f37d849137d2e410ec20f2b4e74d}{
+\index{cMatrix4@{cMatrix4}!Zero@{Zero}}
+\index{Zero@{Zero}!cMatrix4@{cMatrix4}}
+\subsubsection[{Zero}]{\setlength{\rightskip}{0pt plus 5cm}void cMatrix4::Zero (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_matrix4_acf16f37d849137d2e410ec20f2b4e74d}
+
+
+This will set every float in this objects matrix to be equal to zero. 
+
+
+
+Definition at line 337 of file WTcMatrix4.cpp.
+
+\hypertarget{classc_matrix4_ab3d5e1a9ca6652c84265d4d164494699}{
+\index{cMatrix4@{cMatrix4}!ZVect@{ZVect}}
+\index{ZVect@{ZVect}!cMatrix4@{cMatrix4}}
+\subsubsection[{ZVect}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ cMatrix4::ZVect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_matrix4_ab3d5e1a9ca6652c84265d4d164494699}
+
+
+This will return the vector along this objects local Z axis. 
+
+
+
+Definition at line 70 of file WTcMatrix4.h.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classc_matrix4_ad892cad8874ae954d2e9de55b17ded93}{
+\index{cMatrix4@{cMatrix4}!cCameraMatrix4@{cCameraMatrix4}}
+\index{cCameraMatrix4@{cCameraMatrix4}!cMatrix4@{cMatrix4}}
+\subsubsection[{cCameraMatrix4}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf cCameraMatrix4}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classc_matrix4_ad892cad8874ae954d2e9de55b17ded93}
+
+
+Definition at line 14 of file WTcMatrix4.h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_matrix4_ac0ebba0d10d97c6657dccd1575f761ab}{
+\index{cMatrix4@{cMatrix4}!mb3D@{mb3D}}
+\index{mb3D@{mb3D}!cMatrix4@{cMatrix4}}
+\subsubsection[{mb3D}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cMatrix4::mb3D}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_matrix4_ac0ebba0d10d97c6657dccd1575f761ab}
+
+
+This si a boolean flag to define whether the object is 3D or 2D. True is 3D. False is 2D. 
+
+
+
+Definition at line 30 of file WTcMatrix4.h.
+
+\hypertarget{classc_matrix4_a317862be8d837351569f993a32fc687c}{
+\index{cMatrix4@{cMatrix4}!mpData@{mpData}}
+\index{mpData@{mpData}!cMatrix4@{cMatrix4}}
+\subsubsection[{mpData}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cMatrix4::mpData}\mbox{[}16\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_matrix4_a317862be8d837351569f993a32fc687c}
+
+
+This stores a 4x4 matrix of floats representing the current translation of the objet. 
+
+
+
+Definition at line 27 of file WTcMatrix4.h.
+
+\hypertarget{classc_matrix4_a93af3ea9ca6f3d38ad65b8ebc75ed7ba}{
+\index{cMatrix4@{cMatrix4}!mpTemp@{mpTemp}}
+\index{mpTemp@{mpTemp}!cMatrix4@{cMatrix4}}
+\subsubsection[{mpTemp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} {\bf cMatrix4::mpTemp}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classc_matrix4_a93af3ea9ca6f3d38ad65b8ebc75ed7ba}
+
+
+This is a static \hyperlink{classc_matrix4}{cMatrix4} used to store data for operands. 
+
+
+
+Definition at line 39 of file WTcMatrix4.h.
+

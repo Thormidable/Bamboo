@@ -1,0 +1,151 @@
+\hypertarget{classc_font}{
+\section{cFont Class Reference}
+\label{classc_font}\index{cFont@{cFont}}
+}
+
+
+This class will store the data for a Font ready to be used for rendering \hyperlink{classc_text}{cText}. This should come from an IMF file and be composed of an image of 64 character images stacked vertically. This is a file class and should be handled entirely by the engine.  
+
+
+
+
+Inheritance diagram for cFont:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{classc_font__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cFont:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{classc_font__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_font_aefcd8a6310d772c0ff38fe892b297d08}{$\sim$cFont} ()
+\item 
+\hyperlink{classc_font_af0305f96b8f6474dc05243637ead7985}{cFont} (\hyperlink{classc_texture_array}{cTextureArray} $\ast$lpData)
+\item 
+uint8 \hyperlink{classc_font_a0916381aba1071e7dfe1b0544740d377}{Character} (uint8 lcChar)
+\item 
+uint32 \hyperlink{classc_font_a3fa379c0126af4edd8c4f7bb39507a13}{Height} ()
+\item 
+void \hyperlink{classc_font_af3dda34ffb9643c124ea4669e33ace2f}{UpdateTexture} ()
+\item 
+void \hyperlink{classc_font_ac9ca29fcedc25f79d3420676f14d5878}{BindTexture} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will store the data for a Font ready to be used for rendering \hyperlink{classc_text}{cText}. This should come from an IMF file and be composed of an image of 64 character images stacked vertically. This is a file class and should be handled entirely by the engine. 
+
+Definition at line 8 of file WTcFont.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_font_aefcd8a6310d772c0ff38fe892b297d08}{
+\index{cFont@{cFont}!$\sim$cFont@{$\sim$cFont}}
+\index{$\sim$cFont@{$\sim$cFont}!cFont@{cFont}}
+\subsubsection[{$\sim$cFont}]{\setlength{\rightskip}{0pt plus 5cm}cFont::$\sim$cFont (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_font_aefcd8a6310d772c0ff38fe892b297d08}
+
+
+Definition at line 20 of file WTcFont.cpp.
+
+\hypertarget{classc_font_af0305f96b8f6474dc05243637ead7985}{
+\index{cFont@{cFont}!cFont@{cFont}}
+\index{cFont@{cFont}!cFont@{cFont}}
+\subsubsection[{cFont}]{\setlength{\rightskip}{0pt plus 5cm}cFont::cFont (
+\begin{DoxyParamCaption}
+\item[{{\bf cTextureArray} $\ast$}]{lpData}
+\end{DoxyParamCaption}
+)}}
+\label{classc_font_af0305f96b8f6474dc05243637ead7985}
+
+
+Definition at line 6 of file WTcFont.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_font_ac9ca29fcedc25f79d3420676f14d5878}{
+\index{cFont@{cFont}!BindTexture@{BindTexture}}
+\index{BindTexture@{BindTexture}!cFont@{cFont}}
+\subsubsection[{BindTexture}]{\setlength{\rightskip}{0pt plus 5cm}void cFont::BindTexture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_font_ac9ca29fcedc25f79d3420676f14d5878}
+
+
+Reimplemented from \hyperlink{classc_texture_ac449f5e59f7d85146b47a75e332a0b20}{cTexture}.
+
+
+
+Definition at line 41 of file WTcFont.cpp.
+
+\hypertarget{classc_font_a0916381aba1071e7dfe1b0544740d377}{
+\index{cFont@{cFont}!Character@{Character}}
+\index{Character@{Character}!cFont@{cFont}}
+\subsubsection[{Character}]{\setlength{\rightskip}{0pt plus 5cm}uint8 cFont::Character (
+\begin{DoxyParamCaption}
+\item[{uint8}]{lcChar}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_font_a0916381aba1071e7dfe1b0544740d377}
+
+
+Implements \hyperlink{classv_font_afe32b1cfc1bdc8ca3b48267221b69e7b}{vFont}.
+
+
+
+Definition at line 49 of file WTcFont.cpp.
+
+\hypertarget{classc_font_a3fa379c0126af4edd8c4f7bb39507a13}{
+\index{cFont@{cFont}!Height@{Height}}
+\index{Height@{Height}!cFont@{cFont}}
+\subsubsection[{Height}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cFont::Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classc_font_a3fa379c0126af4edd8c4f7bb39507a13}
+
+
+Reimplemented from \hyperlink{classc_texture_a1a6b4f4c5dccb2394f77c25c063e1fe0}{cTexture}.
+
+
+
+Definition at line 16 of file WTcFont.h.
+
+\hypertarget{classc_font_af3dda34ffb9643c124ea4669e33ace2f}{
+\index{cFont@{cFont}!UpdateTexture@{UpdateTexture}}
+\index{UpdateTexture@{UpdateTexture}!cFont@{cFont}}
+\subsubsection[{UpdateTexture}]{\setlength{\rightskip}{0pt plus 5cm}void cFont::UpdateTexture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_font_af3dda34ffb9643c124ea4669e33ace2f}
+
+
+Reimplemented from \hyperlink{classc_texture_a9b74aa84390b76935adccf59ba4cb41b}{cTexture}.
+
+
+
+Definition at line 25 of file WTcFont.cpp.
+

@@ -1,0 +1,151 @@
+\hypertarget{classc_plane_list}{
+\section{cPlaneList Class Reference}
+\label{classc_plane_list}\index{cPlaneList@{cPlaneList}}
+}
+
+
+A resizable array of \hyperlink{classc_plane}{cPlane} Objects. Stores and Handles a list of \hyperlink{classc_plane}{cPlane} objects using \hyperlink{classc_limited_list}{cLimitedList}.  
+
+
+
+
+Inheritance diagram for cPlaneList:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classc_plane_list__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cPlaneList:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classc_plane_list__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_plane_list_a1fc903c730312ac882ed67388e4501a8}{cPlaneList} ()
+\item 
+\hyperlink{classc_plane_list_a527c8da158d36f6378bbbd5380f66ae0}{$\sim$cPlaneList} ()
+\item 
+void \hyperlink{classc_plane_list_aa59eb08cabf77a8556a968164078548a}{Display} ()
+\begin{DoxyCompactList}\small\item\em Display this object to the Terminal. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_plane_list_a4ab2d73d6d19172d102ae6b567838f40}{OutputIMFPlanes} (ofstream \&FileStream)
+\begin{DoxyCompactList}\small\item\em Will Output the list of planes to ofstream FileStream in the IMF format. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_plane_list_aaef4989b858a7f403b23acc209bb70d9}{LoadIMFPlanes} (ifstream \&FileStream)
+\begin{DoxyCompactList}\small\item\em Will Load the list of planes from ifstream FileStream in the IMF format. \item\end{DoxyCompactList}\item 
+uint32 \hyperlink{classc_plane_list_a7789059ebbee4e08469ee870ca63b56c}{FileSize} ()
+\begin{DoxyCompactList}\small\item\em Will return the size of this object in Bytes when written in IMF format. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A resizable array of \hyperlink{classc_plane}{cPlane} Objects. Stores and Handles a list of \hyperlink{classc_plane}{cPlane} objects using \hyperlink{classc_limited_list}{cLimitedList}. 
+
+Definition at line 72 of file WTcPlane.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_plane_list_a1fc903c730312ac882ed67388e4501a8}{
+\index{cPlaneList@{cPlaneList}!cPlaneList@{cPlaneList}}
+\index{cPlaneList@{cPlaneList}!cPlaneList@{cPlaneList}}
+\subsubsection[{cPlaneList}]{\setlength{\rightskip}{0pt plus 5cm}cPlaneList::cPlaneList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_plane_list_a1fc903c730312ac882ed67388e4501a8}
+
+
+Definition at line 75 of file WTcPlane.h.
+
+\hypertarget{classc_plane_list_a527c8da158d36f6378bbbd5380f66ae0}{
+\index{cPlaneList@{cPlaneList}!$\sim$cPlaneList@{$\sim$cPlaneList}}
+\index{$\sim$cPlaneList@{$\sim$cPlaneList}!cPlaneList@{cPlaneList}}
+\subsubsection[{$\sim$cPlaneList}]{\setlength{\rightskip}{0pt plus 5cm}cPlaneList::$\sim$cPlaneList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_plane_list_a527c8da158d36f6378bbbd5380f66ae0}
+
+
+Definition at line 76 of file WTcPlane.h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_plane_list_aa59eb08cabf77a8556a968164078548a}{
+\index{cPlaneList@{cPlaneList}!Display@{Display}}
+\index{Display@{Display}!cPlaneList@{cPlaneList}}
+\subsubsection[{Display}]{\setlength{\rightskip}{0pt plus 5cm}void cPlaneList::Display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_list_aa59eb08cabf77a8556a968164078548a}
+
+
+Display this object to the Terminal. 
+
+
+
+Definition at line 64 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_list_a7789059ebbee4e08469ee870ca63b56c}{
+\index{cPlaneList@{cPlaneList}!FileSize@{FileSize}}
+\index{FileSize@{FileSize}!cPlaneList@{cPlaneList}}
+\subsubsection[{FileSize}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cPlaneList::FileSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_list_a7789059ebbee4e08469ee870ca63b56c}
+
+
+Will return the size of this object in Bytes when written in IMF format. 
+
+
+
+Definition at line 95 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_list_aaef4989b858a7f403b23acc209bb70d9}{
+\index{cPlaneList@{cPlaneList}!LoadIMFPlanes@{LoadIMFPlanes}}
+\index{LoadIMFPlanes@{LoadIMFPlanes}!cPlaneList@{cPlaneList}}
+\subsubsection[{LoadIMFPlanes}]{\setlength{\rightskip}{0pt plus 5cm}void cPlaneList::LoadIMFPlanes (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_list_aaef4989b858a7f403b23acc209bb70d9}
+
+
+Will Load the list of planes from ifstream FileStream in the IMF format. 
+
+
+
+Definition at line 84 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_list_a4ab2d73d6d19172d102ae6b567838f40}{
+\index{cPlaneList@{cPlaneList}!OutputIMFPlanes@{OutputIMFPlanes}}
+\index{OutputIMFPlanes@{OutputIMFPlanes}!cPlaneList@{cPlaneList}}
+\subsubsection[{OutputIMFPlanes}]{\setlength{\rightskip}{0pt plus 5cm}void cPlaneList::OutputIMFPlanes (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_list_a4ab2d73d6d19172d102ae6b567838f40}
+
+
+Will Output the list of planes to ofstream FileStream in the IMF format. 
+
+
+
+Definition at line 73 of file WTcPlane.cpp.
+

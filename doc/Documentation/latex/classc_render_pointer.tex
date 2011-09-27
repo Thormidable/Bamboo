@@ -1,0 +1,302 @@
+\hypertarget{classc_render_pointer}{
+\section{cRenderPointer Class Reference}
+\label{classc_render_pointer}\index{cRenderPointer@{cRenderPointer}}
+}
+
+
+This class is a temporary store for a cRenderObjects data. This is the complete render matrix and all other data required to render the object.  
+
+
+
+
+Collaboration diagram for cRenderPointer:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_render_pointer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_render_pointer_ac8440aadd57f91b393e2d87a131f99f5}{cRenderPointer} ()
+\item 
+\hyperlink{classc_render_pointer}{cRenderPointer} \hyperlink{classc_render_pointer_a7c2df45fd3b6b596931a8db17cdd86fe}{operator=} (\hyperlink{classc_render_pointer}{cRenderPointer} lcOther)
+\item 
+void \hyperlink{classc_render_pointer_a896535cf0d3f8282aac2c2a1694f554e}{SetObject} (\hyperlink{classc_render_object}{cRenderObject} $\ast$lpObject)
+\begin{DoxyCompactList}\small\item\em Will Set the \hyperlink{classc_render_object}{cRenderObject} that this will link to. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_pointer_a88cbb0a066b78cba25575e7dbe456c39}{SetTexture} (uint32 liTexture)
+\begin{DoxyCompactList}\small\item\em This will set the texture to be used. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_pointer_adefd398d6a04a2ceb24d34d9030723ca}{SetShader} (\hyperlink{classv_shader_program}{vShaderProgram} $\ast$lpShader)
+\begin{DoxyCompactList}\small\item\em This will set the shader to be used by the object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_pointer_a0c54f19539eed59d0094b0a01e7752c3}{SetLevel} (uint32 liLevel)
+\begin{DoxyCompactList}\small\item\em This will set an additional paramter which is returned to \hyperlink{classc_render_object}{cRenderObject} when it is finally rendered. This gives it information about how to render. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_pointer_acb4e6f40867bc7f7592ba5c5d500f29e}{SetAlpha} (bool lbAlpha)
+\begin{DoxyCompactList}\small\item\em This will set the Alpha of the object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_pointer_a1e9cbc7012a3c2750da6faa41035d5a4}{SetAll} (\hyperlink{classc_render_object}{cRenderObject} $\ast$lpObject, uint32 liTexture=0, \hyperlink{classv_shader_program}{vShaderProgram} $\ast$lpShader=0, bool lbAlpha=0, uint32 liLevel=0)
+\begin{DoxyCompactList}\small\item\em This will all the user to set some / all of the parameters for this object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_pointer_af20604ed7f213fdae3496bb9693822d5}{RenderAgain} ()
+\begin{DoxyCompactList}\small\item\em This tells \hyperlink{classc_painter}{cPainter} that this object will require rendering in the painter algorithm to allow it to be displayed on the screen. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_render_object}{cRenderObject} $\ast$ \hyperlink{classc_render_pointer_a3a931cfd60605a842ebf9d1b591adba8}{mpObject}
+\item 
+uint32 \hyperlink{classc_render_pointer_a0a87e7addf0caeb10eb7aee109ac958a}{miDist}
+\item 
+uint32 \hyperlink{classc_render_pointer_a70c8e938776212e3d8a56c2ab5e87489}{mpTexture}
+\item 
+bool \hyperlink{classc_render_pointer_a2dc85ebce3c5e5de3072c90ac88eaac6}{mbAlpha}
+\item 
+\hyperlink{classv_shader_program}{vShaderProgram} $\ast$ \hyperlink{classc_render_pointer_a52d59a73dafe36627f8e91fd7894ac4c}{mpShader}
+\item 
+uint8 \hyperlink{classc_render_pointer_a12ff5d23eb2efcaf720daa33f39c4938}{miLevel}
+\item 
+bool \hyperlink{classc_render_pointer_a7ef8dbb11d8bc69a9549db62a45679a7}{mbReRender}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classc_render_pointer_ab67fe0acb90004fd0634a7f29e084d32}{cPainter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is a temporary store for a cRenderObjects data. This is the complete render matrix and all other data required to render the object. This is a storage class for the \hyperlink{classc_painter}{cPainter} class. It stores all the relevant data about a Renderable Object to allow it to be processed by \hyperlink{classc_painter}{cPainter}. 
+
+Definition at line 12 of file WTcRenderPointer.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_render_pointer_ac8440aadd57f91b393e2d87a131f99f5}{
+\index{cRenderPointer@{cRenderPointer}!cRenderPointer@{cRenderPointer}}
+\index{cRenderPointer@{cRenderPointer}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{cRenderPointer}]{\setlength{\rightskip}{0pt plus 5cm}cRenderPointer::cRenderPointer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_pointer_ac8440aadd57f91b393e2d87a131f99f5}
+
+
+Definition at line 9 of file WTcRenderPointer.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_render_pointer_a7c2df45fd3b6b596931a8db17cdd86fe}{
+\index{cRenderPointer@{cRenderPointer}!operator=@{operator=}}
+\index{operator=@{operator=}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cRenderPointer} cRenderPointer::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf cRenderPointer}}]{lcOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_pointer_a7c2df45fd3b6b596931a8db17cdd86fe}
+
+
+Definition at line 20 of file WTcRenderPointer.cpp.
+
+\hypertarget{classc_render_pointer_af20604ed7f213fdae3496bb9693822d5}{
+\index{cRenderPointer@{cRenderPointer}!RenderAgain@{RenderAgain}}
+\index{RenderAgain@{RenderAgain}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{RenderAgain}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderPointer::RenderAgain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_pointer_af20604ed7f213fdae3496bb9693822d5}
+
+
+This tells \hyperlink{classc_painter}{cPainter} that this object will require rendering in the painter algorithm to allow it to be displayed on the screen. 
+
+
+
+Definition at line 3 of file WTcRenderPointer.cpp.
+
+\hypertarget{classc_render_pointer_a1e9cbc7012a3c2750da6faa41035d5a4}{
+\index{cRenderPointer@{cRenderPointer}!SetAll@{SetAll}}
+\index{SetAll@{SetAll}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{SetAll}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderPointer::SetAll (
+\begin{DoxyParamCaption}
+\item[{{\bf cRenderObject} $\ast$}]{lpObject, }
+\item[{uint32}]{liTexture = {\ttfamily 0}, }
+\item[{{\bf vShaderProgram} $\ast$}]{lpShader = {\ttfamily 0}, }
+\item[{bool}]{lbAlpha = {\ttfamily 0}, }
+\item[{uint32}]{liLevel = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_render_pointer_a1e9cbc7012a3c2750da6faa41035d5a4}
+
+
+This will all the user to set some / all of the parameters for this object. 
+
+
+
+Definition at line 37 of file WTcRenderPointer.cpp.
+
+\hypertarget{classc_render_pointer_acb4e6f40867bc7f7592ba5c5d500f29e}{
+\index{cRenderPointer@{cRenderPointer}!SetAlpha@{SetAlpha}}
+\index{SetAlpha@{SetAlpha}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{SetAlpha}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderPointer::SetAlpha (
+\begin{DoxyParamCaption}
+\item[{bool}]{lbAlpha}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_pointer_acb4e6f40867bc7f7592ba5c5d500f29e}
+
+
+This will set the Alpha of the object. 
+
+
+
+Definition at line 35 of file WTcRenderPointer.cpp.
+
+\hypertarget{classc_render_pointer_a0c54f19539eed59d0094b0a01e7752c3}{
+\index{cRenderPointer@{cRenderPointer}!SetLevel@{SetLevel}}
+\index{SetLevel@{SetLevel}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{SetLevel}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderPointer::SetLevel (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liLevel}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_pointer_a0c54f19539eed59d0094b0a01e7752c3}
+
+
+This will set an additional paramter which is returned to \hyperlink{classc_render_object}{cRenderObject} when it is finally rendered. This gives it information about how to render. 
+
+
+
+Definition at line 34 of file WTcRenderPointer.cpp.
+
+\hypertarget{classc_render_pointer_a896535cf0d3f8282aac2c2a1694f554e}{
+\index{cRenderPointer@{cRenderPointer}!SetObject@{SetObject}}
+\index{SetObject@{SetObject}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{SetObject}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderPointer::SetObject (
+\begin{DoxyParamCaption}
+\item[{{\bf cRenderObject} $\ast$}]{lpObject}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_pointer_a896535cf0d3f8282aac2c2a1694f554e}
+
+
+Will Set the \hyperlink{classc_render_object}{cRenderObject} that this will link to. 
+
+
+
+Definition at line 31 of file WTcRenderPointer.cpp.
+
+\hypertarget{classc_render_pointer_adefd398d6a04a2ceb24d34d9030723ca}{
+\index{cRenderPointer@{cRenderPointer}!SetShader@{SetShader}}
+\index{SetShader@{SetShader}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{SetShader}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderPointer::SetShader (
+\begin{DoxyParamCaption}
+\item[{{\bf vShaderProgram} $\ast$}]{lpShader}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_pointer_adefd398d6a04a2ceb24d34d9030723ca}
+
+
+This will set the shader to be used by the object. 
+
+
+
+Definition at line 33 of file WTcRenderPointer.cpp.
+
+\hypertarget{classc_render_pointer_a88cbb0a066b78cba25575e7dbe456c39}{
+\index{cRenderPointer@{cRenderPointer}!SetTexture@{SetTexture}}
+\index{SetTexture@{SetTexture}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{SetTexture}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderPointer::SetTexture (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liTexture}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_pointer_a88cbb0a066b78cba25575e7dbe456c39}
+
+
+This will set the texture to be used. 
+
+
+
+Definition at line 32 of file WTcRenderPointer.cpp.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classc_render_pointer_ab67fe0acb90004fd0634a7f29e084d32}{
+\index{cRenderPointer@{cRenderPointer}!cPainter@{cPainter}}
+\index{cPainter@{cPainter}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{cPainter}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf cPainter}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classc_render_pointer_ab67fe0acb90004fd0634a7f29e084d32}
+
+
+Definition at line 42 of file WTcRenderPointer.h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_render_pointer_a2dc85ebce3c5e5de3072c90ac88eaac6}{
+\index{cRenderPointer@{cRenderPointer}!mbAlpha@{mbAlpha}}
+\index{mbAlpha@{mbAlpha}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{mbAlpha}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cRenderPointer::mbAlpha}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_render_pointer_a2dc85ebce3c5e5de3072c90ac88eaac6}
+
+
+Definition at line 18 of file WTcRenderPointer.h.
+
+\hypertarget{classc_render_pointer_a7ef8dbb11d8bc69a9549db62a45679a7}{
+\index{cRenderPointer@{cRenderPointer}!mbReRender@{mbReRender}}
+\index{mbReRender@{mbReRender}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{mbReRender}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cRenderPointer::mbReRender}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_render_pointer_a7ef8dbb11d8bc69a9549db62a45679a7}
+
+
+Definition at line 21 of file WTcRenderPointer.h.
+
+\hypertarget{classc_render_pointer_a0a87e7addf0caeb10eb7aee109ac958a}{
+\index{cRenderPointer@{cRenderPointer}!miDist@{miDist}}
+\index{miDist@{miDist}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{miDist}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cRenderPointer::miDist}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_render_pointer_a0a87e7addf0caeb10eb7aee109ac958a}
+
+
+Definition at line 16 of file WTcRenderPointer.h.
+
+\hypertarget{classc_render_pointer_a12ff5d23eb2efcaf720daa33f39c4938}{
+\index{cRenderPointer@{cRenderPointer}!miLevel@{miLevel}}
+\index{miLevel@{miLevel}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{miLevel}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf cRenderPointer::miLevel}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_render_pointer_a12ff5d23eb2efcaf720daa33f39c4938}
+
+
+Definition at line 20 of file WTcRenderPointer.h.
+
+\hypertarget{classc_render_pointer_a3a931cfd60605a842ebf9d1b591adba8}{
+\index{cRenderPointer@{cRenderPointer}!mpObject@{mpObject}}
+\index{mpObject@{mpObject}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{mpObject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cRenderObject}$\ast$ {\bf cRenderPointer::mpObject}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_render_pointer_a3a931cfd60605a842ebf9d1b591adba8}
+
+
+Definition at line 15 of file WTcRenderPointer.h.
+
+\hypertarget{classc_render_pointer_a52d59a73dafe36627f8e91fd7894ac4c}{
+\index{cRenderPointer@{cRenderPointer}!mpShader@{mpShader}}
+\index{mpShader@{mpShader}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{mpShader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vShaderProgram}$\ast$ {\bf cRenderPointer::mpShader}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_render_pointer_a52d59a73dafe36627f8e91fd7894ac4c}
+
+
+Definition at line 19 of file WTcRenderPointer.h.
+
+\hypertarget{classc_render_pointer_a70c8e938776212e3d8a56c2ab5e87489}{
+\index{cRenderPointer@{cRenderPointer}!mpTexture@{mpTexture}}
+\index{mpTexture@{mpTexture}!cRenderPointer@{cRenderPointer}}
+\subsubsection[{mpTexture}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cRenderPointer::mpTexture}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_render_pointer_a70c8e938776212e3d8a56c2ab5e87489}
+
+
+Definition at line 17 of file WTcRenderPointer.h.
+

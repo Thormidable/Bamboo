@@ -1,0 +1,258 @@
+\hypertarget{classc_min_l_l}{
+\section{cMinLL$<$ T $>$ Class Template Reference}
+\label{classc_min_l_l}\index{cMinLL@{cMinLL}}
+}
+
+
+Linked List Lite. I'm not sure I use this. But quick small and simple templated Linked List.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_min_l_l_a6d27d969b2ecce0256b756b80a66494c}{cMinLL} (T $\ast$lpData)
+\item 
+\hyperlink{classc_min_l_l_aaf9ce821eb5ac28809029d5371198e5e}{$\sim$cMinLL} ()
+\item 
+uint32 \hyperlink{classc_min_l_l_a63ffd046ccd08dd1a5306238c903538c}{Size} ()
+\item 
+\hyperlink{classc_min_l_n}{cMinLN}$<$ T $>$ $\ast$ \hyperlink{classc_min_l_l_ab1fe6a837560eff766594c17a0afb1a4}{Insert} (int liN, T $\ast$lpData)
+\item 
+\hyperlink{classc_min_l_n}{cMinLN}$<$ T $>$ $\ast$ \hyperlink{classc_min_l_l_af91aba7fb87c4eee10957318838a0498}{InsertE} (T $\ast$lpData)
+\item 
+\hyperlink{classc_min_l_n}{cMinLN}$<$ T $>$ $\ast$ \hyperlink{classc_min_l_l_ad0dfb972ede08a5ef0b9b29968ae13e6}{InsertB} (T $\ast$lpData)
+\item 
+bool \hyperlink{classc_min_l_l_a2fed135e4f06090bed220326b8e1fb68}{Delete} (int liN)
+\item 
+bool \hyperlink{classc_min_l_l_ada27117ebdc874dc094ae1e339dbf959}{Delete} (\hyperlink{classc_min_l_n}{cMinLN}$<$ T $>$ $\ast$lpOld)
+\item 
+void \hyperlink{classc_min_l_l_a2a134b214050f245a8bd9d1846af0870}{Sleep} (\hyperlink{classc_min_l_n}{cMinLN}$<$ T $>$ $\ast$lpOld)
+\item 
+void \hyperlink{classc_min_l_l_a3bc43d25b2b92f369bbaf51c1cec600a}{Wake} (int liN, \hyperlink{classc_min_l_n}{cMinLN}$<$ T $>$ $\ast$lpOld)
+\item 
+void \hyperlink{classc_min_l_l_a468631315bd5ff7cbf83b81c2a213eba}{Output} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_min_l_n}{cMinLN}$<$ T $>$ $\ast$ \hyperlink{classc_min_l_l_a4ce5199aa6440c0cbcfef8761db52d2a}{mpStart}
+\item 
+\hyperlink{classc_min_l_n}{cMinLN}$<$ T $>$ $\ast$ \hyperlink{classc_min_l_l_a7db7e101b2a97812eceed815c2860ba2}{mpEnd}
+\item 
+\hyperlink{classc_min_l_n}{cMinLN}$<$ T $>$ $\ast$ \hyperlink{classc_min_l_l_ac77e47f1340f8041a71c48332033b257}{mpCursor}
+\item 
+uint32 \hyperlink{classc_min_l_l_a8599d074fd5423f7fcaa227f18112dd8}{miSize}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classc_min_l_n}{cMinLN}$<$ T $>$ $\ast$ \hyperlink{classc_min_l_l_ad365aec0c8b0ae9e3fd5f91ad37594fb}{mpTemp}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class cMinLL$<$ T $>$}
+
+Linked List Lite. I'm not sure I use this. But quick small and simple templated Linked List. 
+
+Definition at line 21 of file WTMinLinkedList.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_min_l_l_a6d27d969b2ecce0256b756b80a66494c}{
+\index{cMinLL@{cMinLL}!cMinLL@{cMinLL}}
+\index{cMinLL@{cMinLL}!cMinLL@{cMinLL}}
+\subsubsection[{cMinLL}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf cMinLL}$<$ T $>$::{\bf cMinLL} (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{lpData}
+\end{DoxyParamCaption}
+)}}
+\label{classc_min_l_l_a6d27d969b2ecce0256b756b80a66494c}
+
+
+Definition at line 130 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_aaf9ce821eb5ac28809029d5371198e5e}{
+\index{cMinLL@{cMinLL}!$\sim$cMinLL@{$\sim$cMinLL}}
+\index{$\sim$cMinLL@{$\sim$cMinLL}!cMinLL@{cMinLL}}
+\subsubsection[{$\sim$cMinLL}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf cMinLL}$<$ T $>$::$\sim${\bf cMinLL} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_min_l_l_aaf9ce821eb5ac28809029d5371198e5e}
+
+
+Definition at line 26 of file WTMinLinkedList.h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_min_l_l_a2fed135e4f06090bed220326b8e1fb68}{
+\index{cMinLL@{cMinLL}!Delete@{Delete}}
+\index{Delete@{Delete}!cMinLL@{cMinLL}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf cMinLL}$<$ T $>$::Delete (
+\begin{DoxyParamCaption}
+\item[{int}]{liN}
+\end{DoxyParamCaption}
+)}}
+\label{classc_min_l_l_a2fed135e4f06090bed220326b8e1fb68}
+
+
+Definition at line 247 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_ada27117ebdc874dc094ae1e339dbf959}{
+\index{cMinLL@{cMinLL}!Delete@{Delete}}
+\index{Delete@{Delete}!cMinLL@{cMinLL}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf cMinLL}$<$ T $>$::Delete (
+\begin{DoxyParamCaption}
+\item[{{\bf cMinLN}$<$ T $>$ $\ast$}]{lpOld}
+\end{DoxyParamCaption}
+)}}
+\label{classc_min_l_l_ada27117ebdc874dc094ae1e339dbf959}
+
+
+Definition at line 68 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_ab1fe6a837560eff766594c17a0afb1a4}{
+\index{cMinLL@{cMinLL}!Insert@{Insert}}
+\index{Insert@{Insert}!cMinLL@{cMinLL}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf cMinLN}$<$ T $>$ $\ast$ {\bf cMinLL}$<$ T $>$::Insert (
+\begin{DoxyParamCaption}
+\item[{int}]{liN, }
+\item[{T $\ast$}]{lpData}
+\end{DoxyParamCaption}
+)}}
+\label{classc_min_l_l_ab1fe6a837560eff766594c17a0afb1a4}
+
+
+Definition at line 181 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_ad0dfb972ede08a5ef0b9b29968ae13e6}{
+\index{cMinLL@{cMinLL}!InsertB@{InsertB}}
+\index{InsertB@{InsertB}!cMinLL@{cMinLL}}
+\subsubsection[{InsertB}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf cMinLN}$<$ T $>$ $\ast$ {\bf cMinLL}$<$ T $>$::InsertB (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{lpData}
+\end{DoxyParamCaption}
+)}}
+\label{classc_min_l_l_ad0dfb972ede08a5ef0b9b29968ae13e6}
+
+
+Definition at line 231 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_af91aba7fb87c4eee10957318838a0498}{
+\index{cMinLL@{cMinLL}!InsertE@{InsertE}}
+\index{InsertE@{InsertE}!cMinLL@{cMinLL}}
+\subsubsection[{InsertE}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf cMinLN}$<$ T $>$ $\ast$ {\bf cMinLL}$<$ T $>$::InsertE (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{lpData}
+\end{DoxyParamCaption}
+)}}
+\label{classc_min_l_l_af91aba7fb87c4eee10957318838a0498}
+
+
+Definition at line 215 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_a468631315bd5ff7cbf83b81c2a213eba}{
+\index{cMinLL@{cMinLL}!Output@{Output}}
+\index{Output@{Output}!cMinLL@{cMinLL}}
+\subsubsection[{Output}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf cMinLL}$<$ T $>$::Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_min_l_l_a468631315bd5ff7cbf83b81c2a213eba}
+
+
+Definition at line 140 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_a63ffd046ccd08dd1a5306238c903538c}{
+\index{cMinLL@{cMinLL}!Size@{Size}}
+\index{Size@{Size}!cMinLL@{cMinLL}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ uint32 {\bf cMinLL}$<$ T $>$::Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_min_l_l_a63ffd046ccd08dd1a5306238c903538c}
+
+
+Definition at line 46 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_a2a134b214050f245a8bd9d1846af0870}{
+\index{cMinLL@{cMinLL}!Sleep@{Sleep}}
+\index{Sleep@{Sleep}!cMinLL@{cMinLL}}
+\subsubsection[{Sleep}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf cMinLL}$<$ T $>$::Sleep (
+\begin{DoxyParamCaption}
+\item[{{\bf cMinLN}$<$ T $>$ $\ast$}]{lpOld}
+\end{DoxyParamCaption}
+)}}
+\label{classc_min_l_l_a2a134b214050f245a8bd9d1846af0870}
+
+
+Definition at line 85 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_a3bc43d25b2b92f369bbaf51c1cec600a}{
+\index{cMinLL@{cMinLL}!Wake@{Wake}}
+\index{Wake@{Wake}!cMinLL@{cMinLL}}
+\subsubsection[{Wake}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf cMinLL}$<$ T $>$::Wake (
+\begin{DoxyParamCaption}
+\item[{int}]{liN, }
+\item[{{\bf cMinLN}$<$ T $>$ $\ast$}]{lpOld}
+\end{DoxyParamCaption}
+)}}
+\label{classc_min_l_l_a3bc43d25b2b92f369bbaf51c1cec600a}
+
+
+Definition at line 99 of file WTMinLinkedList.h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_min_l_l_a8599d074fd5423f7fcaa227f18112dd8}{
+\index{cMinLL@{cMinLL}!miSize@{miSize}}
+\index{miSize@{miSize}!cMinLL@{cMinLL}}
+\subsubsection[{miSize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ uint32 {\bf cMinLL}$<$ T $>$::{\bf miSize}}}
+\label{classc_min_l_l_a8599d074fd5423f7fcaa227f18112dd8}
+
+
+Definition at line 45 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_ac77e47f1340f8041a71c48332033b257}{
+\index{cMinLL@{cMinLL}!mpCursor@{mpCursor}}
+\index{mpCursor@{mpCursor}!cMinLL@{cMinLL}}
+\subsubsection[{mpCursor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf cMinLN}$<$T$>$$\ast$ {\bf cMinLL}$<$ T $>$::{\bf mpCursor}}}
+\label{classc_min_l_l_ac77e47f1340f8041a71c48332033b257}
+
+
+Definition at line 42 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_a7db7e101b2a97812eceed815c2860ba2}{
+\index{cMinLL@{cMinLL}!mpEnd@{mpEnd}}
+\index{mpEnd@{mpEnd}!cMinLL@{cMinLL}}
+\subsubsection[{mpEnd}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf cMinLN}$<$T$>$$\ast$ {\bf cMinLL}$<$ T $>$::{\bf mpEnd}}}
+\label{classc_min_l_l_a7db7e101b2a97812eceed815c2860ba2}
+
+
+Definition at line 41 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_a4ce5199aa6440c0cbcfef8761db52d2a}{
+\index{cMinLL@{cMinLL}!mpStart@{mpStart}}
+\index{mpStart@{mpStart}!cMinLL@{cMinLL}}
+\subsubsection[{mpStart}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf cMinLN}$<$T$>$$\ast$ {\bf cMinLL}$<$ T $>$::{\bf mpStart}}}
+\label{classc_min_l_l_a4ce5199aa6440c0cbcfef8761db52d2a}
+
+
+Definition at line 38 of file WTMinLinkedList.h.
+
+\hypertarget{classc_min_l_l_ad365aec0c8b0ae9e3fd5f91ad37594fb}{
+\index{cMinLL@{cMinLL}!mpTemp@{mpTemp}}
+\index{mpTemp@{mpTemp}!cMinLL@{cMinLL}}
+\subsubsection[{mpTemp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf cMinLN}$<$ T $>$ $\ast$ {\bf cMinLL}$<$ T $>$::{\bf mpTemp}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classc_min_l_l_ad365aec0c8b0ae9e3fd5f91ad37594fb}
+
+
+Definition at line 43 of file WTMinLinkedList.h.
+

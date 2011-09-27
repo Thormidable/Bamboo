@@ -1,0 +1,56 @@
+\hypertarget{classc_user_signal}{
+\section{cUserSignal Class Reference}
+\label{classc_user_signal}\index{cUserSignal@{cUserSignal}}
+}
+
+
+Class for handling user specified signals sent between classes inheriting \hyperlink{classc_process}{cProcess}. The function UserSignal should be defined for each object. The signals each class has defined can be independant. The code for processing the signal should be defined in UserSignal as there is no signal buffer. This should be used for dealing with Process interactions, to make a single point of detection of interaction and allowing both processes to handle the interaction. System signals (sleep, wake and kill) should be handled through \hyperlink{classc_signal}{cSignal}.  
+
+
+
+
+Inheritance diagram for cUserSignal:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classc_user_signal__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classc_user_signal_ab11af50af566f1df2a8cf41902e1ac9f}{UserSignal} (SIGNAL liSignal, void $\ast$lpData)
+\begin{DoxyCompactList}\small\item\em Function to handle user specified signals. SIGNAL is an unsigned integer and lpData allows additional data to be passed to the function. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for handling user specified signals sent between classes inheriting \hyperlink{classc_process}{cProcess}. The function UserSignal should be defined for each object. The signals each class has defined can be independant. The code for processing the signal should be defined in UserSignal as there is no signal buffer. This should be used for dealing with Process interactions, to make a single point of detection of interaction and allowing both processes to handle the interaction. System signals (sleep, wake and kill) should be handled through \hyperlink{classc_signal}{cSignal}. 
+
+Definition at line 41 of file WTcSignal.h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_user_signal_ab11af50af566f1df2a8cf41902e1ac9f}{
+\index{cUserSignal@{cUserSignal}!UserSignal@{UserSignal}}
+\index{UserSignal@{UserSignal}!cUserSignal@{cUserSignal}}
+\subsubsection[{UserSignal}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cUserSignal::UserSignal (
+\begin{DoxyParamCaption}
+\item[{SIGNAL}]{liSignal, }
+\item[{void $\ast$}]{lpData}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classc_user_signal_ab11af50af566f1df2a8cf41902e1ac9f}
+
+
+Function to handle user specified signals. SIGNAL is an unsigned integer and lpData allows additional data to be passed to the function. 
+
+
+
+Reimplemented in \hyperlink{classc_process_ac436ca09957adbf1c9cdea5ea0af9e9a}{cProcess}.
+
+
+
+Definition at line 46 of file WTcSignal.h.
+

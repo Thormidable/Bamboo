@@ -1,0 +1,210 @@
+\hypertarget{classc_kernel}{
+\section{cKernel Class Reference}
+\label{classc_kernel}\index{cKernel@{cKernel}}
+}
+
+
+Kernel Object. Handles Processes. Tracks, runs and deletes current processes. Has complete control over every \hyperlink{classc_process}{cProcess} object. Will run all awake alive processes every process cycle, will delete dead processes. Also controls the activation of rendering frames and handling interactions with the operating system.  
+
+
+
+
+Collaboration diagram for cKernel:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_kernel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classc_kernel_a721f5ad665c512b511ff8d344010385e}{KillProgram} ()
+\begin{DoxyCompactList}\small\item\em Will kill the entire program. Will delete every process and then exit. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_kernel_aa17d85bb9118c9de59fe0c6301301a39}{$\sim$cKernel} ()
+\item 
+void \hyperlink{classc_kernel_afbbf3ca5d7f5db9c91f1c279c0109b2f}{Update} ()
+\item 
+\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classv_process}{vProcess} $>$ $\ast$ \hyperlink{classc_kernel_a4ec4faedede9de3cae4fc5fbc4469a1b}{Add} (\hyperlink{classv_process}{vProcess} $\ast$lpNew)
+\item 
+void \hyperlink{classc_kernel_a59c9a956e6a6666a57c2d85e463381d8}{Remove} (\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classv_process}{vProcess} $>$ $\ast$lpOld)
+\item 
+void \hyperlink{classc_kernel_af4c3e32a55fdef58236378eed46afdfe}{DeleteAll} ()
+\begin{DoxyCompactList}\small\item\em Will Delete all the processes in the current process list. This will effectively end the program. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$class tType $>$ }\\tType $\ast$ \hyperlink{classc_kernel_a56083c090177a8a2a9bb50ad58e712c3}{FindProcess} ()
+\begin{DoxyCompactList}\small\item\em This Function will search for a process of either tType OR a type which has uses the type tType as a base type. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_kernel_a42d5d224af7acfe4aee27b7cee2b0a02}{ResetFindProcess} ()
+\begin{DoxyCompactList}\small\item\em This Function will reset \hyperlink{classc_kernel_a56083c090177a8a2a9bb50ad58e712c3}{FindProcess()} to search from the start of the process List. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classc_kernel}{cKernel} $\ast$ \hyperlink{classc_kernel_a5bd65ef494632b9fd585a6f6cae375e7}{Instance} ()
+\begin{DoxyCompactList}\small\item\em Function which returns current Kernel Instance. Will Create a new instance if one does not already exist. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Kernel Object. Handles Processes. Tracks, runs and deletes current processes. Has complete control over every \hyperlink{classc_process}{cProcess} object. Will run all awake alive processes every process cycle, will delete dead processes. Also controls the activation of rendering frames and handling interactions with the operating system. 
+
+Definition at line 15 of file WTKernel.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_kernel_aa17d85bb9118c9de59fe0c6301301a39}{
+\index{cKernel@{cKernel}!$\sim$cKernel@{$\sim$cKernel}}
+\index{$\sim$cKernel@{$\sim$cKernel}!cKernel@{cKernel}}
+\subsubsection[{$\sim$cKernel}]{\setlength{\rightskip}{0pt plus 5cm}cKernel::$\sim$cKernel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_kernel_aa17d85bb9118c9de59fe0c6301301a39}
+
+
+Definition at line 94 of file WTKernel.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_kernel_a4ec4faedede9de3cae4fc5fbc4469a1b}{
+\index{cKernel@{cKernel}!Add@{Add}}
+\index{Add@{Add}!cKernel@{cKernel}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cLinkedNode}$<$ {\bf vProcess} $>$ $\ast$ cKernel::Add (
+\begin{DoxyParamCaption}
+\item[{{\bf vProcess} $\ast$}]{lpNew}
+\end{DoxyParamCaption}
+)}}
+\label{classc_kernel_a4ec4faedede9de3cae4fc5fbc4469a1b}
+
+
+Definition at line 123 of file WTKernel.cpp.
+
+\hypertarget{classc_kernel_af4c3e32a55fdef58236378eed46afdfe}{
+\index{cKernel@{cKernel}!DeleteAll@{DeleteAll}}
+\index{DeleteAll@{DeleteAll}!cKernel@{cKernel}}
+\subsubsection[{DeleteAll}]{\setlength{\rightskip}{0pt plus 5cm}void cKernel::DeleteAll (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_kernel_af4c3e32a55fdef58236378eed46afdfe}
+
+
+Will Delete all the processes in the current process list. This will effectively end the program. 
+
+
+
+Definition at line 12 of file WTKernel.cpp.
+
+\hypertarget{classc_kernel_a56083c090177a8a2a9bb50ad58e712c3}{
+\index{cKernel@{cKernel}!FindProcess@{FindProcess}}
+\index{FindProcess@{FindProcess}!cKernel@{cKernel}}
+\subsubsection[{FindProcess}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class tType $>$ tType $\ast$ cKernel::FindProcess (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_kernel_a56083c090177a8a2a9bb50ad58e712c3}
+
+
+This Function will search for a process of either tType OR a type which has uses the type tType as a base type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mpType} & is a pointer of the type (or base type) of the desired process. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return a pointer to a process currently in the process list of the correct type.
+\end{DoxyReturn}
+This Function takes the type of the pointer handed to the function and will search for a process which is of type tType or inherits tType. Can be used to find processes of a certain type or genus. Each call of this function will continue searching from the position stored in mpSearch. Between searches for processes of different types use the function \hyperlink{classc_kernel_a42d5d224af7acfe4aee27b7cee2b0a02}{ResetFindProcess()}. 
+\begin{DoxyCode}
+        cGunShip *mpGunShip;
+        cBattleShip *mpBattleShip;
+
+        mpGunShip = FindProcess(mpGunShip);
+        ResetFindProcess();
+        mpBattleShip = FindProcess(mpBattleShip);
+\end{DoxyCode}
+ 
+
+Definition at line 92 of file WTKernel.h.
+
+\hypertarget{classc_kernel_a5bd65ef494632b9fd585a6f6cae375e7}{
+\index{cKernel@{cKernel}!Instance@{Instance}}
+\index{Instance@{Instance}!cKernel@{cKernel}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cKernel} $\ast$ cKernel::Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classc_kernel_a5bd65ef494632b9fd585a6f6cae375e7}
+
+
+Function which returns current Kernel Instance. Will Create a new instance if one does not already exist. 
+
+
+
+Definition at line 139 of file WTKernel.cpp.
+
+\hypertarget{classc_kernel_a721f5ad665c512b511ff8d344010385e}{
+\index{cKernel@{cKernel}!KillProgram@{KillProgram}}
+\index{KillProgram@{KillProgram}!cKernel@{cKernel}}
+\subsubsection[{KillProgram}]{\setlength{\rightskip}{0pt plus 5cm}void cKernel::KillProgram (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_kernel_a721f5ad665c512b511ff8d344010385e}
+
+
+Will kill the entire program. Will delete every process and then exit. 
+
+
+
+Definition at line 162 of file WTKernel.cpp.
+
+\hypertarget{classc_kernel_a59c9a956e6a6666a57c2d85e463381d8}{
+\index{cKernel@{cKernel}!Remove@{Remove}}
+\index{Remove@{Remove}!cKernel@{cKernel}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void cKernel::Remove (
+\begin{DoxyParamCaption}
+\item[{{\bf cLinkedNode}$<$ {\bf vProcess} $>$ $\ast$}]{lpOld}
+\end{DoxyParamCaption}
+)}}
+\label{classc_kernel_a59c9a956e6a6666a57c2d85e463381d8}
+
+
+Definition at line 134 of file WTKernel.cpp.
+
+\hypertarget{classc_kernel_a42d5d224af7acfe4aee27b7cee2b0a02}{
+\index{cKernel@{cKernel}!ResetFindProcess@{ResetFindProcess}}
+\index{ResetFindProcess@{ResetFindProcess}!cKernel@{cKernel}}
+\subsubsection[{ResetFindProcess}]{\setlength{\rightskip}{0pt plus 5cm}void cKernel::ResetFindProcess (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_kernel_a42d5d224af7acfe4aee27b7cee2b0a02}
+
+
+This Function will reset \hyperlink{classc_kernel_a56083c090177a8a2a9bb50ad58e712c3}{FindProcess()} to search from the start of the process List. 
+
+
+
+Definition at line 160 of file WTKernel.cpp.
+
+\hypertarget{classc_kernel_afbbf3ca5d7f5db9c91f1c279c0109b2f}{
+\index{cKernel@{cKernel}!Update@{Update}}
+\index{Update@{Update}!cKernel@{cKernel}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void cKernel::Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_kernel_afbbf3ca5d7f5db9c91f1c279c0109b2f}
+
+
+Definition at line 18 of file WTKernel.cpp.
+

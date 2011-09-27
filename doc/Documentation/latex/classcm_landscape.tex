@@ -1,0 +1,900 @@
+\hypertarget{classcm_landscape}{
+\section{cmLandscape Class Reference}
+\label{classcm_landscape}\index{cmLandscape@{cmLandscape}}
+}
+
+
+This will store the data for a landscape mesh. The data can be rendered through \hyperlink{classc_landscape}{cLandscape}.  
+
+
+
+
+Inheritance diagram for cmLandscape:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classcm_landscape__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cmLandscape:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classcm_landscape__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual uint32 \hyperlink{classcm_landscape_a3b2b67f26668d3f7424cb69faf733b30}{GetNode} (uint32 liX, uint32 liZ)
+\item 
+virtual uint32 \hyperlink{classcm_landscape_abcc71bb395322f17295d41ee6a0cf8fd}{VertexDataSize} ()
+\item 
+uint32 \hyperlink{classcm_landscape_af0e382de031fb0d6c9a2a721ac2387ef}{Verteces} ()
+\item 
+uint16 $\ast$ \hyperlink{classcm_landscape_a559d50ea2cd594a12b87f556990043df}{FaceData} ()
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the landscapes face data array. \item\end{DoxyCompactList}\item 
+uint32 \hyperlink{classcm_landscape_adb8e0e4968124d0ddae602ab5a51c147}{Faces} ()
+\begin{DoxyCompactList}\small\item\em This will return the number of quadrilateral faces in the landscape. (actually this appears to be the number of nodes in the face data array. \item\end{DoxyCompactList}\item 
+\hyperlink{classcm_landscape_aa1df1ae24ed2c5bb8616f21eeee3d036}{cmLandscape} (\hyperlink{classcm_landscape}{cmLandscape} $\ast$lpArray)
+\begin{DoxyCompactList}\small\item\em $\ast$ This will create a new landscape mesh using the data in lpArray. \item\end{DoxyCompactList}\item 
+\hyperlink{classcm_landscape_ae3c071c7ee84599c0fa47eba90290615}{cmLandscape} (uint32 liXSteps, uint32 liZSteps, float lfXSize, float lfZSize)
+\begin{DoxyCompactList}\small\item\em $\ast$ This will create a new landscape array to the resolution and size specified. \item\end{DoxyCompactList}\item 
+\hyperlink{classcm_landscape}{cmLandscape} $\ast$ \hyperlink{classcm_landscape_a733c070d034728e298b0f56e69b76e86}{operator=} (\hyperlink{classcm_landscape}{cmLandscape} $\ast$lpNew)
+\item 
+\hyperlink{classcm_landscape_a9cf1dcde9676ab1a51376568a707daf6}{$\sim$cmLandscape} ()
+\item 
+virtual void \hyperlink{classcm_landscape_a5ed79e3065ea2efebc8c34e1bd5786a0}{PrepareLandscape} ()
+\begin{DoxyCompactList}\small\item\em This will create all the absent data for the landscape. Vertex Positions, Normals, UVs and face data. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classcm_landscape_a03ec6fbfc57be4c252c3e0df1f1512fa}{GenerateVerteces} ()
+\item 
+virtual void \hyperlink{classcm_landscape_ad9e30a79fff2a756e7e560acd4435ca7}{GenerateUVs} ()
+\item 
+virtual void \hyperlink{classcm_landscape_a5afe57456c86358d91a514453c7fd179}{GenerateNormals} ()
+\item 
+virtual void \hyperlink{classcm_landscape_a04e954c2c362d72543f6c8e76653c04d}{GenerateFaces} ()
+\item 
+virtual float \hyperlink{classcm_landscape_a69992ba6344d84b1bd3d969befb7004e}{GetHeightLocal} (float lfX, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will return the height of the landscape (using interpolation) at the position lfX,lfZ relative to the landscapes 0,0 corner. \item\end{DoxyCompactList}\item 
+float \hyperlink{classcm_landscape_af7ad1920fc8458d4c88c062df87325dd}{GetVertexHeight} (uint32 liX, uint32 liZ)
+\begin{DoxyCompactList}\small\item\em This will return the height of the landscapes vertex numbered liX,liZ in the array. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classcm_landscape_aee7f2aa4548d58a1f51aacb7eb4ed4d4}{SetHeight} (uint32 liX, uint32 liZ, float lfHeight)
+\begin{DoxyCompactList}\small\item\em This will set the height of the landscapes vertex numbered liX,liZ in the array. \item\end{DoxyCompactList}\item 
+void \hyperlink{classcm_landscape_a533445e9429089809658e64114a2b9f7}{SetHeightRange} (float lfRange)
+\begin{DoxyCompactList}\small\item\em Will scale the landscape to fit the new height range. \item\end{DoxyCompactList}\item 
+void \hyperlink{classcm_landscape_afcb4ebc6f4aa1a61f49ca56bf82ec199}{SetXStep} (float lfStep)
+\begin{DoxyCompactList}\small\item\em Will scale the landscape step size along the X axis to be lfStep. \item\end{DoxyCompactList}\item 
+void \hyperlink{classcm_landscape_a552a5c4d887833220f02902ab8a1ffb5}{SetZStep} (float lfStep)
+\begin{DoxyCompactList}\small\item\em Will scale the landscape step size along the Z axis to be lfStep. \item\end{DoxyCompactList}\item 
+void \hyperlink{classcm_landscape_acfa7d1b32173940cfc8a91d6ab5dc370}{CreateNormalArray} ()
+\begin{DoxyCompactList}\small\item\em This will reinitialise the landscapes normal values. \item\end{DoxyCompactList}\item 
+void \hyperlink{classcm_landscape_a074a4aa5de458c966817b57b8822d470}{SetXZStep} (float lfXStep, float lfZStep)
+\begin{DoxyCompactList}\small\item\em This will scale the landscape step size along both the X and Z axis to be lfXStep and lfZStep respectively. \item\end{DoxyCompactList}\item 
+void \hyperlink{classcm_landscape_a0ee9507ed64e727af58ccfaacd88d333}{Randomize} (float liHeight, uint8 liSize)
+\begin{DoxyCompactList}\small\item\em This will randomise the landscape to a maximum height of liheight and then smooth the heights within liSize of each vertex. \item\end{DoxyCompactList}\item 
+void \hyperlink{classcm_landscape_a3196745ccd7e5d3f37463602732180c2}{Randomize} (float liHeight)
+\begin{DoxyCompactList}\small\item\em This will just randomise the landscape up to a maximum height of liHeight. \item\end{DoxyCompactList}\item 
+void \hyperlink{classcm_landscape_a09446d68d55f92099236f2773ab24828}{Randomize} (uint32 Lines, float lfHeightRange)
+\begin{DoxyCompactList}\small\item\em This will randomise the landscape, by laying Lines number of random bisecting lines, which raise the landscape by lfHeightRange each. lfHeightRange is 0.001 by default. \item\end{DoxyCompactList}\item 
+void \hyperlink{classcm_landscape_af71af80653f52a4a355386f677f1fdc2}{BufferMesh} ()
+\begin{DoxyCompactList}\small\item\em This will move the mesh data to the graphics card memory. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classcm_landscape_a304304d5d539e75b48fb99c0e71d595a}{RenderMesh} ()
+\begin{DoxyCompactList}\small\item\em This will render the mesh directly from graphics memory. \item\end{DoxyCompactList}\item 
+uint32 \hyperlink{classcm_landscape_ab6cabac9d07c5eedbbc7ac486923c8a5}{Width} ()
+\begin{DoxyCompactList}\small\item\em This will return miXSteps. \item\end{DoxyCompactList}\item 
+uint32 \hyperlink{classcm_landscape_a52b5ec340ef68b2a601fdca23607c3db}{Length} ()
+\begin{DoxyCompactList}\small\item\em This will reutrn miZSteps. \item\end{DoxyCompactList}\item 
+float \hyperlink{classcm_landscape_a5032d739a15259c62db86f4de3594e0f}{GetXSize} ()
+\item 
+float \hyperlink{classcm_landscape_a6366dbfe55b2be8ed19105cbb1855002}{GetYSize} ()
+\item 
+float \hyperlink{classcm_landscape_a9e8967f6da8ac335917f9046d17ab120}{GetZSize} ()
+\item 
+void \hyperlink{classcm_landscape_af48d68610953226befe86f0b2b50a641}{GenerateRandomUVs} ()
+\item 
+\hyperlink{classcm_landscape}{cmLandscape} $\ast$ \hyperlink{classcm_landscape_a13c9bcff2a7b3db7dbad70990be14b34}{Duplicate} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcm_landscape_a6d73bf9fe52e1164ece8e379647fa8e6}{cmLandscape} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float $\ast$ \hyperlink{classcm_landscape_ab411ed8b3f9c55c32de92691f1d26719}{mpVertex}
+\item 
+float $\ast$ \hyperlink{classcm_landscape_ad246109fb99078e43310f481982017bb}{mpNormals}
+\item 
+float $\ast$ \hyperlink{classcm_landscape_a865c21a15cb293c915bcbf398c683641}{mpUV}
+\item 
+uint32 \hyperlink{classcm_landscape_ab66f6a730a24ea8682cbe916eb2ca33a}{miXSteps}
+\item 
+uint32 \hyperlink{classcm_landscape_a1e54f8fe6b5cd944870ddc3e86ded434}{miZSteps}
+\item 
+float \hyperlink{classcm_landscape_ac30d26f95eaf4c8b9d0f0ea1c38d2cc8}{mfXSize}
+\item 
+float \hyperlink{classcm_landscape_ae77a0f253b6815a72438712c42127367}{mfZSize}
+\item 
+float \hyperlink{classcm_landscape_a82a303e72c4bd314a1472cdfd67d3c0e}{mfHeightRange}
+\item 
+uint16 $\ast$ \hyperlink{classcm_landscape_a687c15e79989921c1962de385f31778c}{mpQuads}
+\item 
+uint16 \hyperlink{classcm_landscape_a2851b72bc9a1f1b70945f3799ecf80a0}{miQuads}
+\item 
+float \hyperlink{classcm_landscape_a3a7a1d57d528ce8fda0f58952fe5f7af}{mfXSizeI}
+\item 
+float \hyperlink{classcm_landscape_a64b6b9e54f84620e8b8bf3dd083dbbb9}{mfZSizeI}
+\item 
+GLuint $\ast$ \hyperlink{classcm_landscape_a4366dd85773f117e3ab18220552a8c69}{mpBufferIDs}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static uint32 \hyperlink{classcm_landscape_a76f88fec0fc083241762102d265a7dfc}{miCustomLandscapes} = 0
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcm_landscape_aa170c6f782be192b0b2fe0bb3bac46b3}{cLandscapeMeshFile}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This will store the data for a landscape mesh. The data can be rendered through \hyperlink{classc_landscape}{cLandscape}. 
+
+Definition at line 43 of file WTcmLandscape.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcm_landscape_a6d73bf9fe52e1164ece8e379647fa8e6}{
+\index{cmLandscape@{cmLandscape}!cmLandscape@{cmLandscape}}
+\index{cmLandscape@{cmLandscape}!cmLandscape@{cmLandscape}}
+\subsubsection[{cmLandscape}]{\setlength{\rightskip}{0pt plus 5cm}cmLandscape::cmLandscape (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_a6d73bf9fe52e1164ece8e379647fa8e6}
+
+
+Definition at line 835 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_aa1df1ae24ed2c5bb8616f21eeee3d036}{
+\index{cmLandscape@{cmLandscape}!cmLandscape@{cmLandscape}}
+\index{cmLandscape@{cmLandscape}!cmLandscape@{cmLandscape}}
+\subsubsection[{cmLandscape}]{\setlength{\rightskip}{0pt plus 5cm}cmLandscape::cmLandscape (
+\begin{DoxyParamCaption}
+\item[{{\bf cmLandscape} $\ast$}]{lpArray}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_aa1df1ae24ed2c5bb8616f21eeee3d036}
+
+
+$\ast$ This will create a new landscape mesh using the data in lpArray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lpArray} & This is the \hyperlink{classcm_landscape_array}{cmLandscapeArray} holding landscape data for this object. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 99 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_ae3c071c7ee84599c0fa47eba90290615}{
+\index{cmLandscape@{cmLandscape}!cmLandscape@{cmLandscape}}
+\index{cmLandscape@{cmLandscape}!cmLandscape@{cmLandscape}}
+\subsubsection[{cmLandscape}]{\setlength{\rightskip}{0pt plus 5cm}cmLandscape::cmLandscape (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liXSteps, }
+\item[{uint32}]{liZSteps, }
+\item[{float}]{lfXSize, }
+\item[{float}]{lfZSize}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_ae3c071c7ee84599c0fa47eba90290615}
+
+
+$\ast$ This will create a new landscape array to the resolution and size specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em liXSteps} & Number of Nodes to form the landscape along the Landscapes X axis. \\
+\hline
+{\em liZSteps} & Number of Nodes to form the landscape along the Landscapes Z axis. \\
+\hline
+{\em lfXSize} & Size of landscape polygons along the landscapes X axis. \\
+\hline
+{\em lfZSize} & Size of landscape polygons along the landscapes Z axis. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 72 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a9cf1dcde9676ab1a51376568a707daf6}{
+\index{cmLandscape@{cmLandscape}!$\sim$cmLandscape@{$\sim$cmLandscape}}
+\index{$\sim$cmLandscape@{$\sim$cmLandscape}!cmLandscape@{cmLandscape}}
+\subsubsection[{$\sim$cmLandscape}]{\setlength{\rightskip}{0pt plus 5cm}cmLandscape::$\sim$cmLandscape (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_a9cf1dcde9676ab1a51376568a707daf6}
+
+
+Definition at line 130 of file WTcmLandscape.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcm_landscape_af71af80653f52a4a355386f677f1fdc2}{
+\index{cmLandscape@{cmLandscape}!BufferMesh@{BufferMesh}}
+\index{BufferMesh@{BufferMesh}!cmLandscape@{cmLandscape}}
+\subsubsection[{BufferMesh}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::BufferMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_af71af80653f52a4a355386f677f1fdc2}
+
+
+This will move the mesh data to the graphics card memory. 
+
+
+
+Definition at line 45 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_acfa7d1b32173940cfc8a91d6ab5dc370}{
+\index{cmLandscape@{cmLandscape}!CreateNormalArray@{CreateNormalArray}}
+\index{CreateNormalArray@{CreateNormalArray}!cmLandscape@{cmLandscape}}
+\subsubsection[{CreateNormalArray}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::CreateNormalArray (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_acfa7d1b32173940cfc8a91d6ab5dc370}
+
+
+This will reinitialise the landscapes normal values. 
+
+
+
+Implements \hyperlink{classvm_landscape_a5417f258c6001a9a925748abf78dbf1d}{vmLandscape}.
+
+
+
+Definition at line 345 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a13c9bcff2a7b3db7dbad70990be14b34}{
+\index{cmLandscape@{cmLandscape}!Duplicate@{Duplicate}}
+\index{Duplicate@{Duplicate}!cmLandscape@{cmLandscape}}
+\subsubsection[{Duplicate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cmLandscape} $\ast$ cmLandscape::Duplicate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_a13c9bcff2a7b3db7dbad70990be14b34}
+
+
+Definition at line 830 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a559d50ea2cd594a12b87f556990043df}{
+\index{cmLandscape@{cmLandscape}!FaceData@{FaceData}}
+\index{FaceData@{FaceData}!cmLandscape@{cmLandscape}}
+\subsubsection[{FaceData}]{\setlength{\rightskip}{0pt plus 5cm}uint16$\ast$ cmLandscape::FaceData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcm_landscape_a559d50ea2cd594a12b87f556990043df}
+
+
+This will return a pointer to the landscapes face data array. 
+
+
+
+Definition at line 86 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_adb8e0e4968124d0ddae602ab5a51c147}{
+\index{cmLandscape@{cmLandscape}!Faces@{Faces}}
+\index{Faces@{Faces}!cmLandscape@{cmLandscape}}
+\subsubsection[{Faces}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cmLandscape::Faces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcm_landscape_adb8e0e4968124d0ddae602ab5a51c147}
+
+
+This will return the number of quadrilateral faces in the landscape. (actually this appears to be the number of nodes in the face data array. 
+
+
+
+Definition at line 88 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a04e954c2c362d72543f6c8e76653c04d}{
+\index{cmLandscape@{cmLandscape}!GenerateFaces@{GenerateFaces}}
+\index{GenerateFaces@{GenerateFaces}!cmLandscape@{cmLandscape}}
+\subsubsection[{GenerateFaces}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::GenerateFaces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_a04e954c2c362d72543f6c8e76653c04d}
+
+
+Definition at line 782 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a5afe57456c86358d91a514453c7fd179}{
+\index{cmLandscape@{cmLandscape}!GenerateNormals@{GenerateNormals}}
+\index{GenerateNormals@{GenerateNormals}!cmLandscape@{cmLandscape}}
+\subsubsection[{GenerateNormals}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::GenerateNormals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_a5afe57456c86358d91a514453c7fd179}
+
+
+Definition at line 724 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_af48d68610953226befe86f0b2b50a641}{
+\index{cmLandscape@{cmLandscape}!GenerateRandomUVs@{GenerateRandomUVs}}
+\index{GenerateRandomUVs@{GenerateRandomUVs}!cmLandscape@{cmLandscape}}
+\subsubsection[{GenerateRandomUVs}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::GenerateRandomUVs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_af48d68610953226befe86f0b2b50a641}
+
+
+Definition at line 509 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_ad9e30a79fff2a756e7e560acd4435ca7}{
+\index{cmLandscape@{cmLandscape}!GenerateUVs@{GenerateUVs}}
+\index{GenerateUVs@{GenerateUVs}!cmLandscape@{cmLandscape}}
+\subsubsection[{GenerateUVs}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::GenerateUVs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_ad9e30a79fff2a756e7e560acd4435ca7}
+
+
+Definition at line 741 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a03ec6fbfc57be4c252c3e0df1f1512fa}{
+\index{cmLandscape@{cmLandscape}!GenerateVerteces@{GenerateVerteces}}
+\index{GenerateVerteces@{GenerateVerteces}!cmLandscape@{cmLandscape}}
+\subsubsection[{GenerateVerteces}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::GenerateVerteces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_a03ec6fbfc57be4c252c3e0df1f1512fa}
+
+
+Definition at line 705 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a69992ba6344d84b1bd3d969befb7004e}{
+\index{cmLandscape@{cmLandscape}!GetHeightLocal@{GetHeightLocal}}
+\index{GetHeightLocal@{GetHeightLocal}!cmLandscape@{cmLandscape}}
+\subsubsection[{GetHeightLocal}]{\setlength{\rightskip}{0pt plus 5cm}float cmLandscape::GetHeightLocal (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_a69992ba6344d84b1bd3d969befb7004e}
+
+
+This will return the height of the landscape (using interpolation) at the position lfX,lfZ relative to the landscapes 0,0 corner. 
+
+
+
+Implements \hyperlink{classvm_landscape_ae9448517f100dd79bd7114f7472ff9bd}{vmLandscape}.
+
+
+
+Definition at line 139 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a3b2b67f26668d3f7424cb69faf733b30}{
+\index{cmLandscape@{cmLandscape}!GetNode@{GetNode}}
+\index{GetNode@{GetNode}!cmLandscape@{cmLandscape}}
+\subsubsection[{GetNode}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cmLandscape::GetNode (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liX, }
+\item[{uint32}]{liZ}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_a3b2b67f26668d3f7424cb69faf733b30}
+
+
+Definition at line 64 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_af7ad1920fc8458d4c88c062df87325dd}{
+\index{cmLandscape@{cmLandscape}!GetVertexHeight@{GetVertexHeight}}
+\index{GetVertexHeight@{GetVertexHeight}!cmLandscape@{cmLandscape}}
+\subsubsection[{GetVertexHeight}]{\setlength{\rightskip}{0pt plus 5cm}float cmLandscape::GetVertexHeight (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liX, }
+\item[{uint32}]{liZ}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_af7ad1920fc8458d4c88c062df87325dd}
+
+
+This will return the height of the landscapes vertex numbered liX,liZ in the array. 
+
+
+
+Implements \hyperlink{classvm_landscape_a9a2091d27b1b121d72861fa4c1413e9e}{vmLandscape}.
+
+
+
+Definition at line 164 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a5032d739a15259c62db86f4de3594e0f}{
+\index{cmLandscape@{cmLandscape}!GetXSize@{GetXSize}}
+\index{GetXSize@{GetXSize}!cmLandscape@{cmLandscape}}
+\subsubsection[{GetXSize}]{\setlength{\rightskip}{0pt plus 5cm}float cmLandscape::GetXSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcm_landscape_a5032d739a15259c62db86f4de3594e0f}
+
+
+Definition at line 154 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a6366dbfe55b2be8ed19105cbb1855002}{
+\index{cmLandscape@{cmLandscape}!GetYSize@{GetYSize}}
+\index{GetYSize@{GetYSize}!cmLandscape@{cmLandscape}}
+\subsubsection[{GetYSize}]{\setlength{\rightskip}{0pt plus 5cm}float cmLandscape::GetYSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcm_landscape_a6366dbfe55b2be8ed19105cbb1855002}
+
+
+Definition at line 155 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a9e8967f6da8ac335917f9046d17ab120}{
+\index{cmLandscape@{cmLandscape}!GetZSize@{GetZSize}}
+\index{GetZSize@{GetZSize}!cmLandscape@{cmLandscape}}
+\subsubsection[{GetZSize}]{\setlength{\rightskip}{0pt plus 5cm}float cmLandscape::GetZSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcm_landscape_a9e8967f6da8ac335917f9046d17ab120}
+
+
+Definition at line 156 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a52b5ec340ef68b2a601fdca23607c3db}{
+\index{cmLandscape@{cmLandscape}!Length@{Length}}
+\index{Length@{Length}!cmLandscape@{cmLandscape}}
+\subsubsection[{Length}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cmLandscape::Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcm_landscape_a52b5ec340ef68b2a601fdca23607c3db}
+
+
+This will reutrn miZSteps. 
+
+
+
+Implements \hyperlink{classvm_landscape_a96714ceab8688ab5d1a62ae4d077de6a}{vmLandscape}.
+
+
+
+Definition at line 152 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a733c070d034728e298b0f56e69b76e86}{
+\index{cmLandscape@{cmLandscape}!operator=@{operator=}}
+\index{operator=@{operator=}!cmLandscape@{cmLandscape}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cmLandscape}$\ast$ cmLandscape::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf cmLandscape} $\ast$}]{lpNew}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_a733c070d034728e298b0f56e69b76e86}
+\hypertarget{classcm_landscape_a5ed79e3065ea2efebc8c34e1bd5786a0}{
+\index{cmLandscape@{cmLandscape}!PrepareLandscape@{PrepareLandscape}}
+\index{PrepareLandscape@{PrepareLandscape}!cmLandscape@{cmLandscape}}
+\subsubsection[{PrepareLandscape}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::PrepareLandscape (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_a5ed79e3065ea2efebc8c34e1bd5786a0}
+
+
+This will create all the absent data for the landscape. Vertex Positions, Normals, UVs and face data. 
+
+
+
+Implements \hyperlink{classvm_landscape_a48ea00e21cdaa26c37ee3135d8e24367}{vmLandscape}.
+
+
+
+Definition at line 23 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a3196745ccd7e5d3f37463602732180c2}{
+\index{cmLandscape@{cmLandscape}!Randomize@{Randomize}}
+\index{Randomize@{Randomize}!cmLandscape@{cmLandscape}}
+\subsubsection[{Randomize}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::Randomize (
+\begin{DoxyParamCaption}
+\item[{float}]{liHeight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_a3196745ccd7e5d3f37463602732180c2}
+
+
+This will just randomise the landscape up to a maximum height of liHeight. 
+
+
+
+Implements \hyperlink{classvm_landscape_adb80c819fc1d5041be1fb52fbc5194a2}{vmLandscape}.
+
+
+
+Definition at line 330 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a09446d68d55f92099236f2773ab24828}{
+\index{cmLandscape@{cmLandscape}!Randomize@{Randomize}}
+\index{Randomize@{Randomize}!cmLandscape@{cmLandscape}}
+\subsubsection[{Randomize}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::Randomize (
+\begin{DoxyParamCaption}
+\item[{uint32}]{Lines, }
+\item[{float}]{lfHeightRange = {\ttfamily 0.001}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_a09446d68d55f92099236f2773ab24828}
+
+
+This will randomise the landscape, by laying Lines number of random bisecting lines, which raise the landscape by lfHeightRange each. lfHeightRange is 0.001 by default. 
+
+
+
+Implements \hyperlink{classvm_landscape_adfad55b0bc5536f842421feb225a56f9}{vmLandscape}.
+
+
+
+Definition at line 217 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a0ee9507ed64e727af58ccfaacd88d333}{
+\index{cmLandscape@{cmLandscape}!Randomize@{Randomize}}
+\index{Randomize@{Randomize}!cmLandscape@{cmLandscape}}
+\subsubsection[{Randomize}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::Randomize (
+\begin{DoxyParamCaption}
+\item[{float}]{liHeight, }
+\item[{uint8}]{liSize}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_a0ee9507ed64e727af58ccfaacd88d333}
+
+
+This will randomise the landscape to a maximum height of liheight and then smooth the heights within liSize of each vertex. 
+
+
+
+Implements \hyperlink{classvm_landscape_a3ce4544919ef53f1cc1f2283a51f202e}{vmLandscape}.
+
+
+
+Definition at line 177 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a304304d5d539e75b48fb99c0e71d595a}{
+\index{cmLandscape@{cmLandscape}!RenderMesh@{RenderMesh}}
+\index{RenderMesh@{RenderMesh}!cmLandscape@{cmLandscape}}
+\subsubsection[{RenderMesh}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::RenderMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcm_landscape_a304304d5d539e75b48fb99c0e71d595a}
+
+
+This will render the mesh directly from graphics memory. 
+
+
+
+Implements \hyperlink{classvm_landscape_af70bb0aba4fdd58797afce3719aaf2f6}{vmLandscape}.
+
+
+
+Definition at line 378 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_aee7f2aa4548d58a1f51aacb7eb4ed4d4}{
+\index{cmLandscape@{cmLandscape}!SetHeight@{SetHeight}}
+\index{SetHeight@{SetHeight}!cmLandscape@{cmLandscape}}
+\subsubsection[{SetHeight}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::SetHeight (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liX, }
+\item[{uint32}]{liZ, }
+\item[{float}]{lfHeight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcm_landscape_aee7f2aa4548d58a1f51aacb7eb4ed4d4}
+
+
+This will set the height of the landscapes vertex numbered liX,liZ in the array. 
+
+
+
+Implements \hyperlink{classvm_landscape_a7547b9cdbdeb2e8e3bb9e15d274d447e}{vmLandscape}.
+
+
+
+Definition at line 169 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a533445e9429089809658e64114a2b9f7}{
+\index{cmLandscape@{cmLandscape}!SetHeightRange@{SetHeightRange}}
+\index{SetHeightRange@{SetHeightRange}!cmLandscape@{cmLandscape}}
+\subsubsection[{SetHeightRange}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::SetHeightRange (
+\begin{DoxyParamCaption}
+\item[{float}]{lfRange}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_a533445e9429089809658e64114a2b9f7}
+
+
+Will scale the landscape to fit the new height range. 
+
+
+
+Definition at line 393 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_afcb4ebc6f4aa1a61f49ca56bf82ec199}{
+\index{cmLandscape@{cmLandscape}!SetXStep@{SetXStep}}
+\index{SetXStep@{SetXStep}!cmLandscape@{cmLandscape}}
+\subsubsection[{SetXStep}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::SetXStep (
+\begin{DoxyParamCaption}
+\item[{float}]{lfStep}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_afcb4ebc6f4aa1a61f49ca56bf82ec199}
+
+
+Will scale the landscape step size along the X axis to be lfStep. 
+
+
+
+Definition at line 408 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a074a4aa5de458c966817b57b8822d470}{
+\index{cmLandscape@{cmLandscape}!SetXZStep@{SetXZStep}}
+\index{SetXZStep@{SetXZStep}!cmLandscape@{cmLandscape}}
+\subsubsection[{SetXZStep}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::SetXZStep (
+\begin{DoxyParamCaption}
+\item[{float}]{lfXStep, }
+\item[{float}]{lfZStep}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_a074a4aa5de458c966817b57b8822d470}
+
+
+This will scale the landscape step size along both the X and Z axis to be lfXStep and lfZStep respectively. 
+
+
+
+Definition at line 443 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_a552a5c4d887833220f02902ab8a1ffb5}{
+\index{cmLandscape@{cmLandscape}!SetZStep@{SetZStep}}
+\index{SetZStep@{SetZStep}!cmLandscape@{cmLandscape}}
+\subsubsection[{SetZStep}]{\setlength{\rightskip}{0pt plus 5cm}void cmLandscape::SetZStep (
+\begin{DoxyParamCaption}
+\item[{float}]{lfStep}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_a552a5c4d887833220f02902ab8a1ffb5}
+
+
+Will scale the landscape step size along the Z axis to be lfStep. 
+
+
+
+Definition at line 426 of file WTcmLandscape.cpp.
+
+\hypertarget{classcm_landscape_af0e382de031fb0d6c9a2a721ac2387ef}{
+\index{cmLandscape@{cmLandscape}!Verteces@{Verteces}}
+\index{Verteces@{Verteces}!cmLandscape@{cmLandscape}}
+\subsubsection[{Verteces}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cmLandscape::Verteces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcm_landscape_af0e382de031fb0d6c9a2a721ac2387ef}
+
+
+Definition at line 84 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_abcc71bb395322f17295d41ee6a0cf8fd}{
+\index{cmLandscape@{cmLandscape}!VertexDataSize@{VertexDataSize}}
+\index{VertexDataSize@{VertexDataSize}!cmLandscape@{cmLandscape}}
+\subsubsection[{VertexDataSize}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32 cmLandscape::VertexDataSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcm_landscape_abcc71bb395322f17295d41ee6a0cf8fd}
+
+
+Definition at line 83 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_ab6cabac9d07c5eedbbc7ac486923c8a5}{
+\index{cmLandscape@{cmLandscape}!Width@{Width}}
+\index{Width@{Width}!cmLandscape@{cmLandscape}}
+\subsubsection[{Width}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cmLandscape::Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcm_landscape_ab6cabac9d07c5eedbbc7ac486923c8a5}
+
+
+This will return miXSteps. 
+
+
+
+Implements \hyperlink{classvm_landscape_a95581c7e2e9e9b55e924a18641c6d744}{vmLandscape}.
+
+
+
+Definition at line 150 of file WTcmLandscape.h.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classcm_landscape_aa170c6f782be192b0b2fe0bb3bac46b3}{
+\index{cmLandscape@{cmLandscape}!cLandscapeMeshFile@{cLandscapeMeshFile}}
+\index{cLandscapeMeshFile@{cLandscapeMeshFile}!cmLandscape@{cmLandscape}}
+\subsubsection[{cLandscapeMeshFile}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf cLandscapeMeshFile}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classcm_landscape_aa170c6f782be192b0b2fe0bb3bac46b3}
+
+
+Definition at line 161 of file WTcmLandscape.h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classcm_landscape_a82a303e72c4bd314a1472cdfd67d3c0e}{
+\index{cmLandscape@{cmLandscape}!mfHeightRange@{mfHeightRange}}
+\index{mfHeightRange@{mfHeightRange}!cmLandscape@{cmLandscape}}
+\subsubsection[{mfHeightRange}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cmLandscape::mfHeightRange}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_a82a303e72c4bd314a1472cdfd67d3c0e}
+
+
+Definition at line 63 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_ac30d26f95eaf4c8b9d0f0ea1c38d2cc8}{
+\index{cmLandscape@{cmLandscape}!mfXSize@{mfXSize}}
+\index{mfXSize@{mfXSize}!cmLandscape@{cmLandscape}}
+\subsubsection[{mfXSize}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cmLandscape::mfXSize}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_ac30d26f95eaf4c8b9d0f0ea1c38d2cc8}
+
+
+Definition at line 59 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a3a7a1d57d528ce8fda0f58952fe5f7af}{
+\index{cmLandscape@{cmLandscape}!mfXSizeI@{mfXSizeI}}
+\index{mfXSizeI@{mfXSizeI}!cmLandscape@{cmLandscape}}
+\subsubsection[{mfXSizeI}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cmLandscape::mfXSizeI}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_a3a7a1d57d528ce8fda0f58952fe5f7af}
+
+
+Definition at line 71 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_ae77a0f253b6815a72438712c42127367}{
+\index{cmLandscape@{cmLandscape}!mfZSize@{mfZSize}}
+\index{mfZSize@{mfZSize}!cmLandscape@{cmLandscape}}
+\subsubsection[{mfZSize}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cmLandscape::mfZSize}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_ae77a0f253b6815a72438712c42127367}
+
+
+Definition at line 61 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a64b6b9e54f84620e8b8bf3dd083dbbb9}{
+\index{cmLandscape@{cmLandscape}!mfZSizeI@{mfZSizeI}}
+\index{mfZSizeI@{mfZSizeI}!cmLandscape@{cmLandscape}}
+\subsubsection[{mfZSizeI}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cmLandscape::mfZSizeI}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_a64b6b9e54f84620e8b8bf3dd083dbbb9}
+
+
+Definition at line 73 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a76f88fec0fc083241762102d265a7dfc}{
+\index{cmLandscape@{cmLandscape}!miCustomLandscapes@{miCustomLandscapes}}
+\index{miCustomLandscapes@{miCustomLandscapes}!cmLandscape@{cmLandscape}}
+\subsubsection[{miCustomLandscapes}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cmLandscape::miCustomLandscapes} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classcm_landscape_a76f88fec0fc083241762102d265a7dfc}
+
+
+Definition at line 47 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a2851b72bc9a1f1b70945f3799ecf80a0}{
+\index{cmLandscape@{cmLandscape}!miQuads@{miQuads}}
+\index{miQuads@{miQuads}!cmLandscape@{cmLandscape}}
+\subsubsection[{miQuads}]{\setlength{\rightskip}{0pt plus 5cm}uint16 {\bf cmLandscape::miQuads}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_a2851b72bc9a1f1b70945f3799ecf80a0}
+
+
+Definition at line 69 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_ab66f6a730a24ea8682cbe916eb2ca33a}{
+\index{cmLandscape@{cmLandscape}!miXSteps@{miXSteps}}
+\index{miXSteps@{miXSteps}!cmLandscape@{cmLandscape}}
+\subsubsection[{miXSteps}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cmLandscape::miXSteps}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_ab66f6a730a24ea8682cbe916eb2ca33a}
+
+
+Definition at line 55 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a1e54f8fe6b5cd944870ddc3e86ded434}{
+\index{cmLandscape@{cmLandscape}!miZSteps@{miZSteps}}
+\index{miZSteps@{miZSteps}!cmLandscape@{cmLandscape}}
+\subsubsection[{miZSteps}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cmLandscape::miZSteps}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_a1e54f8fe6b5cd944870ddc3e86ded434}
+
+
+Definition at line 57 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a4366dd85773f117e3ab18220552a8c69}{
+\index{cmLandscape@{cmLandscape}!mpBufferIDs@{mpBufferIDs}}
+\index{mpBufferIDs@{mpBufferIDs}!cmLandscape@{cmLandscape}}
+\subsubsection[{mpBufferIDs}]{\setlength{\rightskip}{0pt plus 5cm}GLuint$\ast$ {\bf cmLandscape::mpBufferIDs}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_a4366dd85773f117e3ab18220552a8c69}
+
+
+Definition at line 76 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_ad246109fb99078e43310f481982017bb}{
+\index{cmLandscape@{cmLandscape}!mpNormals@{mpNormals}}
+\index{mpNormals@{mpNormals}!cmLandscape@{cmLandscape}}
+\subsubsection[{mpNormals}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf cmLandscape::mpNormals}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_ad246109fb99078e43310f481982017bb}
+
+
+Definition at line 51 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a687c15e79989921c1962de385f31778c}{
+\index{cmLandscape@{cmLandscape}!mpQuads@{mpQuads}}
+\index{mpQuads@{mpQuads}!cmLandscape@{cmLandscape}}
+\subsubsection[{mpQuads}]{\setlength{\rightskip}{0pt plus 5cm}uint16$\ast$ {\bf cmLandscape::mpQuads}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_a687c15e79989921c1962de385f31778c}
+
+
+Definition at line 67 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_a865c21a15cb293c915bcbf398c683641}{
+\index{cmLandscape@{cmLandscape}!mpUV@{mpUV}}
+\index{mpUV@{mpUV}!cmLandscape@{cmLandscape}}
+\subsubsection[{mpUV}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf cmLandscape::mpUV}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_a865c21a15cb293c915bcbf398c683641}
+
+
+Definition at line 53 of file WTcmLandscape.h.
+
+\hypertarget{classcm_landscape_ab411ed8b3f9c55c32de92691f1d26719}{
+\index{cmLandscape@{cmLandscape}!mpVertex@{mpVertex}}
+\index{mpVertex@{mpVertex}!cmLandscape@{cmLandscape}}
+\subsubsection[{mpVertex}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf cmLandscape::mpVertex}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcm_landscape_ab411ed8b3f9c55c32de92691f1d26719}
+
+
+Definition at line 49 of file WTcmLandscape.h.
+

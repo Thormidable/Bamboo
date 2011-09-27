@@ -1,0 +1,261 @@
+\hypertarget{classc_cluster}{
+\section{cCluster Class Reference}
+\label{classc_cluster}\index{cCluster@{cCluster}}
+}
+
+
+This class is an array of \hyperlink{classc_face}{cFace}. This is often used.  
+
+
+
+
+Collaboration diagram for cCluster:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classc_cluster__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_cluster_a3619dea229d3ba27971e269da3b378ae}{$\sim$cCluster} ()
+\item 
+\hyperlink{classc_cluster_ab74ec08068af60493977ad34c5574c06}{cCluster} ()
+\item 
+void \hyperlink{classc_cluster_a50ea40648d8dcd58e3a6efeac29d248c}{Init} (uint32 liSize)
+\item 
+void \hyperlink{classc_cluster_afd4809ebe068176d59baabd068ba217b}{Optimise} ()
+\item 
+uint32 \hyperlink{classc_cluster_a6e326c98acf18747df2cfeebf79747fc}{FileSize} ()
+\item 
+void \hyperlink{classc_cluster_a92fc1be6bfad8a7389fc6f3307080080}{Order} ()
+\item 
+void \hyperlink{classc_cluster_ac3cd20b4c2639fb7b7eb1d91941ad3dd}{Strip} ()
+\item 
+void \hyperlink{classc_cluster_a6d520713715a5971e5d9dca52ee2d4b6}{Switch} (uint32 li1, uint32 li2)
+\item 
+void \hyperlink{classc_cluster_a18406f95cb8ae040c5db49c6ca213e59}{Add} (\hyperlink{classc_full_face_data}{cFullFaceData} \&lpData)
+\item 
+void \hyperlink{classc_cluster_afe2dbd58852ed9884fef815fb623d949}{Remove} (uint32 li1)
+\item 
+uint32 \hyperlink{classc_cluster_a839fcbeea273b74074f24b818113e84e}{Items} ()
+\item 
+\hyperlink{classc_face}{cFace} \hyperlink{classc_cluster_ac69ada115a3ad8d775c94030f3971f45}{Face} (uint32 li1)
+\item 
+void \hyperlink{classc_cluster_aa52dd680312de3a5b88e46482c2403e3}{Resize} ()
+\item 
+void \hyperlink{classc_cluster_a16e894ebf06649cb8cc893378633ba18}{OutputIMFClusters} (ofstream \&FileStream)
+\item 
+void \hyperlink{classc_cluster_a47b962cf7ec206fa73e30122929d425b}{LoadIMFClusters} (ifstream \&FileStream)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is an array of \hyperlink{classc_face}{cFace}. This is often used. 
+
+Definition at line 8 of file WTcCluster.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_cluster_a3619dea229d3ba27971e269da3b378ae}{
+\index{cCluster@{cCluster}!$\sim$cCluster@{$\sim$cCluster}}
+\index{$\sim$cCluster@{$\sim$cCluster}!cCluster@{cCluster}}
+\subsubsection[{$\sim$cCluster}]{\setlength{\rightskip}{0pt plus 5cm}cCluster::$\sim$cCluster (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_a3619dea229d3ba27971e269da3b378ae}
+
+
+Definition at line 171 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_ab74ec08068af60493977ad34c5574c06}{
+\index{cCluster@{cCluster}!cCluster@{cCluster}}
+\index{cCluster@{cCluster}!cCluster@{cCluster}}
+\subsubsection[{cCluster}]{\setlength{\rightskip}{0pt plus 5cm}cCluster::cCluster (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_ab74ec08068af60493977ad34c5574c06}
+
+
+Definition at line 172 of file WTcCluster.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_cluster_a18406f95cb8ae040c5db49c6ca213e59}{
+\index{cCluster@{cCluster}!Add@{Add}}
+\index{Add@{Add}!cCluster@{cCluster}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void cCluster::Add (
+\begin{DoxyParamCaption}
+\item[{{\bf cFullFaceData} \&}]{lpData}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_a18406f95cb8ae040c5db49c6ca213e59}
+
+
+Definition at line 18 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_ac69ada115a3ad8d775c94030f3971f45}{
+\index{cCluster@{cCluster}!Face@{Face}}
+\index{Face@{Face}!cCluster@{cCluster}}
+\subsubsection[{Face}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cFace} cCluster::Face (
+\begin{DoxyParamCaption}
+\item[{uint32}]{li1}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_ac69ada115a3ad8d775c94030f3971f45}
+
+
+Definition at line 189 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_a6e326c98acf18747df2cfeebf79747fc}{
+\index{cCluster@{cCluster}!FileSize@{FileSize}}
+\index{FileSize@{FileSize}!cCluster@{cCluster}}
+\subsubsection[{FileSize}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cCluster::FileSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_a6e326c98acf18747df2cfeebf79747fc}
+
+
+Definition at line 176 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_a50ea40648d8dcd58e3a6efeac29d248c}{
+\index{cCluster@{cCluster}!Init@{Init}}
+\index{Init@{Init}!cCluster@{cCluster}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void cCluster::Init (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liSize}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_a50ea40648d8dcd58e3a6efeac29d248c}
+
+
+Definition at line 173 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_a839fcbeea273b74074f24b818113e84e}{
+\index{cCluster@{cCluster}!Items@{Items}}
+\index{Items@{Items}!cCluster@{cCluster}}
+\subsubsection[{Items}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cCluster::Items (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_a839fcbeea273b74074f24b818113e84e}
+
+
+Definition at line 188 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_a47b962cf7ec206fa73e30122929d425b}{
+\index{cCluster@{cCluster}!LoadIMFClusters@{LoadIMFClusters}}
+\index{LoadIMFClusters@{LoadIMFClusters}!cCluster@{cCluster}}
+\subsubsection[{LoadIMFClusters}]{\setlength{\rightskip}{0pt plus 5cm}void cCluster::LoadIMFClusters (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_a47b962cf7ec206fa73e30122929d425b}
+
+
+Definition at line 214 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_afd4809ebe068176d59baabd068ba217b}{
+\index{cCluster@{cCluster}!Optimise@{Optimise}}
+\index{Optimise@{Optimise}!cCluster@{cCluster}}
+\subsubsection[{Optimise}]{\setlength{\rightskip}{0pt plus 5cm}void cCluster::Optimise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_afd4809ebe068176d59baabd068ba217b}
+
+
+Definition at line 174 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_a92fc1be6bfad8a7389fc6f3307080080}{
+\index{cCluster@{cCluster}!Order@{Order}}
+\index{Order@{Order}!cCluster@{cCluster}}
+\subsubsection[{Order}]{\setlength{\rightskip}{0pt plus 5cm}void cCluster::Order (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_a92fc1be6bfad8a7389fc6f3307080080}
+
+
+Definition at line 91 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_a16e894ebf06649cb8cc893378633ba18}{
+\index{cCluster@{cCluster}!OutputIMFClusters@{OutputIMFClusters}}
+\index{OutputIMFClusters@{OutputIMFClusters}!cCluster@{cCluster}}
+\subsubsection[{OutputIMFClusters}]{\setlength{\rightskip}{0pt plus 5cm}void cCluster::OutputIMFClusters (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_a16e894ebf06649cb8cc893378633ba18}
+
+
+Definition at line 204 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_afe2dbd58852ed9884fef815fb623d949}{
+\index{cCluster@{cCluster}!Remove@{Remove}}
+\index{Remove@{Remove}!cCluster@{cCluster}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void cCluster::Remove (
+\begin{DoxyParamCaption}
+\item[{uint32}]{li1}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_afe2dbd58852ed9884fef815fb623d949}
+
+
+Definition at line 140 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_aa52dd680312de3a5b88e46482c2403e3}{
+\index{cCluster@{cCluster}!Resize@{Resize}}
+\index{Resize@{Resize}!cCluster@{cCluster}}
+\subsubsection[{Resize}]{\setlength{\rightskip}{0pt plus 5cm}void cCluster::Resize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_aa52dd680312de3a5b88e46482c2403e3}
+
+
+Definition at line 190 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_ac3cd20b4c2639fb7b7eb1d91941ad3dd}{
+\index{cCluster@{cCluster}!Strip@{Strip}}
+\index{Strip@{Strip}!cCluster@{cCluster}}
+\subsubsection[{Strip}]{\setlength{\rightskip}{0pt plus 5cm}void cCluster::Strip (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_ac3cd20b4c2639fb7b7eb1d91941ad3dd}
+
+
+Definition at line 149 of file WTcCluster.cpp.
+
+\hypertarget{classc_cluster_a6d520713715a5971e5d9dca52ee2d4b6}{
+\index{cCluster@{cCluster}!Switch@{Switch}}
+\index{Switch@{Switch}!cCluster@{cCluster}}
+\subsubsection[{Switch}]{\setlength{\rightskip}{0pt plus 5cm}void cCluster::Switch (
+\begin{DoxyParamCaption}
+\item[{uint32}]{li1, }
+\item[{uint32}]{li2}
+\end{DoxyParamCaption}
+)}}
+\label{classc_cluster_a6d520713715a5971e5d9dca52ee2d4b6}
+
+
+Definition at line 162 of file WTcCluster.cpp.
+

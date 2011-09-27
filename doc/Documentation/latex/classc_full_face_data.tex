@@ -1,0 +1,262 @@
+\hypertarget{classc_full_face_data}{
+\section{cFullFaceData Class Reference}
+\label{classc_full_face_data}\index{cFullFaceData@{cFullFaceData}}
+}
+
+
+This class is a \hyperlink{classc_face}{cFace} with expanded Functionality. Allows the user to check information about the face. See list of functions for information.  
+
+
+
+
+Inheritance diagram for cFullFaceData:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classc_full_face_data__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cFullFaceData:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classc_full_face_data__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_full_face_data_a63302db2911c4cace838a43347b79167}{cFullFaceData} ()
+\item 
+uint32 \hyperlink{classc_full_face_data_a53a99ced9de4ecdede38b2e8d63458e9}{FileSize} ()
+\item 
+void \hyperlink{classc_full_face_data_a8098f4af2f6d152bf27e4d8692421ce9}{Fill} (float $\ast$lpVertex, uint16 $\ast$mpFace)
+\begin{DoxyCompactList}\small\item\em Will Fill the data for this Object from a array of floats representing vertex coordinates (3 floats to a vertex) and an array of 3 uint16s indicating which verteces to use. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_full_face_data_a9397eb74f9f3dd7fb82ec85c7cb291f5}{SamePlane} (\hyperlink{classc_plane}{cPlane} \&lpOther)
+\begin{DoxyCompactList}\small\item\em Will return 1 if the \hyperlink{classc_plane}{cPlane} lpOther is in the same plane as this object. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_full_face_data}{cFullFaceData} \& \hyperlink{classc_full_face_data_a7a9bdcb3c4795ed42582aceb5624c04b}{operator=} (\hyperlink{classc_full_face_data}{cFullFaceData} \&lpOther)
+\begin{DoxyCompactList}\small\item\em = operator \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_full_face_data_adc17fbda36ec28287c88dccb893b23d5}{IsConcave} (\hyperlink{classc_full_face_list}{cFullFaceList} \&lpOther)
+\begin{DoxyCompactList}\small\item\em Will return one if this Face is concave with the first connected cFullFace it is touching. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_full_face_data_ae05debbc355b5c55669e4f836780a7f8}{IsConcave} (\hyperlink{classc_face}{cFace} lpOther)
+\begin{DoxyCompactList}\small\item\em Will return 1 if this Face is concave (and shares an edge) with the \hyperlink{classc_face}{cFace} lpOther. \item\end{DoxyCompactList}\item 
+uint8 \hyperlink{classc_full_face_data_a625231204c052ebf231c2a1029776c90}{NotSharedVertex} (\hyperlink{classc_face}{cFace} \&lpOther)
+\begin{DoxyCompactList}\small\item\em Will return the number of the Vertex owned by lpOther which is not shared by this face (0,1,2). If all faces are shared, will return 3. If no faces are shared will return 2. \item\end{DoxyCompactList}\item 
+uint8 \hyperlink{classc_full_face_data_a836ca82086bc8b6301d7536d8aa51a45}{SharesVertex} (\hyperlink{classc_vertex}{cVertex} $\ast$lpOther)
+\begin{DoxyCompactList}\small\item\em Will return the number of verteces that this object shares with the array of 3 \hyperlink{classc_vertex}{cVertex} object pointed to by lpOther (0,1,2,3). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_full_face_data_a3792250bc347ccd2dc480bfc36550d3c}{OutputIMFFullFace} (ofstream \&FileStream)
+\item 
+void \hyperlink{classc_full_face_data_a0c4e4d07909a7896d21b69229cd10ac9}{LoadIMFFullFace} (ifstream \&FileStream)
+\item 
+void \hyperlink{classc_full_face_data_afc0dbbf171729f20ce08d9cea72f821c}{Display} ()
+\begin{DoxyCompactList}\small\item\em Will output this object to the terminal. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is a \hyperlink{classc_face}{cFace} with expanded Functionality. Allows the user to check information about the face. See list of functions for information. 
+
+Definition at line 7 of file WTcFullFaceData.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_full_face_data_a63302db2911c4cace838a43347b79167}{
+\index{cFullFaceData@{cFullFaceData}!cFullFaceData@{cFullFaceData}}
+\index{cFullFaceData@{cFullFaceData}!cFullFaceData@{cFullFaceData}}
+\subsubsection[{cFullFaceData}]{\setlength{\rightskip}{0pt plus 5cm}cFullFaceData::cFullFaceData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_full_face_data_a63302db2911c4cace838a43347b79167}
+
+
+Definition at line 174 of file WTcFullFaceData.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_full_face_data_afc0dbbf171729f20ce08d9cea72f821c}{
+\index{cFullFaceData@{cFullFaceData}!Display@{Display}}
+\index{Display@{Display}!cFullFaceData@{cFullFaceData}}
+\subsubsection[{Display}]{\setlength{\rightskip}{0pt plus 5cm}void cFullFaceData::Display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_full_face_data_afc0dbbf171729f20ce08d9cea72f821c}
+
+
+Will output this object to the terminal. 
+
+
+
+Definition at line 34 of file WTcFullFaceData.cpp.
+
+\hypertarget{classc_full_face_data_a53a99ced9de4ecdede38b2e8d63458e9}{
+\index{cFullFaceData@{cFullFaceData}!FileSize@{FileSize}}
+\index{FileSize@{FileSize}!cFullFaceData@{cFullFaceData}}
+\subsubsection[{FileSize}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cFullFaceData::FileSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_full_face_data_a53a99ced9de4ecdede38b2e8d63458e9}
+
+
+Reimplemented from \hyperlink{classc_face_ac2da0ca5e4269e12016b74c6443cde32}{cFace}.
+
+
+
+Definition at line 3 of file WTcFullFaceData.cpp.
+
+\hypertarget{classc_full_face_data_a8098f4af2f6d152bf27e4d8692421ce9}{
+\index{cFullFaceData@{cFullFaceData}!Fill@{Fill}}
+\index{Fill@{Fill}!cFullFaceData@{cFullFaceData}}
+\subsubsection[{Fill}]{\setlength{\rightskip}{0pt plus 5cm}void cFullFaceData::Fill (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lpVertex, }
+\item[{uint16 $\ast$}]{mpFace}
+\end{DoxyParamCaption}
+)}}
+\label{classc_full_face_data_a8098f4af2f6d152bf27e4d8692421ce9}
+
+
+Will Fill the data for this Object from a array of floats representing vertex coordinates (3 floats to a vertex) and an array of 3 uint16s indicating which verteces to use. 
+
+
+
+Definition at line 43 of file WTcFullFaceData.cpp.
+
+\hypertarget{classc_full_face_data_adc17fbda36ec28287c88dccb893b23d5}{
+\index{cFullFaceData@{cFullFaceData}!IsConcave@{IsConcave}}
+\index{IsConcave@{IsConcave}!cFullFaceData@{cFullFaceData}}
+\subsubsection[{IsConcave}]{\setlength{\rightskip}{0pt plus 5cm}bool cFullFaceData::IsConcave (
+\begin{DoxyParamCaption}
+\item[{{\bf cFullFaceList} \&}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_full_face_data_adc17fbda36ec28287c88dccb893b23d5}
+
+
+Will return one if this Face is concave with the first connected cFullFace it is touching. 
+
+
+
+Definition at line 77 of file WTcFullFaceData.cpp.
+
+\hypertarget{classc_full_face_data_ae05debbc355b5c55669e4f836780a7f8}{
+\index{cFullFaceData@{cFullFaceData}!IsConcave@{IsConcave}}
+\index{IsConcave@{IsConcave}!cFullFaceData@{cFullFaceData}}
+\subsubsection[{IsConcave}]{\setlength{\rightskip}{0pt plus 5cm}bool cFullFaceData::IsConcave (
+\begin{DoxyParamCaption}
+\item[{{\bf cFace}}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_full_face_data_ae05debbc355b5c55669e4f836780a7f8}
+
+
+Will return 1 if this Face is concave (and shares an edge) with the \hyperlink{classc_face}{cFace} lpOther. 
+
+
+
+Definition at line 109 of file WTcFullFaceData.cpp.
+
+\hypertarget{classc_full_face_data_a0c4e4d07909a7896d21b69229cd10ac9}{
+\index{cFullFaceData@{cFullFaceData}!LoadIMFFullFace@{LoadIMFFullFace}}
+\index{LoadIMFFullFace@{LoadIMFFullFace}!cFullFaceData@{cFullFaceData}}
+\subsubsection[{LoadIMFFullFace}]{\setlength{\rightskip}{0pt plus 5cm}void cFullFaceData::LoadIMFFullFace (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_full_face_data_a0c4e4d07909a7896d21b69229cd10ac9}
+
+
+Definition at line 25 of file WTcFullFaceData.cpp.
+
+\hypertarget{classc_full_face_data_a625231204c052ebf231c2a1029776c90}{
+\index{cFullFaceData@{cFullFaceData}!NotSharedVertex@{NotSharedVertex}}
+\index{NotSharedVertex@{NotSharedVertex}!cFullFaceData@{cFullFaceData}}
+\subsubsection[{NotSharedVertex}]{\setlength{\rightskip}{0pt plus 5cm}uint8 cFullFaceData::NotSharedVertex (
+\begin{DoxyParamCaption}
+\item[{{\bf cFace} \&}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_full_face_data_a625231204c052ebf231c2a1029776c90}
+
+
+Will return the number of the Vertex owned by lpOther which is not shared by this face (0,1,2). If all faces are shared, will return 3. If no faces are shared will return 2. 
+
+
+
+Definition at line 95 of file WTcFullFaceData.cpp.
+
+\hypertarget{classc_full_face_data_a7a9bdcb3c4795ed42582aceb5624c04b}{
+\index{cFullFaceData@{cFullFaceData}!operator=@{operator=}}
+\index{operator=@{operator=}!cFullFaceData@{cFullFaceData}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cFullFaceData} \& cFullFaceData::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf cFullFaceData} \&}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_full_face_data_a7a9bdcb3c4795ed42582aceb5624c04b}
+
+
+= operator 
+
+
+
+Definition at line 68 of file WTcFullFaceData.cpp.
+
+\hypertarget{classc_full_face_data_a3792250bc347ccd2dc480bfc36550d3c}{
+\index{cFullFaceData@{cFullFaceData}!OutputIMFFullFace@{OutputIMFFullFace}}
+\index{OutputIMFFullFace@{OutputIMFFullFace}!cFullFaceData@{cFullFaceData}}
+\subsubsection[{OutputIMFFullFace}]{\setlength{\rightskip}{0pt plus 5cm}void cFullFaceData::OutputIMFFullFace (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_full_face_data_a3792250bc347ccd2dc480bfc36550d3c}
+
+
+Definition at line 16 of file WTcFullFaceData.cpp.
+
+\hypertarget{classc_full_face_data_a9397eb74f9f3dd7fb82ec85c7cb291f5}{
+\index{cFullFaceData@{cFullFaceData}!SamePlane@{SamePlane}}
+\index{SamePlane@{SamePlane}!cFullFaceData@{cFullFaceData}}
+\subsubsection[{SamePlane}]{\setlength{\rightskip}{0pt plus 5cm}bool cFullFaceData::SamePlane (
+\begin{DoxyParamCaption}
+\item[{{\bf cPlane} \&}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_full_face_data_a9397eb74f9f3dd7fb82ec85c7cb291f5}
+
+
+Will return 1 if the \hyperlink{classc_plane}{cPlane} lpOther is in the same plane as this object. 
+
+
+
+Definition at line 63 of file WTcFullFaceData.cpp.
+
+\hypertarget{classc_full_face_data_a836ca82086bc8b6301d7536d8aa51a45}{
+\index{cFullFaceData@{cFullFaceData}!SharesVertex@{SharesVertex}}
+\index{SharesVertex@{SharesVertex}!cFullFaceData@{cFullFaceData}}
+\subsubsection[{SharesVertex}]{\setlength{\rightskip}{0pt plus 5cm}uint8 cFullFaceData::SharesVertex (
+\begin{DoxyParamCaption}
+\item[{{\bf cVertex} $\ast$}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_full_face_data_a836ca82086bc8b6301d7536d8aa51a45}
+
+
+Will return the number of verteces that this object shares with the array of 3 \hyperlink{classc_vertex}{cVertex} object pointed to by lpOther (0,1,2,3). 
+
+
+
+Definition at line 53 of file WTcFullFaceData.cpp.
+

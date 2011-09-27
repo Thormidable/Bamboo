@@ -1,0 +1,16 @@
+These correspond to the Flag values for \hyperlink{classc_signal_a77af8271fc7ffb8696ba73a01e213808}{cSignal::Signal(SIGNAL lsFlags)}. 
+\begin{DoxyCode}
+ Signal(_S_SLEEP);
+ lpOtherProcess->Signal(_S_WAKE_TREE);
+\end{DoxyCode}
+
+
+\_\-S\_\-KILL
+\begin{DoxyItemize}
+\item Kill the process. It will be deactivated and no longer run. Once the system is stable, the Kernel will delete the object. \_\-S\_\-SLEEP
+\item Sleep the process. It will be deactivated, but will not get deleted. The Process will continue to exist, but will not run. Objects this Process controls will remain and can be controlled from other processes. \_\-S\_\-WAKE
+\item Wake the Process. A Sleeping process will be reawakened and will start to run again. \_\-S\_\-KILL\_\-TREE
+\item If the Variable WT\_\-USE\_\-PARENT\_\-TREE is true, this will kill the signaled object and any child objects it created. This will act recursively until all children, grandchildren, great grandchildren etc. have been killed. \_\-S\_\-SLEEP\_\-TREE
+\item If the Variable WT\_\-USE\_\-PARENT\_\-TREE is true, this will Sleep the signaled object and any child objects it created. This will act recursively until all children, grandchildren, great grandchildren etc. have been Slept. \_\-S\_\-WAKE\_\-TREE
+\item If the Variable WT\_\-USE\_\-PARENT\_\-TREE is true, this will Wake the signaled object and any child objects it created. This will act recursively until all children, grandchildren, great grandchildren etc. have been Wakened. 
+\end{DoxyItemize}

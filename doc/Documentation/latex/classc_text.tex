@@ -1,0 +1,266 @@
+\hypertarget{classc_text}{
+\section{cText Class Reference}
+\label{classc_text}\index{cText@{cText}}
+}
+
+
+This class is a text renderable object.  
+
+
+
+
+Inheritance diagram for cText:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classc_text__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cText:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_text__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_text_a22c63dd27464b40ed6e30ce5e4244334}{cText} (const char $\ast$lsText)
+\begin{DoxyCompactList}\small\item\em Creates a text object and gives it a text string to use. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_text_a9784e9fa562a9b942a24e1dbfda0f485}{cText} ()
+\begin{DoxyCompactList}\small\item\em Creates an empty text object with no text string. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_text_a589fef21034f30fbf71662d079e7fcd7}{Setup} ()
+\item 
+void \hyperlink{classc_text_ae0bb8461ef260f710b0ad6a4238fd577}{Font} (\hyperlink{classv_font}{vFont} $\ast$lpFont)
+\begin{DoxyCompactList}\small\item\em Will set the font texture the text will use. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_text_ae78617758a56e1c67e40936a0f03748a}{Size} (float liSize)
+\begin{DoxyCompactList}\small\item\em Will set the size of the characters. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_text_a7c9689bdce14d24267277a2ebdb08fdf}{Text} (char $\ast$lsText)
+\begin{DoxyCompactList}\small\item\em Will set the text string the \hyperlink{classc_text}{cText} object will render. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classc_text_a80b5c9b1cbad8e7045f0437bf34ad92a}{Value} (const T \&t)
+\begin{DoxyCompactList}\small\item\em Will accept a generic data type to render to the screen (will convert to a string). \item\end{DoxyCompactList}\item 
+unsigned int \hyperlink{classc_text_ab10f62a2c5c568ab197a928d565e3da4}{TextureNumber} ()
+\begin{DoxyCompactList}\small\item\em virtual function for polymorphism. Should return the texture ID of this renderable objects Texture. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_text_a527fc91fc0c3e5a2b0a7fb366321ef8b}{RenderPainter} (uint8 liLevel)
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphism. see cCamera::RenderPainter(); \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_text_add728aeca513f1c355b933a77038162a}{RenderToPainter} ()
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphism. see cCamera::RenderToPainter(); \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_text_ad331a52b579e01af3b3151e1fc2b52fd}{Render} ()
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphiss. see \hyperlink{classc_camera_acfe96d0953540fa3938e4d415d7cb791}{cCamera::Render()}; \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is a text renderable object. 
+
+Definition at line 6 of file WTcTextureText.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_text_a22c63dd27464b40ed6e30ce5e4244334}{
+\index{cText@{cText}!cText@{cText}}
+\index{cText@{cText}!cText@{cText}}
+\subsubsection[{cText}]{\setlength{\rightskip}{0pt plus 5cm}cText::cText (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{lsText}
+\end{DoxyParamCaption}
+)}}
+\label{classc_text_a22c63dd27464b40ed6e30ce5e4244334}
+
+
+Creates a text object and gives it a text string to use. 
+
+
+
+Definition at line 99 of file WTcTextureText.cpp.
+
+\hypertarget{classc_text_a9784e9fa562a9b942a24e1dbfda0f485}{
+\index{cText@{cText}!cText@{cText}}
+\index{cText@{cText}!cText@{cText}}
+\subsubsection[{cText}]{\setlength{\rightskip}{0pt plus 5cm}cText::cText (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_text_a9784e9fa562a9b942a24e1dbfda0f485}
+
+
+Creates an empty text object with no text string. 
+
+
+
+Definition at line 108 of file WTcTextureText.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_text_ae0bb8461ef260f710b0ad6a4238fd577}{
+\index{cText@{cText}!Font@{Font}}
+\index{Font@{Font}!cText@{cText}}
+\subsubsection[{Font}]{\setlength{\rightskip}{0pt plus 5cm}void cText::Font (
+\begin{DoxyParamCaption}
+\item[{{\bf vFont} $\ast$}]{lpFont}
+\end{DoxyParamCaption}
+)}}
+\label{classc_text_ae0bb8461ef260f710b0ad6a4238fd577}
+
+
+Will set the font texture the text will use. 
+
+
+
+Definition at line 114 of file WTcTextureText.cpp.
+
+\hypertarget{classc_text_ad331a52b579e01af3b3151e1fc2b52fd}{
+\index{cText@{cText}!Render@{Render}}
+\index{Render@{Render}!cText@{cText}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void cText::Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_text_ad331a52b579e01af3b3151e1fc2b52fd}
+
+
+virtual function to allow polymorphiss. see \hyperlink{classc_camera_acfe96d0953540fa3938e4d415d7cb791}{cCamera::Render()}; 
+
+
+
+Implements \hyperlink{classc_render_object_ab0db1b7db1a1d4210511d9d95634fcce}{cRenderObject}.
+
+
+
+Definition at line 53 of file WTcTextureText.cpp.
+
+\hypertarget{classc_text_a527fc91fc0c3e5a2b0a7fb366321ef8b}{
+\index{cText@{cText}!RenderPainter@{RenderPainter}}
+\index{RenderPainter@{RenderPainter}!cText@{cText}}
+\subsubsection[{RenderPainter}]{\setlength{\rightskip}{0pt plus 5cm}void cText::RenderPainter (
+\begin{DoxyParamCaption}
+\item[{uint8}]{liLevel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_text_a527fc91fc0c3e5a2b0a7fb366321ef8b}
+
+
+virtual function to allow polymorphism. see cCamera::RenderPainter(); 
+
+
+
+Implements \hyperlink{classc_render_object_a16beccc30dfea79c3988508c1420d54b}{cRenderObject}.
+
+
+
+Definition at line 4 of file WTcTextureText.cpp.
+
+\hypertarget{classc_text_add728aeca513f1c355b933a77038162a}{
+\index{cText@{cText}!RenderToPainter@{RenderToPainter}}
+\index{RenderToPainter@{RenderToPainter}!cText@{cText}}
+\subsubsection[{RenderToPainter}]{\setlength{\rightskip}{0pt plus 5cm}void cText::RenderToPainter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_text_add728aeca513f1c355b933a77038162a}
+
+
+virtual function to allow polymorphism. see cCamera::RenderToPainter(); 
+
+
+
+Implements \hyperlink{classc_render_object_a130139cc8e1f5219ddabc6192f98afa8}{cRenderObject}.
+
+
+
+Definition at line 34 of file WTcTextureText.cpp.
+
+\hypertarget{classc_text_a589fef21034f30fbf71662d079e7fcd7}{
+\index{cText@{cText}!Setup@{Setup}}
+\index{Setup@{Setup}!cText@{cText}}
+\subsubsection[{Setup}]{\setlength{\rightskip}{0pt plus 5cm}void cText::Setup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_text_a589fef21034f30fbf71662d079e7fcd7}
+
+
+Definition at line 94 of file WTcTextureText.cpp.
+
+\hypertarget{classc_text_ae78617758a56e1c67e40936a0f03748a}{
+\index{cText@{cText}!Size@{Size}}
+\index{Size@{Size}!cText@{cText}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}void cText::Size (
+\begin{DoxyParamCaption}
+\item[{float}]{liSize}
+\end{DoxyParamCaption}
+)}}
+\label{classc_text_ae78617758a56e1c67e40936a0f03748a}
+
+
+Will set the size of the characters. 
+
+
+
+Definition at line 120 of file WTcTextureText.cpp.
+
+\hypertarget{classc_text_a7c9689bdce14d24267277a2ebdb08fdf}{
+\index{cText@{cText}!Text@{Text}}
+\index{Text@{Text}!cText@{cText}}
+\subsubsection[{Text}]{\setlength{\rightskip}{0pt plus 5cm}void cText::Text (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{lsText}
+\end{DoxyParamCaption}
+)}}
+\label{classc_text_a7c9689bdce14d24267277a2ebdb08fdf}
+
+
+Will set the text string the \hyperlink{classc_text}{cText} object will render. 
+
+
+
+Definition at line 87 of file WTcTextureText.cpp.
+
+\hypertarget{classc_text_ab10f62a2c5c568ab197a928d565e3da4}{
+\index{cText@{cText}!TextureNumber@{TextureNumber}}
+\index{TextureNumber@{TextureNumber}!cText@{cText}}
+\subsubsection[{TextureNumber}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int cText::TextureNumber (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_text_ab10f62a2c5c568ab197a928d565e3da4}
+
+
+virtual function for polymorphism. Should return the texture ID of this renderable objects Texture. 
+
+
+
+Reimplemented from \hyperlink{classc_render_object_ad2c6096f2e9d99e19d1ca89814567f6e}{cRenderObject}.
+
+
+
+Definition at line 38 of file WTcTextureText.h.
+
+\hypertarget{classc_text_a80b5c9b1cbad8e7045f0437bf34ad92a}{
+\index{cText@{cText}!Value@{Value}}
+\index{Value@{Value}!cText@{cText}}
+\subsubsection[{Value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void cText::Value (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_text_a80b5c9b1cbad8e7045f0437bf34ad92a}
+
+
+Will accept a generic data type to render to the screen (will convert to a string). 
+
+
+
+Definition at line 51 of file WTcTextureText.h.
+

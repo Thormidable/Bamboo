@@ -1,0 +1,120 @@
+\hypertarget{classc_reference_list}{
+\section{cReferenceList Class Reference}
+\label{classc_reference_list}\index{cReferenceList@{cReferenceList}}
+}
+
+
+This will Load from an IMF and store a list of string type references. This will load a list of string type references from an IMF filestream. The References can be accessed as if they were an array.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_reference_list_ab32c457ba5f81df31104e72401f971d0}{cReferenceList} ()
+\begin{DoxyCompactList}\small\item\em This is a public constructor and will initialise the function. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_reference_list_a80fa096249122d31be380c795ed04f23}{$\sim$cReferenceList} ()
+\begin{DoxyCompactList}\small\item\em This is a public deconstructor and will delete the all the references and mpReferenceList. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_reference_list_a7ef296a2936e85cc648c52401662d38d}{LoadIMF} (ifstream \&FileStream)
+\begin{DoxyCompactList}\small\item\em This will load a Reference List from an IMF file. FileStream should have just reached the start of a Reference List. \item\end{DoxyCompactList}\item 
+int8 $\ast$ \hyperlink{classc_reference_list_a95482f62d9b0ccf0a521c56f2930b1b8}{Reference} (uint32 liID)
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the Reference at position liID in the array mpReferenceList. \item\end{DoxyCompactList}\item 
+uint32 \hyperlink{classc_reference_list_a62594e7b164aa1f430a928cd9af655e3}{Size} ()
+\begin{DoxyCompactList}\small\item\em This will return the number of references stored by this reference list. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This will Load from an IMF and store a list of string type references. This will load a list of string type references from an IMF filestream. The References can be accessed as if they were an array. 
+
+Definition at line 9 of file WTcReferenceList.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_reference_list_ab32c457ba5f81df31104e72401f971d0}{
+\index{cReferenceList@{cReferenceList}!cReferenceList@{cReferenceList}}
+\index{cReferenceList@{cReferenceList}!cReferenceList@{cReferenceList}}
+\subsubsection[{cReferenceList}]{\setlength{\rightskip}{0pt plus 5cm}cReferenceList::cReferenceList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_reference_list_ab32c457ba5f81df31104e72401f971d0}
+
+
+This is a public constructor and will initialise the function. 
+
+
+
+Definition at line 17 of file WTcReferenceList.h.
+
+\hypertarget{classc_reference_list_a80fa096249122d31be380c795ed04f23}{
+\index{cReferenceList@{cReferenceList}!$\sim$cReferenceList@{$\sim$cReferenceList}}
+\index{$\sim$cReferenceList@{$\sim$cReferenceList}!cReferenceList@{cReferenceList}}
+\subsubsection[{$\sim$cReferenceList}]{\setlength{\rightskip}{0pt plus 5cm}cReferenceList::$\sim$cReferenceList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_reference_list_a80fa096249122d31be380c795ed04f23}
+
+
+This is a public deconstructor and will delete the all the references and mpReferenceList. 
+
+
+
+Definition at line 26 of file WTcReferenceList.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_reference_list_a7ef296a2936e85cc648c52401662d38d}{
+\index{cReferenceList@{cReferenceList}!LoadIMF@{LoadIMF}}
+\index{LoadIMF@{LoadIMF}!cReferenceList@{cReferenceList}}
+\subsubsection[{LoadIMF}]{\setlength{\rightskip}{0pt plus 5cm}void cReferenceList::LoadIMF (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_reference_list_a7ef296a2936e85cc648c52401662d38d}
+
+
+This will load a Reference List from an IMF file. FileStream should have just reached the start of a Reference List. 
+
+
+
+Definition at line 3 of file WTcReferenceList.cpp.
+
+\hypertarget{classc_reference_list_a95482f62d9b0ccf0a521c56f2930b1b8}{
+\index{cReferenceList@{cReferenceList}!Reference@{Reference}}
+\index{Reference@{Reference}!cReferenceList@{cReferenceList}}
+\subsubsection[{Reference}]{\setlength{\rightskip}{0pt plus 5cm}int8 $\ast$ cReferenceList::Reference (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liID}
+\end{DoxyParamCaption}
+)}}
+\label{classc_reference_list_a95482f62d9b0ccf0a521c56f2930b1b8}
+
+
+This will return a pointer to the Reference at position liID in the array mpReferenceList. 
+
+
+
+Definition at line 36 of file WTcReferenceList.cpp.
+
+\hypertarget{classc_reference_list_a62594e7b164aa1f430a928cd9af655e3}{
+\index{cReferenceList@{cReferenceList}!Size@{Size}}
+\index{Size@{Size}!cReferenceList@{cReferenceList}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cReferenceList::Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_reference_list_a62594e7b164aa1f430a928cd9af655e3}
+
+
+This will return the number of references stored by this reference list. 
+
+
+
+Definition at line 41 of file WTcReferenceList.cpp.
+

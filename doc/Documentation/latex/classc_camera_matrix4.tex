@@ -1,0 +1,1340 @@
+\hypertarget{classc_camera_matrix4}{
+\section{cCameraMatrix4 Class Reference}
+\label{classc_camera_matrix4}\index{cCameraMatrix4@{cCameraMatrix4}}
+}
+
+
+This is a translation matrix for a camera object. This is a translation matrix for a camera. All the translations are inverted. Distances are 'reversed', Local rotations are 'globalised' and Global roatations are 'localised'. Effectively all the translations are inverted before they are applied to this matrix.  
+
+
+
+
+Inheritance diagram for cCameraMatrix4:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classc_camera_matrix4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cCameraMatrix4:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classc_camera_matrix4__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_camera_matrix4_a99df6d312702e5474c5fedad42c95026}{cCameraMatrix4} ()
+\begin{DoxyCompactList}\small\item\em This will create this matrix, and initialise all the static data for operations. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_camera_matrix4_a4f3456fc67fbd37692a8daa9d11d5fc6}{Determinant} ()
+\begin{DoxyCompactList}\small\item\em This will return the determinant of this matrix. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_ac1fa4dd9add669a8faecd0ca79713278}{Transpose} ()
+\begin{DoxyCompactList}\small\item\em This will return the transpose of this objects matrix ready for multiplications etc. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a97d111c444dd87ecec278e585fe058a7}{InvSign} ()
+\begin{DoxyCompactList}\small\item\em This will make all terms of the matrix, the opposite sign to what they area. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_camera_matrix4_ad8aad043cd8c21d5323b56cbcc90ef78}{Matrix} ()
+\begin{DoxyCompactList}\small\item\em This will return a pointer to this objects matrix. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_camera_matrix4_a89fba901320f6dda9a6b92bac09db915}{Position} ()
+\begin{DoxyCompactList}\small\item\em This will return the position vector of this objects matrix. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_camera_matrix4_a0133c16b734fa93e767ea89964799fb5}{X} ()
+\begin{DoxyCompactList}\small\item\em This will return the X position of this objects matrix. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_camera_matrix4_aec72cb78c62b2e0970824262b0b4aa1f}{Y} ()
+\begin{DoxyCompactList}\small\item\em This will return the Y position of this objects matrix. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_camera_matrix4_a7e3030fcedbd3b74270b26ea2b61904c}{Z} ()
+\begin{DoxyCompactList}\small\item\em This will return the Z position of this objects matrix. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a23a05c1aff8a58dc662f5b871b422c17}{Identity} ()
+\begin{DoxyCompactList}\small\item\em This will restore this objects matrix to an Identity matrix. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a1ec81a7ec3274f89d2b8fb94923345c0}{Zero} ()
+\begin{DoxyCompactList}\small\item\em This will make the entire objects matrix equal to zero. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_a975232c74548b9af68354bf6c19351d8}{operator$\ast$} (float \&lVal)
+\begin{DoxyCompactList}\small\item\em This will multiplty the matrix by a float. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_a41e56ee4a22ed37543c120d663e4bc3c}{operator$\ast$} (const float lVal)
+\begin{DoxyCompactList}\small\item\em This will multiplty the matrix by a float. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_ac3ca3f392c5046dd428cfe8cde194d37}{operator$\ast$} (\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \&lVal)
+\begin{DoxyCompactList}\small\item\em This will multiply this matrix by the matrix lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} $\ast$ \hyperlink{classc_camera_matrix4_a67a5947084f07eae0dd698477e1a7689}{operator$\ast$} (\hyperlink{classc_camera_matrix4}{cCameraMatrix4} $\ast$lVal)
+\begin{DoxyCompactList}\small\item\em This will multiply this matrix by the matrix pointed to by lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_a71c4f0d6ee680f0cd511354de0033c64}{operator/} (float \&lVal)
+\begin{DoxyCompactList}\small\item\em This will devide this objects matrix by the float lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_ab8d3c0c3df306102db000c37323692a3}{operator/} (const float lVal)
+\begin{DoxyCompactList}\small\item\em This will devide this objects matrix by the float lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_a97ada5a5b0698d4e8f383754f30cbd2b}{operator+} (float \&lVal)
+\begin{DoxyCompactList}\small\item\em This will add lVal to this objects matrix. lVal is added to every position in the matrix. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_adb619821208a735d6fd262770d0dbf8a}{operator+} (const float lVal)
+\begin{DoxyCompactList}\small\item\em This will add lVal to this objects matrix. lVal is added to every position in the matrix. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_a4456564f6c57e7a9072ab31c242bef49}{operator+} (\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \&lVal)
+\begin{DoxyCompactList}\small\item\em This will add this objects matrix and the matrix lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_a42eb30055c9b58f2fc3fabf8201e7929}{operator-\/} (float \&lVal)
+\begin{DoxyCompactList}\small\item\em This will deduct lVal from this objects matrix. lVal is deducted from every position in the matrix. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_a3f13c8e5f71d9c158332fe87a49f1b61}{operator-\/} (const float lVal)
+\begin{DoxyCompactList}\small\item\em This will deduct lVal from this objects matrix. lVal is deducted from every position in the matrix. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_a97c7f6820b87ea9a217c4412e0c89e49}{operator-\/} (\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \&lVal)
+\begin{DoxyCompactList}\small\item\em This will deduct the matrix lVal from this objects matrix. \item\end{DoxyCompactList}\item 
+float \& \hyperlink{classc_camera_matrix4_a57bce39e1e5ff464edd9dd1c32fcdd3b}{operator\mbox{[}$\,$\mbox{]}} (uint16 liPos)
+\begin{DoxyCompactList}\small\item\em This will return the float in the position liPos in this objects matrix. \item\end{DoxyCompactList}\item 
+float \& \hyperlink{classc_camera_matrix4_aeae4d353c1153e9eb15461eac399a29f}{operator()} (uint16 liColumn, uint16 liRow)
+\begin{DoxyCompactList}\small\item\em This will return the float in the position \mbox{[}liColumn,liRow\mbox{]} in this objects matrix. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_camera_matrix4_a21020ff4493a379b107a98c8a699d5f7}{operator=} (float \&lVal)
+\begin{DoxyCompactList}\small\item\em This will set every float in this objects matrix to lVal. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_camera_matrix4_a13c2e801ef13951525908a0985cf2ba7}{operator=} (const float lVal)
+\begin{DoxyCompactList}\small\item\em This will set every float in this objects matrix to lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_a570900cf46a3c6e8a31e957a4dd24103}{operator=} (\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \&lVal)
+\begin{DoxyCompactList}\small\item\em This will set this objects matrix to be the same as the matrix lVal. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_camera_matrix4}{cCameraMatrix4} $\ast$ \hyperlink{classc_camera_matrix4_aabdb9adddb777e59ae8594cb62b0e02e}{operator=} (\hyperlink{classc_camera_matrix4}{cCameraMatrix4} $\ast$lVal)
+\begin{DoxyCompactList}\small\item\em This will set this objects matrix to be the same as the matrix lVal. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a62fa2879539cc733e661d02b8a898578}{Position} (\hyperlink{classc2_d_vf}{c2DVf} $\ast$lpPosition)
+\begin{DoxyCompactList}\small\item\em This will set this objects matrix position (2D -\/ X,Y) vector to be the same as lpPosition. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a293ac7d2919eae7205b568ea56fa104c}{Position} (float lfX, float lfY)
+\begin{DoxyCompactList}\small\item\em This will set this objects matrix position vector to be lfX,lfY. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a7110b0f3aa924a2cfefe8ca149e0b41f}{Position} (\hyperlink{classc3_d_vf}{c3DVf} $\ast$lpPosition)
+\begin{DoxyCompactList}\small\item\em This will set this objects matrix position vector to be the same as lpPosition. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a1aa471464a30ce27fe339b743b840516}{Position} (float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will set this objects matrix position vector to be lfX,lfY,lfZ. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_af130ddef040458f01b9a2365f41c567a}{PositionX} (float lfX)
+\begin{DoxyCompactList}\small\item\em This will set this objects X position to he lfX. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_adce3f6365faf3af907994f50c004c736}{PositionY} (float lfY)
+\begin{DoxyCompactList}\small\item\em This will set this objects Y position to he lfY. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a6ea814a92ce2d7fcc1ba66490127b2f2}{PositionZ} (float lfZ)
+\begin{DoxyCompactList}\small\item\em This will set this objects Z position to he lfZ. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a4a07cdf5cb578378193487a1ac304380}{AdvanceX} (float lfDistance)
+\begin{DoxyCompactList}\small\item\em This will advance the position of this objects X position by lfDistance along local axis. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a1c644144c6673fad0d45ac2a28065edb}{AdvanceY} (float lfDistance)
+\begin{DoxyCompactList}\small\item\em This will advance the position of this objects Y position by lfDistance along local axis. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a18915056c461b31b5ea916715fa2582f}{AdvanceZ} (float lfDistance)
+\begin{DoxyCompactList}\small\item\em This will advance the position of this objects Z position by lfDistance along local axis. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_acd0e691c270f18c80965bf8da4442d5b}{Advance} (float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will advance the position of this objects X,Y and Z positions by lfX,lfY and lfZ along local axis. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a69ef5c53bd239d2f1041ac9330c2cc08}{GAdvanceX} (float lfDistance)
+\begin{DoxyCompactList}\small\item\em This will advance the position of this objects X position by lfDistance along global axis. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a7cb5d64085acdcc74dcad1e965a52b3b}{GAdvanceY} (float lfDistance)
+\begin{DoxyCompactList}\small\item\em This will advance the position of this objects Y position by lfDistance along global axis. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_afd68814e78dd2ffaec2f9bc4289aca36}{GAdvanceZ} (float lfDistance)
+\begin{DoxyCompactList}\small\item\em This will advance the position of this objects Z position by lfDistance along global axis. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a342b888f43a65b6c4a14b818c2519157}{GAdvance} (float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will advance the position of this objects X,Y and Z positions by lfX,lfY and lfZ along global axis. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_ab9ea2ea9b429824586d4fa74e709426e}{LRotate} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will localy rotate the object by lfAngle radians about the Z axis. This is suitable to be used by 2D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a08ffa3e8e4622821ba80aaa51300e645}{LRotateX} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object by lfAngle radians about its local X axis. This is suitable for use by 3D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a369f1a97e289850afffd03302bb5bd0f}{LRotateY} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object by lfAngle radians about its local Y axis. This is suitable for use by 3D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_ad4574f0b96ef29472ca6a286f4d8204d}{LRotateZ} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object by lfAngle radians about its local Z axis. This is suitable for use by 3D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a09c8d44629bf63643c8f09ccdc2294bc}{GRotateX} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object by lfAngle radians about its global X axis. This is suitable for use by 3D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a48eb5374c0e7fa4eca25f48a6411052d}{GRotateY} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object by lfAngle radians about its global Y axis. This is suitable for use by 3D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a993d7410719b1fd7d871f728527a3947}{GRotateZ} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will rotate the object by lfAngle radians about its global Z axis. This is suitable for use by 3D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a2fc16f6a7aa3ffec1317f71645aa857b}{GRotateX} (float lfAngle, float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will rotate the object by lfAngle radians about the global X axis of the point lfX,lfY,lfZ. This is suitable for use by 3D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a775326e51bf492340e8768d219a4e5e2}{GRotateY} (float lfAngle, float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will rotate the object by lfAngle radians about the global Y axis of the point lfX,lfY,lfZ. This is suitable for use by 3D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a8c99ce20f8594e9a66e0a7b2830ec9e9}{GRotateZ} (float lfAngle, float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em This will rotate the object by lfAngle radians about the global Z axis of the point lfX,lfY,lfZ. This is suitable for use by 3D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a6be0f1f82cc4ee5a5953cb3b569b4285}{Angle} (float lfAngle)
+\begin{DoxyCompactList}\small\item\em This will set the current objects matrix to be rotated to the absolute angle lfAngle. This is suitable for 2D objects. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a620ba52edfd711f011d43a441eece9bc}{Resize} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale this objects matrix by a factor of lfScale. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a53c3d81781d403c9bf9671879f79a838}{LResizeX} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale this objects local X axis by a factor of lfScale. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a12eda8948b16c1a2818093016d8ef755}{LResizeY} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale this objects local Y axis by a factor of lfScale. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a6f1fbcfe585f86002cb586eab9df7c7d}{LResizeZ} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale this objects local Z axis by a factor of lfScale. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a9984a8427cd90e77a2fb6462ecf99ecc}{GResizeX} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale this objects globally along the X axis by a factor of lfScale. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_aa2a9326b7f2a6f00aa5b45057c69ecd3}{GResizeY} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale this objects globally along the Y axis by a factor of lfScale. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_a1ab7808cf06ddf7ec373b926c77f85c6}{GResizeZ} (float lfScale)
+\begin{DoxyCompactList}\small\item\em This will scale this objects globally along the Z axis by a factor of lfScale. \item\end{DoxyCompactList}\item 
+uint32 \hyperlink{classc_camera_matrix4_adf5481b8c761008b9611e0b071e70914}{Distance3D} (float $\ast$lpOther)
+\begin{DoxyCompactList}\small\item\em This will return the 3D distance between this matrix and the matrix pointed to by lpOther. \item\end{DoxyCompactList}\item 
+uint32 \hyperlink{classc_camera_matrix4_a02c68197ed3c64c95985269f5b9f66a4}{Distance2D} (float $\ast$lpOther)
+\begin{DoxyCompactList}\small\item\em This will return the 2D distance between this matrix and the matrix pointed to by lpOther. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_matrix4_aeee787e0f5895a613e8be9efbade408f}{Follow} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lpOther, float lfDist)
+\item 
+void \hyperlink{classc_camera_matrix4_aa8ca47d59f6b3b454d700329bdbbdeea}{PointAt} (float $\ast$mpPos)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classc_camera_matrix4_afb48ac51e480abcece16e031d8bc300a}{mpPosition} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em The position of this matrix has been seperated from the rest of the matrix as the camera should rotate around 0,0,0, not itself? \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a translation matrix for a camera object. This is a translation matrix for a camera. All the translations are inverted. Distances are 'reversed', Local rotations are 'globalised' and Global roatations are 'localised'. Effectively all the translations are inverted before they are applied to this matrix. 
+
+Definition at line 10 of file WTcCameraMatrix4.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_camera_matrix4_a99df6d312702e5474c5fedad42c95026}{
+\index{cCameraMatrix4@{cCameraMatrix4}!cCameraMatrix4@{cCameraMatrix4}}
+\index{cCameraMatrix4@{cCameraMatrix4}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{cCameraMatrix4}]{\setlength{\rightskip}{0pt plus 5cm}cCameraMatrix4::cCameraMatrix4 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a99df6d312702e5474c5fedad42c95026}
+
+
+This will create this matrix, and initialise all the static data for operations. 
+
+
+
+Definition at line 9 of file WTcCameraMatrix4.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_camera_matrix4_acd0e691c270f18c80965bf8da4442d5b}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Advance@{Advance}}
+\index{Advance@{Advance}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Advance}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::Advance (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_acd0e691c270f18c80965bf8da4442d5b}
+
+
+This will advance the position of this objects X,Y and Z positions by lfX,lfY and lfZ along local axis. 
+
+
+
+Definition at line 742 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a4a07cdf5cb578378193487a1ac304380}{
+\index{cCameraMatrix4@{cCameraMatrix4}!AdvanceX@{AdvanceX}}
+\index{AdvanceX@{AdvanceX}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{AdvanceX}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::AdvanceX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfDistance}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a4a07cdf5cb578378193487a1ac304380}
+
+
+This will advance the position of this objects X position by lfDistance along local axis. 
+
+
+
+Definition at line 720 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a1c644144c6673fad0d45ac2a28065edb}{
+\index{cCameraMatrix4@{cCameraMatrix4}!AdvanceY@{AdvanceY}}
+\index{AdvanceY@{AdvanceY}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{AdvanceY}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::AdvanceY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfDistance}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a1c644144c6673fad0d45ac2a28065edb}
+
+
+This will advance the position of this objects Y position by lfDistance along local axis. 
+
+
+
+Definition at line 727 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a18915056c461b31b5ea916715fa2582f}{
+\index{cCameraMatrix4@{cCameraMatrix4}!AdvanceZ@{AdvanceZ}}
+\index{AdvanceZ@{AdvanceZ}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{AdvanceZ}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::AdvanceZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfDistance}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a18915056c461b31b5ea916715fa2582f}
+
+
+This will advance the position of this objects Z position by lfDistance along local axis. 
+
+
+
+Definition at line 734 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a6be0f1f82cc4ee5a5953cb3b569b4285}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Angle@{Angle}}
+\index{Angle@{Angle}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Angle}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::Angle (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a6be0f1f82cc4ee5a5953cb3b569b4285}
+
+
+This will set the current objects matrix to be rotated to the absolute angle lfAngle. This is suitable for 2D objects. 
+
+
+
+Definition at line 513 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a4f3456fc67fbd37692a8daa9d11d5fc6}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Determinant}]{\setlength{\rightskip}{0pt plus 5cm}float cCameraMatrix4::Determinant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a4f3456fc67fbd37692a8daa9d11d5fc6}
+
+
+This will return the determinant of this matrix. 
+
+
+
+Definition at line 350 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a02c68197ed3c64c95985269f5b9f66a4}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Distance2D@{Distance2D}}
+\index{Distance2D@{Distance2D}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Distance2D}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cCameraMatrix4::Distance2D (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a02c68197ed3c64c95985269f5b9f66a4}
+
+
+This will return the 2D distance between this matrix and the matrix pointed to by lpOther. 
+
+
+
+Definition at line 861 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_adf5481b8c761008b9611e0b071e70914}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Distance3D@{Distance3D}}
+\index{Distance3D@{Distance3D}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Distance3D}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cCameraMatrix4::Distance3D (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_adf5481b8c761008b9611e0b071e70914}
+
+
+This will return the 3D distance between this matrix and the matrix pointed to by lpOther. 
+
+
+
+Definition at line 852 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_aeee787e0f5895a613e8be9efbade408f}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Follow@{Follow}}
+\index{Follow@{Follow}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Follow}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::Follow (
+\begin{DoxyParamCaption}
+\item[{{\bf cMatrix4} $\ast$}]{lpOther, }
+\item[{float}]{lfDist}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_aeee787e0f5895a613e8be9efbade408f}
+
+
+Definition at line 869 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a342b888f43a65b6c4a14b818c2519157}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GAdvance@{GAdvance}}
+\index{GAdvance@{GAdvance}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GAdvance}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GAdvance (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a342b888f43a65b6c4a14b818c2519157}
+
+
+This will advance the position of this objects X,Y and Z positions by lfX,lfY and lfZ along global axis. 
+
+
+
+Definition at line 758 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a69ef5c53bd239d2f1041ac9330c2cc08}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GAdvanceX@{GAdvanceX}}
+\index{GAdvanceX@{GAdvanceX}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GAdvanceX}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GAdvanceX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfDistance}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a69ef5c53bd239d2f1041ac9330c2cc08}
+
+
+This will advance the position of this objects X position by lfDistance along global axis. 
+
+
+
+Definition at line 749 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a7cb5d64085acdcc74dcad1e965a52b3b}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GAdvanceY@{GAdvanceY}}
+\index{GAdvanceY@{GAdvanceY}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GAdvanceY}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GAdvanceY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfDistance}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a7cb5d64085acdcc74dcad1e965a52b3b}
+
+
+This will advance the position of this objects Y position by lfDistance along global axis. 
+
+
+
+Definition at line 752 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_afd68814e78dd2ffaec2f9bc4289aca36}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GAdvanceZ@{GAdvanceZ}}
+\index{GAdvanceZ@{GAdvanceZ}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GAdvanceZ}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GAdvanceZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfDistance}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_afd68814e78dd2ffaec2f9bc4289aca36}
+
+
+This will advance the position of this objects Z position by lfDistance along global axis. 
+
+
+
+Definition at line 755 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a9984a8427cd90e77a2fb6462ecf99ecc}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GResizeX@{GResizeX}}
+\index{GResizeX@{GResizeX}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GResizeX}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GResizeX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a9984a8427cd90e77a2fb6462ecf99ecc}
+
+
+This will scale this objects globally along the X axis by a factor of lfScale. 
+
+
+
+Definition at line 637 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_aa2a9326b7f2a6f00aa5b45057c69ecd3}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GResizeY@{GResizeY}}
+\index{GResizeY@{GResizeY}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GResizeY}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GResizeY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_aa2a9326b7f2a6f00aa5b45057c69ecd3}
+
+
+This will scale this objects globally along the Y axis by a factor of lfScale. 
+
+
+
+Definition at line 645 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a1ab7808cf06ddf7ec373b926c77f85c6}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GResizeZ@{GResizeZ}}
+\index{GResizeZ@{GResizeZ}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GResizeZ}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GResizeZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a1ab7808cf06ddf7ec373b926c77f85c6}
+
+
+This will scale this objects globally along the Z axis by a factor of lfScale. 
+
+
+
+Definition at line 653 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a09c8d44629bf63643c8f09ccdc2294bc}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GRotateX@{GRotateX}}
+\index{GRotateX@{GRotateX}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GRotateX}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GRotateX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a09c8d44629bf63643c8f09ccdc2294bc}
+
+
+This will rotate the object by lfAngle radians about its global X axis. This is suitable for use by 3D objects. 
+
+
+
+Definition at line 661 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a2fc16f6a7aa3ffec1317f71645aa857b}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GRotateX@{GRotateX}}
+\index{GRotateX@{GRotateX}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GRotateX}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GRotateX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle, }
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a2fc16f6a7aa3ffec1317f71645aa857b}
+
+
+This will rotate the object by lfAngle radians about the global X axis of the point lfX,lfY,lfZ. This is suitable for use by 3D objects. 
+
+
+
+Definition at line 765 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a48eb5374c0e7fa4eca25f48a6411052d}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GRotateY@{GRotateY}}
+\index{GRotateY@{GRotateY}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GRotateY}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GRotateY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a48eb5374c0e7fa4eca25f48a6411052d}
+
+
+This will rotate the object by lfAngle radians about its global Y axis. This is suitable for use by 3D objects. 
+
+
+
+Definition at line 681 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a775326e51bf492340e8768d219a4e5e2}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GRotateY@{GRotateY}}
+\index{GRotateY@{GRotateY}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GRotateY}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GRotateY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle, }
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a775326e51bf492340e8768d219a4e5e2}
+
+
+This will rotate the object by lfAngle radians about the global Y axis of the point lfX,lfY,lfZ. This is suitable for use by 3D objects. 
+
+
+
+Definition at line 795 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a993d7410719b1fd7d871f728527a3947}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GRotateZ@{GRotateZ}}
+\index{GRotateZ@{GRotateZ}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GRotateZ}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GRotateZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a993d7410719b1fd7d871f728527a3947}
+
+
+This will rotate the object by lfAngle radians about its global Z axis. This is suitable for use by 3D objects. 
+
+
+
+Definition at line 702 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a8c99ce20f8594e9a66e0a7b2830ec9e9}{
+\index{cCameraMatrix4@{cCameraMatrix4}!GRotateZ@{GRotateZ}}
+\index{GRotateZ@{GRotateZ}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{GRotateZ}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::GRotateZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle, }
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a8c99ce20f8594e9a66e0a7b2830ec9e9}
+
+
+This will rotate the object by lfAngle radians about the global Z axis of the point lfX,lfY,lfZ. This is suitable for use by 3D objects. 
+
+
+
+Definition at line 825 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a23a05c1aff8a58dc662f5b871b422c17}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Identity@{Identity}}
+\index{Identity@{Identity}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Identity}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::Identity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a23a05c1aff8a58dc662f5b871b422c17}
+
+
+This will restore this objects matrix to an Identity matrix. 
+
+
+
+Definition at line 302 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a97d111c444dd87ecec278e585fe058a7}{
+\index{cCameraMatrix4@{cCameraMatrix4}!InvSign@{InvSign}}
+\index{InvSign@{InvSign}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{InvSign}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::InvSign (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a97d111c444dd87ecec278e585fe058a7}
+
+
+This will make all terms of the matrix, the opposite sign to what they area. 
+
+
+
+Definition at line 903 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a53c3d81781d403c9bf9671879f79a838}{
+\index{cCameraMatrix4@{cCameraMatrix4}!LResizeX@{LResizeX}}
+\index{LResizeX@{LResizeX}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{LResizeX}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::LResizeX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a53c3d81781d403c9bf9671879f79a838}
+
+
+This will scale this objects local X axis by a factor of lfScale. 
+
+
+
+Definition at line 610 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a12eda8948b16c1a2818093016d8ef755}{
+\index{cCameraMatrix4@{cCameraMatrix4}!LResizeY@{LResizeY}}
+\index{LResizeY@{LResizeY}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{LResizeY}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::LResizeY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a12eda8948b16c1a2818093016d8ef755}
+
+
+This will scale this objects local Y axis by a factor of lfScale. 
+
+
+
+Definition at line 618 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a6f1fbcfe585f86002cb586eab9df7c7d}{
+\index{cCameraMatrix4@{cCameraMatrix4}!LResizeZ@{LResizeZ}}
+\index{LResizeZ@{LResizeZ}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{LResizeZ}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::LResizeZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a6f1fbcfe585f86002cb586eab9df7c7d}
+
+
+This will scale this objects local Z axis by a factor of lfScale. 
+
+
+
+Definition at line 627 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_ab9ea2ea9b429824586d4fa74e709426e}{
+\index{cCameraMatrix4@{cCameraMatrix4}!LRotate@{LRotate}}
+\index{LRotate@{LRotate}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{LRotate}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::LRotate (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_ab9ea2ea9b429824586d4fa74e709426e}
+
+
+This will localy rotate the object by lfAngle radians about the Z axis. This is suitable to be used by 2D objects. 
+
+
+
+Definition at line 489 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a08ffa3e8e4622821ba80aaa51300e645}{
+\index{cCameraMatrix4@{cCameraMatrix4}!LRotateX@{LRotateX}}
+\index{LRotateX@{LRotateX}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{LRotateX}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::LRotateX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a08ffa3e8e4622821ba80aaa51300e645}
+
+
+This will rotate the object by lfAngle radians about its local X axis. This is suitable for use by 3D objects. 
+
+
+
+Definition at line 520 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a369f1a97e289850afffd03302bb5bd0f}{
+\index{cCameraMatrix4@{cCameraMatrix4}!LRotateY@{LRotateY}}
+\index{LRotateY@{LRotateY}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{LRotateY}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::LRotateY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a369f1a97e289850afffd03302bb5bd0f}
+
+
+This will rotate the object by lfAngle radians about its local Y axis. This is suitable for use by 3D objects. 
+
+
+
+Definition at line 544 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_ad4574f0b96ef29472ca6a286f4d8204d}{
+\index{cCameraMatrix4@{cCameraMatrix4}!LRotateZ@{LRotateZ}}
+\index{LRotateZ@{LRotateZ}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{LRotateZ}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::LRotateZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfAngle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_ad4574f0b96ef29472ca6a286f4d8204d}
+
+
+This will rotate the object by lfAngle radians about its local Z axis. This is suitable for use by 3D objects. 
+
+
+
+Definition at line 568 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_ad8aad043cd8c21d5323b56cbcc90ef78}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ cCameraMatrix4::Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_camera_matrix4_ad8aad043cd8c21d5323b56cbcc90ef78}
+
+
+This will return a pointer to this objects matrix. 
+
+
+
+Definition at line 38 of file WTcCameraMatrix4.h.
+
+\hypertarget{classc_camera_matrix4_aeae4d353c1153e9eb15461eac399a29f}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator()@{operator()}}
+\index{operator()@{operator()}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}float \& cCameraMatrix4::operator() (
+\begin{DoxyParamCaption}
+\item[{uint16}]{liColumn, }
+\item[{uint16}]{liRow}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_aeae4d353c1153e9eb15461eac399a29f}
+
+
+This will return the float in the position \mbox{[}liColumn,liRow\mbox{]} in this objects matrix. 
+
+
+
+Definition at line 443 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a975232c74548b9af68354bf6c19351d8}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{float \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a975232c74548b9af68354bf6c19351d8}
+
+
+This will multiplty the matrix by a float. 
+
+
+
+Definition at line 148 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a41e56ee4a22ed37543c120d663e4bc3c}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const float}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a41e56ee4a22ed37543c120d663e4bc3c}
+
+
+This will multiplty the matrix by a float. 
+
+
+
+Definition at line 171 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a67a5947084f07eae0dd698477e1a7689}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} $\ast$ cCameraMatrix4::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf cCameraMatrix4} $\ast$}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a67a5947084f07eae0dd698477e1a7689}
+
+
+This will multiply this matrix by the matrix pointed to by lVal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lVal} & is a pointer to a \hyperlink{classc_camera_matrix4}{cCameraMatrix4} object to be multiplied by this matrix. This will multiply the \hyperlink{classc_camera_matrix4}{cCameraMatrix4} object pointed to by lVal by this objects matrix. This.lVal \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 412 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_ac3ca3f392c5046dd428cfe8cde194d37}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf cCameraMatrix4} \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_ac3ca3f392c5046dd428cfe8cde194d37}
+
+
+This will multiply this matrix by the matrix lVal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lVal} & is a \hyperlink{classc_camera_matrix4}{cCameraMatrix4} object to be multiplied by this matrix. This will multiply a \hyperlink{classc_camera_matrix4}{cCameraMatrix4} object by this objects matrix. This.lVal \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 386 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a97ada5a5b0698d4e8f383754f30cbd2b}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator+@{operator+}}
+\index{operator+@{operator+}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::operator+ (
+\begin{DoxyParamCaption}
+\item[{float \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a97ada5a5b0698d4e8f383754f30cbd2b}
+
+
+This will add lVal to this objects matrix. lVal is added to every position in the matrix. 
+
+
+
+Definition at line 61 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_adb619821208a735d6fd262770d0dbf8a}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator+@{operator+}}
+\index{operator+@{operator+}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::operator+ (
+\begin{DoxyParamCaption}
+\item[{const float}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_adb619821208a735d6fd262770d0dbf8a}
+
+
+This will add lVal to this objects matrix. lVal is added to every position in the matrix. 
+
+
+
+Definition at line 83 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a4456564f6c57e7a9072ab31c242bef49}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator+@{operator+}}
+\index{operator+@{operator+}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf cCameraMatrix4} \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a4456564f6c57e7a9072ab31c242bef49}
+
+
+This will add this objects matrix and the matrix lVal. 
+
+
+
+Definition at line 307 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a42eb30055c9b58f2fc3fabf8201e7929}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{float \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a42eb30055c9b58f2fc3fabf8201e7929}
+
+
+This will deduct lVal from this objects matrix. lVal is deducted from every position in the matrix. 
+
+
+
+Definition at line 104 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a3f13c8e5f71d9c158332fe87a49f1b61}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const float}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a3f13c8e5f71d9c158332fe87a49f1b61}
+
+
+This will deduct lVal from this objects matrix. lVal is deducted from every position in the matrix. 
+
+
+
+Definition at line 127 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a97c7f6820b87ea9a217c4412e0c89e49}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf cCameraMatrix4} \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a97c7f6820b87ea9a217c4412e0c89e49}
+
+
+This will deduct the matrix lVal from this objects matrix. 
+
+
+
+Definition at line 328 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a71c4f0d6ee680f0cd511354de0033c64}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator/@{operator/}}
+\index{operator/@{operator/}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::operator/ (
+\begin{DoxyParamCaption}
+\item[{float \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a71c4f0d6ee680f0cd511354de0033c64}
+
+
+This will devide this objects matrix by the float lVal. 
+
+
+
+Definition at line 193 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_ab8d3c0c3df306102db000c37323692a3}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator/@{operator/}}
+\index{operator/@{operator/}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::operator/ (
+\begin{DoxyParamCaption}
+\item[{const float}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_ab8d3c0c3df306102db000c37323692a3}
+
+
+This will devide this objects matrix by the float lVal. 
+
+
+
+Definition at line 215 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a570900cf46a3c6e8a31e957a4dd24103}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator=@{operator=}}
+\index{operator=@{operator=}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf cCameraMatrix4} \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a570900cf46a3c6e8a31e957a4dd24103}
+
+
+This will set this objects matrix to be the same as the matrix lVal. 
+
+
+
+Definition at line 285 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a13c2e801ef13951525908a0985cf2ba7}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator=@{operator=}}
+\index{operator=@{operator=}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}float cCameraMatrix4::operator= (
+\begin{DoxyParamCaption}
+\item[{const float}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a13c2e801ef13951525908a0985cf2ba7}
+
+
+This will set every float in this objects matrix to lVal. 
+
+
+
+Definition at line 262 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a21020ff4493a379b107a98c8a699d5f7}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator=@{operator=}}
+\index{operator=@{operator=}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}float cCameraMatrix4::operator= (
+\begin{DoxyParamCaption}
+\item[{float \&}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a21020ff4493a379b107a98c8a699d5f7}
+
+
+This will set every float in this objects matrix to lVal. 
+
+
+
+Definition at line 238 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_aabdb9adddb777e59ae8594cb62b0e02e}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator=@{operator=}}
+\index{operator=@{operator=}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} $\ast$ cCameraMatrix4::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf cCameraMatrix4} $\ast$}]{lVal}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_aabdb9adddb777e59ae8594cb62b0e02e}
+
+
+This will set this objects matrix to be the same as the matrix lVal. 
+
+
+
+Definition at line 291 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a57bce39e1e5ff464edd9dd1c32fcdd3b}{
+\index{cCameraMatrix4@{cCameraMatrix4}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}float \& cCameraMatrix4::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{uint16}]{liPos}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a57bce39e1e5ff464edd9dd1c32fcdd3b}
+
+
+This will return the float in the position liPos in this objects matrix. 
+
+
+
+Definition at line 438 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_aa8ca47d59f6b3b454d700329bdbbdeea}{
+\index{cCameraMatrix4@{cCameraMatrix4}!PointAt@{PointAt}}
+\index{PointAt@{PointAt}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{PointAt}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::PointAt (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{mpPos}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_aa8ca47d59f6b3b454d700329bdbbdeea}
+
+
+Definition at line 884 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a62fa2879539cc733e661d02b8a898578}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Position@{Position}}
+\index{Position@{Position}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::Position (
+\begin{DoxyParamCaption}
+\item[{{\bf c2DVf} $\ast$}]{lpPosition}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a62fa2879539cc733e661d02b8a898578}
+
+
+This will set this objects matrix position (2D -\/ X,Y) vector to be the same as lpPosition. 
+
+
+
+Definition at line 462 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a1aa471464a30ce27fe339b743b840516}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Position@{Position}}
+\index{Position@{Position}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::Position (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a1aa471464a30ce27fe339b743b840516}
+
+
+This will set this objects matrix position vector to be lfX,lfY,lfZ. 
+
+
+
+Definition at line 454 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a89fba901320f6dda9a6b92bac09db915}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Position@{Position}}
+\index{Position@{Position}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ cCameraMatrix4::Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_camera_matrix4_a89fba901320f6dda9a6b92bac09db915}
+
+
+This will return the position vector of this objects matrix. 
+
+
+
+Definition at line 40 of file WTcCameraMatrix4.h.
+
+\hypertarget{classc_camera_matrix4_a293ac7d2919eae7205b568ea56fa104c}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Position@{Position}}
+\index{Position@{Position}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::Position (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a293ac7d2919eae7205b568ea56fa104c}
+
+
+This will set this objects matrix position vector to be lfX,lfY. 
+
+
+
+Definition at line 448 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a7110b0f3aa924a2cfefe8ca149e0b41f}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Position@{Position}}
+\index{Position@{Position}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::Position (
+\begin{DoxyParamCaption}
+\item[{{\bf c3DVf} $\ast$}]{lpPosition}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a7110b0f3aa924a2cfefe8ca149e0b41f}
+
+
+This will set this objects matrix position vector to be the same as lpPosition. 
+
+
+
+Definition at line 469 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_af130ddef040458f01b9a2365f41c567a}{
+\index{cCameraMatrix4@{cCameraMatrix4}!PositionX@{PositionX}}
+\index{PositionX@{PositionX}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{PositionX}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::PositionX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_af130ddef040458f01b9a2365f41c567a}
+
+
+This will set this objects X position to he lfX. 
+
+
+
+Definition at line 476 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_adce3f6365faf3af907994f50c004c736}{
+\index{cCameraMatrix4@{cCameraMatrix4}!PositionY@{PositionY}}
+\index{PositionY@{PositionY}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{PositionY}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::PositionY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfY}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_adce3f6365faf3af907994f50c004c736}
+
+
+This will set this objects Y position to he lfY. 
+
+
+
+Definition at line 480 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a6ea814a92ce2d7fcc1ba66490127b2f2}{
+\index{cCameraMatrix4@{cCameraMatrix4}!PositionZ@{PositionZ}}
+\index{PositionZ@{PositionZ}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{PositionZ}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::PositionZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a6ea814a92ce2d7fcc1ba66490127b2f2}
+
+
+This will set this objects Z position to he lfZ. 
+
+
+
+Definition at line 484 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a620ba52edfd711f011d43a441eece9bc}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Resize@{Resize}}
+\index{Resize@{Resize}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Resize}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::Resize (
+\begin{DoxyParamCaption}
+\item[{float}]{lfScale}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a620ba52edfd711f011d43a441eece9bc}
+
+
+This will scale this objects matrix by a factor of lfScale. 
+
+
+
+Definition at line 593 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_ac1fa4dd9add669a8faecd0ca79713278}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Transpose}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCameraMatrix4} cCameraMatrix4::Transpose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_ac1fa4dd9add669a8faecd0ca79713278}
+
+
+This will return the transpose of this objects matrix ready for multiplications etc. 
+
+
+
+Definition at line 359 of file WTcCameraMatrix4.cpp.
+
+\hypertarget{classc_camera_matrix4_a0133c16b734fa93e767ea89964799fb5}{
+\index{cCameraMatrix4@{cCameraMatrix4}!X@{X}}
+\index{X@{X}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{X}]{\setlength{\rightskip}{0pt plus 5cm}float cCameraMatrix4::X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_camera_matrix4_a0133c16b734fa93e767ea89964799fb5}
+
+
+This will return the X position of this objects matrix. 
+
+
+
+Definition at line 46 of file WTcCameraMatrix4.h.
+
+\hypertarget{classc_camera_matrix4_aec72cb78c62b2e0970824262b0b4aa1f}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Y@{Y}}
+\index{Y@{Y}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Y}]{\setlength{\rightskip}{0pt plus 5cm}float cCameraMatrix4::Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_camera_matrix4_aec72cb78c62b2e0970824262b0b4aa1f}
+
+
+This will return the Y position of this objects matrix. 
+
+
+
+Definition at line 48 of file WTcCameraMatrix4.h.
+
+\hypertarget{classc_camera_matrix4_a7e3030fcedbd3b74270b26ea2b61904c}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Z@{Z}}
+\index{Z@{Z}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Z}]{\setlength{\rightskip}{0pt plus 5cm}float cCameraMatrix4::Z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_camera_matrix4_a7e3030fcedbd3b74270b26ea2b61904c}
+
+
+This will return the Z position of this objects matrix. 
+
+
+
+Definition at line 50 of file WTcCameraMatrix4.h.
+
+\hypertarget{classc_camera_matrix4_a1ec81a7ec3274f89d2b8fb94923345c0}{
+\index{cCameraMatrix4@{cCameraMatrix4}!Zero@{Zero}}
+\index{Zero@{Zero}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{Zero}]{\setlength{\rightskip}{0pt plus 5cm}void cCameraMatrix4::Zero (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_matrix4_a1ec81a7ec3274f89d2b8fb94923345c0}
+
+
+This will make the entire objects matrix equal to zero. 
+
+
+
+Definition at line 297 of file WTcCameraMatrix4.cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_camera_matrix4_afb48ac51e480abcece16e031d8bc300a}{
+\index{cCameraMatrix4@{cCameraMatrix4}!mpPosition@{mpPosition}}
+\index{mpPosition@{mpPosition}!cCameraMatrix4@{cCameraMatrix4}}
+\subsubsection[{mpPosition}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cCameraMatrix4::mpPosition}\mbox{[}3\mbox{]}}}
+\label{classc_camera_matrix4_afb48ac51e480abcece16e031d8bc300a}
+
+
+The position of this matrix has been seperated from the rest of the matrix as the camera should rotate around 0,0,0, not itself? 
+
+
+
+Definition at line 40 of file WTcCameraMatrix4.h.
+

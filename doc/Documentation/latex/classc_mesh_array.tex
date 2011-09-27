@@ -1,0 +1,181 @@
+\hypertarget{classc_mesh_array}{
+\section{cMeshArray Class Reference}
+\label{classc_mesh_array}\index{cMeshArray@{cMeshArray}}
+}
+
+
+This is a temporary storage class to ease transformation of data from the hdd to the \hyperlink{classc_mesh}{cMesh} class.  
+
+
+
+
+Inheritance diagram for cMeshArray:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classc_mesh_array__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cMeshArray:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classc_mesh_array__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_mesh_array_a7f8a0a0053d2a91d5c91bed80ec745ee}{cMeshArray} ()
+\item 
+void \hyperlink{classc_mesh_array_adce4a1c4b77569227f23d1e4cc46b4bb}{LoadIMF} (ifstream \&FileStream)
+\begin{DoxyCompactList}\small\item\em This will load the data from an IMF File. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_mesh_array_a142887dc3853e28068cd0ad89aed926c}{$\sim$cMeshArray} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float $\ast$ \hyperlink{classc_mesh_array_a4dce50ad6de11940afa0af53fdcefc27}{mpVertex}
+\item 
+float $\ast$ \hyperlink{classc_mesh_array_a1c568717706de37f77729a9292ceee42}{mpNormals}
+\item 
+float $\ast$ \hyperlink{classc_mesh_array_a9119e5c042443437ac22f06775662d4d}{mpUV}
+\item 
+uint16 $\ast$ \hyperlink{classc_mesh_array_aab7e25f0aaf4c7afb2dd0f0384867766}{mpFaces}
+\item 
+uint32 \hyperlink{classc_mesh_array_a340440f28957f97372571295422880b3}{miVertex}
+\item 
+uint32 \hyperlink{classc_mesh_array_ad1fa1c6dbc63102948626412a90cf117}{miFaces}
+\item 
+char $\ast$ \hyperlink{classc_mesh_array_a31b40f14b026b9957f4ae44b58565061}{mpRef}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a temporary storage class to ease transformation of data from the hdd to the \hyperlink{classc_mesh}{cMesh} class. 
+
+Definition at line 14 of file WTcMesh.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_mesh_array_a7f8a0a0053d2a91d5c91bed80ec745ee}{
+\index{cMeshArray@{cMeshArray}!cMeshArray@{cMeshArray}}
+\index{cMeshArray@{cMeshArray}!cMeshArray@{cMeshArray}}
+\subsubsection[{cMeshArray}]{\setlength{\rightskip}{0pt plus 5cm}cMeshArray::cMeshArray (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_array_a7f8a0a0053d2a91d5c91bed80ec745ee}
+
+
+Definition at line 48 of file WTcMesh.cpp.
+
+\hypertarget{classc_mesh_array_a142887dc3853e28068cd0ad89aed926c}{
+\index{cMeshArray@{cMeshArray}!$\sim$cMeshArray@{$\sim$cMeshArray}}
+\index{$\sim$cMeshArray@{$\sim$cMeshArray}!cMeshArray@{cMeshArray}}
+\subsubsection[{$\sim$cMeshArray}]{\setlength{\rightskip}{0pt plus 5cm}cMeshArray::$\sim$cMeshArray (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_array_a142887dc3853e28068cd0ad89aed926c}
+
+
+Definition at line 53 of file WTcMesh.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_mesh_array_adce4a1c4b77569227f23d1e4cc46b4bb}{
+\index{cMeshArray@{cMeshArray}!LoadIMF@{LoadIMF}}
+\index{LoadIMF@{LoadIMF}!cMeshArray@{cMeshArray}}
+\subsubsection[{LoadIMF}]{\setlength{\rightskip}{0pt plus 5cm}void cMeshArray::LoadIMF (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mesh_array_adce4a1c4b77569227f23d1e4cc46b4bb}
+
+
+This will load the data from an IMF File. 
+
+
+
+Reimplemented from \hyperlink{classc_i_m_f_loader_a219c95a2cfbb5f477b10d9158f77470c}{cIMFLoader}.
+
+
+
+Definition at line 3 of file WTcMesh.cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_mesh_array_ad1fa1c6dbc63102948626412a90cf117}{
+\index{cMeshArray@{cMeshArray}!miFaces@{miFaces}}
+\index{miFaces@{miFaces}!cMeshArray@{cMeshArray}}
+\subsubsection[{miFaces}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cMeshArray::miFaces}}}
+\label{classc_mesh_array_ad1fa1c6dbc63102948626412a90cf117}
+
+
+Definition at line 29 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_array_a340440f28957f97372571295422880b3}{
+\index{cMeshArray@{cMeshArray}!miVertex@{miVertex}}
+\index{miVertex@{miVertex}!cMeshArray@{cMeshArray}}
+\subsubsection[{miVertex}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cMeshArray::miVertex}}}
+\label{classc_mesh_array_a340440f28957f97372571295422880b3}
+
+
+Definition at line 27 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_array_aab7e25f0aaf4c7afb2dd0f0384867766}{
+\index{cMeshArray@{cMeshArray}!mpFaces@{mpFaces}}
+\index{mpFaces@{mpFaces}!cMeshArray@{cMeshArray}}
+\subsubsection[{mpFaces}]{\setlength{\rightskip}{0pt plus 5cm}uint16$\ast$ {\bf cMeshArray::mpFaces}}}
+\label{classc_mesh_array_aab7e25f0aaf4c7afb2dd0f0384867766}
+
+
+Definition at line 25 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_array_a1c568717706de37f77729a9292ceee42}{
+\index{cMeshArray@{cMeshArray}!mpNormals@{mpNormals}}
+\index{mpNormals@{mpNormals}!cMeshArray@{cMeshArray}}
+\subsubsection[{mpNormals}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf cMeshArray::mpNormals}}}
+\label{classc_mesh_array_a1c568717706de37f77729a9292ceee42}
+
+
+Definition at line 21 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_array_a31b40f14b026b9957f4ae44b58565061}{
+\index{cMeshArray@{cMeshArray}!mpRef@{mpRef}}
+\index{mpRef@{mpRef}!cMeshArray@{cMeshArray}}
+\subsubsection[{mpRef}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf cMeshArray::mpRef}}}
+\label{classc_mesh_array_a31b40f14b026b9957f4ae44b58565061}
+
+
+Definition at line 31 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_array_a9119e5c042443437ac22f06775662d4d}{
+\index{cMeshArray@{cMeshArray}!mpUV@{mpUV}}
+\index{mpUV@{mpUV}!cMeshArray@{cMeshArray}}
+\subsubsection[{mpUV}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf cMeshArray::mpUV}}}
+\label{classc_mesh_array_a9119e5c042443437ac22f06775662d4d}
+
+
+Definition at line 23 of file WTcMesh.h.
+
+\hypertarget{classc_mesh_array_a4dce50ad6de11940afa0af53fdcefc27}{
+\index{cMeshArray@{cMeshArray}!mpVertex@{mpVertex}}
+\index{mpVertex@{mpVertex}!cMeshArray@{cMeshArray}}
+\subsubsection[{mpVertex}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf cMeshArray::mpVertex}}}
+\label{classc_mesh_array_a4dce50ad6de11940afa0af53fdcefc27}
+
+
+Definition at line 19 of file WTcMesh.h.
+

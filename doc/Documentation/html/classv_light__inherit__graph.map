@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classc_light.html" title="Creates an OpenGL light effect." alt="" coords="19,83,75,112"/>
+<area shape="rect" id="node5" href="$classc_spot_light.html" title="cSpotLight" alt="" coords="5,160,88,189"/>
+</map>

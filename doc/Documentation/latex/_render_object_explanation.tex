@@ -1,0 +1,30 @@
+\hyperlink{_w_tc_render_object_8h_source}{WTcRenderObject.h}
+
+Using William Thorley’s Renderable Object System
+
+All Render Objects are inherited from class \hyperlink{classv_render_object}{vRenderObject}, through class \hyperlink{classc_render_object}{cRenderObject}. The object also Inherits the class \hyperlink{classc_matrix4}{cMatrix4}. This is a 3D Translation class, and can handle 2D rotations (about X axis), 3D rotations, 3D Translations and 3D scaling. Calling the \hyperlink{classc_matrix4}{cMatrix4} functions will move the \hyperlink{classc_render_object}{cRenderObject}.
+
+Creating RenderObjects: cRenderObjects can be created using the \_\-CREATE macro as per a Process. This will return a pointer to the RenderObject. 
+\begin{DoxyCode}
+ void player::Run()
+ {
+        mpHull=_CREATE(cTexturedModel(mpShipNode));
+        mpHull->Mesh(_GET_FILE(vMesh*,"Mesh"));
+        mpHull->Texture(_GET_FILE(vTexture*,"Texture"));
+        mpHull->Shader(_GET_SHADER("TexturingProgram"));
+ }
+ *
+\end{DoxyCode}
+
+
+Currently there are lots of Render Objects:
+
+class \hyperlink{classc_textured_model}{cTexturedModel}; class \hyperlink{classc_landscape}{cLandscape}; class \hyperlink{classc_render_node}{cRenderNode}; class \hyperlink{classc_beam_mesh}{cBeamMesh}; class \hyperlink{classc_image}{cImage}; class cTextureText; class \hyperlink{classc_line}{cLine}; class \hyperlink{classc_particle}{cParticle}; class \hyperlink{classc_particle_group}{cParticleGroup}; class \hyperlink{classc_particle_handler}{cParticleHandler}; class \hyperlink{classc_model_list}{cModelList}; class \hyperlink{classc_point}{cPoint};
+
+See the relevant documentation for each for how to use them.
+
+The Renderable Object allows the user to develop their own Renderable Objects and links them to the renderer. A Renderable object must inherit \hyperlink{classc_render_object}{cRenderObject} and must also define the virtual function Render(), This will be called every time the renderable object needs to be rendered. It should also define all empty virtual functions in \hyperlink{classv_render_object}{vRenderObject} and \hyperlink{classc_render_object}{cRenderObject},
+
+Declaration of a Renderable Object: class player : public \hyperlink{classc_render_object}{cRenderObject}, public \hyperlink{classc_matrix4}{cMatrix4} \{ public : Render(); \};
+
+Render(): 

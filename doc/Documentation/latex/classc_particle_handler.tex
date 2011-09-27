@@ -1,0 +1,271 @@
+\hypertarget{classc_particle_handler}{
+\section{cParticleHandler Class Reference}
+\label{classc_particle_handler}\index{cParticleHandler@{cParticleHandler}}
+}
+
+
+Inheritance diagram for cParticleHandler:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classc_particle_handler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cParticleHandler:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_particle_handler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classc_particle_handler_a51c07054ca7b054203bc6a9f408f1ab0}{Resize} (uint32 liSize)
+\item 
+void \hyperlink{classc_particle_handler_a4bc35761a9e607debe3f9ab6d3c09c69}{Add} (\hyperlink{classc_particle}{cParticle} $\ast$lpPart)
+\item 
+void \hyperlink{classc_particle_handler_aaef41764a47562bfbc7c9155341836f2}{Remove} (\hyperlink{classc_particle}{cParticle} $\ast$lpPart)
+\item 
+void \hyperlink{classc_particle_handler_aa7ad6d9319e426693d5f08dbc88405d6}{Remove} (uint32 liParticle)
+\item 
+void \hyperlink{classc_particle_handler_a2a20d9c268a3aa94e4e6ca20535b67e1}{Delete} (\hyperlink{classc_particle}{cParticle} $\ast$lpPart)
+\item 
+void \hyperlink{classc_particle_handler_a7d626d7c1316d5f36fd7ff0f56d49d7c}{DeleteAll} ()
+\item 
+void \hyperlink{classc_particle_handler_abbb4154a032ff34db8679e9afb305093}{Refresh} ()
+\item 
+void \hyperlink{classc_particle_handler_a89857746d88277abf75eea46dadb572f}{ForceRefresh} ()
+\item 
+void \hyperlink{classc_particle_handler_a8947ed7c9c931bd10a880abcd636b581}{RenderToPainter} ()
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphism. see cCamera::RenderToPainter(); \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_particle_handler_acc9ccbaffa140d31d73007eaaba3c181}{RenderPainter} (uint8 liLevel)
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphism. see cCamera::RenderPainter(); \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_particle_handler_ae1d7ac9b13cb0ca9f43105706a48da01}{RenderPainter} ()
+\begin{DoxyCompactList}\small\item\em virtual functions to allow polymorphism. see cCamera::RenderPainter(); \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_particle_handler_aab7ecf600c419d2e58f7819fc37e0bb6}{Render} ()
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphiss. see \hyperlink{classc_camera_acfe96d0953540fa3938e4d415d7cb791}{cCamera::Render()}; \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classc_particle_handler}{cParticleHandler} $\ast$ \hyperlink{classc_particle_handler_a4a9f15b68e42d3adc28139f1edae4e48}{Instance} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the current \hyperlink{classc_particle_handler}{cParticleHandler}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This call will take all cParticleFree inheriting Particles (Inc \hyperlink{classc_gravity_particle}{cGravityParticle} and \hyperlink{classc_wind_and_gravity_particle}{cWindAndGravityParticle}) and will deal with them as a block for efficiency and so the user does not need to track them. All coordinates must be converted to global co-\/ordinates when they are created. This will keep the overheads for particles low as they can be handled as a group. Particles can still be controlled by the Toplevel class. Particles will automatically be updated every frame if WT\_\-PARTICLE\_\-HANDLER\_\-UPDATE\_\-PARTICLE\_\-POSITIONS is true. May be issues with time dependancy. Essentially this class will work in teh background and handle objects of types \hyperlink{classc_particle}{cParticle},\hyperlink{classc_gravity_particle}{cGravityParticle},\hyperlink{classc_wind_and_gravity_particle}{cWindAndGravityParticle}. 
+
+Definition at line 59 of file WTcParticle.h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_particle_handler_a4bc35761a9e607debe3f9ab6d3c09c69}{
+\index{cParticleHandler@{cParticleHandler}!Add@{Add}}
+\index{Add@{Add}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void cParticleHandler::Add (
+\begin{DoxyParamCaption}
+\item[{{\bf cParticle} $\ast$}]{lpPart}
+\end{DoxyParamCaption}
+)}}
+\label{classc_particle_handler_a4bc35761a9e607debe3f9ab6d3c09c69}
+
+
+Definition at line 68 of file WTcParticle.cpp.
+
+\hypertarget{classc_particle_handler_a2a20d9c268a3aa94e4e6ca20535b67e1}{
+\index{cParticleHandler@{cParticleHandler}!Delete@{Delete}}
+\index{Delete@{Delete}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}void cParticleHandler::Delete (
+\begin{DoxyParamCaption}
+\item[{{\bf cParticle} $\ast$}]{lpPart}
+\end{DoxyParamCaption}
+)}}
+\label{classc_particle_handler_a2a20d9c268a3aa94e4e6ca20535b67e1}
+
+
+Definition at line 75 of file WTcParticle.cpp.
+
+\hypertarget{classc_particle_handler_a7d626d7c1316d5f36fd7ff0f56d49d7c}{
+\index{cParticleHandler@{cParticleHandler}!DeleteAll@{DeleteAll}}
+\index{DeleteAll@{DeleteAll}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{DeleteAll}]{\setlength{\rightskip}{0pt plus 5cm}void cParticleHandler::DeleteAll (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_particle_handler_a7d626d7c1316d5f36fd7ff0f56d49d7c}
+
+
+Definition at line 56 of file WTcParticle.cpp.
+
+\hypertarget{classc_particle_handler_a89857746d88277abf75eea46dadb572f}{
+\index{cParticleHandler@{cParticleHandler}!ForceRefresh@{ForceRefresh}}
+\index{ForceRefresh@{ForceRefresh}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{ForceRefresh}]{\setlength{\rightskip}{0pt plus 5cm}void cParticleHandler::ForceRefresh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_particle_handler_a89857746d88277abf75eea46dadb572f}
+
+
+Definition at line 86 of file WTcParticle.h.
+
+\hypertarget{classc_particle_handler_a4a9f15b68e42d3adc28139f1edae4e48}{
+\index{cParticleHandler@{cParticleHandler}!Instance@{Instance}}
+\index{Instance@{Instance}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cParticleHandler} $\ast$ cParticleHandler::Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classc_particle_handler_a4a9f15b68e42d3adc28139f1edae4e48}
+
+
+Returns a pointer to the current \hyperlink{classc_particle_handler}{cParticleHandler}. 
+
+
+
+Definition at line 41 of file WTcParticle.cpp.
+
+\hypertarget{classc_particle_handler_abbb4154a032ff34db8679e9afb305093}{
+\index{cParticleHandler@{cParticleHandler}!Refresh@{Refresh}}
+\index{Refresh@{Refresh}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{Refresh}]{\setlength{\rightskip}{0pt plus 5cm}void cParticleHandler::Refresh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_particle_handler_abbb4154a032ff34db8679e9afb305093}
+
+
+Definition at line 99 of file WTcParticle.cpp.
+
+\hypertarget{classc_particle_handler_aaef41764a47562bfbc7c9155341836f2}{
+\index{cParticleHandler@{cParticleHandler}!Remove@{Remove}}
+\index{Remove@{Remove}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void cParticleHandler::Remove (
+\begin{DoxyParamCaption}
+\item[{{\bf cParticle} $\ast$}]{lpPart}
+\end{DoxyParamCaption}
+)}}
+\label{classc_particle_handler_aaef41764a47562bfbc7c9155341836f2}
+
+
+Definition at line 89 of file WTcParticle.cpp.
+
+\hypertarget{classc_particle_handler_aa7ad6d9319e426693d5f08dbc88405d6}{
+\index{cParticleHandler@{cParticleHandler}!Remove@{Remove}}
+\index{Remove@{Remove}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void cParticleHandler::Remove (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liParticle}
+\end{DoxyParamCaption}
+)}}
+\label{classc_particle_handler_aa7ad6d9319e426693d5f08dbc88405d6}
+
+
+Definition at line 80 of file WTcParticle.cpp.
+
+\hypertarget{classc_particle_handler_aab7ecf600c419d2e58f7819fc37e0bb6}{
+\index{cParticleHandler@{cParticleHandler}!Render@{Render}}
+\index{Render@{Render}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void cParticleHandler::Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_particle_handler_aab7ecf600c419d2e58f7819fc37e0bb6}
+
+
+virtual function to allow polymorphiss. see \hyperlink{classc_camera_acfe96d0953540fa3938e4d415d7cb791}{cCamera::Render()}; 
+
+
+
+Implements \hyperlink{classc_render_object_ab0db1b7db1a1d4210511d9d95634fcce}{cRenderObject}.
+
+
+
+Definition at line 163 of file WTcParticle.cpp.
+
+\hypertarget{classc_particle_handler_acc9ccbaffa140d31d73007eaaba3c181}{
+\index{cParticleHandler@{cParticleHandler}!RenderPainter@{RenderPainter}}
+\index{RenderPainter@{RenderPainter}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{RenderPainter}]{\setlength{\rightskip}{0pt plus 5cm}void cParticleHandler::RenderPainter (
+\begin{DoxyParamCaption}
+\item[{uint8}]{liLevel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_particle_handler_acc9ccbaffa140d31d73007eaaba3c181}
+
+
+virtual function to allow polymorphism. see cCamera::RenderPainter(); 
+
+
+
+Implements \hyperlink{classc_render_object_a16beccc30dfea79c3988508c1420d54b}{cRenderObject}.
+
+
+
+Definition at line 142 of file WTcParticle.cpp.
+
+\hypertarget{classc_particle_handler_ae1d7ac9b13cb0ca9f43105706a48da01}{
+\index{cParticleHandler@{cParticleHandler}!RenderPainter@{RenderPainter}}
+\index{RenderPainter@{RenderPainter}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{RenderPainter}]{\setlength{\rightskip}{0pt plus 5cm}void cParticleHandler::RenderPainter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_particle_handler_ae1d7ac9b13cb0ca9f43105706a48da01}
+
+
+virtual functions to allow polymorphism. see cCamera::RenderPainter(); 
+
+
+
+Reimplemented from \hyperlink{classc_render_object_ab2a666638043054e563b9f0a54faa6b7}{cRenderObject}.
+
+
+
+Definition at line 122 of file WTcParticle.cpp.
+
+\hypertarget{classc_particle_handler_a8947ed7c9c931bd10a880abcd636b581}{
+\index{cParticleHandler@{cParticleHandler}!RenderToPainter@{RenderToPainter}}
+\index{RenderToPainter@{RenderToPainter}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{RenderToPainter}]{\setlength{\rightskip}{0pt plus 5cm}void cParticleHandler::RenderToPainter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_particle_handler_a8947ed7c9c931bd10a880abcd636b581}
+
+
+virtual function to allow polymorphism. see cCamera::RenderToPainter(); 
+
+
+
+Implements \hyperlink{classc_render_object_a130139cc8e1f5219ddabc6192f98afa8}{cRenderObject}.
+
+
+
+Definition at line 149 of file WTcParticle.cpp.
+
+\hypertarget{classc_particle_handler_a51c07054ca7b054203bc6a9f408f1ab0}{
+\index{cParticleHandler@{cParticleHandler}!Resize@{Resize}}
+\index{Resize@{Resize}!cParticleHandler@{cParticleHandler}}
+\subsubsection[{Resize}]{\setlength{\rightskip}{0pt plus 5cm}void cParticleHandler::Resize (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liSize}
+\end{DoxyParamCaption}
+)}}
+\label{classc_particle_handler_a51c07054ca7b054203bc6a9f408f1ab0}
+
+
+Definition at line 48 of file WTcParticle.cpp.
+

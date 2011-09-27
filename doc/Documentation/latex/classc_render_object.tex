@@ -1,0 +1,567 @@
+\hypertarget{classc_render_object}{
+\section{cRenderObject Class Reference}
+\label{classc_render_object}\index{cRenderObject@{cRenderObject}}
+}
+
+
+This class contains the base code for all renderable objects. Any renderable object should inherit this class.  
+
+
+
+
+Inheritance diagram for cRenderObject:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_render_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cRenderObject:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_render_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classc_render_object_a4ccf0881a96909f31ede6139b8246f61}{Shader} (\hyperlink{classv_shader_program}{vShaderProgram} $\ast$lpShader)
+\begin{DoxyCompactList}\small\item\em Will set the shader this object will use. \item\end{DoxyCompactList}\item 
+\hyperlink{classv_shader_program}{vShaderProgram} $\ast$ \hyperlink{classc_render_object_a4511be39ce33b59a02099749947fa5a3}{Shader} ()
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the Shader Program that is currently bound to this model. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_render_object_a4c53fe5d3df67ba2e15001e9c939f94f}{cRenderObject} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classc_render_object}{cRenderObject}. Creates a new render object and adds itself to \hyperlink{classc_camera_a642cdd541d3837608830f2b851bcd8d0}{cCamera::mpRenderList}. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_render_object_a91246fbf5e6de19a25d984f0fff71956}{cRenderObject} (\hyperlink{classc_render_node}{cRenderNode} $\ast$lpNode)
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classc_render_object}{cRenderObject}. Creates a new render object and adds itself to lpNode. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_render_object_aef0efadb31f222418fc7a414c556e6a2}{$\sim$cRenderObject} ()
+\item 
+void \hyperlink{classc_render_object_a9cd352514159783b312cf9d3a6168e8e}{LinkCollisionObject} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpObj)
+\begin{DoxyCompactList}\small\item\em This will set the Collision Object that is linked to this renderable object. This should be called automatically when a \hyperlink{classc_collision_object}{cCollisionObject} is created. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_render_node}{cRenderNode} $\ast$ \hyperlink{classc_render_object_a8edb3b47e07b01d11aae96f078b9f63f}{Renderer} ()
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{classc_render_node}{cRenderNode} which owns this renderable process. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classc_render_object_ab2a666638043054e563b9f0a54faa6b7}{RenderPainter} ()
+\begin{DoxyCompactList}\small\item\em virtual functions to allow polymorphism. see cCamera::RenderPainter(); \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classc_render_object_a16beccc30dfea79c3988508c1420d54b}{RenderPainter} (uint8 liLevel)=0
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphism. see cCamera::RenderPainter(); \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classc_render_object_a130139cc8e1f5219ddabc6192f98afa8}{RenderToPainter} ()=0
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphism. see cCamera::RenderToPainter(); \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classc_render_object_ab0db1b7db1a1d4210511d9d95634fcce}{Render} ()=0
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphiss. see \hyperlink{classc_camera_acfe96d0953540fa3938e4d415d7cb791}{cCamera::Render()}; \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_object_a7f1424d2badbe9e09bc6fd4af6616fa0}{Delete} ()
+\begin{DoxyCompactList}\small\item\em Will remove this object from the render list owned by mpRenderer. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classv_render_object}{vRenderObject} $>$ $\ast$ \hyperlink{classc_render_object_ac89f6defa0ff8b5834f80055a6723346}{SetRenderNode} (\hyperlink{classc_render_node}{cRenderNode} $\ast$lpNode)
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the Shader Program that is currently bound to this model. \item\end{DoxyCompactList}\item 
+unsigned int \hyperlink{classc_render_object_ad2c6096f2e9d99e19d1ca89814567f6e}{TextureNumber} ()
+\begin{DoxyCompactList}\small\item\em virtual function for polymorphism. Should return the texture ID of this renderable objects Texture. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_object_a1a023520677b50e63fc2334717a2761d}{AdditionalRenderFunctions} ()
+\begin{DoxyCompactList}\small\item\em This will contain additional functions to perform when an object renders. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classc_render_object_ae05caabd6783700f4ed50c8224690645}{AdditionalKillFunctionality} ()
+\begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a kill signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classc_render_object_a86cedd6452174f7f091e0cdd0fcb3721}{AdditionalSleepFunctionality} ()
+\begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a sleep signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classc_render_object_acd23438575c9a3bcbe77e8e96c348f33}{AdditionalWakeFunctionality} ()
+\begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a wake signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_object_aeeb8da742f1a844179a74a99e9aa4433}{UpdateCache} ()
+\begin{DoxyCompactList}\small\item\em This function will update the object cache. For consistency all Renderable Objects must update the cache as they are rendered. This will be the global position of the object and is used to get consistent positions throughout a frame for collision detection. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_render_object_a48a88c2c6722c23ee51459e933873412}{GetPos} ()
+\begin{DoxyCompactList}\small\item\em This will return the Local position of the selected object. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_render_object_ae60403345f6e937fbb641b87afd757a9}{GetGlobalPos} ()
+\begin{DoxyCompactList}\small\item\em This will return the global position of the object as rendered at the end of last frame. Note, this will contain the camera matrix. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_render_pointer}{cRenderPointer} $\ast$ \hyperlink{classc_render_object_a4ed136f044fd1a7855c3500cd16ba74e}{mpPainterData}
+\begin{DoxyCompactList}\small\item\em A Pointer to the \hyperlink{classc_render_pointer}{cRenderPointer} Object for this Renderable Object. Used when \hyperlink{classc_painter}{cPainter} is enabled. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_render_pointer}{cRenderPointer} $\ast$$\ast$ \hyperlink{classc_render_object_a9a96382f073ecbe57b4c43c639161f6c}{mpSlot}
+\begin{DoxyCompactList}\small\item\em A Pointer to the position in the list that the \hyperlink{classc_render_pointer}{cRenderPointer} is at in \hyperlink{classc_painter}{cPainter}. \item\end{DoxyCompactList}\item 
+\hyperlink{classv_shader_program}{vShaderProgram} $\ast$ \hyperlink{classc_render_object_a0c6a3cdf86f33d1463418f49be316f1d}{mpShader}
+\begin{DoxyCompactList}\small\item\em The current shader that this program will use. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class contains the base code for all renderable objects. Any renderable object should inherit this class. 
+\begin{DoxyParams}{Parameters}
+{\em lpNode} & lpNode is not required, but will add the renderable object to the \hyperlink{classc_render_node}{cRenderNode} pointed to by lpNode. This class should be inherited by any renderable object. If it is handed no parameters then it will add itself to \hyperlink{classc_camera_a642cdd541d3837608830f2b851bcd8d0}{cCamera::mpRenderList}, which is owned by \hyperlink{classc_camera}{cCamera}. If you wish to produce a scene graph, the new renderable object can be handed a pointer to a \hyperlink{classc_render_node}{cRenderNode}. Any translations applied to lpNode will change the co-\/ordinate system for this renderable object. 
+\begin{DoxyCode}
+        cRenderNode mpNode=new cRenderNode;
+        cTexturedModel mpObject=new cTexturedModel(mpNode);
+        mpNode.LAdvance(1.0f,0.0f,0.0f);
+        mpObject.LAdvance(1.0f,0.0f,0.0f);
+\end{DoxyCode}
+ After this code mpObject will be at 2.0f,0.0f,0.0. This Function should only be used for Creating New Renderable Object Types. It should be virtual. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file WTcRenderObject.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_render_object_a4c53fe5d3df67ba2e15001e9c939f94f}{
+\index{cRenderObject@{cRenderObject}!cRenderObject@{cRenderObject}}
+\index{cRenderObject@{cRenderObject}!cRenderObject@{cRenderObject}}
+\subsubsection[{cRenderObject}]{\setlength{\rightskip}{0pt plus 5cm}cRenderObject::cRenderObject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_object_a4c53fe5d3df67ba2e15001e9c939f94f}
+
+
+Constructor for \hyperlink{classc_render_object}{cRenderObject}. Creates a new render object and adds itself to \hyperlink{classc_camera_a642cdd541d3837608830f2b851bcd8d0}{cCamera::mpRenderList}. 
+
+
+
+Definition at line 16 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_a91246fbf5e6de19a25d984f0fff71956}{
+\index{cRenderObject@{cRenderObject}!cRenderObject@{cRenderObject}}
+\index{cRenderObject@{cRenderObject}!cRenderObject@{cRenderObject}}
+\subsubsection[{cRenderObject}]{\setlength{\rightskip}{0pt plus 5cm}cRenderObject::cRenderObject (
+\begin{DoxyParamCaption}
+\item[{{\bf cRenderNode} $\ast$}]{lpNode}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_object_a91246fbf5e6de19a25d984f0fff71956}
+
+
+Constructor for \hyperlink{classc_render_object}{cRenderObject}. Creates a new render object and adds itself to lpNode. 
+
+
+
+Definition at line 24 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_aef0efadb31f222418fc7a414c556e6a2}{
+\index{cRenderObject@{cRenderObject}!$\sim$cRenderObject@{$\sim$cRenderObject}}
+\index{$\sim$cRenderObject@{$\sim$cRenderObject}!cRenderObject@{cRenderObject}}
+\subsubsection[{$\sim$cRenderObject}]{\setlength{\rightskip}{0pt plus 5cm}cRenderObject::$\sim$cRenderObject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_object_aef0efadb31f222418fc7a414c556e6a2}
+
+
+Definition at line 3 of file WTcRenderObject.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_render_object_ae05caabd6783700f4ed50c8224690645}{
+\index{cRenderObject@{cRenderObject}!AdditionalKillFunctionality@{AdditionalKillFunctionality}}
+\index{AdditionalKillFunctionality@{AdditionalKillFunctionality}!cRenderObject@{cRenderObject}}
+\subsubsection[{AdditionalKillFunctionality}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderObject::AdditionalKillFunctionality (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_object_ae05caabd6783700f4ed50c8224690645}
+
+
+Virtual Functions to allow additional commands to be processed when a kill signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. 
+
+
+
+Reimplemented from \hyperlink{classc_signal_a3770218c9b8481600e0ab180d90029c5}{cSignal}.
+
+
+
+Definition at line 82 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_a1a023520677b50e63fc2334717a2761d}{
+\index{cRenderObject@{cRenderObject}!AdditionalRenderFunctions@{AdditionalRenderFunctions}}
+\index{AdditionalRenderFunctions@{AdditionalRenderFunctions}!cRenderObject@{cRenderObject}}
+\subsubsection[{AdditionalRenderFunctions}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderObject::AdditionalRenderFunctions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_object_a1a023520677b50e63fc2334717a2761d}
+
+
+This will contain additional functions to perform when an object renders. 
+
+
+
+Reimplemented from \hyperlink{classv_render_object_a5e566d53432b096551f09c2866c6e0b0}{vRenderObject}.
+
+
+
+Definition at line 77 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_a86cedd6452174f7f091e0cdd0fcb3721}{
+\index{cRenderObject@{cRenderObject}!AdditionalSleepFunctionality@{AdditionalSleepFunctionality}}
+\index{AdditionalSleepFunctionality@{AdditionalSleepFunctionality}!cRenderObject@{cRenderObject}}
+\subsubsection[{AdditionalSleepFunctionality}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderObject::AdditionalSleepFunctionality (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_object_a86cedd6452174f7f091e0cdd0fcb3721}
+
+
+Virtual Functions to allow additional commands to be processed when a sleep signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. 
+
+
+
+Reimplemented from \hyperlink{classc_signal_a0943743d387620716dc6f183d605f08d}{cSignal}.
+
+
+
+Definition at line 89 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_acd23438575c9a3bcbe77e8e96c348f33}{
+\index{cRenderObject@{cRenderObject}!AdditionalWakeFunctionality@{AdditionalWakeFunctionality}}
+\index{AdditionalWakeFunctionality@{AdditionalWakeFunctionality}!cRenderObject@{cRenderObject}}
+\subsubsection[{AdditionalWakeFunctionality}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderObject::AdditionalWakeFunctionality (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_object_acd23438575c9a3bcbe77e8e96c348f33}
+
+
+Virtual Functions to allow additional commands to be processed when a wake signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. 
+
+
+
+Reimplemented from \hyperlink{classc_signal_a26071844c0570b95a49c4b17974a6ae7}{cSignal}.
+
+
+
+Definition at line 103 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_a7f1424d2badbe9e09bc6fd4af6616fa0}{
+\index{cRenderObject@{cRenderObject}!Delete@{Delete}}
+\index{Delete@{Delete}!cRenderObject@{cRenderObject}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderObject::Delete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_object_a7f1424d2badbe9e09bc6fd4af6616fa0}
+
+
+Will remove this object from the render list owned by mpRenderer. 
+
+
+
+Definition at line 48 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_ae60403345f6e937fbb641b87afd757a9}{
+\index{cRenderObject@{cRenderObject}!GetGlobalPos@{GetGlobalPos}}
+\index{GetGlobalPos@{GetGlobalPos}!cRenderObject@{cRenderObject}}
+\subsubsection[{GetGlobalPos}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ cRenderObject::GetGlobalPos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_object_ae60403345f6e937fbb641b87afd757a9}
+
+
+This will return the global position of the object as rendered at the end of last frame. Note, this will contain the camera matrix. 
+
+
+
+Implements \hyperlink{classv_render_object_a514553ffc449f026b50fa47496311860}{vRenderObject}.
+
+
+
+Definition at line 159 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_a48a88c2c6722c23ee51459e933873412}{
+\index{cRenderObject@{cRenderObject}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!cRenderObject@{cRenderObject}}
+\subsubsection[{GetPos}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ cRenderObject::GetPos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_object_a48a88c2c6722c23ee51459e933873412}
+
+
+This will return the Local position of the selected object. 
+
+
+
+Implements \hyperlink{classv_render_object_aacd7e3aeb366f0f04f0f148ded8b89f4}{vRenderObject}.
+
+
+
+Definition at line 153 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_a9cd352514159783b312cf9d3a6168e8e}{
+\index{cRenderObject@{cRenderObject}!LinkCollisionObject@{LinkCollisionObject}}
+\index{LinkCollisionObject@{LinkCollisionObject}!cRenderObject@{cRenderObject}}
+\subsubsection[{LinkCollisionObject}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderObject::LinkCollisionObject (
+\begin{DoxyParamCaption}
+\item[{{\bf cCollisionObject} $\ast$}]{lpObj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_object_a9cd352514159783b312cf9d3a6168e8e}
+
+
+This will set the Collision Object that is linked to this renderable object. This should be called automatically when a \hyperlink{classc_collision_object}{cCollisionObject} is created. 
+
+
+
+Reimplemented from \hyperlink{classv_render_object_a1cd8f4961222c39ecdfa5ca155699fa3}{vRenderObject}.
+
+
+
+Definition at line 10 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_ab0db1b7db1a1d4210511d9d95634fcce}{
+\index{cRenderObject@{cRenderObject}!Render@{Render}}
+\index{Render@{Render}!cRenderObject@{cRenderObject}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cRenderObject::Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classc_render_object_ab0db1b7db1a1d4210511d9d95634fcce}
+
+
+virtual function to allow polymorphiss. see \hyperlink{classc_camera_acfe96d0953540fa3938e4d415d7cb791}{cCamera::Render()}; 
+
+
+
+Implements \hyperlink{classv_render_object_ae4bb9fb71f277f6b63e7dd6aeaedff5b}{vRenderObject}.
+
+
+
+Implemented in \hyperlink{classc_beam_mesh_a02d976199ae454b1f30ce5948de9bde7}{cBeamMesh}, \hyperlink{classc_image_a05974b0f9253b8416eeea756f95460ce}{cImage}, \hyperlink{classc_landscape_a8e2448f2d2203f3823d786e9e0450508}{cLandscape}, \hyperlink{classc_line_af7852492bb5da5f32310675342fa12e7}{cLine}, \hyperlink{classc_model_list_a1a956924ef232a2817af62debebb1948}{cModelList}, \hyperlink{classc_particle_handler_aab7ecf600c419d2e58f7819fc37e0bb6}{cParticleHandler}, \hyperlink{classc_particle_group_a9b4bf815002fe5c480d93bc0a81e879c}{cParticleGroup}, \hyperlink{classc_point_a695f51244ffde2e5d4d932ccbde443c7}{cPoint}, \hyperlink{classc_textured_model_a8049592b8cb7abc18332a8e70de3fc70}{cTexturedModel}, and \hyperlink{classc_text_ad331a52b579e01af3b3151e1fc2b52fd}{cText}.
+
+\hypertarget{classc_render_object_a8edb3b47e07b01d11aae96f078b9f63f}{
+\index{cRenderObject@{cRenderObject}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!cRenderObject@{cRenderObject}}
+\subsubsection[{Renderer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cRenderNode} $\ast$ cRenderObject::Renderer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_object_a8edb3b47e07b01d11aae96f078b9f63f}
+
+
+Returns the \hyperlink{classc_render_node}{cRenderNode} which owns this renderable process. 
+
+
+
+Implements \hyperlink{classv_render_object_a558ba2b7a23cf687c0b0ec7d814a7744}{vRenderObject}.
+
+
+
+Definition at line 146 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_ab2a666638043054e563b9f0a54faa6b7}{
+\index{cRenderObject@{cRenderObject}!RenderPainter@{RenderPainter}}
+\index{RenderPainter@{RenderPainter}!cRenderObject@{cRenderObject}}
+\subsubsection[{RenderPainter}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cRenderObject::RenderPainter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classc_render_object_ab2a666638043054e563b9f0a54faa6b7}
+
+
+virtual functions to allow polymorphism. see cCamera::RenderPainter(); 
+
+
+
+Implements \hyperlink{classv_render_object_a5f7d30eaedefd5cfcc904d0e499a836d}{vRenderObject}.
+
+
+
+Reimplemented in \hyperlink{classc_particle_handler_ae1d7ac9b13cb0ca9f43105706a48da01}{cParticleHandler}, and \hyperlink{classc_particle_group_a9f825be2f03920ca17cabcfbd6db47d6}{cParticleGroup}.
+
+
+
+Definition at line 65 of file WTcRenderObject.h.
+
+\hypertarget{classc_render_object_a16beccc30dfea79c3988508c1420d54b}{
+\index{cRenderObject@{cRenderObject}!RenderPainter@{RenderPainter}}
+\index{RenderPainter@{RenderPainter}!cRenderObject@{cRenderObject}}
+\subsubsection[{RenderPainter}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cRenderObject::RenderPainter (
+\begin{DoxyParamCaption}
+\item[{uint8}]{liLevel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classc_render_object_a16beccc30dfea79c3988508c1420d54b}
+
+
+virtual function to allow polymorphism. see cCamera::RenderPainter(); 
+
+
+
+Implemented in \hyperlink{classc_beam_mesh_a6020491da72676f36024237cd3db3fab}{cBeamMesh}, \hyperlink{classc_image_a49202e61cb4fd9ada4d69d0aa6bad601}{cImage}, \hyperlink{classc_landscape_a9599678bb07612fc7a922174f19b27a1}{cLandscape}, \hyperlink{classc_line_a5c5189a48b0e55c436d98aaed184ccc8}{cLine}, \hyperlink{classc_model_list_a99c8897efa4a08778fa9ce90cacfd6a4}{cModelList}, \hyperlink{classc_particle_handler_acc9ccbaffa140d31d73007eaaba3c181}{cParticleHandler}, \hyperlink{classc_particle_group_a308af94c55aa8a1d06e7a53e2a048376}{cParticleGroup}, \hyperlink{classc_point_a51b99266661d1cf35c04d6e93b681ade}{cPoint}, \hyperlink{classc_textured_model_a77a6e49113730c332262757f08c378d2}{cTexturedModel}, and \hyperlink{classc_text_a527fc91fc0c3e5a2b0a7fb366321ef8b}{cText}.
+
+\hypertarget{classc_render_object_a130139cc8e1f5219ddabc6192f98afa8}{
+\index{cRenderObject@{cRenderObject}!RenderToPainter@{RenderToPainter}}
+\index{RenderToPainter@{RenderToPainter}!cRenderObject@{cRenderObject}}
+\subsubsection[{RenderToPainter}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cRenderObject::RenderToPainter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classc_render_object_a130139cc8e1f5219ddabc6192f98afa8}
+
+
+virtual function to allow polymorphism. see cCamera::RenderToPainter(); 
+
+
+
+Implements \hyperlink{classv_render_object_a8402746b2f0dce26964556c9167ad1e3}{vRenderObject}.
+
+
+
+Implemented in \hyperlink{classc_beam_mesh_a3a46ae2359bb9081d70a747e72a47e99}{cBeamMesh}, \hyperlink{classc_image_a7eb7b4c9c12656243d962b74ca75344d}{cImage}, \hyperlink{classc_landscape_acc1d4843ba2d7be80272d3f50d1599d5}{cLandscape}, \hyperlink{classc_line_a0e06d47dcc732da35dd1575ddc6c894e}{cLine}, \hyperlink{classc_model_list_a529148930b0fd87ab2b437a469c69bce}{cModelList}, \hyperlink{classc_particle_handler_a8947ed7c9c931bd10a880abcd636b581}{cParticleHandler}, \hyperlink{classc_particle_group_a5f1365761df395f6724fb5bd2a2c761f}{cParticleGroup}, \hyperlink{classc_point_a67e471d5f9c67ede9e3357910eda4dc5}{cPoint}, \hyperlink{classc_textured_model_abad855bdd6d80200980c0072207b3c84}{cTexturedModel}, and \hyperlink{classc_text_add728aeca513f1c355b933a77038162a}{cText}.
+
+\hypertarget{classc_render_object_ac89f6defa0ff8b5834f80055a6723346}{
+\index{cRenderObject@{cRenderObject}!SetRenderNode@{SetRenderNode}}
+\index{SetRenderNode@{SetRenderNode}!cRenderObject@{cRenderObject}}
+\subsubsection[{SetRenderNode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cLinkedNode}$<$ {\bf vRenderObject} $>$ $\ast$ cRenderObject::SetRenderNode (
+\begin{DoxyParamCaption}
+\item[{{\bf cRenderNode} $\ast$}]{lpNode}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_object_ac89f6defa0ff8b5834f80055a6723346}
+
+
+Will return a pointer to the Shader Program that is currently bound to this model. 
+
+Will move the current renderable object from the current \hyperlink{classc_render_node}{cRenderNode} to lpNode. 
+\begin{DoxyParams}{Parameters}
+{\em lpNode} & The \hyperlink{classc_render_node}{cRenderNode} which will now own this renderable object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function returns the new \hyperlink{classc_linked_node}{cLinkedNode} which now owns this renderable object. 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_a4511be39ce33b59a02099749947fa5a3}{
+\index{cRenderObject@{cRenderObject}!Shader@{Shader}}
+\index{Shader@{Shader}!cRenderObject@{cRenderObject}}
+\subsubsection[{Shader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vShaderProgram} $\ast$ cRenderObject::Shader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_object_a4511be39ce33b59a02099749947fa5a3}
+
+
+Will return a pointer to the Shader Program that is currently bound to this model. 
+
+
+
+Definition at line 140 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_a4ccf0881a96909f31ede6139b8246f61}{
+\index{cRenderObject@{cRenderObject}!Shader@{Shader}}
+\index{Shader@{Shader}!cRenderObject@{cRenderObject}}
+\subsubsection[{Shader}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderObject::Shader (
+\begin{DoxyParamCaption}
+\item[{{\bf vShaderProgram} $\ast$}]{lpShader}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_object_a4ccf0881a96909f31ede6139b8246f61}
+
+
+Will set the shader this object will use. 
+
+
+
+Definition at line 134 of file WTcRenderObject.cpp.
+
+\hypertarget{classc_render_object_ad2c6096f2e9d99e19d1ca89814567f6e}{
+\index{cRenderObject@{cRenderObject}!TextureNumber@{TextureNumber}}
+\index{TextureNumber@{TextureNumber}!cRenderObject@{cRenderObject}}
+\subsubsection[{TextureNumber}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int cRenderObject::TextureNumber (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_render_object_ad2c6096f2e9d99e19d1ca89814567f6e}
+
+
+virtual function for polymorphism. Should return the texture ID of this renderable objects Texture. 
+
+
+
+Reimplemented in \hyperlink{classc_image_abc6c49a11e077d8c945cb8b7d814db77}{cImage}, \hyperlink{classc_textured_model_ad999c8e0163c533f522de8170717e1b8}{cTexturedModel}, and \hyperlink{classc_text_ab10f62a2c5c568ab197a928d565e3da4}{cText}.
+
+
+
+Definition at line 83 of file WTcRenderObject.h.
+
+\hypertarget{classc_render_object_aeeb8da742f1a844179a74a99e9aa4433}{
+\index{cRenderObject@{cRenderObject}!UpdateCache@{UpdateCache}}
+\index{UpdateCache@{UpdateCache}!cRenderObject@{cRenderObject}}
+\subsubsection[{UpdateCache}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderObject::UpdateCache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_object_aeeb8da742f1a844179a74a99e9aa4433}
+
+
+This function will update the object cache. For consistency all Renderable Objects must update the cache as they are rendered. This will be the global position of the object and is used to get consistent positions throughout a frame for collision detection. 
+
+
+
+Implements \hyperlink{classv_render_object_a18c1f3fcab0c4c28358e539a5ec57ad3}{vRenderObject}.
+
+
+
+Definition at line 115 of file WTcRenderObject.cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_render_object_a4ed136f044fd1a7855c3500cd16ba74e}{
+\index{cRenderObject@{cRenderObject}!mpPainterData@{mpPainterData}}
+\index{mpPainterData@{mpPainterData}!cRenderObject@{cRenderObject}}
+\subsubsection[{mpPainterData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cRenderPointer}$\ast$ {\bf cRenderObject::mpPainterData}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_render_object_a4ed136f044fd1a7855c3500cd16ba74e}
+
+
+A Pointer to the \hyperlink{classc_render_pointer}{cRenderPointer} Object for this Renderable Object. Used when \hyperlink{classc_painter}{cPainter} is enabled. 
+
+
+
+Definition at line 36 of file WTcRenderObject.h.
+
+\hypertarget{classc_render_object_a0c6a3cdf86f33d1463418f49be316f1d}{
+\index{cRenderObject@{cRenderObject}!mpShader@{mpShader}}
+\index{mpShader@{mpShader}!cRenderObject@{cRenderObject}}
+\subsubsection[{mpShader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vShaderProgram}$\ast$ {\bf cRenderObject::mpShader}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_render_object_a0c6a3cdf86f33d1463418f49be316f1d}
+
+
+The current shader that this program will use. 
+
+
+
+Definition at line 41 of file WTcRenderObject.h.
+
+\hypertarget{classc_render_object_a9a96382f073ecbe57b4c43c639161f6c}{
+\index{cRenderObject@{cRenderObject}!mpSlot@{mpSlot}}
+\index{mpSlot@{mpSlot}!cRenderObject@{cRenderObject}}
+\subsubsection[{mpSlot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cRenderPointer}$\ast$$\ast$ {\bf cRenderObject::mpSlot}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_render_object_a9a96382f073ecbe57b4c43c639161f6c}
+
+
+A Pointer to the position in the list that the \hyperlink{classc_render_pointer}{cRenderPointer} is at in \hyperlink{classc_painter}{cPainter}. 
+
+
+
+Definition at line 38 of file WTcRenderObject.h.
+

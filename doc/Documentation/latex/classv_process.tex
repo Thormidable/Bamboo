@@ -1,0 +1,167 @@
+\hypertarget{classv_process}{
+\section{vProcess Class Reference}
+\label{classv_process}\index{vProcess@{vProcess}}
+}
+
+
+This is the virtual base class for a system process, see \hyperlink{classc_process}{cProcess}.  
+
+
+
+
+Inheritance diagram for vProcess:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classv_process__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for vProcess:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classv_process__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classv_process_aa62b370bff310015da5febd47c00d9f6}{$\sim$vProcess} ()
+\item 
+virtual void \hyperlink{classv_process_ad4805bf4b4f42ec0e63038688ef80934}{Run} ()=0
+\begin{DoxyCompactList}\small\item\em Virtual function linking code to update (or run) the process by single frame. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_process_a85cf6af1cf0e6c787fc74f96c98ceb5c}{AdditionalKillFunctionality} ()=0
+\begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a kill signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_process_a1cde6e05b052df01dcafa92f546e403e}{AdditionalSleepFunctionality} ()=0
+\begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a sleep signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_process_ae85b4a809032841b553a7f2e7440750b}{AdditionalWakeFunctionality} ()=0
+\begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a wake signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classc_parent_stack}{cParentStack} $\ast$ \hyperlink{classv_process_a6d004f2866ad23c997fc09b3d664e20d}{ParentStack} ()=0
+\begin{DoxyCompactList}\small\item\em Virtual Function for. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the virtual base class for a system process, see \hyperlink{classc_process}{cProcess}. 
+
+Definition at line 8 of file WTvProcess.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classv_process_aa62b370bff310015da5febd47c00d9f6}{
+\index{vProcess@{vProcess}!$\sim$vProcess@{$\sim$vProcess}}
+\index{$\sim$vProcess@{$\sim$vProcess}!vProcess@{vProcess}}
+\subsubsection[{$\sim$vProcess}]{\setlength{\rightskip}{0pt plus 5cm}virtual vProcess::$\sim$vProcess (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classv_process_aa62b370bff310015da5febd47c00d9f6}
+
+
+Definition at line 11 of file WTvProcess.h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classv_process_a85cf6af1cf0e6c787fc74f96c98ceb5c}{
+\index{vProcess@{vProcess}!AdditionalKillFunctionality@{AdditionalKillFunctionality}}
+\index{AdditionalKillFunctionality@{AdditionalKillFunctionality}!vProcess@{vProcess}}
+\subsubsection[{AdditionalKillFunctionality}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vProcess::AdditionalKillFunctionality (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_process_a85cf6af1cf0e6c787fc74f96c98ceb5c}
+
+
+Virtual Functions to allow additional commands to be processed when a kill signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. 
+
+
+
+Reimplemented from \hyperlink{classc_signal_a3770218c9b8481600e0ab180d90029c5}{cSignal}.
+
+
+
+Implemented in \hyperlink{classc_process_a36360c0e5cce8170540623f1ddf52f99}{cProcess}.
+
+\hypertarget{classv_process_a1cde6e05b052df01dcafa92f546e403e}{
+\index{vProcess@{vProcess}!AdditionalSleepFunctionality@{AdditionalSleepFunctionality}}
+\index{AdditionalSleepFunctionality@{AdditionalSleepFunctionality}!vProcess@{vProcess}}
+\subsubsection[{AdditionalSleepFunctionality}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vProcess::AdditionalSleepFunctionality (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_process_a1cde6e05b052df01dcafa92f546e403e}
+
+
+Virtual Functions to allow additional commands to be processed when a sleep signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. 
+
+
+
+Reimplemented from \hyperlink{classc_signal_a0943743d387620716dc6f183d605f08d}{cSignal}.
+
+
+
+Implemented in \hyperlink{classc_process_a2574289ef0d498ec61a9b7ad9b0fd0c5}{cProcess}.
+
+\hypertarget{classv_process_ae85b4a809032841b553a7f2e7440750b}{
+\index{vProcess@{vProcess}!AdditionalWakeFunctionality@{AdditionalWakeFunctionality}}
+\index{AdditionalWakeFunctionality@{AdditionalWakeFunctionality}!vProcess@{vProcess}}
+\subsubsection[{AdditionalWakeFunctionality}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vProcess::AdditionalWakeFunctionality (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_process_ae85b4a809032841b553a7f2e7440750b}
+
+
+Virtual Functions to allow additional commands to be processed when a wake signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. 
+
+
+
+Reimplemented from \hyperlink{classc_signal_a26071844c0570b95a49c4b17974a6ae7}{cSignal}.
+
+
+
+Implemented in \hyperlink{classc_process_a15b63d6b6a07fff977d8915a84e68ebf}{cProcess}.
+
+\hypertarget{classv_process_a6d004f2866ad23c997fc09b3d664e20d}{
+\index{vProcess@{vProcess}!ParentStack@{ParentStack}}
+\index{ParentStack@{ParentStack}!vProcess@{vProcess}}
+\subsubsection[{ParentStack}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf cParentStack}$\ast$ vProcess::ParentStack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_process_a6d004f2866ad23c997fc09b3d664e20d}
+
+
+Virtual Function for. 
+
+
+
+Implemented in \hyperlink{classc_process_a4d7c47103e70de9679c1260bb0269bf1}{cProcess}.
+
+\hypertarget{classv_process_ad4805bf4b4f42ec0e63038688ef80934}{
+\index{vProcess@{vProcess}!Run@{Run}}
+\index{Run@{Run}!vProcess@{vProcess}}
+\subsubsection[{Run}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vProcess::Run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_process_ad4805bf4b4f42ec0e63038688ef80934}
+
+
+Virtual function linking code to update (or run) the process by single frame. 
+
+
+
+Implemented in \hyperlink{classc_process_a3e0fab4ccc0a8fb065d50eb88b6a0dd5}{cProcess}.
+

@@ -1,0 +1,13 @@
+\hyperlink{_w_tc_file_8h_source}{WTcFile.h}
+
+Using the file handler by William Thorley
+
+The Filehandler is an automatic system for controlling files loaded in DivWin. All files should be of type IMF, though others can be loaded. When a file is loaded it is automatically linked into the system. This allows any process to access any loaded file. All Objects (blocks within IMF Files) are given a Reference (a character string) to allow them to be easily identified. And in the event of an OS clearing data (for instance Windows clearing Textures on Minimize) the file handler will automatically reload all the files. Non IMF Files will use the Filename as the Reference for the purposes of Identification.
+
+To create a new File Class and make it use the file handler, have it inherit \hyperlink{classc_file}{cFile}, This will require \#include “WTcFile.h”. To load a new file use the macro \_\-LOAD\_\-FILE(FileName).
+
+IMF Files contain many types of data:
+
+Models Textures Fonts Model Trees Reference Lists Shaders Shader Programs Collision Objects Landscape Models
+
+See the specific files for each type for more information. 

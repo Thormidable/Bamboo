@@ -1,0 +1,127 @@
+\hypertarget{classc_ray_collision}{
+\section{cRayCollision Class Reference}
+\label{classc_ray_collision}\index{cRayCollision@{cRayCollision}}
+}
+
+
+Inheritance diagram for cRayCollision:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classc_ray_collision__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cRayCollision:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classc_ray_collision__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_ray_collision_a23a3aa0182d466222ba6f41db1bd415b}{cRayCollision} ()
+\item 
+virtual \hyperlink{classc_ray_collision_a3e27a9ed818ab38bc7c82a63bdc366b8}{$\sim$cRayCollision} ()
+\item 
+\hyperlink{classc_ray_collision}{cRayCollision} $\ast$ \hyperlink{classc_ray_collision_ace09ac544c69a0e18034a0e14ea5c670}{Ray} ()
+\begin{DoxyCompactList}\small\item\em Will return a pointer if this object contains a Ray collision data object. Otherwise returns 0;. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_ray_collision_a6a1bc84fd74b13f41160423c50b61575}{Update} (\hyperlink{classc_matrix4}{cMatrix4} \&New)
+\item 
+bool \hyperlink{classc_ray_collision_a767b8c5a0cff13dbf67190b7006b8c8b}{CreatedThisFrame} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is for representing objects moving very fast. The system will assume that the object is a sphere of radius equal to the value set in SetSize(float $\ast$lfSize). It will move the object in a straight line from it's previous position to the position it is in at the start of this frame. This is a fast and perfect (after the assumption that the object is a sphere) way of colliding fast moving objects. Best used for projectiles. Note: Drastic camera manipulations can interfere with this class. 
+
+Definition at line 93 of file WTvCollisionData.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_ray_collision_a23a3aa0182d466222ba6f41db1bd415b}{
+\index{cRayCollision@{cRayCollision}!cRayCollision@{cRayCollision}}
+\index{cRayCollision@{cRayCollision}!cRayCollision@{cRayCollision}}
+\subsubsection[{cRayCollision}]{\setlength{\rightskip}{0pt plus 5cm}cRayCollision::cRayCollision (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_ray_collision_a23a3aa0182d466222ba6f41db1bd415b}
+
+
+Definition at line 174 of file WTvCollisionData.cpp.
+
+\hypertarget{classc_ray_collision_a3e27a9ed818ab38bc7c82a63bdc366b8}{
+\index{cRayCollision@{cRayCollision}!$\sim$cRayCollision@{$\sim$cRayCollision}}
+\index{$\sim$cRayCollision@{$\sim$cRayCollision}!cRayCollision@{cRayCollision}}
+\subsubsection[{$\sim$cRayCollision}]{\setlength{\rightskip}{0pt plus 5cm}cRayCollision::$\sim$cRayCollision (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_ray_collision_a3e27a9ed818ab38bc7c82a63bdc366b8}
+
+
+Definition at line 175 of file WTvCollisionData.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_ray_collision_a767b8c5a0cff13dbf67190b7006b8c8b}{
+\index{cRayCollision@{cRayCollision}!CreatedThisFrame@{CreatedThisFrame}}
+\index{CreatedThisFrame@{CreatedThisFrame}!cRayCollision@{cRayCollision}}
+\subsubsection[{CreatedThisFrame}]{\setlength{\rightskip}{0pt plus 5cm}bool cRayCollision::CreatedThisFrame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_ray_collision_a767b8c5a0cff13dbf67190b7006b8c8b}
+
+
+Definition at line 177 of file WTvCollisionData.cpp.
+
+\hypertarget{classc_ray_collision_ace09ac544c69a0e18034a0e14ea5c670}{
+\index{cRayCollision@{cRayCollision}!Ray@{Ray}}
+\index{Ray@{Ray}!cRayCollision@{cRayCollision}}
+\subsubsection[{Ray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cRayCollision} $\ast$ cRayCollision::Ray (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_ray_collision_ace09ac544c69a0e18034a0e14ea5c670}
+
+
+Will return a pointer if this object contains a Ray collision data object. Otherwise returns 0;. 
+
+
+
+Reimplemented from \hyperlink{classc_beam_collision_aac665850fc71361da9bd3634d7ac8c97}{cBeamCollision}.
+
+
+
+Definition at line 176 of file WTvCollisionData.cpp.
+
+\hypertarget{classc_ray_collision_a6a1bc84fd74b13f41160423c50b61575}{
+\index{cRayCollision@{cRayCollision}!Update@{Update}}
+\index{Update@{Update}!cRayCollision@{cRayCollision}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void cRayCollision::Update (
+\begin{DoxyParamCaption}
+\item[{{\bf cMatrix4} \&}]{New}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_ray_collision_a6a1bc84fd74b13f41160423c50b61575}
+
+
+Reimplemented from \hyperlink{classc_beam_collision_a6c45762164910884d9b28fcc3f991374}{cBeamCollision}.
+
+
+
+Definition at line 25 of file WTvCollisionData.cpp.
+

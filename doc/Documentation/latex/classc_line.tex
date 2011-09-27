@@ -1,0 +1,342 @@
+\hypertarget{classc_line}{
+\section{cLine Class Reference}
+\label{classc_line}\index{cLine@{cLine}}
+}
+
+
+A standard renderable Line object.  
+
+
+
+
+Inheritance diagram for cLine:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classc_line__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cLine:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_line__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_line_afc96602bef17f3d03af9685532af395d}{cLine} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classc_line}{cLine} constructor \item\end{DoxyCompactList}\item 
+\hyperlink{classc_line_ab764b0513fe512fdaa5c582503b1f695}{cLine} (\hyperlink{classc_render_node}{cRenderNode} $\ast$lpRenderer)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classc_line}{cLine} constructor. Will be owned by lpRenderer. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_line_a5c5189a48b0e55c436d98aaed184ccc8}{RenderPainter} (uint8 liLevel)
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphism. see cCamera::RenderPainter(); \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_line_a0e06d47dcc732da35dd1575ddc6c894e}{RenderToPainter} ()
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphism. see cCamera::RenderToPainter(); \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_line_af7852492bb5da5f32310675342fa12e7}{Render} ()
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphiss. see \hyperlink{classc_camera_acfe96d0953540fa3938e4d415d7cb791}{cCamera::Render()}; \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_line_a7f62c7d19b3c7c1f8857bbf27a968db6}{Color} ()
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the color of this line (RGBA). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_line_af6f2bacb2fd627d5eff23fd74d2d8686}{Color} (float $\ast$lfColor)
+\begin{DoxyCompactList}\small\item\em Will Set the color of this object to the float array pointed to by lfColor. Expects 4 floats (RGBA). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_line_a388632ef2701f10c896212fabeb2373c}{Color} (float lfR, float lfG, float lfB, float lfA)
+\begin{DoxyCompactList}\small\item\em Will Set the color of this object to the values specified (RGBA). \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_line_abe4306d62f5a0744508cbead16245bf7}{Position} ()
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the position of this line object (XYZ). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_line_acfefe5128253475e8291d110f004095b}{Position} (float $\ast$lfPos)
+\begin{DoxyCompactList}\small\item\em Will set the position of this object to the float array pointed to by lfPos. Expects 3 floats (XYZ). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_line_a6abc4fedc3f30a6fb45ce4dd83070082}{Position} (float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em Will set the position of this object to the values specified (XYZ). \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_line_a661253d6809e688c00b0a8dc5a906af7}{Vector} ()
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the vector of this line object (XYZ). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_line_ad558bfa28a78a6594446ae0c5e11c262}{Vector} (float $\ast$lfPos)
+\begin{DoxyCompactList}\small\item\em Will set the vector of this object to the float array pointed to by lfPos. Expects 3 floats (XYZ). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_line_aa9b3156e1504378683e34aa8c2f38ec2}{Vector} (float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em Will set the vector of this object to the values specified (XYZ). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A standard renderable Line object. 
+
+Definition at line 6 of file WTcLine.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_line_afc96602bef17f3d03af9685532af395d}{
+\index{cLine@{cLine}!cLine@{cLine}}
+\index{cLine@{cLine}!cLine@{cLine}}
+\subsubsection[{cLine}]{\setlength{\rightskip}{0pt plus 5cm}cLine::cLine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_line_afc96602bef17f3d03af9685532af395d}
+
+
+\hyperlink{classc_line}{cLine} constructor 
+
+
+
+Definition at line 4 of file WTcLine.cpp.
+
+\hypertarget{classc_line_ab764b0513fe512fdaa5c582503b1f695}{
+\index{cLine@{cLine}!cLine@{cLine}}
+\index{cLine@{cLine}!cLine@{cLine}}
+\subsubsection[{cLine}]{\setlength{\rightskip}{0pt plus 5cm}cLine::cLine (
+\begin{DoxyParamCaption}
+\item[{{\bf cRenderNode} $\ast$}]{lpRenderer}
+\end{DoxyParamCaption}
+)}}
+\label{classc_line_ab764b0513fe512fdaa5c582503b1f695}
+
+
+\hyperlink{classc_line}{cLine} constructor. Will be owned by lpRenderer. 
+
+
+
+Definition at line 27 of file WTcLine.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_line_a7f62c7d19b3c7c1f8857bbf27a968db6}{
+\index{cLine@{cLine}!Color@{Color}}
+\index{Color@{Color}!cLine@{cLine}}
+\subsubsection[{Color}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ cLine::Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_line_a7f62c7d19b3c7c1f8857bbf27a968db6}
+
+
+Will return a pointer to the color of this line (RGBA). 
+
+
+
+Definition at line 89 of file WTcLine.cpp.
+
+\hypertarget{classc_line_af6f2bacb2fd627d5eff23fd74d2d8686}{
+\index{cLine@{cLine}!Color@{Color}}
+\index{Color@{Color}!cLine@{cLine}}
+\subsubsection[{Color}]{\setlength{\rightskip}{0pt plus 5cm}void cLine::Color (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lfColor}
+\end{DoxyParamCaption}
+)}}
+\label{classc_line_af6f2bacb2fd627d5eff23fd74d2d8686}
+
+
+Will Set the color of this object to the float array pointed to by lfColor. Expects 4 floats (RGBA). 
+
+
+
+Definition at line 84 of file WTcLine.cpp.
+
+\hypertarget{classc_line_a388632ef2701f10c896212fabeb2373c}{
+\index{cLine@{cLine}!Color@{Color}}
+\index{Color@{Color}!cLine@{cLine}}
+\subsubsection[{Color}]{\setlength{\rightskip}{0pt plus 5cm}void cLine::Color (
+\begin{DoxyParamCaption}
+\item[{float}]{lfR, }
+\item[{float}]{lfG, }
+\item[{float}]{lfB, }
+\item[{float}]{lfA}
+\end{DoxyParamCaption}
+)}}
+\label{classc_line_a388632ef2701f10c896212fabeb2373c}
+
+
+Will Set the color of this object to the values specified (RGBA). 
+
+
+
+Definition at line 76 of file WTcLine.cpp.
+
+\hypertarget{classc_line_acfefe5128253475e8291d110f004095b}{
+\index{cLine@{cLine}!Position@{Position}}
+\index{Position@{Position}!cLine@{cLine}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cLine::Position (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lfPos}
+\end{DoxyParamCaption}
+)}}
+\label{classc_line_acfefe5128253475e8291d110f004095b}
+
+
+Will set the position of this object to the float array pointed to by lfPos. Expects 3 floats (XYZ). 
+
+
+
+Reimplemented from \hyperlink{classc_matrix4_ae3bb670db30cee45d59aef1599289086}{cMatrix4}.
+
+
+
+Definition at line 108 of file WTcLine.cpp.
+
+\hypertarget{classc_line_a6abc4fedc3f30a6fb45ce4dd83070082}{
+\index{cLine@{cLine}!Position@{Position}}
+\index{Position@{Position}!cLine@{cLine}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cLine::Position (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_line_a6abc4fedc3f30a6fb45ce4dd83070082}
+
+
+Will set the position of this object to the values specified (XYZ). 
+
+
+
+Reimplemented from \hyperlink{classc_matrix4_ae404d9b94cb676d9896385fef1eda422}{cMatrix4}.
+
+
+
+Definition at line 110 of file WTcLine.cpp.
+
+\hypertarget{classc_line_abe4306d62f5a0744508cbead16245bf7}{
+\index{cLine@{cLine}!Position@{Position}}
+\index{Position@{Position}!cLine@{cLine}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ cLine::Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_line_abe4306d62f5a0744508cbead16245bf7}
+
+
+Will return a pointer to the position of this line object (XYZ). 
+
+
+
+Reimplemented from \hyperlink{classc_matrix4_a7b0917b0f0a69d73ed41d05fd37d52ac}{cMatrix4}.
+
+
+
+Definition at line 103 of file WTcLine.cpp.
+
+\hypertarget{classc_line_af7852492bb5da5f32310675342fa12e7}{
+\index{cLine@{cLine}!Render@{Render}}
+\index{Render@{Render}!cLine@{cLine}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void cLine::Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_line_af7852492bb5da5f32310675342fa12e7}
+
+
+virtual function to allow polymorphiss. see \hyperlink{classc_camera_acfe96d0953540fa3938e4d415d7cb791}{cCamera::Render()}; 
+
+
+
+Implements \hyperlink{classc_render_object_ab0db1b7db1a1d4210511d9d95634fcce}{cRenderObject}.
+
+
+
+Definition at line 61 of file WTcLine.cpp.
+
+\hypertarget{classc_line_a5c5189a48b0e55c436d98aaed184ccc8}{
+\index{cLine@{cLine}!RenderPainter@{RenderPainter}}
+\index{RenderPainter@{RenderPainter}!cLine@{cLine}}
+\subsubsection[{RenderPainter}]{\setlength{\rightskip}{0pt plus 5cm}void cLine::RenderPainter (
+\begin{DoxyParamCaption}
+\item[{uint8}]{liLevel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_line_a5c5189a48b0e55c436d98aaed184ccc8}
+
+
+virtual function to allow polymorphism. see cCamera::RenderPainter(); 
+
+
+
+Implements \hyperlink{classc_render_object_a16beccc30dfea79c3988508c1420d54b}{cRenderObject}.
+
+
+
+Definition at line 33 of file WTcLine.cpp.
+
+\hypertarget{classc_line_a0e06d47dcc732da35dd1575ddc6c894e}{
+\index{cLine@{cLine}!RenderToPainter@{RenderToPainter}}
+\index{RenderToPainter@{RenderToPainter}!cLine@{cLine}}
+\subsubsection[{RenderToPainter}]{\setlength{\rightskip}{0pt plus 5cm}void cLine::RenderToPainter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_line_a0e06d47dcc732da35dd1575ddc6c894e}
+
+
+virtual function to allow polymorphism. see cCamera::RenderToPainter(); 
+
+
+
+Implements \hyperlink{classc_render_object_a130139cc8e1f5219ddabc6192f98afa8}{cRenderObject}.
+
+
+
+Definition at line 45 of file WTcLine.cpp.
+
+\hypertarget{classc_line_ad558bfa28a78a6594446ae0c5e11c262}{
+\index{cLine@{cLine}!Vector@{Vector}}
+\index{Vector@{Vector}!cLine@{cLine}}
+\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}void cLine::Vector (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lfPos}
+\end{DoxyParamCaption}
+)}}
+\label{classc_line_ad558bfa28a78a6594446ae0c5e11c262}
+
+
+Will set the vector of this object to the float array pointed to by lfPos. Expects 3 floats (XYZ). 
+
+
+
+Definition at line 122 of file WTcLine.cpp.
+
+\hypertarget{classc_line_a661253d6809e688c00b0a8dc5a906af7}{
+\index{cLine@{cLine}!Vector@{Vector}}
+\index{Vector@{Vector}!cLine@{cLine}}
+\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ cLine::Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_line_a661253d6809e688c00b0a8dc5a906af7}
+
+
+Will return a pointer to the vector of this line object (XYZ). 
+
+
+
+Definition at line 117 of file WTcLine.cpp.
+
+\hypertarget{classc_line_aa9b3156e1504378683e34aa8c2f38ec2}{
+\index{cLine@{cLine}!Vector@{Vector}}
+\index{Vector@{Vector}!cLine@{cLine}}
+\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}void cLine::Vector (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_line_aa9b3156e1504378683e34aa8c2f38ec2}
+
+
+Will set the vector of this object to the values specified (XYZ). 
+
+
+
+Definition at line 130 of file WTcLine.cpp.
+

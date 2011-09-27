@@ -1,0 +1,412 @@
+\hypertarget{classc_plane}{
+\section{cPlane Class Reference}
+\label{classc_plane}\index{cPlane@{cPlane}}
+}
+
+
+A class for handling plane data fir 3D mesh objects. Is composed of 4 floats, X,Y,Z,N. X,Y,Z components of the Normalised normal vector and distance above the origin along the line of the Normal.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classc_plane_a0d4a4743e3c41a97e2b5362291acf7f1}{X} ()
+\begin{DoxyCompactList}\small\item\em Returns the X component of the Planes Normal. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_plane_a02c37b8c5e26034bf8112c0a67297449}{Y} ()
+\begin{DoxyCompactList}\small\item\em Returns the Y component of the Planes Normal. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_plane_a25cc6fd781fa6d55abe248221f0b78f8}{Z} ()
+\begin{DoxyCompactList}\small\item\em Returns the Z component of the Planes Normal. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_plane_a1135839bb472839f1ad4d3ed54b8d905}{Dist} ()
+\begin{DoxyCompactList}\small\item\em Return the length of the Planes Normal. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_plane_ae17fc24badba2a6d390be29d8184e5a8}{SetPlane} (float x, float y, float z, float dist)
+\begin{DoxyCompactList}\small\item\em Sets the values for the plane. The Normal vector should be normalised. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_plane_ab8867d00b550b475cf3893c12df0152d}{Planes} ()
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the float array (Normalvector and length, X,Y,Z,L) which stores the data for this object. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_plane_a34d029dbce52d65722a8a3ee6d11c580}{cPlane} ()
+\item 
+void \hyperlink{classc_plane_a5a1e7a6390968cc282d8dc6b9ca2efaa}{Display} ()
+\begin{DoxyCompactList}\small\item\em Will Display this object to the terminal. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_plane_a163a9169d136fadf6dad1d649ff49765}{GeneratePlane} (\hyperlink{classc_vertex}{cVertex} $\ast$lpVerteces)
+\item 
+uint32 \hyperlink{classc_plane_a5407e895294adb499267cc99d3448fae}{FileSize} ()
+\item 
+bool \hyperlink{classc_plane_af76bc2ef9316f355547f5d2fa6731515}{operator==} (\hyperlink{classc_plane}{cPlane} \&lpOther)
+\item 
+\hyperlink{classc_plane}{cPlane} \& \hyperlink{classc_plane_ad199c7cd692c0512a7b4ae7787ac49fc}{operator=} (\hyperlink{classc_plane}{cPlane} \&lpOther)
+\begin{DoxyCompactList}\small\item\em Will set this object equal to the \hyperlink{classc_plane}{cPlane} lpOther. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_full_face_data}{cFullFaceData} \& \hyperlink{classc_plane_a6fdd170391a906ae3387eec280198cf5}{operator=} (\hyperlink{classc_full_face_data}{cFullFaceData} \&lpOther)
+\begin{DoxyCompactList}\small\item\em Will set this plane equal to the Plane of \hyperlink{classc_full_face_data}{cFullFaceData}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_plane_a0b21c98214762e53d072962a16eb39cf}{Normalise} ()
+\begin{DoxyCompactList}\small\item\em Will Normalise the Normal Vector of this object. This ignores the Length set. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_plane_a54a4b9d1cc5624882862ea31f3d0df47}{Similar} (\hyperlink{classc_plane}{cPlane} \&lpOther, float lfRange)
+\begin{DoxyCompactList}\small\item\em Will return true if all values (X,Y,Z,L) of this \hyperlink{classc_plane}{cPlane} and the \hyperlink{classc_plane}{cPlane} lpOther are within +/-\/ the range lfRange. \item\end{DoxyCompactList}\item 
+double \hyperlink{classc_plane_a1861b4a3e79e16889324f0c9e580fc06}{DotProduct} (\hyperlink{classc_vertex}{cVertex} \&lpOther)
+\begin{DoxyCompactList}\small\item\em Will Dot prod$<$cPolygon$>$uct the vector \hyperlink{classc_vertex}{cVertex} with the Normal Vector of this plane. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_plane_a44e9d118b30acf0b618ada7de16aa905}{AbovePlane} (\hyperlink{classc_vertex}{cVertex} \&lpOther)
+\begin{DoxyCompactList}\small\item\em Will return true if the 3D Position lpOther is in front of the faceing of this \hyperlink{classc_plane}{cPlane}. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_plane_a791c2367a99bb9818e4235962bfe504f}{Distance} ()
+\begin{DoxyCompactList}\small\item\em Will Return the Distance this Plane sits from the origin. (Can be +ve or -\/ve) \item\end{DoxyCompactList}\item 
+double \hyperlink{classc_plane_a041eaa860e54ab87fb06adc08d43fc2d}{AbsoluteDistance} (\hyperlink{classc_plane}{cPlane} \&lpOther)
+\begin{DoxyCompactList}\small\item\em Returns the distance between the points on the two planes that lie on their normal vectors from the origin. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_plane_af1f640b742cafe760cb28d8c851b87cf}{OutputIMFPlane} (ofstream \&FileStream)
+\begin{DoxyCompactList}\small\item\em Will Output this Object to ofstream in the IMF format. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_plane_acca967533621602e8721bc8101a40f0a}{LoadIMFPlane} (ifstream \&FileStream)
+\begin{DoxyCompactList}\small\item\em Will Load a \hyperlink{classc_plane}{cPlane} from ifstream FileStream in the IMF format. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class for handling plane data fir 3D mesh objects. Is composed of 4 floats, X,Y,Z,N. X,Y,Z components of the Normalised normal vector and distance above the origin along the line of the Normal. 
+
+Definition at line 7 of file WTcPlane.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_plane_a34d029dbce52d65722a8a3ee6d11c580}{
+\index{cPlane@{cPlane}!cPlane@{cPlane}}
+\index{cPlane@{cPlane}!cPlane@{cPlane}}
+\subsubsection[{cPlane}]{\setlength{\rightskip}{0pt plus 5cm}cPlane::cPlane (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a34d029dbce52d65722a8a3ee6d11c580}
+
+
+Definition at line 129 of file WTcPlane.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_plane_a44e9d118b30acf0b618ada7de16aa905}{
+\index{cPlane@{cPlane}!AbovePlane@{AbovePlane}}
+\index{AbovePlane@{AbovePlane}!cPlane@{cPlane}}
+\subsubsection[{AbovePlane}]{\setlength{\rightskip}{0pt plus 5cm}bool cPlane::AbovePlane (
+\begin{DoxyParamCaption}
+\item[{{\bf cVertex} \&}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a44e9d118b30acf0b618ada7de16aa905}
+
+
+Will return true if the 3D Position lpOther is in front of the faceing of this \hyperlink{classc_plane}{cPlane}. 
+
+
+
+Definition at line 161 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a041eaa860e54ab87fb06adc08d43fc2d}{
+\index{cPlane@{cPlane}!AbsoluteDistance@{AbsoluteDistance}}
+\index{AbsoluteDistance@{AbsoluteDistance}!cPlane@{cPlane}}
+\subsubsection[{AbsoluteDistance}]{\setlength{\rightskip}{0pt plus 5cm}double cPlane::AbsoluteDistance (
+\begin{DoxyParamCaption}
+\item[{{\bf cPlane} \&}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a041eaa860e54ab87fb06adc08d43fc2d}
+
+
+Returns the distance between the points on the two planes that lie on their normal vectors from the origin. 
+
+
+
+Definition at line 50 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a5a1e7a6390968cc282d8dc6b9ca2efaa}{
+\index{cPlane@{cPlane}!Display@{Display}}
+\index{Display@{Display}!cPlane@{cPlane}}
+\subsubsection[{Display}]{\setlength{\rightskip}{0pt plus 5cm}void cPlane::Display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a5a1e7a6390968cc282d8dc6b9ca2efaa}
+
+
+Will Display this object to the terminal. 
+
+
+
+Definition at line 131 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a1135839bb472839f1ad4d3ed54b8d905}{
+\index{cPlane@{cPlane}!Dist@{Dist}}
+\index{Dist@{Dist}!cPlane@{cPlane}}
+\subsubsection[{Dist}]{\setlength{\rightskip}{0pt plus 5cm}float cPlane::Dist (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a1135839bb472839f1ad4d3ed54b8d905}
+
+
+Return the length of the Planes Normal. 
+
+
+
+Definition at line 123 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a791c2367a99bb9818e4235962bfe504f}{
+\index{cPlane@{cPlane}!Distance@{Distance}}
+\index{Distance@{Distance}!cPlane@{cPlane}}
+\subsubsection[{Distance}]{\setlength{\rightskip}{0pt plus 5cm}float cPlane::Distance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a791c2367a99bb9818e4235962bfe504f}
+
+
+Will Return the Distance this Plane sits from the origin. (Can be +ve or -\/ve) 
+
+
+
+Definition at line 167 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a1861b4a3e79e16889324f0c9e580fc06}{
+\index{cPlane@{cPlane}!DotProduct@{DotProduct}}
+\index{DotProduct@{DotProduct}!cPlane@{cPlane}}
+\subsubsection[{DotProduct}]{\setlength{\rightskip}{0pt plus 5cm}double cPlane::DotProduct (
+\begin{DoxyParamCaption}
+\item[{{\bf cVertex} \&}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a1861b4a3e79e16889324f0c9e580fc06}
+
+
+Will Dot prod$<$cPolygon$>$uct the vector \hyperlink{classc_vertex}{cVertex} with the Normal Vector of this plane. 
+
+
+
+Definition at line 156 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a5407e895294adb499267cc99d3448fae}{
+\index{cPlane@{cPlane}!FileSize@{FileSize}}
+\index{FileSize@{FileSize}!cPlane@{cPlane}}
+\subsubsection[{FileSize}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cPlane::FileSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a5407e895294adb499267cc99d3448fae}
+
+
+Definition at line 136 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a163a9169d136fadf6dad1d649ff49765}{
+\index{cPlane@{cPlane}!GeneratePlane@{GeneratePlane}}
+\index{GeneratePlane@{GeneratePlane}!cPlane@{cPlane}}
+\subsubsection[{GeneratePlane}]{\setlength{\rightskip}{0pt plus 5cm}void cPlane::GeneratePlane (
+\begin{DoxyParamCaption}
+\item[{{\bf cVertex} $\ast$}]{lpVerteces}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a163a9169d136fadf6dad1d649ff49765}
+
+
+Definition at line 4 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_acca967533621602e8721bc8101a40f0a}{
+\index{cPlane@{cPlane}!LoadIMFPlane@{LoadIMFPlane}}
+\index{LoadIMFPlane@{LoadIMFPlane}!cPlane@{cPlane}}
+\subsubsection[{LoadIMFPlane}]{\setlength{\rightskip}{0pt plus 5cm}void cPlane::LoadIMFPlane (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_acca967533621602e8721bc8101a40f0a}
+
+
+Will Load a \hyperlink{classc_plane}{cPlane} from ifstream FileStream in the IMF format. 
+
+
+
+Definition at line 176 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a0b21c98214762e53d072962a16eb39cf}{
+\index{cPlane@{cPlane}!Normalise@{Normalise}}
+\index{Normalise@{Normalise}!cPlane@{cPlane}}
+\subsubsection[{Normalise}]{\setlength{\rightskip}{0pt plus 5cm}void cPlane::Normalise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a0b21c98214762e53d072962a16eb39cf}
+
+
+Will Normalise the Normal Vector of this object. This ignores the Length set. 
+
+
+
+Definition at line 31 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_ad199c7cd692c0512a7b4ae7787ac49fc}{
+\index{cPlane@{cPlane}!operator=@{operator=}}
+\index{operator=@{operator=}!cPlane@{cPlane}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cPlane} \& cPlane::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf cPlane} \&}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_ad199c7cd692c0512a7b4ae7787ac49fc}
+
+
+Will set this object equal to the \hyperlink{classc_plane}{cPlane} lpOther. 
+
+
+
+Definition at line 146 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a6fdd170391a906ae3387eec280198cf5}{
+\index{cPlane@{cPlane}!operator=@{operator=}}
+\index{operator=@{operator=}!cPlane@{cPlane}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cFullFaceData} \& cPlane::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf cFullFaceData} \&}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a6fdd170391a906ae3387eec280198cf5}
+
+
+Will set this plane equal to the Plane of \hyperlink{classc_full_face_data}{cFullFaceData}. 
+
+
+
+Definition at line 107 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_af76bc2ef9316f355547f5d2fa6731515}{
+\index{cPlane@{cPlane}!operator==@{operator==}}
+\index{operator==@{operator==}!cPlane@{cPlane}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool cPlane::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf cPlane} \&}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_af76bc2ef9316f355547f5d2fa6731515}
+
+
+Definition at line 141 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_af1f640b742cafe760cb28d8c851b87cf}{
+\index{cPlane@{cPlane}!OutputIMFPlane@{OutputIMFPlane}}
+\index{OutputIMFPlane@{OutputIMFPlane}!cPlane@{cPlane}}
+\subsubsection[{OutputIMFPlane}]{\setlength{\rightskip}{0pt plus 5cm}void cPlane::OutputIMFPlane (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_af1f640b742cafe760cb28d8c851b87cf}
+
+
+Will Output this Object to ofstream in the IMF format. 
+
+
+
+Definition at line 171 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_ab8867d00b550b475cf3893c12df0152d}{
+\index{cPlane@{cPlane}!Planes@{Planes}}
+\index{Planes@{Planes}!cPlane@{cPlane}}
+\subsubsection[{Planes}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ cPlane::Planes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_ab8867d00b550b475cf3893c12df0152d}
+
+
+Will return a pointer to the float array (Normalvector and length, X,Y,Z,L) which stores the data for this object. 
+
+
+
+Definition at line 127 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_ae17fc24badba2a6d390be29d8184e5a8}{
+\index{cPlane@{cPlane}!SetPlane@{SetPlane}}
+\index{SetPlane@{SetPlane}!cPlane@{cPlane}}
+\subsubsection[{SetPlane}]{\setlength{\rightskip}{0pt plus 5cm}void cPlane::SetPlane (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z, }
+\item[{float}]{dist}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_ae17fc24badba2a6d390be29d8184e5a8}
+
+
+Sets the values for the plane. The Normal vector should be normalised. 
+
+
+
+Definition at line 125 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a54a4b9d1cc5624882862ea31f3d0df47}{
+\index{cPlane@{cPlane}!Similar@{Similar}}
+\index{Similar@{Similar}!cPlane@{cPlane}}
+\subsubsection[{Similar}]{\setlength{\rightskip}{0pt plus 5cm}bool cPlane::Similar (
+\begin{DoxyParamCaption}
+\item[{{\bf cPlane} \&}]{lpOther, }
+\item[{float}]{lfRange}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a54a4b9d1cc5624882862ea31f3d0df47}
+
+
+Will return true if all values (X,Y,Z,L) of this \hyperlink{classc_plane}{cPlane} and the \hyperlink{classc_plane}{cPlane} lpOther are within +/-\/ the range lfRange. 
+
+
+
+Definition at line 41 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a0d4a4743e3c41a97e2b5362291acf7f1}{
+\index{cPlane@{cPlane}!X@{X}}
+\index{X@{X}!cPlane@{cPlane}}
+\subsubsection[{X}]{\setlength{\rightskip}{0pt plus 5cm}float cPlane::X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a0d4a4743e3c41a97e2b5362291acf7f1}
+
+
+Returns the X component of the Planes Normal. 
+
+
+
+Definition at line 120 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a02c37b8c5e26034bf8112c0a67297449}{
+\index{cPlane@{cPlane}!Y@{Y}}
+\index{Y@{Y}!cPlane@{cPlane}}
+\subsubsection[{Y}]{\setlength{\rightskip}{0pt plus 5cm}float cPlane::Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a02c37b8c5e26034bf8112c0a67297449}
+
+
+Returns the Y component of the Planes Normal. 
+
+
+
+Definition at line 121 of file WTcPlane.cpp.
+
+\hypertarget{classc_plane_a25cc6fd781fa6d55abe248221f0b78f8}{
+\index{cPlane@{cPlane}!Z@{Z}}
+\index{Z@{Z}!cPlane@{cPlane}}
+\subsubsection[{Z}]{\setlength{\rightskip}{0pt plus 5cm}float cPlane::Z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_plane_a25cc6fd781fa6d55abe248221f0b78f8}
+
+
+Returns the Z component of the Planes Normal. 
+
+
+
+Definition at line 122 of file WTcPlane.cpp.
+

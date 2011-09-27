@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classc_collision_handler_type.html" title="cCollisionHandlerType" alt="" coords="5,83,157,112"/>
+<area shape="rect" id="node4" href="$classc_collision_handler.html" title="This is the Collision Handler. It will control any collision search the user performs. This Collision handler is created by using the Instance() and can ONLY be created using Instance(). _COLLISION_HANDLER is a quick pointer to the cCollisionHandler::Instance() pointer. This will store data for the search and will store the current position to resume searches. Calling the Function GenerateCollisionList() wil create a comprehensive list of pointers to cRenderobjects() that meet the collision parameters of GenerateCollisionList(). This list can be accessed by using NextCollisionItem()." alt="" coords="20,5,143,35"/>
+</map>

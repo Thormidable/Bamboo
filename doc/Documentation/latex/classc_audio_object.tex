@@ -1,0 +1,145 @@
+\hypertarget{classc_audio_object}{
+\section{cAudioObject Class Reference}
+\label{classc_audio_object}\index{cAudioObject@{cAudioObject}}
+}
+
+
+This class will allow a sound to be played. This class will link an audio source and a buffer, This allows the sound data stored in the buffer to be played through the source. Each source is an audio channel and can only play one sound at a time.  
+
+
+
+
+Collaboration diagram for cAudioObject:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classc_audio_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_audio_object_a1a44ae87c2bf5e43aff66624a42771fe}{cAudioObject} ()
+\begin{DoxyCompactList}\small\item\em This will create an OpenAL source for this object, without linking any cAudioBuffers to it. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_audio_object_a172d5d9e89376a0c505fa051e9d02919}{cAudioObject} (\hyperlink{classc_audio_buffer}{cAudioBuffer} $\ast$lpBuffer)
+\begin{DoxyCompactList}\small\item\em This will create an OpenAL source and link this object to a buffer. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_audio_object_a57baf1e1384c3307ce8db629c9b2a59f}{$\sim$cAudioObject} ()
+\item 
+void \hyperlink{classc_audio_object_aaa2c81875452c51ecd3979a0b1b2c8b1}{SetBuffer} (\hyperlink{classc_audio_buffer}{cAudioBuffer} $\ast$lpBuffer)
+\begin{DoxyCompactList}\small\item\em This will link the OpenAL buffer pointed to by lpBuffer to this Audio Object ready to be played. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_audio_object_a2e7c8dc824eef10006f0f1c2824f10cd}{Play} ()
+\begin{DoxyCompactList}\small\item\em This will play a sound through the OpenAL source from the buffer. \item\end{DoxyCompactList}\item 
+ALuint \hyperlink{classc_audio_object_adb134027851226f2f5a446a3d885f26e}{Source} ()
+\begin{DoxyCompactList}\small\item\em This will return the ID of the OpenAL ID. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will allow a sound to be played. This class will link an audio source and a buffer, This allows the sound data stored in the buffer to be played through the source. Each source is an audio channel and can only play one sound at a time. 
+
+Definition at line 7 of file WTcAudioObject.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_audio_object_a1a44ae87c2bf5e43aff66624a42771fe}{
+\index{cAudioObject@{cAudioObject}!cAudioObject@{cAudioObject}}
+\index{cAudioObject@{cAudioObject}!cAudioObject@{cAudioObject}}
+\subsubsection[{cAudioObject}]{\setlength{\rightskip}{0pt plus 5cm}cAudioObject::cAudioObject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_audio_object_a1a44ae87c2bf5e43aff66624a42771fe}
+
+
+This will create an OpenAL source for this object, without linking any cAudioBuffers to it. 
+
+
+
+Definition at line 3 of file WTcAudioObject.cpp.
+
+\hypertarget{classc_audio_object_a172d5d9e89376a0c505fa051e9d02919}{
+\index{cAudioObject@{cAudioObject}!cAudioObject@{cAudioObject}}
+\index{cAudioObject@{cAudioObject}!cAudioObject@{cAudioObject}}
+\subsubsection[{cAudioObject}]{\setlength{\rightskip}{0pt plus 5cm}cAudioObject::cAudioObject (
+\begin{DoxyParamCaption}
+\item[{{\bf cAudioBuffer} $\ast$}]{lpBuffer}
+\end{DoxyParamCaption}
+)}}
+\label{classc_audio_object_a172d5d9e89376a0c505fa051e9d02919}
+
+
+This will create an OpenAL source and link this object to a buffer. 
+
+
+
+Definition at line 9 of file WTcAudioObject.cpp.
+
+\hypertarget{classc_audio_object_a57baf1e1384c3307ce8db629c9b2a59f}{
+\index{cAudioObject@{cAudioObject}!$\sim$cAudioObject@{$\sim$cAudioObject}}
+\index{$\sim$cAudioObject@{$\sim$cAudioObject}!cAudioObject@{cAudioObject}}
+\subsubsection[{$\sim$cAudioObject}]{\setlength{\rightskip}{0pt plus 5cm}cAudioObject::$\sim$cAudioObject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_audio_object_a57baf1e1384c3307ce8db629c9b2a59f}
+
+
+Definition at line 17 of file WTcAudioObject.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_audio_object_a2e7c8dc824eef10006f0f1c2824f10cd}{
+\index{cAudioObject@{cAudioObject}!Play@{Play}}
+\index{Play@{Play}!cAudioObject@{cAudioObject}}
+\subsubsection[{Play}]{\setlength{\rightskip}{0pt plus 5cm}void cAudioObject::Play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_audio_object_a2e7c8dc824eef10006f0f1c2824f10cd}
+
+
+This will play a sound through the OpenAL source from the buffer. 
+
+
+
+Definition at line 22 of file WTcAudioObject.cpp.
+
+\hypertarget{classc_audio_object_aaa2c81875452c51ecd3979a0b1b2c8b1}{
+\index{cAudioObject@{cAudioObject}!SetBuffer@{SetBuffer}}
+\index{SetBuffer@{SetBuffer}!cAudioObject@{cAudioObject}}
+\subsubsection[{SetBuffer}]{\setlength{\rightskip}{0pt plus 5cm}void cAudioObject::SetBuffer (
+\begin{DoxyParamCaption}
+\item[{{\bf cAudioBuffer} $\ast$}]{lpBuffer}
+\end{DoxyParamCaption}
+)}}
+\label{classc_audio_object_aaa2c81875452c51ecd3979a0b1b2c8b1}
+
+
+This will link the OpenAL buffer pointed to by lpBuffer to this Audio Object ready to be played. 
+
+
+
+Definition at line 27 of file WTcAudioObject.cpp.
+
+\hypertarget{classc_audio_object_adb134027851226f2f5a446a3d885f26e}{
+\index{cAudioObject@{cAudioObject}!Source@{Source}}
+\index{Source@{Source}!cAudioObject@{cAudioObject}}
+\subsubsection[{Source}]{\setlength{\rightskip}{0pt plus 5cm}ALuint cAudioObject::Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_audio_object_adb134027851226f2f5a446a3d885f26e}
+
+
+This will return the ID of the OpenAL ID. 
+
+
+
+Definition at line 35 of file WTcAudioObject.cpp.
+

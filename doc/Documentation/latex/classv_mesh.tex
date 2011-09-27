@@ -1,0 +1,347 @@
+\hypertarget{classv_mesh}{
+\section{vMesh Class Reference}
+\label{classv_mesh}\index{vMesh@{vMesh}}
+}
+
+
+This is the virtual base class for a \hyperlink{classc_mesh}{cMesh} object.  
+
+
+
+
+Inheritance diagram for vMesh:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classv_mesh__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for vMesh:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classv_mesh__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classv_mesh_a5f63d5d63be074b19d4434ed52a1d377}{$\sim$vMesh} ()
+\item 
+virtual uint32 \hyperlink{classv_mesh_aabeab7681d42365740ca4bcd91255863}{Vertex} ()=0
+\begin{DoxyCompactList}\small\item\em Will return the number of verteces in the mesh. \item\end{DoxyCompactList}\item 
+virtual uint32 \hyperlink{classv_mesh_a66714f612afa9ea82649e3f825392493}{Faces} ()=0
+\begin{DoxyCompactList}\small\item\em Will return the number of Faces in the mesh. \item\end{DoxyCompactList}\item 
+virtual float $\ast$ \hyperlink{classv_mesh_a2614d8ad0d2a3cc991375fe49868e752}{VertexData} ()=0
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the vertex position data array. \item\end{DoxyCompactList}\item 
+virtual uint16 $\ast$ \hyperlink{classv_mesh_acca058c53ec4af8cf0abccec5bd0537a}{FaceData} ()=0
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the face array. \item\end{DoxyCompactList}\item 
+virtual float $\ast$ \hyperlink{classv_mesh_a542840c478d401b696ad0249138c0864}{NormalData} ()=0
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the vertex normal array. \item\end{DoxyCompactList}\item 
+virtual float $\ast$ \hyperlink{classv_mesh_ad5cd715eac3c7adb7fb40dcdb30c7194}{UVData} ()=0
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the texture co-\/ordinate array. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_mesh_a9a554bf498f103a80511407cbc773611}{Position} (float lfX, float lfY, float Z)=0
+\begin{DoxyCompactList}\small\item\em Will move the meshes centre of rotation by lfX,lfY,lfZ. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_mesh_a7142dee14ef4cfcb1549cea1ea1683bd}{PositionX} (float lfX)=0
+\begin{DoxyCompactList}\small\item\em Will move the meshes centre of rotation by lfX along its X axis. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_mesh_a4acf04a59788dfd36ed7c9aa7d7b65a6}{PositionY} (float lfX)=0
+\begin{DoxyCompactList}\small\item\em Will move the meshes centre of rotation by lfX along its Y axis. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_mesh_a027a53a9b040178831df3db1b26b750e}{PositionZ} (float lfX)=0
+\begin{DoxyCompactList}\small\item\em Will move the meshes centre of rotation by lfX along its Z axis. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_mesh_a1ead99a315b0ccb9731a30d9fa1150c5}{BufferMesh} ()=0
+\begin{DoxyCompactList}\small\item\em This will move the mesh data to the graphics card memory. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_mesh_a06ed7e6fcece13d2103c20386cfeb053}{RenderMesh} ()=0
+\begin{DoxyCompactList}\small\item\em This will render the mesh directly from graphics memory. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_mesh_ad45df1e9f8569b2d7d0c8c227fbc5ce0}{ResetPosition} ()=0
+\begin{DoxyCompactList}\small\item\em Will reset the meshes centre of rotation to its original position. \item\end{DoxyCompactList}\item 
+virtual float \hyperlink{classv_mesh_a19cfa6839cb3dff82d2a5ef8d77d5ceb}{GetSize} ()=0
+\begin{DoxyCompactList}\small\item\em Will return the Size of the Mesh. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_mesh_a811160d031f2b47fad584ae5e9fad2dc}{CreateNormalArray} ()=0
+\begin{DoxyCompactList}\small\item\em Will Generate the normal array from faces and verteces. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the virtual base class for a \hyperlink{classc_mesh}{cMesh} object. 
+
+Definition at line 5 of file WTvMesh.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classv_mesh_a5f63d5d63be074b19d4434ed52a1d377}{
+\index{vMesh@{vMesh}!$\sim$vMesh@{$\sim$vMesh}}
+\index{$\sim$vMesh@{$\sim$vMesh}!vMesh@{vMesh}}
+\subsubsection[{$\sim$vMesh}]{\setlength{\rightskip}{0pt plus 5cm}virtual vMesh::$\sim$vMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classv_mesh_a5f63d5d63be074b19d4434ed52a1d377}
+
+
+Definition at line 8 of file WTvMesh.h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classv_mesh_a1ead99a315b0ccb9731a30d9fa1150c5}{
+\index{vMesh@{vMesh}!BufferMesh@{BufferMesh}}
+\index{BufferMesh@{BufferMesh}!vMesh@{vMesh}}
+\subsubsection[{BufferMesh}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vMesh::BufferMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_a1ead99a315b0ccb9731a30d9fa1150c5}
+
+
+This will move the mesh data to the graphics card memory. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a0dcd88ab580fcd6a67edb1d2decfffd9}{cMesh}, and \hyperlink{classv_mesh_tree_a6f507b0c56f6e18ac88a2a60f649ad3e}{vMeshTree}.
+
+\hypertarget{classv_mesh_a811160d031f2b47fad584ae5e9fad2dc}{
+\index{vMesh@{vMesh}!CreateNormalArray@{CreateNormalArray}}
+\index{CreateNormalArray@{CreateNormalArray}!vMesh@{vMesh}}
+\subsubsection[{CreateNormalArray}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vMesh::CreateNormalArray (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_a811160d031f2b47fad584ae5e9fad2dc}
+
+
+Will Generate the normal array from faces and verteces. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a5f35c2b9245d765b7958f91379d63e7d}{cMesh}.
+
+\hypertarget{classv_mesh_acca058c53ec4af8cf0abccec5bd0537a}{
+\index{vMesh@{vMesh}!FaceData@{FaceData}}
+\index{FaceData@{FaceData}!vMesh@{vMesh}}
+\subsubsection[{FaceData}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint16$\ast$ vMesh::FaceData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_acca058c53ec4af8cf0abccec5bd0537a}
+
+
+Will return a pointer to the face array. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a49725e65f20af64f20442389fe616282}{cMesh}, and \hyperlink{classv_mesh_tree_a9a485afe644254eb4f1affc731f0a6b9}{vMeshTree}.
+
+\hypertarget{classv_mesh_a66714f612afa9ea82649e3f825392493}{
+\index{vMesh@{vMesh}!Faces@{Faces}}
+\index{Faces@{Faces}!vMesh@{vMesh}}
+\subsubsection[{Faces}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32 vMesh::Faces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_a66714f612afa9ea82649e3f825392493}
+
+
+Will return the number of Faces in the mesh. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a5f1b578685730d581301f3b5dbb2f83c}{cMesh}, and \hyperlink{classv_mesh_tree_a1ed307021481e5f663def1170d72e4e7}{vMeshTree}.
+
+\hypertarget{classv_mesh_a19cfa6839cb3dff82d2a5ef8d77d5ceb}{
+\index{vMesh@{vMesh}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!vMesh@{vMesh}}
+\subsubsection[{GetSize}]{\setlength{\rightskip}{0pt plus 5cm}virtual float vMesh::GetSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_a19cfa6839cb3dff82d2a5ef8d77d5ceb}
+
+
+Will return the Size of the Mesh. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a93bdde998cfebc274b7573444dc98d34}{cMesh}, and \hyperlink{classc_mesh_tree_a3c82682fe2453aed6c5cdcf0316894bd}{cMeshTree}.
+
+\hypertarget{classv_mesh_a542840c478d401b696ad0249138c0864}{
+\index{vMesh@{vMesh}!NormalData@{NormalData}}
+\index{NormalData@{NormalData}!vMesh@{vMesh}}
+\subsubsection[{NormalData}]{\setlength{\rightskip}{0pt plus 5cm}virtual float$\ast$ vMesh::NormalData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_a542840c478d401b696ad0249138c0864}
+
+
+Will return a pointer to the vertex normal array. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a65a3a31f9d6b718b7ea161f434f2b3da}{cMesh}, and \hyperlink{classv_mesh_tree_a661aab5444f7d4a888825d3cc3099359}{vMeshTree}.
+
+\hypertarget{classv_mesh_a9a554bf498f103a80511407cbc773611}{
+\index{vMesh@{vMesh}!Position@{Position}}
+\index{Position@{Position}!vMesh@{vMesh}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vMesh::Position (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_a9a554bf498f103a80511407cbc773611}
+
+
+Will move the meshes centre of rotation by lfX,lfY,lfZ. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a022d36f1b2f456b5edb50d32956960e0}{cMesh}, and \hyperlink{classv_mesh_tree_adc47897475d306706531a28cfb65d7e7}{vMeshTree}.
+
+\hypertarget{classv_mesh_a7142dee14ef4cfcb1549cea1ea1683bd}{
+\index{vMesh@{vMesh}!PositionX@{PositionX}}
+\index{PositionX@{PositionX}!vMesh@{vMesh}}
+\subsubsection[{PositionX}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vMesh::PositionX (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_a7142dee14ef4cfcb1549cea1ea1683bd}
+
+
+Will move the meshes centre of rotation by lfX along its X axis. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a4d0f5cbdb12f1bc7fb8899c61d2328d5}{cMesh}, and \hyperlink{classv_mesh_tree_a0f8d9ed827b6512ea4c39e85a972a433}{vMeshTree}.
+
+\hypertarget{classv_mesh_a4acf04a59788dfd36ed7c9aa7d7b65a6}{
+\index{vMesh@{vMesh}!PositionY@{PositionY}}
+\index{PositionY@{PositionY}!vMesh@{vMesh}}
+\subsubsection[{PositionY}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vMesh::PositionY (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_a4acf04a59788dfd36ed7c9aa7d7b65a6}
+
+
+Will move the meshes centre of rotation by lfX along its Y axis. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a031dd39f3c8aa1643a978b42bfc68ddc}{cMesh}, and \hyperlink{classv_mesh_tree_ae245573465036da4cf45e9da0b113d86}{vMeshTree}.
+
+\hypertarget{classv_mesh_a027a53a9b040178831df3db1b26b750e}{
+\index{vMesh@{vMesh}!PositionZ@{PositionZ}}
+\index{PositionZ@{PositionZ}!vMesh@{vMesh}}
+\subsubsection[{PositionZ}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vMesh::PositionZ (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_a027a53a9b040178831df3db1b26b750e}
+
+
+Will move the meshes centre of rotation by lfX along its Z axis. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a75062dccdd861877dd206f81ac2f9ec0}{cMesh}, and \hyperlink{classv_mesh_tree_a7059fe190e656b0be3b9606da928198f}{vMeshTree}.
+
+\hypertarget{classv_mesh_a06ed7e6fcece13d2103c20386cfeb053}{
+\index{vMesh@{vMesh}!RenderMesh@{RenderMesh}}
+\index{RenderMesh@{RenderMesh}!vMesh@{vMesh}}
+\subsubsection[{RenderMesh}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vMesh::RenderMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_a06ed7e6fcece13d2103c20386cfeb053}
+
+
+This will render the mesh directly from graphics memory. 
+
+
+
+Implemented in \hyperlink{classc_mesh_aebed7b4b906c1ca62ea594c48eb803cf}{cMesh}, and \hyperlink{classv_mesh_tree_aefab80fa35b702814fe188b63ab5541e}{vMeshTree}.
+
+\hypertarget{classv_mesh_ad45df1e9f8569b2d7d0c8c227fbc5ce0}{
+\index{vMesh@{vMesh}!ResetPosition@{ResetPosition}}
+\index{ResetPosition@{ResetPosition}!vMesh@{vMesh}}
+\subsubsection[{ResetPosition}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vMesh::ResetPosition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_ad45df1e9f8569b2d7d0c8c227fbc5ce0}
+
+
+Will reset the meshes centre of rotation to its original position. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a6b4d72718fa9a90fae3ee30dbe5f2575}{cMesh}, and \hyperlink{classv_mesh_tree_a2b765505de480f6fe22f2ce83ea626ef}{vMeshTree}.
+
+\hypertarget{classv_mesh_ad5cd715eac3c7adb7fb40dcdb30c7194}{
+\index{vMesh@{vMesh}!UVData@{UVData}}
+\index{UVData@{UVData}!vMesh@{vMesh}}
+\subsubsection[{UVData}]{\setlength{\rightskip}{0pt plus 5cm}virtual float$\ast$ vMesh::UVData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_ad5cd715eac3c7adb7fb40dcdb30c7194}
+
+
+Will return a pointer to the texture co-\/ordinate array. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a20b38f2c9a4646b8aa2e81210b4136c5}{cMesh}, and \hyperlink{classv_mesh_tree_a4baeb8fe7fa4adc70bca9f57e44340f0}{vMeshTree}.
+
+\hypertarget{classv_mesh_aabeab7681d42365740ca4bcd91255863}{
+\index{vMesh@{vMesh}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!vMesh@{vMesh}}
+\subsubsection[{Vertex}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32 vMesh::Vertex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_aabeab7681d42365740ca4bcd91255863}
+
+
+Will return the number of verteces in the mesh. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a1a58ae1ab68b816b36188ac769ac50fd}{cMesh}, and \hyperlink{classv_mesh_tree_a3dce3413d17c131f29aa2a7ed65f56d5}{vMeshTree}.
+
+\hypertarget{classv_mesh_a2614d8ad0d2a3cc991375fe49868e752}{
+\index{vMesh@{vMesh}!VertexData@{VertexData}}
+\index{VertexData@{VertexData}!vMesh@{vMesh}}
+\subsubsection[{VertexData}]{\setlength{\rightskip}{0pt plus 5cm}virtual float$\ast$ vMesh::VertexData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_mesh_a2614d8ad0d2a3cc991375fe49868e752}
+
+
+Will return a pointer to the vertex position data array. 
+
+
+
+Implemented in \hyperlink{classc_mesh_a22dfd977d522b15185837426b444d7b7}{cMesh}, and \hyperlink{classv_mesh_tree_a83e604d02695f55496ba5b385e951181}{vMeshTree}.
+

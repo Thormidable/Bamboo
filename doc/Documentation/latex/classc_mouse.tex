@@ -1,0 +1,350 @@
+\hypertarget{classc_mouse}{
+\section{cMouse Class Reference}
+\label{classc_mouse}\index{cMouse@{cMouse}}
+}
+
+
+This will store all the input data for a single mouse.  
+
+
+
+
+Collaboration diagram for cMouse:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{classc_mouse__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_mouse_adcae7521aeba45172ebb18ab6e064297}{cMouse} ()
+\item 
+void \hyperlink{classc_mouse_a558d192a5c2df1352d1b8de7275a9359}{Update} ()
+\begin{DoxyCompactList}\small\item\em This will Update the mouse variable. Should be called every frame by \hyperlink{classc_kernel}{cKernel}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mouse_a65b10c846c3e0ac6d77f398095c66164}{Hide} ()
+\begin{DoxyCompactList}\small\item\em This will hide the mouse cursor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mouse_a54300b8fe1f8c5c0ec88e7ae26eff0e0}{Show} ()
+\begin{DoxyCompactList}\small\item\em This will show the mouse cursor. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_mouse_a2653fbbb900967fda6eccf933019ab8d}{Showing} ()
+\begin{DoxyCompactList}\small\item\em This will return whether the mouse curor is currently showing. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mouse_abef74e9066d916ec62daf4a440dbbe58}{Lock} ()
+\begin{DoxyCompactList}\small\item\em This will lock the mouse cursor to the centre of the window (allowing unlimited scrolling). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_mouse_a869bb420067947a30b57ad649e3f1f14}{Unlock} ()
+\begin{DoxyCompactList}\small\item\em This will unlock the mouse cursor from the centre of the window. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classc_mouse_a7cf5f6cfeb1d68ad4b97d281503247d8}{x}
+\begin{DoxyCompactList}\small\item\em This stores the current frames X value (in pixels from the windows 0,0). \item\end{DoxyCompactList}\item 
+int \hyperlink{classc_mouse_ab29c5b17ff87340b22b7bfa1a862b657}{y}
+\begin{DoxyCompactList}\small\item\em This stores the current frames Y value (in pixels from the windows 0,0). \item\end{DoxyCompactList}\item 
+int \hyperlink{classc_mouse_abd2eb43958c968e29bc01351ca6c82f7}{z}
+\begin{DoxyCompactList}\small\item\em This stores the current frames Z value (in pixels from the windows 0,0). \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_mouse_a377c398a74652f24dc4a0082e426fa3b}{left}
+\begin{DoxyCompactList}\small\item\em This stores the mouses current left button state. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_mouse_a78814ee83b22c65e29a643cb46629ec7}{right}
+\begin{DoxyCompactList}\small\item\em This stores the mouses current right button state. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_mouse_a557b3b684fe0afeb1c99ea8f0e0b4225}{middle}
+\begin{DoxyCompactList}\small\item\em This stores the mouses current middle button state. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_mouse_a446e439868a0cbe7c7a34f05b1aac1ed}{locked}
+\begin{DoxyCompactList}\small\item\em This stores whether the mouse cursor is locked to the centre of the window. \item\end{DoxyCompactList}\item 
+int \hyperlink{classc_mouse_a085f43f09da455412017745e4f0b9de5}{xs}
+\begin{DoxyCompactList}\small\item\em This will store the mouses current X speed. (pixels travelled since last frame). \item\end{DoxyCompactList}\item 
+int \hyperlink{classc_mouse_a5747de760c63d410eac682dd9fad506f}{ys}
+\begin{DoxyCompactList}\small\item\em This will store the mouses current Y speed. (pixels travelled since last frame). \item\end{DoxyCompactList}\item 
+int \hyperlink{classc_mouse_a1f390f0d3f7b6b6fdc8afeba4c1e24f1}{cx}
+\begin{DoxyCompactList}\small\item\em This is the real mouses X position. It will change as the mouse moves, so will not be consistent through out the frame. Should avoid being used. \item\end{DoxyCompactList}\item 
+int \hyperlink{classc_mouse_aae0f866c26ab2a8ae6b2984053b71a6b}{cy}
+\begin{DoxyCompactList}\small\item\em This is the real mouses Y position. It will change as the mouse moves, so will not be consistent through out the frame. Should avoid being used. \item\end{DoxyCompactList}\item 
+tagPOINT \hyperlink{classc_mouse_ad6306d52aba6df1e6496c038db013442}{Pos}
+\begin{DoxyCompactList}\small\item\em Windows only variable. Windows format for mouse position...? \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This will store all the input data for a single mouse. 
+
+Definition at line 4 of file WTcMouse.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_mouse_adcae7521aeba45172ebb18ab6e064297}{
+\index{cMouse@{cMouse}!cMouse@{cMouse}}
+\index{cMouse@{cMouse}!cMouse@{cMouse}}
+\subsubsection[{cMouse}]{\setlength{\rightskip}{0pt plus 5cm}cMouse::cMouse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mouse_adcae7521aeba45172ebb18ab6e064297}
+
+
+Definition at line 3 of file WTcMouse.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_mouse_a65b10c846c3e0ac6d77f398095c66164}{
+\index{cMouse@{cMouse}!Hide@{Hide}}
+\index{Hide@{Hide}!cMouse@{cMouse}}
+\subsubsection[{Hide}]{\setlength{\rightskip}{0pt plus 5cm}void cMouse::Hide (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mouse_a65b10c846c3e0ac6d77f398095c66164}
+
+
+This will hide the mouse cursor. 
+
+
+
+Definition at line 63 of file WTcMouse.cpp.
+
+\hypertarget{classc_mouse_abef74e9066d916ec62daf4a440dbbe58}{
+\index{cMouse@{cMouse}!Lock@{Lock}}
+\index{Lock@{Lock}!cMouse@{cMouse}}
+\subsubsection[{Lock}]{\setlength{\rightskip}{0pt plus 5cm}void cMouse::Lock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mouse_abef74e9066d916ec62daf4a440dbbe58}
+
+
+This will lock the mouse cursor to the centre of the window (allowing unlimited scrolling). 
+
+
+
+Definition at line 42 of file WTcMouse.cpp.
+
+\hypertarget{classc_mouse_a54300b8fe1f8c5c0ec88e7ae26eff0e0}{
+\index{cMouse@{cMouse}!Show@{Show}}
+\index{Show@{Show}!cMouse@{cMouse}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}void cMouse::Show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mouse_a54300b8fe1f8c5c0ec88e7ae26eff0e0}
+
+
+This will show the mouse cursor. 
+
+
+
+Definition at line 66 of file WTcMouse.cpp.
+
+\hypertarget{classc_mouse_a2653fbbb900967fda6eccf933019ab8d}{
+\index{cMouse@{cMouse}!Showing@{Showing}}
+\index{Showing@{Showing}!cMouse@{cMouse}}
+\subsubsection[{Showing}]{\setlength{\rightskip}{0pt plus 5cm}bool cMouse::Showing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mouse_a2653fbbb900967fda6eccf933019ab8d}
+
+
+This will return whether the mouse curor is currently showing. 
+
+
+
+Definition at line 69 of file WTcMouse.cpp.
+
+\hypertarget{classc_mouse_a869bb420067947a30b57ad649e3f1f14}{
+\index{cMouse@{cMouse}!Unlock@{Unlock}}
+\index{Unlock@{Unlock}!cMouse@{cMouse}}
+\subsubsection[{Unlock}]{\setlength{\rightskip}{0pt plus 5cm}void cMouse::Unlock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mouse_a869bb420067947a30b57ad649e3f1f14}
+
+
+This will unlock the mouse cursor from the centre of the window. 
+
+
+
+Definition at line 56 of file WTcMouse.cpp.
+
+\hypertarget{classc_mouse_a558d192a5c2df1352d1b8de7275a9359}{
+\index{cMouse@{cMouse}!Update@{Update}}
+\index{Update@{Update}!cMouse@{cMouse}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void cMouse::Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_mouse_a558d192a5c2df1352d1b8de7275a9359}
+
+
+This will Update the mouse variable. Should be called every frame by \hyperlink{classc_kernel}{cKernel}. 
+
+
+
+Definition at line 13 of file WTcMouse.cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_mouse_a1f390f0d3f7b6b6fdc8afeba4c1e24f1}{
+\index{cMouse@{cMouse}!cx@{cx}}
+\index{cx@{cx}!cMouse@{cMouse}}
+\subsubsection[{cx}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cMouse::cx}}}
+\label{classc_mouse_a1f390f0d3f7b6b6fdc8afeba4c1e24f1}
+
+
+This is the real mouses X position. It will change as the mouse moves, so will not be consistent through out the frame. Should avoid being used. 
+
+
+
+Definition at line 36 of file WTcMouse.h.
+
+\hypertarget{classc_mouse_aae0f866c26ab2a8ae6b2984053b71a6b}{
+\index{cMouse@{cMouse}!cy@{cy}}
+\index{cy@{cy}!cMouse@{cMouse}}
+\subsubsection[{cy}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cMouse::cy}}}
+\label{classc_mouse_aae0f866c26ab2a8ae6b2984053b71a6b}
+
+
+This is the real mouses Y position. It will change as the mouse moves, so will not be consistent through out the frame. Should avoid being used. 
+
+
+
+Definition at line 38 of file WTcMouse.h.
+
+\hypertarget{classc_mouse_a377c398a74652f24dc4a0082e426fa3b}{
+\index{cMouse@{cMouse}!left@{left}}
+\index{left@{left}!cMouse@{cMouse}}
+\subsubsection[{left}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cMouse::left}}}
+\label{classc_mouse_a377c398a74652f24dc4a0082e426fa3b}
+
+
+This stores the mouses current left button state. 
+
+
+
+Definition at line 22 of file WTcMouse.h.
+
+\hypertarget{classc_mouse_a446e439868a0cbe7c7a34f05b1aac1ed}{
+\index{cMouse@{cMouse}!locked@{locked}}
+\index{locked@{locked}!cMouse@{cMouse}}
+\subsubsection[{locked}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cMouse::locked}}}
+\label{classc_mouse_a446e439868a0cbe7c7a34f05b1aac1ed}
+
+
+This stores whether the mouse cursor is locked to the centre of the window. 
+
+
+
+Definition at line 28 of file WTcMouse.h.
+
+\hypertarget{classc_mouse_a557b3b684fe0afeb1c99ea8f0e0b4225}{
+\index{cMouse@{cMouse}!middle@{middle}}
+\index{middle@{middle}!cMouse@{cMouse}}
+\subsubsection[{middle}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cMouse::middle}}}
+\label{classc_mouse_a557b3b684fe0afeb1c99ea8f0e0b4225}
+
+
+This stores the mouses current middle button state. 
+
+
+
+Definition at line 26 of file WTcMouse.h.
+
+\hypertarget{classc_mouse_ad6306d52aba6df1e6496c038db013442}{
+\index{cMouse@{cMouse}!Pos@{Pos}}
+\index{Pos@{Pos}!cMouse@{cMouse}}
+\subsubsection[{Pos}]{\setlength{\rightskip}{0pt plus 5cm}tagPOINT {\bf cMouse::Pos}}}
+\label{classc_mouse_ad6306d52aba6df1e6496c038db013442}
+
+
+Windows only variable. Windows format for mouse position...? 
+
+
+
+Definition at line 42 of file WTcMouse.h.
+
+\hypertarget{classc_mouse_a78814ee83b22c65e29a643cb46629ec7}{
+\index{cMouse@{cMouse}!right@{right}}
+\index{right@{right}!cMouse@{cMouse}}
+\subsubsection[{right}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cMouse::right}}}
+\label{classc_mouse_a78814ee83b22c65e29a643cb46629ec7}
+
+
+This stores the mouses current right button state. 
+
+
+
+Definition at line 24 of file WTcMouse.h.
+
+\hypertarget{classc_mouse_a7cf5f6cfeb1d68ad4b97d281503247d8}{
+\index{cMouse@{cMouse}!x@{x}}
+\index{x@{x}!cMouse@{cMouse}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cMouse::x}}}
+\label{classc_mouse_a7cf5f6cfeb1d68ad4b97d281503247d8}
+
+
+This stores the current frames X value (in pixels from the windows 0,0). 
+
+
+
+Definition at line 15 of file WTcMouse.h.
+
+\hypertarget{classc_mouse_a085f43f09da455412017745e4f0b9de5}{
+\index{cMouse@{cMouse}!xs@{xs}}
+\index{xs@{xs}!cMouse@{cMouse}}
+\subsubsection[{xs}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cMouse::xs}}}
+\label{classc_mouse_a085f43f09da455412017745e4f0b9de5}
+
+
+This will store the mouses current X speed. (pixels travelled since last frame). 
+
+
+
+Definition at line 31 of file WTcMouse.h.
+
+\hypertarget{classc_mouse_ab29c5b17ff87340b22b7bfa1a862b657}{
+\index{cMouse@{cMouse}!y@{y}}
+\index{y@{y}!cMouse@{cMouse}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cMouse::y}}}
+\label{classc_mouse_ab29c5b17ff87340b22b7bfa1a862b657}
+
+
+This stores the current frames Y value (in pixels from the windows 0,0). 
+
+
+
+Definition at line 17 of file WTcMouse.h.
+
+\hypertarget{classc_mouse_a5747de760c63d410eac682dd9fad506f}{
+\index{cMouse@{cMouse}!ys@{ys}}
+\index{ys@{ys}!cMouse@{cMouse}}
+\subsubsection[{ys}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cMouse::ys}}}
+\label{classc_mouse_a5747de760c63d410eac682dd9fad506f}
+
+
+This will store the mouses current Y speed. (pixels travelled since last frame). 
+
+
+
+Definition at line 33 of file WTcMouse.h.
+
+\hypertarget{classc_mouse_abd2eb43958c968e29bc01351ca6c82f7}{
+\index{cMouse@{cMouse}!z@{z}}
+\index{z@{z}!cMouse@{cMouse}}
+\subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cMouse::z}}}
+\label{classc_mouse_abd2eb43958c968e29bc01351ca6c82f7}
+
+
+This stores the current frames Z value (in pixels from the windows 0,0). 
+
+
+
+Definition at line 19 of file WTcMouse.h.
+

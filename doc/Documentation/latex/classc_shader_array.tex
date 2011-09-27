@@ -1,0 +1,256 @@
+\hypertarget{classc_shader_array}{
+\section{cShaderArray Class Reference}
+\label{classc_shader_array}\index{cShaderArray@{cShaderArray}}
+}
+
+
+This is the transfer class to transfer shader data from raw data to a \hyperlink{classc_shader}{cShader} class This will collect raw data from an IMF class and process it ready to be handed to a cShader() object.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_shader_array_a71aec9d0ce56bd411e8064f6f40b416e}{cShaderArray} ()
+\item 
+\hyperlink{classc_shader_array_abb536dac6716f4b0d283a450a8dac08b}{$\sim$cShaderArray} ()
+\item 
+uint8 \hyperlink{classc_shader_array_ae531fe3e05ad3ee39502baddf0a84353}{Type} ()
+\item 
+void \hyperlink{classc_shader_array_a2116af5d5d67735a438c520742b7e605}{SetSize} (uint32 liCharCount)
+\begin{DoxyCompactList}\small\item\em This will set the total number of characters in the entire shader program. (Every line). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_shader_array_a10438122d71b486eafbe76923e9480f7}{SetType} (uint8 liShaderType)
+\begin{DoxyCompactList}\small\item\em This will set the type of this \hyperlink{classc_shader_array_a71aec9d0ce56bd411e8064f6f40b416e}{cShaderArray()} object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_shader_array_aac4feb822f0a07dceafc2f83ddfaddf2}{SetText} (char $\ast$lpShaderText)
+\begin{DoxyCompactList}\small\item\em This will set the character array storing the text for the Shader code to be the array pointed at by lpShaderText. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_shader_array_a8c20a1e6625ea65d113747c169313cc0}{SetLines} (uint32 liLines)
+\begin{DoxyCompactList}\small\item\em This will set the number of lines in this Shader Program. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_shader_array_a32ed770609a7be20a27be8f981dbfd78}{SetLineLengths} (uint32 $\ast$lpLines)
+\begin{DoxyCompactList}\small\item\em This will set the array of line lengths to be the array pointed to by lpLines. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_shader_array_a8c70ada7026d9405f592c0f2ead15e6a}{LoadIMF} (ifstream \&FileStream)
+\begin{DoxyCompactList}\small\item\em This will load the Shader code from the IMF file. FileStream should just be at the start of a Shader object in an IMF file. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32 \hyperlink{classc_shader_array_a148ffa979b89aadd045f69398c0816cb}{miCharCount}
+\item 
+char $\ast$ \hyperlink{classc_shader_array_a17b2519868bbc5a40db2222a42a6dd84}{mpShaderText}
+\item 
+uint8 \hyperlink{classc_shader_array_a6d584d6547232ff18e4bcc6c92343b99}{miShaderType}
+\item 
+char $\ast$ \hyperlink{classc_shader_array_af44e6ae486efc2576faa43df52d14e33}{mpRef}
+\item 
+uint32 \hyperlink{classc_shader_array_af36e89da0296b5e725db06b6e03e87c0}{miLines}
+\item 
+uint32 $\ast$ \hyperlink{classc_shader_array_a7f5dbee262a24fed2cdcf2f241afa639}{mpLines}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the transfer class to transfer shader data from raw data to a \hyperlink{classc_shader}{cShader} class This will collect raw data from an IMF class and process it ready to be handed to a cShader() object. 
+
+Definition at line 10 of file WTcShader.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_shader_array_a71aec9d0ce56bd411e8064f6f40b416e}{
+\index{cShaderArray@{cShaderArray}!cShaderArray@{cShaderArray}}
+\index{cShaderArray@{cShaderArray}!cShaderArray@{cShaderArray}}
+\subsubsection[{cShaderArray}]{\setlength{\rightskip}{0pt plus 5cm}cShaderArray::cShaderArray (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_shader_array_a71aec9d0ce56bd411e8064f6f40b416e}
+
+
+Definition at line 41 of file WTcShader.cpp.
+
+\hypertarget{classc_shader_array_abb536dac6716f4b0d283a450a8dac08b}{
+\index{cShaderArray@{cShaderArray}!$\sim$cShaderArray@{$\sim$cShaderArray}}
+\index{$\sim$cShaderArray@{$\sim$cShaderArray}!cShaderArray@{cShaderArray}}
+\subsubsection[{$\sim$cShaderArray}]{\setlength{\rightskip}{0pt plus 5cm}cShaderArray::$\sim$cShaderArray (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_shader_array_abb536dac6716f4b0d283a450a8dac08b}
+
+
+Definition at line 51 of file WTcShader.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_shader_array_a8c70ada7026d9405f592c0f2ead15e6a}{
+\index{cShaderArray@{cShaderArray}!LoadIMF@{LoadIMF}}
+\index{LoadIMF@{LoadIMF}!cShaderArray@{cShaderArray}}
+\subsubsection[{LoadIMF}]{\setlength{\rightskip}{0pt plus 5cm}void cShaderArray::LoadIMF (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_shader_array_a8c70ada7026d9405f592c0f2ead15e6a}
+
+
+This will load the Shader code from the IMF file. FileStream should just be at the start of a Shader object in an IMF file. 
+
+
+
+Definition at line 3 of file WTcShader.cpp.
+
+\hypertarget{classc_shader_array_a32ed770609a7be20a27be8f981dbfd78}{
+\index{cShaderArray@{cShaderArray}!SetLineLengths@{SetLineLengths}}
+\index{SetLineLengths@{SetLineLengths}!cShaderArray@{cShaderArray}}
+\subsubsection[{SetLineLengths}]{\setlength{\rightskip}{0pt plus 5cm}void cShaderArray::SetLineLengths (
+\begin{DoxyParamCaption}
+\item[{uint32 $\ast$}]{lpLines}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_shader_array_a32ed770609a7be20a27be8f981dbfd78}
+
+
+This will set the array of line lengths to be the array pointed to by lpLines. 
+
+
+
+Definition at line 35 of file WTcShader.h.
+
+\hypertarget{classc_shader_array_a8c20a1e6625ea65d113747c169313cc0}{
+\index{cShaderArray@{cShaderArray}!SetLines@{SetLines}}
+\index{SetLines@{SetLines}!cShaderArray@{cShaderArray}}
+\subsubsection[{SetLines}]{\setlength{\rightskip}{0pt plus 5cm}void cShaderArray::SetLines (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liLines}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_shader_array_a8c20a1e6625ea65d113747c169313cc0}
+
+
+This will set the number of lines in this Shader Program. 
+
+
+
+Definition at line 33 of file WTcShader.h.
+
+\hypertarget{classc_shader_array_a2116af5d5d67735a438c520742b7e605}{
+\index{cShaderArray@{cShaderArray}!SetSize@{SetSize}}
+\index{SetSize@{SetSize}!cShaderArray@{cShaderArray}}
+\subsubsection[{SetSize}]{\setlength{\rightskip}{0pt plus 5cm}void cShaderArray::SetSize (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liCharCount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_shader_array_a2116af5d5d67735a438c520742b7e605}
+
+
+This will set the total number of characters in the entire shader program. (Every line). 
+
+
+
+Definition at line 27 of file WTcShader.h.
+
+\hypertarget{classc_shader_array_aac4feb822f0a07dceafc2f83ddfaddf2}{
+\index{cShaderArray@{cShaderArray}!SetText@{SetText}}
+\index{SetText@{SetText}!cShaderArray@{cShaderArray}}
+\subsubsection[{SetText}]{\setlength{\rightskip}{0pt plus 5cm}void cShaderArray::SetText (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{lpShaderText}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_shader_array_aac4feb822f0a07dceafc2f83ddfaddf2}
+
+
+This will set the character array storing the text for the Shader code to be the array pointed at by lpShaderText. 
+
+
+
+Definition at line 31 of file WTcShader.h.
+
+\hypertarget{classc_shader_array_a10438122d71b486eafbe76923e9480f7}{
+\index{cShaderArray@{cShaderArray}!SetType@{SetType}}
+\index{SetType@{SetType}!cShaderArray@{cShaderArray}}
+\subsubsection[{SetType}]{\setlength{\rightskip}{0pt plus 5cm}void cShaderArray::SetType (
+\begin{DoxyParamCaption}
+\item[{uint8}]{liShaderType}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_shader_array_a10438122d71b486eafbe76923e9480f7}
+
+
+This will set the type of this \hyperlink{classc_shader_array_a71aec9d0ce56bd411e8064f6f40b416e}{cShaderArray()} object. 
+
+
+
+Definition at line 29 of file WTcShader.h.
+
+\hypertarget{classc_shader_array_ae531fe3e05ad3ee39502baddf0a84353}{
+\index{cShaderArray@{cShaderArray}!Type@{Type}}
+\index{Type@{Type}!cShaderArray@{cShaderArray}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}uint8 cShaderArray::Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classc_shader_array_ae531fe3e05ad3ee39502baddf0a84353}
+
+
+Definition at line 25 of file WTcShader.h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_shader_array_a148ffa979b89aadd045f69398c0816cb}{
+\index{cShaderArray@{cShaderArray}!miCharCount@{miCharCount}}
+\index{miCharCount@{miCharCount}!cShaderArray@{cShaderArray}}
+\subsubsection[{miCharCount}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cShaderArray::miCharCount}}}
+\label{classc_shader_array_a148ffa979b89aadd045f69398c0816cb}
+
+
+Definition at line 14 of file WTcShader.h.
+
+\hypertarget{classc_shader_array_af36e89da0296b5e725db06b6e03e87c0}{
+\index{cShaderArray@{cShaderArray}!miLines@{miLines}}
+\index{miLines@{miLines}!cShaderArray@{cShaderArray}}
+\subsubsection[{miLines}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cShaderArray::miLines}}}
+\label{classc_shader_array_af36e89da0296b5e725db06b6e03e87c0}
+
+
+Definition at line 18 of file WTcShader.h.
+
+\hypertarget{classc_shader_array_a6d584d6547232ff18e4bcc6c92343b99}{
+\index{cShaderArray@{cShaderArray}!miShaderType@{miShaderType}}
+\index{miShaderType@{miShaderType}!cShaderArray@{cShaderArray}}
+\subsubsection[{miShaderType}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf cShaderArray::miShaderType}}}
+\label{classc_shader_array_a6d584d6547232ff18e4bcc6c92343b99}
+
+
+Definition at line 16 of file WTcShader.h.
+
+\hypertarget{classc_shader_array_a7f5dbee262a24fed2cdcf2f241afa639}{
+\index{cShaderArray@{cShaderArray}!mpLines@{mpLines}}
+\index{mpLines@{mpLines}!cShaderArray@{cShaderArray}}
+\subsubsection[{mpLines}]{\setlength{\rightskip}{0pt plus 5cm}uint32$\ast$ {\bf cShaderArray::mpLines}}}
+\label{classc_shader_array_a7f5dbee262a24fed2cdcf2f241afa639}
+
+
+Definition at line 19 of file WTcShader.h.
+
+\hypertarget{classc_shader_array_af44e6ae486efc2576faa43df52d14e33}{
+\index{cShaderArray@{cShaderArray}!mpRef@{mpRef}}
+\index{mpRef@{mpRef}!cShaderArray@{cShaderArray}}
+\subsubsection[{mpRef}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf cShaderArray::mpRef}}}
+\label{classc_shader_array_af44e6ae486efc2576faa43df52d14e33}
+
+
+Definition at line 17 of file WTcShader.h.
+
+\hypertarget{classc_shader_array_a17b2519868bbc5a40db2222a42a6dd84}{
+\index{cShaderArray@{cShaderArray}!mpShaderText@{mpShaderText}}
+\index{mpShaderText@{mpShaderText}!cShaderArray@{cShaderArray}}
+\subsubsection[{mpShaderText}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf cShaderArray::mpShaderText}}}
+\label{classc_shader_array_a17b2519868bbc5a40db2222a42a6dd84}
+
+
+Definition at line 15 of file WTcShader.h.
+

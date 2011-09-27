@@ -1,0 +1,167 @@
+\hypertarget{classc_file_handler}{
+\section{cFileHandler Class Reference}
+\label{classc_file_handler}\index{cFileHandler@{cFileHandler}}
+}
+
+
+This is the handler for the file system. This handles all files loaded from a hdd. It will give allow processes to use files loaded else where, using either the filenames or if loaded from an IMF a file reference. The files are stored in the list mpFiles.  
+
+
+
+
+Collaboration diagram for cFileHandler:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_file_handler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_file_handler_a88dd9099f9332245a2f2fc8a3eb8abc5}{$\sim$cFileHandler} ()
+\item 
+void \hyperlink{classc_file_handler_a87ff1f0cc36ef46514f77826eaf04453}{Reload} ()
+\begin{DoxyCompactList}\small\item\em This will reload all the files from a hdd into memory. (Note this is not currently complete). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_file_handler_a610399fa5d6bdb45de1d3cdc4dcb4c3c}{Unload} ()
+\begin{DoxyCompactList}\small\item\em This will remove all the files from memory. (Note this is not currently complete). \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{classc_file_handler_a3d2432f40a2d8f2fed223b6ad508b7df}{File} (const char $\ast$lpFilename)
+\begin{DoxyCompactList}\small\item\em This will return a pointer to a file with the filename or file refernce lpFilename. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classv_file}{vFile} $>$ $\ast$ \hyperlink{classc_file_handler_a30b1285eaca092f8417c3f1750f60559}{Add} (\hyperlink{classv_file}{vFile} $\ast$lpNew)
+\begin{DoxyCompactList}\small\item\em This will add the file pointed to by lpNew to the current file list mpFile. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_file_handler_a2701aa77518747a401b51e0c38ba1cd1}{Delete} (\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classv_file}{vFile} $>$ $\ast$lpNode)
+\begin{DoxyCompactList}\small\item\em This will delete the file owned by lpNode from the file list mpFile. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classc_file_handler}{cFileHandler} $\ast$ \hyperlink{classc_file_handler_a99495051a1a41a763113aca5292023b9}{Instance} ()
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the current \hyperlink{classc_file_handler}{cFileHandler}. If there is no current instance it will create one and return the pointer. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the handler for the file system. This handles all files loaded from a hdd. It will give allow processes to use files loaded else where, using either the filenames or if loaded from an IMF a file reference. The files are stored in the list mpFiles. 
+
+Definition at line 10 of file WTcFileHandler.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_file_handler_a88dd9099f9332245a2f2fc8a3eb8abc5}{
+\index{cFileHandler@{cFileHandler}!$\sim$cFileHandler@{$\sim$cFileHandler}}
+\index{$\sim$cFileHandler@{$\sim$cFileHandler}!cFileHandler@{cFileHandler}}
+\subsubsection[{$\sim$cFileHandler}]{\setlength{\rightskip}{0pt plus 5cm}cFileHandler::$\sim$cFileHandler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_file_handler_a88dd9099f9332245a2f2fc8a3eb8abc5}
+
+
+Definition at line 24 of file WTcFileHandler.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_file_handler_a30b1285eaca092f8417c3f1750f60559}{
+\index{cFileHandler@{cFileHandler}!Add@{Add}}
+\index{Add@{Add}!cFileHandler@{cFileHandler}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cLinkedNode}$<$ {\bf vFile} $>$ $\ast$ cFileHandler::Add (
+\begin{DoxyParamCaption}
+\item[{{\bf vFile} $\ast$}]{lpNew}
+\end{DoxyParamCaption}
+)}}
+\label{classc_file_handler_a30b1285eaca092f8417c3f1750f60559}
+
+
+This will add the file pointed to by lpNew to the current file list mpFile. 
+
+
+
+Definition at line 43 of file WTcFileHandler.cpp.
+
+\hypertarget{classc_file_handler_a2701aa77518747a401b51e0c38ba1cd1}{
+\index{cFileHandler@{cFileHandler}!Delete@{Delete}}
+\index{Delete@{Delete}!cFileHandler@{cFileHandler}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}void cFileHandler::Delete (
+\begin{DoxyParamCaption}
+\item[{{\bf cLinkedNode}$<$ {\bf vFile} $>$ $\ast$}]{lpNode}
+\end{DoxyParamCaption}
+)}}
+\label{classc_file_handler_a2701aa77518747a401b51e0c38ba1cd1}
+
+
+This will delete the file owned by lpNode from the file list mpFile. 
+
+
+
+Definition at line 52 of file WTcFileHandler.cpp.
+
+\hypertarget{classc_file_handler_a3d2432f40a2d8f2fed223b6ad508b7df}{
+\index{cFileHandler@{cFileHandler}!File@{File}}
+\index{File@{File}!cFileHandler@{cFileHandler}}
+\subsubsection[{File}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ cFileHandler::File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{lpFilename}
+\end{DoxyParamCaption}
+)}}
+\label{classc_file_handler_a3d2432f40a2d8f2fed223b6ad508b7df}
+
+
+This will return a pointer to a file with the filename or file refernce lpFilename. 
+
+
+
+Definition at line 9 of file WTcFileHandler.cpp.
+
+\hypertarget{classc_file_handler_a99495051a1a41a763113aca5292023b9}{
+\index{cFileHandler@{cFileHandler}!Instance@{Instance}}
+\index{Instance@{Instance}!cFileHandler@{cFileHandler}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cFileHandler} $\ast$ cFileHandler::Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classc_file_handler_a99495051a1a41a763113aca5292023b9}
+
+
+This will return a pointer to the current \hyperlink{classc_file_handler}{cFileHandler}. If there is no current instance it will create one and return the pointer. 
+
+
+
+Definition at line 33 of file WTcFileHandler.cpp.
+
+\hypertarget{classc_file_handler_a87ff1f0cc36ef46514f77826eaf04453}{
+\index{cFileHandler@{cFileHandler}!Reload@{Reload}}
+\index{Reload@{Reload}!cFileHandler@{cFileHandler}}
+\subsubsection[{Reload}]{\setlength{\rightskip}{0pt plus 5cm}void cFileHandler::Reload (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_file_handler_a87ff1f0cc36ef46514f77826eaf04453}
+
+
+This will reload all the files from a hdd into memory. (Note this is not currently complete). 
+
+
+
+Definition at line 39 of file WTcFileHandler.cpp.
+
+\hypertarget{classc_file_handler_a610399fa5d6bdb45de1d3cdc4dcb4c3c}{
+\index{cFileHandler@{cFileHandler}!Unload@{Unload}}
+\index{Unload@{Unload}!cFileHandler@{cFileHandler}}
+\subsubsection[{Unload}]{\setlength{\rightskip}{0pt plus 5cm}void cFileHandler::Unload (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_file_handler_a610399fa5d6bdb45de1d3cdc4dcb4c3c}
+
+
+This will remove all the files from memory. (Note this is not currently complete). 
+
+
+
+Definition at line 41 of file WTcFileHandler.cpp.
+

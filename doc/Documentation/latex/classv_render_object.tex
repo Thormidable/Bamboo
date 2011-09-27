@@ -1,0 +1,260 @@
+\hypertarget{classv_render_object}{
+\section{vRenderObject Class Reference}
+\label{classv_render_object}\index{vRenderObject@{vRenderObject}}
+}
+
+
+virtual function for producing renderable objects. see \hyperlink{classc_render_object}{cRenderObject}.  
+
+
+
+
+Inheritance diagram for vRenderObject:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classv_render_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for vRenderObject:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classv_render_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classv_render_object_a1ad02f04355d5834b1d84991e5291dfb}{$\sim$vRenderObject} ()
+\item 
+virtual \hyperlink{classc_render_node}{cRenderNode} $\ast$ \hyperlink{classv_render_object_a558ba2b7a23cf687c0b0ec7d814a7744}{Renderer} ()=0
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{classc_render_node}{cRenderNode} which owns this object. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_render_object_a1cd8f4961222c39ecdfa5ca155699fa3}{LinkCollisionObject} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpObj)
+\begin{DoxyCompactList}\small\item\em Links The \hyperlink{classc_collision_object}{cCollisionObject} lpObj to this Renderable Object. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_render_object_a5f7d30eaedefd5cfcc904d0e499a836d}{RenderPainter} ()=0
+\begin{DoxyCompactList}\small\item\em Renders this object from the \hyperlink{classc_painter}{cPainter} render list to the screen. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_render_object_a8402746b2f0dce26964556c9167ad1e3}{RenderToPainter} ()=0
+\begin{DoxyCompactList}\small\item\em Renders this object to the \hyperlink{classc_painter}{cPainter} render list. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_render_object_ae4bb9fb71f277f6b63e7dd6aeaedff5b}{Render} ()=0
+\begin{DoxyCompactList}\small\item\em Renders this object to the screen. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_render_object_a5e566d53432b096551f09c2866c6e0b0}{AdditionalRenderFunctions} ()
+\begin{DoxyCompactList}\small\item\em This will store any additional functions to be performed as the object is rendered. Updating Caches, etc. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classv_render_object_a18c1f3fcab0c4c28358e539a5ec57ad3}{UpdateCache} ()=0
+\begin{DoxyCompactList}\small\item\em This will update the cache matrix. \item\end{DoxyCompactList}\item 
+virtual float $\ast$ \hyperlink{classv_render_object_aacd7e3aeb366f0f04f0f148ded8b89f4}{GetPos} ()=0
+\begin{DoxyCompactList}\small\item\em This will return the position of the selected object. \item\end{DoxyCompactList}\item 
+virtual float $\ast$ \hyperlink{classv_render_object_a514553ffc449f026b50fa47496311860}{GetGlobalPos} ()=0
+\begin{DoxyCompactList}\small\item\em This will return the global position of the object as rendered at the end of last frame. Note, this will contain the camera matrix. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classv_render_object_a7ac4333806eaa793c4ce83e25764ad3b}{mmCache}
+\begin{DoxyCompactList}\small\item\em Matrix which Stores the final global position matrix of the object from the last frame. This is used to make collisions consistent and for finding object Global Positions. Note the Camera MAtrix will be included in this. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+virtual function for producing renderable objects. see \hyperlink{classc_render_object}{cRenderObject}. 
+
+Definition at line 10 of file WTvRenderObject.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classv_render_object_a1ad02f04355d5834b1d84991e5291dfb}{
+\index{vRenderObject@{vRenderObject}!$\sim$vRenderObject@{$\sim$vRenderObject}}
+\index{$\sim$vRenderObject@{$\sim$vRenderObject}!vRenderObject@{vRenderObject}}
+\subsubsection[{$\sim$vRenderObject}]{\setlength{\rightskip}{0pt plus 5cm}virtual vRenderObject::$\sim$vRenderObject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classv_render_object_a1ad02f04355d5834b1d84991e5291dfb}
+
+
+Definition at line 19 of file WTvRenderObject.h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classv_render_object_a5e566d53432b096551f09c2866c6e0b0}{
+\index{vRenderObject@{vRenderObject}!AdditionalRenderFunctions@{AdditionalRenderFunctions}}
+\index{AdditionalRenderFunctions@{AdditionalRenderFunctions}!vRenderObject@{vRenderObject}}
+\subsubsection[{AdditionalRenderFunctions}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vRenderObject::AdditionalRenderFunctions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classv_render_object_a5e566d53432b096551f09c2866c6e0b0}
+
+
+This will store any additional functions to be performed as the object is rendered. Updating Caches, etc. 
+
+
+
+Reimplemented in \hyperlink{classc_render_node_a6b0c65b32abdf6046dbe3f2c8d24cfaf}{cRenderNode}, and \hyperlink{classc_render_object_a1a023520677b50e63fc2334717a2761d}{cRenderObject}.
+
+
+
+Definition at line 37 of file WTvRenderObject.h.
+
+\hypertarget{classv_render_object_a514553ffc449f026b50fa47496311860}{
+\index{vRenderObject@{vRenderObject}!GetGlobalPos@{GetGlobalPos}}
+\index{GetGlobalPos@{GetGlobalPos}!vRenderObject@{vRenderObject}}
+\subsubsection[{GetGlobalPos}]{\setlength{\rightskip}{0pt plus 5cm}virtual float$\ast$ vRenderObject::GetGlobalPos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_render_object_a514553ffc449f026b50fa47496311860}
+
+
+This will return the global position of the object as rendered at the end of last frame. Note, this will contain the camera matrix. 
+
+
+
+Implemented in \hyperlink{classc_render_node_ac4c1e605f4b0acc4b4efcbc4447ff143}{cRenderNode}, and \hyperlink{classc_render_object_ae60403345f6e937fbb641b87afd757a9}{cRenderObject}.
+
+\hypertarget{classv_render_object_aacd7e3aeb366f0f04f0f148ded8b89f4}{
+\index{vRenderObject@{vRenderObject}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!vRenderObject@{vRenderObject}}
+\subsubsection[{GetPos}]{\setlength{\rightskip}{0pt plus 5cm}virtual float$\ast$ vRenderObject::GetPos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_render_object_aacd7e3aeb366f0f04f0f148ded8b89f4}
+
+
+This will return the position of the selected object. 
+
+
+
+Implemented in \hyperlink{classc_render_node_a456e5433b5fd3601d4392dd92de1fd31}{cRenderNode}, and \hyperlink{classc_render_object_a48a88c2c6722c23ee51459e933873412}{cRenderObject}.
+
+\hypertarget{classv_render_object_a1cd8f4961222c39ecdfa5ca155699fa3}{
+\index{vRenderObject@{vRenderObject}!LinkCollisionObject@{LinkCollisionObject}}
+\index{LinkCollisionObject@{LinkCollisionObject}!vRenderObject@{vRenderObject}}
+\subsubsection[{LinkCollisionObject}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vRenderObject::LinkCollisionObject (
+\begin{DoxyParamCaption}
+\item[{{\bf cCollisionObject} $\ast$}]{lpObj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classv_render_object_a1cd8f4961222c39ecdfa5ca155699fa3}
+
+
+Links The \hyperlink{classc_collision_object}{cCollisionObject} lpObj to this Renderable Object. 
+
+
+
+Reimplemented in \hyperlink{classc_render_node_a6cd00cebef1668356808ad0de77bcd19}{cRenderNode}, and \hyperlink{classc_render_object_a9cd352514159783b312cf9d3a6168e8e}{cRenderObject}.
+
+
+
+Definition at line 23 of file WTvRenderObject.h.
+
+\hypertarget{classv_render_object_ae4bb9fb71f277f6b63e7dd6aeaedff5b}{
+\index{vRenderObject@{vRenderObject}!Render@{Render}}
+\index{Render@{Render}!vRenderObject@{vRenderObject}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vRenderObject::Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_render_object_ae4bb9fb71f277f6b63e7dd6aeaedff5b}
+
+
+Renders this object to the screen. 
+
+
+
+Implemented in \hyperlink{classc_render_node_ab821e33b9286dd661f3dec143966f8b8}{cRenderNode}, \hyperlink{classc_beam_mesh_a02d976199ae454b1f30ce5948de9bde7}{cBeamMesh}, \hyperlink{classc_image_a05974b0f9253b8416eeea756f95460ce}{cImage}, \hyperlink{classc_landscape_a8e2448f2d2203f3823d786e9e0450508}{cLandscape}, \hyperlink{classc_line_af7852492bb5da5f32310675342fa12e7}{cLine}, \hyperlink{classc_model_list_a1a956924ef232a2817af62debebb1948}{cModelList}, \hyperlink{classc_particle_handler_aab7ecf600c419d2e58f7819fc37e0bb6}{cParticleHandler}, \hyperlink{classc_particle_group_a9b4bf815002fe5c480d93bc0a81e879c}{cParticleGroup}, \hyperlink{classc_point_a695f51244ffde2e5d4d932ccbde443c7}{cPoint}, \hyperlink{classc_textured_model_a8049592b8cb7abc18332a8e70de3fc70}{cTexturedModel}, \hyperlink{classc_text_ad331a52b579e01af3b3151e1fc2b52fd}{cText}, and \hyperlink{classc_render_object_ab0db1b7db1a1d4210511d9d95634fcce}{cRenderObject}.
+
+\hypertarget{classv_render_object_a558ba2b7a23cf687c0b0ec7d814a7744}{
+\index{vRenderObject@{vRenderObject}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!vRenderObject@{vRenderObject}}
+\subsubsection[{Renderer}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf cRenderNode}$\ast$ vRenderObject::Renderer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_render_object_a558ba2b7a23cf687c0b0ec7d814a7744}
+
+
+Returns the \hyperlink{classc_render_node}{cRenderNode} which owns this object. 
+
+
+
+Implemented in \hyperlink{classc_render_node_ad461c79a8a847a57448152e2401696f6}{cRenderNode}, and \hyperlink{classc_render_object_a8edb3b47e07b01d11aae96f078b9f63f}{cRenderObject}.
+
+\hypertarget{classv_render_object_a5f7d30eaedefd5cfcc904d0e499a836d}{
+\index{vRenderObject@{vRenderObject}!RenderPainter@{RenderPainter}}
+\index{RenderPainter@{RenderPainter}!vRenderObject@{vRenderObject}}
+\subsubsection[{RenderPainter}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vRenderObject::RenderPainter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_render_object_a5f7d30eaedefd5cfcc904d0e499a836d}
+
+
+Renders this object from the \hyperlink{classc_painter}{cPainter} render list to the screen. 
+
+
+
+Implemented in \hyperlink{classc_render_node_a56a964f97aeae5419f1b1f599948dc81}{cRenderNode}, \hyperlink{classc_particle_handler_ae1d7ac9b13cb0ca9f43105706a48da01}{cParticleHandler}, \hyperlink{classc_particle_group_a9f825be2f03920ca17cabcfbd6db47d6}{cParticleGroup}, and \hyperlink{classc_render_object_ab2a666638043054e563b9f0a54faa6b7}{cRenderObject}.
+
+\hypertarget{classv_render_object_a8402746b2f0dce26964556c9167ad1e3}{
+\index{vRenderObject@{vRenderObject}!RenderToPainter@{RenderToPainter}}
+\index{RenderToPainter@{RenderToPainter}!vRenderObject@{vRenderObject}}
+\subsubsection[{RenderToPainter}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vRenderObject::RenderToPainter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_render_object_a8402746b2f0dce26964556c9167ad1e3}
+
+
+Renders this object to the \hyperlink{classc_painter}{cPainter} render list. 
+
+
+
+Implemented in \hyperlink{classc_render_node_aa1a1cf0616c7fd30e95e2712ebd4c59c}{cRenderNode}, \hyperlink{classc_beam_mesh_a3a46ae2359bb9081d70a747e72a47e99}{cBeamMesh}, \hyperlink{classc_image_a7eb7b4c9c12656243d962b74ca75344d}{cImage}, \hyperlink{classc_landscape_acc1d4843ba2d7be80272d3f50d1599d5}{cLandscape}, \hyperlink{classc_line_a0e06d47dcc732da35dd1575ddc6c894e}{cLine}, \hyperlink{classc_model_list_a529148930b0fd87ab2b437a469c69bce}{cModelList}, \hyperlink{classc_particle_handler_a8947ed7c9c931bd10a880abcd636b581}{cParticleHandler}, \hyperlink{classc_particle_group_a5f1365761df395f6724fb5bd2a2c761f}{cParticleGroup}, \hyperlink{classc_point_a67e471d5f9c67ede9e3357910eda4dc5}{cPoint}, \hyperlink{classc_textured_model_abad855bdd6d80200980c0072207b3c84}{cTexturedModel}, \hyperlink{classc_text_add728aeca513f1c355b933a77038162a}{cText}, and \hyperlink{classc_render_object_a130139cc8e1f5219ddabc6192f98afa8}{cRenderObject}.
+
+\hypertarget{classv_render_object_a18c1f3fcab0c4c28358e539a5ec57ad3}{
+\index{vRenderObject@{vRenderObject}!UpdateCache@{UpdateCache}}
+\index{UpdateCache@{UpdateCache}!vRenderObject@{vRenderObject}}
+\subsubsection[{UpdateCache}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vRenderObject::UpdateCache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_render_object_a18c1f3fcab0c4c28358e539a5ec57ad3}
+
+
+This will update the cache matrix. 
+
+
+
+Implemented in \hyperlink{classc_render_node_ad007ec73538353c0bc86a9629abdaaa4}{cRenderNode}, and \hyperlink{classc_render_object_aeeb8da742f1a844179a74a99e9aa4433}{cRenderObject}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classv_render_object_a7ac4333806eaa793c4ce83e25764ad3b}{
+\index{vRenderObject@{vRenderObject}!mmCache@{mmCache}}
+\index{mmCache@{mmCache}!vRenderObject@{vRenderObject}}
+\subsubsection[{mmCache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMatrix4} {\bf vRenderObject::mmCache}}}
+\label{classv_render_object_a7ac4333806eaa793c4ce83e25764ad3b}
+
+
+Matrix which Stores the final global position matrix of the object from the last frame. This is used to make collisions consistent and for finding object Global Positions. Note the Camera MAtrix will be included in this. 
+
+
+
+Definition at line 17 of file WTvRenderObject.h.
+

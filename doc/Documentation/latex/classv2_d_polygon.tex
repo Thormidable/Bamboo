@@ -1,0 +1,181 @@
+\hypertarget{classv2_d_polygon}{
+\section{v2DPolygon Class Reference}
+\label{classv2_d_polygon}\index{v2DPolygon@{v2DPolygon}}
+}
+
+
+This stores mesh data for a single square quadrilateral. This is used for cTextureText.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classv2_d_polygon_aa77877ada2df78c8715a37ee69e7970f}{SizeArrays} (float lfSize)
+\begin{DoxyCompactList}\small\item\em This will scale the polygon to lfsize. \item\end{DoxyCompactList}\item 
+static void \hyperlink{classv2_d_polygon_a52a4fc6f6e6d3a59387f8cfe5e64ed1e}{SetTextCoords} (float liRange)
+\begin{DoxyCompactList}\small\item\em This will position the texture co-\/ordinates for a single character in a 1x64 character font texture. \item\end{DoxyCompactList}\item 
+static void \hyperlink{classv2_d_polygon_a43323ef65b79a1321d290cfea22b8393}{ResetTextCoords} ()
+\begin{DoxyCompactList}\small\item\em This will reset the texture co-\/ordinates to use the entire texture. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static float \hyperlink{classv2_d_polygon_a8862118bbcb236dd1188f4dda9533152}{mpVertex} \mbox{[}12\mbox{]}
+\begin{DoxyCompactList}\small\item\em This stores the vertex position array for this polygon. \item\end{DoxyCompactList}\item 
+static uint16 \hyperlink{classv2_d_polygon_ae352b67e87126247d82c34a27aa5fd7c}{mpFaces} \mbox{[}6\mbox{]}
+\begin{DoxyCompactList}\small\item\em This stores the face array for this polygon. \item\end{DoxyCompactList}\item 
+static float \hyperlink{classv2_d_polygon_a80704feccc5934a85bcf5837142c865c}{mpTextCoords} \mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em This stores the vertex texture co-\/ordinates for this polygon. \item\end{DoxyCompactList}\item 
+static float \hyperlink{classv2_d_polygon_a79c7a17e7b0b50165282f68d644dad2e}{mpNormals} \mbox{[}12\mbox{]}
+\begin{DoxyCompactList}\small\item\em This stores the vertex normals data for this polygon. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This stores mesh data for a single square quadrilateral. This is used for cTextureText. 
+
+Definition at line 4 of file WTv2DPolygon.h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classv2_d_polygon_a43323ef65b79a1321d290cfea22b8393}{
+\index{v2DPolygon@{v2DPolygon}!ResetTextCoords@{ResetTextCoords}}
+\index{ResetTextCoords@{ResetTextCoords}!v2DPolygon@{v2DPolygon}}
+\subsubsection[{ResetTextCoords}]{\setlength{\rightskip}{0pt plus 5cm}void v2DPolygon::ResetTextCoords (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classv2_d_polygon_a43323ef65b79a1321d290cfea22b8393}
+
+
+This will reset the texture co-\/ordinates to use the entire texture. 
+
+
+
+Definition at line 36 of file WTv2DPolygon.cpp.
+
+\hypertarget{classv2_d_polygon_a52a4fc6f6e6d3a59387f8cfe5e64ed1e}{
+\index{v2DPolygon@{v2DPolygon}!SetTextCoords@{SetTextCoords}}
+\index{SetTextCoords@{SetTextCoords}!v2DPolygon@{v2DPolygon}}
+\subsubsection[{SetTextCoords}]{\setlength{\rightskip}{0pt plus 5cm}void v2DPolygon::SetTextCoords (
+\begin{DoxyParamCaption}
+\item[{float}]{liRange}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classv2_d_polygon_a52a4fc6f6e6d3a59387f8cfe5e64ed1e}
+
+
+This will position the texture co-\/ordinates for a single character in a 1x64 character font texture. 
+
+
+
+Definition at line 30 of file WTv2DPolygon.cpp.
+
+\hypertarget{classv2_d_polygon_aa77877ada2df78c8715a37ee69e7970f}{
+\index{v2DPolygon@{v2DPolygon}!SizeArrays@{SizeArrays}}
+\index{SizeArrays@{SizeArrays}!v2DPolygon@{v2DPolygon}}
+\subsubsection[{SizeArrays}]{\setlength{\rightskip}{0pt plus 5cm}void v2DPolygon::SizeArrays (
+\begin{DoxyParamCaption}
+\item[{float}]{lfSize}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classv2_d_polygon_aa77877ada2df78c8715a37ee69e7970f}
+
+
+This will scale the polygon to lfsize. 
+
+
+
+Definition at line 42 of file WTv2DPolygon.cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classv2_d_polygon_ae352b67e87126247d82c34a27aa5fd7c}{
+\index{v2DPolygon@{v2DPolygon}!mpFaces@{mpFaces}}
+\index{mpFaces@{mpFaces}!v2DPolygon@{v2DPolygon}}
+\subsubsection[{mpFaces}]{\setlength{\rightskip}{0pt plus 5cm}uint16 {\bf v2DPolygon::mpFaces}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classv2_d_polygon_ae352b67e87126247d82c34a27aa5fd7c}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+
+{
+ 0,1,2,0,2,3
+}
+\end{DoxyCode}
+
+
+This stores the face array for this polygon. 
+
+
+
+Definition at line 10 of file WTv2DPolygon.h.
+
+\hypertarget{classv2_d_polygon_a79c7a17e7b0b50165282f68d644dad2e}{
+\index{v2DPolygon@{v2DPolygon}!mpNormals@{mpNormals}}
+\index{mpNormals@{mpNormals}!v2DPolygon@{v2DPolygon}}
+\subsubsection[{mpNormals}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf v2DPolygon::mpNormals}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classv2_d_polygon_a79c7a17e7b0b50165282f68d644dad2e}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+
+{
+ 0.0f,0.0f,1.0f,
+ 0.0f,0.0f,1.0f,
+ 0.0f,0.0f,1.0f,
+ 0.0f,0.0f,1.0f
+}
+\end{DoxyCode}
+
+
+This stores the vertex normals data for this polygon. 
+
+
+
+Definition at line 14 of file WTv2DPolygon.h.
+
+\hypertarget{classv2_d_polygon_a80704feccc5934a85bcf5837142c865c}{
+\index{v2DPolygon@{v2DPolygon}!mpTextCoords@{mpTextCoords}}
+\index{mpTextCoords@{mpTextCoords}!v2DPolygon@{v2DPolygon}}
+\subsubsection[{mpTextCoords}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf v2DPolygon::mpTextCoords}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classv2_d_polygon_a80704feccc5934a85bcf5837142c865c}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+
+{
+ 1.0f,0.0f,
+ 1.0f,1.0f,
+ 0.0f,1.0f,
+ 0.0f,0.0f
+}
+\end{DoxyCode}
+
+
+This stores the vertex texture co-\/ordinates for this polygon. 
+
+
+
+Definition at line 12 of file WTv2DPolygon.h.
+
+\hypertarget{classv2_d_polygon_a8862118bbcb236dd1188f4dda9533152}{
+\index{v2DPolygon@{v2DPolygon}!mpVertex@{mpVertex}}
+\index{mpVertex@{mpVertex}!v2DPolygon@{v2DPolygon}}
+\subsubsection[{mpVertex}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf v2DPolygon::mpVertex}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classv2_d_polygon_a8862118bbcb236dd1188f4dda9533152}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+
+{
+ 1.0f,0.0f,0.0f,
+ 1.0f,1.0f,0.0f,
+ 0.0f,1.0f,0.0f,
+ 0.0f,0.0f,0.0f}
+\end{DoxyCode}
+
+
+This stores the vertex position array for this polygon. 
+
+
+
+Definition at line 8 of file WTv2DPolygon.h.
+

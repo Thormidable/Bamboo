@@ -1,0 +1,408 @@
+\hypertarget{classc_light}{
+\section{cLight Class Reference}
+\label{classc_light}\index{cLight@{cLight}}
+}
+
+
+Creates an OpenGL light effect.  
+
+
+
+
+Inheritance diagram for cLight:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{classc_light__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cLight:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{classc_light__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_light_a695d9165a904e1b6ffedbef6fa8cc955}{cLight} ()
+\begin{DoxyCompactList}\small\item\em Constructor, will create a new light source. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_light_a3354570a7b1a8b5a484b84d3b231a87e}{$\sim$cLight} ()
+\item 
+void \hyperlink{classc_light_a71f44adf2794e62eba33c58db557d057}{Position} (float lfX, float lfY, float lfZ)
+\begin{DoxyCompactList}\small\item\em Will Move the light to Global position lfX,lfY,lfZ. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_light_adee1be4882423cd78568a0ab3ec01e5b}{Position} ()
+\begin{DoxyCompactList}\small\item\em Will Return the Current position of the light. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_light_af8ece4e5cf59812835eeb6ca80c485c2}{Ambient} (float lfR, float lfG, float lfB, float lfA)
+\begin{DoxyCompactList}\small\item\em Will set the Ambient light color for the light source (RGBA). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_light_a74ae85e3b13ddc3b31a01257f9810e66}{Diffuse} (float lfR, float lfG, float lfB, float lfA)
+\begin{DoxyCompactList}\small\item\em Will set the Diffuse light color for the light source (RGBA). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_light_a0c9fac24be43f1b053e3ff8ecc89cd28}{Specular} (float lfR, float lfG, float lfB, float lfA)
+\begin{DoxyCompactList}\small\item\em Will set the Specular light color for the light source (RGBA). \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classc_light_a2dccfde2dd2dab941d58762f8c56b1a9}{PrepareLight} ()
+\begin{DoxyCompactList}\small\item\em Will bind this light source for use in OpenGL. Once all the Lights Variables are set, call this to preapre the light. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classc_light_a9a67a4ca727ffe13ff04a87385a14e0e}{PrepareLight} (uint32 liLight)
+\item 
+void \hyperlink{classc_light_a9f4ef9ebd121db8ce0f23a113d48f218}{Attenuation} (float liAttenuation)
+\begin{DoxyCompactList}\small\item\em Will Set the value for the attenuation factor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_light_a8394ef099b87c18df58759c8431ab084}{AttenuationType} (uint8 liOrder)
+\begin{DoxyCompactList}\small\item\em Will Set the order of the attenuation (0=constant, 1=linear or 2=Quadratic). \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_light_a9f6bd610b772e5185fa948dfec91d865}{SetID} (uint8 liLightID)
+\begin{DoxyCompactList}\small\item\em Will Set the Lights ID (The OpenGL light number this light will render to by default). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8 \hyperlink{classc_light_a0a636a1b5d3068e44d71ed4f5e58c86c}{miLightID}
+\item 
+float \hyperlink{classc_light_a5f4f6e1a73a23d7c7d7402316cf91459}{mpPosition} \mbox{[}4\mbox{]}
+\item 
+float \hyperlink{classc_light_a69a6e96ee70410b23201aa0eacb50326}{mpAmbient} \mbox{[}4\mbox{]}
+\item 
+float \hyperlink{classc_light_aa9c9538d45ce0ba6bb0c36b257c609e9}{mpDiffuse} \mbox{[}4\mbox{]}
+\item 
+float \hyperlink{classc_light_aceff329257be92835c2962e77ad2d3dc}{mpSpecular} \mbox{[}4\mbox{]}
+\item 
+float \hyperlink{classc_light_a1c5452dfe39ff550f30be8727d2862fc}{miAttenuation}
+\item 
+uint32 \hyperlink{classc_light_af266e29e6bbfee100a480a911c6bbee4}{miAttenuationType}
+\item 
+\hyperlink{classc_min_l_n}{cMinLN}$<$ \hyperlink{classv_light}{vLight} $>$ $\ast$ \hyperlink{classc_light_a6e718feeaad0a71e8654f85142bae362}{mpNode}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classc_light_handler}{cLightHandler} $\ast$ \hyperlink{classc_light_adb4d7d2b2d8d5e832bee031e70a87fd6}{mpLightHandler} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates an OpenGL light effect. 
+
+Definition at line 4 of file WTcLight.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_light_a695d9165a904e1b6ffedbef6fa8cc955}{
+\index{cLight@{cLight}!cLight@{cLight}}
+\index{cLight@{cLight}!cLight@{cLight}}
+\subsubsection[{cLight}]{\setlength{\rightskip}{0pt plus 5cm}cLight::cLight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_light_a695d9165a904e1b6ffedbef6fa8cc955}
+
+
+Constructor, will create a new light source. 
+
+
+
+Definition at line 15 of file WTcLight.cpp.
+
+\hypertarget{classc_light_a3354570a7b1a8b5a484b84d3b231a87e}{
+\index{cLight@{cLight}!$\sim$cLight@{$\sim$cLight}}
+\index{$\sim$cLight@{$\sim$cLight}!cLight@{cLight}}
+\subsubsection[{$\sim$cLight}]{\setlength{\rightskip}{0pt plus 5cm}cLight::$\sim$cLight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_light_a3354570a7b1a8b5a484b84d3b231a87e}
+
+
+Definition at line 3 of file WTcLight.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_light_af8ece4e5cf59812835eeb6ca80c485c2}{
+\index{cLight@{cLight}!Ambient@{Ambient}}
+\index{Ambient@{Ambient}!cLight@{cLight}}
+\subsubsection[{Ambient}]{\setlength{\rightskip}{0pt plus 5cm}void cLight::Ambient (
+\begin{DoxyParamCaption}
+\item[{float}]{lfR, }
+\item[{float}]{lfG, }
+\item[{float}]{lfB, }
+\item[{float}]{lfA}
+\end{DoxyParamCaption}
+)}}
+\label{classc_light_af8ece4e5cf59812835eeb6ca80c485c2}
+
+
+Will set the Ambient light color for the light source (RGBA). 
+
+
+
+Definition at line 38 of file WTcLight.cpp.
+
+\hypertarget{classc_light_a9f4ef9ebd121db8ce0f23a113d48f218}{
+\index{cLight@{cLight}!Attenuation@{Attenuation}}
+\index{Attenuation@{Attenuation}!cLight@{cLight}}
+\subsubsection[{Attenuation}]{\setlength{\rightskip}{0pt plus 5cm}void cLight::Attenuation (
+\begin{DoxyParamCaption}
+\item[{float}]{liAttenuation}
+\end{DoxyParamCaption}
+)}}
+\label{classc_light_a9f4ef9ebd121db8ce0f23a113d48f218}
+
+
+Will Set the value for the attenuation factor. 
+
+
+
+Definition at line 87 of file WTcLight.cpp.
+
+\hypertarget{classc_light_a8394ef099b87c18df58759c8431ab084}{
+\index{cLight@{cLight}!AttenuationType@{AttenuationType}}
+\index{AttenuationType@{AttenuationType}!cLight@{cLight}}
+\subsubsection[{AttenuationType}]{\setlength{\rightskip}{0pt plus 5cm}void cLight::AttenuationType (
+\begin{DoxyParamCaption}
+\item[{uint8}]{liOrder}
+\end{DoxyParamCaption}
+)}}
+\label{classc_light_a8394ef099b87c18df58759c8431ab084}
+
+
+Will Set the order of the attenuation (0=constant, 1=linear or 2=Quadratic). 
+
+
+
+Definition at line 82 of file WTcLight.cpp.
+
+\hypertarget{classc_light_a74ae85e3b13ddc3b31a01257f9810e66}{
+\index{cLight@{cLight}!Diffuse@{Diffuse}}
+\index{Diffuse@{Diffuse}!cLight@{cLight}}
+\subsubsection[{Diffuse}]{\setlength{\rightskip}{0pt plus 5cm}void cLight::Diffuse (
+\begin{DoxyParamCaption}
+\item[{float}]{lfR, }
+\item[{float}]{lfG, }
+\item[{float}]{lfB, }
+\item[{float}]{lfA}
+\end{DoxyParamCaption}
+)}}
+\label{classc_light_a74ae85e3b13ddc3b31a01257f9810e66}
+
+
+Will set the Diffuse light color for the light source (RGBA). 
+
+
+
+Definition at line 46 of file WTcLight.cpp.
+
+\hypertarget{classc_light_adee1be4882423cd78568a0ab3ec01e5b}{
+\index{cLight@{cLight}!Position@{Position}}
+\index{Position@{Position}!cLight@{cLight}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ cLight::Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classc_light_adee1be4882423cd78568a0ab3ec01e5b}
+
+
+Will Return the Current position of the light. 
+
+
+
+Implements \hyperlink{classv_light_a8b01a4aabfe76a8c0c2806fa5084a12b}{vLight}.
+
+
+
+Definition at line 37 of file WTcLight.h.
+
+\hypertarget{classc_light_a71f44adf2794e62eba33c58db557d057}{
+\index{cLight@{cLight}!Position@{Position}}
+\index{Position@{Position}!cLight@{cLight}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}void cLight::Position (
+\begin{DoxyParamCaption}
+\item[{float}]{lfX, }
+\item[{float}]{lfY, }
+\item[{float}]{lfZ}
+\end{DoxyParamCaption}
+)}}
+\label{classc_light_a71f44adf2794e62eba33c58db557d057}
+
+
+Will Move the light to Global position lfX,lfY,lfZ. 
+
+
+
+Definition at line 29 of file WTcLight.cpp.
+
+\hypertarget{classc_light_a9a67a4ca727ffe13ff04a87385a14e0e}{
+\index{cLight@{cLight}!PrepareLight@{PrepareLight}}
+\index{PrepareLight@{PrepareLight}!cLight@{cLight}}
+\subsubsection[{PrepareLight}]{\setlength{\rightskip}{0pt plus 5cm}void cLight::PrepareLight (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liLight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_light_a9a67a4ca727ffe13ff04a87385a14e0e}
+
+
+Implements \hyperlink{classv_light_aa71893aa279fc3742a516b289ab52848}{vLight}.
+
+
+
+Reimplemented in \hyperlink{classc_spot_light_a576a95e7cb6c79007e23b4423198c751}{cSpotLight}.
+
+
+
+Definition at line 72 of file WTcLight.cpp.
+
+\hypertarget{classc_light_a2dccfde2dd2dab941d58762f8c56b1a9}{
+\index{cLight@{cLight}!PrepareLight@{PrepareLight}}
+\index{PrepareLight@{PrepareLight}!cLight@{cLight}}
+\subsubsection[{PrepareLight}]{\setlength{\rightskip}{0pt plus 5cm}void cLight::PrepareLight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_light_a2dccfde2dd2dab941d58762f8c56b1a9}
+
+
+Will bind this light source for use in OpenGL. Once all the Lights Variables are set, call this to preapre the light. 
+
+
+
+Implements \hyperlink{classv_light_a71d2a53a5ceaf14ee6bfa91ad5132177}{vLight}.
+
+
+
+Reimplemented in \hyperlink{classc_spot_light_a364884b72b528981594b1440f6cbabcc}{cSpotLight}.
+
+
+
+Definition at line 63 of file WTcLight.cpp.
+
+\hypertarget{classc_light_a9f6bd610b772e5185fa948dfec91d865}{
+\index{cLight@{cLight}!SetID@{SetID}}
+\index{SetID@{SetID}!cLight@{cLight}}
+\subsubsection[{SetID}]{\setlength{\rightskip}{0pt plus 5cm}void cLight::SetID (
+\begin{DoxyParamCaption}
+\item[{uint8}]{liLightID}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_light_a9f6bd610b772e5185fa948dfec91d865}
+
+
+Will Set the Lights ID (The OpenGL light number this light will render to by default). 
+
+
+
+Implements \hyperlink{classv_light_a4de112698fd63d5fc101366f43f540ca}{vLight}.
+
+
+
+Definition at line 10 of file WTcLight.cpp.
+
+\hypertarget{classc_light_a0c9fac24be43f1b053e3ff8ecc89cd28}{
+\index{cLight@{cLight}!Specular@{Specular}}
+\index{Specular@{Specular}!cLight@{cLight}}
+\subsubsection[{Specular}]{\setlength{\rightskip}{0pt plus 5cm}void cLight::Specular (
+\begin{DoxyParamCaption}
+\item[{float}]{lfR, }
+\item[{float}]{lfG, }
+\item[{float}]{lfB, }
+\item[{float}]{lfA}
+\end{DoxyParamCaption}
+)}}
+\label{classc_light_a0c9fac24be43f1b053e3ff8ecc89cd28}
+
+
+Will set the Specular light color for the light source (RGBA). 
+
+
+
+Definition at line 54 of file WTcLight.cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_light_a1c5452dfe39ff550f30be8727d2862fc}{
+\index{cLight@{cLight}!miAttenuation@{miAttenuation}}
+\index{miAttenuation@{miAttenuation}!cLight@{cLight}}
+\subsubsection[{miAttenuation}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cLight::miAttenuation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_light_a1c5452dfe39ff550f30be8727d2862fc}
+
+
+Definition at line 20 of file WTcLight.h.
+
+\hypertarget{classc_light_af266e29e6bbfee100a480a911c6bbee4}{
+\index{cLight@{cLight}!miAttenuationType@{miAttenuationType}}
+\index{miAttenuationType@{miAttenuationType}!cLight@{cLight}}
+\subsubsection[{miAttenuationType}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cLight::miAttenuationType}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_light_af266e29e6bbfee100a480a911c6bbee4}
+
+
+Definition at line 22 of file WTcLight.h.
+
+\hypertarget{classc_light_a0a636a1b5d3068e44d71ed4f5e58c86c}{
+\index{cLight@{cLight}!miLightID@{miLightID}}
+\index{miLightID@{miLightID}!cLight@{cLight}}
+\subsubsection[{miLightID}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf cLight::miLightID}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_light_a0a636a1b5d3068e44d71ed4f5e58c86c}
+
+
+Definition at line 8 of file WTcLight.h.
+
+\hypertarget{classc_light_a69a6e96ee70410b23201aa0eacb50326}{
+\index{cLight@{cLight}!mpAmbient@{mpAmbient}}
+\index{mpAmbient@{mpAmbient}!cLight@{cLight}}
+\subsubsection[{mpAmbient}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cLight::mpAmbient}\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_light_a69a6e96ee70410b23201aa0eacb50326}
+
+
+Definition at line 13 of file WTcLight.h.
+
+\hypertarget{classc_light_aa9c9538d45ce0ba6bb0c36b257c609e9}{
+\index{cLight@{cLight}!mpDiffuse@{mpDiffuse}}
+\index{mpDiffuse@{mpDiffuse}!cLight@{cLight}}
+\subsubsection[{mpDiffuse}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cLight::mpDiffuse}\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_light_aa9c9538d45ce0ba6bb0c36b257c609e9}
+
+
+Definition at line 15 of file WTcLight.h.
+
+\hypertarget{classc_light_adb4d7d2b2d8d5e832bee031e70a87fd6}{
+\index{cLight@{cLight}!mpLightHandler@{mpLightHandler}}
+\index{mpLightHandler@{mpLightHandler}!cLight@{cLight}}
+\subsubsection[{mpLightHandler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cLightHandler} $\ast$ {\bf cLight::mpLightHandler} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classc_light_adb4d7d2b2d8d5e832bee031e70a87fd6}
+
+
+Definition at line 24 of file WTcLight.h.
+
+\hypertarget{classc_light_a6e718feeaad0a71e8654f85142bae362}{
+\index{cLight@{cLight}!mpNode@{mpNode}}
+\index{mpNode@{mpNode}!cLight@{cLight}}
+\subsubsection[{mpNode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cMinLN}$<${\bf vLight}$>$$\ast$ {\bf cLight::mpNode}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_light_a6e718feeaad0a71e8654f85142bae362}
+
+
+Definition at line 25 of file WTcLight.h.
+
+\hypertarget{classc_light_a5f4f6e1a73a23d7c7d7402316cf91459}{
+\index{cLight@{cLight}!mpPosition@{mpPosition}}
+\index{mpPosition@{mpPosition}!cLight@{cLight}}
+\subsubsection[{mpPosition}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cLight::mpPosition}\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_light_a5f4f6e1a73a23d7c7d7402316cf91459}
+
+
+Definition at line 11 of file WTcLight.h.
+
+\hypertarget{classc_light_aceff329257be92835c2962e77ad2d3dc}{
+\index{cLight@{cLight}!mpSpecular@{mpSpecular}}
+\index{mpSpecular@{mpSpecular}!cLight@{cLight}}
+\subsubsection[{mpSpecular}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cLight::mpSpecular}\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_light_aceff329257be92835c2962e77ad2d3dc}
+
+
+Definition at line 17 of file WTcLight.h.
+

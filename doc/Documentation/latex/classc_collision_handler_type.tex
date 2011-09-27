@@ -1,0 +1,439 @@
+\hypertarget{classc_collision_handler_type}{
+\section{cCollisionHandlerType Class Reference}
+\label{classc_collision_handler_type}\index{cCollisionHandlerType@{cCollisionHandlerType}}
+}
+
+
+Inheritance diagram for cCollisionHandlerType:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classc_collision_handler_type__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cCollisionHandlerType:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_collision_handler_type__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classc_collision_list}{cCollisionList} $\ast$ \hyperlink{classc_collision_handler_type_aaab07676063aa5b0773a1c908b202d53}{GenerateCollisionList} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpObj, uint32 lpType=0)
+\begin{DoxyCompactList}\small\item\em This will Actually search the Collision Lists and create a mpCollisionList with all the detected collisions with objects of type lpType. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_collision_handler_type_a3d3300c41d38fa8a14c08dd0b94b6c41}{ResetCursors} ()
+\begin{DoxyCompactList}\small\item\em This will reset both the cursors used to track position through the collision object lists. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classc_collision_handler_type_a7da274bc57e20b2c93da79934072d26d}{$\sim$cCollisionHandlerType} ()
+\begin{DoxyCompactList}\small\item\em This will deconstruct the class. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_collision_handler_type_a90fce7fe5fee0c544b0d19f9077fc402}{cCollisionHandlerType} ()
+\begin{DoxyCompactList}\small\item\em Private Constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classc_collision_object}{cCollisionObject} $>$ $\ast$ \hyperlink{classc_collision_handler_type_ae2229ae307688f4a8f6ea7d41621e1e6}{Add} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpTemp)
+\begin{DoxyCompactList}\small\item\em This will add the \hyperlink{classc_collision_object}{cCollisionObject} pointed to by lpObject to the list mpList. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_collision_handler_type_a7c1606ae3858a38d90e8db5e4080adda}{Remove} (\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classc_collision_object}{cCollisionObject} $>$ $\ast$lpOld)
+\begin{DoxyCompactList}\small\item\em This will turn off Collisions for the \hyperlink{classc_linked_node}{cLinkedNode} lpOld. This should in turn call \hyperlink{classc_collision_handler_type_ae1fae66c56488c1a7920d2394e127f2e}{RemoveFromList()}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_collision_handler_type_ae1fae66c56488c1a7920d2394e127f2e}{RemoveFromList} (\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classc_collision_object}{cCollisionObject} $>$ $\ast$lpOld)
+\begin{DoxyCompactList}\small\item\em This will acutally remove the clinkedNode from the relevant list. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_collision_handler_type_ace66f4067d9117ce379eb84d3afd2fa7}{NextListItem} ()
+\begin{DoxyCompactList}\small\item\em This will return the Next item in the lists in order. (The item is pointed to by mpColCur). If an item is found will return true, else will return false. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classc_collision_handler_type_adcf86464b4fd085e86f2c3365f7d3452}{NextListItem} (uint32 lpType)
+\begin{DoxyCompactList}\small\item\em This will return the Next item in the list storing lpType in order. (the item is pointed to by mpColCur).If an item is found will return true, else will return false. \item\end{DoxyCompactList}\item 
+virtual uint32 \hyperlink{classc_collision_handler_type_a6935d209eccb9c605fac6208c61b98b7}{FindSlot} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpObj)
+\begin{DoxyCompactList}\small\item\em This will find the appropriate array slot for the \hyperlink{classc_collision_object}{cCollisionObject} lpObj. It will return the array position of the slot. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classc_collision_handler_type_a56be05fb67ba225b671c6b38e05cc762}{Position} (float $\ast$lpTemp)
+\begin{DoxyCompactList}\small\item\em This will set the current Position of the Spatial Array. \item\end{DoxyCompactList}\item 
+virtual float $\ast$ \hyperlink{classc_collision_handler_type_a708db7524f542b2e1164fc4e7e8ab3dd}{Position} ()
+\begin{DoxyCompactList}\small\item\em This will return the current Position of the Spatial Array. \item\end{DoxyCompactList}\item 
+virtual uint32 \hyperlink{classc_collision_handler_type_aef03e4dfc78ee53e0ebee35456412352}{FindSlot} (float $\ast$lpPos)
+\begin{DoxyCompactList}\small\item\em This will Find the Spatial Slot for the position lpPos. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classc_linked_list}{cLinkedList}$<$ \hyperlink{classc_collision_object}{cCollisionObject} $>$ $\ast$ \hyperlink{classc_collision_handler_type_ab9b89db564fb5a2b4881499012443a72}{FindSlot} (uint32 $\ast$lpPos)
+\begin{DoxyCompactList}\small\item\em This will return the list for the spatial slot lpPos\mbox{[}0\mbox{]},lpPos\mbox{[}1\mbox{]},lpPos\mbox{[}2\mbox{]}. (Array slots not spatial co-\/ordinates). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32 \hyperlink{classc_collision_handler_type_a56edc1dc263cc86212aa18a0a9334162}{miCurPos}
+\begin{DoxyCompactList}\small\item\em This is the current cursor position in the array mpList. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classc_collision_object}{cCollisionObject} $>$ $\ast$ \hyperlink{classc_collision_handler_type_a1c766c06d73857bacdbf00c6eadb7836}{mpColCur}
+\begin{DoxyCompactList}\small\item\em This is the current cursor position (the current \hyperlink{classc_linked_node}{cLinkedNode}) in the List mpList\mbox{[}miTypeCur\mbox{]}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classc_collision_handler_type_a2dee8095fea5c5aa41fe4060393f31ad}{cCollisionHandler}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 87 of file WTcCollisionHandler.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_collision_handler_type_a90fce7fe5fee0c544b0d19f9077fc402}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!cCollisionHandlerType@{cCollisionHandlerType}}
+\index{cCollisionHandlerType@{cCollisionHandlerType}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{cCollisionHandlerType}]{\setlength{\rightskip}{0pt plus 5cm}cCollisionHandlerType::cCollisionHandlerType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_collision_handler_type_a90fce7fe5fee0c544b0d19f9077fc402}
+
+
+Private Constructor. 
+
+
+
+Definition at line 130 of file WTcCollisionHandler.cpp.
+
+\hypertarget{classc_collision_handler_type_a7da274bc57e20b2c93da79934072d26d}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!$\sim$cCollisionHandlerType@{$\sim$cCollisionHandlerType}}
+\index{$\sim$cCollisionHandlerType@{$\sim$cCollisionHandlerType}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{$\sim$cCollisionHandlerType}]{\setlength{\rightskip}{0pt plus 5cm}cCollisionHandlerType::$\sim$cCollisionHandlerType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_collision_handler_type_a7da274bc57e20b2c93da79934072d26d}
+
+
+This will deconstruct the class. 
+
+
+
+Definition at line 68 of file WTcCollisionHandler.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_collision_handler_type_ae2229ae307688f4a8f6ea7d41621e1e6}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!Add@{Add}}
+\index{Add@{Add}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cLinkedNode}$<$ {\bf cCollisionObject} $>$ $\ast$ cCollisionHandlerType::Add (
+\begin{DoxyParamCaption}
+\item[{{\bf cCollisionObject} $\ast$}]{lpTemp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classc_collision_handler_type_ae2229ae307688f4a8f6ea7d41621e1e6}
+
+
+This will add the \hyperlink{classc_collision_object}{cCollisionObject} pointed to by lpObject to the list mpList. 
+
+
+
+Implements \hyperlink{classc_collision_handler_ae966359105ed5e144f62e36dd85d1f03}{cCollisionHandler}.
+
+
+
+Definition at line 121 of file WTcCollisionHandler.cpp.
+
+\hypertarget{classc_collision_handler_type_aef03e4dfc78ee53e0ebee35456412352}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!FindSlot@{FindSlot}}
+\index{FindSlot@{FindSlot}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{FindSlot}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32 cCollisionHandlerType::FindSlot (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lpPos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classc_collision_handler_type_aef03e4dfc78ee53e0ebee35456412352}
+
+
+This will Find the Spatial Slot for the position lpPos. 
+
+
+
+Reimplemented from \hyperlink{classc_collision_handler_ae5b521293de0e9e2779a857753dbab6f}{cCollisionHandler}.
+
+
+
+Reimplemented in \hyperlink{classc_collision_handler_b_s_p_a6aa114aa26cbac205816bf1338e04d82}{cCollisionHandlerBSP}.
+
+
+
+Definition at line 124 of file WTcCollisionHandler.h.
+
+\hypertarget{classc_collision_handler_type_ab9b89db564fb5a2b4881499012443a72}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!FindSlot@{FindSlot}}
+\index{FindSlot@{FindSlot}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{FindSlot}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf cLinkedList}$<${\bf cCollisionObject}$>$$\ast$ cCollisionHandlerType::FindSlot (
+\begin{DoxyParamCaption}
+\item[{uint32 $\ast$}]{lpPos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classc_collision_handler_type_ab9b89db564fb5a2b4881499012443a72}
+
+
+This will return the list for the spatial slot lpPos\mbox{[}0\mbox{]},lpPos\mbox{[}1\mbox{]},lpPos\mbox{[}2\mbox{]}. (Array slots not spatial co-\/ordinates). 
+
+
+
+Reimplemented from \hyperlink{classc_collision_handler_aa6f7ca9d10b078ba11fcc3c0d266ab8e}{cCollisionHandler}.
+
+
+
+Reimplemented in \hyperlink{classc_collision_handler_b_s_p_a08fa8650b8200a442b68c123220d7c40}{cCollisionHandlerBSP}.
+
+
+
+Definition at line 126 of file WTcCollisionHandler.h.
+
+\hypertarget{classc_collision_handler_type_a6935d209eccb9c605fac6208c61b98b7}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!FindSlot@{FindSlot}}
+\index{FindSlot@{FindSlot}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{FindSlot}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cCollisionHandlerType::FindSlot (
+\begin{DoxyParamCaption}
+\item[{{\bf cCollisionObject} $\ast$}]{lpObj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classc_collision_handler_type_a6935d209eccb9c605fac6208c61b98b7}
+
+
+This will find the appropriate array slot for the \hyperlink{classc_collision_object}{cCollisionObject} lpObj. It will return the array position of the slot. 
+
+
+
+Reimplemented from \hyperlink{classc_collision_handler_ad2b079e234f956301fe83f5a5938cad0}{cCollisionHandler}.
+
+
+
+Reimplemented in \hyperlink{classc_collision_handler_b_s_p_a9dfe5f431663f6e73fe9bac7f5225b6b}{cCollisionHandlerBSP}.
+
+
+
+Definition at line 15 of file WTcCollisionHandler.cpp.
+
+\hypertarget{classc_collision_handler_type_aaab07676063aa5b0773a1c908b202d53}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!GenerateCollisionList@{GenerateCollisionList}}
+\index{GenerateCollisionList@{GenerateCollisionList}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{GenerateCollisionList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCollisionList} $\ast$ cCollisionHandlerType::GenerateCollisionList (
+\begin{DoxyParamCaption}
+\item[{{\bf cCollisionObject} $\ast$}]{lpObj, }
+\item[{uint32}]{lpType = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_collision_handler_type_aaab07676063aa5b0773a1c908b202d53}
+
+
+This will Actually search the Collision Lists and create a mpCollisionList with all the detected collisions with objects of type lpType. 
+
+
+
+Implements \hyperlink{classc_collision_handler_aa52da10a253a2497db9b197c3f0c760d}{cCollisionHandler}.
+
+
+
+Reimplemented in \hyperlink{classc_collision_handler_b_s_p_a3eefab2420c94920816fc63932140b5f}{cCollisionHandlerBSP}.
+
+
+
+Definition at line 34 of file WTcCollisionHandler.cpp.
+
+\hypertarget{classc_collision_handler_type_ace66f4067d9117ce379eb84d3afd2fa7}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!NextListItem@{NextListItem}}
+\index{NextListItem@{NextListItem}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{NextListItem}]{\setlength{\rightskip}{0pt plus 5cm}bool cCollisionHandlerType::NextListItem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classc_collision_handler_type_ace66f4067d9117ce379eb84d3afd2fa7}
+
+
+This will return the Next item in the lists in order. (The item is pointed to by mpColCur). If an item is found will return true, else will return false. 
+
+
+
+Reimplemented from \hyperlink{classc_collision_handler_a906305fe520cefc195f3948458aba941}{cCollisionHandler}.
+
+
+
+Definition at line 90 of file WTcCollisionHandler.cpp.
+
+\hypertarget{classc_collision_handler_type_adcf86464b4fd085e86f2c3365f7d3452}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!NextListItem@{NextListItem}}
+\index{NextListItem@{NextListItem}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{NextListItem}]{\setlength{\rightskip}{0pt plus 5cm}bool cCollisionHandlerType::NextListItem (
+\begin{DoxyParamCaption}
+\item[{uint32}]{lpType}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classc_collision_handler_type_adcf86464b4fd085e86f2c3365f7d3452}
+
+
+This will return the Next item in the list storing lpType in order. (the item is pointed to by mpColCur).If an item is found will return true, else will return false. 
+
+
+
+Reimplemented from \hyperlink{classc_collision_handler_a58b636db8343b7f4bbb27f3a93799e8b}{cCollisionHandler}.
+
+
+
+Definition at line 104 of file WTcCollisionHandler.cpp.
+
+\hypertarget{classc_collision_handler_type_a708db7524f542b2e1164fc4e7e8ab3dd}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!Position@{Position}}
+\index{Position@{Position}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}virtual float$\ast$ cCollisionHandlerType::Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classc_collision_handler_type_a708db7524f542b2e1164fc4e7e8ab3dd}
+
+
+This will return the current Position of the Spatial Array. 
+
+
+
+Reimplemented from \hyperlink{classc_collision_handler_af02385e0c91e4c73c521e65477efed2c}{cCollisionHandler}.
+
+
+
+Reimplemented in \hyperlink{classc_collision_handler_b_s_p_a44158a68c715d0f4cd82e4f281554bfd}{cCollisionHandlerBSP}.
+
+
+
+Definition at line 121 of file WTcCollisionHandler.h.
+
+\hypertarget{classc_collision_handler_type_a56be05fb67ba225b671c6b38e05cc762}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!Position@{Position}}
+\index{Position@{Position}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cCollisionHandlerType::Position (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{lpTemp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classc_collision_handler_type_a56be05fb67ba225b671c6b38e05cc762}
+
+
+This will set the current Position of the Spatial Array. 
+
+
+
+Reimplemented from \hyperlink{classc_collision_handler_aae512b7a5c7abb7307e7d25f22aa9fd0}{cCollisionHandler}.
+
+
+
+Reimplemented in \hyperlink{classc_collision_handler_b_s_p_a8fb831211d5d23d6a0ce1e77c1a011bf}{cCollisionHandlerBSP}.
+
+
+
+Definition at line 119 of file WTcCollisionHandler.h.
+
+\hypertarget{classc_collision_handler_type_a7c1606ae3858a38d90e8db5e4080adda}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!Remove@{Remove}}
+\index{Remove@{Remove}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void cCollisionHandlerType::Remove (
+\begin{DoxyParamCaption}
+\item[{{\bf cLinkedNode}$<$ {\bf cCollisionObject} $>$ $\ast$}]{lpOld}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classc_collision_handler_type_a7c1606ae3858a38d90e8db5e4080adda}
+
+
+This will turn off Collisions for the \hyperlink{classc_linked_node}{cLinkedNode} lpOld. This should in turn call \hyperlink{classc_collision_handler_type_ae1fae66c56488c1a7920d2394e127f2e}{RemoveFromList()}. 
+
+
+
+Reimplemented from \hyperlink{classc_collision_handler_aec2e30bb6be227d30daef0b6eb36d3b3}{cCollisionHandler}.
+
+
+
+Definition at line 151 of file WTcCollisionHandler.cpp.
+
+\hypertarget{classc_collision_handler_type_ae1fae66c56488c1a7920d2394e127f2e}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!RemoveFromList@{RemoveFromList}}
+\index{RemoveFromList@{RemoveFromList}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{RemoveFromList}]{\setlength{\rightskip}{0pt plus 5cm}void cCollisionHandlerType::RemoveFromList (
+\begin{DoxyParamCaption}
+\item[{{\bf cLinkedNode}$<$ {\bf cCollisionObject} $>$ $\ast$}]{lpOld}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classc_collision_handler_type_ae1fae66c56488c1a7920d2394e127f2e}
+
+
+This will acutally remove the clinkedNode from the relevant list. 
+
+
+
+Reimplemented from \hyperlink{classc_collision_handler_ad2d0933b78c692a5d2b3885242fa0911}{cCollisionHandler}.
+
+
+
+Definition at line 114 of file WTcCollisionHandler.cpp.
+
+\hypertarget{classc_collision_handler_type_a3d3300c41d38fa8a14c08dd0b94b6c41}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!ResetCursors@{ResetCursors}}
+\index{ResetCursors@{ResetCursors}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{ResetCursors}]{\setlength{\rightskip}{0pt plus 5cm}void cCollisionHandlerType::ResetCursors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_collision_handler_type_a3d3300c41d38fa8a14c08dd0b94b6c41}
+
+
+This will reset both the cursors used to track position through the collision object lists. 
+
+
+
+Implements \hyperlink{classc_collision_handler_a4fe00bffd2defe0a71a17c5fadd3b890}{cCollisionHandler}.
+
+
+
+Definition at line 145 of file WTcCollisionHandler.cpp.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classc_collision_handler_type_a2dee8095fea5c5aa41fe4060393f31ad}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!cCollisionHandler@{cCollisionHandler}}
+\index{cCollisionHandler@{cCollisionHandler}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{cCollisionHandler}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf cCollisionHandler}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classc_collision_handler_type_a2dee8095fea5c5aa41fe4060393f31ad}
+
+
+Reimplemented in \hyperlink{classc_collision_handler_b_s_p_a2dee8095fea5c5aa41fe4060393f31ad}{cCollisionHandlerBSP}.
+
+
+
+Definition at line 140 of file WTcCollisionHandler.h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_collision_handler_type_a56edc1dc263cc86212aa18a0a9334162}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!miCurPos@{miCurPos}}
+\index{miCurPos@{miCurPos}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{miCurPos}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cCollisionHandlerType::miCurPos}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_collision_handler_type_a56edc1dc263cc86212aa18a0a9334162}
+
+
+This is the current cursor position in the array mpList. 
+
+
+
+Definition at line 94 of file WTcCollisionHandler.h.
+
+\hypertarget{classc_collision_handler_type_a1c766c06d73857bacdbf00c6eadb7836}{
+\index{cCollisionHandlerType@{cCollisionHandlerType}!mpColCur@{mpColCur}}
+\index{mpColCur@{mpColCur}!cCollisionHandlerType@{cCollisionHandlerType}}
+\subsubsection[{mpColCur}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cLinkedNode}$<${\bf cCollisionObject}$>$$\ast$ {\bf cCollisionHandlerType::mpColCur}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_collision_handler_type_a1c766c06d73857bacdbf00c6eadb7836}
+
+
+This is the current cursor position (the current \hyperlink{classc_linked_node}{cLinkedNode}) in the List mpList\mbox{[}miTypeCur\mbox{]}. 
+
+
+
+Definition at line 96 of file WTcCollisionHandler.h.
+

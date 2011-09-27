@@ -1,0 +1,134 @@
+\hypertarget{classc_face}{
+\section{cFace Class Reference}
+\label{classc_face}\index{cFace@{cFace}}
+}
+
+
+This class will store data about faces for a 3D Mesh. This can be used for Models, Collision Meshes or any other object using 3D Faces. Includes code for loading and saving the object types to and from IMF Files. Uses \hyperlink{classc_vertex}{cVertex} and \hyperlink{classc_plane}{cPlane} to store the data.  
+
+
+
+
+Inheritance diagram for cFace:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classc_face__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cFace:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classc_face__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_face}{cFace} \& \hyperlink{classc_face_aff51f522716a340fe0f0b3c55ab68bff}{operator=} (\hyperlink{classc_face}{cFace} \&lpOther)
+\item 
+uint32 \hyperlink{classc_face_ac2da0ca5e4269e12016b74c6443cde32}{FileSize} ()
+\item 
+void \hyperlink{classc_face_a1b1ff8e5ec5f30b1140e7f1e71086ed5}{OutputIMFFace} (ofstream \&FileStream)
+\item 
+void \hyperlink{classc_face_a8a39f8e4a8bf051dc67c7f55a88d636b}{LoadIMFFace} (ifstream \&FileStream)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_vertex}{cVertex} \hyperlink{classc_face_ae08ccc2952b022dce6848628649d61c8}{Verteces} \mbox{[}3\mbox{]}
+\item 
+\hyperlink{classc_plane}{cPlane} \hyperlink{classc_face_aa61d6dca6df8211a1a816edbf303bd27}{Plane}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will store data about faces for a 3D Mesh. This can be used for Models, Collision Meshes or any other object using 3D Faces. Includes code for loading and saving the object types to and from IMF Files. Uses \hyperlink{classc_vertex}{cVertex} and \hyperlink{classc_plane}{cPlane} to store the data. 
+
+Definition at line 7 of file WTcFace.h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_face_ac2da0ca5e4269e12016b74c6443cde32}{
+\index{cFace@{cFace}!FileSize@{FileSize}}
+\index{FileSize@{FileSize}!cFace@{cFace}}
+\subsubsection[{FileSize}]{\setlength{\rightskip}{0pt plus 5cm}uint32 cFace::FileSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_face_ac2da0ca5e4269e12016b74c6443cde32}
+
+
+Reimplemented in \hyperlink{classc_full_face_data_a53a99ced9de4ecdede38b2e8d63458e9}{cFullFaceData}.
+
+
+
+Definition at line 12 of file WTcFace.cpp.
+
+\hypertarget{classc_face_a8a39f8e4a8bf051dc67c7f55a88d636b}{
+\index{cFace@{cFace}!LoadIMFFace@{LoadIMFFace}}
+\index{LoadIMFFace@{LoadIMFFace}!cFace@{cFace}}
+\subsubsection[{LoadIMFFace}]{\setlength{\rightskip}{0pt plus 5cm}void cFace::LoadIMFFace (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_face_a8a39f8e4a8bf051dc67c7f55a88d636b}
+
+
+Definition at line 33 of file WTcFace.cpp.
+
+\hypertarget{classc_face_aff51f522716a340fe0f0b3c55ab68bff}{
+\index{cFace@{cFace}!operator=@{operator=}}
+\index{operator=@{operator=}!cFace@{cFace}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cFace} \& cFace::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf cFace} \&}]{lpOther}
+\end{DoxyParamCaption}
+)}}
+\label{classc_face_aff51f522716a340fe0f0b3c55ab68bff}
+
+
+Definition at line 3 of file WTcFace.cpp.
+
+\hypertarget{classc_face_a1b1ff8e5ec5f30b1140e7f1e71086ed5}{
+\index{cFace@{cFace}!OutputIMFFace@{OutputIMFFace}}
+\index{OutputIMFFace@{OutputIMFFace}!cFace@{cFace}}
+\subsubsection[{OutputIMFFace}]{\setlength{\rightskip}{0pt plus 5cm}void cFace::OutputIMFFace (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{FileStream}
+\end{DoxyParamCaption}
+)}}
+\label{classc_face_a1b1ff8e5ec5f30b1140e7f1e71086ed5}
+
+
+Definition at line 24 of file WTcFace.cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_face_aa61d6dca6df8211a1a816edbf303bd27}{
+\index{cFace@{cFace}!Plane@{Plane}}
+\index{Plane@{Plane}!cFace@{cFace}}
+\subsubsection[{Plane}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cPlane} {\bf cFace::Plane}}}
+\label{classc_face_aa61d6dca6df8211a1a816edbf303bd27}
+
+
+Definition at line 12 of file WTcFace.h.
+
+\hypertarget{classc_face_ae08ccc2952b022dce6848628649d61c8}{
+\index{cFace@{cFace}!Verteces@{Verteces}}
+\index{Verteces@{Verteces}!cFace@{cFace}}
+\subsubsection[{Verteces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cVertex} {\bf cFace::Verteces}\mbox{[}3\mbox{]}}}
+\label{classc_face_ae08ccc2952b022dce6848628649d61c8}
+
+
+Definition at line 11 of file WTcFace.h.
+

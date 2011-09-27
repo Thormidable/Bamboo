@@ -1,0 +1,253 @@
+\hypertarget{classc_image}{
+\section{cImage Class Reference}
+\label{classc_image}\index{cImage@{cImage}}
+}
+
+
+A 2D renderable object.  
+
+
+
+
+Inheritance diagram for cImage:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classc_image__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cImage:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_image__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_image_a81e879417b1ad5d26ea87473e24661f0}{cImage} (\hyperlink{classv_texture}{vTexture} $\ast$lpTexture)
+\begin{DoxyCompactList}\small\item\em Will construct a new \hyperlink{classc_image}{cImage} class, and set the \hyperlink{classv_texture}{vTexture} it will use. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_image_a7acf286a86645d8acb39a7b02b06ac0a}{cImage} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classc_image}{cImage}. Will Create an Empty \hyperlink{classc_image}{cImage} Object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_image_a8ac629e963781df72f6f478c119dc491}{SetUp} ()
+\item 
+\hyperlink{classc_image_a9468d68a070861ee06cad9db7121e343}{$\sim$cImage} ()
+\item 
+void \hyperlink{classc_image_a69d2d35f01ef19317cee9f8b8abd57f3}{Texture} (\hyperlink{classv_texture}{vTexture} $\ast$lpObject)
+\begin{DoxyCompactList}\small\item\em Will set the current \hyperlink{classv_texture}{vTexture} this object will use. \item\end{DoxyCompactList}\item 
+unsigned int \hyperlink{classc_image_abc6c49a11e077d8c945cb8b7d814db77}{TextureNumber} ()
+\begin{DoxyCompactList}\small\item\em This returns the Texture ID of the texture this object will use. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_image_a49202e61cb4fd9ada4d69d0aa6bad601}{RenderPainter} (uint8 liLevel)
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphism. see cCamera::RenderPainter(); \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_image_a7eb7b4c9c12656243d962b74ca75344d}{RenderToPainter} ()
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphism. see cCamera::RenderToPainter(); \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_image_a05974b0f9253b8416eeea756f95460ce}{Render} ()
+\begin{DoxyCompactList}\small\item\em virtual function to allow polymorphiss. see \hyperlink{classc_camera_acfe96d0953540fa3938e4d415d7cb791}{cCamera::Render()}; \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_image_aaf3a8b071876384ae0af9f108b8c45d4}{Size} (float lfSize)
+\begin{DoxyCompactList}\small\item\em Sets the size of the image on screen. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A 2D renderable object. 
+\begin{DoxyParams}{Parameters}
+{\em lpTexture} & pointer to the texture to bind to this 2D object This is actually a 3D polygon, which has a texture bound to it. it can be used as an OpenGL accelerated sprite. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file WTcImage.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_image_a81e879417b1ad5d26ea87473e24661f0}{
+\index{cImage@{cImage}!cImage@{cImage}}
+\index{cImage@{cImage}!cImage@{cImage}}
+\subsubsection[{cImage}]{\setlength{\rightskip}{0pt plus 5cm}cImage::cImage (
+\begin{DoxyParamCaption}
+\item[{{\bf vTexture} $\ast$}]{lpTexture}
+\end{DoxyParamCaption}
+)}}
+\label{classc_image_a81e879417b1ad5d26ea87473e24661f0}
+
+
+Will construct a new \hyperlink{classc_image}{cImage} class, and set the \hyperlink{classv_texture}{vTexture} it will use. 
+
+Constructor for \hyperlink{classc_image}{cImage}. 
+\begin{DoxyParams}{Parameters}
+{\em lpTexture} & the \hyperlink{classv_texture}{vTexture} that this object will use. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file WTcImage.cpp.
+
+\hypertarget{classc_image_a7acf286a86645d8acb39a7b02b06ac0a}{
+\index{cImage@{cImage}!cImage@{cImage}}
+\index{cImage@{cImage}!cImage@{cImage}}
+\subsubsection[{cImage}]{\setlength{\rightskip}{0pt plus 5cm}cImage::cImage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_image_a7acf286a86645d8acb39a7b02b06ac0a}
+
+
+Constructor for \hyperlink{classc_image}{cImage}. Will Create an Empty \hyperlink{classc_image}{cImage} Object. 
+
+
+
+Definition at line 19 of file WTcImage.cpp.
+
+\hypertarget{classc_image_a9468d68a070861ee06cad9db7121e343}{
+\index{cImage@{cImage}!$\sim$cImage@{$\sim$cImage}}
+\index{$\sim$cImage@{$\sim$cImage}!cImage@{cImage}}
+\subsubsection[{$\sim$cImage}]{\setlength{\rightskip}{0pt plus 5cm}cImage::$\sim$cImage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_image_a9468d68a070861ee06cad9db7121e343}
+
+
+Definition at line 11 of file WTcImage.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_image_a05974b0f9253b8416eeea756f95460ce}{
+\index{cImage@{cImage}!Render@{Render}}
+\index{Render@{Render}!cImage@{cImage}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void cImage::Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_image_a05974b0f9253b8416eeea756f95460ce}
+
+
+virtual function to allow polymorphiss. see \hyperlink{classc_camera_acfe96d0953540fa3938e4d415d7cb791}{cCamera::Render()}; 
+
+
+
+Implements \hyperlink{classc_render_object_ab0db1b7db1a1d4210511d9d95634fcce}{cRenderObject}.
+
+
+
+Definition at line 65 of file WTcImage.cpp.
+
+\hypertarget{classc_image_a49202e61cb4fd9ada4d69d0aa6bad601}{
+\index{cImage@{cImage}!RenderPainter@{RenderPainter}}
+\index{RenderPainter@{RenderPainter}!cImage@{cImage}}
+\subsubsection[{RenderPainter}]{\setlength{\rightskip}{0pt plus 5cm}void cImage::RenderPainter (
+\begin{DoxyParamCaption}
+\item[{uint8}]{liLevel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_image_a49202e61cb4fd9ada4d69d0aa6bad601}
+
+
+virtual function to allow polymorphism. see cCamera::RenderPainter(); 
+
+
+
+Implements \hyperlink{classc_render_object_a16beccc30dfea79c3988508c1420d54b}{cRenderObject}.
+
+
+
+Definition at line 50 of file WTcImage.cpp.
+
+\hypertarget{classc_image_a7eb7b4c9c12656243d962b74ca75344d}{
+\index{cImage@{cImage}!RenderToPainter@{RenderToPainter}}
+\index{RenderToPainter@{RenderToPainter}!cImage@{cImage}}
+\subsubsection[{RenderToPainter}]{\setlength{\rightskip}{0pt plus 5cm}void cImage::RenderToPainter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_image_a7eb7b4c9c12656243d962b74ca75344d}
+
+
+virtual function to allow polymorphism. see cCamera::RenderToPainter(); 
+
+
+
+Implements \hyperlink{classc_render_object_a130139cc8e1f5219ddabc6192f98afa8}{cRenderObject}.
+
+
+
+Definition at line 32 of file WTcImage.cpp.
+
+\hypertarget{classc_image_a8ac629e963781df72f6f478c119dc491}{
+\index{cImage@{cImage}!SetUp@{SetUp}}
+\index{SetUp@{SetUp}!cImage@{cImage}}
+\subsubsection[{SetUp}]{\setlength{\rightskip}{0pt plus 5cm}void cImage::SetUp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_image_a8ac629e963781df72f6f478c119dc491}
+
+
+Definition at line 25 of file WTcImage.cpp.
+
+\hypertarget{classc_image_aaf3a8b071876384ae0af9f108b8c45d4}{
+\index{cImage@{cImage}!Size@{Size}}
+\index{Size@{Size}!cImage@{cImage}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}void cImage::Size (
+\begin{DoxyParamCaption}
+\item[{float}]{lfSize}
+\end{DoxyParamCaption}
+)}}
+\label{classc_image_aaf3a8b071876384ae0af9f108b8c45d4}
+
+
+Sets the size of the image on screen. 
+
+
+
+Definition at line 124 of file WTcImage.cpp.
+
+\hypertarget{classc_image_a69d2d35f01ef19317cee9f8b8abd57f3}{
+\index{cImage@{cImage}!Texture@{Texture}}
+\index{Texture@{Texture}!cImage@{cImage}}
+\subsubsection[{Texture}]{\setlength{\rightskip}{0pt plus 5cm}void cImage::Texture (
+\begin{DoxyParamCaption}
+\item[{{\bf vTexture} $\ast$}]{lpObject}
+\end{DoxyParamCaption}
+)}}
+\label{classc_image_a69d2d35f01ef19317cee9f8b8abd57f3}
+
+
+Will set the current \hyperlink{classv_texture}{vTexture} this object will use. 
+
+
+
+Definition at line 82 of file WTcImage.cpp.
+
+\hypertarget{classc_image_abc6c49a11e077d8c945cb8b7d814db77}{
+\index{cImage@{cImage}!TextureNumber@{TextureNumber}}
+\index{TextureNumber@{TextureNumber}!cImage@{cImage}}
+\subsubsection[{TextureNumber}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int cImage::TextureNumber (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_image_abc6c49a11e077d8c945cb8b7d814db77}
+
+
+This returns the Texture ID of the texture this object will use. 
+
+
+
+Reimplemented from \hyperlink{classc_render_object_ad2c6096f2e9d99e19d1ca89814567f6e}{cRenderObject}.
+
+
+
+Definition at line 118 of file WTcImage.cpp.
+

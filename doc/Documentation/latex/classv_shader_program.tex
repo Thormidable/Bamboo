@@ -1,0 +1,88 @@
+\hypertarget{classv_shader_program}{
+\section{vShaderProgram Class Reference}
+\label{classv_shader_program}\index{vShaderProgram@{vShaderProgram}}
+}
+
+
+This is a virtual class for a Shader Program. A shader program is a series of cShader() objects to be compiled into a single Shader Program.  
+
+
+
+
+Inheritance diagram for vShaderProgram:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classv_shader_program__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classv_shader_program_a27a3610d63fff544ca028d79830d9538}{$\sim$vShaderProgram} ()
+\item 
+virtual void \hyperlink{classv_shader_program_a9772ed9e4d99d064e6bf4cd59207c361}{Use} ()=0
+\begin{DoxyCompactList}\small\item\em This will make the system Use this Shader Program, until another is set or a shader program is turned off. \item\end{DoxyCompactList}\item 
+virtual uint32 \hyperlink{classv_shader_program_a707a85109ebb61f0fc7bb1aa36a0d8bc}{ID} ()=0
+\begin{DoxyCompactList}\small\item\em This will return the Program ID of this Shader Program. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a virtual class for a Shader Program. A shader program is a series of cShader() objects to be compiled into a single Shader Program. 
+
+Definition at line 7 of file WTvShaderProgram.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classv_shader_program_a27a3610d63fff544ca028d79830d9538}{
+\index{vShaderProgram@{vShaderProgram}!$\sim$vShaderProgram@{$\sim$vShaderProgram}}
+\index{$\sim$vShaderProgram@{$\sim$vShaderProgram}!vShaderProgram@{vShaderProgram}}
+\subsubsection[{$\sim$vShaderProgram}]{\setlength{\rightskip}{0pt plus 5cm}vShaderProgram::$\sim$vShaderProgram (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classv_shader_program_a27a3610d63fff544ca028d79830d9538}
+
+
+Definition at line 11 of file WTvShaderProgram.h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classv_shader_program_a707a85109ebb61f0fc7bb1aa36a0d8bc}{
+\index{vShaderProgram@{vShaderProgram}!ID@{ID}}
+\index{ID@{ID}!vShaderProgram@{vShaderProgram}}
+\subsubsection[{ID}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32 vShaderProgram::ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_shader_program_a707a85109ebb61f0fc7bb1aa36a0d8bc}
+
+
+This will return the Program ID of this Shader Program. 
+
+
+
+Implemented in \hyperlink{classc_shader_program_a1affe56cbdde65835335cc1aeb21a851}{cShaderProgram}.
+
+\hypertarget{classv_shader_program_a9772ed9e4d99d064e6bf4cd59207c361}{
+\index{vShaderProgram@{vShaderProgram}!Use@{Use}}
+\index{Use@{Use}!vShaderProgram@{vShaderProgram}}
+\subsubsection[{Use}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vShaderProgram::Use (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classv_shader_program_a9772ed9e4d99d064e6bf4cd59207c361}
+
+
+This will make the system Use this Shader Program, until another is set or a shader program is turned off. 
+
+
+
+Implemented in \hyperlink{classc_shader_program_a875d9dca579f3b2ea1d81b65faf80738}{cShaderProgram}.
+

@@ -1,0 +1,82 @@
+\par
+ cMatrix4.h \par
+ cCameraMatrix.h \par
+ \par
+ Use of the Translation matrix classes by William Thorley. \par
+ \par
+ The \hyperlink{classc_matrix4}{cMatrix4} class and cCameraMatrix classes are very similar. The CameraMatrix maintains an inverted \hyperlink{classc_matrix4}{cMatrix4} matrix as the translations applied to the camera must be inverted to give the same effect as to normal objects. Otherwise the effects are the same for \hyperlink{classc_matrix4}{cMatrix4} and cCameraMatrix. \par
+ Most Render Objects have inherited the \hyperlink{classc_matrix4}{cMatrix4} class meaning that these functions can be called to move and rotate Render Objects. Calling these functions, will apply the defined translations to the current object. Some are relative to the current translation and some are relative to the position of the Render Node controlling this object. Either way, the translations stack. \par
+ \par
+ The X Axis points 90 to the Right perpendicular to the objects facing. \par
+ The Y Axis points 90 Upwards, perpendicular to the objects facing. \par
+ The Z Axis is the objects facing. \par
+ \par
+ These Classes can be used for 2D or 3D Translations. There are different functions for 2D and 3D translations. The standard DivWin Objects automatically identify if they should be 2D or 3D. \par
+ \par
+ 3D Object Translation Functions: \par
+ void Set3D() \par
+ \par
+ float $\ast$Position() \par
+ float X() \par
+ float Y() \par
+ float Z() \par
+ \par
+ float $\ast$XVect() \par
+ float $\ast$YVect() \par
+ float $\ast$ZVect() \par
+ \par
+ void Position(c2DVf $\ast$lpPosition) \par
+ void Position(float lfX,float lfY) \par
+ void Position(c3DVf $\ast$lpPosition) \par
+ void Position(float lfX,float lfY,float lfZ) \par
+ void PositionX(float lfX) \par
+ void PositionY(float lfY) \par
+ void PositionZ(float lfZ) \par
+ \par
+ void AdvanceX(float lfDistance) \par
+ void AdvanceY(float lfDistance) \par
+ void AdvanceZ(float lfDistance) \par
+ void Advance(float lfX,float lfY, float lfZ) \par
+ \par
+ void GAdvanceX(float lfX) \par
+ void GAdvanceY(float lfX) \par
+ void GAdvanceZ(float lfX) \par
+ void GAdvance(float lfX,float lfY,float lfZ) \par
+ \par
+ void LRotate(float lfAngle) \par
+ void LRotateX(float lfAngle) \par
+ void LRotateY(float lfAngle) \par
+ void LRotateZ(float lfAngle) \par
+ \par
+ void GRotateX(float lfAngle) \par
+ void GRotateY(float lfAngle) \par
+ void GRotateZ(float lfAngle) \par
+ \par
+ void GRotateOriginX(float lfAngle) \par
+ void GRotateOriginY(float lfAngle) \par
+ void GRotateOriginZ(float lfAngle) \par
+ \par
+ void GRotateX(float lfAngle,float lfX,float lfY,float lfZ) \par
+ void GRotateY(float lfAngle,float lfX,float lfY,float lfZ) \par
+ void GRotateZ(float lfAngle,float lfX,float lfY,float lfZ) \par
+ \par
+ void Resize(float lfScale) \par
+ void LResizeX(float lfScale) \par
+ void LResizeY(float lfScale) \par
+ void LResizeZ(float lfScale) \par
+ \par
+ void GResizeX(float lfScale) \par
+ void GResizeY(float lfScale) \par
+ void GResizeZ(float lfScale) \par
+ \par
+ 2D Object Translation Functions: \par
+ void Set2D() \par
+ \par
+ void Advance(float lfX,float lfY) \par
+ void GAdvance(float lfX,float lfY) \par
+ \par
+ void Angle(float lfAngle) \par
+ void Rotate(float lfAngle) \par
+ void GRotateOrigin(float lfAngle) \par
+ void GRotate(float lfAngle,float lfX,float lfY) \par
+ 

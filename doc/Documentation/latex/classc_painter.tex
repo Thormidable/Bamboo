@@ -1,0 +1,254 @@
+\hypertarget{classc_painter}{
+\section{cPainter Class Reference}
+\label{classc_painter}\index{cPainter@{cPainter}}
+}
+
+
+Collaboration diagram for cPainter:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_painter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_painter_ac5f4532029629872f3a7285f426fd14b}{$\sim$cPainter} ()
+\item 
+void \hyperlink{classc_painter_a77807cb6f4b05d7425a162a2d69dfd2e}{Add} (\hyperlink{classc_render_pointer}{cRenderPointer} $\ast$lfData)
+\item 
+void \hyperlink{classc_painter_adcf40f909775cd15c58ed34968ce8f3c}{Remove} (\hyperlink{classc_render_pointer}{cRenderPointer} $\ast$lfSlot)
+\item 
+void \hyperlink{classc_painter_a0dd641a9ab21cade6d1c339fe498dbb5}{Reset} ()
+\item 
+void \hyperlink{classc_painter_a0f2252892148f0e76a9c95cf6258de85}{Resize} (uint32 liSize)
+\begin{DoxyCompactList}\small\item\em This will resize the array of \hyperlink{classc_render_pointer}{cRenderPointer} to change the number of cRenderObjects that can be held. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_painter_aa8cf6053e8a310fc843e5e9cd7c95173}{SortByShader} ()
+\begin{DoxyCompactList}\small\item\em This will sort the array mpList based on object shader program. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_painter_a65b3e6e9472009ef951261d1641f3773}{SortByDistance} ()
+\begin{DoxyCompactList}\small\item\em This will sort the array mpList based on object distance from the camera. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_painter_a06f0d0777d5578793ea5cb07aa8b10cc}{SortByTexture} ()
+\begin{DoxyCompactList}\small\item\em This will sort the array mpList based on the texture that each object uses. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_painter_aa94ad2ace4bb757245e20aa6f3983ab4}{SortByAlpha} ()
+\begin{DoxyCompactList}\small\item\em This will sort the array mpList based on the alpha value that each object uses. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_painter_ad88e9a81b90b044e0a93f26cf92efe98}{TextureState} (uint32 mpCurrent, uint32 mpLast)
+\item 
+void \hyperlink{classc_painter_a1d4ecd48a9b508962a340f95c65bd044}{ShaderState} (\hyperlink{classv_shader_program}{vShaderProgram} $\ast$mpCurrent, \hyperlink{classv_shader_program}{vShaderProgram} $\ast$mpLast)
+\item 
+void \hyperlink{classc_painter_a38adbfdd43c6951d86592f539f2dc034}{Render} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classc_painter}{cPainter} $\ast$ \hyperlink{classc_painter_a0ad633317beac0e412434548ccbe8995}{Instance} ()
+\begin{DoxyCompactList}\small\item\em This will return the current instance of the \hyperlink{classc_painter}{cPainter} algorithm, if there is no current instance a new one will be created. This should always be used and NOT cPainter();. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+When WT\_\-USE\_\-PAINTER\_\-ALGORITHM is set to true. cRenderObjects will render to this class instead of screen. Once all the cRenderObjects have been rendered into this class it will use an optimised Radix sort to sort them to create an efficient rendering order. 
+
+Definition at line 11 of file WTcPainter.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_painter_ac5f4532029629872f3a7285f426fd14b}{
+\index{cPainter@{cPainter}!$\sim$cPainter@{$\sim$cPainter}}
+\index{$\sim$cPainter@{$\sim$cPainter}!cPainter@{cPainter}}
+\subsubsection[{$\sim$cPainter}]{\setlength{\rightskip}{0pt plus 5cm}cPainter::$\sim$cPainter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_painter_ac5f4532029629872f3a7285f426fd14b}
+
+
+Definition at line 28 of file WTcPainter.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_painter_a77807cb6f4b05d7425a162a2d69dfd2e}{
+\index{cPainter@{cPainter}!Add@{Add}}
+\index{Add@{Add}!cPainter@{cPainter}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void cPainter::Add (
+\begin{DoxyParamCaption}
+\item[{{\bf cRenderPointer} $\ast$}]{lfData}
+\end{DoxyParamCaption}
+)}}
+\label{classc_painter_a77807cb6f4b05d7425a162a2d69dfd2e}
+
+
+Definition at line 52 of file WTcPainter.cpp.
+
+\hypertarget{classc_painter_a0ad633317beac0e412434548ccbe8995}{
+\index{cPainter@{cPainter}!Instance@{Instance}}
+\index{Instance@{Instance}!cPainter@{cPainter}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cPainter} $\ast$ cPainter::Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classc_painter_a0ad633317beac0e412434548ccbe8995}
+
+
+This will return the current instance of the \hyperlink{classc_painter}{cPainter} algorithm, if there is no current instance a new one will be created. This should always be used and NOT cPainter();. 
+
+
+
+Definition at line 7 of file WTcPainter.cpp.
+
+\hypertarget{classc_painter_adcf40f909775cd15c58ed34968ce8f3c}{
+\index{cPainter@{cPainter}!Remove@{Remove}}
+\index{Remove@{Remove}!cPainter@{cPainter}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void cPainter::Remove (
+\begin{DoxyParamCaption}
+\item[{{\bf cRenderPointer} $\ast$}]{lfSlot}
+\end{DoxyParamCaption}
+)}}
+\label{classc_painter_adcf40f909775cd15c58ed34968ce8f3c}
+
+
+Definition at line 275 of file WTcPainter.cpp.
+
+\hypertarget{classc_painter_a38adbfdd43c6951d86592f539f2dc034}{
+\index{cPainter@{cPainter}!Render@{Render}}
+\index{Render@{Render}!cPainter@{cPainter}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void cPainter::Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_painter_a38adbfdd43c6951d86592f539f2dc034}
+
+
+Definition at line 234 of file WTcPainter.cpp.
+
+\hypertarget{classc_painter_a0dd641a9ab21cade6d1c339fe498dbb5}{
+\index{cPainter@{cPainter}!Reset@{Reset}}
+\index{Reset@{Reset}!cPainter@{cPainter}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void cPainter::Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_painter_a0dd641a9ab21cade6d1c339fe498dbb5}
+
+
+Definition at line 290 of file WTcPainter.cpp.
+
+\hypertarget{classc_painter_a0f2252892148f0e76a9c95cf6258de85}{
+\index{cPainter@{cPainter}!Resize@{Resize}}
+\index{Resize@{Resize}!cPainter@{cPainter}}
+\subsubsection[{Resize}]{\setlength{\rightskip}{0pt plus 5cm}void cPainter::Resize (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liSize}
+\end{DoxyParamCaption}
+)}}
+\label{classc_painter_a0f2252892148f0e76a9c95cf6258de85}
+
+
+This will resize the array of \hyperlink{classc_render_pointer}{cRenderPointer} to change the number of cRenderObjects that can be held. 
+
+
+
+Definition at line 34 of file WTcPainter.cpp.
+
+\hypertarget{classc_painter_a1d4ecd48a9b508962a340f95c65bd044}{
+\index{cPainter@{cPainter}!ShaderState@{ShaderState}}
+\index{ShaderState@{ShaderState}!cPainter@{cPainter}}
+\subsubsection[{ShaderState}]{\setlength{\rightskip}{0pt plus 5cm}void cPainter::ShaderState (
+\begin{DoxyParamCaption}
+\item[{{\bf vShaderProgram} $\ast$}]{mpCurrent, }
+\item[{{\bf vShaderProgram} $\ast$}]{mpLast}
+\end{DoxyParamCaption}
+)}}
+\label{classc_painter_a1d4ecd48a9b508962a340f95c65bd044}
+
+
+Definition at line 206 of file WTcPainter.cpp.
+
+\hypertarget{classc_painter_aa94ad2ace4bb757245e20aa6f3983ab4}{
+\index{cPainter@{cPainter}!SortByAlpha@{SortByAlpha}}
+\index{SortByAlpha@{SortByAlpha}!cPainter@{cPainter}}
+\subsubsection[{SortByAlpha}]{\setlength{\rightskip}{0pt plus 5cm}void cPainter::SortByAlpha (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_painter_aa94ad2ace4bb757245e20aa6f3983ab4}
+
+
+This will sort the array mpList based on the alpha value that each object uses. 
+
+
+
+Definition at line 191 of file WTcPainter.cpp.
+
+\hypertarget{classc_painter_a65b3e6e9472009ef951261d1641f3773}{
+\index{cPainter@{cPainter}!SortByDistance@{SortByDistance}}
+\index{SortByDistance@{SortByDistance}!cPainter@{cPainter}}
+\subsubsection[{SortByDistance}]{\setlength{\rightskip}{0pt plus 5cm}void cPainter::SortByDistance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_painter_a65b3e6e9472009ef951261d1641f3773}
+
+
+This will sort the array mpList based on object distance from the camera. 
+
+
+
+Definition at line 62 of file WTcPainter.cpp.
+
+\hypertarget{classc_painter_aa8cf6053e8a310fc843e5e9cd7c95173}{
+\index{cPainter@{cPainter}!SortByShader@{SortByShader}}
+\index{SortByShader@{SortByShader}!cPainter@{cPainter}}
+\subsubsection[{SortByShader}]{\setlength{\rightskip}{0pt plus 5cm}void cPainter::SortByShader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_painter_aa8cf6053e8a310fc843e5e9cd7c95173}
+
+
+This will sort the array mpList based on object shader program. 
+
+
+
+Definition at line 124 of file WTcPainter.cpp.
+
+\hypertarget{classc_painter_a06f0d0777d5578793ea5cb07aa8b10cc}{
+\index{cPainter@{cPainter}!SortByTexture@{SortByTexture}}
+\index{SortByTexture@{SortByTexture}!cPainter@{cPainter}}
+\subsubsection[{SortByTexture}]{\setlength{\rightskip}{0pt plus 5cm}void cPainter::SortByTexture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_painter_a06f0d0777d5578793ea5cb07aa8b10cc}
+
+
+This will sort the array mpList based on the texture that each object uses. 
+
+
+
+Definition at line 157 of file WTcPainter.cpp.
+
+\hypertarget{classc_painter_ad88e9a81b90b044e0a93f26cf92efe98}{
+\index{cPainter@{cPainter}!TextureState@{TextureState}}
+\index{TextureState@{TextureState}!cPainter@{cPainter}}
+\subsubsection[{TextureState}]{\setlength{\rightskip}{0pt plus 5cm}void cPainter::TextureState (
+\begin{DoxyParamCaption}
+\item[{uint32}]{mpCurrent, }
+\item[{uint32}]{mpLast}
+\end{DoxyParamCaption}
+)}}
+\label{classc_painter_ad88e9a81b90b044e0a93f26cf92efe98}
+
+
+Definition at line 219 of file WTcPainter.cpp.
+

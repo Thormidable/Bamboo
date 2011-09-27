@@ -1,0 +1,406 @@
+\hypertarget{classc_camera}{
+\section{cCamera Class Reference}
+\label{classc_camera}\index{cCamera@{cCamera}}
+}
+
+
+This class will control the rendering of the render tree. It will handle all the render objects and how to render to the screen. \hyperlink{classc_camera}{cCamera} is the renderer for the entire program. It will contain a scene graph, and inherits \hyperlink{classc_camera_matrix4}{cCameraMatrix4} as its view matrix. It can be considered as a camera in the program space, and will render every thing in its scene graph to the screen.  
+
+
+
+
+Inheritance diagram for cCamera:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classc_camera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cCamera:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_camera__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_camera_a5987ab7a715b252ffb9ce534a1776f7f}{$\sim$cCamera} ()
+\begin{DoxyCompactList}\small\item\em This is cCameras destructor and will delete the entire scene graph stored in mpRenderList. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_acf7ca694f914e1a5d1e37e7ad68fd9e1}{RemoveAll} ()
+\begin{DoxyCompactList}\small\item\em This function will automatically remove all cRenderObjects from the scene graph pointed to by mpRenderList. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classc_camera_acfe96d0953540fa3938e4d415d7cb791}{Render} ()
+\begin{DoxyCompactList}\small\item\em This function will render the scene graph to the screen. This is used if WT\_\-USE\_\-PAINTER is set to false. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_a565ec57dfb4d9fa02917a876542f2fc2}{SetClearColor} (float lfRed, float lfGreen, float lfBlue, float lfAlpha)
+\begin{DoxyCompactList}\small\item\em This function will set the color the camera will clear the screen to every frame. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_a5723de4d866013f9d7f3ba737bac2937}{Orthographic} ()
+\begin{DoxyCompactList}\small\item\em This creates the camera model view matrix using an Orthographic algorithm. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_abad68d50133b1153bbab0431caa8e7f5}{Frustum} ()
+\begin{DoxyCompactList}\small\item\em This creates the camera model view matrix using a Frustum algorithm. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_render_node}{cRenderNode} $\ast$ \hyperlink{classc_camera_a4791120acbffeb5e5731afbc4576496d}{RenderList} ()
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the scene graph. \item\end{DoxyCompactList}\item 
+\hyperlink{classv_render_object}{vRenderObject} $\ast$ \hyperlink{classc_camera_a02bce34af198d7ef317b459f19b25a40}{vRenderList} ()
+\begin{DoxyCompactList}\small\item\em This will return a virtual pointer to the the scene graph. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_camera_a6bb0b4400645f5431210fe9a43285648}{Near} ()
+\begin{DoxyCompactList}\small\item\em This will return the closest distance \hyperlink{classc_camera}{cCamera} will render polygons. \item\end{DoxyCompactList}\item 
+float \hyperlink{classc_camera_a85299842bed0c95fca12deee1d94957b}{Far} ()
+\begin{DoxyCompactList}\small\item\em This will return the Furthest distance \hyperlink{classc_camera}{cCamera} will render polygons. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_a323f0c3b5827a3f9ea61cb47202c09f9}{Near} (float lfN)
+\begin{DoxyCompactList}\small\item\em This will set the closest distance \hyperlink{classc_camera}{cCamera} will render polygons. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_ab8e772b148a2539cb1b7ec384f02a386}{Far} (float lfF)
+\begin{DoxyCompactList}\small\item\em This will set the Furthest distance \hyperlink{classc_camera}{cCamera} will render polygons. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_camera_a5ca3028008da0c7941993dcfc49b9591}{ResetGLMatrix} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classc_camera}{cCamera} $\ast$ \hyperlink{classc_camera_ac15b7642fea57e1d1af11ad5f77baa91}{Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_camera_a5e6f4b4780dd0f64235839879e32aea9}{cCamera} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classc_camera_ae3aaabc945a5b4a0bb424e38d32f6d58}{mfZoom}
+\item 
+float \hyperlink{classc_camera_ac50aeb9d20f87444d1b45b1897df206e}{mfNear}
+\item 
+float \hyperlink{classc_camera_a4b347cfcd47002f6f80673bda5fdfcf8}{mfFar}
+\item 
+\hyperlink{classc_render_node}{cRenderNode} $\ast$ \hyperlink{classc_camera_a642cdd541d3837608830f2b851bcd8d0}{mpRenderList}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classc_camera}{cCamera} $\ast$ \hyperlink{classc_camera_ac0a7186d4db80f12a986a00b8fde2b2d}{mpInstance} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will control the rendering of the render tree. It will handle all the render objects and how to render to the screen. \hyperlink{classc_camera}{cCamera} is the renderer for the entire program. It will contain a scene graph, and inherits \hyperlink{classc_camera_matrix4}{cCameraMatrix4} as its view matrix. It can be considered as a camera in the program space, and will render every thing in its scene graph to the screen. 
+
+Definition at line 11 of file WTcCamera.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_camera_a5e6f4b4780dd0f64235839879e32aea9}{
+\index{cCamera@{cCamera}!cCamera@{cCamera}}
+\index{cCamera@{cCamera}!cCamera@{cCamera}}
+\subsubsection[{cCamera}]{\setlength{\rightskip}{0pt plus 5cm}cCamera::cCamera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_camera_a5e6f4b4780dd0f64235839879e32aea9}
+
+
+Definition at line 3 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_a5987ab7a715b252ffb9ce534a1776f7f}{
+\index{cCamera@{cCamera}!$\sim$cCamera@{$\sim$cCamera}}
+\index{$\sim$cCamera@{$\sim$cCamera}!cCamera@{cCamera}}
+\subsubsection[{$\sim$cCamera}]{\setlength{\rightskip}{0pt plus 5cm}cCamera::$\sim$cCamera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_a5987ab7a715b252ffb9ce534a1776f7f}
+
+
+This is cCameras destructor and will delete the entire scene graph stored in mpRenderList. 
+
+
+
+Definition at line 15 of file WTcCamera.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_camera_a85299842bed0c95fca12deee1d94957b}{
+\index{cCamera@{cCamera}!Far@{Far}}
+\index{Far@{Far}!cCamera@{cCamera}}
+\subsubsection[{Far}]{\setlength{\rightskip}{0pt plus 5cm}float cCamera::Far (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_a85299842bed0c95fca12deee1d94957b}
+
+
+This will return the Furthest distance \hyperlink{classc_camera}{cCamera} will render polygons. 
+
+
+
+Definition at line 101 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_ab8e772b148a2539cb1b7ec384f02a386}{
+\index{cCamera@{cCamera}!Far@{Far}}
+\index{Far@{Far}!cCamera@{cCamera}}
+\subsubsection[{Far}]{\setlength{\rightskip}{0pt plus 5cm}void cCamera::Far (
+\begin{DoxyParamCaption}
+\item[{float}]{lfF}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_ab8e772b148a2539cb1b7ec384f02a386}
+
+
+This will set the Furthest distance \hyperlink{classc_camera}{cCamera} will render polygons. 
+
+
+
+Definition at line 147 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_abad68d50133b1153bbab0431caa8e7f5}{
+\index{cCamera@{cCamera}!Frustum@{Frustum}}
+\index{Frustum@{Frustum}!cCamera@{cCamera}}
+\subsubsection[{Frustum}]{\setlength{\rightskip}{0pt plus 5cm}void cCamera::Frustum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_abad68d50133b1153bbab0431caa8e7f5}
+
+
+This creates the camera model view matrix using a Frustum algorithm. 
+
+
+
+Definition at line 87 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_ac15b7642fea57e1d1af11ad5f77baa91}{
+\index{cCamera@{cCamera}!Instance@{Instance}}
+\index{Instance@{Instance}!cCamera@{cCamera}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCamera} $\ast$ cCamera::Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classc_camera_ac15b7642fea57e1d1af11ad5f77baa91}
+This function will return a pointer to the current \hyperlink{classc_camera}{cCamera} object. 
+
+Definition at line 115 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_a6bb0b4400645f5431210fe9a43285648}{
+\index{cCamera@{cCamera}!Near@{Near}}
+\index{Near@{Near}!cCamera@{cCamera}}
+\subsubsection[{Near}]{\setlength{\rightskip}{0pt plus 5cm}float cCamera::Near (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_a6bb0b4400645f5431210fe9a43285648}
+
+
+This will return the closest distance \hyperlink{classc_camera}{cCamera} will render polygons. 
+
+
+
+Definition at line 96 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_a323f0c3b5827a3f9ea61cb47202c09f9}{
+\index{cCamera@{cCamera}!Near@{Near}}
+\index{Near@{Near}!cCamera@{cCamera}}
+\subsubsection[{Near}]{\setlength{\rightskip}{0pt plus 5cm}void cCamera::Near (
+\begin{DoxyParamCaption}
+\item[{float}]{lfN}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_a323f0c3b5827a3f9ea61cb47202c09f9}
+
+
+This will set the closest distance \hyperlink{classc_camera}{cCamera} will render polygons. 
+
+
+
+Definition at line 141 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_a5723de4d866013f9d7f3ba737bac2937}{
+\index{cCamera@{cCamera}!Orthographic@{Orthographic}}
+\index{Orthographic@{Orthographic}!cCamera@{cCamera}}
+\subsubsection[{Orthographic}]{\setlength{\rightskip}{0pt plus 5cm}void cCamera::Orthographic (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_a5723de4d866013f9d7f3ba737bac2937}
+
+
+This creates the camera model view matrix using an Orthographic algorithm. 
+
+
+
+Definition at line 78 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_acf7ca694f914e1a5d1e37e7ad68fd9e1}{
+\index{cCamera@{cCamera}!RemoveAll@{RemoveAll}}
+\index{RemoveAll@{RemoveAll}!cCamera@{cCamera}}
+\subsubsection[{RemoveAll}]{\setlength{\rightskip}{0pt plus 5cm}void cCamera::RemoveAll (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_acf7ca694f914e1a5d1e37e7ad68fd9e1}
+
+
+This function will automatically remove all cRenderObjects from the scene graph pointed to by mpRenderList. 
+
+
+
+Definition at line 72 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_acfe96d0953540fa3938e4d415d7cb791}{
+\index{cCamera@{cCamera}!Render@{Render}}
+\index{Render@{Render}!cCamera@{cCamera}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void cCamera::Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_camera_acfe96d0953540fa3938e4d415d7cb791}
+
+
+This function will render the scene graph to the screen. This is used if WT\_\-USE\_\-PAINTER is set to false. 
+
+
+
+Reimplemented in \hyperlink{classc_camera_painter_abc09c0cb4f02df2cc0b1407f7273a068}{cCameraPainter}.
+
+
+
+Definition at line 29 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_a4791120acbffeb5e5731afbc4576496d}{
+\index{cCamera@{cCamera}!RenderList@{RenderList}}
+\index{RenderList@{RenderList}!cCamera@{cCamera}}
+\subsubsection[{RenderList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cRenderNode} $\ast$ cCamera::RenderList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_a4791120acbffeb5e5731afbc4576496d}
+
+
+This will return a pointer to the scene graph. 
+
+
+
+Definition at line 128 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_a5ca3028008da0c7941993dcfc49b9591}{
+\index{cCamera@{cCamera}!ResetGLMatrix@{ResetGLMatrix}}
+\index{ResetGLMatrix@{ResetGLMatrix}!cCamera@{cCamera}}
+\subsubsection[{ResetGLMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void cCamera::ResetGLMatrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_a5ca3028008da0c7941993dcfc49b9591}
+
+
+Definition at line 106 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_a565ec57dfb4d9fa02917a876542f2fc2}{
+\index{cCamera@{cCamera}!SetClearColor@{SetClearColor}}
+\index{SetClearColor@{SetClearColor}!cCamera@{cCamera}}
+\subsubsection[{SetClearColor}]{\setlength{\rightskip}{0pt plus 5cm}void cCamera::SetClearColor (
+\begin{DoxyParamCaption}
+\item[{float}]{lfRed, }
+\item[{float}]{lfGreen, }
+\item[{float}]{lfBlue, }
+\item[{float}]{lfAlpha}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_a565ec57dfb4d9fa02917a876542f2fc2}
+
+
+This function will set the color the camera will clear the screen to every frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lfRed} & This is the red component of the color that \hyperlink{classc_camera}{cCamera} will clear the screen to. \\
+\hline
+{\em lfGreen} & This is the green component of the color that \hyperlink{classc_camera}{cCamera} will clear the screen to. \\
+\hline
+{\em lfBlue} & This is the blue component of the color that \hyperlink{classc_camera}{cCamera} will clear the screen to. \\
+\hline
+{\em lfAlpha} & This is the alpha component of the color that \hyperlink{classc_camera}{cCamera} will clear the screen to. This function sets the color that the camera will clear the screen to every frame. RGB defines the color while lfAlpha sets the translucency of the screen clear -\/ this can be used to leave screen echos. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file WTcCamera.cpp.
+
+\hypertarget{classc_camera_a02bce34af198d7ef317b459f19b25a40}{
+\index{cCamera@{cCamera}!vRenderList@{vRenderList}}
+\index{vRenderList@{vRenderList}!cCamera@{cCamera}}
+\subsubsection[{vRenderList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vRenderObject} $\ast$ cCamera::vRenderList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_camera_a02bce34af198d7ef317b459f19b25a40}
+
+
+This will return a virtual pointer to the the scene graph. 
+
+
+
+Definition at line 135 of file WTcCamera.cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_camera_a4b347cfcd47002f6f80673bda5fdfcf8}{
+\index{cCamera@{cCamera}!mfFar@{mfFar}}
+\index{mfFar@{mfFar}!cCamera@{cCamera}}
+\subsubsection[{mfFar}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cCamera::mfFar}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_camera_a4b347cfcd47002f6f80673bda5fdfcf8}
+
+
+Definition at line 22 of file WTcCamera.h.
+
+\hypertarget{classc_camera_ac50aeb9d20f87444d1b45b1897df206e}{
+\index{cCamera@{cCamera}!mfNear@{mfNear}}
+\index{mfNear@{mfNear}!cCamera@{cCamera}}
+\subsubsection[{mfNear}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cCamera::mfNear}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_camera_ac50aeb9d20f87444d1b45b1897df206e}
+
+
+Definition at line 20 of file WTcCamera.h.
+
+\hypertarget{classc_camera_ae3aaabc945a5b4a0bb424e38d32f6d58}{
+\index{cCamera@{cCamera}!mfZoom@{mfZoom}}
+\index{mfZoom@{mfZoom}!cCamera@{cCamera}}
+\subsubsection[{mfZoom}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf cCamera::mfZoom}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_camera_ae3aaabc945a5b4a0bb424e38d32f6d58}
+
+
+Definition at line 18 of file WTcCamera.h.
+
+\hypertarget{classc_camera_ac0a7186d4db80f12a986a00b8fde2b2d}{
+\index{cCamera@{cCamera}!mpInstance@{mpInstance}}
+\index{mpInstance@{mpInstance}!cCamera@{cCamera}}
+\subsubsection[{mpInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCamera} $\ast$ {\bf cCamera::mpInstance} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classc_camera_ac0a7186d4db80f12a986a00b8fde2b2d}
+
+
+Definition at line 15 of file WTcCamera.h.
+
+\hypertarget{classc_camera_a642cdd541d3837608830f2b851bcd8d0}{
+\index{cCamera@{cCamera}!mpRenderList@{mpRenderList}}
+\index{mpRenderList@{mpRenderList}!cCamera@{cCamera}}
+\subsubsection[{mpRenderList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cRenderNode}$\ast$ {\bf cCamera::mpRenderList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classc_camera_a642cdd541d3837608830f2b851bcd8d0}
+
+
+Definition at line 28 of file WTcCamera.h.
+

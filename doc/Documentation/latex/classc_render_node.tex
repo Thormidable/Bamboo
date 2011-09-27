@@ -1,0 +1,412 @@
+\hypertarget{classc_render_node}{
+\section{cRenderNode Class Reference}
+\label{classc_render_node}\index{cRenderNode@{cRenderNode}}
+}
+
+
+This is a dynamic render tree branch. This class stores a dynamic list of cRenderObjects called mpObjects. \hyperlink{classc_render_node}{cRenderNode} inherits \hyperlink{classc_render_object}{cRenderObject} and so can be stored in mpObjects of other cRenderNodes. Any translations applied to this \hyperlink{classc_render_node}{cRenderNode} will modify the base coordinates of any objects stored in mpObjects. This allows objects to be grouped for the purposes of translations. A \hyperlink{classc_render_node}{cRenderNode} volume encompasses all objects beneath it in the render tree, this increases the speed of collision searches as a \hyperlink{classc_render_node}{cRenderNode} can remove all it's sub objects from the search.  
+
+
+
+
+Inheritance diagram for cRenderNode:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classc_render_node__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cRenderNode:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_render_node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_render_node}{cRenderNode} $\ast$ \hyperlink{classc_render_node_ad461c79a8a847a57448152e2401696f6}{Renderer} ()
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{classc_render_node}{cRenderNode} which owns this object. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_render_node_aeb068139475cb6af0aa41efc656e331d}{cRenderNode} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classc_render_node}{cRenderNode}. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_render_node_a75357387655af01d4eccdbc37d978f52}{cRenderNode} (\hyperlink{classc_render_node}{cRenderNode} $\ast$lpRenderer)
+\begin{DoxyCompactList}\small\item\em Constructs a new \hyperlink{classc_render_node}{cRenderNode} which is owned by lpRenderer. \item\end{DoxyCompactList}\item 
+\hyperlink{classc_render_node_ab2c40bdb9caf33bed805eb06eea46e4b}{$\sim$cRenderNode} ()
+\item 
+void \hyperlink{classc_render_node_afc1e90112f4597a5858fccb97f700d59}{Initialise} ()
+\item 
+void \hyperlink{classc_render_node_a14695214d8c02b2bc1c96ed4dad0e435}{Remove} (\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classv_render_object}{vRenderObject} $>$ $\ast$lpOld)
+\item 
+\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classv_render_object}{vRenderObject} $>$ $\ast$ \hyperlink{classc_render_node_a7ea0792e0afd2e67ef16773a654fb57c}{Add} (\hyperlink{classv_render_object}{vRenderObject} $\ast$lpNew)
+\item 
+\hyperlink{classc_linked_list}{cLinkedList}$<$ \hyperlink{classv_render_object}{vRenderObject} $>$ $\ast$ \hyperlink{classc_render_node_ac694ca35d0abcdbdd5eb0c8869fbc63c}{RenderList} ()
+\item 
+void \hyperlink{classc_render_node_ae25bf3a5d2242ea5b88d6c409b14a02b}{DeleteAll} ()
+\item 
+void \hyperlink{classc_render_node_aa1a1cf0616c7fd30e95e2712ebd4c59c}{RenderToPainter} ()
+\begin{DoxyCompactList}\small\item\em Renders this object to the \hyperlink{classc_painter}{cPainter} render list. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_node_a0f262c31fb58313c36b7f3cde7228516}{RenderPainter} (uint8 liLevel)
+\item 
+void \hyperlink{classc_render_node_a56a964f97aeae5419f1b1f599948dc81}{RenderPainter} ()
+\begin{DoxyCompactList}\small\item\em Renders this object from the \hyperlink{classc_painter}{cPainter} render list to the screen. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_node_ab821e33b9286dd661f3dec143966f8b8}{Render} ()
+\begin{DoxyCompactList}\small\item\em Renders this object to the screen. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_node_a6cd00cebef1668356808ad0de77bcd19}{LinkCollisionObject} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpObj)
+\begin{DoxyCompactList}\small\item\em Links The \hyperlink{classc_collision_object}{cCollisionObject} lpObj to this Renderable Object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_node_a6b0c65b32abdf6046dbe3f2c8d24cfaf}{AdditionalRenderFunctions} ()
+\begin{DoxyCompactList}\small\item\em This will store any additional functions to be performed as the object is rendered. Updating Caches, etc. \item\end{DoxyCompactList}\item 
+void \hyperlink{classc_render_node_ad007ec73538353c0bc86a9629abdaaa4}{UpdateCache} ()
+\begin{DoxyCompactList}\small\item\em This will update the cache matrix. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_render_node_a456e5433b5fd3601d4392dd92de1fd31}{GetPos} ()
+\begin{DoxyCompactList}\small\item\em This will return the Local position of the selected object. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{classc_render_node_ac4c1e605f4b0acc4b4efcbc4447ff143}{GetGlobalPos} ()
+\begin{DoxyCompactList}\small\item\em This will return the global position of the object as rendered at the end of last frame. Note, this will contain the camera matrix. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classv_render_object}{vRenderObject} $>$ $\ast$ \hyperlink{classc_render_node_a753eafd93821f67b86ee8f4642053f2d}{mpCursor}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a dynamic render tree branch. This class stores a dynamic list of cRenderObjects called mpObjects. \hyperlink{classc_render_node}{cRenderNode} inherits \hyperlink{classc_render_object}{cRenderObject} and so can be stored in mpObjects of other cRenderNodes. Any translations applied to this \hyperlink{classc_render_node}{cRenderNode} will modify the base coordinates of any objects stored in mpObjects. This allows objects to be grouped for the purposes of translations. A \hyperlink{classc_render_node}{cRenderNode} volume encompasses all objects beneath it in the render tree, this increases the speed of collision searches as a \hyperlink{classc_render_node}{cRenderNode} can remove all it's sub objects from the search. 
+
+Definition at line 12 of file WTcRenderNode.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_render_node_aeb068139475cb6af0aa41efc656e331d}{
+\index{cRenderNode@{cRenderNode}!cRenderNode@{cRenderNode}}
+\index{cRenderNode@{cRenderNode}!cRenderNode@{cRenderNode}}
+\subsubsection[{cRenderNode}]{\setlength{\rightskip}{0pt plus 5cm}cRenderNode::cRenderNode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_node_aeb068139475cb6af0aa41efc656e331d}
+
+
+Constructor for \hyperlink{classc_render_node}{cRenderNode}. 
+
+
+
+Definition at line 12 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_a75357387655af01d4eccdbc37d978f52}{
+\index{cRenderNode@{cRenderNode}!cRenderNode@{cRenderNode}}
+\index{cRenderNode@{cRenderNode}!cRenderNode@{cRenderNode}}
+\subsubsection[{cRenderNode}]{\setlength{\rightskip}{0pt plus 5cm}cRenderNode::cRenderNode (
+\begin{DoxyParamCaption}
+\item[{{\bf cRenderNode} $\ast$}]{lpRenderer}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_node_a75357387655af01d4eccdbc37d978f52}
+
+
+Constructs a new \hyperlink{classc_render_node}{cRenderNode} which is owned by lpRenderer. 
+
+
+
+Definition at line 21 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_ab2c40bdb9caf33bed805eb06eea46e4b}{
+\index{cRenderNode@{cRenderNode}!$\sim$cRenderNode@{$\sim$cRenderNode}}
+\index{$\sim$cRenderNode@{$\sim$cRenderNode}!cRenderNode@{cRenderNode}}
+\subsubsection[{$\sim$cRenderNode}]{\setlength{\rightskip}{0pt plus 5cm}cRenderNode::$\sim$cRenderNode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_node_ab2c40bdb9caf33bed805eb06eea46e4b}
+
+
+Definition at line 39 of file WTcRenderNode.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_render_node_a7ea0792e0afd2e67ef16773a654fb57c}{
+\index{cRenderNode@{cRenderNode}!Add@{Add}}
+\index{Add@{Add}!cRenderNode@{cRenderNode}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cLinkedNode}$<$ {\bf vRenderObject} $>$ $\ast$ cRenderNode::Add (
+\begin{DoxyParamCaption}
+\item[{{\bf vRenderObject} $\ast$}]{lpNew}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_node_a7ea0792e0afd2e67ef16773a654fb57c}
+
+
+Definition at line 54 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_a6b0c65b32abdf6046dbe3f2c8d24cfaf}{
+\index{cRenderNode@{cRenderNode}!AdditionalRenderFunctions@{AdditionalRenderFunctions}}
+\index{AdditionalRenderFunctions@{AdditionalRenderFunctions}!cRenderNode@{cRenderNode}}
+\subsubsection[{AdditionalRenderFunctions}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderNode::AdditionalRenderFunctions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_node_a6b0c65b32abdf6046dbe3f2c8d24cfaf}
+
+
+This will store any additional functions to be performed as the object is rendered. Updating Caches, etc. 
+
+
+
+Reimplemented from \hyperlink{classv_render_object_a5e566d53432b096551f09c2866c6e0b0}{vRenderObject}.
+
+
+
+Definition at line 161 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_ae25bf3a5d2242ea5b88d6c409b14a02b}{
+\index{cRenderNode@{cRenderNode}!DeleteAll@{DeleteAll}}
+\index{DeleteAll@{DeleteAll}!cRenderNode@{cRenderNode}}
+\subsubsection[{DeleteAll}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderNode::DeleteAll (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_node_ae25bf3a5d2242ea5b88d6c409b14a02b}
+
+
+Definition at line 45 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_ac4c1e605f4b0acc4b4efcbc4447ff143}{
+\index{cRenderNode@{cRenderNode}!GetGlobalPos@{GetGlobalPos}}
+\index{GetGlobalPos@{GetGlobalPos}!cRenderNode@{cRenderNode}}
+\subsubsection[{GetGlobalPos}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ cRenderNode::GetGlobalPos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_node_ac4c1e605f4b0acc4b4efcbc4447ff143}
+
+
+This will return the global position of the object as rendered at the end of last frame. Note, this will contain the camera matrix. 
+
+
+
+Implements \hyperlink{classv_render_object_a514553ffc449f026b50fa47496311860}{vRenderObject}.
+
+
+
+Definition at line 200 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_a456e5433b5fd3601d4392dd92de1fd31}{
+\index{cRenderNode@{cRenderNode}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!cRenderNode@{cRenderNode}}
+\subsubsection[{GetPos}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ cRenderNode::GetPos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_node_a456e5433b5fd3601d4392dd92de1fd31}
+
+
+This will return the Local position of the selected object. 
+
+
+
+Implements \hyperlink{classv_render_object_aacd7e3aeb366f0f04f0f148ded8b89f4}{vRenderObject}.
+
+
+
+Definition at line 194 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_afc1e90112f4597a5858fccb97f700d59}{
+\index{cRenderNode@{cRenderNode}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!cRenderNode@{cRenderNode}}
+\subsubsection[{Initialise}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderNode::Initialise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_node_afc1e90112f4597a5858fccb97f700d59}
+
+
+Definition at line 3 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_a6cd00cebef1668356808ad0de77bcd19}{
+\index{cRenderNode@{cRenderNode}!LinkCollisionObject@{LinkCollisionObject}}
+\index{LinkCollisionObject@{LinkCollisionObject}!cRenderNode@{cRenderNode}}
+\subsubsection[{LinkCollisionObject}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderNode::LinkCollisionObject (
+\begin{DoxyParamCaption}
+\item[{{\bf cCollisionObject} $\ast$}]{lpObj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_node_a6cd00cebef1668356808ad0de77bcd19}
+
+
+Links The \hyperlink{classc_collision_object}{cCollisionObject} lpObj to this Renderable Object. 
+
+
+
+Reimplemented from \hyperlink{classv_render_object_a1cd8f4961222c39ecdfa5ca155699fa3}{vRenderObject}.
+
+
+
+Definition at line 182 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_a14695214d8c02b2bc1c96ed4dad0e435}{
+\index{cRenderNode@{cRenderNode}!Remove@{Remove}}
+\index{Remove@{Remove}!cRenderNode@{cRenderNode}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderNode::Remove (
+\begin{DoxyParamCaption}
+\item[{{\bf cLinkedNode}$<$ {\bf vRenderObject} $>$ $\ast$}]{lpOld}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_node_a14695214d8c02b2bc1c96ed4dad0e435}
+
+
+Definition at line 60 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_ab821e33b9286dd661f3dec143966f8b8}{
+\index{cRenderNode@{cRenderNode}!Render@{Render}}
+\index{Render@{Render}!cRenderNode@{cRenderNode}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderNode::Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_node_ab821e33b9286dd661f3dec143966f8b8}
+
+
+Renders this object to the screen. 
+
+
+
+Implements \hyperlink{classv_render_object_ae4bb9fb71f277f6b63e7dd6aeaedff5b}{vRenderObject}.
+
+
+
+Definition at line 115 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_ad461c79a8a847a57448152e2401696f6}{
+\index{cRenderNode@{cRenderNode}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!cRenderNode@{cRenderNode}}
+\subsubsection[{Renderer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cRenderNode} $\ast$ cRenderNode::Renderer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_node_ad461c79a8a847a57448152e2401696f6}
+
+
+Returns the \hyperlink{classc_render_node}{cRenderNode} which owns this object. 
+
+
+
+Implements \hyperlink{classv_render_object_a558ba2b7a23cf687c0b0ec7d814a7744}{vRenderObject}.
+
+
+
+Definition at line 176 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_ac694ca35d0abcdbdd5eb0c8869fbc63c}{
+\index{cRenderNode@{cRenderNode}!RenderList@{RenderList}}
+\index{RenderList@{RenderList}!cRenderNode@{cRenderNode}}
+\subsubsection[{RenderList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cLinkedList}$<$ {\bf vRenderObject} $>$ $\ast$ cRenderNode::RenderList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_node_ac694ca35d0abcdbdd5eb0c8869fbc63c}
+
+
+Definition at line 170 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_a0f262c31fb58313c36b7f3cde7228516}{
+\index{cRenderNode@{cRenderNode}!RenderPainter@{RenderPainter}}
+\index{RenderPainter@{RenderPainter}!cRenderNode@{cRenderNode}}
+\subsubsection[{RenderPainter}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderNode::RenderPainter (
+\begin{DoxyParamCaption}
+\item[{uint8}]{liLevel}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_node_a0f262c31fb58313c36b7f3cde7228516}
+
+
+Definition at line 166 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_a56a964f97aeae5419f1b1f599948dc81}{
+\index{cRenderNode@{cRenderNode}!RenderPainter@{RenderPainter}}
+\index{RenderPainter@{RenderPainter}!cRenderNode@{cRenderNode}}
+\subsubsection[{RenderPainter}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderNode::RenderPainter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_node_a56a964f97aeae5419f1b1f599948dc81}
+
+
+Renders this object from the \hyperlink{classc_painter}{cPainter} render list to the screen. 
+
+
+
+Implements \hyperlink{classv_render_object_a5f7d30eaedefd5cfcc904d0e499a836d}{vRenderObject}.
+
+
+
+Definition at line 167 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_aa1a1cf0616c7fd30e95e2712ebd4c59c}{
+\index{cRenderNode@{cRenderNode}!RenderToPainter@{RenderToPainter}}
+\index{RenderToPainter@{RenderToPainter}!cRenderNode@{cRenderNode}}
+\subsubsection[{RenderToPainter}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderNode::RenderToPainter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_node_aa1a1cf0616c7fd30e95e2712ebd4c59c}
+
+
+Renders this object to the \hyperlink{classc_painter}{cPainter} render list. 
+
+
+
+Implements \hyperlink{classv_render_object_a8402746b2f0dce26964556c9167ad1e3}{vRenderObject}.
+
+
+
+Definition at line 66 of file WTcRenderNode.cpp.
+
+\hypertarget{classc_render_node_ad007ec73538353c0bc86a9629abdaaa4}{
+\index{cRenderNode@{cRenderNode}!UpdateCache@{UpdateCache}}
+\index{UpdateCache@{UpdateCache}!cRenderNode@{cRenderNode}}
+\subsubsection[{UpdateCache}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderNode::UpdateCache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classc_render_node_ad007ec73538353c0bc86a9629abdaaa4}
+
+
+This will update the cache matrix. 
+
+
+
+Implements \hyperlink{classv_render_object_a18c1f3fcab0c4c28358e539a5ec57ad3}{vRenderObject}.
+
+
+
+Definition at line 188 of file WTcRenderNode.cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classc_render_node_a753eafd93821f67b86ee8f4642053f2d}{
+\index{cRenderNode@{cRenderNode}!mpCursor@{mpCursor}}
+\index{mpCursor@{mpCursor}!cRenderNode@{cRenderNode}}
+\subsubsection[{mpCursor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cLinkedNode}$<${\bf vRenderObject}$>$$\ast$ {\bf cRenderNode::mpCursor}}}
+\label{classc_render_node_a753eafd93821f67b86ee8f4642053f2d}
+
+
+Definition at line 28 of file WTcRenderNode.h.
+
