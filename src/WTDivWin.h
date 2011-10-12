@@ -920,6 +920,7 @@
 
 #include "./Maths/WTMath.h"
 #include "./Maths/WTcMatrix4.h"
+#include "./Maths/WTcMatrixStack.h"
 #include "./Maths/WTcCameraMatrix4.h"
 #include "./Files/WTString.h"
 

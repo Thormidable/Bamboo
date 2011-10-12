@@ -105,9 +105,10 @@ float cCamera::Far()
 
 void cCamera::ResetGLMatrix()
 {
-	glLoadIdentity();
-	glMultMatrixf(Matrix());
-	glTranslatef(mpPosition[0],mpPosition[1],mpPosition[2]);
+	_MATRIX_STACK->Identity();
+	_MATRIX_STACK->Multiply(Matrix());
+	_MATRIX_STACK->Translate(mpPosition[0],mpPosition[1],mpPosition[2]);
+
 }
 
 cCamera *cCamera::mpInstance=0;

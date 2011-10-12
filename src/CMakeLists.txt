@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
-project (divwin)
+project (Bamboo)
 #This is release mode only.
 #add_definitions (-W -Wall -O3)
 
@@ -44,6 +44,7 @@ set( Sources ${Sources} ./Physics/WTcCollisionHandler.cpp )
 set( Sources ${Sources} ./Physics/WTcCollisionList.cpp )
 set( Sources ${Sources} ./Maths/WTcCameraMatrix4.cpp )
 set( Sources ${Sources} ./Maths/WTcMatrix4.cpp )
+set( Sources ${Sources} ./Maths/WTcMatrixStack.cpp )
 set( Sources ${Sources} ./Maths/WTMath.cpp )
 set( Sources ${Sources} ./Camera/WTcLightHandler.cpp )
 set( Sources ${Sources} ./Camera/FX/WTcLight.cpp )
@@ -73,6 +74,6 @@ set( Sources ${Sources} ./Engine/WTcSignal.cpp )
 set( Sources ${Sources} ./Global/log.cpp )
 set( Sources ${Sources} ./Global/WTSettings.cpp )
 #add_executable (DivWin ${Sources})
-add_library(DivWin STATIC ${Sources})
-target_link_libraries (DivWin GL openal GLEW) 
+add_library(Bamboo STATIC ${Sources})
+target_link_libraries (Bamboo GL openal GLEW) 
 

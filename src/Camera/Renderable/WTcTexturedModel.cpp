@@ -43,9 +43,6 @@ void cTexturedModel::RenderToPainter()
  
  float Temp[16];
  UpdateMatrix();
-glEnable(GL_TEXTURE_2D);
- glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
- //cRenderPointer lcTemp;
  mpPainterData->SetObject(this);
  //mpPainterData->SetMatrix(Temp);
  mpPainterData->SetTexture(TextureNumber());

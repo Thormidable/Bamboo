@@ -59,10 +59,10 @@ void cBeamMesh::RenderPainter(uint8 liLevel)
 void cBeamMesh::RenderToPainter()
 {
 
-	float Temp[16];
+	//float Temp[16];
 	UpdateMatrix();
 	
-	glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
+	//glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
 	//cRenderPointer lcTemp;
 
 	mpPainterData->SetObject(this);

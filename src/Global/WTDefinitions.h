@@ -146,7 +146,8 @@
 ///This is a macro to declare the start of a Collision Loop cycling valid collision processes. It will cycle every valid process pointer.
 #define _COLLISION_PROCESS_LOOP(lpList,lpVar) for(lpVar=lpList->NextCollisionP();lpVar;lpVar=lpList->NextCollisionP())
 
-#define _CREATE(TYPE) gpParent=this; new TYPE
+//#define _CREATE(TYPE) gpParent=this; new TYPE
+#define _CREATE(TYPE) new TYPE
 //#define _CREATE(TYPE) cKernel::Instance()->CreateProcess<class TYPE>(this)
 //#define _CREATE(TYPE(PARAMETERS)) cKernel::Instance()->CreateProcess<class TYPE>(this,PARAMETERS)
 
@@ -232,5 +233,8 @@
 #endif
 /// Function for accessing cKernel::FindProcess(). Will search for any Process of class type TYPE.
 #define _FIND_PROCESS(TYPE) _KERNEL->FindProcess<TYPE>()
+
+#define _MATRIX_STACK cMatrixStack::Instance()
+#define _MATRIX_STACK_MAX_DEPTH(VALUE) cMatrixStack::SetDepth(VALUE)
 
 #endif

@@ -269,7 +269,10 @@ glEnableClientState(GL_NORMAL_ARRAY);
     ShaderState(mpList[liCount]->mpShader,0);
   }
  
-  glLoadMatrixf(mpList[liCount]->mpObject->mmCache.Matrix());
+#warning comment THIS NEEDS TO BE FIXED FOR MATRIX STACK
+		glLoadMatrixf(mpList[liCount]->mpObject->mmCache.Matrix());
+	
+  
   mpList[liCount]->mpObject->RenderPainter(mpList[liCount]->miLevel);
   mpList[liCount]->mbReRender=false;
   }

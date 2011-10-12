@@ -49,6 +49,8 @@ public:
  /// This will return the transpose of this objects matrix.
  cMatrix4 Transpose();
 
+ cMatrix4 Translate(float lfX,float lfY,float lfZ);
+
  /// This will return a pointer to this objects matrix data.
  float *Matrix(){return mpData;};
  /// This will return a pointer to the float numbered lcData in this objects matrix.
@@ -78,6 +80,9 @@ float *YVect(){return &mpData[4];};
  cMatrix4 operator*(float &lVal);
 /// This will multiply every float in this objects matrix by lVal. 
 cMatrix4 operator*(const float lVal);
+ /// This will multiply every float in this objects matrix by lVal.
+ cMatrix4 operator*(float *lVal);
+
 /* /// This will multiply this objects matrix by the matrix pointed to by lVal. Returns This.lVal .
  cMatrix4 &operator*(cMatrix4 &lVal);*/
 /// This will multiply this objects matrix by the matrix lVal. Returns This.lVal . 
@@ -239,6 +244,7 @@ double DistanceSq(float *lpOther);
   void Display();
 
   cMatrix4* Equals(cMatrix4* lpOther){memcpy(mpData,lpOther->Matrix(),sizeof(float)*16);return this;};
+  cMatrix4* ThisMatrix(){return this;};
 
 };
 

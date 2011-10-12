@@ -119,12 +119,14 @@ void cRenderObject::UpdateCache()
 	{
 		mpCollisionObject->NotCreatedThisFrame();
 		mpCollisionObject->PreUpdateCache();
-		glGetFloatv(GL_MODELVIEW_MATRIX,mmCache.Matrix());
+
+		mmCache=_MATRIX_STACK->Current();
+
 		mpCollisionObject->PostUpdateCache();
 	}
 	else
 	{
-		glGetFloatv(GL_MODELVIEW_MATRIX,mmCache.Matrix());
+		mmCache=_MATRIX_STACK->Current();
 	}
 	
 };

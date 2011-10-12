@@ -68,14 +68,16 @@ void cRenderNode::RenderToPainter()
  if (mpObjects)
  {
 
-  glPushMatrix();
+	_MATRIX_STACK->Push();
+
   //glMultMatrixf(Matrix());
   UpdateMatrix();
   UpdateCache();
   mpCursor=mpObjects->Start();
   while(mpCursor)
   {
-	glPushMatrix();
+		_MATRIX_STACK->Push();
+
 	if(mpCursor->mpData->Awake())
 	{
 		mpCursor->mpData->RenderToPainter();
@@ -104,10 +106,14 @@ void cRenderNode::RenderToPainter()
 			mpCursor=mpCursor->Next();
 		}
 	}
-	glPopMatrix();
+
+	_MATRIX_STACK->Pop();
+
   }
   AdditionalRenderFunctions();
-  glPopMatrix();
+
+	_MATRIX_STACK->Pop();
+
  }
 }
 
@@ -124,7 +130,9 @@ void cRenderNode::Render()
   mpCursor=mpObjects->Start();
   while(mpCursor)
   {
-	glPushMatrix();
+
+		_MATRIX_STACK->Push();
+
 	if(mpCursor->mpData->Awake())
 	{
 		mpCursor->mpData->Render();
@@ -151,7 +159,9 @@ void cRenderNode::Render()
 			mpCursor=mpCursor->Next();
 		}
 	}
-	glPopMatrix();
+
+	_MATRIX_STACK->Pop();
+
   }
   //Are these neccessary as Node beneath will glPush and gl Pop
   //glPopMatrix();
@@ -187,7 +197,8 @@ void cRenderNode::LinkCollisionObject(cCollisionObject *lpObj)
 
 void cRenderNode::UpdateCache()
 {
-  glGetFloatv(GL_MODELVIEW_MATRIX,mmCache.Matrix());  
+	mmCache=_MATRIX_STACK->Current();
+  //glGetFloatv(GL_MODELVIEW_MATRIX,mmCache.Matrix());  
 }
 
 

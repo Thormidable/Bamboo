@@ -55,9 +55,8 @@ Set3D();
 
 void cMatrix4::UpdateMatrix()
 {
- if(!mb3D) glLoadIdentity();
- glMultMatrixf(mpData);
-
+  if(!mb3D) _MATRIX_STACK->Identity();
+ _MATRIX_STACK->Multiply(mpData);
 }
 
 void cMatrix4::UpdateMatrix(float *lpMultMatrix)
@@ -509,6 +508,16 @@ mpTemp.mpData[13]=mpData[4];
 mpTemp.mpData[14]=mpData[8];
 mpTemp.mpData[15]=mpData[12];
 return mpTemp;
+
+}
+
+cMatrix4 cMatrix4::Translate(float lfX,float lfY,float lfZ)
+{
+ 
+ mpData[12]=mpData[0]*lfX+mpData[4]*lfY+mpData[8]*lfZ+mpData[12];
+ mpData[13]=mpData[1]*lfX+mpData[5]*lfY+mpData[9]*lfZ+mpData[13];
+ mpData[14]=mpData[2]*lfX+mpData[6]*lfY+mpData[10]*lfZ+mpData[14];
+ mpData[15]=mpData[3]*lfX+mpData[7]*lfY+mpData[11]*lfZ+mpData[15];
 
 }
 
@@ -1247,3 +1256,28 @@ void cMatrix4::Display()
 
 }
 
+cMatrix4 cMatrix4::operator*(float *lVal)
+{
+ mpTemp.mpData[0]=mpData[0]*lVal[0]+mpData[4]*lVal[1]+mpData[8]*lVal[2]+mpData[12]*lVal[3];
+ mpTemp.mpData[1]=mpData[1]*lVal[0]+mpData[5]*lVal[1]+mpData[9]*lVal[2]+mpData[13]*lVal[3];
+ mpTemp.mpData[2]=mpData[2]*lVal[0]+mpData[6]*lVal[1]+mpData[10]*lVal[2]+mpData[14]*lVal[3];
+ mpTemp.mpData[3]=mpData[3]*lVal[0]+mpData[7]*lVal[1]+mpData[11]*lVal[2]+mpData[15]*lVal[3];
+
+ mpTemp.mpData[4]=mpData[0]*lVal[4]+mpData[4]*lVal[5]+mpData[8]*lVal[6]+mpData[12]*lVal[7];
+ mpTemp.mpData[5]=mpData[1]*lVal[4]+mpData[5]*lVal[5]+mpData[9]*lVal[6]+mpData[13]*lVal[7];
+ mpTemp.mpData[6]=mpData[2]*lVal[4]+mpData[6]*lVal[5]+mpData[10]*lVal[6]+mpData[14]*lVal[7];
+ mpTemp.mpData[7]=mpData[3]*lVal[4]+mpData[7]*lVal[5]+mpData[11]*lVal[6]+mpData[15]*lVal[7];
+
+ mpTemp.mpData[8]=mpData[0]*lVal[8]+mpData[4]*lVal[9]+mpData[8]*lVal[10]+mpData[12]*lVal[11];
+ mpTemp.mpData[9]=mpData[1]*lVal[8]+mpData[5]*lVal[9]+mpData[9]*lVal[10]+mpData[13]*lVal[11];
+ mpTemp.mpData[10]=mpData[2]*lVal[8]+mpData[6]*lVal[9]+mpData[10]*lVal[10]+mpData[14]*lVal[11];
+ mpTemp.mpData[11]=mpData[3]*lVal[8]+mpData[7]*lVal[9]+mpData[11]*lVal[10]+mpData[15]*lVal[11];
+
+ mpTemp.mpData[12]=mpData[0]*lVal[12]+mpData[4]*lVal[13]+mpData[8]*lVal[14]+mpData[12]*lVal[15];
+ mpTemp.mpData[13]=mpData[1]*lVal[12]+mpData[5]*lVal[13]+mpData[9]*lVal[14]+mpData[13]*lVal[15];
+ mpTemp.mpData[14]=mpData[2]*lVal[12]+mpData[6]*lVal[13]+mpData[10]*lVal[14]+mpData[14]*lVal[15];
+ mpTemp.mpData[15]=mpData[3]*lVal[12]+mpData[7]*lVal[13]+mpData[11]*lVal[14]+mpData[15]*lVal[15];
+
+ return mpTemp;
+	
+}
