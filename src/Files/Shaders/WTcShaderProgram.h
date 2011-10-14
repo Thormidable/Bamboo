@@ -16,6 +16,9 @@ uint32 miProgramID;
 cReferenceList mcList;
 /// This points to an array of pointers pointing to all the Shaders required to be linked to create this Shader Program.
 cShader **mpShader;
+
+cShaderVariables *mpVariables;
+
 public:
   ///Public Constructor. 
   cShaderProgram();
@@ -40,6 +43,11 @@ public:
   cShader* operator[](uint32 liCount){if(mpShader) return mpShader[liCount]; else return 0;};
  /// This will allow the cShaderProgram() to extract a list of string references for Shaders. It will then find pointers to the cShader() objects and compile the program using them.
  void LoadIMF(ifstream &FileStream);
+
+ cShaderVariables *ShaderVariables(uint16 liShader);
+
+
+
 };
 
 #endif

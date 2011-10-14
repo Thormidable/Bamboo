@@ -1188,6 +1188,30 @@ Files/Shaders/WTcShaderProgram.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.s
 .PHONY : Files/Shaders/WTcShaderProgram.cpp.s
 
+Files/Shaders/WTcShaderVariables.o: Files/Shaders/WTcShaderVariables.cpp.o
+.PHONY : Files/Shaders/WTcShaderVariables.o
+
+# target to build an object file
+Files/Shaders/WTcShaderVariables.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o
+.PHONY : Files/Shaders/WTcShaderVariables.cpp.o
+
+Files/Shaders/WTcShaderVariables.i: Files/Shaders/WTcShaderVariables.cpp.i
+.PHONY : Files/Shaders/WTcShaderVariables.i
+
+# target to preprocess a source file
+Files/Shaders/WTcShaderVariables.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.i
+.PHONY : Files/Shaders/WTcShaderVariables.cpp.i
+
+Files/Shaders/WTcShaderVariables.s: Files/Shaders/WTcShaderVariables.cpp.s
+.PHONY : Files/Shaders/WTcShaderVariables.s
+
+# target to generate assembly for a file
+Files/Shaders/WTcShaderVariables.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.s
+.PHONY : Files/Shaders/WTcShaderVariables.cpp.s
+
 Files/Textures/WTcTexture.o: Files/Textures/WTcTexture.cpp.o
 .PHONY : Files/Textures/WTcTexture.o
 
@@ -1812,6 +1836,9 @@ help:
 	@echo "... Files/Shaders/WTcShaderProgram.o"
 	@echo "... Files/Shaders/WTcShaderProgram.i"
 	@echo "... Files/Shaders/WTcShaderProgram.s"
+	@echo "... Files/Shaders/WTcShaderVariables.o"
+	@echo "... Files/Shaders/WTcShaderVariables.i"
+	@echo "... Files/Shaders/WTcShaderVariables.s"
 	@echo "... Files/Textures/WTcTexture.o"
 	@echo "... Files/Textures/WTcTexture.i"
 	@echo "... Files/Textures/WTcTexture.s"

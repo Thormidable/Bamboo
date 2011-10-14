@@ -46,7 +46,7 @@ void cTexturedModel::RenderToPainter()
  mpPainterData->SetObject(this);
  //mpPainterData->SetMatrix(Temp);
  mpPainterData->SetTexture(TextureNumber());
- printf("cTexturedmodel::mpShader : %p\n",mpShader);
+ 
  mpPainterData->SetShader(mpShader);
 mpPainterData->RenderAgain();
  //cPainter::Instance()->Add(lcTemp);

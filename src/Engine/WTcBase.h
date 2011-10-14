@@ -14,9 +14,10 @@ public:
 	{
 		cS *mpSettings =new cS;
 		cSettings *mpCast;
-		mpCast=dynamic_cast<cSettings>(mpSettings);
-		cSettings::Settings();
-		if(mpCast) mpCast->SetupVariables();
+		mpCast=dynamic_cast<cSettings*>(mpSettings);
+		mpCast->cSettings::Settings();
+		mpSettings->Settings();
+		if(mpCast) cSettings::SetupVariables();
 		gpWindow=new cWindow(hInstance);
 		
 		gpTimer=new cSync();
@@ -58,10 +59,11 @@ public:
 		
 		try {
 		  	cS *mpSettings =new cS;
-			cSettings *mpCast;
-			mpCast=dynamic_cast<cSettings*>(mpSettings);
-			mpCast->Settings();
-			if(mpCast) mpCast->SetupVariables();
+		cSettings *mpCast;
+		mpCast=dynamic_cast<cSettings*>(mpSettings);
+		mpCast->cSettings::Settings();
+		mpSettings->Settings();
+		if(mpCast) cSettings::SetupVariables();
 			
 			TRACE("Setting up cWindow...");
 			gpWindow=new cWindow();

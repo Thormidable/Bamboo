@@ -13,6 +13,8 @@ public:
   virtual void Use()=0;
   /// This will return the Program ID of this Shader Program.
   virtual uint32 ID()=0;
+
+  virtual cShaderVariables *ShaderVariables(uint16 liShader)=0;
 };
 
 #endif

@@ -844,6 +844,9 @@
  *
  **/
 
+#include <stdint.h>
+#include <unistd.h>
+
 /// This will define Windows as the current operating system.
 #define OS_WIN32 1
 /// This will define Linux as the current operating system.
@@ -853,8 +856,36 @@
 
 #define OS_64_BIT 64
 
-#define WT_OS_TYPE OS_LINUX
-#define WT_OS_BITS OS_64_BIT
+#ifdef __linux
+    #define WT_OS_TYPE OS_LINUX
+#endif
+
+#ifdef __WIN32
+    #define WT_OS_TYPE OS_WIN32
+    #ifdef __WIN64
+        #define WT_OS_BITS OS_64_BIT
+    #else
+        #define WT_OS_BITS OS_32_BIT
+    #endif
+#endif
+
+#if defined(__i386__)
+	#define WT_OS_BITS OS_32_BIT
+#elif defined(__x86_64__)
+   #define WT_OS_BITS OS_64_BIT
+#else
+	#warning comment Base Pointer size undetectable for your archetecture. Needs to be set manually in WTDivWin.h . Library may need recompiling.
+#endif
+
+//Manual def of OS Type.
+#ifndef WT_OS_TYPE
+    #define WT_OS_TYPE OS_LINUX
+#endif
+
+//Manual definition of pointer size for Architecture base.
+#ifndef WT_OS_BITS
+    #define WT_OS_BITS OS_32_BIT
+#endif
 
 #if WT_OS_TYPE==OS_WIN32
 	#include <windows.h>
@@ -862,6 +893,9 @@
 	#include <GL/glew.h>
     #include <GL/gl.h>
 	//#include <GL/glext.h>
+
+#include <al.h>
+#include <alc.h>
 
 	#include "./Windows/WTWindowsKeyCodes.h"
 #endif
@@ -875,10 +909,12 @@
 	#include <X11/Xlib.h>
 	#include <X11/X.h>
 
+#include <AL/al.h>
+#include <AL/alc.h>
+
 	#include "./Windows/WTXWindowsKeyCodes.h"
 #endif
-#include <stdint.h>
-#include <unistd.h>
+
 #include "./Global/WTDefinitions.h"
 #include "./Global/WTSettings.h"
 	
@@ -894,8 +930,7 @@
 //#include <GL/gl.h>
 
 
-#include <AL/al.h>
-#include <AL/alc.h>
+
 
 #include <cmath>
 #include <cstring>
@@ -959,6 +994,7 @@
 
 #include "./Files/Shaders/WTvShader.h"
 #include "./Files/Shaders/WTcShader.h"
+#include "./Files/Shaders/WTcShaderVariables.h"
 #include "./Files/Shaders/WTvShaderProgram.h"
 #include "./Files/Shaders/WTcShaderProgram.h"
 

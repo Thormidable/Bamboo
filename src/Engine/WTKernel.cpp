@@ -123,7 +123,7 @@ trace("Deleting cCollisionHandler");
 
 cLinkedNode<vProcess> *cKernel::Add(vProcess *lpNew)
 {
-	trace("cKernel::Add")
+	
 	if (!mpProcess)
 	{
 		mpProcess=new cLinkedList<vProcess>(lpNew);
@@ -145,7 +145,7 @@ cKernel *cKernel::Instance()
 
 cKernel::cKernel()
 {
-	trace("Entering cKernel::cKernel");
+	trace("Creating cKernel");
 	mpProcess=0;
 
 	mpCursor=0;

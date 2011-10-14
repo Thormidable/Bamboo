@@ -19,6 +19,13 @@ public:
    uint32 *mpLines;
 
 
+   uint32 miUniforms;
+   int32 *mpUniforms;
+
+   uint32 miAttributes;
+   int32 *mpAttributes;
+
+
 	cShaderArray();
 	~cShaderArray();
 
@@ -41,6 +48,8 @@ public:
 
 class cShader : public vShader
 {
+
+	friend class cShaderVariables;
 protected:
   ///This is the total number of characters in this shader code.
    uint32 miCharCount;
@@ -52,6 +61,13 @@ protected:
    uint32 miShaderID;
   ///This is the number of lines in the Shader code.
    uint32 miLines;
+
+   uint32 miUniforms;
+   int32 *mpUniforms;
+
+   uint32 miAttributes;
+   int32 *mpAttributes;
+
 public:
 	cShader(){};
 	///This will create a cShader() object from the data in cShaderArray().
@@ -60,7 +76,13 @@ public:
 	~cShader();
 	///This will return the OpenGL Shader ID.
 	uint32 ID(){return miShaderID;};
-};
+	///Will return the type of this shader.
+	uint8 Type(){return miShaderType;};
 
+
+
+
+//(GLint loc, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void *pointer
+};
 
 #endif

@@ -20,7 +20,7 @@ void cIMF::LoadIMF(const char *lpPath)
 
 	while(!FileStream.eof())
 	{
-		trace("In while loop")
+		
 
 		FileStream.read((char *) &liTemp,sizeof(uint32));
 		if(liTemp==IMF_TYPE_EOF) break;
@@ -166,7 +166,6 @@ void cIMF::LoadIMF(const char *lpPath)
 	}
 
 	FileStream.close();
-	trace("cIMF::LoadIMF leaving function")
 }
 
 

@@ -1281,3 +1281,8 @@ cMatrix4 cMatrix4::operator*(float *lVal)
  return mpTemp;
 	
 }
+
+void cMatrix4::CopyTranslation(cMatrix4 *lpOther)
+{
+memcpy(mpData,lpOther->mpData,sizeof(float)*16);
+}

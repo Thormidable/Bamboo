@@ -19,7 +19,6 @@ void cMeshArray::LoadIMF(ifstream &FileStream)
 	mpUV=&mpVertex[6*miVertex];
 	if(liFormat&IMF_MODEL_VERTEX)
 	{
-		printf("miVertex : %lu\n",miVertex);
 //	  mpVertex=new float[3*miVertex];
 	  FileStream.read((char *) mpVertex,3*sizeof(float)*miVertex);
 	} else mpVertex=0;
@@ -187,7 +186,7 @@ void cMesh::CreateNormalArray()
 
 void cMesh::BufferMesh()
 {
-	trace("cMesh::BufferMesh entering")
+	trace("Entering cMesh::BufferMesh")
 	//if (!mpBufferIDs) mpBufferIDs= new uint32[2];
 	glGenBuffers(1,&mBuffer1);
 	glGenBuffers(1,&mBuffer2);
@@ -198,12 +197,11 @@ void cMesh::BufferMesh()
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint16)*miFaces*3, mpFaces, GL_STATIC_DRAW);
 
-	trace("cMesh::BufferMesh leaving")
 }
 
 void cMesh::RenderMesh()
 {
-	printf("cMEsh::REnderMesh : Here\n");
+	
 	glBindBuffer(GL_ARRAY_BUFFER, mBuffer1);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
 

@@ -25,6 +25,23 @@ void cShaderArray::LoadIMF(ifstream &FileStream)
 	//Read Lines
 	mpLines=new uint32[liTemp];
 	FileStream.read((char *) mpLines,sizeof(uint32)*liTemp);
+	//Uniform Variable Loading
+	FileStream.read((char *) &miUniforms,sizeof(uint32));
+	if(miUniforms)
+	{
+		mpUniforms=new int32[miUniforms];
+		FileStream.read((char *) mpUniforms,sizeof(uint32)*miUniforms);
+	}
+	else mpUniforms=0;
+
+	//Attribute Variable Loading
+	FileStream.read((char *) &miAttributes,sizeof(uint32));
+	if(miAttributes)
+	{
+		mpAttributes=new int32[miAttributes];
+		FileStream.read((char *) mpAttributes,sizeof(uint32)*miAttributes);
+	}
+	else mpAttributes=0;
 	
 	//Read Character Number
 	FileStream.read((char *) &liTemp,sizeof(uint32));
@@ -36,6 +53,8 @@ void cShaderArray::LoadIMF(ifstream &FileStream)
 	FileStream.read(lpText,sizeof(char)*liTemp);
 	lpText[liTemp]=0;
 	SetText(lpText);
+
+
 }
 
 cShaderArray::cShaderArray()
@@ -58,6 +77,8 @@ cShader::~cShader()
 {
 if(mpShaderText) {delete []mpShaderText[0]; delete []mpShaderText; mpShaderText=0;}
 if(miShaderID) {glDeleteShader(miShaderID); miShaderID=0;}
+delete []mpUniforms; mpUniforms=0;
+delete []mpAttributes; mpAttributes=0;
 }
 
 cShader::cShader(cShaderArray *lpData)
@@ -102,7 +123,11 @@ int liID;
   }
  else trace("Shader "<<mpFileName<<" Compiled Successfully");
 
-
+ miAttributes=lpData->miAttributes;
+ mpAttributes=lpData->mpAttributes;
+ miUniforms=lpData->miUniforms;
+ mpUniforms=lpData->mpUniforms;
+ 
 };
 
 

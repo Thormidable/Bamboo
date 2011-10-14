@@ -8,10 +8,10 @@ using namespace std;
 cFile::cFile()
 {
 	mpFileName[0]=0;
-	trace("cFile::cFile")
+	
 	mpFileHandler=cFileHandler::Instance();
 	mpNode=mpFileHandler->Add(this);
-	trace("cFile::leaving function")
+	
 }
 
 cFile::~cFile()

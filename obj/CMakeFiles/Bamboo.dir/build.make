@@ -646,9 +646,33 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o.provides: CMakeFiles/
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o.provides.build: CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o
 .PHONY : CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o.provides.build
 
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: CMakeFiles/Bamboo.dir/flags.make
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/WTcShaderVariables.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_26)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Files/Shaders/WTcShaderVariables.cpp"
+
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/media/FileStore/My Documents/C++ Code/Bamboo/src/Files/Shaders/WTcShaderVariables.cpp" > CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.i
+
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/media/FileStore/My Documents/C++ Code/Bamboo/src/Files/Shaders/WTcShaderVariables.cpp" -o CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.s
+
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o.requires:
+.PHONY : CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o.requires
+
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o.provides: CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o.provides.build
+.PHONY : CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o.provides
+
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o.provides.build: CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o
+.PHONY : CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o.provides.build
+
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/PTL/WTRadix.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/PTL/WTRadix.cpp"
 
@@ -672,7 +696,7 @@ CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o.provides.build: CMakeFiles/Bamboo.dir/PT
 
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/WTcMouse.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Windows/EventHandler/WTcMouse.cpp"
 
@@ -696,7 +720,7 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o.provides.build: CMakeF
 
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/WTcKeyStore.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Windows/EventHandler/WTcKeyStore.cpp"
 
@@ -720,7 +744,7 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o.provides.build: CMa
 
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/WTcEventHandler.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Windows/EventHandler/WTcEventHandler.cpp"
 
@@ -744,7 +768,7 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o.provides.build:
 
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/WTcWindow.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_30)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Windows/WTcWindow.cpp"
 
@@ -768,7 +792,7 @@ CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o.provides.build: CMakeFiles/Bamboo.
 
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/WTcSync.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Windows/WTcSync.cpp"
 
@@ -792,7 +816,7 @@ CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o.provides.build: CMakeFiles/Bamboo.di
 
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/WTcCollisionObject.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_32)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Physics/WTcCollisionObject.cpp"
 
@@ -816,7 +840,7 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/WTcCollisionHandler.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Physics/WTcCollisionHandler.cpp"
 
@@ -840,7 +864,7 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/WTcCollisionList.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_34)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_35)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Physics/WTcCollisionList.cpp"
 
@@ -864,7 +888,7 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/WTcCameraMatrix4.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_35)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_36)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Maths/WTcCameraMatrix4.cpp"
 
@@ -888,7 +912,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o.provides.build: CMakeFiles/Ba
 
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/WTcMatrix4.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_36)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_37)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Maths/WTcMatrix4.cpp"
 
@@ -912,7 +936,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o.provides.build: CMakeFiles/Bamboo.d
 
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/WTcMatrixStack.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_37)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_38)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Maths/WTcMatrixStack.cpp"
 
@@ -936,7 +960,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o.provides.build: CMakeFiles/Bamb
 
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/WTMath.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_38)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_39)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Maths/WTMath.cpp"
 
@@ -960,7 +984,7 @@ CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o.provides.build: CMakeFiles/Bamboo.dir/M
 
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/WTcLightHandler.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_39)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_40)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/WTcLightHandler.cpp"
 
@@ -984,7 +1008,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o.provides.build: CMakeFiles/Ba
 
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/WTcLight.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_40)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_41)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/FX/WTcLight.cpp"
 
@@ -1008,7 +1032,7 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o.provides.build: CMakeFiles/Bamboo
 
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/WTcSpotLight.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_41)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_42)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/FX/WTcSpotLight.cpp"
 
@@ -1032,7 +1056,7 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o.provides.build: CMakeFiles/Ba
 
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/WTcMaterial.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_42)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_43)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/FX/WTcMaterial.cpp"
 
@@ -1056,7 +1080,7 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o.provides.build: CMakeFiles/Bam
 
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/WTcFog.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_43)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_44)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/FX/WTcFog.cpp"
 
@@ -1080,7 +1104,7 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o.provides.build: CMakeFiles/Bamboo.d
 
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/WTcRenderObject.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_44)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_45)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/WTcRenderObject.cpp"
 
@@ -1104,7 +1128,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o.provides.build: CMakeFiles/Ba
 
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/WTcRenderPointer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_45)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_46)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/WTcRenderPointer.cpp"
 
@@ -1128,7 +1152,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o.provides.build: CMakeFiles/B
 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/WTcModelList.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_46)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_47)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/Renderable/WTcModelList.cpp"
 
@@ -1152,7 +1176,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o.provides.build: CMake
 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/WTcTextureText.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_47)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_48)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/Renderable/WTcTextureText.cpp"
 
@@ -1176,7 +1200,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o.provides.build: CMa
 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/WTcLandscape.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_48)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_49)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/Renderable/WTcLandscape.cpp"
 
@@ -1200,7 +1224,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o.provides.build: CMake
 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/WTcImage.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_49)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_50)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/Renderable/WTcImage.cpp"
 
@@ -1224,7 +1248,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/WTcTexturedModel.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_50)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_51)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/Renderable/WTcTexturedModel.cpp"
 
@@ -1248,7 +1272,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o.provides.build: C
 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/WTcPoint.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_51)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_52)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/Renderable/WTcPoint.cpp"
 
@@ -1272,7 +1296,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/WTcLine.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_52)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_53)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/Renderable/WTcLine.cpp"
 
@@ -1296,7 +1320,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/WTcParticleGroup.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_53)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_54)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/Renderable/WTcParticleGroup.cpp"
 
@@ -1320,7 +1344,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o.provides.build: C
 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/WTcParticle.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_54)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_55)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/Renderable/WTcParticle.cpp"
 
@@ -1344,7 +1368,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o.provides.build: CMakeF
 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/WTcBeamMesh.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_55)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_56)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/Renderable/WTcBeamMesh.cpp"
 
@@ -1368,7 +1392,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o.provides.build: CMakeF
 
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/WTcCamera.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_56)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_57)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/WTcCamera.cpp"
 
@@ -1392,7 +1416,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o.provides.build: CMakeFiles/Bamboo.d
 
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Nodes/WTcRenderNode.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_57)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_58)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/Nodes/WTcRenderNode.cpp"
 
@@ -1416,7 +1440,7 @@ CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/WTcPainter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_58)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_59)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Camera/WTcPainter.cpp"
 
@@ -1440,7 +1464,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o.provides.build: CMakeFiles/Bamboo.
 
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/WTKernel.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_59)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_60)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Engine/WTKernel.cpp"
 
@@ -1464,7 +1488,7 @@ CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o.provides.build: CMakeFiles/Bamboo.di
 
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/WTcFrameRate.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_60)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_61)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Engine/WTcFrameRate.cpp"
 
@@ -1488,7 +1512,7 @@ CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o.provides.build: CMakeFiles/Bambo
 
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/WTcProcess.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_61)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_62)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Engine/Process/WTcProcess.cpp"
 
@@ -1512,7 +1536,7 @@ CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/WTcParentStack.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_62)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_63)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Engine/Process/WTcParentStack.cpp"
 
@@ -1536,7 +1560,7 @@ CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o.provides.build: CMakeF
 
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/WTcSignal.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_63)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_64)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Engine/WTcSignal.cpp"
 
@@ -1560,7 +1584,7 @@ CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o.provides.build: CMakeFiles/Bamboo.d
 
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/log.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_64)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_65)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Global/log.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Global/log.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Global/log.cpp"
 
@@ -1584,7 +1608,7 @@ CMakeFiles/Bamboo.dir/Global/log.cpp.o.provides.build: CMakeFiles/Bamboo.dir/Glo
 
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: CMakeFiles/Bamboo.dir/flags.make
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/WTSettings.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_65)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles" $(CMAKE_PROGRESS_66)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o -c "/media/FileStore/My Documents/C++ Code/Bamboo/src/Global/WTSettings.cpp"
 
@@ -1633,6 +1657,7 @@ Bamboo_OBJECTS = \
 "CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o" \
 "CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o" \
 "CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o" \
+"CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o" \
 "CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o" \
 "CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o" \
 "CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o" \
@@ -1702,6 +1727,7 @@ libBamboo.a: CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o
 libBamboo.a: CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o
 libBamboo.a: CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o
 libBamboo.a: CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o
+libBamboo.a: CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o
 libBamboo.a: CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o
 libBamboo.a: CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o
 libBamboo.a: CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o
@@ -1777,6 +1803,7 @@ CMakeFiles/Bamboo.dir/requires: CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o.r
 CMakeFiles/Bamboo.dir/requires: CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o.requires
 CMakeFiles/Bamboo.dir/requires: CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o.requires
 CMakeFiles/Bamboo.dir/requires: CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o.requires
+CMakeFiles/Bamboo.dir/requires: CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o.requires
 CMakeFiles/Bamboo.dir/requires: CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o.requires
 CMakeFiles/Bamboo.dir/requires: CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o.requires
 CMakeFiles/Bamboo.dir/requires: CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o.requires

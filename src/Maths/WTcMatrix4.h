@@ -242,7 +242,9 @@ double DistanceSq(float *lpOther);
 
 /// This will display the current matrix Textually
   void Display();
-
+///Will Copy the translation / Rotation matrix of the object lpOther;
+ void CopyTranslation(cMatrix4 *lpOther);
+  
   cMatrix4* Equals(cMatrix4* lpOther){memcpy(mpData,lpOther->Matrix(),sizeof(float)*16);return this;};
   cMatrix4* ThisMatrix(){return this;};
 

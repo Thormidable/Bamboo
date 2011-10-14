@@ -54,6 +54,7 @@ CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Textures/WTcTexture.h
@@ -147,6 +148,7 @@ CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Textures/WTcTexture.h
@@ -240,6 +242,7 @@ CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Audio/.././Files/Textures/WTcTexture.h
@@ -334,6 +337,7 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Textures/WTcTexture.h
@@ -428,6 +432,7 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Textures/WTcTexture.h
@@ -522,6 +527,7 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Document
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Textures/WTcTexture.h
@@ -616,6 +622,7 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/FX/../.././Files/Textures/WTcTexture.h
@@ -710,6 +717,7 @@ CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Nodes/../.././Files/Textures/WTcTexture.h
@@ -804,6 +812,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Textures/WTcTexture.h
@@ -898,6 +907,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Textures/WTcTexture.h
@@ -992,6 +1002,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Textures/WTcTexture.h
@@ -1086,6 +1097,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Textures/WTcTexture.h
@@ -1180,6 +1192,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o: /media/FileStore/My\
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModelList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Textures/WTcTexture.h
@@ -1274,6 +1287,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Textures/WTcTexture.h
@@ -1368,6 +1382,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Textures/WTcTexture.h
@@ -1462,6 +1477,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Textures/WTcTexture.h
@@ -1556,6 +1572,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/M
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Textures/WTcTexture.h
@@ -1650,6 +1667,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o: /media/FileStore
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTexturedModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/Renderable/../.././Files/Textures/WTcTexture.h
@@ -1743,6 +1761,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Textures/WTcTexture.h
@@ -1836,6 +1855,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Textures/WTcTexture.h
@@ -1929,6 +1949,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C+
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Textures/WTcTexture.h
@@ -2022,6 +2043,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Textures/WTcTexture.h
@@ -2115,6 +2137,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Docume
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Camera/.././Files/Textures/WTcTexture.h
@@ -2209,6 +2232,7 @@ CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ 
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Textures/WTcTexture.h
@@ -2303,6 +2327,7 @@ CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/Process/../.././Files/Textures/WTcTexture.h
@@ -2396,6 +2421,7 @@ CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Textures/WTcTexture.h
@@ -2489,6 +2515,7 @@ CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Textures/WTcTexture.h
@@ -2582,6 +2609,7 @@ CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Engine/.././Files/Textures/WTcTexture.h
@@ -2676,6 +2704,7 @@ CMakeFiles/Bamboo.dir/Files/Audio/WTcWav.cpp.o: /media/FileStore/My\ Documents/C
 CMakeFiles/Bamboo.dir/Files/Audio/WTcWav.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Audio/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcWav.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Audio/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcWav.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Audio/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Audio/WTcWav.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Audio/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcWav.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Audio/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcWav.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Audio/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcWav.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Audio/../.././Files/Textures/WTcTexture.h
@@ -2770,6 +2799,7 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileS
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/CollisionMeshes/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/CollisionMeshes/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/CollisionMeshes/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/CollisionMeshes/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/CollisionMeshes/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/CollisionMeshes/../.././Files/Textures/WTcTexture.h
@@ -2864,6 +2894,7 @@ CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Fonts/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Fonts/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Fonts/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Fonts/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Fonts/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Fonts/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Fonts/../.././Files/Textures/WTcTexture.h
@@ -2958,6 +2989,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStor
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Textures/WTcTexture.h
@@ -3052,6 +3084,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/M
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Textures/WTcTexture.h
@@ -3146,6 +3179,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/Fil
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Textures/WTcTexture.h
@@ -3240,6 +3274,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Textures/WTcTexture.h
@@ -3334,6 +3369,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStor
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Textures/WTcTexture.h
@@ -3428,6 +3464,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Textures/WTcTexture.h
@@ -3522,6 +3559,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Textures/WTcTexture.h
@@ -3616,6 +3654,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Textures/WTcTexture.h
@@ -3710,6 +3749,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Meshes/../.././Files/Textures/WTcTexture.h
@@ -3804,6 +3844,7 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Textures/WTcTexture.h
@@ -3898,6 +3939,7 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Textures/WTcTexture.h
@@ -3992,6 +4034,7 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Do
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Misc/../.././Files/Textures/WTcTexture.h
@@ -4086,6 +4129,7 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Docume
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Textures/WTcTexture.h
@@ -4180,6 +4224,7 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Textures/WTcTexture.h
@@ -4219,6 +4264,101 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Windows/WTcWindow.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../../WTDivWin.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/WTcShaderProgram.cpp
+
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Audio/WTcAudioBuffer.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Audio/WTcAudioDevice.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Audio/WTcAudioObject.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/FX/WTcFog.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/FX/WTcLight.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/FX/WTcMaterial.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/FX/WTcSpotLight.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/FX/WTvLight.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/Nodes/WTcRenderNode.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/Renderable/WTcBeamMesh.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/Renderable/WTcImage.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/Renderable/WTcLandscape.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/Renderable/WTcLine.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/Renderable/WTcModelList.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/Renderable/WTcParticle.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/Renderable/WTcParticleGroup.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/Renderable/WTcPoint.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/Renderable/WTcTextureText.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/Renderable/WTcTexturedModel.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/WTcCamera.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/WTcLightHandler.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/WTcPainter.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/WTcRenderObject.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/WTcRenderPointer.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Camera/WTvRenderObject.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Engine/../WTDivWin.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Engine/Process/WTcParentStack.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Engine/Process/WTcProcess.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Engine/Process/WTvProcess.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Engine/WTKernel.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Engine/WTcBase.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Engine/WTcFrameRate.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Engine/WTcSignal.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Audio/WTcWav.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/CollisionMeshes/WTvCollisionData.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Fonts/WTcFont.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Fonts/WTvFont.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Meshes/MeshClasses/WTcCluster.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Meshes/MeshClasses/WTcFace.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Meshes/MeshClasses/WTcFullFaceData.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Meshes/MeshClasses/WTcPlane.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Meshes/MeshClasses/WTcPolygon.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Meshes/MeshClasses/WTcVertex.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTcMesh.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTcmLandscape.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTvMesh.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTvmLandscape.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcMeshTree.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcMeshTreeNode.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcReferenceList.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Misc/WTvMeshTree.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTcShader.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTcShaderVariables.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTvShader.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Shaders/WTvShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Textures/WTcTexture.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/Textures/WTvTexture.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/WTString.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/WTcFile.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/WTcFileHandler.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/WTcIMFLoader.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Files/WTvFile.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Global/CException.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Global/GlobalPointers.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Global/IMFDefinitions.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Global/WTDefinitions.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Global/WTGameSettings.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Global/WTSetDefinitions.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Global/WTSettings.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Global/WTcFlags.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Global/log.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Maths/WTMath.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Maths/WTcCameraMatrix4.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Maths/WTcMatrix4.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Maths/WTcMatrixStack.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././PTL/WTLLTemplate.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././PTL/WTLimitedList.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././PTL/WTMinLinkedList.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././PTL/WTRadix.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././PTL/WTcPushPopStack.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Physics/WTcCollisionHandler.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Physics/WTcCollisionList.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Physics/WTcCollisionObject.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Windows/EventHandler/WTcEventHandler.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Windows/EventHandler/WTcKeyStore.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Windows/EventHandler/WTcMouse.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Windows/WTWindowsKeyCodes.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Windows/WTXWindowsKeyCodes.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Windows/WTcSync.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../.././Windows/WTcWindow.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/../../WTDivWin.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Shaders/WTcShaderVariables.cpp
 
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Textures/../.././Audio/WTcAudioBuffer.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Textures/../.././Audio/WTcAudioDevice.h
@@ -4274,6 +4414,7 @@ CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Textures/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Textures/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Textures/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Textures/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Textures/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Textures/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/Textures/../.././Files/Textures/WTcTexture.h
@@ -4367,6 +4508,7 @@ CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ 
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Textures/WTcTexture.h
@@ -4460,6 +4602,7 @@ CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ C
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Textures/WTcTexture.h
@@ -4553,6 +4696,7 @@ CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Textures/WTcTexture.h
@@ -4646,6 +4790,7 @@ CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Files/.././Files/Textures/WTcTexture.h
@@ -4739,6 +4884,7 @@ CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C+
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Textures/WTcTexture.h
@@ -4832,6 +4978,7 @@ CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Global/.././Files/Textures/WTcTexture.h
@@ -4925,6 +5072,7 @@ CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Co
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Textures/WTcTexture.h
@@ -5018,6 +5166,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Textures/WTcTexture.h
@@ -5111,6 +5260,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Textures/WTcTexture.h
@@ -5204,6 +5354,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Maths/.././Files/Textures/WTcTexture.h
@@ -5297,6 +5448,7 @@ CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Cod
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/PTL/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/PTL/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/PTL/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/PTL/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/PTL/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/PTL/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/PTL/.././Files/Textures/WTcTexture.h
@@ -5390,6 +5542,7 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Do
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Textures/WTcTexture.h
@@ -5483,6 +5636,7 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Textures/WTcTexture.h
@@ -5576,6 +5730,7 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Physics/.././Files/Textures/WTcTexture.h
@@ -5670,6 +5825,7 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileSto
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Textures/WTcTexture.h
@@ -5764,6 +5920,7 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/M
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Textures/WTcTexture.h
@@ -5858,6 +6015,7 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ 
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/EventHandler/../.././Files/Textures/WTcTexture.h
@@ -5951,6 +6109,7 @@ CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Textures/WTcTexture.h
@@ -6044,6 +6203,7 @@ CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C+
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Misc/WTvMeshTree.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Shaders/WTcShader.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Shaders/WTcShaderVariables.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Shaders/WTvShader.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Shaders/WTvShaderProgram.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/src/Windows/.././Files/Textures/WTcTexture.h

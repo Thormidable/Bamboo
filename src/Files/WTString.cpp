@@ -48,6 +48,31 @@ bool Match(char *lcPath,char *lcFind)
  else return 1;
 }
 
+void LineCopy(char*lcTo,char *lcFrom,char lcEnd)
+{
+ while(lcFrom[0] && lcFrom[0]!=lcEnd)
+ {
+  lcTo[0]=lcFrom[0];
+  ++lcTo; ++lcFrom;
+ }
+ lcTo[0]=0;
+}
+
+void LineCopy(char*lcTo,char *lcFrom,const char *lcEnd)
+{
+ bool lbContinue=true;
+ uint8 liStep=0;
+ while(lcEnd[liStep]){if(lcFrom[0]==lcEnd[liStep] || !lcFrom) lbContinue=false; ++liStep;}
+ while(lbContinue)
+ {
+  lcTo[0]=lcFrom[0];
+  ++lcTo; ++lcFrom;
+  uint8 liStep=0;
+ while(lcEnd[liStep]){if(lcFrom[0]==lcEnd[liStep] || !lcFrom) lbContinue=false; ++liStep;}
+ }
+ lcTo[0]=0;
+}
+
 void LineCopy(char*lcTo,char *lcFrom)
 {
  while(lcFrom[0]!=0x0A && lcFrom[0])

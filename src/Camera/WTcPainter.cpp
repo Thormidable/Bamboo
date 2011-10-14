@@ -7,7 +7,7 @@ cPainter *cPainter::mpInstance=0;
 
 cPainter *cPainter::Instance()
 {
- printf("Using cPainter\n");
+ 
  if(!mpInstance) { mpInstance=new cPainter(); mpInstance->Resize(WT_PAINTER_STARTING_SIZE);}
  return mpInstance;
 }

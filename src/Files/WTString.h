@@ -9,6 +9,8 @@ char *Find(char* lcPath,char lcFind);
 bool Match(char* lcPath,char *lcFind);
 /// This will copy the current Line (up to a EOL character - 0x0A or 0x00) from the pointer lcFrom to the pointer lcTo.
 void LineCopy(char*lcTo,char *lcFrom);
+void LineCopy(char*lcTo,char *lcFrom,char lcEnd);
+void LineCopy(char*lcTo,char *lcFrom,const char *lcEnd);
 /// This will return the number of characters from the start of the string pointed to by lcPath until the character lcFind.
 uint32 CharCount(char *lcPath,char lcFind);
 

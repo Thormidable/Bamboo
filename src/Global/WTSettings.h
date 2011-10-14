@@ -3,6 +3,7 @@
 
 class cSettings
 {
+
 	static void SetupVariables();
 	
 public:
@@ -10,7 +11,7 @@ public:
 	~cSettings(){};
 	virtual void Settings(){};
 
-	//friend class template cMainThread;
+	friend class cBase;
 	template<class cX,class cS> friend class cMainThread;
 };
 /**

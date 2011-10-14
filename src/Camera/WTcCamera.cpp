@@ -14,7 +14,7 @@ cCamera::cCamera()
 
 cCamera::~cCamera()
 {
- trace("Creating cCameraPainter::cCameraPainter()");
+ trace("Destroying cCamera");
  delete mpRenderList; mpRenderList=0;
 }
 
@@ -28,7 +28,7 @@ cCameraPainter::cCameraPainter()
 
 void cCamera::Render()
 {
-	printf("Camera Not Painter Render\n");
+	
 
 	//This will render the objects in their current render tree order
  glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -46,7 +46,7 @@ void cCamera::Render()
 
 void cCameraPainter::Render()
 {
-	printf("Camera Painter Algorithm Render\n");
+	
 	
 	ResetGLMatrix();
 	cPainter::Instance()->Reset();

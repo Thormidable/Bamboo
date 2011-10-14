@@ -28,7 +28,7 @@
 	#define float32 float
 
 	#define psize uint32
-	#define basebits 32
+	#define pbits (sizeof(uint*)*8)
 #endif
 
 #if WT_OS_BITS==OS_64_BIT
@@ -52,7 +52,7 @@
 	#define float32 float
 
 	#define psize uint64
-	#define pbits 64
+	#define pbits (sizeof(uint*)*8)
 #endif
 
 #define _PROCESS(TYPE) class TYPE : cProcess
@@ -224,6 +224,13 @@
 	#define _START_PROGRAM(TYPE,SETTINGS,INSTANCE) cMainThread<TYPE,SETTINGS>::Start(INSTANCE)
 	///Function to easily access the Key state Array.
 	#define _KEY cEventHandler::Instance()->Key.WinKey
+	
+	#if WT_OS_BITS==OS_32_BIT
+		#define UINT_MAX 0xFFFFFFFF
+	#endif
+	#if WT_OS_BITS==OS_64_BIT
+		#define UINT_MAX 0xFFFFFFFFFFFFFFFF
+	#endif
 #endif
 
 #if WT_OS_TYPE==OS_LINUX
