@@ -139,9 +139,10 @@
 ///This is a macro to destroy Process and Render objects.
 #define _KILL(Pointer) Pointer->Signal(_S_KILL)
 
-#define _SLEEP(Process) Process->Signal(_S_SLEEP);
-#define _WAKE(Process) Process->Signal(_S_WAKE);
+#define _SLEEP(Process) Process->Signal(_S_SLEEP)
+#define _WAKE(Process) Process->Signal(_S_WAKE)
 
+#define _ADD_UNIFORM(TYPE,VAR) AddUniform<TYPE>(VAR)
 
 ///This is a macro to declare the start of a Collision Loop cycling valid collision processes. It will cycle every valid process pointer.
 #define _COLLISION_PROCESS_LOOP(lpList,lpVar) for(lpVar=lpList->NextCollisionP();lpVar;lpVar=lpList->NextCollisionP())

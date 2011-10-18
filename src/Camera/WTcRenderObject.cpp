@@ -17,13 +17,14 @@ cRenderObject::cRenderObject()
 {
  mpRenderer=cCamera::Instance()->RenderList();
  mpNode=mpRenderer->Add(this);
+ mpVariables=0;
  Shader(0);
 Initialise();
 }
 
 cRenderObject::cRenderObject(cRenderNode *lpNode)
 {
-
+ mpVariables=0;
   mpRenderer=lpNode;
   mpNode=lpNode->Add(this);
   Shader(0);
@@ -77,6 +78,8 @@ cLinkedNode<vRenderObject> *cRenderObject::SetRenderNode(cRenderNode *lpRenderer
 void cRenderObject::AdditionalRenderFunctions()
 {
  UpdateCache();
+ SetShaderVariables();
+	
 }
 
 void cRenderObject::AdditionalKillFunctionality()
@@ -85,6 +88,8 @@ void cRenderObject::AdditionalKillFunctionality()
 
 	if(Renderer() && mpNode) Renderer()->Remove(mpNode);else trace("Cannot _S_Kill this Node, Is it the Camera List?\n");
 }
+
+
 
 void cRenderObject::AdditionalSleepFunctionality()
 {
@@ -136,6 +141,12 @@ void cRenderObject::UpdateCache()
 void cRenderObject::Shader(vShaderProgram *lpShader)
 {
   mpShader=lpShader;
+  if(mpVariables)
+  {
+	if(mpShader) mpVariables->Link(mpShader);
+	else mpVariables->ClearLink();
+
+  }
   
 }
 
@@ -163,3 +174,21 @@ float *cRenderObject::GetGlobalPos()
   return mmCache.Position();
 
 };
+
+cVariableStore *cRenderObject::Variables()
+{
+ if(!mpVariables) mpVariables=new cVariableStore(mpShader);
+ return mpVariables;
+
+}
+
+void cRenderObject::SetShaderVariables()
+{
+ if(mpVariables)
+ {
+  mpVariables->WriteUniforms();
+  mpVariables->WriteAttributes();
+ }
+
+}
+

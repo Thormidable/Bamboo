@@ -214,3 +214,7 @@ float *cRenderNode::GetGlobalPos()
   
 };
 
+cVariableStore *cRenderNode::Variables()
+{
+ return 0;
+}

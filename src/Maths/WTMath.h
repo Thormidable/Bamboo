@@ -1,5 +1,34 @@
 #ifndef __WTMATH_H__
 #define __WTMATH_H__
+///This is a 1 Dimensional float vector object
+class c1DVf
+{
+public:
+	float v;
+	float operator=(float lfFloat);
+	float *operator=(float *lfFloat);
+	c1DVf operator=(c1DVf Other);
+	c1DVf *operator=(c1DVf *Other);
+
+	float operator+(float lfFloat);
+	float operator+(c1DVf Other);
+
+	float operator-(float lfFloat);
+	float operator-(c1DVf Other);
+
+	float operator*(float lfFloat);
+	float operator*(c1DVf Other);
+
+	float operator/(float lfFloat);
+	float operator/(c1DVf Other);
+
+	void Normalise();
+
+	float Magnatude();
+	
+
+};
+
 ///This is a 2 Dimensional float vector object.
 class c2DVf
 {
@@ -27,14 +56,7 @@ class c3DVf
 {
 public:
 	float v[3];
-	/*
-	/// This stores the x vector for this object.
-       float x;
-	/// This stores the y vector for this object.
-	float y;
-	/// This stores the z vector for this object.
-	float z;
-	*/
+
 	/// This will return the absolute size of this vector.
        float Magnitude();
 	/// This will make the magnitude of this vector 1 while maintaining its direction.
@@ -49,6 +71,22 @@ public:
        
        c3DVf operator*(c3DVf lvOther);
        float &operator[](uint32 liPos){return v[liPos];};
+};
+
+class c4DVf
+{
+public:
+	float v[4];
+
+       c4DVf *operator=(c4DVf *lpValue);
+       c4DVf operator=(c4DVf lpValue);
+       float *operator=(float *lpValue);
+       c4DVf operator+=(c4DVf lpValue);
+       c4DVf *operator+=(c4DVf *lpValue);
+
+       float &operator[](uint32 liPos);
+
+
 };
 
 /// This is a 2 Dimensional integer vector.

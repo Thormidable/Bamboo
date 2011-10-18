@@ -21,6 +21,7 @@ class cRenderNode;
 */
 class cRenderObject : public vRenderObject
 {
+
  ///This pointer points to the cRenderNode which owns this cRenderObject.
  cRenderNode *mpRenderer;
  ///This pointer points to the cLinkedNode which owns this cRenderObject. (cLinkedNode fors a linked list owned by mpRenderer.
@@ -29,6 +30,8 @@ class cRenderObject : public vRenderObject
  ///A Pointer to the cCollisionObject linked to this program.
  cCollisionObject *mpCollisionObject;
 
+ cVariableStore *mpVariables;
+ 
  virtual void Initialise();
 
 protected:
@@ -39,7 +42,8 @@ protected:
 
  	/// The current shader that this program will use.
 	vShaderProgram *mpShader;
- 
+
+	void SetShaderVariables();
 public:
 
 	/// Will set the shader this object will use.
@@ -98,6 +102,36 @@ public:
   float *GetPos();
   /// This will return the global position of the object as rendered at the end of last frame. Note, this will contain the camera matrix.
   float *GetGlobalPos();
+
+  cVariableStore *Variables();
+
+  template <class cType> cType* AddUniform(uint32 liPos);
+  template <class cType> cType* AddAttribute(uint32 liPos);
+  template <class cType> cType* AddUniform(string name);
+  template <class cType> cType* AddAttribute(string name);
+
 };
+
+template <class cType> cType* cRenderObject::AddUniform(uint32 liPos)
+{
+ return Variables()->CreateUniform(liPos,new cType);
+}
+
+template <class cType> cType* cRenderObject::AddAttribute(uint32 liPos)
+{
+ return Variables()->CreateAttribute(liPos,new cType);
+}
+
+template <class cType> cType* cRenderObject::AddUniform(string name)
+{
+ return Variables()->CreateUniform(mpShader->ShaderVariables()->GetUniformPosition(name),new cType);
+}
+
+template <class cType> cType* cRenderObject::AddAttribute(string name)
+{
+ return Variables()->CreateAttribute(mpShader->ShaderVariables()->GetAttributePosition(name),new cType);
+}
+
+
 
 #endif

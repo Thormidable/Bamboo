@@ -44,7 +44,7 @@ public:
  /// This will allow the cShaderProgram() to extract a list of string references for Shaders. It will then find pointers to the cShader() objects and compile the program using them.
  void LoadIMF(ifstream &FileStream);
 
- cShaderVariables *ShaderVariables(uint16 liShader);
+ cShaderVariables *ShaderVariables();
 
 
 

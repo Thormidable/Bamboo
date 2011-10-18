@@ -50,6 +50,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/media/FileStore/My Documents/C++ Code/Bamboo/src/Files/Shaders/WTcShader.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/src/Files/Shaders/WTcShaderProgram.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/src/Files/Shaders/WTcShaderVariables.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o"
+  "/media/FileStore/My Documents/C++ Code/Bamboo/src/Files/Shaders/WTcUserDefinedShaderVariable.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/src/Files/Textures/WTcTexture.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/src/Files/WTString.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Files/WTString.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/src/Files/WTcFile.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o"

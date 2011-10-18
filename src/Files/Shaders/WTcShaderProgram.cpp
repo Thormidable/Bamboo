@@ -13,7 +13,7 @@ void cShaderProgram::LoadIMF(ifstream &FileStream)
  mcList.LoadIMF(FileStream);
 
  mpShader = new cShader*[Size()];
- mpVariables = new cShaderVariables[Size()];
+ mpVariables = new cShaderVariables;
  
  for(liBuff=0;liBuff<mcList.Size();++liBuff)
   {
@@ -44,7 +44,7 @@ cShaderProgram::~cShaderProgram()
 glUseProgram(0);
  if(miProgramID){glDeleteProgram(miProgramID); miProgramID=0;}
  delete []mpShader; mpShader=0;
- delete []mpVariables; mpVariables=0;
+ delete mpVariables; mpVariables=0;
 }
 
 void cShaderProgram::AttachShader(cShader *lpShader)
@@ -83,11 +83,8 @@ void cShaderProgram::Link()
  {
 	 trace("Shader Program Linked");
 	 Use();
-	 for(liStatus=0;liStatus<Size();++liStatus)
-	 {
-		mpVariables[liStatus].GetAttributeLocations(miProgramID,mpShader[liStatus]);
-		mpVariables[liStatus].GetUniformLocations(miProgramID,mpShader[liStatus]);
-	 }
+ 	 mpVariables->GetAttributeLocations(miProgramID,mpShader,Size());
+	 mpVariables->GetUniformLocations(miProgramID,mpShader,Size());
  }
 }
 
@@ -97,9 +94,7 @@ void cShaderProgram::Use()
 }
 
 
-cShaderVariables *cShaderProgram::ShaderVariables(uint16 liShader)
+cShaderVariables *cShaderProgram::ShaderVariables()
 {
-	if(mpVariables) return &mpVariables[liShader];
-	return 0;
-	
+	return mpVariables;	
 }

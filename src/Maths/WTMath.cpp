@@ -144,3 +144,64 @@ float c3DVf::Dot(c3DVf lpValue)
 {
 	return v[0]*lpValue.v[0]+v[1]*lpValue.v[1]+v[2]*lpValue.v[2];	
 }
+
+c4DVf *c4DVf::operator=(c4DVf *lpValue)
+ {
+ 		memcpy(v,lpValue->v,sizeof(float)*4);
+		return lpValue;
+}
+c4DVf c4DVf::operator=(c4DVf lpValue)
+{
+ 		memcpy(v,lpValue.v,sizeof(float)*4);
+		return lpValue;
+
+}
+
+float *c4DVf::operator=(float *lpValue)
+{
+ memcpy(v,lpValue,sizeof(float)*4);
+ return lpValue;
+}
+
+c4DVf c4DVf::operator+=(c4DVf lpValue)
+{
+ v[0]+=lpValue.v[0];
+ v[1]+=lpValue.v[1];
+ v[2]+=lpValue.v[2];
+ v[3]+=lpValue.v[3];
+ return *this;
+}
+c4DVf *c4DVf::operator+=(c4DVf *lpValue)
+{
+ v[0]+=lpValue->v[0];
+ v[1]+=lpValue->v[1];
+ v[2]+=lpValue->v[2];
+ v[3]+=lpValue->v[3];
+ return this;
+
+}
+
+float &c4DVf::operator[](uint32 liPos){return v[liPos];};
+
+
+	float c1DVf::operator=(float lfFloat){v=lfFloat; return lfFloat;};
+	float *c1DVf::operator=(float *lfFloat){v=lfFloat[0]; return lfFloat;};
+	c1DVf c1DVf::operator=(c1DVf Other){v=Other.v; return Other;};
+	c1DVf *c1DVf::operator=(c1DVf *Other){v=Other->v; return Other;};
+
+	float c1DVf::operator/(float lfFloat){return v/lfFloat;};
+	float c1DVf::operator/(c1DVf Other){return v/Other.v;};
+
+	float c1DVf::operator-(float lfFloat){return v-lfFloat;};
+	float c1DVf::operator-(c1DVf Other){return v-Other.v;};
+
+	float c1DVf::operator*(float lfFloat){return v*lfFloat;};
+	float c1DVf::operator*(c1DVf Other){return v*Other.v;};
+
+	float c1DVf::operator+(float lfFloat){return v+lfFloat;};
+	float c1DVf::operator+(c1DVf Other){return v+Other.v;};
+
+	void c1DVf::Normalise(){v=1.0f;};
+
+	float c1DVf::Magnatude(){return v;};
+	

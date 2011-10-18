@@ -79,6 +79,8 @@ public:
 	float *GetPos();
 	/// This will return the global position of the object as rendered at the end of last frame. Note, this will contain the camera matrix.
 	float *GetGlobalPos();
+
+	cVariableStore *Variables();
 };
 
 #endif

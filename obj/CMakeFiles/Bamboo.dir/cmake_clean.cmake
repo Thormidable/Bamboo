@@ -25,6 +25,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o"
   "CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o"
   "CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o"
+  "CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o"
   "CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o"
   "CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o"
   "CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o"

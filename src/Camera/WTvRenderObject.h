@@ -44,6 +44,9 @@ virtual void RenderPainter()=0;
   /// This will return the global position of the object as rendered at the end of last frame. Note, this will contain the camera matrix.
   virtual float *GetGlobalPos()=0;
 
+  
+  virtual cVariableStore *Variables()=0;
+
 };
 
 #endif

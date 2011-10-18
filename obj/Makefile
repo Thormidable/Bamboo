@@ -1212,6 +1212,30 @@ Files/Shaders/WTcShaderVariables.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.s
 .PHONY : Files/Shaders/WTcShaderVariables.cpp.s
 
+Files/Shaders/WTcUserDefinedShaderVariable.o: Files/Shaders/WTcUserDefinedShaderVariable.cpp.o
+.PHONY : Files/Shaders/WTcUserDefinedShaderVariable.o
+
+# target to build an object file
+Files/Shaders/WTcUserDefinedShaderVariable.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o
+.PHONY : Files/Shaders/WTcUserDefinedShaderVariable.cpp.o
+
+Files/Shaders/WTcUserDefinedShaderVariable.i: Files/Shaders/WTcUserDefinedShaderVariable.cpp.i
+.PHONY : Files/Shaders/WTcUserDefinedShaderVariable.i
+
+# target to preprocess a source file
+Files/Shaders/WTcUserDefinedShaderVariable.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.i
+.PHONY : Files/Shaders/WTcUserDefinedShaderVariable.cpp.i
+
+Files/Shaders/WTcUserDefinedShaderVariable.s: Files/Shaders/WTcUserDefinedShaderVariable.cpp.s
+.PHONY : Files/Shaders/WTcUserDefinedShaderVariable.s
+
+# target to generate assembly for a file
+Files/Shaders/WTcUserDefinedShaderVariable.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.s
+.PHONY : Files/Shaders/WTcUserDefinedShaderVariable.cpp.s
+
 Files/Textures/WTcTexture.o: Files/Textures/WTcTexture.cpp.o
 .PHONY : Files/Textures/WTcTexture.o
 
@@ -1839,6 +1863,9 @@ help:
 	@echo "... Files/Shaders/WTcShaderVariables.o"
 	@echo "... Files/Shaders/WTcShaderVariables.i"
 	@echo "... Files/Shaders/WTcShaderVariables.s"
+	@echo "... Files/Shaders/WTcUserDefinedShaderVariable.o"
+	@echo "... Files/Shaders/WTcUserDefinedShaderVariable.i"
+	@echo "... Files/Shaders/WTcUserDefinedShaderVariable.s"
 	@echo "... Files/Textures/WTcTexture.o"
 	@echo "... Files/Textures/WTcTexture.i"
 	@echo "... Files/Textures/WTcTexture.s"

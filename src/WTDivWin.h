@@ -997,6 +997,7 @@
 #include "./Files/Shaders/WTcShaderVariables.h"
 #include "./Files/Shaders/WTvShaderProgram.h"
 #include "./Files/Shaders/WTcShaderProgram.h"
+#include "./Files/Shaders/WTcUserDefinedShaderVariable.h"
 
 
 #include "./Camera/FX/WTcFog.h"
