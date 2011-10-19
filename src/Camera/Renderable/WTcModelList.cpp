@@ -186,7 +186,7 @@ float Temp[16];
 void cModelList::RenderPainter(uint8 liLevel)//vMesh *lpMesh)
 {
   PrepareMaterial();
-  mpList[liLevel].mpMesh->RenderMesh();
+  mpList[liLevel].mpMesh->RenderMesh(Variables());
 }
 
 void cModelList::Render()
@@ -254,7 +254,7 @@ void cModelList::RenderCode(cModelListNode *lpNode)
   if(lpNode->mpShader) lpNode->mpShader->Use();
   else _USE_FIXED_FUNCTION();
   
- lpNode->mpMesh->RenderMesh();
+ lpNode->mpMesh->RenderMesh(Variables());
 
 }
 

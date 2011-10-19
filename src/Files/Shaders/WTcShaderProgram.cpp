@@ -61,6 +61,10 @@ void cShaderProgram::DetachShader(cShader *lpShader)
 void cShaderProgram::Link()
 {
  int liStatus;
+/* 	 Use();
+ 	 mpVariables->GetAttributeLocations(miProgramID,mpShader,Size());
+	 mpVariables->GetUniformLocations(miProgramID,mpShader,Size());*/
+ mpVariables->BindAttributes(miProgramID);
  glLinkProgram(miProgramID);
  glGetProgramiv(miProgramID,GL_LINK_STATUS,&liStatus);
  if(!liStatus)
@@ -78,7 +82,7 @@ void cShaderProgram::Link()
 	 
 	 trace("Shader Program failed to Link");
 	 
-}
+ }
  else
  {
 	 trace("Shader Program Linked");

@@ -116,7 +116,7 @@ void PositionY(float lfY);
 void BufferMesh();
 
 // This will render the mesh directly from graphics memory.
-void RenderMesh();
+void RenderMesh(cVariableStore *lpNew);
 
 /// This will return the size of the Mesh. Size being the radius of the sphere required to contain the cMesh object.
 float GetSize();

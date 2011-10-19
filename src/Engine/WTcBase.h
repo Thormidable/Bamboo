@@ -19,6 +19,8 @@ public:
 		mpSettings->Settings();
 		if(mpCast) cSettings::SetupVariables();
 		gpWindow=new cWindow(hInstance);
+
+		cMainThread::GetGLVersion();
 		
 		gpTimer=new cSync();
 		
@@ -35,6 +37,37 @@ public:
 		delete cKernel::Instance();
 		return gpWindow->msg.wParam;
 	};
+
+	static void GetGLVersion()
+	{
+int major,minor;
+	// for all versions
+      char* verGL = (char*)glGetString(GL_VERSION); // ver = "3.2.0"
+
+      major = verGL[0] - '0';
+      if( major >= 3)
+      {
+       // for GL 3.x
+       glGetIntegerv(GL_MAJOR_VERSION, &major); // major = 3
+       glGetIntegerv(GL_MINOR_VERSION, &minor); // minor = 2
+      }
+      else
+      {
+            minor = verGL[2] - '0';
+      }
+
+      // GLSL
+      char *verSHDR = (char*)glGetString(GL_SHADING_LANGUAGE_VERSION);
+
+    trace("***************************************************************************");
+	trace("Renderer: " << glGetString(GL_RENDERER));
+	trace("GL Version : " << verGL);
+	trace("Shading Language : " << verSHDR);
+	trace("***************************************************************************");
+
+
+	};
+
 	
 	
 };
@@ -64,9 +97,16 @@ public:
 		mpCast->cSettings::Settings();
 		mpSettings->Settings();
 		if(mpCast) cSettings::SetupVariables();
-			
+
+		TRACE("calling glewInit to initialise OpenGL");
+	
+
 			TRACE("Setting up cWindow...");
 			gpWindow=new cWindow();
+
+
+			
+//			cMainThread::GetGLVersion();
 			
 			TRACE("Setting up cSync...");
 			gpTimer=new cSync();
@@ -74,8 +114,8 @@ public:
 			TRACE("Setting up cEventHandler...");
 			cEventHandler::Instance();
 
-			TRACE("calling glewInit to initialise OpenGL");
-			glewInit();
+		glewInit();
+			
 			
 			TRACE("Creating the cCore process");
 			new cX;
@@ -100,11 +140,40 @@ public:
 		TRACE("Exiting program and reporting success")
 		return EXIT_SUCCESS;
 	};
-	
+
+	static void GetGLVersion()
+	{
+int major,minor;
+	// for all versions
+      char* verGL = (char*)glGetString(GL_VERSION); // ver = "3.2.0"
+
+      major = verGL[0] - '0';
+      if( major >= 3)
+      {
+       // for GL 3.x
+       glGetIntegerv(GL_MAJOR_VERSION, &major); // major = 3
+       glGetIntegerv(GL_MINOR_VERSION, &minor); // minor = 2
+      }
+      else
+      {
+            minor = verGL[2] - '0';
+      }
+
+      // GLSL
+      char *verSHDR = (char*)glGetString(GL_SHADING_LANGUAGE_VERSION);
+
+    trace("***************************************************************************");
+	trace("Renderer: " << glGetString(GL_RENDERER));
+	trace("GL Version : " << verGL);
+	trace("Shading Language : " << verSHDR);
+	trace("***************************************************************************");
+
+	};
 	
 };
 
 #endif
+
 
 
 #endif

@@ -34,7 +34,7 @@ void cTexturedModel::RenderPainter(uint8 liLevel)
  {
   PrepareMaterial();
   AdditionalRenderFunctions();
-  mpMesh->RenderMesh();
+  mpMesh->RenderMesh(Variables());
  }
 }
 
@@ -65,12 +65,15 @@ void cTexturedModel::Render()
   glEnableClientState(GL_VERTEX_ARRAY);
   glEnableClientState(GL_TEXTURE_COORD_ARRAY);
   glEnableClientState(GL_NORMAL_ARRAY);
+
+  AdditionalRenderFunctions();
   
-  AdditionalRenderFunctions(); 
-  
-    if(mpShader) mpShader->Use();
+  if(mpShader) mpShader->Use();
   else _USE_FIXED_FUNCTION();
-  mpMesh->RenderMesh();
+
+  
+  
+  mpMesh->RenderMesh(Variables());
  
 }
 
