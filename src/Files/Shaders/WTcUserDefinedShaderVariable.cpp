@@ -1,16 +1,21 @@
 #include "../../WTDivWin.h"
 
+void cUserVariable::SetID(int32 liID)
+{
+ miID=liID;
+}
+
 cAttributeStore::cAttributeStore()
 {
  mpData=0;
  glGenBuffers(1, &miBuffer);
 }
 
-void cAttributeStore::Data(float *lpmpData)
+void cAttributeStore::Data(float *lpmpData,uint32 liElements)
 {
  		mpData=lpmpData;
- 		glBindBuffer(GL_ARRAY_BUFFER,miBuffer);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 4, mpData, GL_STATIC_DRAW);
+		miElements=liElements;
+		this->Buffer();
 }
 
 cVariableStore::cVariableStore(vShaderProgram *lpProg)
@@ -60,24 +65,9 @@ void cVariableStore::WriteUniforms()
   uint32 liCount;
   for(liCount=0;liCount<miUniforms;++liCount)
   {
-	 if(mpUniform[liCount]) mpUniform[liCount]->Write(mpUniformID[liCount]);
+	 if(mpUniform[liCount]) mpUniform[liCount]->Write();
 	 
   }
- }
-}
-
-void cVariableStore::EnableAttributeArrays()
-{
-if(mpAttribute)
- {
- uint32 liCount;
- for(liCount=0;liCount<miAttributes;++liCount)
- {
-	if(mpAttribute[liCount])
-	{
-		glEnableVertexAttribArray(mpAttributeID[liCount]);
-	}
- }
  }
 }
 
@@ -88,11 +78,7 @@ void cVariableStore::WriteAttributes()
  uint32 liCount;
  for(liCount=0;liCount<miAttributes;++liCount)
  {
-	if(mpAttribute[liCount])
-	{
-		
-		mpAttribute[liCount]->Write(mpAttributeID[liCount]);
-	}
+	if(mpAttribute[liCount]) mpAttribute[liCount]->Write();
  }
  }
 }
@@ -117,59 +103,86 @@ void cVariableStore::Link(vShaderProgram *lpProg)
 
 
 
-void cUniformVector1::Write(int32 liID)
+void cUniformVector1::Write()
 {
-	glUniform1f(liID,Data);
+	glUniform1f(miID,Data);
 }
-void cUniformVector2::Write(int32 liID)
+void cUniformVector2::Write()
 {
-	glUniform2fv(liID,1,Data.v);
+	glUniform2fv(miID,1,Data.v);
 }
-void cUniformVector3::Write(int32 liID)
+void cUniformVector3::Write()
 {
-	glUniform3fv(liID,1,Data.v);
+	glUniform3fv(miID,1,Data.v);
 }
-void cUniformVector4::Write(int32 liID)
+void cUniformVector4::Write()
 {
-	glUniform4fv(liID,1,Data.v);
+	glUniform4fv(miID,1,Data.v);
 }
-void cUniformMatrix::Write(int32 liID)
+void cUniformMatrix::Write()
 {
-	glUniformMatrix4fv(liID,1,0,Data.Matrix());
+	glUniformMatrix4fv(miID,1,0,Data.Matrix());
 }
 
 
-void cAttributeArray1::Write(int32 liID)
+void cAttributeArray1::Write()
 {
 	
-	if(mpData)
+	if(miID)
 	{
-		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 1, mpData, GL_STATIC_DRAW);
-		glBindVertexArray(miBuffer);
-		glEnableVertexAttribArray(liID);
-		glVertexAttribPointer(liID,1,GL_FLOAT,0,0,0);
+		glEnableVertexAttribArray(miID);
 	}
 }
 
-void cAttributeArray2::Write(int32 liID)
+void cAttributeArray2::Write()
 {
-	if(mpData) glVertexAttribPointer(liID,2,GL_FLOAT,0,0,mpData);
-}
-
-void cAttributeArray3::Write(int32 liID)
-{
-	if(mpData) glVertexAttribPointer(liID,3,GL_FLOAT,0,0,mpData);
-}
-
-void cAttributeArray4::Write(int32 liID)
-{
-	if(mpData)
+	if(miID)
 	{
-		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 27*4, mpData, GL_STATIC_DRAW);
-		glBindVertexArray(miBuffer);
-		glEnableVertexAttribArray(liID);
-		glVertexAttribPointer(liID,4,GL_FLOAT,0,0,0);
+		glEnableVertexAttribArray(miID);
 	}
+}
+
+void cAttributeArray3::Write()
+{
+	if(miID)
+	{
+		glEnableVertexAttribArray(miID);
+	}
+}
+
+void cAttributeArray4::Write()
+{
+	if(miID)
+	{
+		glEnableVertexAttribArray(miID);
+	}
+}
+
+
+void cAttributeArray1::Buffer()
+{
+	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(float) * miElements , mpData, GL_STATIC_DRAW);
+	glVertexAttribPointer(miID,1,GL_FLOAT,0,0,0);
+}
+
+void cAttributeArray2::Buffer()
+{
+	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(float) *2* miElements , mpData, GL_STATIC_DRAW);
+	glVertexAttribPointer(miID,2,GL_FLOAT,0,0,0);
+}
+
+void cAttributeArray3::Buffer()
+{
+		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(float) *miElements *3, mpData, GL_STATIC_DRAW);
+		glVertexAttribPointer(miID,3,GL_FLOAT,0,0,0);
+}
+
+void cAttributeArray4::Buffer()
+{
+		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(float) * miElements *4, mpData, GL_STATIC_DRAW);
+		glVertexAttribPointer(miID,4,GL_FLOAT,0,0,0);
 }
