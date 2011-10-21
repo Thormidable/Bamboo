@@ -76,13 +76,8 @@ void cCamera::RemoveAll()
 void cCamera::UpdateProjectionMatrix()
 {
 	#warning comment This runs every frame. Only neccessary on frames when window is resized or values are changed.
-// glViewport(0,0,gpWindow->Width,gpWindow->Height);
- glMatrixMode(GL_PROJECTION);
   mmPerspective.Frustum();
- //mmPerspective.Orthographic(-mfZoom, mfZoom, -gpWindow->mfRatio*mfZoom, gpWindow->mfRatio*mfZoom, mfNear, mfFar);
-// mmPerspective.Orthographic();
- glLoadMatrixf(mmPerspective.Matrix());
- glMatrixMode(GL_MODELVIEW);
+
 }
 
 float cCamera::Near()
