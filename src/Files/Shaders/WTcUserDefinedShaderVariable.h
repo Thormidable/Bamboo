@@ -140,6 +140,7 @@ template <class cX> cX *cVariableStore::CreateUniform(uint32 liVar, cX *lpNew)
 {
  if(liVar<miUniforms)
  {
+	 printf("Uniform %u = %d\n",liVar,mpUniformID[liVar]);
 	 mpUniform[liVar]=lpNew;
 	 mpUniform[liVar]->SetID(mpUniformID[liVar]);
  }
@@ -157,5 +158,6 @@ template <class cX> cX *cVariableStore::CreateAttribute(uint32 liVar, cX *lpNew)
   return lpNew;
 }
 
+void DisplayMatrixStack(float *lpData);
 
 #endif

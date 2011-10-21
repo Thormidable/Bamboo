@@ -141,17 +141,11 @@ void cRenderObject::UpdateCache()
 void cRenderObject::Shader(vShaderProgram *lpShader)
 {
   mpShader=lpShader;
-  
   if(mpVariables)
   {
 	if(mpShader) mpVariables->Link(mpShader);
 	else mpVariables->ClearLink();
-  }
-  if(mpShader)
-  {
-  	mpShader->Use();
-  	AddUniform<cUniformMatrix>("mmProj")->Data=_CAMERA->Perspective();
-  	AddUniform<cUniformMatrix>("mmGlob")->Data=mmCache.Matrix();
+
   }
   
 }
