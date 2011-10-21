@@ -24,7 +24,7 @@ void cLandscape::RenderPainter(uint8 liLevel)
  {
 
   PrepareMaterial();
- AdditionalRenderFunctions();
+ SetShaderVariables();
   mpLandscape->RenderMesh();
  }
 }
@@ -54,9 +54,6 @@ void cLandscape::Render()
   { glEnable(GL_TEXTURE_2D);
     mpTexture->BindTexture();
 
-    if(mpShader) mpShader->Use();
-    else _USE_FIXED_FUNCTION();
-    
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 //    glTexCoordPointer(2,GL_FLOAT,0,mpLandscape->UVs());
   }
@@ -65,8 +62,9 @@ void cLandscape::Render()
   UpdateMatrix();
   PrepareMaterial();
 
-  //glEnableClientState(GL_VERTEX_ARRAY);
-  //glEnableClientState(GL_NORMAL_ARRAY);
+   if(mpShader) mpShader->Use();
+   else _USE_FIXED_FUNCTION();
+
 
  AdditionalRenderFunctions();
 

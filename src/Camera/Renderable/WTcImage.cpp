@@ -56,7 +56,7 @@ void cImage::RenderPainter(uint8 liLevel)
    glVertexPointer(3,GL_FLOAT,0,mpVertex);
    glTexCoordPointer(2,GL_FLOAT,0,mpTextCoords);
    glNormalPointer(GL_FLOAT,0,mpNormals);
-
+	SetShaderVariables();
    glDrawElements(GL_TRIANGLES,6,GL_UNSIGNED_SHORT,mpFaces);
  }
 }
@@ -73,6 +73,8 @@ void cImage::Render()
 
   if(mpShader) mpShader->Use();
   else _USE_FIXED_FUNCTION();
+
+  SetShaderVariables();
   
    glVertexPointer(3,GL_FLOAT,0,mpVertex);
    glTexCoordPointer(2,GL_FLOAT,0,mpTextCoords);

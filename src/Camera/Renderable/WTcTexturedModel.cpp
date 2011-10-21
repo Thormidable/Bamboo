@@ -33,7 +33,8 @@ void cTexturedModel::RenderPainter(uint8 liLevel)
  if(mpMesh)
  {
   PrepareMaterial();
-  AdditionalRenderFunctions();
+  SetShaderVariables();
+  
   mpMesh->RenderMesh(Variables());
  }
 }
@@ -43,6 +44,7 @@ void cTexturedModel::RenderToPainter()
  
  float Temp[16];
  UpdateMatrix();
+ 
  mpPainterData->SetObject(this);
  //mpPainterData->SetMatrix(Temp);
  mpPainterData->SetTexture(TextureNumber());
@@ -58,6 +60,7 @@ void cTexturedModel::Render()
  glEnable(GL_TEXTURE_2D);
  
   UpdateMatrix();
+  
  PrepareMaterial();
 
   mpTexture->BindTexture();
@@ -66,13 +69,12 @@ void cTexturedModel::Render()
   glEnableClientState(GL_TEXTURE_COORD_ARRAY);
   glEnableClientState(GL_NORMAL_ARRAY);
 
-  AdditionalRenderFunctions();
-  
+
   if(mpShader) mpShader->Use();
   else _USE_FIXED_FUNCTION();
+  
+  AdditionalRenderFunctions();
 
-  
-  
   mpMesh->RenderMesh(Variables());
  
 }

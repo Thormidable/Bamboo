@@ -121,9 +121,11 @@ void cUniformVector4::Write()
 }
 void cUniformMatrix::Write()
 {
-	glUniformMatrix4fv(miID,1,0,Data.Matrix());
+	
+	printf("Data Pointer : %p\n",Data);
+	DisplayMatrixStack(Data);
+	glUniformMatrix4fv(miID,1,0,Data);
 }
-
 
 void cAttributeArray1::Write()
 {
@@ -186,3 +188,14 @@ void cAttributeArray4::Buffer()
 		glBufferData(GL_ARRAY_BUFFER, sizeof(float) * miElements *4, mpData, GL_STATIC_DRAW);
 		glVertexAttribPointer(miID,4,GL_FLOAT,0,0,0);
 }
+
+void DisplayMatrixStack(float *lpData)
+{
+ printf("Matrix :\n");
+ printf("%f %f %f %f\n",lpData[0],lpData[4],lpData[8],lpData[12]);
+ printf("%f %f %f %f\n",lpData[1],lpData[5],lpData[9],lpData[13]);
+ printf("%f %f %f %f\n",lpData[2],lpData[6],lpData[10],lpData[14]);
+ printf("%f %f %f %f\n",lpData[3],lpData[7],lpData[11],lpData[15]);
+ printf("\n");
+}
+

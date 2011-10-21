@@ -122,7 +122,7 @@ void cParticleHandler::Refresh()
 void cParticleHandler::RenderPainter()
 {
 	Refresh();
-	AdditionalRenderFunctions();
+	SetShaderVariables();
 	glBegin(GL_POINTS);
 	uint32 liCount;
 	for(liCount=0;liCount<miParticles;++liCount)
@@ -167,6 +167,9 @@ void cParticleHandler::Render()
 	uint32 liCount;
 	  if(mpShader) mpShader->Use();
 	else _USE_FIXED_FUNCTION();
+
+	SetShaderVariables();
+	
 	glBegin(GL_POINTS);
 	for(liCount=0;liCount<miParticles;++liCount)
 	{

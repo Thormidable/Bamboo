@@ -6,10 +6,8 @@ cCamera::cCamera()
  mpRenderList=new cRenderNode(0);
  Identity();
 // gpWindow->InitialiseOpenGL();
- mfZoom=0.5; //0.5 - 1.0 is correction. 0.1 - 0.5 is fisheye ???
- mfNear=1.0f;
- mfFar=20.0f;
- Frustum();
+ mmPerspective.Setup(0.5f,gpWindow->mfRatio,1.0f,20.0f);
+ UpdateProjectionMatrix();
 }
 
 cCamera::~cCamera()
@@ -75,32 +73,26 @@ void cCamera::RemoveAll()
  mpRenderList=0;
 }
 
-void cCamera::Orthographic()
+void cCamera::UpdateProjectionMatrix()
 {
- glViewport(0,0,gpWindow->Width,gpWindow->Height);
+	#warning comment This runs every frame. Only neccessary on frames when window is resized or values are changed.
+// glViewport(0,0,gpWindow->Width,gpWindow->Height);
  glMatrixMode(GL_PROJECTION);
- glLoadIdentity();
- glOrtho(-1.0,1.0,-1.0,1.0,1.0,10.0);
- glMatrixMode(GL_MODELVIEW);
-}
-
-void cCamera::Frustum()
-{
- glViewport(0,0,gpWindow->Width,gpWindow->Height);
- glMatrixMode(GL_PROJECTION);
- glLoadIdentity();
- glFrustum(-mfZoom, mfZoom, -gpWindow->mfRatio*mfZoom, gpWindow->mfRatio*mfZoom, mfNear, mfFar);
+  mmPerspective.Frustum();
+ //mmPerspective.Orthographic(-mfZoom, mfZoom, -gpWindow->mfRatio*mfZoom, gpWindow->mfRatio*mfZoom, mfNear, mfFar);
+// mmPerspective.Orthographic();
+ glLoadMatrixf(mmPerspective.Matrix());
  glMatrixMode(GL_MODELVIEW);
 }
 
 float cCamera::Near()
 {
- return mfNear;
+ return mmPerspective.mfNear;
 }
 
 float cCamera::Far()
 {
- return mfFar;
+ return mmPerspective.mfFar;
 }
 
 void cCamera::ResetGLMatrix()
@@ -141,12 +133,27 @@ vRenderObject *cCamera::vRenderList()
 
 void cCamera::Near(float lfN)
 {
-  mfNear=lfN;
+  mmPerspective.mfNear=lfN;
   
 };
 
 void cCamera::Far(float lfF)
 {
-  mfFar=lfF;
+  mmPerspective.mfFar=lfF;
   
 };
+
+float *cCamera::Perspective()
+{
+ return mmPerspective.Matrix();
+}
+
+void cCamera::Zoom(float lfZoom)
+{
+	mmPerspective.mfZoom=lfZoom;
+}
+float cCamera::Zoom()
+{
+	return mmPerspective.mfZoom;
+}
+

@@ -38,15 +38,15 @@ void cParticleGroup::RenderPainter(uint8 liLevel)
 void cParticleGroup::RenderPainter()
 {
 	 
-	 AdditionalRenderFunctions();
+//	 AdditionalRenderFunctions();
+	SetShaderVariables();
 	
 	 uint32 MAKE_THIS_A_SHADER_FUNCTION_TO_MAKE_POINT_SIZE_WORK;
 	 
 	 //_CAMERA->ResetGLMatrix();
 	 uint32 liCount;
 	 uint32 liFound=0;
-	 //glPointSize(mpParticles[liCount]->Size);
-	// glPointSize(mpParticles[liCount]->Size);
+
 	
 	 glBegin(GL_POINTS);
 	 for(liCount=0;liCount<miParticles;++liCount)
@@ -106,7 +106,8 @@ void cParticleGroup::Render()
 	 uint32 liFound=0;
 	  if(mpShader) mpShader->Use();
 	  else _USE_FIXED_FUNCTION();
-	 //glPointSize(mpParticles[liCount]->Size);
+
+	  AdditionalRenderFunctions();
 	 glBegin(GL_POINTS);
 	 for(liCount=0;liCount<miParticles;++liCount)
 	 {

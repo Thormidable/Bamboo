@@ -6,6 +6,8 @@ void cText::RenderPainter(uint8 liLevel)
  (void) liLevel;
  if(mpFont)
  {
+
+	 SetShaderVariables();
   mpFont->BindTexture();
 
   v2DPolygon::SizeArrays(miSize);
@@ -67,6 +69,8 @@ void cText::Render()
    glTranslatef(miSize,0,0);
   if(mpShader) mpShader->Use();
   else _USE_FIXED_FUNCTION();
+
+  SetShaderVariables();
    liRange=0.015625*(mpFont->Character(mpString[liCount])); //(or /64)
    if (liRange)
    {

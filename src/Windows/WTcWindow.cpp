@@ -23,7 +23,7 @@ void cWindow::HandleChanges()
 		wglDeleteContext( hRC );
 		hRC = wglCreateContext( hDC );
 		wglMakeCurrent( hDC, hRC );
-		cCamera::Instance()->Frustum();
+		cCamera::Instance()->UpdateProjectionMatrix();
 	}
 	Resized=false;
 }
@@ -371,7 +371,7 @@ void cWindow::HandleChanges()
 {
  if(Resized)
 {
-	cCamera::Instance()->Frustum();
+	cCamera::Instance()->UpdateProjectionMatrix();
 }
 }
 

@@ -77,8 +77,8 @@ cLinkedNode<vRenderObject> *cRenderObject::SetRenderNode(cRenderNode *lpRenderer
 
 void cRenderObject::AdditionalRenderFunctions()
 {
- UpdateCache();
- SetShaderVariables();
+// UpdateCache();
+// SetShaderVariables();
 	
 }
 

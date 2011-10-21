@@ -19,7 +19,7 @@ cPoint::cPoint(cRenderNode *lpRenderer) : cRenderObject(lpRenderer)
 void cPoint::RenderPainter(uint8 liLevel)
 {
 (void) liLevel;
-    AdditionalRenderFunctions();
+    SetShaderVariables();
   glPointSize(mfPointSize);
   glBegin(GL_POINTS);
     glColor4fv(mfColor);
@@ -47,13 +47,14 @@ void cPoint::Render()
 {
 
   UpdateMatrix();
-  
-   AdditionalRenderFunctions(); 
-cShaderProgram::UseFixedFunction();
   glPointSize(mfPointSize);
 
     if(mpShader) mpShader->Use();
   else _USE_FIXED_FUNCTION();
+
+  AdditionalRenderFunctions();
+
+  
   glBegin(GL_POINTS);
     glColor4fv(mfColor);
     glVertex3f(0.0f,0.0f,0.0f);

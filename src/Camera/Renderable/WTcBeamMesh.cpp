@@ -52,7 +52,8 @@ void cBeamMesh::RenderPainter(uint8 liLevel)
 (void) liLevel;
 
 	//PrepareMaterial();
-	AdditionalRenderFunctions();
+	//AdditionalRenderFunctions();
+	SetShaderVariables();
 	RenderBeam();
 }
 
@@ -90,9 +91,12 @@ void cBeamMesh::Render()
 		//glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 		//glEnableClientState(GL_NORMAL_ARRAY);
 		
-		AdditionalRenderFunctions();
+		
 		if(mpShader) mpShader->Use();
 		else _USE_FIXED_FUNCTION();
+
+		AdditionalRenderFunctions();
+		
 		RenderBeam();
 		
 	}

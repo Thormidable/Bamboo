@@ -12,12 +12,6 @@ class cCameraMatrix4;
 class cMatrix4
 {
   friend class cCameraMatrix4;
-  /// This is a pointer to a static array to allow this objects matrix to be quickly zeroed.
- static float *mpZero;
- /// This is a pointer to a static array to allow this objects matrix to be quickly restored to an identity matrix.
- static float *mpIdentity;
-
-
 protected:
 // 0 4 8 12
  // 1 5 9 13
@@ -25,6 +19,11 @@ protected:
  // 3 7 11 15
  /// This stores a 4x4 matrix of floats representing the current translation of the objet.
  float mpData[16];
+
+   /// This is a pointer to a static array to allow this objects matrix to be quickly zeroed.
+ static float *mpZero;
+ /// This is a pointer to a static array to allow this objects matrix to be quickly restored to an identity matrix.
+ static float *mpIdentity;
 
  /// This si a boolean flag to define whether the object is 3D or 2D. True is 3D. False is 2D.
  bool mb3D;

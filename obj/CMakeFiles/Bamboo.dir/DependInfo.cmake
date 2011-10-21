@@ -62,6 +62,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/media/FileStore/My Documents/C++ Code/Bamboo/src/Maths/WTcCameraMatrix4.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/src/Maths/WTcMatrix4.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/src/Maths/WTcMatrixStack.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o"
+  "/media/FileStore/My Documents/C++ Code/Bamboo/src/Maths/WTcPerspectiveMatrix.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/src/PTL/WTRadix.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/src/Physics/WTcCollisionHandler.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/src/Physics/WTcCollisionList.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o"

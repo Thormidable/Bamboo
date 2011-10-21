@@ -11,17 +11,13 @@ class cRenderNode;
 class cCamera : public cCameraMatrix4
 {
 protected:
+
+cPerspectiveMatrix mmPerspective;
+
 // This stores the current instance of cCamera. This means that only one cCamera object will exist at any one time. This is returned by cCamera::Instance(). Future expansions will allow multiple cCamera objects.
 static cCamera *mpInstance;
 
-	// This variable can be thought of as the lens effect. 0.5f - 1.0f can be considered normal. 0.1f -0.5f is a fisheye lens.
-       float mfZoom;
- 	// This variable stores the closest that cCamera will render polygons.
-       	float mfNear;
-	// This variable stores the furthest that cCamera will render polygons.
-	float mfFar;
-
-	/* 
+	/*
 	* This points to the top level cRenderNode. This is the start of the scene graph and any cMatrix4 translations made
 	* to the cRenderNode in this pointer will affect the entire scene graph. 
 	*/
@@ -54,9 +50,7 @@ public:
 	void SetClearColor(float lfRed,float lfGreen,float lfBlue,float lfAlpha);
 	
 	/// This creates the camera model view matrix using an Orthographic algorithm.
-	void Orthographic();
-	/// This creates the camera model view matrix using a Frustum algorithm.
-	void Frustum();
+	void UpdateProjectionMatrix();
 	
 	/// This will return a pointer to the scene graph.
 	cRenderNode *RenderList();
@@ -74,8 +68,13 @@ public:
 	/// This will set the Furthest distance cCamera will render polygons.
 	void Far(float lfF);
 
+	void Zoom(float lfZoom);
+	float Zoom();
+
 	// This will set the Current GL Matrix to be equivalent to the Camera matrix (essentially produces a Global Positioning Matrix).
 	void ResetGLMatrix();
+
+	float *Perspective();
 };
 
 

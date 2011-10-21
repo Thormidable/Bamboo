@@ -209,10 +209,9 @@ void cMesh::RenderMesh(cVariableStore *lpNew)
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
 
-	lpNew->WriteAttributes();
 	
 	glDrawElements(GL_TRIANGLES,miFaces*3,GL_UNSIGNED_SHORT,0);
-	//glDrawArrays(GL_TRIANGLES,0,miFaces*3);
+
 
 }
 

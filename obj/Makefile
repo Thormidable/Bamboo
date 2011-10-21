@@ -1500,6 +1500,30 @@ Maths/WTcMatrixStack.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.s
 .PHONY : Maths/WTcMatrixStack.cpp.s
 
+Maths/WTcPerspectiveMatrix.o: Maths/WTcPerspectiveMatrix.cpp.o
+.PHONY : Maths/WTcPerspectiveMatrix.o
+
+# target to build an object file
+Maths/WTcPerspectiveMatrix.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o
+.PHONY : Maths/WTcPerspectiveMatrix.cpp.o
+
+Maths/WTcPerspectiveMatrix.i: Maths/WTcPerspectiveMatrix.cpp.i
+.PHONY : Maths/WTcPerspectiveMatrix.i
+
+# target to preprocess a source file
+Maths/WTcPerspectiveMatrix.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.i
+.PHONY : Maths/WTcPerspectiveMatrix.cpp.i
+
+Maths/WTcPerspectiveMatrix.s: Maths/WTcPerspectiveMatrix.cpp.s
+.PHONY : Maths/WTcPerspectiveMatrix.s
+
+# target to generate assembly for a file
+Maths/WTcPerspectiveMatrix.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.s
+.PHONY : Maths/WTcPerspectiveMatrix.cpp.s
+
 PTL/WTRadix.o: PTL/WTRadix.cpp.o
 .PHONY : PTL/WTRadix.o
 
@@ -1899,6 +1923,9 @@ help:
 	@echo "... Maths/WTcMatrixStack.o"
 	@echo "... Maths/WTcMatrixStack.i"
 	@echo "... Maths/WTcMatrixStack.s"
+	@echo "... Maths/WTcPerspectiveMatrix.o"
+	@echo "... Maths/WTcPerspectiveMatrix.i"
+	@echo "... Maths/WTcPerspectiveMatrix.s"
 	@echo "... PTL/WTRadix.o"
 	@echo "... PTL/WTRadix.i"
 	@echo "... PTL/WTRadix.s"

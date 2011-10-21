@@ -33,8 +33,7 @@ cLine::cLine(cRenderNode *lpRenderer) : cRenderObject(lpRenderer)
 void cLine::RenderPainter(uint8 liLevel)
 {
  (void) liLevel;
-  AdditionalRenderFunctions();
-  if(mpShader) mpShader->Use();
+  SetShaderVariables();
   glBegin(GL_LINES);
     glColor4fv(mfColor);
     glVertex3fv(mfPosition);
@@ -62,9 +61,12 @@ void cLine::Render()
 {
  glDisable(GL_TEXTURE_2D);
  
-  AdditionalRenderFunctions();
+  
   if(mpShader) mpShader->Use();
   else _USE_FIXED_FUNCTION();
+
+  AdditionalRenderFunctions();
+  
   glBegin(GL_LINES);
     glColor4fv(mfColor);
     glVertex3fv(mfPosition);
