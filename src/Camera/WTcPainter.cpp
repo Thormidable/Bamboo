@@ -270,10 +270,7 @@ glEnableClientState(GL_NORMAL_ARRAY);
   }
  
 #warning comment THIS NEEDS TO BE FIXED FOR MATRIX STACK
-//printf("Display Cache\n");
-		glLoadMatrixf(mpList[liCount]->mpObject->mmCache.Matrix());
-		printf("Cache Pointer %p\n",mpList[liCount]->mpObject->mmCache.Matrix());
-		mpList[liCount]->mpObject->mmCache.Display();
+
   
   mpList[liCount]->mpObject->RenderPainter(mpList[liCount]->miLevel);
   mpList[liCount]->mbReRender=false;
