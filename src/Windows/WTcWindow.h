@@ -2,9 +2,9 @@
 #define __CWINDOW_H__
 
 
-/** 
+/**
 * \brief This class will create control and destroy desktop windows.
-* This is ugly and disgusting. It will create new windows, link the window with OpenGL 
+* This is ugly and disgusting. It will create new windows, link the window with OpenGL
 * and do basic event handling. This is the users access to interact with the OS.
 * Note it is all very OS specific.
 */
@@ -12,7 +12,7 @@ class cWindow
 {
 public:
 #if WT_OS_TYPE==OS_WIN32
-	WNDCLASS wc;
+	WNDCLASSEX wcex;
 	HWND hWnd;
 	HDC hDC;
 	HGLRC hRC;
@@ -44,7 +44,7 @@ public:
 	int X;
 	/// This is the windows current Y position on the desktop in pixels.
 	int Y;
-	/// This is the windows current width in pixels. 
+	/// This is the windows current width in pixels.
 	int Width;
 	/// This is the windows current height in pixels.
 	int Height;
@@ -58,7 +58,7 @@ public:
           bool Repaint;
 	/// This is a float storing the ratio of the window to avoid distorting the view.
           float mfRatio;
- 
+
 	~cWindow();
 
 	/// This will return mfRatio.
@@ -70,20 +70,20 @@ public:
 
 	/// This will prepare the Rendering matrix and other OpenGL initialisations.
 	void InitialiseOpenGL();
- 
+
 	/// This will do NOTHING.
 	void EnableInput();
 	/// This will do NOTHING.
 	void DisableInput();
-	
+
 	/// This will Move the window to position liX,liY (in pixels) on the desktop.
 	void Move(short liX,short liY);
 	/// This will resize the window to size liX,liY (in pixels).
 	void Resize(short liX,short liY);
-	
+
 	/// This will make this context the current one (to recieve rendering data).
 	void MakeCurrent();
-	
+
 	/// This is an interupt function that will handle messages from the OS.
 	void HandleMessages();
 	/// This will handle changes to the window (from the OS).
@@ -93,8 +93,8 @@ public:
 };
 
 #if WT_OS_TYPE==OS_WIN32
-LRESULT CALLBACK WndProc(HWND hWnd, UINT message,
-                          WPARAM wParam, LPARAM lParam);
+
+LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam);
 #endif
 
 

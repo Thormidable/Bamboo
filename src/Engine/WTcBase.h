@@ -57,12 +57,12 @@ public:
       }
 */
       // GLSL
-//      char *verSHDR = (char*)glGetString(GL_SHADING_LANGUAGE_VERSION);
+      char *verSHDR = (char*)glGetString(GL_SHADING_LANGUAGE_VERSION);
 
     trace("***************************************************************************");
 	trace("Renderer: " << glGetString(GL_RENDERER));
 	trace("GL Version : " << verGL);
-//	trace("Shading Language : " << verSHDR);
+	trace("Shading Language : " << verSHDR);
 	trace("***************************************************************************");
 
 
