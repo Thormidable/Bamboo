@@ -8,13 +8,13 @@ void cShaderProgram::LoadIMF(ifstream &FileStream)
  FileStream.read((int8 *)&liBuff,sizeof(uint32));
  FileStream.read(mpFileName,sizeof(int8)*liBuff);
  mpFileName[liBuff]=0;
- 
+
 
  mcList.LoadIMF(FileStream);
 
  mpShader = new cShader*[Size()];
  mpVariables = new cShaderVariables;
- 
+
  for(liBuff=0;liBuff<mcList.Size();++liBuff)
   {
     cShader* lpTemp=0;
@@ -30,6 +30,11 @@ trace("Loaded and Processed ShaderProgram : " << mpFileName);
 
 }
 
+
+void cShaderProgram::UseFixedFunction()
+{
+    glUseProgram(0);
+}
 
 cShaderProgram::cShaderProgram()
 {
@@ -79,9 +84,9 @@ void cShaderProgram::Link()
 	 }
 	 if(Types[0]) trace("No Vertex Shader Linked to Program");
 	 if(Types[1]) trace("No Fragment Shader Linked to Program");
-	 
+
 	 trace("Shader Program failed to Link");
-	 
+
  }
  else
  {
@@ -100,5 +105,5 @@ void cShaderProgram::Use()
 
 cShaderVariables *cShaderProgram::ShaderVariables()
 {
-	return mpVariables;	
+	return mpVariables;
 }

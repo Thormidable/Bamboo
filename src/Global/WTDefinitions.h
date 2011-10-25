@@ -7,7 +7,7 @@
 #define SIGNAL unsigned char
 
 #if WT_OS_BITS==OS_32_BIT
-  
+
 	#define int64 long long
 	#define int32 long
 	#define int16 short
@@ -28,7 +28,7 @@
 	#define float32 float
 
 	#define psize uint32
-	#define pbits (sizeof(uint*)*8)
+	#define pbits (sizeof(uint32*)*8)
 #endif
 
 #if WT_OS_BITS==OS_64_BIT
@@ -52,7 +52,7 @@
 	#define float32 float
 
 	#define psize uint64
-	#define pbits (sizeof(uint*)*8)
+	#define pbits (sizeof(uint32*)*8)
 #endif
 
 #define _PROCESS(TYPE) class TYPE : cProcess
@@ -225,7 +225,8 @@
 	#define _START_PROGRAM(TYPE,SETTINGS,INSTANCE) cMainThread<TYPE,SETTINGS>::Start(INSTANCE)
 	///Function to easily access the Key state Array.
 	#define _KEY cEventHandler::Instance()->Key.WinKey
-	
+
+   // #define glUseProgram(POINTER) if (WTglUseProgram) {(*WTglArrayElementPtr)(POINTER);}
 	#if WT_OS_BITS==OS_32_BIT
 		#define UINT_MAX 0xFFFFFFFF
 	#endif

@@ -30,7 +30,7 @@
 *                    LPSTR lpCmdLine,
 *                    int iCmdShow)
 *{
-* //_START_PROGRAM(First_Process_Type,User_Settings_Type,Instance);  
+* //_START_PROGRAM(First_Process_Type,User_Settings_Type,Instance);
 * return _START_PROGRAM(cCore,cUserSettings,hInstance);
 
 };
@@ -41,7 +41,7 @@
 *
 *int main ()
 *{
-*  //_START_PROGRAM(First_Process_Type,User_Settings_Type); 
+*  //_START_PROGRAM(First_Process_Type,User_Settings_Type);
 *  return _START_PROGRAM(cCore,cUserSettings);
 *
 *}
@@ -83,7 +83,7 @@
  *
  *Using William Thorley’s Process system
  *
- *The First Process is exactly the same as every other process. i.e. it must inherit cProcess. 
+ *The First Process is exactly the same as every other process. i.e. it must inherit cProcess.
  * What is special about the Process passed to the _START_PROGRAM() call is that it is the automatically called when the Kernel is initialized. This means that the constructor for the first process is the initialization code for the entire program. Usually the process’ which will form the program are started here as well as loading files for the system.
  * For these examples I wil call the class cCore.
  *
@@ -94,18 +94,18 @@
  * {
  *  public:
  *  cCore();
- * 
+ *
  *  void Run();
- * 
+ *
  *  ~cCore();
- * 
+ *
  * void AdditionalKillFunctionality();
  * void AdditionalSleepFunctionality();
  * void AdditionalWakeFunctionality();
- * 
+ *
  * };
  * \endcode
- * 
+ *
  * cCore():
  * This shows the constructor for cCore. As it is the first object it will load media for the rest of the program and kick off the other processes.
  * \code
@@ -121,7 +121,7 @@
  * // Setup the camera.
  *  _CAMERA->Far(1000.0f);
  *  _CAMERA->Frustum();
- * 
+ *
  * //Create a new process and a renderable object.
  *  mpProcessPointer=_CREATE(MyFirstProcess());
  *  mpRenderObjectPointer=_CREATE(MyFirstRenderObject());
@@ -879,23 +879,33 @@
 
 //Manual def of OS Type.
 #ifndef WT_OS_TYPE
+    #warning comment OS Not Detected.
     #define WT_OS_TYPE OS_LINUX
 #endif
 
 //Manual definition of pointer size for Architecture base.
 #ifndef WT_OS_BITS
+    #warning comment OS Bit Base Not Detected.
     #define WT_OS_BITS OS_32_BIT
 #endif
 
 #if WT_OS_TYPE==OS_WIN32
 	#include <windows.h>
 
-	#include <GL/glew.h>
-    #include <GL/gl.h>
-	//#include <GL/glext.h>
+    #define GLEW_STATIC 1
 
-#include <al.h>
-#include <alc.h>
+	#include <GL/glew.h>
+    #include "./Windows/ExtensionWrapper/glext.h"
+    #include "./Windows/ExtensionWrapper/wglext.h"
+    #include <GL/gl.h>
+    //#include <GL/glext.h>
+
+
+	//#include "./Windows/gl3.h"
+    #include "./Windows/ExtensionWrapper/ExtensionWrapper.h"
+
+    #include <al.h>
+    #include <alc.h>
 
 	#include "./Windows/WTWindowsKeyCodes.h"
 #endif
@@ -917,7 +927,7 @@
 
 #include "./Global/WTDefinitions.h"
 #include "./Global/WTSettings.h"
-	
+
 
 #include "./Global/WTSetDefinitions.h"
 #include "./Global/WTGameSettings.h"

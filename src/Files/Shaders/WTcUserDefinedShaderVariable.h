@@ -74,7 +74,7 @@ public:
 
 class cAttributeArray1 : public cAttributeStore
 {
-	
+
 public:
 	void Write();
 	void Buffer();
@@ -82,7 +82,7 @@ public:
 
 class cAttributeArray2 : public cAttributeStore
 {
-	
+
 public:
 	void Write();
 	void Buffer();
@@ -90,7 +90,7 @@ public:
 
 class cAttributeArray3 : public cAttributeStore
 {
-	
+
 public:
 	void Write();
 	void Buffer();
@@ -122,7 +122,7 @@ public:
 	cVariableStore(vShaderProgram *lpProg);
 	virtual void WriteUniforms();
 	virtual void WriteAttributes();
-	
+
 
 	cAttributeStore &GetAttribute(uint32 liVar){return *mpAttribute[liVar];};
 	cUniformStore &GetUniform(uint32 liVar){return *mpUniform[liVar];};
@@ -131,7 +131,7 @@ public:
 	~cVariableStore();
 
 	void ClearLink();
-	
+
 	friend class cUserShaderVariable;
 	friend class cRenderObject;
 };
@@ -152,7 +152,8 @@ template <class cX> cX *cVariableStore::CreateAttribute(uint32 liVar, cX *lpNew)
   {
 	  mpAttribute[liVar]=lpNew;
 	  mpAttribute[liVar]->SetID(mpAttributeID[liVar]);
-  	glEnableVertexAttribArray(mpUniformID[liVar]);
+	  mpAttribute[liVar]->Write();
+
   }
   return lpNew;
 }

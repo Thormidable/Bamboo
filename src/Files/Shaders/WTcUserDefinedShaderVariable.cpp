@@ -29,7 +29,7 @@ cVariableStore::cVariableStore(vShaderProgram *lpProg)
 
 void cVariableStore::ClearLink()
 {
-	
+
  uint32 liCount;
  if(mpUniform)
  {
@@ -40,7 +40,7 @@ void cVariableStore::ClearLink()
 	delete []mpUniform;
 	mpUniform=0;
  }
- 
+
  if(mpAttribute)
  {
  	for(liCount=0;liCount<miAttributes;++liCount)
@@ -50,7 +50,7 @@ void cVariableStore::ClearLink()
   	delete []mpAttribute;
 	mpAttribute=0;
  }
- 
+
 }
 
 cVariableStore::~cVariableStore()
@@ -66,7 +66,7 @@ void cVariableStore::WriteUniforms()
   for(liCount=0;liCount<miUniforms;++liCount)
   {
 	 if(mpUniform[liCount]) mpUniform[liCount]->Write();
-	 
+
   }
  }
 }
@@ -87,7 +87,7 @@ void cVariableStore::Link(vShaderProgram *lpProg)
 {
 	cShaderVariables *lpLink=lpProg->ShaderVariables();
 	ClearLink();
-	
+
 	miUniforms=lpLink->miUniforms;
 	mpUniformID=lpLink->mpUniforms;
 	mpUniform= new cUniformStore*[miUniforms];
@@ -126,7 +126,7 @@ void cUniformMatrix::Write()
 
 void cAttributeArray1::Write()
 {
-	
+
 	if(miID)
 	{
 		glEnableVertexAttribArray(miID);

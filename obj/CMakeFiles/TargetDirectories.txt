@@ -1,1 +1,1 @@
-/media/FileStore/My Documents/C++ Code/Bamboo/obj/CMakeFiles/Bamboo.dir
+E:/My Documents/C++ Code/Bamboo Windows/obj/CMakeFiles/Bamboo.dir

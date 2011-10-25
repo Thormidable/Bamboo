@@ -20,7 +20,7 @@ cShader **mpShader;
 cShaderVariables *mpVariables;
 
 public:
-  ///Public Constructor. 
+  ///Public Constructor.
   cShaderProgram();
   ///Public Destructor.
  ~cShaderProgram();
@@ -30,14 +30,14 @@ public:
   void AttachShader(cShader *lpShader);
   /// This will manually remove the cShader() object lpShader from the OpenGL Shader Program miProgramID.
   void DetachShader(cShader *lpShader);
-  /// This will Link() the compiled cShader() objects together. 
+  /// This will Link() the compiled cShader() objects together.
   void Link();
   ///This will turn on shaders and make this shader the current shader system.
   void Use();
  ///This will return the number of cShader() objects used by this system.
   uint32 Size(){return mcList.Size();};
   ///This will turn off the usuage of shaders and return the system to using the Fixed Function Pipeline.
-  static void UseFixedFunction(){glUseProgram(0);};
+  static void UseFixedFunction();
 
   ///This will return a pointer to the cShader() object in position liCount of the cShader() List;
   cShader* operator[](uint32 liCount){if(mpShader) return mpShader[liCount]; else return 0;};
