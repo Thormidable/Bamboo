@@ -20,11 +20,15 @@ public:
 		if(mpCast) cSettings::SetupVariables();
 		gpWindow=new cWindow(hInstance);
 
+
+
 		cMainThread::GetGLVersion();
 
 		gpTimer=new cSync();
 
 		cEventHandler::Instance();
+
+        glewInit();
 
 		new cX;
 
@@ -40,7 +44,7 @@ public:
 
 	static void GetGLVersion()
 	{
-    int major,minor;
+  //  int major,minor;
 	// for all versions
       char* verGL = (char*)glGetString(GL_VERSION); // ver = "3.2.0"
 

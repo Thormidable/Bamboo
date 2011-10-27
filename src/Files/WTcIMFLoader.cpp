@@ -9,18 +9,19 @@ void cIMF::LoadIMF(const char *lpPath)
 
 	ifstream FileStream;
 	FileStream.open(lpPath,ios::binary);
-	
-	if(!FileStream.is_open()) 
+
+	if(!FileStream.is_open())
 	{
-		string msg("LoadIMP couldn't open ");
+		string msg("LoadIMF couldn't open ");
 		msg=msg+lpPath;
+		trace(msg);
 		throw CException(msg);
 		return;
 	}
 
 	while(!FileStream.eof())
 	{
-		
+
 
 		FileStream.read((char *) &liTemp,sizeof(uint32));
 		if(liTemp==IMF_TYPE_EOF) break;
@@ -29,7 +30,7 @@ void cIMF::LoadIMF(const char *lpPath)
 		{
 			trace("Type Model")
 			cMeshArray lpDataStore;
-			lpDataStore.LoadIMF(FileStream);  
+			lpDataStore.LoadIMF(FileStream);
 			new cMesh(&lpDataStore);
 		}
 		else if(liTemp==IMF_TYPE_TEXTURE)
@@ -103,7 +104,7 @@ void cIMF::LoadIMF(const char *lpPath)
 			cmLandscapeArray lpLandscape;
 			liTemp=0;
 
-			
+
 
 			//Ignore Block Size
 			FileStream.ignore(sizeof(uint32));
@@ -124,7 +125,7 @@ void cIMF::LoadIMF(const char *lpPath)
 
 			//Extract the Height Range for the Landscape
 			FileStream.read((int8 *) &lpLandscape.mfHeightRange,sizeof(float));
-		
+
 			//Extract the vertex positions for the Landscape
 			lpLandscape.mpVertex=new float[lpLandscape.miXSteps*lpLandscape.miZSteps*3];
 			FileStream.read((int8 *) lpLandscape.mpVertex,sizeof(float)*3*lpLandscape.miXSteps*lpLandscape.miZSteps);

@@ -55,12 +55,12 @@
 #endif
 
 #ifdef LOG_LEVEL_ERROR
-#define ERROR2(sys,x) \
+#define TRACEERROR2(sys,x) \
 		{stringstream dw_log_msg; dw_log_msg << "ERROR:" << __FILE__ << "." << __func__ <<  "." << __LINE__ << ":" << x;  \
 		getGlobalLogger()->printToSource((sys),dw_log_msg.str());}
-	#define ERROR(x) ERROR2(__scopeSource,x)
+	#define TRACEERROR(x) TRACEERROR2(__scopeSource,x)
 #else
-	#define ERROR(x,sys)
+	#define TRACEERROR(x,sys)
 #endif
 
 #define LOGGING_INIT() registerGlobalLogger(shared_ptr<dwLog>(new dwLog()));

@@ -89,11 +89,11 @@ cWindow::cWindow(HINSTANCE hInstance)
 
 InitialiseOpenGL();
 
-/*
 
+/*
 bool bQuit=false;
 float theta=0.0f;
-   // program main loop
+  // program main loop
     while (!bQuit)
     {
         // check for messages
@@ -245,23 +245,23 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
 
 
     case WM_SIZE:
-   //    if (wParam==SIZE_RESTORED)
- //        {
-   //       gpWindow->Width=LOWORD(lParam);
-     //     gpWindow->Height=HIWORD(lParam);
-       //   gpWindow->Resized=true;
-   //       gpWindow->mfRatio=((float)gpWindow->Height)/gpWindow->Width;
-      //    return 0;
-       //  }
+       if (wParam==SIZE_RESTORED)
+         {
+          gpWindow->Width=LOWORD(lParam);
+          gpWindow->Height=HIWORD(lParam);
+          gpWindow->Resized=true;
+          gpWindow->mfRatio=((float)gpWindow->Height)/gpWindow->Width;
+          return 0;
+         }
         return 0;
 
     case WM_SIZING:
          return 0;
 
     case WM_MOVE:
-         //gpWindow->X=(int)LOWORD(lParam);
-         //gpWindow->Y=(int)HIWORD(lParam);
-         //gpWindow->Moved=true;
+         gpWindow->X=(int)LOWORD(lParam);
+         gpWindow->Y=(int)HIWORD(lParam);
+         gpWindow->Moved=true;
          return 0;
 
 
@@ -271,12 +271,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
           //_MOUSE.cx=(int)LOWORD(lParam);
           //_MOUSE.cy=(int)HIWORD(lParam);
 
+        _MOUSE.xs+=(int)LOWORD(lParam);
+         _MOUSE.ys+=(int)HIWORD(lParam);
          _MOUSE.x+=(int)LOWORD(lParam);
          _MOUSE.y+=(int)HIWORD(lParam);
          }
          else
          {
-             _MOUSE.x+=(int)LOWORD(lParam);
+         _MOUSE.x+=(int)LOWORD(lParam);
          _MOUSE.y+=(int)HIWORD(lParam);
          }
          return 0;

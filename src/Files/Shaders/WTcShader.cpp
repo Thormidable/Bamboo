@@ -12,7 +12,7 @@ void cShaderArray::LoadIMF(ifstream &FileStream)
 	FileStream.read((int8 *) &liTemp,sizeof(uint32));
 	mpRef=new char[liTemp+1];
 	FileStream.read((int8 *) mpRef,sizeof(int8)*liTemp);
-	mpRef[liTemp]=0; 
+	mpRef[liTemp]=0;
 
 	//Read Type
 	FileStream.read((char *) &liTemp,sizeof(uint32));
@@ -42,7 +42,7 @@ void cShaderArray::LoadIMF(ifstream &FileStream)
 		FileStream.read((char *) mpAttributes,sizeof(uint32)*miAttributes);
 	}
 	else mpAttributes=0;
-	
+
 	//Read Character Number
 	FileStream.read((char *) &liTemp,sizeof(uint32));
 	SetSize(liTemp);
@@ -100,8 +100,14 @@ mpShaderText[0]=lpData->mpShaderText;
     mpShaderText[liCount]=&(lpData->mpShaderText[lpData->mpLines[liCount]]);
   }
 
+
 if(miShaderType == IMF_SHADER_TYPE_NULL) {miShaderID=0; return;}
-if(miShaderType == IMF_SHADER_TYPE_VERTEX) miShaderID=glCreateShader(GL_VERTEX_SHADER);
+if(miShaderType == IMF_SHADER_TYPE_VERTEX)
+{
+    printf("Get SAhder\n");
+    miShaderID=glCreateShader(GL_VERTEX_SHADER);
+    printf("Get SAhder : %lu\n",miShaderID);
+}
 if(miShaderType == IMF_SHADER_TYPE_FRAGMENT) miShaderID=glCreateShader(GL_FRAGMENT_SHADER);
 //if(miShaderType == IMF_SHADER_TYPE_GEOMETRY) miShaderID=glCreateShader(GL_GEOMETRY_SHADER);
 
@@ -127,7 +133,7 @@ int liID;
  mpAttributes=lpData->mpAttributes;
  miUniforms=lpData->miUniforms;
  mpUniforms=lpData->mpUniforms;
- 
+
 };
 
 
