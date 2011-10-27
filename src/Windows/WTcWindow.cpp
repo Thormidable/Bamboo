@@ -8,13 +8,12 @@ void cWindow::InitialiseOpenGL()
     EnableOpenGL();
 
 
-	//glEnable(GL_CULL_FACE);
-	//glEnable(GL_DEPTH_TEST);
-	//glEnable(GL_BLEND);
-	//glLoadIdentity();
+	glEnable(GL_CULL_FACE);
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_BLEND);
 
-	//glShadeModel(GL_SMOOTH);
-	//glClearColor (0.0f, 0.0f, 0.0f, 0.0f);
+	glShadeModel(GL_SMOOTH);
+	glClearColor (0.0f, 0.0f, 0.0f, 0.0f);
 
 
 
@@ -268,18 +267,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
     case WM_MOUSEMOVE:
          if (!_MOUSE.locked)
          {
-          //_MOUSE.cx=(int)LOWORD(lParam);
-          //_MOUSE.cy=(int)HIWORD(lParam);
-
-        _MOUSE.xs+=(int)LOWORD(lParam);
-         _MOUSE.ys+=(int)HIWORD(lParam);
-         _MOUSE.x+=(int)LOWORD(lParam);
-         _MOUSE.y+=(int)HIWORD(lParam);
+            _MOUSE.cx=(int)LOWORD(lParam);
+            _MOUSE.cy=(int)HIWORD(lParam);
          }
          else
          {
-         _MOUSE.x+=(int)LOWORD(lParam);
-         _MOUSE.y+=(int)HIWORD(lParam);
+         _MOUSE.cx=(int)LOWORD(lParam);
+         _MOUSE.cy=(int)HIWORD(lParam);
          }
          return 0;
 
