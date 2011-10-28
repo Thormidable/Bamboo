@@ -898,11 +898,6 @@
     #include "./Windows/ExtensionWrapper/glext.h"
     #include "./Windows/ExtensionWrapper/wglext.h"
     #include <GL/gl.h>
-    //#include <GL/glext.h>
-
-
-	//#include "./Windows/gl3.h"
-    #include "./Windows/ExtensionWrapper/ExtensionWrapper.h"
 
     #include <al.h>
     #include <alc.h>

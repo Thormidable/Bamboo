@@ -1,8 +1,14 @@
 src/divwin.layout
+
 src/divwin.depend
+
 doc/latex/*
+
 doc/html/*
+
 obj/*
+
 *.o
+
 *~
 
