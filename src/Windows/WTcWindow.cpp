@@ -453,7 +453,8 @@ void cWindow::HandleChanges()
 {
  if(Resized)
 {
-	cCamera::Instance()->Frustum();
+	//cCamera::Instance()->Frustum();
+	_CAMERA->UpdateProjectionMatrix();
 }
 }
 

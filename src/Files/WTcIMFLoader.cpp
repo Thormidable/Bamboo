@@ -12,9 +12,8 @@ void cIMF::LoadIMF(const char *lpPath)
 
 	if(!FileStream.is_open())
 	{
-		string msg("LoadIMF couldn't open ");
+		string msg("LoadIMP couldn't open ");
 		msg=msg+lpPath;
-		trace(msg);
 		throw CException(msg);
 		return;
 	}
@@ -23,17 +22,25 @@ void cIMF::LoadIMF(const char *lpPath)
 	{
 
 
-		FileStream.read((char *) &liTemp,sizeof(uint32));
-		if(liTemp==IMF_TYPE_EOF) break;
+            FileStream.read((char *) &liTemp,sizeof(uint32));
+            printf("liTEmp = %lu",liTemp);
+            switch (liTemp)
+            {
+                case IMF_TYPE_EOF :
+                {
+                    FileStream.close();
+                    return;
+                }break;
 
-		if(liTemp==IMF_TYPE_MODEL)
+                case IMF_TYPE_MODEL :
 		{
 			trace("Type Model")
 			cMeshArray lpDataStore;
 			lpDataStore.LoadIMF(FileStream);
 			new cMesh(&lpDataStore);
-		}
-		else if(liTemp==IMF_TYPE_TEXTURE)
+                }break;
+
+                case IMF_TYPE_TEXTURE :
 		{
 			trace("Type Texture")
 			cTextureArray lpTexture;
@@ -52,8 +59,9 @@ void cIMF::LoadIMF(const char *lpPath)
 			FileStream.read((char *) lpTexture.mpData,lpTexture.miWidth*lpTexture.miHeight*lpTexture.miDepth>>3);
 
 			new cTexture(&lpTexture);
-		}
-		else if(liTemp==IMF_TYPE_FONT)
+                }break;
+
+                case IMF_TYPE_FONT :
 		{
 			trace("Type Font")
 			cTextureArray lpTexture;
@@ -71,8 +79,9 @@ void cIMF::LoadIMF(const char *lpPath)
 			FileStream.read((char *) lpTexture.mpData,64*lpTexture.miWidth*lpTexture.miWidth*lpTexture.miDepth>>3);
 
 			new cFont(&lpTexture);
-		}
-		else if(liTemp==IMF_TYPE_TREE)
+                }break;
+
+                case IMF_TYPE_TREE :
 		{
 			trace("Type Tree")
 			cMeshTreeArray lpTree;
@@ -97,8 +106,9 @@ void cIMF::LoadIMF(const char *lpPath)
 			}
 
 			new cMeshTree(&lpTree);
-		}
-		else if(liTemp==IMF_TYPE_MATRIX_LANDSCAPE)
+		}break;
+
+                case IMF_TYPE_MATRIX_LANDSCAPE :
 		{
 			trace("Type Matrix Landscape")
 			cmLandscapeArray lpLandscape;
@@ -133,21 +143,24 @@ void cIMF::LoadIMF(const char *lpPath)
 
 			new cLandscapeMeshFile(&lpLandscape);
 
-		}
-		else if(liTemp==IMF_TYPE_SHADER)
+                }break;
+
+                case IMF_TYPE_SHADER :
 		{
 			trace("Type Shader Object")
 			cShaderArray lShaderArray;
 			lShaderArray.LoadIMF(FileStream);
 			new cShader(&lShaderArray);
-		}
-		else if(liTemp == IMF_TYPE_SHADER_PROGRAM)
+                }break;
+
+                case IMF_TYPE_SHADER_PROGRAM :
 		{
 			trace("Type Shader Program Object");
 			cShaderProgram *lpProgram = new cShaderProgram;
 			lpProgram->LoadIMF(FileStream);
-		}
-		else if(liTemp == IMF_TYPE_COLLISION_OBJECT)
+                }break;
+
+                case IMF_TYPE_COLLISION_OBJECT :
 		{
 		    trace("Type Collision Mesh")
 		    //cCollisionArray lpArray;
@@ -156,16 +169,26 @@ void cIMF::LoadIMF(const char *lpPath)
 		    cMeshFileCollision *lpTemp;
 		    lpTemp=new cMeshFileCollision();
 		    lpTemp->LoadIMF(FileStream);
-		}
-		else
-		{
+                }break;
+
+                case IMF_TYPE_SOUND_OBJECT :
+                {
+                    trace("Type Sound Object")
+                    cSoundObject *lpSound;
+                    lpSound=new cSoundObject();
+                    lpSound->LoadIMF(FileStream);
+                }break;
+
+                default :
+                {
 			trace("Type not found")
 			//If FileType not recognised
 			FileStream.read((char *) &liTemp,sizeof(uint32));
 			FileStream.ignore(liTemp);
-		}
+                }break;
 	}
 
+     }
 	FileStream.close();
 }
 

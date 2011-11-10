@@ -1056,7 +1056,8 @@
 #include "./Audio/WTcAudioDevice.h"
 #include "./Audio/WTcAudioBuffer.h"
 #include "./Audio/WTcAudioObject.h"
-#include "./Files/Audio/WTcWav.h"
+#include "./Files/Audio/WTcAudioData.h"
+#include "./Files/Audio/WTcSoundObject.h"
 
 #include "./Physics/WTcCollisionList.h"
 #include "./Physics/WTcCollisionHandler.h"

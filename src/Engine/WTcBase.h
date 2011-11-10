@@ -137,7 +137,7 @@ public:
 			delete cKernel::Instance();
 		} catch(CException e) {
 			cerr << "Unhandled exception:" << e.message << endl;
-			ERROR("Unhandled exception:" << e.message);
+			TRACEERROR("Unhandled exception:" << e.message);
 			return 1;
 		}
 
