@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Bamboo For Windows" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\libBambooWin" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Debug\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\libBambooWin" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Release\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="glew32s" />
+			<Add library="opengl32" />
+			<Add library="glu32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="openal32" />
+			<Add directory="C:\Program Files\OpenAL 1.1 SDK\libs\Win32" />
+		</Linker>
+		<Unit filename="src\Audio\WTcAudioBuffer.cpp" />
+		<Unit filename="src\Audio\WTcAudioBuffer.h" />
+		<Unit filename="src\Audio\WTcAudioDevice.cpp" />
+		<Unit filename="src\Audio\WTcAudioDevice.h" />
+		<Unit filename="src\Audio\WTcAudioObject.cpp" />
+		<Unit filename="src\Audio\WTcAudioObject.h" />
+		<Unit filename="src\Camera\FX\WTcFog.cpp" />
+		<Unit filename="src\Camera\FX\WTcFog.h" />
+		<Unit filename="src\Camera\FX\WTcLight.cpp" />
+		<Unit filename="src\Camera\FX\WTcLight.h" />
+		<Unit filename="src\Camera\FX\WTcMaterial.cpp" />
+		<Unit filename="src\Camera\FX\WTcMaterial.h" />
+		<Unit filename="src\Camera\FX\WTcSpotLight.cpp" />
+		<Unit filename="src\Camera\FX\WTcSpotLight.h" />
+		<Unit filename="src\Camera\FX\WTvLight.h" />
+		<Unit filename="src\Camera\Nodes\WTcRenderNode.cpp" />
+		<Unit filename="src\Camera\Nodes\WTcRenderNode.h" />
+		<Unit filename="src\Camera\Renderable\WTcBeamMesh.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcBeamMesh.h" />
+		<Unit filename="src\Camera\Renderable\WTcImage.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcImage.h" />
+		<Unit filename="src\Camera\Renderable\WTcLandscape.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcLandscape.h" />
+		<Unit filename="src\Camera\Renderable\WTcLine.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcLine.h" />
+		<Unit filename="src\Camera\Renderable\WTcModelList.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcModelList.h" />
+		<Unit filename="src\Camera\Renderable\WTcParticle.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcParticle.h" />
+		<Unit filename="src\Camera\Renderable\WTcParticleGroup.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcParticleGroup.h" />
+		<Unit filename="src\Camera\Renderable\WTcPoint.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcPoint.h" />
+		<Unit filename="src\Camera\Renderable\WTcTextureText.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcTextureText.h" />
+		<Unit filename="src\Camera\Renderable\WTcTexturedModel.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcTexturedModel.h" />
+		<Unit filename="src\Camera\WTcCamera.cpp" />
+		<Unit filename="src\Camera\WTcCamera.h" />
+		<Unit filename="src\Camera\WTcLightHandler.cpp" />
+		<Unit filename="src\Camera\WTcLightHandler.h" />
+		<Unit filename="src\Camera\WTcPainter.cpp" />
+		<Unit filename="src\Camera\WTcPainter.h" />
+		<Unit filename="src\Camera\WTcRenderObject.cpp" />
+		<Unit filename="src\Camera\WTcRenderObject.h" />
+		<Unit filename="src\Camera\WTcRenderPointer.cpp" />
+		<Unit filename="src\Camera\WTcRenderPointer.h" />
+		<Unit filename="src\Camera\WTvRenderObject.h" />
+		<Unit filename="src\Engine\Process\WTcParentStack.cpp" />
+		<Unit filename="src\Engine\Process\WTcParentStack.h" />
+		<Unit filename="src\Engine\Process\WTcProcess.cpp" />
+		<Unit filename="src\Engine\Process\WTcProcess.h" />
+		<Unit filename="src\Engine\Process\WTvProcess.h" />
+		<Unit filename="src\Engine\WTKernel.cpp" />
+		<Unit filename="src\Engine\WTKernel.h" />
+		<Unit filename="src\Engine\WTcBase.cpp" />
+		<Unit filename="src\Engine\WTcBase.h" />
+		<Unit filename="src\Engine\WTcFrameRate.cpp" />
+		<Unit filename="src\Engine\WTcFrameRate.h" />
+		<Unit filename="src\Engine\WTcSignal.cpp" />
+		<Unit filename="src\Engine\WTcSignal.h" />
+		<Unit filename="src\Files\Audio\WTcAudioData.cpp" />
+		<Unit filename="src\Files\Audio\WTcAudioData.h" />
+		<Unit filename="src\Files\Audio\WTcSoundObject.cpp" />
+		<Unit filename="src\Files\Audio\WTcSoundObject.h" />
+		<Unit filename="src\Files\CollisionMeshes\WTvCollisionData.cpp" />
+		<Unit filename="src\Files\CollisionMeshes\WTvCollisionData.h" />
+		<Unit filename="src\Files\Fonts\WTcFont.cpp" />
+		<Unit filename="src\Files\Fonts\WTcFont.h" />
+		<Unit filename="src\Files\Fonts\WTvFont.h" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcCluster.cpp" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcCluster.h" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcFace.cpp" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcFace.h" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcFullFaceData.cpp" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcFullFaceData.h" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcPlane.cpp" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcPlane.h" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcPolygon.cpp" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcPolygon.h" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcVertex.cpp" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcVertex.h" />
+		<Unit filename="src\Files\Meshes\WTcMesh.cpp" />
+		<Unit filename="src\Files\Meshes\WTcMesh.h" />
+		<Unit filename="src\Files\Meshes\WTcmLandscape.cpp" />
+		<Unit filename="src\Files\Meshes\WTcmLandscape.h" />
+		<Unit filename="src\Files\Meshes\WTv2DPolygon.cpp" />
+		<Unit filename="src\Files\Meshes\WTv2DPolygon.h" />
+		<Unit filename="src\Files\Meshes\WTvMesh.h" />
+		<Unit filename="src\Files\Meshes\WTvmLandscape.h" />
+		<Unit filename="src\Files\Misc\WTcMeshTree.cpp" />
+		<Unit filename="src\Files\Misc\WTcMeshTree.h" />
+		<Unit filename="src\Files\Misc\WTcMeshTreeNode.cpp" />
+		<Unit filename="src\Files\Misc\WTcMeshTreeNode.h" />
+		<Unit filename="src\Files\Misc\WTcReferenceList.cpp" />
+		<Unit filename="src\Files\Misc\WTcReferenceList.h" />
+		<Unit filename="src\Files\Misc\WTvMeshTree.h" />
+		<Unit filename="src\Files\Shaders\WTcShader.cpp" />
+		<Unit filename="src\Files\Shaders\WTcShader.h" />
+		<Unit filename="src\Files\Shaders\WTcShaderProgram.cpp" />
+		<Unit filename="src\Files\Shaders\WTcShaderProgram.h" />
+		<Unit filename="src\Files\Shaders\WTcShaderVariables.cpp" />
+		<Unit filename="src\Files\Shaders\WTcShaderVariables.h" />
+		<Unit filename="src\Files\Shaders\WTcUserDefinedShaderVariable.cpp" />
+		<Unit filename="src\Files\Shaders\WTcUserDefinedShaderVariable.h" />
+		<Unit filename="src\Files\Shaders\WTvShader.h" />
+		<Unit filename="src\Files\Shaders\WTvShaderProgram.h" />
+		<Unit filename="src\Files\Textures\WTcTexture.cpp" />
+		<Unit filename="src\Files\Textures\WTcTexture.h" />
+		<Unit filename="src\Files\Textures\WTvTexture.h" />
+		<Unit filename="src\Files\WTString.cpp" />
+		<Unit filename="src\Files\WTString.h" />
+		<Unit filename="src\Files\WTcFile.cpp" />
+		<Unit filename="src\Files\WTcFile.h" />
+		<Unit filename="src\Files\WTcFileHandler.cpp" />
+		<Unit filename="src\Files\WTcFileHandler.h" />
+		<Unit filename="src\Files\WTcIMFLoader.cpp" />
+		<Unit filename="src\Files\WTcIMFLoader.h" />
+		<Unit filename="src\Files\WTvFile.h" />
+		<Unit filename="src\Global\CException.h" />
+		<Unit filename="src\Global\GlobalPointers.h" />
+		<Unit filename="src\Global\IMFDefinitions.h" />
+		<Unit filename="src\Global\WTDefinitions.h" />
+		<Unit filename="src\Global\WTGameSettings.h" />
+		<Unit filename="src\Global\WTSetDefinitions.h" />
+		<Unit filename="src\Global\WTSettings.cpp" />
+		<Unit filename="src\Global\WTSettings.h" />
+		<Unit filename="src\Global\WTcFlags.h" />
+		<Unit filename="src\Global\log.cpp" />
+		<Unit filename="src\Global\log.h" />
+		<Unit filename="src\Maths\WTMath.cpp" />
+		<Unit filename="src\Maths\WTMath.h" />
+		<Unit filename="src\Maths\WTcCameraMatrix4.cpp" />
+		<Unit filename="src\Maths\WTcCameraMatrix4.h" />
+		<Unit filename="src\Maths\WTcMatrix4.cpp" />
+		<Unit filename="src\Maths\WTcMatrix4.h" />
+		<Unit filename="src\Maths\WTcMatrixStack.cpp" />
+		<Unit filename="src\Maths\WTcMatrixStack.h" />
+		<Unit filename="src\Maths\WTcPerspectiveMatrix.cpp" />
+		<Unit filename="src\Maths\WTcPerspectiveMatrix.h" />
+		<Unit filename="src\PTL\WTLLTemplate.h" />
+		<Unit filename="src\PTL\WTLimitedList.h" />
+		<Unit filename="src\PTL\WTMatrixTemplate.h" />
+		<Unit filename="src\PTL\WTMinLinkedList.h" />
+		<Unit filename="src\PTL\WTRadix.cpp" />
+		<Unit filename="src\PTL\WTRadix.h" />
+		<Unit filename="src\PTL\WTcPushPopStack.h" />
+		<Unit filename="src\Physics\WTcCollisionHandler.cpp" />
+		<Unit filename="src\Physics\WTcCollisionHandler.h" />
+		<Unit filename="src\Physics\WTcCollisionList.cpp" />
+		<Unit filename="src\Physics\WTcCollisionList.h" />
+		<Unit filename="src\Physics\WTcCollisionObject.cpp" />
+		<Unit filename="src\Physics\WTcCollisionObject.h" />
+		<Unit filename="src\WTDivWin.h" />
+		<Unit filename="src\Windows\EventHandler\WTcEventHandler.cpp" />
+		<Unit filename="src\Windows\EventHandler\WTcEventHandler.h" />
+		<Unit filename="src\Windows\EventHandler\WTcKeyStore.cpp" />
+		<Unit filename="src\Windows\EventHandler\WTcKeyStore.h" />
+		<Unit filename="src\Windows\EventHandler\WTcMouse.cpp" />
+		<Unit filename="src\Windows\EventHandler\WTcMouse.h" />
+		<Unit filename="src\Windows\ExtensionWrapper\glext.h" />
+		<Unit filename="src\Windows\ExtensionWrapper\glxext.h" />
+		<Unit filename="src\Windows\ExtensionWrapper\wglext.h" />
+		<Unit filename="src\Windows\WTWindowsKeyCodes.h" />
+		<Unit filename="src\Windows\WTXWindowsKeyCodes.h" />
+		<Unit filename="src\Windows\WTcSync.cpp" />
+		<Unit filename="src\Windows\WTcSync.h" />
+		<Unit filename="src\Windows\WTcWindow.cpp" />
+		<Unit filename="src\Windows\WTcWindow.h" />
+		<Unit filename="src\Windows\gl3.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

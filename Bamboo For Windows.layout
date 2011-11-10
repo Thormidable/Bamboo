@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="src\Audio\WTcAudioBuffer.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="132" topLine="0" />
+	</File>
+	<File name="src\Audio\WTcAudioBuffer.h" open="0" top="0" tabpos="9">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src\Audio\WTcAudioDevice.h" open="0" top="0" tabpos="11">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src\Audio\WTcAudioObject.h" open="0" top="0" tabpos="10">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src\Camera\Renderable\WTcBeamMesh.cpp" open="0" top="0" tabpos="10">
+		<Cursor position="391" topLine="5" />
+	</File>
+	<File name="src\Camera\WTcCamera.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="357" topLine="0" />
+	</File>
+	<File name="src\Camera\WTcPainter.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="2797" topLine="116" />
+	</File>
+	<File name="src\Engine\WTKernel.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="372" topLine="129" />
+	</File>
+	<File name="src\Engine\WTcBase.cpp" open="0" top="0" tabpos="13">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src\Engine\WTcBase.h" open="0" top="0" tabpos="4">
+		<Cursor position="685" topLine="6" />
+	</File>
+	<File name="src\Files\Audio\WTcAudioData.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="1402" topLine="13" />
+	</File>
+	<File name="src\Files\Audio\WTcAudioData.h" open="0" top="0" tabpos="6">
+		<Cursor position="1050" topLine="3" />
+	</File>
+	<File name="src\Files\Audio\WTcSoundObject.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="311" topLine="0" />
+	</File>
+	<File name="src\Files\Audio\WTcSoundObject.h" open="0" top="0" tabpos="8">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src\Files\Meshes\WTcMesh.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="158" topLine="51" />
+	</File>
+	<File name="src\Files\Shaders\WTcShader.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2835" topLine="84" />
+	</File>
+	<File name="src\Files\Shaders\WTcShaderProgram.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="874" topLine="17" />
+	</File>
+	<File name="src\Files\Shaders\WTcShaderProgram.h" open="0" top="0" tabpos="2">
+		<Cursor position="1882" topLine="17" />
+	</File>
+	<File name="src\Files\Shaders\WTcShaderVariables.h" open="0" top="0" tabpos="7">
+		<Cursor position="0" topLine="42" />
+	</File>
+	<File name="src\Files\Shaders\WTcUserDefinedShaderVariable.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="3225" topLine="152" />
+	</File>
+	<File name="src\Files\Shaders\WTcUserDefinedShaderVariable.h" open="0" top="0" tabpos="6">
+		<Cursor position="2508" topLine="126" />
+	</File>
+	<File name="src\Files\WTcIMFLoader.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="488" topLine="0" />
+	</File>
+	<File name="src\Files\WTcIMFLoader.h" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src\Global\IMFDefinitions.h" open="1" top="0" tabpos="3">
+		<Cursor position="359" topLine="0" />
+	</File>
+	<File name="src\Global\WTDefinitions.h" open="0" top="0" tabpos="5">
+		<Cursor position="9036" topLine="159" />
+	</File>
+	<File name="src\Global\WTSettings.cpp" open="0" top="0" tabpos="14">
+		<Cursor position="3022" topLine="56" />
+	</File>
+	<File name="src\Global\WTSettings.h" open="0" top="0" tabpos="7">
+		<Cursor position="89" topLine="0" />
+	</File>
+	<File name="src\Global\log.h" open="0" top="0" tabpos="0">
+		<Cursor position="1616" topLine="42" />
+	</File>
+	<File name="src\WTDivWin.h" open="1" top="1" tabpos="2">
+		<Cursor position="42532" topLine="1030" />
+	</File>
+	<File name="src\Windows\EventHandler\WTcMouse.cpp" open="0" top="0" tabpos="12">
+		<Cursor position="268" topLine="3" />
+	</File>
+	<File name="src\Windows\WTcWindow.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="138" topLine="0" />
+	</File>
+	<File name="src\Windows\gl3.h" open="0" top="0" tabpos="0">
+		<Cursor position="113977" topLine="2469" />
+	</File>
+</CodeBlocks_layout_file>
