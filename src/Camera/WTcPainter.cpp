@@ -7,7 +7,7 @@ cPainter *cPainter::mpInstance=0;
 
 cPainter *cPainter::Instance()
 {
- 
+
  if(!mpInstance) { mpInstance=new cPainter(); mpInstance->Resize(WT_PAINTER_STARTING_SIZE);}
  return mpInstance;
 }
@@ -47,12 +47,12 @@ cRenderPointer **lpTemp;
   mpBucket=lpTemp;
 
   miSize=liSize;
- 
+
 }
 
 void cPainter::Add(cRenderPointer *lfData)
 {
- 
+
 if(miPos>=miSize) {Resize(miSize*2);}
  mpList[miPos]=lfData;
  ++miPos;
@@ -70,20 +70,20 @@ void cPainter::SortByDistance()
  uint32 lpStarts[0x100];
 
  memset(lpStarts,0,sizeof(uint32)*0x100);
- 
+
  for(liPass=0;liPass<miPos;++liPass)
  {
-  
+
   float lfX,lfY,lfZ;
-  
-  
+
+
   lfX=mpList[liPass]->mpObject->mmCache.Matrix()[12];
   lfY=mpList[liPass]->mpObject->mmCache.Matrix()[13];
   lfZ=mpList[liPass]->mpObject->mmCache.Matrix()[14];
- 
+
   mpList[liPass]->miDist=static_cast<uint32>(lfX*lfX+lfY*lfY+lfZ*lfZ);
  }
- 
+
 for(liPass=0;liPass<25;liPass+=8)
 {
   //Reset the bucket sizes
@@ -95,7 +95,7 @@ for(liPass=0;liPass<25;liPass+=8)
   {
 	  //Apparently uninitialised value here! Believes that miDist is uninitialised, as comes from mmCache.Matrix()...
 	++lpStarts[(mpList[liFindPos]->miDist>>liPass)&0xFF];
-    
+
   }
 
   //Convert bucket sizes to bucket starts.
@@ -124,7 +124,7 @@ for(liPass=0;liPass<25;liPass+=8)
 
 void cPainter::SortByShader()
 {
-  
+
  unsigned short liPass;
  unsigned int liFindPos;
  unsigned int liSum,liOld;
@@ -221,7 +221,7 @@ void cPainter::ShaderState(vShaderProgram *mpCurrent,vShaderProgram *mpLast)
 
 void cPainter::TextureState(uint32 mpCurrent,uint32 mpLast)
 {
-	
+
   if(mpCurrent)
   {
    if(!mpLast) {glEnable(GL_TEXTURE_2D); glEnableClientState(GL_TEXTURE_COORD_ARRAY);}
@@ -251,14 +251,14 @@ void cPainter::Render()
 
 glEnableClientState(GL_VERTEX_ARRAY);
 glEnableClientState(GL_NORMAL_ARRAY);
-
+glEnable(GL_DEPTH_TEST);
  for(liCount=0;liCount<miPos;liCount++)
  {
-	 
+
   if(mpList[liCount]->mbReRender)
   {
-	  
-  if(liCount) 
+
+  if(liCount)
   {
     TextureState(mpList[liCount]->mpTexture,mpList[liCount-1]->mpTexture);
     ShaderState(mpList[liCount]->mpShader,mpList[liCount-1]->mpShader);
@@ -268,10 +268,10 @@ glEnableClientState(GL_NORMAL_ARRAY);
     TextureState(mpList[liCount]->mpTexture,0);
     ShaderState(mpList[liCount]->mpShader,0);
   }
- 
-#warning comment THIS NEEDS TO BE FIXED FOR MATRIX STACK
 
-  
+#warning comment THIS NEEDS TO BE FIXED FOR MATRIX STACK
+  if(mpList[liCount]->mbAlpha) glDisable(GL_DEPTH_TEST);
+
   mpList[liCount]->mpObject->RenderPainter(mpList[liCount]->miLevel);
   mpList[liCount]->mbReRender=false;
   }
@@ -290,11 +290,11 @@ uint32 liCount;
 		  return;
 	}
   }
-    
+
  }
 
 void cPainter::Reset()
 {
   glDisableClientState(GL_TEXTURE_COORD_ARRAY); glDisable(GL_TEXTURE_2D);
-  
+
 };

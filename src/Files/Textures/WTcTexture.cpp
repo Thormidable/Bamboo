@@ -21,7 +21,7 @@ cTexture::cTexture(cTextureArray *lpTexture)
  miWidth=lpTexture->miWidth;
  miHeight=lpTexture->miHeight;
  miDepth=lpTexture->miDepth;
- 
+
  mpData=lpTexture->mpData;
 
  glGenTextures(1, &miTexture);

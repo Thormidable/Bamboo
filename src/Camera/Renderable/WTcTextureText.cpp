@@ -25,7 +25,7 @@ void cText::RenderPainter(uint8 liLevel)
       glTexCoord2f(0,liRange);           glVertex3f(-mfWidth*(2*liCount-1),mfHeight,3.1f);
 
       glEnd();
-      //glTranslatef(mfWidth*2,0,0);
+
     }
 
 

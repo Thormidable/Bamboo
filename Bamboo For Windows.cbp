@@ -40,11 +40,11 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="C:\Program Files\OpenAL 1.1 SDK\include" />
-			<Add directory="E:\My Documents\Downloads\DivWinDependancies\boost_1_47_0" />
+			<Add directory="..\..\Includes\OpenAL 1.1 SDK\include" />
+			<Add directory="..\..\Includes\boost_1_47_0" />
 		</Compiler>
 		<Linker>
-			<Add directory="C:\Program Files\OpenAL 1.1 SDK\libs\Win32" />
+			<Add directory="..\..\Includes\OpenAL 1.1 SDK\libs\Win32" />
 		</Linker>
 		<Unit filename="src\Audio\WTcAudioBuffer.cpp" />
 		<Unit filename="src\Audio\WTcAudioBuffer.h" />

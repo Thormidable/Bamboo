@@ -39,6 +39,7 @@ if(mpPixmap)
  mpPainterData->SetObject(this);
  mpPainterData->SetTexture(TextureNumber());
  mpPainterData->SetShader(mpShader);
+ mpPainterData->SetAlpha(true);
 
 mpPainterData->RenderAgain();
 
@@ -67,8 +68,8 @@ void cImage::RenderPainter(uint8 liLevel)
 
  if(mpPixmap)
  {
-     glDisable(GL_DEPTH_TEST);
-     glEnable(GL_DEPTH_CLAMP);
+ //    glDisable(GL_DEPTH_TEST);
+ //    glEnable(GL_DEPTH_CLAMP);
      ResizeArrays();
      SetShaderVariables();
 
@@ -96,8 +97,8 @@ void cImage::RenderPainter(uint8 liLevel)
 
    glEnd();
 
-   glDisable(GL_DEPTH_CLAMP);
-   glEnable(GL_DEPTH_TEST);
+   //glDisable(GL_DEPTH_CLAMP);
+   //glEnable(GL_DEPTH_TEST);
  }
 
 }
