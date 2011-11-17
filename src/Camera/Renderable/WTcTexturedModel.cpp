@@ -3,7 +3,7 @@
 
 cTexturedModel::cTexturedModel()
 {
- Identity();  
+ Identity();
  mpMesh=0;
  mpTexture=0;
 }
@@ -28,27 +28,28 @@ void cTexturedModel::Mesh(vMesh *lpGraph)
 
 void cTexturedModel::RenderPainter(uint8 liLevel)
 {
-	
+
 (void) liLevel;
  if(mpMesh)
  {
   PrepareMaterial();
   SetShaderVariables();
-  
-  mpMesh->RenderMesh(Variables());
+
+
+  mpMesh->RenderMesh();
  }
 }
 
 void cTexturedModel::RenderToPainter()
 {
- 
- float Temp[16];
+
+
  UpdateMatrix();
- 
+
  mpPainterData->SetObject(this);
  //mpPainterData->SetMatrix(Temp);
  mpPainterData->SetTexture(TextureNumber());
- 
+
  mpPainterData->SetShader(mpShader);
 mpPainterData->RenderAgain();
  //cPainter::Instance()->Add(lcTemp);
@@ -58,9 +59,10 @@ void cTexturedModel::Render()
 {
 
  glEnable(GL_TEXTURE_2D);
- 
+
   UpdateMatrix();
-  
+  UpdateCache();
+
  PrepareMaterial();
 
   mpTexture->BindTexture();
@@ -72,18 +74,20 @@ void cTexturedModel::Render()
 
   if(mpShader) mpShader->Use();
   else _USE_FIXED_FUNCTION();
-  
+
+
+ SetShaderVariables();
   AdditionalRenderFunctions();
 
-  mpMesh->RenderMesh(Variables());
- 
+  mpMesh->RenderMesh();
+
 }
 
 
 unsigned int cTexturedModel::TextureNumber()
 {
   return mpTexture->TextureNumber();
-  
+
 }
 
 vTexture *cTexturedModel::Texture()

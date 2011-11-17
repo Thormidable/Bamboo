@@ -45,7 +45,7 @@ class cMesh : public vMesh
 protected:
 /**
 * \brief This stores the format which determines what data is used to render the model.
-* The flags in this variable determine what data is present to be used by the renderer * relative to this object. see flags WT_MESH_FORMAT_VERTECES, WT_MESH_FORMAT_UVS,  
+* The flags in this variable determine what data is present to be used by the renderer * relative to this object. see flags WT_MESH_FORMAT_VERTECES, WT_MESH_FORMAT_UVS,
 * WT_MESH_FORMAT_NORMALS and WT_MESH_FORMAT_POSITIVE.
 
 */
@@ -105,7 +105,7 @@ uint16 *FaceData();
  void Position(float lfX,float lfY,float lfZ);
  /// This will move the objects centre of rotation along its X axis lfX distance.
  void PositionX(float lfX);
-/// This will move the objects centre of rotation along its Y axis lfY distance. 
+/// This will move the objects centre of rotation along its Y axis lfY distance.
 void PositionY(float lfY);
 /// This will move the objects centre of rotation along its Z axis lfZ distance.
  void PositionZ(float lfZ);
@@ -116,7 +116,7 @@ void PositionY(float lfY);
 void BufferMesh();
 
 // This will render the mesh directly from graphics memory.
-void RenderMesh(cVariableStore *lpNew);
+void RenderMesh();
 
 /// This will return the size of the Mesh. Size being the radius of the sphere required to contain the cMesh object.
 float GetSize();

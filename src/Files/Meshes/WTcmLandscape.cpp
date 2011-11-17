@@ -5,7 +5,7 @@ cmLandscapeArray::cmLandscapeArray()
  mpRef=0;
  mpVertex=0;
  mpUV=0;
- 
+
 }
 
 cmLandscapeArray::~cmLandscapeArray()
@@ -16,12 +16,12 @@ cmLandscapeArray::~cmLandscapeArray()
 
 cLandscapeMeshFile::cLandscapeMeshFile(cmLandscapeArray *lpArray) : cmLandscape(lpArray)
 {
-      strcpy(mpFileName,lpArray->mpRef); 	
+      strcpy(mpFileName,lpArray->mpRef);
 }
 
 cmLandscape::cmLandscape(cmLandscapeArray *lpArray)
 {
- 
+
   mpBufferIDs=0;
 
 
@@ -48,8 +48,8 @@ cmLandscape::cmLandscape(cmLandscapeArray *lpArray)
 	   	  printf("Vertex %d : %f %f %f\n",(liArrayPos/3)-1,mpVertex[liArrayPos-3],mpVertex[liArrayPos-2],mpVertex[liArrayPos-1]);
   }
  }
-*/	
-	
+*/
+
 };
 
 
@@ -60,7 +60,7 @@ void cmLandscape::PrepareLandscape()
  mfZSizeI=1/mfZSize;
 
  mpQuads=0;mpNormals=0;mpUV=0;
- 
+
 float *mpTemp;
 mpTemp=new float[VertexDataSize()];
 
@@ -77,20 +77,20 @@ GenerateFaces();
 
 void cmLandscape::BufferMesh()
 {
-	
+
 	if (!mpBufferIDs) mpBufferIDs = new GLuint[2];
 	glGenBuffersARB(2,mpBufferIDs);
-	
+
 	glBindBufferARB(GL_ARRAY_BUFFER, mpBufferIDs[0]);
 	glBufferDataARB(GL_ARRAY_BUFFER, sizeof(float)*VertexDataSize(), mpVertex, GL_STATIC_DRAW);
 
 	glBindBufferARB(GL_ELEMENT_ARRAY_BUFFER, mpBufferIDs[1]);
 	glBufferDataARB(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint16)*miQuads, mpQuads, GL_STATIC_DRAW);
-	
-	
+
+
 	glBindBufferARB(GL_ARRAY_BUFFER,0);
 	glBindBufferARB(GL_ELEMENT_ARRAY_BUFFER,0);
-	
+
 }
 
 
@@ -152,7 +152,7 @@ if(lpArray)
 
  mpVertex=new float[miXSteps*miZSteps*3];
  memcpy(mpVertex,lpArray->mpVertex,sizeof(float)*miXSteps*miZSteps*3);
- 
+
  //mpUV=lpArray->mpUV;
 printf("Here\n");
 PrepareLandscape();
@@ -173,7 +173,7 @@ if (mpBufferIDs)
 {
   glDeleteBuffers(2,mpBufferIDs);
   delete []mpBufferIDs;
-  mpBufferIDs=0;  
+  mpBufferIDs=0;
 }
 
 }
@@ -190,10 +190,10 @@ float cmLandscape::GetHeightLocal(float lfX,float lfZ)
  {
 	lfX=(lfX-liX*mfXSize)*mfXSizeI;
 	lfZ=(lfZ-liZ*mfZSize)*mfZSizeI;
-	
+
 	// Find the Starting Node
 	liX =(3*(liX+liZ*miXSteps));
-	
+
 	lfHeight = mpVertex[liX+1]*(1-lfX)*(1-lfZ);
 	lfHeight+= mpVertex[liX+4]*lfX*(1-lfZ);
 	lfHeight+= mpVertex[liX+3*miXSteps+4]*lfX*lfZ;
@@ -210,7 +210,7 @@ float cmLandscape::GetVertexHeight(uint32 liX,uint32 liZ)
 
 void cmLandscape::SetHeight(uint32 liX,uint32 liZ,float lfHeight)
 {
- 
+
  mpVertex[GetNode(liX,liZ)*3+1]=lfHeight;
 
 }
@@ -218,11 +218,11 @@ void cmLandscape::SetHeight(uint32 liX,uint32 liZ,float lfHeight)
 
 void cmLandscape::Randomize(float liHeight,uint8 liSize)
 {
- 
+
  double liSum;
  uint32 liX1;
  uint32 liX,liZ;
- 
+
  for(liX=0;liX<miXSteps;++liX)
  {
    for(liZ=0;liZ<miZSteps;++liZ)
@@ -372,7 +372,7 @@ BufferMesh();
 
 void cmLandscape::Randomize(float liHeight)
 {
- 
+
  uint32 liX,liZ;
  for(liX=0;liX<miXSteps;++liX)
  {
@@ -428,8 +428,7 @@ void cmLandscape::RenderMesh()
 	glVertexPointer(3,GL_FLOAT,0,0);
 	glNormalPointer(GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miXSteps*miZSteps*3*sizeof(float)));
 	glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miXSteps*miZSteps*6*sizeof(float)));
-	//glDrawElements(GL_QUADS,miQuads,GL_UNSIGNED_SHORT,0);
-	//glDrawElements(GL_TRIANGLE_STRIP,miQuads,GL_UNSIGNED_SHORT,0);
+
 	glDrawElements(GL_TRIANGLE_STRIP,miQuads,GL_UNSIGNED_SHORT,0);
 
 }
@@ -438,14 +437,14 @@ void cmLandscape::SetHeightRange(float lfRange)
 {
   printf("mfHeightRange : %f\n",mfHeightRange);
 	float lfPropor=lfRange/mfHeightRange;
-	
+
 	uint32 liLoop,liArrayPos=1;
 		for(liLoop=0;liLoop<Verteces();++liLoop)
 		{
 			mpVertex[liArrayPos]=mpVertex[liArrayPos]*lfPropor;
 			liArrayPos+=3;
 		}
-		
+
 		mfHeightRange=lfRange;
 		BufferMesh();
 }
@@ -471,17 +470,17 @@ mfXSizeI=1.0f/mfXSize;
 void cmLandscape::SetZStep(float lfStep)
 {
 	mfZSize=lfStep/mfZSize;
-	
+
 	uint32 liLoop1,liArrayPos=2;
 	for(liLoop1=0;liLoop1<Verteces();++liLoop1)
 	{
 		mpVertex[liArrayPos]=mpVertex[liArrayPos]*mfZSize;
 		liArrayPos+=3;
 	}
-	
+
 	mfZSize=lfStep;
 	mfZSizeI=1.0f/mfZSize;
-	
+
 	BufferMesh();
 }
 
@@ -489,7 +488,7 @@ void cmLandscape::SetXZStep(float lfXStep,float lfZStep)
 {
 	mfXSize=lfXStep/mfXSize;
 	mfZSize=lfZStep/mfZSize;
-	
+
 	uint32 liLoop1,liArrayPos=0;
 	for(liLoop1=0;liLoop1<Verteces();++liLoop1)
 	{
@@ -500,10 +499,10 @@ void cmLandscape::SetXZStep(float lfXStep,float lfZStep)
 
 	mfXSize=lfXStep;
 	mfXSizeI=1.0f/mfXSize;
-	
+
 	mfZSize=lfZStep;
 	mfZSizeI=1.0f/mfZSize;
-	
+
 	BufferMesh();
 
 }
@@ -534,18 +533,18 @@ void cLandscapeMeshRandom::GenerateUVs()
 				if(mpVertex[liPos+2]<mpVertex[liTile+liLowZ*3+2]) liLowX=liCount;
 				if(mpVertex[liPos+2]>mpVertex[liTile+liHighZ*3+2]) liLowX=liCount;
 			}
-			
+
 			lfXRange=1.0f/(mpVertex[liTile+liHighX*3]-mpVertex[liTile+liLowX*3]);
 			lfZRange=1.0f/(mpVertex[liTile+liHighZ*3+2]-mpVertex[liTile+liLowZ*3+2]);
 
 				for(liCount=0;liCount<4;++liCount)
 				{
 					liPos=liTile+liCount*3;
-					
+
 					mpUV[liArrayPos++]=(float) lfXRand+WT_LANDSCAPE_TEXTURE_ACTUAL_SCALE*lfXRange*(mpVertex[liPos]-mpVertex[liTile+liLowX*3]);
 					mpUV[liArrayPos++]=(float) lfZRand+WT_LANDSCAPE_TEXTURE_ACTUAL_SCALE*lfZRange*(mpVertex[liPos+2]-mpVertex[liTile+liLowZ*3+2]);
 				}
-			
+
 			liTile+=12;
 		}
 	}
@@ -565,7 +564,7 @@ void cmLandscape::GenerateRandomUVs()
 	{
 		for(liLoop2=0;liLoop2<miXSteps;++liLoop2)
 		{
-			
+
 			for(liCount=1;liCount<4;liCount++)
 			{
 				liPos=liTile+liCount*3;
@@ -574,18 +573,18 @@ void cmLandscape::GenerateRandomUVs()
 				if(mpVertex[liPos+2]<mpVertex[liTile+liLowZ*3+2]) liLowX=liCount;
 				if(mpVertex[liPos+2]>mpVertex[liTile+liHighZ*3+2]) liLowX=liCount;
 			}
-			
+
 			lfXRange=1.0f/(mpVertex[liTile+liHighX*3]-mpVertex[liTile+liLowX*3]);
 			lfZRange=1.0f/(mpVertex[liTile+liHighZ*3+2]-mpVertex[liTile+liLowZ*3+2]);
-			
+
 			for(liCount=0;liCount<4;++liCount)
 			{
-				
+
 				liPos=liTile+liCount*3;
 				mpUV[liArrayPos++]=(float) lfXRange*(mpVertex[liPos]-mpVertex[liTile+liLowX*3]);
 				mpUV[liArrayPos++]=(float) lfZRange*(mpVertex[liPos+2]-mpVertex[liTile+liLowZ*3+2]);
 			}
-			
+
 			liTile+=12;
 		}
 	}
@@ -595,7 +594,7 @@ uint32 cLandscapeMeshIndividual::GetNode(uint32 liX,uint32 liZ)
 {
  if(liX) liX=(liX-1)*4+1;
  if(liZ) liZ=(liZ-1)*(miXSteps-1)*4+1;
- 
+
  return liX+liZ;
 }
 
@@ -603,9 +602,9 @@ uint32 cLandscapeMeshIndividual::GetNode(uint32 liX,uint32 liZ)
 void cLandscapeMeshIndividual::SetHeight(uint32 liX,uint32 liZ,float lfHeight)
 {
  uint32 liNode=GetNode(liX,liZ)*3;
- 
+
  mpVertex[liNode+1]=lfHeight;
- 
+
  if(liX && liX<miXSteps-1) mpVertex[liNode+5]=lfHeight;
  if(liX && liZ<miZSteps-1) mpVertex[liNode+4*(miXSteps-1)-1]=lfHeight;
  if(liX && liZ && liZ<miZSteps-1 && liX<miXSteps-1) mpVertex[liNode+4*(miXSteps-1)+2]=lfHeight;
@@ -616,16 +615,16 @@ float cLandscapeMeshIndividual::GetHeightLocal(float lfX,float lfZ)
 {
 	float lfHeight;
 	int32 liX,liZ;
-	
+
 	liX=static_cast<int32>(lfX*mfXSizeI);
 	liZ=static_cast<int32>(lfZ*mfZSizeI);
-	
+
 	if(liX>=0 && liX<(int32)miXSteps && liZ>=0 && liZ<(int32)miZSteps)
 	{
 		lfX=(lfX-liX*mfXSize)*mfXSizeI;
 		lfZ=(lfZ-liZ*mfZSize)*mfZSizeI;
-		
-		
+
+
 		lfHeight = mpVertex[GetNode(liX,liZ)*3+1]*(1-lfX)*(1-lfZ);
 		lfHeight+= mpVertex[GetNode(liX+1,liZ)*3+1]*lfX*(1-lfZ);
 		lfHeight+= mpVertex[GetNode(liX+1,liZ+1)*3+1]*lfX*lfZ;
@@ -637,7 +636,7 @@ float cLandscapeMeshIndividual::GetHeightLocal(float lfX,float lfZ)
 
 void cLandscapeMeshIndividual::ConvertVertexData(float *lpHeight)
 {
-	
+
 	uint32 liArrayPos,liLoop1,liLoop2;
 	liArrayPos=0;
 	uint32 liTile=0;
@@ -648,19 +647,19 @@ void cLandscapeMeshIndividual::ConvertVertexData(float *lpHeight)
 				mpVertex[liArrayPos++]=lpHeight[liTile];
 				mpVertex[liArrayPos++]=lpHeight[liTile+1];
 				mpVertex[liArrayPos++]=lpHeight[liTile+2];
-				
+
 				mpVertex[liArrayPos++]=lpHeight[liTile+3];
 				mpVertex[liArrayPos++]=lpHeight[liTile+4];
 				mpVertex[liArrayPos++]=lpHeight[liTile+5];
-				
+
 				mpVertex[liArrayPos++]=lpHeight[liTile+miXSteps*3+3];
 				mpVertex[liArrayPos++]=lpHeight[liTile+miXSteps*3+4];
 				mpVertex[liArrayPos++]=lpHeight[liTile+miXSteps*3+5];
-				
+
 				mpVertex[liArrayPos++]=lpHeight[liTile+miXSteps*3];
 				mpVertex[liArrayPos++]=lpHeight[liTile+miXSteps*3+1];
 				mpVertex[liArrayPos++]=lpHeight[liTile+miXSteps*3+2];
-				
+
 				liTile+=3;
 			}
 		}
@@ -670,8 +669,8 @@ void cLandscapeMeshIndividual::ConvertVertexData(float *lpHeight)
 void cLandscapeMeshIndividual::GenerateVerteces()
 {
 
-	
-	
+
+
 	uint32 liArrayPos,liLoop1,liLoop2;
 	liArrayPos=0;
 	uint32 liTile=0;
@@ -682,19 +681,19 @@ void cLandscapeMeshIndividual::GenerateVerteces()
 				mpVertex[liArrayPos++]=mfXSize*liLoop2;
 				mpVertex[liArrayPos++]=0.0f;
 				mpVertex[liArrayPos++]=mfZSize*liLoop1;
-				
+
 				mpVertex[liArrayPos++]=mfXSize*(liLoop2+1);
 				mpVertex[liArrayPos++]=0.0f;
 				mpVertex[liArrayPos++]=mfZSize*liLoop1;
-				
+
 				mpVertex[liArrayPos++]=mfXSize*(liLoop2+1);
 				mpVertex[liArrayPos++]=0.0f;
 				mpVertex[liArrayPos++]=mfZSize*(liLoop1+1);
-				
+
 				mpVertex[liArrayPos++]=mfXSize*liLoop2;
 				mpVertex[liArrayPos++]=0.0f;
 				mpVertex[liArrayPos++]=mfZSize*(liLoop1+1);
-				
+
 				liTile+=3;
 			}
 		}
@@ -711,19 +710,19 @@ void cLandscapeMeshIndividual::GenerateNormals()
 				mpNormals[liArrayPos++]=0.0f;
 				mpNormals[liArrayPos++]=1.0f;
 				mpNormals[liArrayPos++]=0.0f;
-				
+
 				mpNormals[liArrayPos++]=0.0f;
 				mpNormals[liArrayPos++]=1.0f;
 				mpNormals[liArrayPos++]=0.0f;
-				
+
 				mpNormals[liArrayPos++]=0.0f;
 				mpNormals[liArrayPos++]=1.0f;
 				mpNormals[liArrayPos++]=0.0f;
-				
+
 				mpNormals[liArrayPos++]=0.0f;
 				mpNormals[liArrayPos++]=1.0f;
 				mpNormals[liArrayPos++]=0.0f;
-				
+
 			}
 		}
 }
@@ -731,18 +730,18 @@ void cLandscapeMeshIndividual::GenerateNormals()
 void cLandscapeMeshIndividual::GenerateFaces()
 {
 	uint32 liLoop1;
-	
+
 	miQuads=4*(miZSteps-1)*(miXSteps-1);
-	
+
 	delete []mpQuads;
 	printf("Failure\n");
 	mpQuads=new uint16[miQuads];
-	
+
 	for(liLoop1=0;liLoop1<miQuads;liLoop1++)
 	{
 		mpQuads[liLoop1]=liLoop1;
 	}
-	
+
 }
 */
 
@@ -753,7 +752,7 @@ void cmLandscape::GenerateVerteces()
 	//Find the Verteces Positions
 	uint32 liLoop1,liLoop2,liArrayPos;
 	liArrayPos=0;
-	
+
 for(liLoop1=0;liLoop1<miZSteps;++liLoop1) //Z
  {
 	 for(liLoop2=0;liLoop2<miXSteps;++liLoop2) //X
@@ -764,14 +763,14 @@ for(liLoop1=0;liLoop1<miZSteps;++liLoop1) //Z
 
   }
  }
-	
+
 }
 
 void cmLandscape::GenerateNormals()
 {
 	uint32 liLoop1,liLoop2,liArrayPos;
 	liArrayPos=0;
-	
+
 for(liLoop1=0;liLoop1<miZSteps;++liLoop1) //Z
 {
 	for(liLoop2=0;liLoop2<miXSteps;++liLoop2) //X
@@ -781,7 +780,7 @@ for(liLoop1=0;liLoop1<miZSteps;++liLoop1) //Z
 		mpNormals[liArrayPos++]=0.0f;
 	}
 }
-	
+
 }
 
 void cmLandscape::GenerateUVs()
@@ -794,7 +793,7 @@ void cmLandscape::GenerateUVs()
 
 	lfXRange=1.0f/(miXSteps*mfXSize);
 	lfZRange=1.0f/(miZSteps*mfZSize);
-	
+
 for(liLoop1=0;liLoop1<miZSteps;++liLoop1) //Z
 {
 	for(liLoop2=0;liLoop2<miXSteps;++liLoop2) //X
@@ -809,38 +808,38 @@ for(liLoop1=0;liLoop1<miZSteps;++liLoop1) //Z
 /*
 void cLandscapeMeshIndividual::RenderMesh()
 {
-	
+
 	glBindBufferARB(GL_ARRAY_BUFFER, mpBufferIDs[0]);
 	glBindBufferARB(GL_ELEMENT_ARRAY_BUFFER, mpBufferIDs[1]);
-	
+
 	glVertexPointer(3,GL_FLOAT,0,0);
 	glNormalPointer(GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miXSteps*miZSteps*3*sizeof(float)));
 	glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miXSteps*miZSteps*6*sizeof(float)));
-	
+
 	//glNormalPointer(GL_FLOAT,0,reinterpret_cast<const GLvoid*>(Verteces()*3*sizeof(float)));
 	//glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(Verteces()*6*sizeof(float)));
-	
+
 	glDrawElements(GL_QUADS,miQuads,GL_UNSIGNED_SHORT,0);
-	
+
 }
 */
 
 void cmLandscape::GenerateFaces()
 {
 	miQuads=2*(miZSteps-1)*(miXSteps)+miZSteps-2;
-	
+
 	delete []mpQuads;
-	
+
 	mpQuads=new uint16[miQuads];
-	
+
 	int32 liCount;
 	int32 liSeq,liBase,liXVert;
 	uint32 liLoop;
-	
+
 	liXVert=miXSteps;
 	liSeq=0;
 	liBase=0;
-	
+
 	for(liLoop=0;liLoop<miZSteps-1;++liLoop)
 	{
 		if(liLoop%2)
@@ -850,7 +849,7 @@ void cmLandscape::GenerateFaces()
 				mpQuads[liSeq++]=liBase+liCount;
 				mpQuads[liSeq++]=liBase+liXVert+liCount;
 			}
-			
+
 		}
 		else
 		{
@@ -862,15 +861,15 @@ void cmLandscape::GenerateFaces()
 		}
 		if(liLoop<(miZSteps-2))
 		{
-			
+
 			mpQuads[liSeq]=mpQuads[liSeq-1];
 			++liSeq;
 			liBase+=liXVert;
 		}
-		
-		
+
+
 	}
-	
+
 }
 
 cmLandscape *cmLandscape::Duplicate()

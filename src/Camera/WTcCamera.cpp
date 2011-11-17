@@ -26,7 +26,7 @@ cCameraPainter::cCameraPainter()
 
 void cCamera::Render()
 {
-	
+
 
 	//This will render the objects in their current render tree order
  glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -44,13 +44,13 @@ void cCamera::Render()
 
 void cCameraPainter::Render()
 {
-	
-	
+
+
 	ResetGLMatrix();
 	cPainter::Instance()->Reset();
-	
+
 	mpRenderList->RenderToPainter();
-	
+
 	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	cPainter::Instance()->Render();
 	#if WT_OS_TYPE==OS_WIN32
@@ -82,12 +82,12 @@ void cCamera::UpdateProjectionMatrix()
 
 float cCamera::Near()
 {
- return mmPerspective.mfNear;
+ return mmPerspective.Near();
 }
 
 float cCamera::Far()
 {
- return mmPerspective.mfFar;
+ return mmPerspective.Far();
 }
 
 void cCamera::ResetGLMatrix()
@@ -104,11 +104,11 @@ cCamera *cCamera::Instance()
 {
 	if (!mpInstance)
 	{
-		
+
 		if(WT_USE_PAINTER_ALGORITHM) mpInstance=new cCameraPainter;
 		else mpInstance=new cCamera;
 	}
-	
+
 	return mpInstance;
 }
 
@@ -116,26 +116,26 @@ cCamera *cCamera::Instance()
 cRenderNode *cCamera::RenderList()
 {
   return mpRenderList;
-  
+
 };
 
 /// This will return a virtual pointer to the the scene graph.
 vRenderObject *cCamera::vRenderList()
 {
   return (vRenderObject*)mpRenderList;
-  
+
 };
 
 void cCamera::Near(float lfN)
 {
-  mmPerspective.mfNear=lfN;
-  
+  mmPerspective.Near(lfN);
+
 };
 
 void cCamera::Far(float lfF)
 {
-  mmPerspective.mfFar=lfF;
-  
+  mmPerspective.Far(lfF);
+
 };
 
 float *cCamera::Perspective()
@@ -143,12 +143,32 @@ float *cCamera::Perspective()
  return mmPerspective.Matrix();
 }
 
-void cCamera::Zoom(float lfZoom)
+void cCamera::Width(float lfZoom)
 {
-	mmPerspective.mfZoom=lfZoom;
+	mmPerspective.Width(lfZoom);
 }
-float cCamera::Zoom()
+float cCamera::Width()
 {
-	return mmPerspective.mfZoom;
+	return mmPerspective.Width();
+}
+
+void cCamera::Height(float lfHeight)
+{
+	mmPerspective.Height(lfHeight);
+}
+
+float cCamera::Height()
+{
+	return mmPerspective.Height();
+}
+
+float cCamera::Ratio()
+{
+  return mmPerspective.Ratio();
+}
+
+void cCamera::Ratio(float lfRatio)
+{
+ mmPerspective.Ratio(lfRatio);
 }
 

@@ -3,7 +3,7 @@
 cModelListNode::~cModelListNode()
 {
 if(WT_USE_PAINTER_ALGORITHM) _PAINTER->Remove(mpPainterData);
- 
+
 }
 
 cModelListNode::cModelListNode()
@@ -23,23 +23,23 @@ if(WT_USE_PAINTER_ALGORITHM)
 
 void cModelListNode::LoadNode(cMeshTreeNode *lpNode)
 {
-	
+
 	if(lpNode->miFormat&WT_MESHTREE_MESH)
 		mpMesh=lpNode->Mesh();
-	
+
 	if(lpNode->miFormat&WT_MESHTREE_TEXTURE)
 		mpTexture=lpNode->Texture();
-	
+
 	if(lpNode->miFormat&WT_MESHTREE_LEVEL)
 		miLevel=lpNode->miLevel;
-	
+
 	if(lpNode->miFormat&WT_MESHTREE_ROTATION)
 	{
 		memcpy(&mmMatrix[0],lpNode->mpRotation,sizeof(float)*3);
 		memcpy(&mmMatrix[4],&(lpNode->mpRotation[3]),sizeof(float)*3);
 		memcpy(&mmMatrix[8],&(lpNode->mpRotation[6]),sizeof(float)*3);
 	}
-	
+
 	if(lpNode->miFormat&WT_MESHTREE_POSITION)
 		memcpy(&mmMatrix[12],lpNode->mpPosition,sizeof(float)*3);
 }
@@ -78,9 +78,9 @@ void cModelList::LoadTree(vMeshTree *lpTree)
 	miLength=lpTree->Size();
 	mpList=new cModelListNode[miLength];
 	for(liCount=0;liCount<miLength;++liCount) { mpList[liCount].LoadNode(lpTree->NodeList(liCount)); }
-	
+
 	Identity();
-	
+
 }
 
 void cModelList::Initialise(uint32 liLength)
@@ -130,10 +130,10 @@ void cModelList::RenderToPainter()
   if(mpList[liListPos].mpMesh)
   {
 	// If need to add another level
-	if(mpList[liListPos].miLevel>miLevel) 
+	if(mpList[liListPos].miLevel>miLevel)
 	{
 		while(mpList[liListPos].miLevel>miLevel)
-		{	
+		{
 			glPushMatrix();
 			++miLevel;
 		}
@@ -178,7 +178,7 @@ float Temp[16];
  mpList[liListPos].mpPainterData->SetShader(mpList[liListPos].mpShader);
  mpList[liListPos].mpPainterData->SetLevel(liListPos);
 
- 
+
  mpList[liListPos].mpPainterData->RenderAgain();
 		//cPainter::Instance()->Add(lcTemp);
 }
@@ -186,13 +186,13 @@ float Temp[16];
 void cModelList::RenderPainter(uint8 liLevel)//vMesh *lpMesh)
 {
   PrepareMaterial();
-  mpList[liLevel].mpMesh->RenderMesh(Variables());
+  mpList[liLevel].mpMesh->RenderMesh();
 }
 
 void cModelList::Render()
 {
 uint32 liListPos;
-  
+
   miLevel=0;
 
   UpdateMatrix();
@@ -202,10 +202,10 @@ uint32 liListPos;
   if(mpList[liListPos].mpMesh)
   {
 	// If need to add another level
-	if(mpList[liListPos].miLevel>miLevel) 
+	if(mpList[liListPos].miLevel>miLevel)
 	{
 		while(mpList[liListPos].miLevel>miLevel)
-		{	
+		{
 			glPushMatrix();
 			++miLevel;
 		}
@@ -253,8 +253,8 @@ void cModelList::RenderCode(cModelListNode *lpNode)
 
   if(lpNode->mpShader) lpNode->mpShader->Use();
   else _USE_FIXED_FUNCTION();
-  
- lpNode->mpMesh->RenderMesh(Variables());
+
+ lpNode->mpMesh->RenderMesh();
 
 }
 
@@ -263,13 +263,13 @@ void cModelList::RenderCode(cModelListNode *lpNode)
 cMatrix4 &cModelList::GetMatrix(uint32 liPos)
 {
   return mpList[liPos].mmMatrix;
-  
+
 }
 
 uint32 cModelList::ListLength()
 {
   return miLength;
-  
+
 }
 
 /*

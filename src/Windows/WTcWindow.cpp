@@ -12,6 +12,7 @@ void cWindow::InitialiseOpenGL()
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_BLEND);
 
+
 	glShadeModel(GL_SMOOTH);
 	glClearColor (0.0f, 0.0f, 0.0f, 0.0f);
 
@@ -87,58 +88,6 @@ cWindow::cWindow(HINSTANCE hInstance)
 
 
 InitialiseOpenGL();
-
-
-/*
-bool bQuit=false;
-float theta=0.0f;
-  // program main loop
-    while (!bQuit)
-    {
-        // check for messages
-       if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
-        {
-            // handle or dispatch messages
-            if (msg.message == WM_QUIT)
-            {
-                bQuit = TRUE;
-            }
-            else
-            {
-                TranslateMessage(&msg);
-                DispatchMessage(&msg);
-            }
-        }
-        else
-        {
-            // OpenGL animation code goes here
-
-            glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-            glClear(GL_COLOR_BUFFER_BIT);
-
-            glPushMatrix();
-            glRotatef(theta, 0.0f, 0.0f, 1.0f);
-
-            glBegin(GL_TRIANGLES);
-
-                glColor3f(1.0f, 0.0f, 0.0f);   glVertex2f(0.0f,   1.0f);
-                glColor3f(0.0f, 1.0f, 0.0f);   glVertex2f(0.87f,  -0.5f);
-                glColor3f(0.0f, 0.0f, 1.0f);   glVertex2f(-0.87f, -0.5f);
-
-            glEnd();
-
-            glPopMatrix();
-
-            SwapBuffers(gpWindow->hDC);
-
-            theta += 1.0f;
-            Sleep (1);
-        }
-    }*/
-
-
-
-
 
 
 }
@@ -248,8 +197,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
          {
           gpWindow->Width=LOWORD(lParam);
           gpWindow->Height=HIWORD(lParam);
+          gpWindow->InvWidth=1.0f/gpWindow->Width;
+          gpWindow->InvHeight=1.0f/gpWindow->Height;
           gpWindow->Resized=true;
           gpWindow->mfRatio=((float)gpWindow->Height)/gpWindow->Width;
+          _CAMERA->UpdateProjectionMatrix();
           return 0;
          }
         return 0;
@@ -272,8 +224,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
          }
          else
          {
-         _MOUSE.cx=(int)LOWORD(lParam);
-         _MOUSE.cy=(int)HIWORD(lParam);
+            _MOUSE.cx=(int)LOWORD(lParam);
+            _MOUSE.cy=(int)HIWORD(lParam);
          }
          return 0;
 
@@ -436,6 +388,8 @@ void cWindow::HandleMessages()
 			gpWindow->Y=Event.xconfigure.y;
 			gpWindow->Width=Event.xconfigure.width;
 			gpWindow->Height=Event.xconfigure.height;
+			gpWindow->InvWidth=1.0f/Width;
+            gpWindow->InvHeight=1.0f/Height;
 			gpWindow->Moved=true;
 			gpWindow->Resized=true;
 			gpWindow->mfRatio=((float)gpWindow->Height)/gpWindow->Width;

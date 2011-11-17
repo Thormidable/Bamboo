@@ -8,10 +8,13 @@
 */
 class cImage : public cRenderObject
 {
+protected:
  // This is the texture image which will form the sprite.
  vTexture *mpPixmap;
  // This is the size of the sprite on the screen.
- float mfSize;
+ float mfWidth;
+
+ float mfHeight;
  // This is the vertex array for a single polygon.
  static float mpVertex[12];
  // This is the Face array for a single polygon.
@@ -22,7 +25,7 @@ class cImage : public cRenderObject
  static float mpNormals[12];
  // This boolean determines whether the arrays need to be generated.
  static bool mbFirst;
- 
+
  	// Will fill the arrays for forming the polygon.
        void InitialiseArrays();
        	// Updates arrays to make the image of size mfSize.
@@ -44,7 +47,7 @@ public:
         void Texture(vTexture *lpObject);
 
 	/// This returns the Texture ID of the texture this object will use.
-        unsigned int TextureNumber();
+        virtual unsigned int TextureNumber();
 
 	// Function to render this object from the cPainter render list.
        void RenderPainter(uint8 liLevel);
@@ -56,7 +59,12 @@ public:
 
 	/// Sets the size of the image on screen.
        void Size(float lfSize);
-	
+
+       void Width(float lfWidth);
+       void Height(float lfHeight);
+
+       void Position(float lfX,float lfY);
+
 
 };
 

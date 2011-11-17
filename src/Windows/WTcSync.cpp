@@ -37,8 +37,7 @@ Copyright (c) 2007 Alice Blunt
 
 
 #include "../WTDivWin.h"
-//#include <windows.h>
-//#include "WTcSync.h"
+
 
 
 void cSync::SleepWrap(uint32 liMS)

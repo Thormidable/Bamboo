@@ -513,7 +513,7 @@ return mpTemp;
 
 cMatrix4 cMatrix4::Translate(float lfX,float lfY,float lfZ)
 {
- 
+
  mpData[12]=mpData[0]*lfX+mpData[4]*lfY+mpData[8]*lfZ+mpData[12];
  mpData[13]=mpData[1]*lfX+mpData[5]*lfY+mpData[9]*lfZ+mpData[13];
  mpData[14]=mpData[2]*lfX+mpData[6]*lfY+mpData[10]*lfZ+mpData[14];
@@ -658,7 +658,7 @@ void cMatrix4::PositionZ(float lfZ)
 /* //this is HORRIBLY inefficient, however it represents the full
  //maths required to calculate the rotations
  mpRotate.Identity();
- 
+
  mpRotate[10]=mpRotate[5]=cos(lfAngle);
  mpRotate[6]=sin(lfAngle);
  mpRotate[9]=-sin(lfAngle);
@@ -1109,11 +1109,11 @@ memcpy(mpData,mpTemp.mpData,14*sizeof(float));
 double cMatrix4::DistanceSq(cMatrix4 lpOther)
 {
  float lfX,lfY,lfZ;
- 
+
  lfX=lpOther.mpData[12]-mpData[12];
  lfY=lpOther.mpData[13]-mpData[13];
  lfZ=lpOther.mpData[14]-mpData[14];
- 
+
  return (lfX*lfX+lfY*lfY+lfZ*lfZ);
 }
 
@@ -1124,19 +1124,19 @@ double cMatrix4::DistanceSq(cMatrix4 *lpOther)
  lfX=lpOther->mpData[12]-mpData[12];
  lfY=lpOther->mpData[13]-mpData[13];
  lfZ=lpOther->mpData[14]-mpData[14];
- 
- 
+
+
  return (lfX*lfX+lfY*lfY+lfZ*lfZ);
 }
 
 double cMatrix4::DistanceSq(float *lpOther)
 {
  float lfX,lfY,lfZ;
- 
+
  lfX=lpOther[0]-mpData[12];
  lfY=lpOther[1]-mpData[13];
  lfZ=lpOther[2]-mpData[14];
- 
+
  return (lfX*lfX+lfY*lfY+lfZ*lfZ);
 }
 
@@ -1221,7 +1221,7 @@ void cMatrix4::GRotate(float lfAngle,float lfX,float lfY)
 float lfCos,lfSin;
       lfCos=cos(lfAngle);
       lfSin=sin(lfAngle);
-      
+
 mpTemp.Identity();
 
 mpTemp.mpData[0]=lfCos*mpData[0]-lfSin*mpData[1];
@@ -1239,7 +1239,8 @@ void cMatrix4::Set2D()
 {
  mb3D=0;
  Identity();
- mpData[14]=-1.1f;
+ mpData[10]=mpData[5]=mpData[0]=-1.0f;
+ mpData[14]=0.0f;//-(_CAMERA->Near()+1.1f);
 }
 
 void cMatrix4::Set3D()
@@ -1279,7 +1280,7 @@ cMatrix4 cMatrix4::operator*(float *lVal)
  mpTemp.mpData[15]=mpData[3]*lVal[12]+mpData[7]*lVal[13]+mpData[11]*lVal[14]+mpData[15]*lVal[15];
 
  return mpTemp;
-	
+
 }
 
 void cMatrix4::CopyTranslation(cMatrix4 *lpOther)

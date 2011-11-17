@@ -7,27 +7,119 @@ void cPerspectiveMatrix::Viewport()
 
 cPerspectiveMatrix::cPerspectiveMatrix()
 {
- mfZoom=0.5f;
+ mfWidth=0.5f;
  mfRatio=800.0f/600.0f;
  mfNear=1.0f;
  mfFar=100.0f;
 
+ //glDepthRangef(mfNear,mfFar);
+
+  /*glEnable(GL_CLIP_PLANE0);
+  glEnable(GL_CLIP_PLANE1);
+  glEnable(GL_CLIP_PLANE2);
+  glEnable(GL_CLIP_PLANE3);
+  glEnable(GL_CLIP_PLANE4);
+  glEnable(GL_CLIP_PLANE5);
+  */
+
+
+
 }
 
-void cPerspectiveMatrix::Setup(float lfZoom,float lfRatio,float lfNear,float lfFar)
+
+void cPerspectiveMatrix::Width(float lfWidth)
 {
- mfZoom=lfZoom;
+    mfWidth=lfWidth;
+    mfRatio=mfHeight/mfWidth;
+}
+
+float cPerspectiveMatrix::Width()
+{
+
+    return mfWidth;
+}
+
+void cPerspectiveMatrix::Near(float lfNear)
+{
+    mfNear=lfNear;
+  //  glDepthRangef(mfNear,mfFar);
+}
+
+float cPerspectiveMatrix::Near()
+{
+    return mfNear;
+}
+
+void cPerspectiveMatrix::NearFar(float lfNear,float lfFar)
+{
+    mfNear=lfNear;
+    mfFar=lfFar;
+  //  glDepthRangef(mfNear,mfFar);
+}
+
+void cPerspectiveMatrix::Far(float lfFar)
+{
+    mfFar=lfFar;
+ //   glDepthRangef(mfNear,mfFar);
+}
+
+float cPerspectiveMatrix::Far()
+{
+    return mfFar;
+}
+
+
+void cPerspectiveMatrix::Ratio(float lfRatio)
+{
+    mfRatio=lfRatio;
+    mfHeight=mfWidth*mfRatio;
+}
+
+float cPerspectiveMatrix::Ratio()
+{
+    return mfRatio;
+}
+
+float cPerspectiveMatrix::Height()
+{
+    return mfHeight;
+}
+
+void cPerspectiveMatrix::Height(float lfHeight)
+{
+    mfHeight=lfHeight;
+    mfRatio=mfHeight/mfWidth;
+}
+
+void cPerspectiveMatrix::Setup(float lfWidth,float lfRatio,float lfNear,float lfFar)
+{
+ mfWidth=lfWidth;
  mfRatio=lfRatio;
+ mfHeight=mfWidth*mfRatio;
  mfNear=lfNear;
  mfFar=lfFar;
+
+ //glDepthRangef(mfNear,mfFar);
+ /*
+ double Equation[4];
+
+ Equation[0]=Equation[1]=Equation[2]=Equation[3]=0.0
+
+ Equation[2]=1.0;
+ Equation[3]=mfNear;
+
+ glClipPlane(0, const GLdouble *equation)
+ */
+
+
 }
 
 void cPerspectiveMatrix::Frustum()
 {
  Viewport();
  Zero();
- mpData[0]=(mfNear)/(mfZoom);
- mpData[5]=(mfNear)/(mfZoom*mfRatio);
+ mpData[0]=(mfNear)/(mfWidth);
+ mpData[5]=(mfNear)/(mfHeight);
  mpData[10]=-(mfNear+mfFar)/(mfFar-mfNear);
  mpData[11]=-1.0f;
  mpData[14]=(-2.0f*mfFar*mfNear)/(mfFar-mfNear);
@@ -37,8 +129,8 @@ void cPerspectiveMatrix::Orthographic()
 {
 	Viewport();
 Zero();
-mpData[0]=1.0f/mfZoom;
-mpData[5]=1.0f/(mfZoom*mfRatio);
+mpData[0]=1.0f/mfWidth;
+mpData[5]=1.0f/(mfWidth*mfRatio);
 mpData[10]=-2.0f/(mfFar-mfNear);
 mpData[14]=-(mfFar+mfNear)/(mfFar-mfNear);
 mpData[15]=1.0f;
@@ -137,4 +229,3 @@ mpData[15]=1.0f;
 		mpData[14]=-(lpValues[5]+lpValues[4])/(lpValues[5]-lpValues[4]);
 		mpData[15]=1.0f;
 	}
-	

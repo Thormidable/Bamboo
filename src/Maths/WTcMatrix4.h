@@ -3,8 +3,8 @@
 //#include "WTDivWin.h"
 /**
 * \brief this is a standard 4x4 translation matrix for objects.
-* This is a standard 4x4 translation matrix for objects. It can be used for 
-* both 2D and 3D objects. By default it is a 3D matrix, It can be converted to a 
+* This is a standard 4x4 translation matrix for objects. It can be used for
+* both 2D and 3D objects. By default it is a 3D matrix, It can be converted to a
 * 2D matrix by using the function Set2D().
 */
 
@@ -58,18 +58,18 @@ public:
  float *Position(){return &mpData[12];};
  /// This will return this objects X position value.
  float X(){return mpData[12];};
-/// This will return this objects Y position value. 
+/// This will return this objects Y position value.
 float Y(){return mpData[13];};
 /// This will return this objects Z position value.
  float Z(){return mpData[14];};
 
  /// This will return the vector along this objects local X axis.
  float *XVect(){return mpData;};
-/// This will return the vector along this objects local Y axis. 
+/// This will return the vector along this objects local Y axis.
 float *YVect(){return &mpData[4];};
 /// This will return the vector along this objects local Z axis.
  float *ZVect(){return &mpData[8];};
- 
+
  /// This will restore this objects matrix to an identity matrix.
  void Identity();
  /// This will set every float in this objects matrix to be equal to zero.
@@ -77,20 +77,20 @@ float *YVect(){return &mpData[4];};
 
  /// This will multiply every float in this objects matrix by lVal.
  cMatrix4 operator*(float &lVal);
-/// This will multiply every float in this objects matrix by lVal. 
+/// This will multiply every float in this objects matrix by lVal.
 cMatrix4 operator*(const float lVal);
  /// This will multiply every float in this objects matrix by lVal.
  cMatrix4 operator*(float *lVal);
 
 /* /// This will multiply this objects matrix by the matrix pointed to by lVal. Returns This.lVal .
  cMatrix4 &operator*(cMatrix4 &lVal);*/
-/// This will multiply this objects matrix by the matrix lVal. Returns This.lVal . 
+/// This will multiply this objects matrix by the matrix lVal. Returns This.lVal .
 cMatrix4 *operator*(cMatrix4 *lVal);
 /// This will multiply this objects matrix by the matrix lVal. Returns This.lVal .
 cMatrix4 operator*(cMatrix4 lVal);
  /// This will divide every float in this objects matrix by lVal.
  cMatrix4 operator/(float &lVal);
-/// This will divide every float in this objects matrix by lVal. 
+/// This will divide every float in this objects matrix by lVal.
 cMatrix4 operator/(const float lVal);
 
  /// This will add lVal to every float in this objects matrix.
@@ -104,7 +104,7 @@ cMatrix4 operator/(const float lVal);
  cMatrix4 operator-(float &lVal);
 /// This will deduct lVal from every float in this objects matrix.
  cMatrix4 operator-(const float lVal);
-/// This will subtract the matrix lVal from this matrix. 
+/// This will subtract the matrix lVal from this matrix.
 cMatrix4 operator-(cMatrix4 &lVal);
 
 
@@ -113,13 +113,13 @@ cMatrix4 operator-(cMatrix4 &lVal);
 /// This will return the float in position [liColumn,liRow] in mpData.
  float &operator()(uint16 liColumn,uint16 liRow);
 
- /// This will equate every float in mpData to lVal. 
+ /// This will equate every float in mpData to lVal.
  float operator=(float &lVal);
-/// This will equate every float in mpData to lVal. 
+/// This will equate every float in mpData to lVal.
 float operator=(const float lVal);
  /// This will equate the data in mpData to the data in lVal.mpData.
 // cMatrix4 &operator=(cMatrix4 &lVal);
-/// This will equate the data in mpData to the data in lVal->mpData. 
+/// This will equate the data in mpData to the data in lVal->mpData.
 cMatrix4 *operator=(cMatrix4 *lVal);
 /// This will equate the data in mpData to the data in lVal.mpData.
 cMatrix4 operator=(cMatrix4 lVal);
@@ -133,22 +133,22 @@ float *operator=(float *lVal);
 
  /// This will position the current object to the 3D Vector lpPosition. (X,Y,Z)
  void Position(c3DVf *lpPosition);
-/// This will position the current object to lfX,lfY,lfX. (X,Y,Z) 
+/// This will position the current object to lfX,lfY,lfX. (X,Y,Z)
 void Position(float lfX,float lfY,float lfZ);
 
  /// This will take 2 or three floats depending if this cMatrix4 is set to 2D or 3D operations and set the position of the object.
  void Position(float *lpPos);
- 
+
  /// This will set the objects X position to be equal to lfX.
  void PositionX(float lfX);
-/// This will set the objects Y position to be equal to lfX. 
+/// This will set the objects Y position to be equal to lfX.
 void PositionY(float lfY);
 /// This will set the objects Z position to be equal to lfX.
  void PositionZ(float lfZ);
 
  /// This will advance the object along its local X axis by lfDistance.
  void AdvanceX(float lfDistance);
-/// This will advance the object along its local Y axis by lfDistance. 
+/// This will advance the object along its local Y axis by lfDistance.
 void AdvanceY(float lfDistance);
 /// This will advance the object along its local Z axis by lfDistance.
  void AdvanceZ(float lfDistance);
@@ -215,7 +215,7 @@ void GAdvance(float lfX,float lfY,float lfZ);
  float Distance(cMatrix4 *lpOther);
  float Distance(float *lpOther);
 
-/// This will return the square of the distance between this matrix and the cMatrix4 pointed to by lpOther. 
+/// This will return the square of the distance between this matrix and the cMatrix4 pointed to by lpOther.
 double DistanceSq(cMatrix4 *lpOther);
 double DistanceSq(cMatrix4 lpOther);
 double DistanceSq(float *lpOther);
@@ -227,11 +227,11 @@ double DistanceSq(float *lpOther);
 
  /// This will set the angle of rotation about this matrices X axis to lfAngle radians. Suitable for 2D objects.
   void Angle(float lfAngle);
-/// This will rotate this matrix about its X axis by lfAngle radians. Suitable for 2D objects. 
+/// This will rotate this matrix about its X axis by lfAngle radians. Suitable for 2D objects.
  void Rotate(float lfAngle);
-/// This will rotate this matrix in the X axis through 0,0 by lfAngle radians. Suitable for 2D objects. 
+/// This will rotate this matrix in the X axis through 0,0 by lfAngle radians. Suitable for 2D objects.
   void GRotateOrigin(float lfAngle);
-/// This will rotate this matrix in the X axis through lfX,lfY by lfAngle radians. Suitable for 2D objects. 
+/// This will rotate this matrix in the X axis through lfX,lfY by lfAngle radians. Suitable for 2D objects.
   void GRotate(float lfAngle,float lfX,float lfY);
 
  /// This will set the current matrix to operate as if it is a 2D object.
@@ -243,7 +243,8 @@ double DistanceSq(float *lpOther);
   void Display();
 ///Will Copy the translation / Rotation matrix of the object lpOther;
  void CopyTranslation(cMatrix4 *lpOther);
-  
+
+
   cMatrix4* Equals(cMatrix4* lpOther){memcpy(mpData,lpOther->Matrix(),sizeof(float)*16);return this;};
   cMatrix4* ThisMatrix(){return this;};
 

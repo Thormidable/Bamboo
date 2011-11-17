@@ -33,41 +33,84 @@ void cImage::RenderToPainter()
 {
 if(mpPixmap)
 {
- float Temp[16];
- UpdateMatrix();
- glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
 
- //cRenderPointer lcTemp;
+ UpdateMatrix();
+
  mpPainterData->SetObject(this);
- //mpPainterData->SetMatrix(Temp);
  mpPainterData->SetTexture(TextureNumber());
+ mpPainterData->SetShader(mpShader);
 
 mpPainterData->RenderAgain();
-// cPainter::Instance()->Add(lcTemp);
+
 }
+}
+
+void cImage::Position(float lfX,float lfY)
+{
+    mpData[12]=(lfX*gpWindow->InvWidth*_CAMERA->Width()*4);
+    mpData[13]=(lfY*gpWindow->InvHeight*_CAMERA->Height()*4);
+
+}
+
+void cImage::Width(float lfWidth)
+{
+    mfWidth=lfWidth*gpWindow->InvWidth*_CAMERA->Width()*2;
+}
+void cImage::Height(float lfHeight)
+{
+    mfHeight=lfHeight*gpWindow->InvHeight*_CAMERA->Height()*2;
 }
 
 void cImage::RenderPainter(uint8 liLevel)
 {
 (void) liLevel;
+
  if(mpPixmap)
  {
-   ResizeArrays();
-   glVertexPointer(3,GL_FLOAT,0,mpVertex);
-   glTexCoordPointer(2,GL_FLOAT,0,mpTextCoords);
-   glNormalPointer(GL_FLOAT,0,mpNormals);
-	SetShaderVariables();
-   glDrawElements(GL_TRIANGLES,6,GL_UNSIGNED_SHORT,mpFaces);
+     glDisable(GL_DEPTH_TEST);
+     glEnable(GL_DEPTH_CLAMP);
+     ResizeArrays();
+     SetShaderVariables();
+
+   glBegin(GL_QUADS);
+
+    glNormal3f(0.0f,0.0f,1.0f);
+    glTexCoord2f(0.0f,0.0f);
+    glVertex3f(-mfWidth,-mfHeight,2.1f);
+    //glVertex2f(-mfWidth,-mfHeight
+    //glNormal3f(0.0f,0.0f,1.0f);
+
+    glTexCoord2f(1.0f,0.0f);
+   // glVertex2f(mfWidth,-mfHeight);
+    glVertex3f(mfWidth,-mfHeight,2.1f);
+
+   // glNormal3f(0.0f,0.0f,1.0f);
+    glTexCoord2f(1.0f,1.0f);
+   // glVertex2f(mfWidth,mfHeight);
+    glVertex3f(mfWidth,mfHeight,2.1f);
+
+   // glNormal3f(0.0f,0.0f,1.0f);
+    glTexCoord2f(0.0f,1.0f);
+   // glVertex2f(-mfWidth,mfHeight);
+    glVertex3f(-mfWidth,mfHeight,2.1f);
+
+   glEnd();
+
+   glDisable(GL_DEPTH_CLAMP);
+   glEnable(GL_DEPTH_TEST);
  }
+
 }
 
 
 void cImage::Render()
 {
  glEnable(GL_TEXTURE_2D);
+ glDisable(GL_DEPTH);
  if (mpPixmap)
  {
   UpdateMatrix();
+
   mpPixmap->BindTexture();
   ResizeArrays();
 
@@ -75,13 +118,14 @@ void cImage::Render()
   else _USE_FIXED_FUNCTION();
 
   SetShaderVariables();
-  
+
    glVertexPointer(3,GL_FLOAT,0,mpVertex);
    glTexCoordPointer(2,GL_FLOAT,0,mpTextCoords);
    glNormalPointer(GL_FLOAT,0,mpNormals);
    glDrawElements(GL_TRIANGLES,6,GL_UNSIGNED_SHORT,mpFaces);
  glDisable(GL_TEXTURE_2D);
  }
+ glEnable(GL_DEPTH);
 }
 
 
@@ -94,15 +138,15 @@ void cImage::Texture(vTexture *lpGraph)
 void cImage::InitialiseArrays()
 {
 
- mfSize=1.0f;
+ mfWidth=100.0f;
+ mfHeight=100.0f;
 
  if(mbFirst)
  {
   //order is BR TR TL BL
   mbFirst=0;
-  mpVertex[7]=mpVertex[4]=mpVertex[3]=mpVertex[0]=1.0f;
-  mpVertex[1]=mpVertex[2]=mpVertex[5]=mpVertex[6]=mpVertex[8]=mpVertex[9]=mpVertex[10]=mpVertex[11]=0.0f;
-
+  mpVertex[7]=mpVertex[4]=mpVertex[3]=mpVertex[0]=mfWidth;
+  mpVertex[1]=mpVertex[5]=mpVertex[8]=mpVertex[9]=mpVertex[11]=0.0f;
   mpFaces[3]=mpFaces[0]=0;
   mpFaces[1]=1;
   mpFaces[4]=mpFaces[2]=2;
@@ -118,17 +162,18 @@ void cImage::InitialiseArrays()
 
 void cImage::ResizeArrays()
 {
- mpVertex[7]=mpVertex[4]=mpVertex[3]=mpVertex[0]=mfSize;
+ mpVertex[7]=mpVertex[4]=mpVertex[3]=mpVertex[0]=mfWidth;
+
 }
 
 unsigned int cImage::TextureNumber()
 {
   if(mpPixmap) return mpPixmap->TextureNumber(); return 0;
-  
 }
 
 void cImage::Size(float lfSize)
 {
-  mfSize=lfSize;
-  
+  mfWidth=lfSize*gpWindow->InvWidth*_CAMERA->Width()*2;
+  mfHeight=mfWidth*gpWindow->mfRatio;
+
 }

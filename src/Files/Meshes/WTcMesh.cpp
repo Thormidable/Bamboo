@@ -5,12 +5,12 @@ void cMeshArray::LoadIMF(ifstream &FileStream)
  uint32 liTemp;
  uint32 liFormat;
 	FileStream.ignore(sizeof(uint32));
-	
+
 	FileStream.read((int8*) &liTemp,sizeof(uint32));
 	mpRef=new char[liTemp+1];
 	FileStream.read((int8*) mpRef,liTemp*sizeof(int8));
 	mpRef[liTemp]=0;
-	
+
 	FileStream.read((int8 *) &(liFormat),sizeof(uint32));
 	FileStream.read((char *) &(miVertex),sizeof(uint32));
 
@@ -34,7 +34,7 @@ void cMeshArray::LoadIMF(ifstream &FileStream)
 	//mpUV=new float[2*miVertex];
 	FileStream.read((char *) mpUV,2*sizeof(float)*miVertex);
 	} else mpUV=0;
-	
+
 	FileStream.read((char *) &(miFaces),sizeof(uint32));
 
 	if(liFormat&IMF_MODEL_FACES)
@@ -56,7 +56,7 @@ cMeshArray::~cMeshArray()
 
 cMesh::cMesh(cMeshArray *lpMesh)
 {
-	
+
 	miModelCentre[0]=miModelCentre[1]=miModelCentre[2]=0.0f;
 	strcpy(mpFileName,lpMesh->mpRef);
 
@@ -72,7 +72,7 @@ cMesh::cMesh(cMeshArray *lpMesh)
 	BufferMesh();
 	FindSize();
 
-	
+
 }
 
 cMesh::~cMesh()
@@ -172,12 +172,12 @@ void cMesh::CreateNormalArray()
 
 		v1.v[1]=mpVertex[mpFaces[liCount]*3+1]-mpVertex[mpFaces[liCount+1]*3+1];
 		v2.v[1]=mpVertex[mpFaces[liCount]*3+1]-mpVertex[mpFaces[liCount+2]*3+1];
- 
+
 		v1.v[2]=mpVertex[mpFaces[liCount]*3+2]-mpVertex[mpFaces[liCount+1]*3+2];
 		v2.v[2]=mpVertex[mpFaces[liCount]*3+2]-mpVertex[mpFaces[liCount+2]*3+2];
 
 		v1=v1*v2;
-  
+
 		mpNormals[mpFaces[liCount+2]*3]=mpNormals[mpFaces[liCount+1]*3]=mpNormals[mpFaces[liCount]*3]=v1.v[0];
 		mpNormals[mpFaces[liCount+2]*3+1]=mpNormals[mpFaces[liCount+1]*3+1]=mpNormals[mpFaces[liCount]*3+1]=v1.v[1];
 		mpNormals[mpFaces[liCount+2]*3+2]=mpNormals[mpFaces[liCount+1]*3+2]=mpNormals[mpFaces[liCount]*3+2]=v1.v[2];
@@ -199,9 +199,9 @@ void cMesh::BufferMesh()
 
 }
 
-void cMesh::RenderMesh(cVariableStore *lpNew)
+void cMesh::RenderMesh()
 {
-	
+
 	glBindBuffer(GL_ARRAY_BUFFER, mBuffer1);
 	glVertexPointer(3,GL_FLOAT,0,0);
 	glNormalPointer(GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*3*sizeof(float)));
@@ -209,7 +209,7 @@ void cMesh::RenderMesh(cVariableStore *lpNew)
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
 
-	
+
 	glDrawElements(GL_TRIANGLES,miFaces*3,GL_UNSIGNED_SHORT,0);
 
 
@@ -250,4 +250,3 @@ uint16 *cMesh::FaceData(){return mpFaces;}
  float *cMesh::NormalData(){return mpNormals;}
  /// This will return a pointer to the array of texture co-ordinates.
  float *cMesh::UVData(){return mpUV;}
- 

@@ -32,7 +32,7 @@ virtual void PositionZ(float lfX)=0;
 virtual void BufferMesh()=0;
 
 /// This will render the mesh directly from graphics memory.
-virtual void RenderMesh(cVariableStore *lpNew)=0;
+virtual void RenderMesh()=0;
 
 /// Will reset the meshes centre of rotation to its original position.
 virtual void ResetPosition()=0;

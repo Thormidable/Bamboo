@@ -3,7 +3,7 @@
 
 using namespace std;
 /// This class is a text renderable object
-class cText : public cRenderObject
+class cText : public cImage
 {
  // The current font texture that this text will use.
  vFont *mpFont;
@@ -13,8 +13,7 @@ class cText : public cRenderObject
  string mString;
  // Length of the current string.
  int miLength;
- // Size of each character.
- float miSize;
+
 
 public:
 	/// Creates a text object and gives it a text string to use.
@@ -22,14 +21,8 @@ public:
 	/// Creates an empty text object with no text string.
        cText();
 
-	// Will Initialise the cText object.
-       void Setup();
-
 	/// Will set the font texture the text will use.
        void Font(vFont *lpFont);
-
-	/// Will set the size of the characters.
-       void Size(float liSize);
 	/// Will set the text string the cText object will render.
        void Text(char *lsText);
 	/// Will accept a generic data type to render to the screen (will convert to a string).

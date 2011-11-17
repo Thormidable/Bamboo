@@ -55,16 +55,16 @@ void cLandscape::Render()
     mpTexture->BindTexture();
 
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-//    glTexCoordPointer(2,GL_FLOAT,0,mpLandscape->UVs());
   }
   else   glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 
   UpdateMatrix();
+  UpdateCache();
   PrepareMaterial();
 
    if(mpShader) mpShader->Use();
    else _USE_FIXED_FUNCTION();
-
+    SetShaderVariables();
 
  AdditionalRenderFunctions();
 
@@ -78,7 +78,7 @@ void cLandscape::Render()
 	/// Set the current height map for this landscape object.
 	void cLandscape::Landscape(vmLandscape *lpLandscape){mpLandscape=lpLandscape;};
 	/// Will return the height at Global co-ordinates lfX,lfZ.
-	float cLandscape::GetHeight(float lfX,float lfZ){if(mpLandscape) return mpLandscape->GetHeightLocal(lfX-X(),lfZ-Z())-Y();  else return 0.0f;}; 
+	float cLandscape::GetHeight(float lfX,float lfZ){if(mpLandscape) return mpLandscape->GetHeightLocal(lfX-X(),lfZ-Z())-Y();  else return 0.0f;};
 	/// Will return the height at the Local position lfX,lfZ (relative to landscapes corner)
 	float cLandscape::GetHeightLocal(float lfX,float lfZ){if(mpLandscape) return mpLandscape->GetHeightLocal(lfX,lfZ); else return 0.0f;};
 	/// Will return the height of the vertex at liX,liZ. (position is based on number of segments NOT distance)

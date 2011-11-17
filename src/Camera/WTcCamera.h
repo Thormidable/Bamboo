@@ -3,9 +3,9 @@
 
 class cRenderNode;
 
-/** 
+/**
 *\brief This class will control the rendering of the render tree. It will handle all the render objects and how to render to the screen.
-* cCamera is the renderer for the entire program. It will contain a scene graph, and inherits cCameraMatrix4 as its view 
+* cCamera is the renderer for the entire program. It will contain a scene graph, and inherits cCameraMatrix4 as its view
 * matrix. It can be considered as a camera in the program space, and will render every thing in its scene graph to the screen.
 */
 class cCamera : public cCameraMatrix4
@@ -19,7 +19,7 @@ static cCamera *mpInstance;
 
 	/*
 	* This points to the top level cRenderNode. This is the start of the scene graph and any cMatrix4 translations made
-	* to the cRenderNode in this pointer will affect the entire scene graph. 
+	* to the cRenderNode in this pointer will affect the entire scene graph.
 	*/
        cRenderNode *mpRenderList;
 
@@ -28,7 +28,7 @@ static cCamera *mpInstance;
 public:
 	/// This is cCameras destructor and will delete the entire scene graph stored in mpRenderList.
 	~cCamera();
-	/** 
+	/**
 	* This function will return a pointer to the current cCamera object.
 	*/
 	static cCamera *Instance();
@@ -48,16 +48,16 @@ public:
 	* while lfAlpha sets the translucency of the screen clear - this can be used to leave screen echos.
 	*/
 	void SetClearColor(float lfRed,float lfGreen,float lfBlue,float lfAlpha);
-	
+
 	/// This creates the camera model view matrix using an Orthographic algorithm.
 	void UpdateProjectionMatrix();
-	
+
 	/// This will return a pointer to the scene graph.
 	cRenderNode *RenderList();
-	
+
 	/// This will return a virtual pointer to the the scene graph.
 	vRenderObject *vRenderList();
-	
+
 	/// This will return the closest distance cCamera will render polygons.
 	float Near();
 	/// This will return the Furthest distance cCamera will render polygons.
@@ -68,8 +68,15 @@ public:
 	/// This will set the Furthest distance cCamera will render polygons.
 	void Far(float lfF);
 
-	void Zoom(float lfZoom);
-	float Zoom();
+	void Width(float lfZoom);
+	float Width();
+
+	void Height(float lfHeight);
+	float Height();
+
+	void Ratio(float lfRatio);
+	float Ratio();
+
 
 	// This will set the Current GL Matrix to be equivalent to the Camera matrix (essentially produces a Global Positioning Matrix).
 	void ResetGLMatrix();

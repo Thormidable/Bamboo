@@ -48,6 +48,8 @@ public:
 	int Width;
 	/// This is the windows current height in pixels.
 	int Height;
+	///Inv values for window wisth and height.
+	float InvWidth,InvHeight;
 	/// This is a flag telling the system if the window has been resized and so if the context needs updating.
           bool Resized;
 	/// This is a flag telling the system if the window has been moved.
