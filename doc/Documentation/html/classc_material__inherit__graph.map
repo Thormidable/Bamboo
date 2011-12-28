@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classc_landscape.html" title="A height map based, matrix structured Landscape. Landscape is composed of a matrix of square polygons..." alt="" coords="5,83,96,112"/>
-<area shape="rect" id="node5" href="$classc_model_list.html" title="Model list is a &#39;static&#39; render tree holding data for a series of renderable objects..." alt="" coords="120,83,205,112"/>
-<area shape="rect" id="node7" href="$classc_textured_model.html" title="A standard Textured Model renderable object." alt="" coords="229,83,344,112"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classc_limited_list.html" title="cLimitedList\&lt; cPolygon \&gt;" alt="" coords="12,389,183,419"/>
-<area shape="rect" id="node4" href="$classc_polygon.html" title="This class stores Polygon Data for 3D Meshes. A Polygon is a single convex boundaried Face in a singl..." alt="" coords="60,293,135,323"/>
-<area shape="rect" id="node6" href="$classc_vertex_list.html" title="cVertexList" alt="" coords="53,197,141,227"/>
-<area shape="rect" id="node8" href="$classc_limited_list.html" title="cLimitedList\&lt; cVertex \&gt;" alt="" coords="36,101,196,131"/>
-<area shape="rect" id="node10" href="$classc_vertex.html" title="cVertex" alt="" coords="5,5,72,35"/>
-<area shape="rect" id="node13" href="$classc_plane.html" title="A class for handling plane data fir 3D mesh objects. Is composed of 4 floats, X,Y,Z,N. X,Y,Z components of the Normalised normal vector and distance above the origin along the line of the Normal." alt="" coords="165,197,227,227"/>
-</map>

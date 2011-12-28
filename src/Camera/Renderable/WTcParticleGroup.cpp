@@ -1,15 +1,32 @@
 #include "../../WTDivWin.h"
 
 
+
+	cParticleSettings &cParticleSettings::operator=(cParticleSettings &lpOther)
+	{
+		memcpy(RGB,lpOther.RGB,sizeof(float)*8);
+		memcpy(Position,lpOther.Position,sizeof(float)*6);
+		memcpy(Speed,lpOther.Speed,sizeof(float)*6);
+		memcpy(Size,lpOther.Size,sizeof(float)*2);
+		memcpy(Fade,lpOther.Fade,sizeof(float)*2);
+		return this[0];
+	};
+
+	void cParticleSettings::SetColours(float *lpRGB){memcpy(RGB,lpRGB,sizeof(float)*8);};
+	void cParticleSettings::SetSizes(float *lpSize){memcpy(Size,lpSize,sizeof(float)*2);};
+	void cParticleSettings::SetFades(float *lpFade){memcpy(Fade,lpFade,sizeof(float)*2);};
+	void cParticleSettings::SetSpeeds(float *lpSpeed){memcpy(Speed,lpSpeed,sizeof(float)*6);};
+	void cParticleSettings::SetPositions(float *lpPos){memcpy(Position,lpPos,sizeof(float)*6);};
+
 void cParticleGroup::Refresh()
 {
 	uint32 THERE_SHOULD_BE_SOME_CODE_HERE;
-	
+
 	uint32 liCount;
 	uint32 liFound=0;
 	for(liCount=0;liCount<miParticles;++liCount)
 	{
-		
+
 		if(mpParticles[liCount]->Life<=0.0f)
 		{
 			if(mbRespawn) mpParticles[liCount]->Spawn(Data);
@@ -22,8 +39,8 @@ void cParticleGroup::Refresh()
 		}
 	}
 	if(!mbRespawn) miParticles=liFound;
-	
-	
+
+
 };
 
 
@@ -37,17 +54,17 @@ void cParticleGroup::RenderPainter(uint8 liLevel)
 
 void cParticleGroup::RenderPainter()
 {
-	 
+
 //	 AdditionalRenderFunctions();
 	SetShaderVariables();
-	
+
 	 uint32 MAKE_THIS_A_SHADER_FUNCTION_TO_MAKE_POINT_SIZE_WORK;
-	 
+
 	 //_CAMERA->ResetGLMatrix();
 	 uint32 liCount;
 	 uint32 liFound=0;
 
-	
+
 	 glBegin(GL_POINTS);
 	 for(liCount=0;liCount<miParticles;++liCount)
 	 {
@@ -61,75 +78,37 @@ void cParticleGroup::RenderPainter()
 			mpParticles[liCount]->UpdatePos();
 			mpParticles[liCount]->UpdateFade();
 			mpParticles[liFound++]=mpParticles[liCount];
-			
-			
-			glColor4fv(mpParticles[liCount]->Color);
+
+
+			glColor4fv(mpParticles[liCount]->Color.Color());
 			glVertex3f(mpParticles[liCount]->Position[0],mpParticles[liCount]->Position[1],mpParticles[liCount]->Position[2]);
 
 		}
 	 }
 	 glEnd();
-	 
+
 	 if(!mbRespawn) miParticles=liFound;
-	 
+
 }
 
 
 void cParticleGroup::RenderToPainter()
 {
 	Refresh();
-	
+
 	float Temp[16];
 	UpdateMatrix();
 
-	
+
 	glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
-	
-	//cRenderPointer lcTemp;
+
 	mpPainterData->SetObject(this);
-//	mpPainterData->SetMatrix(Temp);
 	mpPainterData->SetTexture(0);
-	mpPainterData->SetShader(0);
+	SetOtherRenderVariables();
 	mpPainterData->RenderAgain();
-	
-	
+
+
 }
-
-void cParticleGroup::Render()
-{
-	
-	 uint32 MAKE_THIS_A_SHADER_FUNCTION_TO_MAKE_POINT_SIZE_WORK;
-	 
-	 //_CAMERA->ResetGLMatrix();
-	 UpdateMatrix();
-	 uint32 liCount;
-	 uint32 liFound=0;
-	  if(mpShader) mpShader->Use();
-	  else _USE_FIXED_FUNCTION();
-
-	  AdditionalRenderFunctions();
-	 glBegin(GL_POINTS);
-	 for(liCount=0;liCount<miParticles;++liCount)
-	 {
-		 if(mpParticles[liCount]->Life<=0.0f)
-		 {
-			 if(mbRespawn) mpParticles[liFound++]->Spawn(Data);
-			 else{ delete mpParticles[liCount]; mpParticles[liCount]=0;}
-		}
-		else
-		{
-			mpParticles[liCount]->UpdatePos();
-			mpParticles[liCount]->UpdateFade();
-			mpParticles[liFound++]=mpParticles[liCount];
-
-			glColor4fv(mpParticles[liCount]->Color);
-			glVertex3f(mpParticles[liCount]->Position[0],mpParticles[liCount]->Position[1],mpParticles[liCount]->Position[2]);
-		}
-	 }
-	 glEnd();
-	 if(!mbRespawn) miParticles=liFound;
-	 
-};
 
 
 cParticleGroup::cParticleGroup(uint32 liParticles,cRenderNode* lpNode=0) : cRenderObject(lpNode)
@@ -146,7 +125,7 @@ void cParticleGroup::RespawnAll()
 	for(liCount=0;liCount<miParticles;++liCount)
 	{
 		if(!mpParticles[liCount]) mpParticles[liCount]=new cParticleForGroup;
-		
+
 		mpParticles[liCount]->Spawn(Data);
 	}
 };
@@ -187,4 +166,17 @@ cParticleGroup::~cParticleGroup()
  mpParticles=0;
  miParticles=0;
 }
+
+void cParticleForGroup::SetColor(float *lpRGB){Color=lpRGB;};
+void cParticleForGroup::SetColor(cRGB *lpRGB){Color=lpRGB;};
+void cParticleForGroup::SetColor(cRGBA *lpRGB){Color=lpRGB;};
+void cParticleForGroup::SetColor(cRGB &lpRGB){Color=lpRGB;};
+void cParticleForGroup::SetColor(cRGBA &lpRGB){Color=lpRGB;};
+
+
+	void cParticleForGroup::SetSize(float lpSize){Size=lpSize;};
+	void cParticleForGroup::SetFade(float lpFade){FadeSpeed=lpFade;};
+	void cParticleForGroup::SetSpeed(float *lpSpeed){memcpy(Speed,lpSpeed,sizeof(float)*3);};
+	void cParticleForGroup::SetPosition(float *lpPos){memcpy(Position,lpPos,sizeof(float)*3);};
+    void cParticleForGroup::UpdateFade(){Life-=FadeSpeed*WT_TIME_IND;};
 

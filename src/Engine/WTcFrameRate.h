@@ -1,13 +1,12 @@
 #ifndef __WTCFRAMERATE_H__
 #define __WTCFRAMERATE_H__
 /** \brief This class will store data for controlling the Frame Rate.
- *  There are several settings that can be adjusted:\n
- *  Processes Per Frame:\n
- *\n
- *  Frames Per Second:\n
- *\n
- * Frame Time and Process Time:\n
- * 	These are the amount of time that passes every Frame and Process Cycle measured in seconds. Multiplying any distances moved by this will convert them into distance per second.
+ *   There are several settings that can be adjusted:
+ *  - Processes Per Frame
+ *  - Frames Per Second
+ *  - Frame Time and Process Time
+ *  .
+ *  These are the amount of time that passes every Frame and Process Cycle measured in seconds. Multiplying any distances moved by this will convert them into distance per second.
  * This allows the user to change the running frame rate without affecting the speed the user experiences. If the Frame rate and Process Rate are not going to be changed this can be ignored.
  */
 class cFrameRate

@@ -1,12 +1,12 @@
 #ifndef __WTCRENDERNODE_H__
 #define __WTCRENDERNODE_H__
 
-/** 
-* \brief This is a dynamic render tree branch. 
+/**
+* \brief This is a dynamic render tree branch.
  * This class stores a dynamic list of cRenderObjects called mpObjects. cRenderNode inherits cRenderObject and so
- * can be stored in mpObjects of other cRenderNodes. Any translations applied to this cRenderNode will modify the 
+ * can be stored in mpObjects of other cRenderNodes. Any translations applied to this cRenderNode will modify the
  * base coordinates of any objects stored in mpObjects. This allows objects to be grouped for the purposes of translations.
- * A cRenderNode volume encompasses all objects beneath it in the render tree, this increases the speed of collision 
+ * A cRenderNode volume encompasses all objects beneath it in the render tree, this increases the speed of collision
  * searches as a cRenderNode can remove all it's sub objects from the search.
 */
 class cRenderNode : public vRenderObject
@@ -19,7 +19,7 @@ class cRenderNode : public vRenderObject
 
  // cRenderNode which owns this renderable object.
  cRenderNode *mpRenderer;
- 
+
 public:
 	/// Returns the cRenderNode which owns this object.
        cRenderNode *Renderer();
@@ -27,23 +27,26 @@ public:
 	// Current position in the render list mpObjects.
        cLinkedNode<vRenderObject> *mpCursor;
 
-	/// Constructor for cRenderNode. 
+	/// Constructor for cRenderNode.
        cRenderNode();
 	/// Constructs a new cRenderNode which is owned by lpRenderer.
        cRenderNode(cRenderNode *lpRenderer);
 
        ~cRenderNode();
-	
-        void Initialise();
-	
 
-	/* 
-	* \brief Will remove the current object from the render list. 
+        void Initialise();
+
+  cMatrix4 *operator=(cMatrix4 *lpOther);
+  cMatrix4 &operator=(cMatrix4 &lpOther);
+  float *operator=(float *lpOther);
+
+	/*
+	* \brief Will remove the current object from the render list.
 	* \param lpOld This should be mpNode.
 	*/
        void Remove(cLinkedNode<vRenderObject> *lpOld);
-	/* 
-	* \brief Will add the current object to the render list owned by lpNew. 
+	/*
+	* \brief Will add the current object to the render list owned by lpNew.
 	* \param lpNew This should be the cRenderNode that will control this object.
 	*/
        cLinkedNode<vRenderObject> *Add(vRenderObject *lpNew);
@@ -59,15 +62,12 @@ public:
        void RenderToPainter();
 	// Will render all the objects in the render list mpObjects from the cPainter render list to the screen, using the command liCommand.
        void RenderPainter(uint8 liLevel);
-       // Will render all the object in the render 
+       // Will render all the object in the render
        void RenderPainter();
-
-	// Will render all the objects in the render list mpObjects to the screen.
-       void Render();
 
        // The Collision Object that is linked to this cRenderNode.
 	void LinkCollisionObject(cCollisionObject *lpObj);
- 
+
 // This will perform additional functions, when this object is rendered.
  void AdditionalRenderFunctions();
 
@@ -78,7 +78,7 @@ public:
 	/// This will return the Local position of the selected object.
 	float *GetPos();
 	/// This will return the global position of the object as rendered at the end of last frame. Note, this will contain the camera matrix.
-	float *GetGlobalPos();
+	float *GetCachedGlobalMatrix();
 
 	cVariableStore *Variables();
 };

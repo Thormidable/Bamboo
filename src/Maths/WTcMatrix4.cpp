@@ -1,54 +1,13 @@
 #include "../WTDivWin.h"
 
 cMatrix4 cMatrix4::mpTemp;
-float *cMatrix4::mpZero=0;
-float *cMatrix4::mpIdentity=0;
+
+float cMatrix4::mpZero[]={0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
+float cMatrix4::mpIdentity[]={1.0f,0.0f,0.0f,0.0f,0.0f,1.0f,0.0f,0.0f,0.0f,0.0f,1.0f,0.0f,0.0f,0.0f,0.0f,1.0f};
 
 cMatrix4::cMatrix4()
 {
- if (!mpZero)
- {
 
-  mpZero=new float[16];
-
-     mpZero[0]=0.0f;
-     mpZero[1]=0.0f;
-     mpZero[2]=0.0f;
-     mpZero[3]=0.0f;
-     mpZero[4]=0.0f;
-     mpZero[5]=0.0f;
-     mpZero[6]=0.0f;
-     mpZero[7]=0.0f;
-     mpZero[8]=0.0f;
-     mpZero[9]=0.0f;
-     mpZero[10]=0.0f;
-     mpZero[11]=0.0f;
-     mpZero[12]=0.0f;
-     mpZero[13]=0.0f;
-     mpZero[14]=0.0f;
-     mpZero[15]=0.0f;
-
-
-  mpIdentity=new float[16];
-
-     mpIdentity[0]=1.0f;
-     mpIdentity[1]=0.0f;
-     mpIdentity[2]=0.0f;
-     mpIdentity[3]=0.0f;
-     mpIdentity[4]=0.0f;
-     mpIdentity[5]=1.0f;
-     mpIdentity[6]=0.0f;
-     mpIdentity[7]=0.0f;
-     mpIdentity[8]=0.0f;
-     mpIdentity[9]=0.0f;
-     mpIdentity[10]=1.0f;
-     mpIdentity[11]=0.0f;
-     mpIdentity[12]=0.0f;
-     mpIdentity[13]=0.0f;
-     mpIdentity[14]=0.0f;
-     mpIdentity[15]=1.0f;
-
- }
 Set3D();
 
 }
@@ -277,24 +236,6 @@ return lVal;
 float cMatrix4::operator=(float &lVal)
 {
  memset(mpData,lVal,sizeof(float)*16);
-/*
- mpData[0]=lVal;
- mpData[1]=lVal;
- mpData[2]=lVal;
- mpData[3]=lVal;
- mpData[4]=lVal;
- mpData[5]=lVal;
- mpData[6]=lVal;
- mpData[7]=lVal;
- mpData[8]=lVal;
- mpData[9]=lVal;
- mpData[10]=lVal;
- mpData[11]=lVal;
- mpData[12]=lVal;
- mpData[13]=lVal;
- mpData[14]=lVal;
- mpData[15]=lVal;
-*/
  return lVal;
 }
 
@@ -511,7 +452,7 @@ return mpTemp;
 
 }
 
-cMatrix4 cMatrix4::Translate(float lfX,float lfY,float lfZ)
+void cMatrix4::Translate(float lfX,float lfY,float lfZ)
 {
 
  mpData[12]=mpData[0]*lfX+mpData[4]*lfY+mpData[8]*lfZ+mpData[12];
@@ -681,7 +622,7 @@ mpTemp.mpData[11]=mpData[3]*mpRotate.mpData[8]+mpData[7]*mpRotate.mpData[9]+mpDa
 memcpy(mpData,mpTemp.mpData,12*sizeof(float));
 */
 
-void cMatrix4::LRotateX(float lfAngle)
+void cMatrix4::RotateX(float lfAngle)
 {
  float lfCos,lfSin;
  lfCos=cos(lfAngle);
@@ -700,7 +641,7 @@ memcpy(&mpData[4],&mpTemp.mpData[4],7*sizeof(float));
 }
 
 
-void cMatrix4::LRotateY(float lfAngle)
+void cMatrix4::RotateY(float lfAngle)
 {
  float lfCos,lfSin;
  lfCos=cos(lfAngle);
@@ -721,7 +662,7 @@ memcpy(mpData,mpTemp.mpData,11*sizeof(float));
 }
 
 
-void cMatrix4::LRotateZ(float lfAngle)
+void cMatrix4::RotateZ(float lfAngle)
 {
  float lfCos,lfSin;
 
@@ -1161,6 +1102,21 @@ float lfX,lfY,lfZ;
  return sqrt(lfX*lfX+lfY*lfY+lfZ*lfZ);
 }
 
+void cMatrix4::Advance(float lfDistance)
+{
+    if(mb3D)
+    {
+        mpData[12]+=mpData[8]*lfDistance;
+        mpData[13]+=mpData[9]*lfDistance;
+        mpData[14]+=mpData[10]*lfDistance;
+    }
+    else
+    {
+        mpData[12]+=mpData[0]*lfDistance;
+        mpData[13]+=mpData[1]*lfDistance;
+    }
+}
+
 void cMatrix4::Advance(float lfX,float lfY)
 {
 mpData[12]+=mpData[0]*lfX+mpData[4]*lfY;
@@ -1283,7 +1239,155 @@ cMatrix4 cMatrix4::operator*(float *lVal)
 
 }
 
-void cMatrix4::CopyTranslation(cMatrix4 *lpOther)
+void cMatrix4::Rotation(float *lpRotation){memcpy(mpData,lpRotation,sizeof(float)*12);}
+void cMatrix4::Rotation(cMatrix4 *lpRotation){memcpy(mpData,lpRotation->mpData,sizeof(float)*12);}
+void cMatrix4::Position(cMatrix4 *lpOther){memcpy(Matrix(12),lpOther->Matrix(12),sizeof(float)*4);}
+void cMatrix4::Position(cMatrix4 &lpOther){Position(&lpOther);}
+void cMatrix4::Rotation(cMatrix4 &lpOther){Rotation(&lpOther);}
+
+
+
+ float *cMatrix4::Matrix(){return mpData;};
+ float *cMatrix4::Matrix(uint8 lcData){return &mpData[lcData];};
+ float *cMatrix4::Position(){return &mpData[12];};
+
+ float cMatrix4::X(){return mpData[12];};
+ float cMatrix4::Y(){return mpData[13];};
+ float cMatrix4::Z(){return mpData[14];};
+
+ float *cMatrix4::XVect(){return mpData;};
+ float *cMatrix4::YVect(){return &mpData[4];};
+ float *cMatrix4::ZVect(){return &mpData[8];};
+
+
+void cMatrix4::Advance(float *lfDistance)
 {
-memcpy(mpData,lpOther->mpData,sizeof(float)*16);
+ mpData[12]+=lfDistance[0];
+ mpData[13]+=lfDistance[1];
+ if(mb3D) mpData[14]+=lfDistance[2];
+}
+ void cMatrix4::Advance(c2DVf *lfDistances)
+ {
+	 mpData[12]+=lfDistances->X();
+	 mpData[13]+=lfDistances->Y();
+ }
+ void cMatrix4::Advance(c3DVf *lfDistances)
+  {
+	 mpData[12]+=lfDistances->X();
+	 mpData[13]+=lfDistances->Y();
+	 if(mb3D) mpData[14]+=lfDistances->Z();
+ }
+ void cMatrix4::Advance(c2DVf &lfDistances)
+  {
+	 mpData[12]+=lfDistances.X();
+	 mpData[13]+=lfDistances.Y();
+ }
+ void cMatrix4::Advance(c3DVf &lfDistances)
+  {
+	 mpData[12]+=lfDistances.X();
+	 mpData[13]+=lfDistances.Y();
+	if(mb3D) mpData[14]+=lfDistances.Z();
+ }
+
+ void cMatrix4::Equals(cMatrix4 *lpOther){memcpy(mpData,lpOther->Matrix(),sizeof(float)*16);};
+ void cMatrix4::Equals(cMatrix4 &lpOther){memcpy(mpData,lpOther.Matrix(),sizeof(float)*16);};
+
+
+
+ float cMatrix4::Xx(){return mpData[0];};
+ float cMatrix4::Xy(){return mpData[1];};
+ float cMatrix4::Xz(){return mpData[2];};
+ float cMatrix4::Yx(){return mpData[4];};
+ float cMatrix4::Yy(){return mpData[5];};
+ float cMatrix4::Yz(){return mpData[6];};
+ float cMatrix4::Zx(){return mpData[8];};
+ float cMatrix4::Zy(){return mpData[9];};
+ float cMatrix4::Zz(){return mpData[10];};
+
+cMatrix4 &cMatrix4::ThisMatrix()
+{
+    return *this;
+};
+
+cMatrix4 *cMatrix4::ThisMatrixPointer()
+{
+     return this;
+};
+
+
+
+void cMatrix4::Translate(float *lpDist)
+{
+ mpData[12]=mpData[0]*lpDist[0]+mpData[4]*lpDist[1]+mpData[8]*lpDist[2]+mpData[12];
+ mpData[13]=mpData[1]*lpDist[0]+mpData[5]*lpDist[1]+mpData[9]*lpDist[2]+mpData[13];
+ mpData[14]=mpData[2]*lpDist[0]+mpData[6]*lpDist[1]+mpData[10]*lpDist[2]+mpData[14];
+ mpData[15]=mpData[3]*lpDist[0]+mpData[7]*lpDist[1]+mpData[11]*lpDist[2]+mpData[15];
+};
+
+void cMatrix4::Multiply(cMatrix4 &Other)
+{
+    Equals(operator*(&Other));
+}
+
+void cMatrix4::Multiply(cMatrix4 *Other)
+ {
+    Equals(operator*(Other));
+ }
+
+void cMatrix4::Multiply(float *Other)
+{
+    Equals(&operator*(Other));
+}
+
+void cMatrix4::Multiply(cCameraMatrix4 *Other)
+{
+    Equals(&operator*(Other->ConvertToMatrix()));
+}
+
+void cMatrix4::Multiply(cCameraMatrix4 &Other)
+{
+    Equals(&operator*(Other.ConvertToMatrix()));
+}
+
+void cMatrix4::Equals(float *lpOther)
+{
+    memcpy(mpData,lpOther,sizeof(float)*16);
+}
+
+void cMatrix4::Equals(cCameraMatrix4 &lpOther)
+{
+    memcpy(mpData,lpOther.ConvertToMatrix().Matrix(),sizeof(float)*16);
+}
+
+void cMatrix4::Equals(cCameraMatrix4 *lpOther)
+{
+    memcpy(mpData,lpOther->ConvertToMatrix().Matrix(),sizeof(float)*16);
+}
+cCameraMatrix4 &cMatrix4::ConvertToCameraMatrix()
+{
+    cCameraMatrix4::mpTemp.mpData[0]=-mpData[0];
+    cCameraMatrix4::mpTemp.mpData[1]=-mpData[4];
+    cCameraMatrix4::mpTemp.mpData[2]=-mpData[8];
+
+    cCameraMatrix4::mpTemp.mpData[4]=-mpData[1];
+    cCameraMatrix4::mpTemp.mpData[5]=-mpData[5];
+    cCameraMatrix4::mpTemp.mpData[6]=-mpData[9];
+    //mpTemp.mpData[13]=mpData[7];
+
+    cCameraMatrix4::mpTemp.mpData[8]=-mpData[2];
+    cCameraMatrix4::mpTemp.mpData[9]=-mpData[6];
+    cCameraMatrix4::mpTemp.mpData[10]=-mpData[10];
+    //mpTemp.mpData[14]=mpData[11];
+
+    cCameraMatrix4::mpTemp.mpData[3]=0.0f;
+    cCameraMatrix4::mpTemp.mpData[7]=0.0f;
+    cCameraMatrix4::mpTemp.mpData[11]=0.0f;
+    cCameraMatrix4::mpTemp.mpData[15]=1.0f;
+
+    cCameraMatrix4::mpTemp.mpPosition[0]=-mpData[12];
+    cCameraMatrix4::mpTemp.mpPosition[1]=-mpData[13];
+    cCameraMatrix4::mpTemp.mpPosition[2]=-mpData[14];
+
+    return cCameraMatrix4::mpTemp;
+
 }

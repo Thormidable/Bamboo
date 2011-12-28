@@ -10,7 +10,7 @@ class cImage : public cRenderObject
 {
 protected:
  // This is the texture image which will form the sprite.
- vTexture *mpPixmap;
+ cTexture *mpPixmap;
  // This is the size of the sprite on the screen.
  float mfWidth;
 
@@ -32,19 +32,19 @@ protected:
        void ResizeArrays();
 public:
 	/** Constructor for cImage.
-	* \brief Will construct a new cImage class, and set the vTexture it will use.
-	* \param lpTexture the vTexture that this object will use.
+	* \brief Will construct a new cImage class, and set the cTexture it will use.
+	* \param lpTexture the cTexture that this object will use.
 	*/
-       cImage(vTexture *lpTexture);
+       cImage(cTexture *lpTexture);
  	/// Constructor for cImage. Will Create an Empty cImage Object.
        cImage();
 	// This function will set this object to being a 2D object and initialise the arrays.
-       void SetUp();
+       virtual void SetUp();
 	//Destructor for cImage.
        ~cImage();
 
-	/// Will set the current vTexture this object will use.
-        void Texture(vTexture *lpObject);
+	/// Will set the current cTexture this object will use.
+        void Texture(cTexture *lpObject);
 
 	/// This returns the Texture ID of the texture this object will use.
         virtual unsigned int TextureNumber();
@@ -54,19 +54,39 @@ public:
 	// Function to render this object to the cPainter render list.
        void RenderToPainter();
 
-	// Function to render this object to the screen.
-        void Render();
+	/// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
+       virtual void Size(float lfSize);
 
-	/// Sets the size of the image on screen.
-       void Size(float lfSize);
-
-       void Width(float lfWidth);
-       void Height(float lfHeight);
-
-       void Position(float lfX,float lfY);
-
+    /// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
+       virtual void Width(float lfWidth);
+       /// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
+       virtual void Height(float lfHeight);
+    ///Sets the position os the image. distances are measured in pixels from the centre of the screen.
+       virtual void Position(float lfX,float lfY);
 
 };
 
+/**
+* \brief This is a Texture rendered onto a plane, which can be moved as a 3D object.
+* This literally produces a 2D image on a plane in 3D. This can be mvoed like any other object
+* This is good for producing billboards or in game HUDS or screens.
+* Other than specified functions operates in the same way as the class cImage.
+* Check the facing of the plane to be sure it displays.
+*/
+class cImage3D : public cImage
+{
+
+public:
+    void SetUp();
+
+	/// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
+       void Size(float lfSize);
+    /// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
+       void Width(float lfWidth);
+       /// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
+       void Height(float lfHeight);
+    ///Sets the position os the image. distances are measured in pixels from the centre of the screen.
+       void Position(float lfX,float lfY);
+};
 
 #endif

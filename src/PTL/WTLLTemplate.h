@@ -31,7 +31,7 @@ template<class T> class cLinkedNode
 		delete mpData;
 		mpData=0;
 	};
- 
+
 public:
 	/// This is a pointer to the data owned by this node.
 	T *mpData;
@@ -69,7 +69,7 @@ public:
 	{
 		DeleteAll();
 	};
-	
+
 	cLinkedNode<T> *Start(){return mpStart;};
 
       cLinkedNode<T> *End(){return mpEnd;};
@@ -108,7 +108,7 @@ template<class T> void cLinkedList<T>::Initialise()
 {
   mpStart=0;
   mpEnd=0;
-  
+
 //  mpTemp=0;
 //  miSize=0;
 }
@@ -124,7 +124,7 @@ if(mpStart)
 	 cLinkedNode<T> *lpKill;
   lpKill=mpTemp;
   mpTemp=mpTemp->mpNext;
-  
+
   delete lpKill;
  }
  delete mpTemp;
@@ -143,7 +143,7 @@ if(mpStart)
       printf("mpTemp->mpPrev : %p\n",mpTemp->mpPrev);
       printf("mpTemp->mpNext->mpNext : %p\n",mpTemp->mpNext);
       delete mpTemp->mpPrev;
-  } 
+  }
    delete mpTemp;
   }
  Initialise();
@@ -171,8 +171,8 @@ else
 	mpEnd=lpNode->mpPrev;
 	//If lpNode was not the start
 	if(mpEnd) mpEnd->mpNext=0;
-	
-	
+
+
 }
 
 if (lpNode!=mpStart){lpNode->mpPrev->mpNext=lpNode->mpNext;}
@@ -188,7 +188,7 @@ template<class T> cLinkedList<T>::cLinkedList()
 
 template<class T> void cLinkedList<T>::ClearAll()
 {
-	//trace("About to Clear a linked list")	
+	//trace("About to Clear a linked list")
 	if(mpStart)
 	{
 		mpTemp=mpStart;
@@ -282,7 +282,7 @@ template<class T> cLinkedList<T>::cLinkedList(T *lpData)
 	mpTemp->mpData=lpData;
 
 //	mpTemp=0;
-	
+
 	//miSize=1;Empty
 }
 
@@ -292,7 +292,7 @@ template<class T> cLinkedNode<T> *cLinkedList<T>::Insert(T *lpData)
 	mpTemp=new cLinkedNode<T>;
 	StitchIn(mpTemp);
 	mpTemp->mpData=lpData;
-	
+
 	//++miSize;
 	return mpTemp;
 }

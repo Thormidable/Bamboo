@@ -33,8 +33,8 @@ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
 
-if(miDepth==24) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, miWidth,miWidth*64, 0, GL_BGR, GL_UNSIGNED_BYTE,mpData);
-if(miDepth==32) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, miWidth,miWidth*64, 0, GL_RGBA, GL_UNSIGNED_BYTE,mpData);
+if(miDepth==24) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, miWidth,miWidth*IMF_FONT_CHARACTERS, 0, GL_BGR, GL_UNSIGNED_BYTE,mpData);
+if(miDepth==32) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, miWidth,miWidth*IMF_FONT_CHARACTERS, 0, GL_RGBA, GL_UNSIGNED_BYTE,mpData);
 }
 
 
@@ -48,10 +48,13 @@ glBindTexture(GL_TEXTURE_2D,miTexture);
 
 uint8 cFont::Character(uint8 lcChar)
 {
+if(lcChar>126 || lcChar<33) return 0xFF;
+return lcChar-33;
+/*
 if(lcChar>96) return lcChar-71; //a-z
-if(lcChar>64) return lcChar-65; //A-Z
+if(lcChar>63) return lcChar-65; //A-Z
 if(lcChar>47) return lcChar+4; //0-9
-if(lcChar==32)return 0;
 return 0xFF;
+*/
 }
 

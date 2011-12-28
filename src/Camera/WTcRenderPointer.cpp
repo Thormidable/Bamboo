@@ -3,7 +3,7 @@
 void cRenderPointer::RenderAgain()
 {
   mbReRender=true;
-  
+
 };
 
 cRenderPointer::cRenderPointer()
@@ -30,11 +30,11 @@ return *this;
 
 void cRenderPointer::SetObject(cRenderObject *lpObject){mpObject=lpObject;}
 void cRenderPointer::SetTexture(uint32 liTexture){mpTexture=liTexture;}
-void cRenderPointer::SetShader(vShaderProgram *lpShader){mpShader=lpShader;}
+void cRenderPointer::SetShader(cShaderProgram *lpShader){mpShader=lpShader;}
 void cRenderPointer::SetLevel(uint32 liLevel){miLevel=liLevel;}
 void cRenderPointer::SetAlpha(bool lbAlpha){mbAlpha=lbAlpha;}
 
-inline void cRenderPointer::SetAll(cRenderObject *lpObject,uint32 liTexture,vShaderProgram *lpShader,bool lbAlpha,uint32 liLevel)
+inline void cRenderPointer::SetAll(cRenderObject *lpObject,uint32 liTexture,cShaderProgram *lpShader,bool lbAlpha,uint32 liLevel)
 {
 mpObject=lpObject;
 mpTexture=liTexture;

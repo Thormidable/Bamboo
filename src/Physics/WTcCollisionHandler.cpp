@@ -19,15 +19,15 @@ uint32 cCollisionHandlerType::FindSlot(cCollisionObject *lpObj)
 
 cCollisionList *cCollisionHandlerBSP::GenerateCollisionList(cCollisionObject *lpCheck,uint32 lpCol)
 {
-	
+
 	printf("cCollisionHandler::GenerateCollisionList Start\n");
 	cCollisionList *lpList=new cCollisionList;
 	ResetCursors();
-	
+
 	uint32 liSlot=FindSlot(lpCheck);
-	
+
 	while(NextListItem(liSlot)) {if(mpColCur->mpData->Collision(lpCheck,lpCol))lpList->AddCollision(mpColCur->mpData);}
-	
+
 	return lpList;
 }
 
@@ -39,9 +39,9 @@ if(lpType)
 {
 	while(NextListItem(lpType))
 		{
-		
+
 			if(mpColCur->mpData!=lpObj)
-			{	
+			{
 				if(mpColCur->mpData->Collision(lpObj)){lpList->AddCollision(mpColCur->mpData);}
 			}
 		}
@@ -53,7 +53,7 @@ else
 	if(mpColCur->mpData!=lpObj)
 	{printf("Is not original object\n");
 		if(mpColCur->mpData->Collision(lpObj)) lpList->AddCollision(mpColCur->mpData);
-		
+
 	}
   }
   return lpList;
@@ -89,9 +89,9 @@ cCollisionHandlerBSP::~cCollisionHandlerBSP()
 
 bool cCollisionHandlerType::NextListItem()
 {
-	
+
  if(NextListItem(miCurPos)) {return 1;}
- 
+
 for(++miCurPos;miCurPos<WT_COLLISION_HANDLER_ARRAY_SIZE && !NextListItem(miCurPos);++miCurPos)
  {
   mpColCur=mpList[miCurPos].Start();
@@ -106,13 +106,13 @@ bool cCollisionHandlerType::NextListItem(uint32 lpType)
  miCurPos=lpType;
  if(!mpColCur) {mpColCur=mpList[miCurPos].Start();}
  else {mpColCur=mpColCur->Next();}
- if(mpColCur) return true; 
+ if(mpColCur) return true;
  else return false;
 
 }
 
 void cCollisionHandlerType::RemoveFromList(cLinkedNode<cCollisionObject> *lpOld)
-{  
+{
  if(lpOld->mpData)
  mpList[FindSlot(lpOld->mpData)].Remove(lpOld);
 
@@ -173,7 +173,7 @@ for(liCount=0;liCount<WT_COLLISION_HANDLER_DIMENSIONS;++liCount)
  lfPos=lfPos*WT_COLLISION_SPACE_SIZE_INV;
 
 if(lfPos<0.0f) liRound=0;
- else 
+ else
    if(lfPos>WT_COLLISION_HANDLER_SIZE) liRound=WT_COLLISION_HANDLER_SIZE;
     else liRound=lfPos;
 
@@ -189,7 +189,7 @@ return liPosition;
 
 uint32 cCollisionHandlerBSP::FindSlot(cCollisionObject *lpObj)
 {
-	return FindSlot(lpObj->RenderObject()->GetGlobalPos());
+	return FindSlot(lpObj->RenderObject()->GetCachedGlobalMatrix());
 }
 
 

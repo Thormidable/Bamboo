@@ -8,7 +8,7 @@ cParticle::cParticle()
 
 cParticle::~cParticle()
 {
-	
+
 };
 
 void cParticle::AdditionalKillFunctionality()
@@ -42,7 +42,7 @@ cParticleHandler *cParticleHandler::Instance()
 {
 	if(!spthis) spthis=new cParticleHandler;
 	return spthis;
-	
+
 };
 
 void cParticleHandler::Resize(uint32 liSize)
@@ -123,20 +123,26 @@ void cParticleHandler::RenderPainter()
 {
 	Refresh();
 	SetShaderVariables();
-	glBegin(GL_POINTS);
+
+glEnable(GL_VERTEX_PROGRAM_POINT_SIZE);
+
 	uint32 liCount;
 	for(liCount=0;liCount<miParticles;++liCount)
 	{
-		
+
 		if(WT_PARTICLE_HANDLER_UPDATE_PARTICLE_POSITIONS) mpParticles[liCount]->UpdatePos();
-		
-		glColor4fv(mpParticles[liCount]->Color);
-		glVertex3fv(mpParticles[liCount]->Position);
-		
+		glPointSize(mpParticles[liCount]->Size);
+		glColor4fv(mpParticles[liCount]->Color.Color());
+        glBegin(GL_POINTS);
+            glColor4fv(mpParticles[liCount]->Color.Color());
+            glVertex3fv(mpParticles[liCount]->Position);
+        glEnd();
 	}
-	glEnd();
+
 	float lpTemp[4]={1.0f,1.0f,1.0f,1.0f};
 	glColor4fv(lpTemp);
+
+	glDisable(GL_VERTEX_PROGRAM_POINT_SIZE);
 }
 
 void cParticleHandler::RenderPainter(uint8 liLevel)
@@ -148,41 +154,13 @@ RenderPainter();
 
 void cParticleHandler::RenderToPainter()
 {
-	
-	_CAMERA->Identity();
 
-	float Temp[16];
-	glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
-	
-	//mpPainterData->SetMatrix(Temp);
+    _CAMERA->Identity();
+
 	mpPainterData->SetObject(this);
-	mpPainterData->SetShader(mpShader);
+	SetOtherRenderVariables();
 	mpPainterData->RenderAgain();
 }
-
-void cParticleHandler::Render()
-{
-	Refresh();
-	_CAMERA->Identity();
-	uint32 liCount;
-	  if(mpShader) mpShader->Use();
-	else _USE_FIXED_FUNCTION();
-
-	SetShaderVariables();
-	
-	glBegin(GL_POINTS);
-	for(liCount=0;liCount<miParticles;++liCount)
-	{
-		if(WT_PARTICLE_HANDLER_UPDATE_PARTICLE_POSITIONS) mpParticles[liCount]->UpdatePos();
-		
-		glColor4fv(mpParticles[liCount]->Color);
-		glVertex3fv(mpParticles[liCount]->Position);
-		
-	};
-	glEnd();
-	float lpTemp[4]={1.0f,1.0f,1.0f,1.0f};
-	glColor4fv(lpTemp);
-};
 
 
 void cGravityParticle::UpdatePos()
@@ -190,7 +168,7 @@ void cGravityParticle::UpdatePos()
 	Speed[0]+=_PARTICLE_GRAV_X;
 	Speed[1]+=_PARTICLE_GRAV_Y;
 	Speed[2]+=_PARTICLE_GRAV_Z;
-	
+
 	Position[0]+=Speed[0];
 	Position[1]+=Speed[1];
 	Position[2]+=Speed[2];
@@ -199,18 +177,18 @@ void cGravityParticle::UpdatePos()
 void cWindAndGravityParticle::UpdatePos()
 {
     float lfTemp[3];
-    
+
 	lfTemp[0]=Speed[0]-_WIND_X;
 	lfTemp[0]=lfTemp[0]*fabs(lfTemp[0]);
 	lfTemp[1]=Speed[1]-_WIND_Y;
 	lfTemp[0]=lfTemp[1]*fabs(lfTemp[1]);
 	lfTemp[2]=Speed[2]-_WIND_Z;
 	lfTemp[0]=lfTemp[2]*fabs(lfTemp[2]);
-	
+
   	Speed[0]+=_PARTICLE_GRAV_X;
 	Speed[1]+=_PARTICLE_GRAV_Y;
 	Speed[2]+=_PARTICLE_GRAV_Z;
-	
+
 	Position[0]+=Speed[0]+lfTemp[0]*WT_TIME_IND*_WIND_FACTOR;
 	Position[1]+=Speed[1]+lfTemp[1]*WT_TIME_IND*_WIND_FACTOR;
 	Position[2]+=Speed[2]+lfTemp[2]*WT_TIME_IND*_WIND_FACTOR;
@@ -229,11 +207,11 @@ void cParticle::UpdatePos()
 	Position[0]+=Speed[0];
 	Position[1]+=Speed[1];
 	Position[2]+=Speed[2];
-	
+
 }
 
 cParticleHandler::~cParticleHandler()
 {
   DeleteAll();
-  
+
 };

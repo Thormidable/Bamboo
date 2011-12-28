@@ -5,7 +5,7 @@ class cSettings
 {
 
 	static void SetupVariables();
-	
+
 public:
 	cSettings(){};
 	~cSettings(){};
@@ -26,8 +26,6 @@ extern uint16 WT_PAINTER_STARTING_SIZE;
 
 ///Flag defining the maximum number of levels that the cPushPopStack class will use.
 extern uint16 StackDepth;
-///Flag to determine whether renderable items should be sorted by the cPainter Algorithm or rendered directly to screen.
-extern bool WT_USE_PAINTER_ALGORITHM;
 
 /// This sets the number of OpenGL Lights to use in Rendering. See cLight().
 extern uint16 WT_OPENGL_LIGHTS;

@@ -19,7 +19,11 @@ class cEventHandler
  /// This will store all the keyboard input data. see _KEY
  cKeyStore Key;
  /// This will store the mouse input data. see _MOUSE
- cMouse Mouse;
+ cMouse MouseDevice;
+
+ cKeyStore *Keyboard();
+ cMouse *Mouse();
+
 };
 
 #if WT_OS_TYPE==OS_WIN32

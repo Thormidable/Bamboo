@@ -191,7 +191,7 @@ cPolygon cMeshCollision::Polygon(uint32 liPos){return mlFaces[liPos];};
 float *cMeshCollision::FacePlane(uint32 liPos)
 {
   return mlFaces[liPos].PlaneData().Planes();
-  
+
 };
 
 

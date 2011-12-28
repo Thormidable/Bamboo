@@ -2,7 +2,7 @@
 
 cModelListNode::~cModelListNode()
 {
-if(WT_USE_PAINTER_ALGORITHM) _PAINTER->Remove(mpPainterData);
+_PAINTER->Remove(mpPainterData);
 
 }
 
@@ -13,11 +13,8 @@ cModelListNode::cModelListNode()
  mmMatrix.Identity();
  miLevel=0;
  mfSize=0.0f;
-if(WT_USE_PAINTER_ALGORITHM)
-{
 	mpPainterData= new cRenderPointer();
 	_PAINTER->Add(mpPainterData);
-}
 
 }
 
@@ -59,19 +56,19 @@ cModelList::cModelList(uint32 liLength)
 cModelList::cModelList(cRenderNode *lpRenderer,uint32 liLength) : cRenderObject(lpRenderer){ Initialise(liLength); }
 
 
-cModelList::cModelList(vMeshTree *lpTree)
+cModelList::cModelList(cMeshTree *lpTree)
 {
 	mpMeshTree=lpTree;
 	LoadTree(lpTree);
 }
 
-cModelList::cModelList(cRenderNode *lpRenderer,vMeshTree *lpTree) : cRenderObject(lpRenderer)
+cModelList::cModelList(cRenderNode *lpRenderer,cMeshTree *lpTree) : cRenderObject(lpRenderer)
 {
 	mpMeshTree=lpTree;
 	LoadTree(lpTree);
 }
 
-void cModelList::LoadTree(vMeshTree *lpTree)
+void cModelList::LoadTree(cMeshTree *lpTree)
 {
 	uint32 liCount;
 	mpMeshTree=lpTree;
@@ -97,17 +94,22 @@ void cModelList::Initialise(uint32 liLength)
  Identity();
 }
 
-void cModelList::SetTexture(uint32 liPos, vTexture *lpTexture)
+void cModelList::SetTexture(uint32 liPos, cTexture *lpTexture)
 {
  if(liPos<miLength) mpList[liPos].mpTexture=lpTexture;
 }
 
-void cModelList::SetShader(uint32 liPos, vShaderProgram *lpShader)
+void cModelList::SetTransparency(uint32 liPos,bool lbAlpha)
+{
+    if(liPos<miLength) mpList[liPos].mbAlpha=lbAlpha;
+}
+
+void cModelList::SetShader(uint32 liPos, cShaderProgram *lpShader)
 {
  if(liPos<miLength) mpList[liPos].mpShader=lpShader;
 }
 
-void cModelList::SetMesh(uint32 liPos, vMesh *lpMesh)
+void cModelList::SetMesh(uint32 liPos, cMesh *lpMesh)
 {
  if(liPos<miLength) mpList[liPos].mpMesh=lpMesh;
 }
@@ -173,9 +175,9 @@ float Temp[16];
 		glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
 
  mpList[liListPos].mpPainterData->SetObject(this);
- //mpList[liListPos].mpPainterData->SetMatrix(Temp);
  mpList[liListPos].mpPainterData->SetTexture(mpList[liListPos].mpTexture->TextureNumber());
  mpList[liListPos].mpPainterData->SetShader(mpList[liListPos].mpShader);
+ mpList[liListPos].mpPainterData->SetAlpha(mpList[liListPos].mpShader);
  mpList[liListPos].mpPainterData->SetLevel(liListPos);
 
 
@@ -183,58 +185,10 @@ float Temp[16];
 		//cPainter::Instance()->Add(lcTemp);
 }
 
-void cModelList::RenderPainter(uint8 liLevel)//vMesh *lpMesh)
+void cModelList::RenderPainter(uint8 liLevel)//cMesh *lpMesh)
 {
   PrepareMaterial();
   mpList[liLevel].mpMesh->RenderMesh();
-}
-
-void cModelList::Render()
-{
-uint32 liListPos;
-
-  miLevel=0;
-
-  UpdateMatrix();
-  glPushMatrix();
- for(liListPos=0;liListPos<miLength;++liListPos)
- {
-  if(mpList[liListPos].mpMesh)
-  {
-	// If need to add another level
-	if(mpList[liListPos].miLevel>miLevel)
-	{
-		while(mpList[liListPos].miLevel>miLevel)
-		{
-			glPushMatrix();
-			++miLevel;
-		}
-	}
-	else
-	{
-		//If too many Levels
-		if(mpList[liListPos].miLevel<miLevel)
-		{
-			while(mpList[liListPos].miLevel<miLevel)
-			{
-				glPopMatrix();
-				--miLevel;
-			}
-		}
-		else
-		{
-			// If Level is correct
-			glPopMatrix();
-			glPushMatrix();
-		}
-	}
-	RenderCode(&mpList[liListPos]);
-	//UpdateSize();
-  }
- }
- while(miLevel>0){ glPopMatrix(); --miLevel;}
-AdditionalRenderFunctions();
-  glPopMatrix();
 }
 
 void cModelList::RenderCode(cModelListNode *lpNode)

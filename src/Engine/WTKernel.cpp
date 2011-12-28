@@ -7,7 +7,7 @@ cSync *gpTimer;
 
 
 cKernel *cKernel::mpInstance=0;
-cLinkedNode<vProcess> *cKernel::mpSearch;
+cLinkedNode<cProcess> *cKernel::mpSearch;
 
 void cKernel::DeleteAll()
 {
@@ -28,14 +28,15 @@ while(mpProcess)
 		trace("Handle Messages")
 		gpWindow->HandleMessages();
 		gpWindow->HandleChanges();
-		
+
 		trace("Update Mouse / Window")
-		_MOUSE.Update();
-		
+		_MOUSE->Update();
+        _KEYBOARD->UpdateKeyboard();
+
 		if(gpWindow->mbQuit || mbKillProgram) return;
-		
+
 	  trace("New Process Cycle")
-		//cLinkedNode<vProcess> *lpCursor;
+		//cLinkedNode<cProcess> *lpCursor;
 		mpCursor=mpProcess->Start();
 		liProcessCount=0;
 		while(mpCursor)
@@ -46,22 +47,22 @@ while(mpProcess)
 			{
 			  //printf("cPainter::lpValue %p\n",cPainter::lpValue);
 				mpCursor->mpData->Run();
-				mpCursor=mpCursor->Next(); 
+				mpCursor=mpCursor->Next();
 			}
 			else
 			{
 				if(!(mpCursor->mpData->Alive()))
 				{
-					if(mpCursor->Next()) 
+					if(mpCursor->Next())
 					{
-						mpCursor=mpCursor->Next(); 
+						mpCursor=mpCursor->Next();
 						mpProcess->Delete(mpCursor->Previous());
-						
+
 					}
-					else 
+					else
 					{
-						mpProcess->Delete(mpCursor); 
-						
+						mpProcess->Delete(mpCursor);
+
 						mpCursor=0;
 					}
 				}
@@ -71,8 +72,10 @@ while(mpProcess)
 				}
 			}
 		}
-	trace(liProcessCount << " Processes Processed this Frame")
+	trace(liProcessCount << " Processes Processed this Cycle")
+
 	++liPTF;
+	if(liPTF<_PPF) cCamera::Instance()->UpdateNotRender();
 	}
 	liPTF=0;
 trace("New Render Cycle")
@@ -87,7 +90,7 @@ if(gpTimer->GetTimeMod()< _TIME_PER_FRAME) gpTimer->SleepWrap(_TIME_PER_FRAME-gp
 	trace("Update Timer")
 	gpTimer->Tick();
 	printf("FPS:%f\n",gpTimer->GetCPS());
-	
+
 }
 
 }
@@ -103,10 +106,10 @@ trace("Deleting cCamera");
 	delete cFileHandler::Instance();
 	trace("Deleting cEventHandler");
 	delete cEventHandler::Instance();
-	
+
 trace("Deleting cCollisionHandler");
 	delete cCollisionHandler::Instance();
-	
+
 	trace("Deleting cLightHandler");
 	delete cLightHandler::Instance();
 #if WT_USE_PAINTER_ALGORITHM
@@ -117,22 +120,24 @@ trace("Deleting cCollisionHandler");
 	delete gpTimer;
 	trace("Deleting cWindow");
 	delete gpWindow;
-	trace("Delete all DivWin Objects");
-	
+	trace("Delete all Bamboo Objects");
+
+	trace("Finished Bamboo V 1.1");
+
 }
 
-cLinkedNode<vProcess> *cKernel::Add(vProcess *lpNew)
+cLinkedNode<cProcess> *cKernel::Add(cProcess *lpNew)
 {
-	
+
 	if (!mpProcess)
 	{
-		mpProcess=new cLinkedList<vProcess>(lpNew);
+		mpProcess=new cLinkedList<cProcess>(lpNew);
 		return mpProcess->Start();
 	}
 	return mpProcess->Insert(lpNew);
 }
 
-void cKernel::Remove(cLinkedNode<vProcess> *lpOld)
+void cKernel::Remove(cLinkedNode<cProcess> *lpOld)
 {
 	mpProcess->Delete(lpOld);
 }
@@ -152,7 +157,6 @@ cKernel::cKernel()
 	mpInstance=0;
 	mpSearch=0;
 	mfTickFreq=1.0f;
-
 	mbKillProgram=false;
 	cCamera::Instance();
 }

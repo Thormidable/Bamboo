@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node5" href="$classc_beam_collision.html" title="cBeamCollision" alt="" coords="5,160,117,189"/>
-<area shape="rect" id="node9" href="$classc_mesh_collision.html" title="cMeshCollision" alt="" coords="144,160,253,189"/>
-<area shape="rect" id="node2" href="$classv_collision_data.html" title="Virtual Class so cCollisionObject can access the Collision data object it needs." alt="" coords="75,5,181,35"/>
-<area shape="rect" id="node7" href="$classc_ray_collision.html" title="cRayCollision" alt="" coords="9,237,111,267"/>
-<area shape="rect" id="node11" href="$classc_mesh_file_collision.html" title="Mesh Collision Object with functionality to load a Collision Mesh from a file. This inherits cMeshCol..." alt="" coords="135,237,265,267"/>
-</map>

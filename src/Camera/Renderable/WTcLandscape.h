@@ -11,10 +11,10 @@
 class cLandscape : public cRenderObject, public cMaterial
 {
  //This is an array of Vertexs, with a single vertex per point (so smoothing Normals are required)
-// Pointer to the vmLandscape file which holds the data for this landscape object.
- vmLandscape *mpLandscape;
+// Pointer to the cmLandscape file which holds the data for this landscape object.
+ cmLandscape *mpLandscape;
 // Pointer to the texture which is bound to this landscape object.
- vTexture *mpTexture;
+ cTexture *mpTexture;
 
 public:
 
@@ -22,19 +22,17 @@ public:
  void RenderToPainter();
  // Function to render this object from the cPainter render list.
  void RenderPainter(uint8 liLevel);
- // Function to render this object to screen.
- void Render();
 
-	
+
 	cLandscape();
 	/// Create a landscape object and set its height map and texture.
-	cLandscape(vmLandscape *lpModel, vTexture *lpTexture);
+	cLandscape(cmLandscape *lpModel, cTexture *lpTexture);
 	/// Set the texture bound to this landscape object.
-	void Texture(vTexture *lpTexture);
+	void Texture(cTexture *lpTexture);
 	/// Set the current height map for this landscape object.
-	void Landscape(vmLandscape *lpLandscape);
+	void Landscape(cmLandscape *lpLandscape);
 	/// Will return the height at Global co-ordinates lfX,lfZ.
-	float GetHeight(float lfX,float lfZ); 
+	float GetHeight(float lfX,float lfZ);
 	/// Will return the height at the Local position lfX,lfZ (relative to landscapes corner)
 	float GetHeightLocal(float lfX,float lfZ);
 	/// Will return the height of the vertex at liX,liZ. (position is based on number of segments NOT distance)

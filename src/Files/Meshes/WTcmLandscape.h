@@ -40,7 +40,7 @@ public:
 * \brief This will store the data for a landscape mesh.
 * The data can be rendered through cLandscape.
 */
-class cmLandscape : public vmLandscape
+class cmLandscape
 {
 protected:
  // This stores the number of custom landscapes the user has produced.
@@ -76,10 +76,10 @@ float *mpUV;
  GLuint *mpBufferIDs;
 
 cmLandscape();
- 
+
 public:
 
-  
+
 	virtual uint32 GetNode(uint32 liX,uint32 liZ);
 
 	inline virtual uint32 VertexDataSize(){return 8*miXSteps*miZSteps;};
@@ -167,7 +167,7 @@ virtual void RenderMesh();
 
 	cmLandscape *Duplicate();
 	friend class cLandscapeMeshFile;
-	
+
 };
 
 
@@ -184,7 +184,7 @@ class cLandscapeMeshFile : public cmLandscape, public cFile
 
 public:
 	cLandscapeMeshFile(cmLandscapeArray *lpArray);
-	
+
 friend class cmLandscape;
 
 };

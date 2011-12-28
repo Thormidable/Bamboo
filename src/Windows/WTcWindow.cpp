@@ -14,6 +14,7 @@ void cWindow::InitialiseOpenGL()
     glBlendFunc (GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 
 
+
 	glShadeModel(GL_SMOOTH);
 
 }
@@ -27,7 +28,6 @@ void cWindow::HandleChanges()
 		wglDeleteContext( hRC );
         hRC = wglCreateContext( hDC );
 		wglMakeCurrent( hDC, hRC );
-		//cCamera::Instance()->Frustum();
 		_CAMERA->UpdateProjectionMatrix();
 	}
 	Resized=false;
@@ -45,12 +45,12 @@ void cWindow::DisableInput()
 
 void cWindow::Move(short liX,short liY)
 {
-	MoveWindow(hWnd,liX,liY,Width,Height,0);
+	MoveWindow(hWnd,liX,liY,miWidth,miHeight,0);
 }
 
 void cWindow::Resize(short liX,short liY)
 {
-	MoveWindow(hWnd,X,Y,liX,liY,0);
+	MoveWindow(hWnd,miX,miY,liX,liY,0);
 }
 
 cWindow::~cWindow()
@@ -108,9 +108,11 @@ void cWindow::StartWindow()
 
 
 
-		X=Y=0;
-		Width=800;
-		Height=600;
+		miX=miY=0;
+		miWidth=800;
+		miHeight=600;
+		miInvWidth=1.0f/miWidth;
+		miInvHeight=1.0f/miHeight;
 		Hidden=false;
 		//Changed=false;
 		Resized=false;
@@ -193,12 +195,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
     case WM_SIZE:
        if (wParam==SIZE_RESTORED)
          {
-          gpWindow->Width=LOWORD(lParam);
-          gpWindow->Height=HIWORD(lParam);
-          gpWindow->InvWidth=1.0f/gpWindow->Width;
-          gpWindow->InvHeight=1.0f/gpWindow->Height;
+          gpWindow->miWidth=LOWORD(lParam);
+          gpWindow->miHeight=HIWORD(lParam);
+          gpWindow->miInvWidth=1.0f/gpWindow->miWidth;
+          gpWindow->miInvHeight=1.0f/gpWindow->miHeight;
           gpWindow->Resized=true;
-          gpWindow->mfRatio=((float)gpWindow->Height)/gpWindow->Width;
+          gpWindow->mfRatio=((float)gpWindow->miHeight)/gpWindow->miWidth;
           _CAMERA->UpdateProjectionMatrix();
           return 0;
          }
@@ -208,47 +210,47 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
          return 0;
 
     case WM_MOVE:
-         gpWindow->X=(int)LOWORD(lParam);
-         gpWindow->Y=(int)HIWORD(lParam);
+         gpWindow->miX=(int)LOWORD(lParam);
+         gpWindow->miY=(int)HIWORD(lParam);
          gpWindow->Moved=true;
          return 0;
 
 
     case WM_MOUSEMOVE:
-         if (!_MOUSE.locked)
+         if (!_MOUSE->locked)
          {
-            _MOUSE.cx=(int)LOWORD(lParam);
-            _MOUSE.cy=(int)HIWORD(lParam);
+            _MOUSE->cx=(int)LOWORD(lParam);
+            _MOUSE->cy=(int)HIWORD(lParam);
          }
          else
          {
-            _MOUSE.cx=(int)LOWORD(lParam);
-            _MOUSE.cy=(int)HIWORD(lParam);
+            _MOUSE->cx=(int)LOWORD(lParam);
+            _MOUSE->cy=(int)HIWORD(lParam);
          }
          return 0;
 
     case WM_LBUTTONDOWN:
-         _MOUSE.left=true;
+         _MOUSE->left=true;
          return 0;
 
     case WM_LBUTTONUP:
-         _MOUSE.left=false;
+         _MOUSE->left=false;
          return 0;
 
     case WM_RBUTTONDOWN:
-         _MOUSE.right=true;
+         _MOUSE->right=true;
          return 0;
 
     case WM_RBUTTONUP:
-         _MOUSE.right=false;
+         _MOUSE->right=false;
          return 0;
 
     case WM_KEYDOWN:
-        cEventHandler::Instance()->Key.SetKeyState(true,wParam);
+        _KEYBOARD->SetKeyState(true,wParam);
        return 0;
 
     case WM_KEYUP:
-         cEventHandler::Instance()->Key.SetKeyState(false,wParam);
+         _KEYBOARD->SetKeyState(false,wParam);
          return 0;
 
     default:
@@ -258,7 +260,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
 
 #endif
 
-float cWindow::Ratio() {return mfRatio;}
 
 #if WT_OS_TYPE==OS_LINUX
 
@@ -268,15 +269,17 @@ cWindow::cWindow()
 {
 
 mbQuit=0;
-X=0;
-Y=0;
-Width=800;
-Height=600;
+miX=0;
+miY=0;
+miWidth=800;
+miHeight=600;
+miInvWidth=1.0f/miWidth;
+miInvHeight=1.0f/miHeight;
 Resized=false;
 Moved=false;
 Hidden=true;
 Repaint=false;
-mfRatio=((float)Height)/Width;;
+mfRatio=((float)miHeight)/miWidth;;
 
 lpDisplay=XOpenDisplay(0);
 lRoot=DefaultRootWindow(lpDisplay);
@@ -307,8 +310,8 @@ cWindow::~cWindow()
 
 void cWindow::StartWindow()
 {
- lWindow = XCreateWindow(lpDisplay, lRoot, 0, 0, Width,
-                        Height, 0, VisualInfo->depth, InputOutput, VisualInfo->visual,
+ lWindow = XCreateWindow(lpDisplay, lRoot, 0, 0, miWidth,
+                        miHeight, 0, VisualInfo->depth, InputOutput, VisualInfo->visual,
                         CWBorderPixel|CWColormap|CWEventMask, &WindowAttributes);
 
  XMapWindow(lpDisplay, lWindow);
@@ -350,47 +353,49 @@ void cWindow::HandleMessages()
 		if(Event.type == KeyPress)
 		{
 		  uint32 liKeySym=XLookupKeysym(&Event.xkey,0);
-		  (cEventHandler::Instance()->Key.SetArray((liKeySym & 0xFF00) == 0xFF00,liKeySym & 0xFF))[0]=true; break;
+		  _KEYBOARD->SetKeyState(true,liKeySym&0xFF) ;
+		  break;
 		}
 		if(Event.type == KeyRelease)
 		{
 		  uint32 liKeySym=XLookupKeysym(&Event.xkey,0);
-		  (cEventHandler::Instance()->Key.SetArray((liKeySym & 0xFF00) == 0xFF00,liKeySym & 0xFF))[0]=false; break;
+		  _KEYBOARD->SetKeyState(false,liKeySym&0xFF);
+		  break;
 		}
 
 
 		//Mouse Stuff
 		if(Event.type == ButtonPress)
 		{
-			if(Event.xbutton.button==1) _MOUSE.left=true;
-			if(Event.xbutton.button==3) _MOUSE.right=true;
-			if(Event.xbutton.button==2) _MOUSE.middle=true;
+			if(Event.xbutton.button==1) _MOUSE->left=true;
+			if(Event.xbutton.button==3) _MOUSE->right=true;
+			if(Event.xbutton.button==2) _MOUSE->middle=true;
 			break;
 		}
 		if(Event.type == ButtonRelease)
 		{
-			if(Event.xbutton.button==1) _MOUSE.left=false;
-			if(Event.xbutton.button==3) _MOUSE.right=false;
-			if(Event.xbutton.button==2) _MOUSE.middle=false;
+			if(Event.xbutton.button==1) _MOUSE->left=false;
+			if(Event.xbutton.button==3) _MOUSE->right=false;
+			if(Event.xbutton.button==2) _MOUSE->middle=false;
 			break;
 		}
 		if(Event.type == MotionNotify)
 		{
-				_MOUSE.cx=Event.xmotion.x;
-				_MOUSE.cy=Event.xmotion.y;
+				_MOUSE->cx=Event.xmotion.x;
+				_MOUSE->cy=Event.xmotion.y;
 			break;
 		}
 		if(Event.type == ConfigureNotify)
 		{
-			gpWindow->X=Event.xconfigure.x;
-			gpWindow->Y=Event.xconfigure.y;
-			gpWindow->Width=Event.xconfigure.width;
-			gpWindow->Height=Event.xconfigure.height;
-			gpWindow->InvWidth=1.0f/Width;
-            gpWindow->InvHeight=1.0f/Height;
+			gpWindow->miX=Event.xconfigure.x;
+			gpWindow->miY=Event.xconfigure.y;
+			gpWindow->miWidth=Event.xconfigure.width;
+			gpWindow->miHeight=Event.xconfigure.height;
+			gpWindow->miInvWidth=1.0f/miWidth;
+            gpWindow->miInvHeight=1.0f/miHeight;
 			gpWindow->Moved=true;
 			gpWindow->Resized=true;
-			gpWindow->mfRatio=((float)gpWindow->Height)/gpWindow->Width;
+			gpWindow->mfRatio=((float)gpWindow->miHeight)/gpWindow->miWidth;
 			break;
 		}
 		if(Event.type == DestroyNotify)
@@ -422,10 +427,18 @@ void cWindow::GetMouseSpeed()
  unsigned int liMask;
 	if (XQueryPointer(lpDisplay,lWindow,&lpRootWin,&lpChildWin,&liRX,&liRY,&liWX,&liWY,&liMask))
 	{
-		_MOUSE.xs=liWX-_MOUSE.cx;
-		_MOUSE.ys=liWY-_MOUSE.cy;
+		_MOUSE->xs=liWX-_MOUSE->cx;
+		_MOUSE->ys=liWY-_MOUSE->cy;
 	}
 
 }
 
 #endif
+
+	int cWindow::X(){return miX;};
+	int cWindow::Y(){return miY;};
+	int cWindow::Width(){return miWidth;};
+	int cWindow::Height(){return miHeight;};
+	float cWindow::InvWidth(){return miInvWidth;};
+	float cWindow::InvHeight(){return miInvHeight;};
+	float cWindow::Ratio(){return mfRatio;};

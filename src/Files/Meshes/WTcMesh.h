@@ -39,7 +39,7 @@ void LoadIMF(ifstream &FileStream);
 * \param lpMesh This is a pointer to a cMeshArray object which holds the mesh data for this object.
 * This holds the data for a 3D model in a format suitable for rendering. The data is stored in 2 large arrays with the face data stored in the array mpFaces while all the remaining data stored is stored consecutively in mpVertex. mpVertex points to the start of the array while mpNormals and mpUV point to the start of their respective data blocks.
 */
-class cMesh : public vMesh
+class cMesh : public cFile
 {
 
 protected:

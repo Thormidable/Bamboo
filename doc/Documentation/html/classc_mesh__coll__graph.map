@@ -1,9 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classv_mesh.html" title="This is the virtual base class for a cMesh object." alt="" coords="48,621,109,651"/>
-<area shape="rect" id="node4" href="$classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh..." alt="" coords="53,541,104,571"/>
-<area shape="rect" id="node6" href="$classv_file.html" title="This is the virtual file for cFile. It is a virtual representation of the base code for files loaded ..." alt="" coords="5,104,56,133"/>
-<area shape="rect" id="node13" href="$classc_linked_node.html" title="cLinkedNode\&lt; vFile \&gt;" alt="" coords="71,219,220,248"/>
-<area shape="rect" id="node8" href="$classc_file_handler.html" title="This is the handler for the file system. This handles all files loaded from a hdd. It will give allow processes to use files loaded else where, using either the filenames or if loaded from an IMF a file reference. The files are stored in the list mpFiles." alt="" coords="139,445,232,475"/>
-<area shape="rect" id="node11" href="$classc_linked_list.html" title="cLinkedList\&lt; vFile \&gt;" alt="" coords="116,349,255,379"/>
-<area shape="rect" id="node17" href="$classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="84,104,215,133"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classv_light.html" title="vLight" alt="" coords="199,104,255,133"/>
-<area shape="rect" id="node4" href="$classc_min_l_n.html" title="cMinLN\&lt; vLight \&gt;" alt="" coords="25,219,151,248"/>
-<area shape="rect" id="node17" href="$classc_light_spot.html" title="cLightSpot" alt="" coords="171,292,253,321"/>
-<area shape="rect" id="node14" href="$classc_min_l_l.html" title="cMinLL\&lt; vLight \&gt;" alt="" coords="37,365,160,395"/>
-<area shape="rect" id="node7" href="$classc_min_l_n.html" title="Linked Nodes Lite. I&#39;m not sure I use this. But quick small and simple templated Linked List node..." alt="" coords="5,104,104,133"/>
-<area shape="rect" id="node12" href="$classc_light_handler.html" title="cLightHandler will control the OpenGL Lights. It will turn off lights not required or possible for di..." alt="" coords="60,461,161,491"/>
-</map>

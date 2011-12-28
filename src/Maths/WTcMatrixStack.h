@@ -1,6 +1,7 @@
 #ifndef __WTCMATRIXSTACK_H__
 #define __WTCMATRIXSTACK_H__
 
+
 class cMatrixStack : public cLimitedList<cMatrix4>
 {
 	static uint16 miDepth;

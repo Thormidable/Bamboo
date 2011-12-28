@@ -10,11 +10,12 @@ float cImage::mpNormals[12];
 
 cImage::~cImage(){}
 
-cImage::cImage(vTexture *lpTexture)
+cImage::cImage(cTexture *lpTexture)
 {
  mpPixmap=lpTexture;
  SetUp();
 }
+
 
 cImage::cImage()
 {
@@ -26,6 +27,7 @@ void cImage::SetUp()
 {
  Set2D();
  InitialiseArrays();
+ Transparency(true);
 }
 
 
@@ -38,8 +40,7 @@ if(mpPixmap)
 
  mpPainterData->SetObject(this);
  mpPainterData->SetTexture(TextureNumber());
- mpPainterData->SetShader(mpShader);
- mpPainterData->SetAlpha(true);
+ SetOtherRenderVariables();
 
 mpPainterData->RenderAgain();
 
@@ -48,18 +49,18 @@ mpPainterData->RenderAgain();
 
 void cImage::Position(float lfX,float lfY)
 {
-    mpData[12]=(lfX*gpWindow->InvWidth*_CAMERA->Width()*4);
-    mpData[13]=(lfY*gpWindow->InvHeight*_CAMERA->Height()*4);
+    mpData[12]=(lfX*gpWindow->InvWidth()*_CAMERA->Width()*4);
+    mpData[13]=(lfY*gpWindow->InvHeight()*_CAMERA->Height()*4);
 
 }
 
 void cImage::Width(float lfWidth)
 {
-    mfWidth=lfWidth*gpWindow->InvWidth*_CAMERA->Width()*2;
+    mfWidth=lfWidth*gpWindow->InvWidth()*_CAMERA->Width()*2;
 }
 void cImage::Height(float lfHeight)
 {
-    mfHeight=lfHeight*gpWindow->InvHeight*_CAMERA->Height()*2;
+    mfHeight=lfHeight*gpWindow->InvHeight()*_CAMERA->Height()*2;
 }
 
 void cImage::RenderPainter(uint8 liLevel)
@@ -68,8 +69,6 @@ void cImage::RenderPainter(uint8 liLevel)
 
  if(mpPixmap)
  {
- //    glDisable(GL_DEPTH_TEST);
- //    glEnable(GL_DEPTH_CLAMP);
      ResizeArrays();
      SetShaderVariables();
 
@@ -78,59 +77,24 @@ void cImage::RenderPainter(uint8 liLevel)
     glNormal3f(0.0f,0.0f,1.0f);
     glTexCoord2f(0.0f,0.0f);
     glVertex3f(-mfWidth,-mfHeight,2.1f);
-    //glVertex2f(-mfWidth,-mfHeight
-    //glNormal3f(0.0f,0.0f,1.0f);
+
 
     glTexCoord2f(1.0f,0.0f);
-   // glVertex2f(mfWidth,-mfHeight);
     glVertex3f(mfWidth,-mfHeight,2.1f);
 
-   // glNormal3f(0.0f,0.0f,1.0f);
     glTexCoord2f(1.0f,1.0f);
-   // glVertex2f(mfWidth,mfHeight);
     glVertex3f(mfWidth,mfHeight,2.1f);
 
-   // glNormal3f(0.0f,0.0f,1.0f);
     glTexCoord2f(0.0f,1.0f);
-   // glVertex2f(-mfWidth,mfHeight);
     glVertex3f(-mfWidth,mfHeight,2.1f);
 
    glEnd();
 
-   //glDisable(GL_DEPTH_CLAMP);
-   //glEnable(GL_DEPTH_TEST);
  }
 
 }
 
-
-void cImage::Render()
-{
- glEnable(GL_TEXTURE_2D);
- glDisable(GL_DEPTH);
- if (mpPixmap)
- {
-  UpdateMatrix();
-
-  mpPixmap->BindTexture();
-  ResizeArrays();
-
-  if(mpShader) mpShader->Use();
-  else _USE_FIXED_FUNCTION();
-
-  SetShaderVariables();
-
-   glVertexPointer(3,GL_FLOAT,0,mpVertex);
-   glTexCoordPointer(2,GL_FLOAT,0,mpTextCoords);
-   glNormalPointer(GL_FLOAT,0,mpNormals);
-   glDrawElements(GL_TRIANGLES,6,GL_UNSIGNED_SHORT,mpFaces);
- glDisable(GL_TEXTURE_2D);
- }
- glEnable(GL_DEPTH);
-}
-
-
-void cImage::Texture(vTexture *lpGraph)
+void cImage::Texture(cTexture *lpGraph)
 {
  mpPixmap=lpGraph;
 }
@@ -139,8 +103,8 @@ void cImage::Texture(vTexture *lpGraph)
 void cImage::InitialiseArrays()
 {
 
- mfWidth=100.0f;
- mfHeight=100.0f;
+ mfWidth=0.01f;
+ mfHeight=0.01f;
 
  if(mbFirst)
  {
@@ -174,7 +138,33 @@ unsigned int cImage::TextureNumber()
 
 void cImage::Size(float lfSize)
 {
-  mfWidth=lfSize*gpWindow->InvWidth*_CAMERA->Width()*2;
-  mfHeight=mfWidth*gpWindow->mfRatio;
+  mfWidth=lfSize*gpWindow->InvWidth()*_CAMERA->Width()*2;
+  mfHeight=mfWidth*gpWindow->Ratio();
+}
 
+void cImage3D::SetUp()
+{
+ Set3D();
+ InitialiseArrays();
+ Transparency(true);
+}
+
+void cImage3D::Size(float lfSize)
+{
+    mfHeight=mfWidth=lfSize;
+}
+
+void cImage3D::Width(float lfWidth)
+{
+    mfWidth=lfWidth;
+}
+
+void cImage3D::Height(float lfHeight)
+{
+    mfHeight=lfHeight;
+}
+
+void cImage3D::Position(float lfX,float lfY)
+{
+    cMatrix4::Position(lfX,lfY);
 }

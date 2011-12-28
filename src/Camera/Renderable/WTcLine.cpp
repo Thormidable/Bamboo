@@ -3,12 +3,12 @@
 
 cLine::cLine()
 {
- Identity();  
- 
+ Identity();
+
  mfPosition[0]=0.0f;
  mfPosition[1]=0.0f;
  mfPosition[2]=0.0f;
- 
+
 mfVector[0]=0.0f;
 mfVector[1]=1.0f;
 mfVector[2]=0.0f;
@@ -35,7 +35,7 @@ void cLine::RenderPainter(uint8 liLevel)
  (void) liLevel;
   SetShaderVariables();
   glBegin(GL_LINES);
-    glColor4fv(mfColor);
+    glColor4fv(mfColor.Color());
     glVertex3fv(mfPosition);
     glVertex3fv(mfEnd);
   glEnd();
@@ -49,29 +49,11 @@ void cLine::RenderToPainter()
  glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
 
  mpPainterData->SetObject(this);
- //mpPainterData->SetMatrix(Temp);
- mpPainterData->SetShader(mpShader);
+
+ SetOtherRenderVariables();
 
 mpPainterData->RenderAgain();
 
- //cPainter::Instance()->Add(lcTemp);
-}
-
-void cLine::Render()
-{
- glDisable(GL_TEXTURE_2D);
- 
-  
-  if(mpShader) mpShader->Use();
-  else _USE_FIXED_FUNCTION();
-
-  AdditionalRenderFunctions();
-  
-  glBegin(GL_LINES);
-    glColor4fv(mfColor);
-    glVertex3fv(mfPosition);
-    glVertex3fv(mfEnd);
-  glEnd();
 
 }
 
@@ -86,14 +68,16 @@ void cLine::Color(float lfR,float lfG,float lfB,float lfA)
 
 void cLine::Color(float *lpColor)
 {
-  memcpy(mfColor,lpColor,sizeof(float)*4);
+    mfColor=lpColor;
 }
 
-float *cLine::Color()
+cRGBA *cLine::Color()
 {
- return mfColor;  UpdateMatrix();
-  
-   AdditionalRenderFunctions(); 
+ return &mfColor;
+}
+ /* UpdateMatrix();
+
+   AdditionalRenderFunctions();
 
   glBegin(GL_POINTS);
     glColor4fv(mfColor);
@@ -101,8 +85,8 @@ float *cLine::Color()
   glEnd();
 
 }
+*/
 
-  
 float *cLine::Position()
 {
   return mfPosition;
@@ -139,3 +123,9 @@ void cLine::Vector(float lfX,float lfY,float lfZ)
   mfEnd[1]=mfVector[1]+mfPosition[1];
   mfEnd[2]=mfVector[2]+mfPosition[2];
 }
+
+
+void cLine::Color(cRGBA &lpColor){mfColor=lpColor;}
+void cLine::Color(cRGBA *lpColor){mfColor=lpColor;}
+void cLine::Color(cRGB &lpColor){mfColor=lpColor;}
+void cLine::Color(cRGB *lpColor){mfColor=lpColor;}

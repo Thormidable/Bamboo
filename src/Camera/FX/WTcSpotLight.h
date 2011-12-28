@@ -10,7 +10,7 @@ class cSpotLight : public cLight
 void SetupLights();
 
 public:
-  /// This will set the Global Direction the Spot light will point in. X,Y,Z,Cutoff
+  // This will set the Global Direction the Spot light will point in. X,Y,Z,Cutoff
   void Direction(float lfX,float lfY,float lfZ, float lfA);
 
 	// Will bind this light source for use in OpenGL.

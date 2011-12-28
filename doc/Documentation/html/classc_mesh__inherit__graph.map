@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node9" href="$classv_mesh_tree.html" title="This is a virtual class for inherited by cMeshTree()." alt="" coords="5,315,91,344"/>
-<area shape="rect" id="node2" href="$classv_mesh.html" title="This is the virtual base class for a cMesh object." alt="" coords="17,160,79,189"/>
-<area shape="rect" id="node4" href="$classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh..." alt="" coords="23,83,73,112"/>
-<area shape="rect" id="node6" href="$classv_file.html" title="This is the virtual file for cFile. It is a virtual representation of the base code for files loaded ..." alt="" coords="23,5,73,35"/>
-<area shape="rect" id="node11" href="$classc_mesh_tree.html" title="This will store the data for a cModelList()" alt="" coords="5,392,91,421"/>
-</map>

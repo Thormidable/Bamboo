@@ -11,7 +11,7 @@ class cTextureArray
      ~cTextureArray();
 };
 
-class cTexture : public vTexture
+class cTexture : public cFile
 {
 public:
        uint8 *Data();
@@ -21,10 +21,10 @@ public:
        uint32 Width(){return miWidth;}
        uint32 Height(){return miHeight;}
        uint32 Depth(){return miDepth;}
-       
+
         void UpdateTexture();
         void BindTexture();
-       
+
        uint32 TextureNumber(){return miTexture;}
 
 //       virtual void Load()=0;

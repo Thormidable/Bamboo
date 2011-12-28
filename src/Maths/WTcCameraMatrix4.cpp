@@ -3,54 +3,12 @@
 
 cCameraMatrix4 cCameraMatrix4::mpTemp;
 
-float *cCameraMatrix4::mpZero=0;
-float *cCameraMatrix4::mpIdentity=0;
+float cCameraMatrix4::mpZero[]={0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
+float cCameraMatrix4::mpIdentity[]={1.0f,0.0f,0.0f,0.0f,0.0f,1.0f,0.0f,0.0f,0.0f,0.0f,1.0f,0.0f,0.0f,0.0f,0.0f,1.0f};
 
 cCameraMatrix4::cCameraMatrix4()
 {
 
- if (!mpZero)
- {
-  mpZero=new float[16];
-
-     mpZero[0]=0.0f;
-     mpZero[1]=0.0f;
-     mpZero[2]=0.0f;
-     mpZero[3]=0.0f;
-     mpZero[4]=0.0f;
-     mpZero[5]=0.0f;
-     mpZero[6]=0.0f;
-     mpZero[7]=0.0f;
-     mpZero[8]=0.0f;
-     mpZero[9]=0.0f;
-     mpZero[10]=0.0f;
-     mpZero[11]=0.0f;
-     mpZero[12]=0.0f;
-     mpZero[13]=0.0f;
-     mpZero[14]=0.0f;
-     mpZero[15]=0.0f;
-
-
-  mpIdentity=new float[16];
-
-     mpIdentity[0]=1.0f;
-     mpIdentity[1]=0.0f;
-     mpIdentity[2]=0.0f;
-     mpIdentity[3]=0.0f;
-     mpIdentity[4]=0.0f;
-     mpIdentity[5]=1.0f;
-     mpIdentity[6]=0.0f;
-     mpIdentity[7]=0.0f;
-     mpIdentity[8]=0.0f;
-     mpIdentity[9]=0.0f;
-     mpIdentity[10]=1.0f;
-     mpIdentity[11]=0.0f;
-     mpIdentity[12]=0.0f;
-     mpIdentity[13]=0.0f;
-     mpIdentity[14]=0.0f;
-     mpIdentity[15]=1.0f;
-
- }
 
  Zero();
  mpPosition[0]=0.0f;
@@ -486,7 +444,7 @@ void cCameraMatrix4::PositionZ(float lfZ)
  mpPosition[2]=-lfZ;
 }
 
-void cCameraMatrix4::LRotate(float lfAngle)
+void cCameraMatrix4::Rotate(float lfAngle)
 {
  float lfCos,lfSin;
  lfCos=cos(lfAngle);
@@ -517,7 +475,7 @@ void cCameraMatrix4::Angle(float lfAngle)
   mpData[1]=-mpData[4];
 }
 
-void cCameraMatrix4::LRotateX(float lfAngle)
+void cCameraMatrix4::RotateX(float lfAngle)
 {
  float lfCos,lfSin;
  lfCos=cos(lfAngle);
@@ -541,7 +499,7 @@ memcpy(mpData,mpTemp.mpData,11*sizeof(float));
 
 }
 
-void cCameraMatrix4::LRotateY(float lfAngle)
+void cCameraMatrix4::RotateY(float lfAngle)
 {
 
 float lfCos,lfSin;
@@ -565,7 +523,7 @@ mpTemp.mpData[10]=lfSin*mpData[8]+lfCos*mpData[10];
 memcpy(mpData,mpTemp.mpData,11*sizeof(float));
 }
 
-void cCameraMatrix4::LRotateZ(float lfAngle)
+void cCameraMatrix4::RotateZ(float lfAngle)
 {
 
  float lfCos,lfSin;
@@ -607,7 +565,7 @@ void cCameraMatrix4::Resize(float lfScale)
 
 }
 
-void cCameraMatrix4::LResizeX(float lfScale)
+void cCameraMatrix4::ResizeX(float lfScale)
 {
  mpData[0]=mpData[0]*lfScale;
  mpData[1]=mpData[1]*lfScale;
@@ -615,7 +573,7 @@ void cCameraMatrix4::LResizeX(float lfScale)
 
 }
 
-void cCameraMatrix4::LResizeY(float lfScale)
+void cCameraMatrix4::ResizeY(float lfScale)
 {
 
  mpData[4]=mpData[4]*lfScale;
@@ -624,7 +582,7 @@ void cCameraMatrix4::LResizeY(float lfScale)
 
 }
 
-void cCameraMatrix4::LResizeZ(float lfScale)
+void cCameraMatrix4::ResizeZ(float lfScale)
 {
 
  mpData[8]=mpData[8]*lfScale;
@@ -869,17 +827,24 @@ uint32 cCameraMatrix4::Distance2D(float *lpOther)
 void cCameraMatrix4::Follow(cMatrix4* lpOther,float lfDist)
 {
 	cMatrix4 lpInv=lpOther->InvertRotationMatrix();
-	  
+
 	 memcpy(&mpData[0],&(lpInv.Matrix())[0],sizeof(float)*12);
 
 	 //InvSign();
-	 
+
 	mpPosition[0]=-lpOther->Matrix()[12];
 	mpPosition[1]=-lpOther->Matrix()[13];
 	mpPosition[2]=-lpOther->Matrix()[14];
-	
+
 	AdvanceZ(-lfDist);
 }
+
+
+void cCameraMatrix4::Follow(cMatrix4 &lpOther,float lfDist)
+{
+ 	Follow(&lpOther,lfDist);
+}
+
 
 void cCameraMatrix4::PointAt(float *mpPos)
 {
@@ -894,10 +859,31 @@ double Yaw=atan2(Z.v[0],Z.v[2]);
 double Pitch=atan2(Z.v[1],Z.v[2]);
 
 Identity();
-LRotateY(Yaw);
-LRotateX(Pitch);
+RotateY(Yaw);
+RotateX(Pitch);
 
 
+}
+
+
+void cCameraMatrix4::PointAt(cMatrix4 *mpPos)
+{
+ PointAt(mpPos->Matrix(12));
+}
+
+void cCameraMatrix4::PointAt(cMatrix4 &mpPos)
+{
+ PointAt(mpPos.Matrix(12));
+}
+
+void cCameraMatrix4::PointAt(c3DVf &mpPos)
+{
+ PointAt(mpPos.v);
+}
+
+void cCameraMatrix4::PointAt(c3DVf *mpPos)
+{
+ PointAt(mpPos->v);
 }
 
 void cCameraMatrix4::InvSign()
@@ -905,13 +891,92 @@ void cCameraMatrix4::InvSign()
 	mpData[0]=-mpData[0];
 	mpData[1]=-mpData[1];
 	mpData[2]=-mpData[2];
-	
-	
+
+
 	mpData[4]=-mpData[4];
 	mpData[5]=-mpData[5];
 	mpData[6]=-mpData[6];
-	
+
 	mpData[8]=-mpData[8];
 	mpData[9]=-mpData[9];
 	mpData[10]=-mpData[10];
 }
+
+cMatrix4 &cCameraMatrix4::ConvertToMatrix()
+{
+    cMatrix4::mpTemp.mpData[0]=-mpData[0];
+    cMatrix4::mpTemp.mpData[4]=-mpData[1];
+    cMatrix4::mpTemp.mpData[8]=-mpData[2];
+
+    cMatrix4::mpTemp.mpData[1]=-mpData[4];
+    cMatrix4::mpTemp.mpData[5]=-mpData[5];
+    cMatrix4::mpTemp.mpData[9]=-mpData[6];
+    //mpTemp.mpData[13]=mpData[7];
+
+    cMatrix4::mpTemp.mpData[2]=-mpData[8];
+    cMatrix4::mpTemp.mpData[6]=-mpData[9];
+    cMatrix4::mpTemp.mpData[10]=-mpData[10];
+    //mpTemp.mpData[14]=mpData[11];
+
+    cMatrix4::mpTemp.mpData[3]=0.0f;
+    cMatrix4::mpTemp.mpData[7]=0.0f;
+    cMatrix4::mpTemp.mpData[11]=0.0f;
+    cMatrix4::mpTemp.mpData[15]=1.0f;
+
+    cMatrix4::mpTemp.mpData[12]=-mpPosition[0];
+    cMatrix4::mpTemp.mpData[13]=-mpPosition[1];
+    cMatrix4::mpTemp.mpData[14]=-mpPosition[2];
+    return cMatrix4::mpTemp;
+}
+
+void cCameraMatrix4::Display()
+{
+
+ printf("\n");
+ printf("[%f %f %f %f,\n %f %f %f %f,\n %f %f %f %f,\n %f %f %f %f]\n",mpData[0],mpData[4],mpData[8],mpData[12],mpData[1],mpData[5],mpData[9],mpData[13],mpData[2],mpData[6],mpData[10],mpData[14],mpData[3],mpData[7],mpData[11],mpData[15]);
+
+}
+
+
+
+void cCameraMatrix4::Equals(cCameraMatrix4 *lpOther)
+{
+    memcpy(mpData,lpOther->mpData,sizeof(float)*16);
+    memcpy(mpPosition,lpOther->mpPosition,sizeof(float)*3);
+}
+void cCameraMatrix4::Equals(cCameraMatrix4 &lpOther)
+{
+    memcpy(mpData,lpOther.mpData,sizeof(float)*16);
+    memcpy(mpPosition,lpOther.mpPosition,sizeof(float)*3);
+}
+void cCameraMatrix4::Equals(cMatrix4 *lpOther)
+{
+    Equals(lpOther->ConvertToCameraMatrix());
+}
+void cCameraMatrix4::Equals(cMatrix4 &lpOther)
+{
+    Equals(lpOther.ConvertToCameraMatrix());
+}
+
+void cCameraMatrix4::Multiply(cCameraMatrix4 *lpOther)
+{
+    Equals(operator*(lpOther));
+}
+void cCameraMatrix4::Multiply(cCameraMatrix4 &lpOther)
+{
+    Equals(&operator*(lpOther));
+}
+void cCameraMatrix4::Multiply(cMatrix4 *lpOther)
+{
+    Equals(&operator*(lpOther->ConvertToCameraMatrix()));
+}
+void cCameraMatrix4::Multiply(cMatrix4 &lpOther)
+{
+    Equals(&operator*(lpOther.ConvertToCameraMatrix()));
+}
+
+  float *cCameraMatrix4::Matrix(){return mpData;};
+  float *cCameraMatrix4::Position(){return mpPosition;};
+  float cCameraMatrix4::X(){return mpPosition[0];};
+  float cCameraMatrix4::Y(){return mpPosition[1];};
+  float cCameraMatrix4::Z(){return mpPosition[2];};

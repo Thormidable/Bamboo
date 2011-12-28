@@ -1,6 +1,6 @@
 #include "../../WTDivWin.h"
 
-cParentStack::cParentStack(vProcess *lpChild)
+cParentStack::cParentStack(cProcess *lpChild)
 {
  SetParent(gpParent);
  if(mpParent && mpParent->ParentStack()) mpParentNode=mpParent->ParentStack()->AddChild(lpChild);
@@ -41,7 +41,7 @@ void cParentStack::ChildSignal(SIGNAL lsSignal)
  }
 }
 
-vProcess *cParentStack::Child()
+cProcess *cParentStack::Child()
 {
  if(ChildCursor)
  {
@@ -62,17 +62,17 @@ vProcess *cParentStack::Child()
 }
 
 
-void cParentStack::SetParent(vProcess *lpPar)
+void cParentStack::SetParent(cProcess *lpPar)
 {
 	mpParent=lpPar;
 };
 
-cLinkedNode<vProcess> *cParentStack::AddChild(vProcess *lpChild)
+cLinkedNode<cProcess> *cParentStack::AddChild(cProcess *lpChild)
 {
 	return ChildStack.Insert(lpChild);
 };
 
-void cParentStack::RemoveChild(cLinkedNode<vProcess> *lpNode)
+void cParentStack::RemoveChild(cLinkedNode<cProcess> *lpNode)
 {
 	ChildStack.Remove(lpNode);
 };
@@ -82,7 +82,7 @@ void cParentStack::ClearParent()
 	mpParent=0;
 };
 
-vProcess *cParentStack::Parent()
+cProcess *cParentStack::Parent()
 {
 	return mpParent;
 };

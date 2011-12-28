@@ -1,4 +1,6 @@
 /*=============================*\
+Based of code from:
+
             EXCALIBUR
 
 			exSync.hh
@@ -63,7 +65,7 @@ private:
 	int miLastTime;
 	/// This is the integer representation of the current ticks time.
 	int miCurrTime;
-	// Accessible data (modifier,accumulator,cycles per second)
+
 	/// This is the time in seconds between the last two ticks.
 	float mfTimeMod;
 	/// This is the total time in seconds accumalated since the timer was started.
@@ -73,7 +75,7 @@ private:
 public:
 	cSync();
 	~cSync();
-	
+
 	///This will tick the system and recalculate the current system speed.
 	void Tick();
 

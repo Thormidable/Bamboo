@@ -117,56 +117,6 @@ void cRenderNode::RenderToPainter()
  }
 }
 
-
-void cRenderNode::Render()
-{
- if (mpObjects)
- {
-  _MATRIX_STACK->Push();
-  UpdateMatrix();
-  UpdateCache();
-
-  mpCursor=mpObjects->Start();
-
-  while(mpCursor)
-  {
-
-		_MATRIX_STACK->Push();
-
-	if(mpCursor->mpData->Awake())
-	{
-//	    mpCursor->mpData->UpdateCache();
-		mpCursor->mpData->Render();
-		mpCursor=mpCursor->Next();
-	}
-	else
-	{
-		if(!(mpCursor->mpData->Alive()))
-		{
-			if(mpCursor->Next())
-			{
-				mpCursor=mpCursor->Next();
-				mpObjects->Delete(mpCursor->Previous());
-			}
-			else
-			{
-				mpObjects->Delete(mpCursor);
-				mpCursor=0;
-			}
-		}
-		else
-		{
-			mpCursor=mpCursor->Next();
-		}
-	}
-    AdditionalRenderFunctions();
-	_MATRIX_STACK->Pop();
-
-  }
-_MATRIX_STACK->Pop();
- }
-}
-
 void cRenderNode::AdditionalRenderFunctions()
 {
 
@@ -207,7 +157,7 @@ float *cRenderNode::GetPos()
 
 };
 
-float *cRenderNode::GetGlobalPos()
+float *cRenderNode::GetCachedGlobalMatrix()
 {
   return mmCache.Position();
 
@@ -217,3 +167,4 @@ cVariableStore *cRenderNode::Variables()
 {
  return 0;
 }
+

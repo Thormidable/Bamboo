@@ -206,7 +206,7 @@ mpBucket=mpList;
 mpList=lpSwitch;
 }
 
-void cPainter::ShaderState(vShaderProgram *mpCurrent,vShaderProgram *mpLast)
+void cPainter::ShaderState(cShaderProgram *mpCurrent,cShaderProgram *mpLast)
 {
   if(mpCurrent)
   {
@@ -269,7 +269,7 @@ glEnable(GL_DEPTH_TEST);
     ShaderState(mpList[liCount]->mpShader,0);
   }
 
-#warning comment THIS NEEDS TO BE FIXED FOR MATRIX STACK
+
   if(mpList[liCount]->mbAlpha) glDisable(GL_DEPTH_TEST);
 
   mpList[liCount]->mpObject->RenderPainter(mpList[liCount]->miLevel);

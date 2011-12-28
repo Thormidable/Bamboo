@@ -1142,13 +1142,14 @@
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiobuffer.cpp
 	"../WTDivWin.h"
 
-1320932799 e:\my documents\c++ code\bamboo\bamboo\src\wtdivwin.h
+1325002194 e:\my documents\c++ code\bamboo\bamboo\src\wtdivwin.h
 	<stdint.h>
 	<unistd.h>
+	"WTOsBits.h"
 	<windows.h>
-	<GL/glew.h>
-	"./Windows/ExtensionWrapper/glext.h"
-	"./Windows/ExtensionWrapper/wglext.h"
+	<glew.h>
+	<glext.h>
+	<wglext.h>
 	<GL/gl.h>
 	<al.h>
 	<alc.h>
@@ -1184,13 +1185,13 @@
 	"./PTL/WTLimitedList.h"
 	"./PTL/WTcPushPopStack.h"
 	"./Maths/WTMath.h"
+	"./Maths/WTcColors.h"
 	"./Maths/WTcMatrix4.h"
 	"./Maths/WTcPerspectiveMatrix.h"
 	"./Maths/WTcMatrixStack.h"
 	"./Maths/WTcCameraMatrix4.h"
 	"./Files/WTString.h"
 	"./Engine/WTcSignal.h"
-	"./Engine/Process/WTvProcess.h"
 	"./Engine/WTKernel.h"
 	"./Engine/Process/WTcParentStack.h"
 	"./Engine/Process/WTcProcess.h"
@@ -1207,19 +1208,14 @@
 	"./Files/Meshes/MeshClasses/WTcPolygon.h"
 	"./Files/Meshes/MeshClasses/WTcCluster.h"
 	"./Files/CollisionMeshes/WTvCollisionData.h"
-	"./Files/Textures/WTvTexture.h"
 	"./Files/Textures/WTcTexture.h"
-	"./Files/Fonts/WTvFont.h"
 	"./Files/Fonts/WTcFont.h"
-	"./Files/Shaders/WTvShader.h"
 	"./Files/Shaders/WTcShader.h"
 	"./Files/Shaders/WTcShaderVariables.h"
-	"./Files/Shaders/WTvShaderProgram.h"
 	"./Files/Shaders/WTcShaderProgram.h"
 	"./Files/Shaders/WTcUserDefinedShaderVariable.h"
 	"./Camera/FX/WTcFog.h"
 	"./Camera/WTvRenderObject.h"
-	"./Files/Meshes/WTvMesh.h"
 	"./Files/Meshes/WTcMesh.h"
 	"./Files/Misc/WTcMeshTreeNode.h"
 	"./Files/Misc/WTvMeshTree.h"
@@ -1230,7 +1226,6 @@
 	"./Camera/WTcRenderPointer.h"
 	"./Camera/WTcRenderObject.h"
 	"./Camera/Nodes/WTcRenderNode.h"
-	"./Files/Meshes/WTvmLandscape.h"
 	"./Files/Meshes/WTcmLandscape.h"
 	"./Camera/FX/WTcMaterial.h"
 	"./Camera/FX/WTvLight.h"
@@ -1247,6 +1242,7 @@
 	"./Camera/Renderable/WTcParticleGroup.h"
 	"./Camera/Renderable/WTcParticle.h"
 	"./Camera/Renderable/WTcBeamMesh.h"
+	"./Camera/Renderable/WTcButton.h"
 	"./Camera/WTcPainter.h"
 	"./Windows/EventHandler/WTcKeyStore.h"
 	"./Windows/EventHandler/WTcMouse.h"
@@ -1275,17 +1271,17 @@
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\windows\wtwindowskeycodes.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\windows\wtxwindowskeycodes.h
+1321873341 e:\my documents\c++ code\bamboo\bamboo\src\windows\wtxwindowskeycodes.h
 
-1321272957 e:\my documents\c++ code\bamboo\bamboo\src\global\wtdefinitions.h
+1324898704 e:\my documents\c++ code\bamboo\bamboo\src\global\wtdefinitions.h
 
-1318575259 e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.h
+1325003631 e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\global\wtsetdefinitions.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\global\wtgamesettings.h
 
-1320930252 e:\my documents\c++ code\bamboo\bamboo\src\global\imfdefinitions.h
+1322824899 e:\my documents\c++ code\bamboo\bamboo\src\global\imfdefinitions.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\global\wtcflags.h
 
@@ -1303,11 +1299,11 @@
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtradix.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcsync.h
+1323255605 e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcsync.h
 
-1321454354 e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcwindow.h
+1323351608 e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcwindow.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtlltemplate.h
+1323191231 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtlltemplate.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtminlinkedlist.h
 
@@ -1315,30 +1311,30 @@
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtcpushpopstack.h
 
-1318862582 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtmath.h
+1324912978 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtmath.h
 
-1321455202 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrix4.h
+1324999225 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrix4.h
 
 1321362966 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcperspectivematrix.h
 
-1318416018 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrixstack.h
+1323181541 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrixstack.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccameramatrix4.h
+1325001532 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccameramatrix4.h
 
 1318429910 e:\my documents\c++ code\bamboo\bamboo\src\files\wtstring.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcsignal.h
+1323267849 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcsignal.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtvprocess.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtkernel.h
+1323191877 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtkernel.h
 	"../WTDivWin.h"
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcparentstack.h
+1323189121 e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcparentstack.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcprocess.h
+1323437953 e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcprocess.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcframerate.h
+1323163012 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcframerate.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\wtvfile.h
 
@@ -1356,122 +1352,122 @@
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcface.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcfullfacedata.h
+1323255493 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcfullfacedata.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcpolygon.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtccluster.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.h
+1323191997 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtvtexture.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtctexture.h
+1323189225 e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtctexture.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\fonts\wtvfont.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\fonts\wtcfont.h
+1323189299 e:\my documents\c++ code\bamboo\bamboo\src\files\fonts\wtcfont.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtvshader.h
 
-1318584431 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshader.h
+1323189326 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshader.h
 
-1318943816 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshadervariables.h
+1323184431 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshadervariables.h
 
 1318865200 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtvshaderprogram.h
 
-1319446887 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.h
+1323189354 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.h
 
-1319447157 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.h
+1323189382 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcfog.h
+1323186160 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcfog.h
 
-1318866430 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtvrenderobject.h
+1325004918 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtvrenderobject.h
 
 1321280704 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtvmesh.h
 
-1321280542 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmesh.h
+1323188919 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmesh.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtreenode.h
+1323189445 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtreenode.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtvmeshtree.h
+1323191997 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtvmeshtree.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtree.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtv2dpolygon.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.h
+1324921901 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.h
 
-1321362132 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.h
+1325004473 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderpointer.h
+1323189526 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderpointer.h
 
-1318922578 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderobject.h
+1325004892 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderobject.h
 
-1318866479 e:\my documents\c++ code\bamboo\bamboo\src\camera\nodes\wtcrendernode.h
+1325004985 e:\my documents\c++ code\bamboo\bamboo\src\camera\nodes\wtcrendernode.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtvmlandscape.h
+1321959800 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtvmlandscape.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmlandscape.h
+1323189605 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmlandscape.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcmaterial.h
+1323191231 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcmaterial.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtvlight.h
+1323186198 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtvlight.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtclighthandler.h
+1323191231 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtclighthandler.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtclight.h
+1323186228 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtclight.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcspotlight.h
+1323186207 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcspotlight.h
 
-1321463544 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcimage.h
+1325004341 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcimage.h
 
-1321527984 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturetext.h
+1325004425 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturetext.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturedmodel.h
+1325004431 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturedmodel.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodellist.h
+1325004376 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodellist.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtclandscape.h
+1325004349 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtclandscape.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.h
+1325004418 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcline.h
+1325004357 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcline.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.h
+1325004411 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticle.h
+1325004918 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticle.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.h
+1325004310 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcpainter.h
+1323189788 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcpainter.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtckeystore.h
+1321870726 e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtckeystore.h
 
-1319011046 e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtcmouse.h
+1324755966 e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtcmouse.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtceventhandler.h
+1321870965 e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtceventhandler.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiodevice.h
+1323191231 e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiodevice.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiobuffer.h
+1323191231 e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiobuffer.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudioobject.h
+1324753232 e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudioobject.h
 
 1320930707 e:\my documents\c++ code\bamboo\bamboo\src\files\audio\wtcaudiodata.h
 
-1320930370 e:\my documents\c++ code\bamboo\bamboo\src\files\audio\wtcsoundobject.h
+1321962360 e:\my documents\c++ code\bamboo\bamboo\src\files\audio\wtcsoundobject.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionlist.h
+1323189815 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionlist.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionhandler.h
+1324554962 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionhandler.h
 
-1320935735 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcbase.h
+1323278591 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcbase.h
 
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiodevice.cpp
 	"../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudioobject.cpp
+1324754369 source:e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudioobject.cpp
 	"../WTDivWin.h"
 
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcfog.cpp
@@ -1486,65 +1482,65 @@
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcspotlight.cpp
 	"../../WTDivWin.h"
 
-1321281433 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\nodes\wtcrendernode.cpp
+1325004997 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\nodes\wtcrendernode.cpp
 	"../../WTDivWin.h"
 
-1321281433 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.cpp
+1325004098 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.cpp
 	"../../WTDivWin.h"
 
-1321536084 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcimage.cpp
+1325004127 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcimage.cpp
 	"../../WTDivWin.h"
 	<cmath>
 
-1321282015 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtclandscape.cpp
+1325004146 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtclandscape.cpp
 	"../../WTDivWin.h"
 
-1319185701 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcline.cpp
+1325004162 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcline.cpp
 	"../../WTDivWin.h"
 
-1321280993 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodellist.cpp
+1325004753 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodellist.cpp
 	"../../WTDivWin.h"
 
-1319185785 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticle.cpp
+1325004224 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticle.cpp
 	"../../WTDivWin.h"
 
-1319185846 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.cpp
+1325004240 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.cpp
 	"../../WTDivWin.h"
 
-1319185887 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.cpp
+1325004256 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.cpp
 	"../../WTDivWin.h"
 
-1321531460 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturetext.cpp
+1325004276 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturetext.cpp
 	"../../WTDivWin.h"
 
-1321526518 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturedmodel.cpp
+1325004296 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturedmodel.cpp
 	"../../WTDivWin.h"
 
-1321362354 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.cpp
+1325003984 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.cpp
 	"../WTDivWin.h"
 
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtclighthandler.cpp
 	"../WTDivWin.h"
 
-1321536846 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcpainter.cpp
+1324922916 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcpainter.cpp
 	"../WTDivWin.h"
 
-1319190931 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderobject.cpp
+1325005066 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderobject.cpp
 	"../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderpointer.cpp
+1323190163 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderpointer.cpp
 	"../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcparentstack.cpp
+1323189132 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcparentstack.cpp
 	"../../WTDivWin.h"
 
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcprocess.cpp
 	"../../WTDivWin.h"
 
-1318584818 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtkernel.cpp
+1325003433 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtkernel.cpp
 	"../WTDivWin.h"
 
-1319017922 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcbase.cpp
+1323278593 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcbase.cpp
 	"../WTDivWin.h"
 
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcframerate.cpp
@@ -1559,10 +1555,10 @@
 1320932372 source:e:\my documents\c++ code\bamboo\bamboo\src\files\audio\wtcsoundobject.cpp
 	"../../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.cpp
+1323191997 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.cpp
 	"../../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\fonts\wtcfont.cpp
+1322822929 source:e:\my documents\c++ code\bamboo\bamboo\src\files\fonts\wtcfont.cpp
 	"../../WTDivWin.h"
 
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtccluster.cpp
@@ -1595,7 +1591,7 @@
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtree.cpp
 	"../../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtreenode.cpp
+1323189874 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtreenode.cpp
 	"../../WTDivWin.h"
 
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcreferencelist.cpp
@@ -1607,10 +1603,10 @@
 1319446884 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.cpp
 	"../../WTDivWin.h"
 
-1318944356 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshadervariables.cpp
+1321873474 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshadervariables.cpp
 	"../../WTDivWin.h"
 
-1319447159 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.cpp
+1323189925 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.cpp
 	"../../WTDivWin.h"
 
 1321534365 source:e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtctexture.cpp
@@ -1627,50 +1623,50 @@
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtcfilehandler.cpp
 	"../WTDivWin.h"
 
-1320932608 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtcimfloader.cpp
+1322821665 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtcimfloader.cpp
 	"../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.cpp
+1325003586 source:e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.cpp
 	"../WTDivWin.h"
 
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\global\log.cpp
 	"../WTDivWin.h"
 
-1318862577 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtmath.cpp
+1324746490 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtmath.cpp
 	"../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccameramatrix4.cpp
+1325001730 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccameramatrix4.cpp
 	"../WTDivWin.h"
 	<cmath>
 
-1321360922 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrix4.cpp
+1324999766 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrix4.cpp
 	"../WTDivWin.h"
 
 1318416017 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrixstack.cpp
 	"../WTDivWin.h"
 
-1321364404 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcperspectivematrix.cpp
+1323267745 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcperspectivematrix.cpp
 	"../WTDivWin.h"
 
 1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtradix.cpp
 	"../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionhandler.cpp
+1325005129 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionhandler.cpp
 	"../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionlist.cpp
+1323190093 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionlist.cpp
 	"../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.cpp
+1324552470 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.cpp
 	"../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtceventhandler.cpp
+1321871059 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtceventhandler.cpp
 	"../../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtckeystore.cpp
+1321887241 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtckeystore.cpp
 	"../../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtcmouse.cpp
+1324756038 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtcmouse.cpp
 	"../../WTDivWin.h"
 
 1321224803 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcsync.cpp
@@ -1679,7 +1675,7 @@
 	<sys/time.h>
 	"../WTDivWin.h"
 
-1321536291 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcwindow.cpp
+1323441064 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcwindow.cpp
 	"../WTDivWin.h"
 
 1165588258 c:\program files\openal 1.1 sdk\include\al.h
@@ -4191,4 +4187,1292 @@
 1165588258 e:\my documents\c++ code\includes\openal 1.1 sdk\include\al.h
 
 1176469368 e:\my documents\c++ code\includes\openal 1.1 sdk\include\alc.h
+
+1314256674 e:\my documents\c++ code\bamboo\includes\glew\include\glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1319525319 e:\my documents\c++ code\bamboo\includes\glew\include\glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1319525288 e:\my documents\c++ code\bamboo\includes\glew\include\wglext.h
+	<windows.h>
+
+1165588258 e:\my documents\c++ code\bamboo\includes\openal 1.1 sdk\include\al.h
+
+1176469368 e:\my documents\c++ code\bamboo\includes\openal 1.1 sdk\include\alc.h
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\shared_ptr.hpp
+	<boost/smart_ptr/shared_ptr.hpp>
+
+1300823470 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\shared_ptr.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/shared_ptr_nmt.hpp>
+	<boost/config/no_tr1/memory.hpp>
+	<boost/assert.hpp>
+	<boost/checked_delete.hpp>
+	<boost/throw_exception.hpp>
+	<boost/smart_ptr/detail/shared_count.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/smart_ptr/detail/sp_convertible.hpp>
+	<boost/smart_ptr/detail/spinlock_pool.hpp>
+	<boost/memory_order.hpp>
+	<algorithm>
+	<functional>
+	<typeinfo>
+	<cstddef>
+	<iosfwd>
+	<ostream>
+	<boost/smart_ptr/detail/operator_bool.hpp>
+
+1309996658 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\config.hpp
+	<boost/config/select_compiler_config.hpp>
+	<boost/config/select_stdlib_config.hpp>
+	<boost/config/select_platform_config.hpp>
+	<boost/config/suffix.hpp>
+
+1303715448 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\config\select_compiler_config.hpp
+
+1303715448 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\config\select_stdlib_config.hpp
+	<cstddef>
+	<stddef.h>
+	<boost/config/no_tr1/utility.hpp>
+
+1129721920 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\config\no_tr1\utility.hpp
+	<utility>
+
+1285906784 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\config\select_platform_config.hpp
+	<boost/config/posix_features.hpp>
+
+1129281386 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\config\posix_features.hpp
+	<unistd.h>
+
+1303715448 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\config\suffix.hpp
+	<limits.h>
+	<cstddef>
+	"boost/type.hpp"
+	"boost/non_type.hpp"
+	<typeinfo>
+
+1090783932 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type.hpp
+
+1084681076 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\non_type.hpp
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\shared_ptr_nmt.hpp
+	<boost/assert.hpp>
+	<boost/checked_delete.hpp>
+	<boost/throw_exception.hpp>
+	<boost/smart_ptr/detail/atomic_count.hpp>
+	<memory>
+	<algorithm>
+	<functional>
+	<new>
+
+1297768732 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\assert.hpp
+	<boost/current_function.hpp>
+	<assert.h>
+	<boost/current_function.hpp>
+	<cstdlib>
+	<iostream>
+	<boost/current_function.hpp>
+
+1195996040 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\current_function.hpp
+
+1092312788 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\checked_delete.hpp
+
+1291858820 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\throw_exception.hpp
+	<boost/exception/detail/attribute_noreturn.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/config.hpp>
+	<exception>
+	<boost/exception/exception.hpp>
+	<boost/current_function.hpp>
+
+1260984418 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\exception\detail\attribute_noreturn.hpp
+
+1274183638 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\detail\workaround.hpp
+	<boost/config.hpp>
+
+1310258758 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\exception\exception.hpp
+
+1240118270 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/sp_has_sync.hpp>
+	<boost/smart_ptr/detail/atomic_count_pthreads.hpp>
+	<boost/smart_ptr/detail/atomic_count_gcc_x86.hpp>
+	<boost/smart_ptr/detail/atomic_count_win32.hpp>
+	<boost/smart_ptr/detail/atomic_count_sync.hpp>
+	<boost/smart_ptr/detail/atomic_count_gcc.hpp>
+	<boost/smart_ptr/detail/atomic_count_pthreads.hpp>
+
+1300823706 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_has_sync.hpp
+
+1240118270 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_pthreads.hpp
+	<pthread.h>
+
+1240118270 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_gcc_x86.hpp
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_win32.hpp
+	<boost/detail/interlocked.hpp>
+
+1309996658 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\detail\interlocked.hpp
+	<boost/config.hpp>
+	<windows.h>
+
+1240118270 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_sync.hpp
+	<ia64intrin.h>
+
+1240118270 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_gcc.hpp
+	<ext/atomicity.h>
+	<bits/atomicity.h>
+
+1129721920 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\config\no_tr1\memory.hpp
+	<memory>
+
+1300822692 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\shared_count.hpp
+	<boost/config.hpp>
+	<boost/checked_delete.hpp>
+	<boost/throw_exception.hpp>
+	<boost/smart_ptr/bad_weak_ptr.hpp>
+	<boost/smart_ptr/detail/sp_counted_base.hpp>
+	<boost/smart_ptr/detail/sp_counted_impl.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/config/no_tr1/memory.hpp>
+	<functional>
+	<new>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\bad_weak_ptr.hpp
+	<exception>
+
+1238145046 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/sp_has_sync.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_nt.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_spin.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_pt.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_nt.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_x86.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_ia64.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_acc_ia64.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_cw_ppc.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_ppc.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_mips.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_sync.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_sparc.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_w32.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_nt.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_spin.hpp>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_nt.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1287941094 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\detail\sp_typeinfo.hpp
+	<boost/config.hpp>
+	<boost/current_function.hpp>
+	<functional>
+	<typeinfo>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_spin.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<boost/smart_ptr/detail/spinlock_pool.hpp>
+
+1300822176 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_pool.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/spinlock.hpp>
+	<cstddef>
+
+1300824834 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/sp_has_sync.hpp>
+	<boost/smart_ptr/detail/spinlock_pt.hpp>
+	<boost/smart_ptr/detail/spinlock_gcc_arm.hpp>
+	<boost/smart_ptr/detail/spinlock_sync.hpp>
+	<boost/smart_ptr/detail/spinlock_w32.hpp>
+	<boost/smart_ptr/detail/spinlock_pt.hpp>
+	<boost/smart_ptr/detail/spinlock_nt.hpp>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_pt.hpp
+	<pthread.h>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_gcc_arm.hpp
+	<boost/smart_ptr/detail/yield_k.hpp>
+
+1278778026 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\yield_k.hpp
+	<boost/config.hpp>
+	<windows.h>
+	<sched.h>
+	<time.h>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_sync.hpp
+	<boost/smart_ptr/detail/yield_k.hpp>
+	<ia64intrin.h>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_w32.hpp
+	<boost/detail/interlocked.hpp>
+	<boost/smart_ptr/detail/yield_k.hpp>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_nt.hpp
+	<boost/assert.hpp>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_pt.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<pthread.h>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_gcc_x86.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_gcc_ia64.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_acc_ia64.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<machine/sys/inline.h>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_cw_ppc.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_gcc_ppc.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1238145046 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_gcc_mips.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_sync.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<limits.h>
+	<ia64intrin.h>
+
+1259594234 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_gcc_sparc.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<inttypes.h>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_w32.hpp
+	<boost/detail/interlocked.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/detail/sp_typeinfo.hpp>
+
+1300822692 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_impl.hpp
+	<boost/config.hpp>
+	<boost/checked_delete.hpp>
+	<boost/smart_ptr/detail/sp_counted_base.hpp>
+	<boost/smart_ptr/detail/quick_allocator.hpp>
+	<memory>
+	<cstddef>
+
+1260794660 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\quick_allocator.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/lightweight_mutex.hpp>
+	<boost/type_traits/type_with_alignment.hpp>
+	<boost/type_traits/alignment_of.hpp>
+	<new>
+	<cstddef>
+
+1235993852 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\lightweight_mutex.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/lwm_nop.hpp>
+	<boost/smart_ptr/detail/lwm_pthreads.hpp>
+	<boost/smart_ptr/detail/lwm_win32_cs.hpp>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\lwm_nop.hpp
+
+1259594702 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\lwm_pthreads.hpp
+	<boost/assert.hpp>
+	<pthread.h>
+
+1235992936 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\lwm_win32_cs.hpp
+	<windows.h>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\type_with_alignment.hpp
+	<boost/mpl/if.hpp>
+	<boost/preprocessor/list/for_each_i.hpp>
+	<boost/preprocessor/tuple/to_list.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/list/transform.hpp>
+	<boost/preprocessor/list/append.hpp>
+	<boost/type_traits/alignment_of.hpp>
+	<boost/type_traits/is_pod.hpp>
+	<boost/static_assert.hpp>
+	<boost/config.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<cstddef>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\if.hpp
+	<boost/mpl/aux_/value_wknd.hpp>
+	<boost/mpl/aux_/static_cast.hpp>
+	<boost/mpl/aux_/na_spec.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/mpl/aux_/config/integral.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\value_wknd.hpp
+	<boost/mpl/aux_/static_cast.hpp>
+	<boost/mpl/aux_/config/integral.hpp>
+	<boost/mpl/aux_/config/eti.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/mpl/int.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\static_cast.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\workaround.hpp
+	<boost/detail/workaround.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\integral.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\msvc.hpp
+	<boost/config.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\eti.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\int.hpp
+	<boost/mpl/int_fwd.hpp>
+	<boost/mpl/aux_/integral_wrapper.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\int_fwd.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\adl_barrier.hpp
+	<boost/mpl/aux_/config/adl.hpp>
+	<boost/mpl/aux_/config/gcc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\adl.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/intel.hpp>
+	<boost/mpl/aux_/config/gcc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\intel.hpp
+	<boost/config.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\gcc.hpp
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\nttp_decl.hpp
+	<boost/mpl/aux_/config/nttp.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\nttp.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\cat.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1173245824 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\config\config.hpp
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\integral_wrapper.hpp
+	<boost/mpl/integral_c_tag.hpp>
+	<boost/mpl/aux_/static_cast.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\integral_c_tag.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\static_constant.hpp
+	<boost/config.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\na_spec.hpp
+	<boost/mpl/lambda_fwd.hpp>
+	<boost/mpl/int.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/arity.hpp>
+	<boost/mpl/aux_/template_arity_fwd.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/enum.hpp>
+	<boost/mpl/aux_/preprocessor/def_params_tail.hpp>
+	<boost/mpl/aux_/lambda_arity_param.hpp>
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/config/eti.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/aux_/config/ttp.hpp>
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/aux_/config/overload_resolution.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\lambda_fwd.hpp
+	<boost/mpl/void_fwd.hpp>
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/int.hpp>
+	<boost/mpl/aux_/lambda_arity_param.hpp>
+	<boost/mpl/aux_/template_arity_fwd.hpp>
+	<boost/mpl/bool.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\void_fwd.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\na.hpp
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/na_fwd.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\bool.hpp
+	<boost/mpl/bool_fwd.hpp>
+	<boost/mpl/integral_c_tag.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\bool_fwd.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\na_fwd.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\ctps.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/config.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\lambda.hpp
+	<boost/mpl/aux_/config/ttp.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\ttp.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/gcc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\lambda_arity_param.hpp
+	<boost/mpl/aux_/config/ttp.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\template_arity_fwd.hpp
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\arity.hpp
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\dtp.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\preprocessor\params.hpp
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/repeat.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\preprocessor.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\comma_if.hpp
+	<boost/preprocessor/punctuation/comma_if.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\punctuation\comma_if.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/control/if.hpp>
+	<boost/preprocessor/facilities/empty.hpp>
+	<boost/preprocessor/punctuation/comma.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\control\if.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\control\iif.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\logical\bool.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\facilities\empty.hpp
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\punctuation\comma.hpp
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\repeat.hpp
+	<boost/preprocessor/repetition/repeat.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\repetition\repeat.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\debug\error.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+
+1091327066 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\detail\auto_rec.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/detail/dmc/auto_rec.hpp>
+	<boost/preprocessor/control/iif.hpp>
+
+1091327066 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\detail\dmc\auto_rec.hpp
+	<boost/preprocessor/control/iif.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\tuple\eat.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\inc.hpp
+	<boost/preprocessor/arithmetic/inc.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\arithmetic\inc.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\preprocessor\enum.hpp
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/repeat.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\preprocessor\def_params_tail.hpp
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/logical/and.hpp>
+	<boost/preprocessor/identity.hpp>
+	<boost/preprocessor/empty.hpp>
+	<boost/mpl/aux_/preprocessor/filter_params.hpp>
+	<boost/mpl/aux_/preprocessor/sub.hpp>
+	<boost/preprocessor/arithmetic/add.hpp>
+	<boost/preprocessor/arithmetic/sub.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+	<boost/preprocessor/repeat.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\limits\arity.hpp
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\logical\and.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+	<boost/preprocessor/logical/bitand.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\logical\bitand.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\identity.hpp
+	<boost/preprocessor/facilities/identity.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\facilities\identity.hpp
+	<boost/preprocessor/facilities/empty.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\empty.hpp
+	<boost/preprocessor/facilities/empty.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\preprocessor\filter_params.hpp
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\preprocessor\sub.hpp
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/mpl/aux_/preprocessor/tuple.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/arithmetic/sub.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\preprocessor\tuple.hpp
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\arithmetic\sub.hpp
+	<boost/preprocessor/arithmetic/dec.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/control/while.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\arithmetic\dec.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\control\while.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/list/fold_left.hpp>
+	<boost/preprocessor/list/fold_right.hpp>
+	<boost/preprocessor/logical/bitand.hpp>
+	<boost/preprocessor/control/detail/edg/while.hpp>
+	<boost/preprocessor/control/detail/msvc/while.hpp>
+	<boost/preprocessor/control/detail/dmc/while.hpp>
+	<boost/preprocessor/control/detail/while.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\list\fold_left.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/control/while.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/list/detail/edg/fold_left.hpp>
+	<boost/preprocessor/list/detail/dmc/fold_left.hpp>
+	<boost/preprocessor/list/detail/fold_left.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\list\detail\edg\fold_left.hpp
+	<boost/preprocessor/control/expr_iif.hpp>
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/list/adt.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\control\expr_iif.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\list\adt.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/detail/is_binary.hpp>
+	<boost/preprocessor/logical/compl.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\detail\is_binary.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/detail/check.hpp>
+
+1195996040 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\detail\check.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\logical\compl.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\list\detail\dmc\fold_left.hpp
+	<boost/preprocessor/control/expr_iif.hpp>
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/list/adt.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\tuple\elem.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\list\detail\fold_left.hpp
+	<boost/preprocessor/control/expr_iif.hpp>
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/list/adt.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\list\fold_right.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/control/while.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/list/detail/edg/fold_right.hpp>
+	<boost/preprocessor/list/detail/fold_right.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\list\detail\edg\fold_right.hpp
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/list/adt.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\list\detail\fold_right.hpp
+	<boost/preprocessor/list/fold_left.hpp>
+	<boost/preprocessor/list/reverse.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\list\reverse.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/list/fold_left.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\control\detail\edg\while.hpp
+	<boost/preprocessor/control/if.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\control\detail\msvc\while.hpp
+	<boost/preprocessor/control/if.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\control\detail\dmc\while.hpp
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\control\detail\while.hpp
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\arithmetic\add.hpp
+	<boost/preprocessor/arithmetic/dec.hpp>
+	<boost/preprocessor/arithmetic/inc.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/control/while.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\overload_resolution.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\lambda_support.hpp
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/int_fwd.hpp>
+	<boost/mpl/aux_/yes_no.hpp>
+	<boost/mpl/aux_/na_fwd.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/enum.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/preprocessor/tuple/to_list.hpp>
+	<boost/preprocessor/list/for_each_i.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\yes_no.hpp
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/aux_/config/arrays.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\aux_\config\arrays.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\tuple\to_list.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\list\for_each_i.hpp
+	<boost/preprocessor/arithmetic/inc.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/list/adt.hpp>
+	<boost/preprocessor/repetition/for.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+	<boost/preprocessor/tuple/rem.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\repetition\for.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/repetition/detail/edg/for.hpp>
+	<boost/preprocessor/repetition/detail/msvc/for.hpp>
+	<boost/preprocessor/repetition/detail/dmc/for.hpp>
+	<boost/preprocessor/repetition/detail/for.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\repetition\detail\edg\for.hpp
+	<boost/preprocessor/control/if.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\repetition\detail\msvc\for.hpp
+	<boost/preprocessor/control/if.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\repetition\detail\dmc\for.hpp
+	<boost/preprocessor/control/expr_iif.hpp>
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\repetition\detail\for.hpp
+	<boost/preprocessor/control/expr_iif.hpp>
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\tuple\rem.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\list\transform.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/list/fold_right.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+	<boost/preprocessor/tuple/rem.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\list\append.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/list/fold_right.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\alignment_of.hpp
+	<boost/config.hpp>
+	<cstddef>
+	<boost/type_traits/intrinsics.hpp>
+	<boost/type_traits/detail/size_t_trait_def.hpp>
+	<boost/type_traits/detail/size_t_trait_undef.hpp>
+
+1309058216 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\intrinsics.hpp
+	<boost/type_traits/config.hpp>
+	<boost/type_traits/is_same.hpp>
+	<algorithm>
+	<type_traits.h>
+	<msl_utility>
+	<boost/type_traits/is_same.hpp>
+	<boost/type_traits/is_same.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/is_volatile.hpp>
+	<boost/type_traits/is_same.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/is_volatile.hpp>
+	<boost/type_traits/is_same.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/is_volatile.hpp>
+	<boost/type_traits/is_void.hpp>
+
+1224044970 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\config.hpp
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+
+1278566878 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_same.hpp
+	<boost/type_traits/config.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/detail/ice_and.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1070440452 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\yes_no_type.hpp
+
+1128677198 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\ice_and.hpp
+	<boost/config.hpp>
+
+1278239104 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_reference.hpp
+	<boost/type_traits/config.hpp>
+	<boost/type_traits/is_lvalue_reference.hpp>
+	<boost/type_traits/is_rvalue_reference.hpp>
+	<boost/type_traits/ice.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1278239104 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_lvalue_reference.hpp
+	<boost/type_traits/config.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/detail/wrap.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1070440452 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\wrap.hpp
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\bool_trait_def.hpp
+	<boost/type_traits/detail/template_arity_spec.hpp>
+	<boost/type_traits/integral_constant.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/config.hpp>
+
+1094121698 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\template_arity_spec.hpp
+	<boost/mpl/int.hpp>
+	<boost/mpl/aux_/template_arity_fwd.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/aux_/config/overload_resolution.hpp>
+
+1206207956 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\integral_constant.hpp
+	<boost/config.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/integral_c.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\integral_c.hpp
+	<boost/mpl/integral_c_fwd.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/mpl/aux_/integral_wrapper.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\integral_c_fwd.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/mpl/aux_/adl_barrier.hpp>
+
+1094121698 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\bool_trait_undef.hpp
+
+1278239104 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_rvalue_reference.hpp
+	<boost/type_traits/config.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1128677198 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\ice.hpp
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/detail/ice_or.hpp>
+	<boost/type_traits/detail/ice_and.hpp>
+	<boost/type_traits/detail/ice_not.hpp>
+	<boost/type_traits/detail/ice_eq.hpp>
+
+1128677198 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\ice_or.hpp
+	<boost/config.hpp>
+
+1128677198 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\ice_not.hpp
+	<boost/config.hpp>
+
+1128677198 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\ice_eq.hpp
+	<boost/config.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_volatile.hpp
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/type_traits/detail/cv_traits_impl.hpp>
+	<boost/type_traits/remove_bounds.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/is_array.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/detail/false_result.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\cv_traits_impl.hpp
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+
+1224044970 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\remove_bounds.hpp
+	<boost/config.hpp>
+	<cstddef>
+	<boost/detail/workaround.hpp>
+	<boost/type_traits/msvc/remove_bounds.hpp>
+	<boost/type_traits/detail/type_trait_def.hpp>
+	<boost/type_traits/detail/type_trait_undef.hpp>
+
+1278566878 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\msvc\remove_bounds.hpp
+	<boost/type_traits/msvc/typeof.hpp>
+	<boost/type_traits/is_array.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\msvc\typeof.hpp
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+
+1224044970 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_array.hpp
+	<boost/type_traits/config.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/detail/wrap.hpp>
+	<cstddef>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\type_trait_def.hpp
+	<boost/type_traits/detail/template_arity_spec.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+
+1094121698 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\type_trait_undef.hpp
+
+1128677198 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\false_result.hpp
+	<boost/config.hpp>
+
+1224044970 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_void.hpp
+	<boost/config.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\size_t_trait_def.hpp
+	<boost/type_traits/detail/template_arity_spec.hpp>
+	<boost/type_traits/integral_constant.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/mpl/size_t.hpp>
+	<cstddef>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\size_t.hpp
+	<boost/mpl/size_t_fwd.hpp>
+	<boost/mpl/aux_/integral_wrapper.hpp>
+
+1223687942 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\mpl\size_t_fwd.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+	<boost/config.hpp>
+	<cstddef>
+
+1094121698 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\size_t_trait_undef.hpp
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_pod.hpp
+	<boost/type_traits/config.hpp>
+	<boost/type_traits/is_void.hpp>
+	<boost/type_traits/is_scalar.hpp>
+	<boost/type_traits/detail/ice_or.hpp>
+	<boost/type_traits/intrinsics.hpp>
+	<cstddef>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1128677198 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_scalar.hpp
+	<boost/type_traits/is_arithmetic.hpp>
+	<boost/type_traits/is_enum.hpp>
+	<boost/type_traits/is_pointer.hpp>
+	<boost/type_traits/is_member_pointer.hpp>
+	<boost/type_traits/detail/ice_or.hpp>
+	<boost/config.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1224044970 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_arithmetic.hpp
+	<boost/type_traits/is_integral.hpp>
+	<boost/type_traits/is_float.hpp>
+	<boost/type_traits/detail/ice_or.hpp>
+	<boost/config.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1224044970 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_integral.hpp
+	<boost/config.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1128677198 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_float.hpp
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_enum.hpp
+	<boost/type_traits/intrinsics.hpp>
+	<boost/type_traits/add_reference.hpp>
+	<boost/type_traits/is_arithmetic.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/is_convertible.hpp>
+	<boost/type_traits/is_array.hpp>
+	<boost/type_traits/is_function.hpp>
+	<boost/type_traits/config.hpp>
+	<boost/type_traits/is_class.hpp>
+	<boost/type_traits/is_union.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1278239104 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\add_reference.hpp
+	<boost/type_traits/is_reference.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/config.hpp>
+	<boost/type_traits/detail/type_trait_def.hpp>
+	<boost/type_traits/detail/type_trait_undef.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_convertible.hpp
+	<boost/type_traits/intrinsics.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/config.hpp>
+	<boost/type_traits/is_array.hpp>
+	<boost/type_traits/add_reference.hpp>
+	<boost/type_traits/ice.hpp>
+	<boost/type_traits/is_arithmetic.hpp>
+	<boost/type_traits/is_void.hpp>
+	<boost/type_traits/is_abstract.hpp>
+	<boost/type_traits/add_rvalue_reference.hpp>
+	<boost/type_traits/is_function.hpp>
+	<boost/type_traits/remove_reference.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1255086962 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_abstract.hpp
+	<boost/type_traits/intrinsics.hpp>
+	<boost/static_assert.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/is_class.hpp>
+	<boost/type_traits/detail/ice_and.hpp>
+	<boost/type_traits/is_polymorphic.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1309996658 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\static_assert.hpp
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+
+1231317886 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_class.hpp
+	<boost/type_traits/config.hpp>
+	<boost/type_traits/intrinsics.hpp>
+	<boost/type_traits/is_union.hpp>
+	<boost/type_traits/detail/ice_and.hpp>
+	<boost/type_traits/detail/ice_not.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/is_scalar.hpp>
+	<boost/type_traits/is_array.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/is_void.hpp>
+	<boost/type_traits/is_function.hpp>
+	<boost/type_traits/remove_cv.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_union.hpp
+	<boost/type_traits/remove_cv.hpp>
+	<boost/type_traits/config.hpp>
+	<boost/type_traits/intrinsics.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1294319682 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\remove_cv.hpp
+	<boost/type_traits/broken_compiler_spec.hpp>
+	<boost/type_traits/detail/cv_traits_impl.hpp>
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+	<cstddef>
+	<boost/type_traits/msvc/remove_cv.hpp>
+	<boost/type_traits/detail/type_trait_def.hpp>
+	<boost/type_traits/detail/type_trait_undef.hpp>
+
+1128677198 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\broken_compiler_spec.hpp
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/config.hpp>
+	<boost/type_traits/detail/type_trait_undef.hpp>
+
+1278566878 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\msvc\remove_cv.hpp
+	<boost/type_traits/msvc/typeof.hpp>
+	<boost/type_traits/is_volatile.hpp>
+	<boost/type_traits/is_const.hpp>
+	<boost/type_traits/is_pointer.hpp>
+	<boost/type_traits/is_array.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_const.hpp
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/type_traits/detail/cv_traits_impl.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/remove_bounds.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/is_array.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/detail/false_result.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_pointer.hpp
+	<boost/type_traits/is_member_pointer.hpp>
+	<boost/type_traits/detail/ice_and.hpp>
+	<boost/type_traits/detail/ice_not.hpp>
+	<boost/type_traits/config.hpp>
+	<boost/type_traits/remove_cv.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/is_array.hpp>
+	<boost/type_traits/detail/is_function_ptr_tester.hpp>
+	<boost/type_traits/detail/false_result.hpp>
+	<boost/type_traits/detail/ice_or.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_member_pointer.hpp
+	<boost/type_traits/config.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/type_traits/is_member_function_pointer.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/is_array.hpp>
+	<boost/type_traits/detail/is_mem_fun_pointer_tester.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/detail/false_result.hpp>
+	<boost/type_traits/detail/ice_or.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_member_function_pointer.hpp
+	<boost/type_traits/config.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/type_traits/detail/is_mem_fun_pointer_impl.hpp>
+	<boost/type_traits/remove_cv.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/is_array.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/detail/false_result.hpp>
+	<boost/type_traits/detail/ice_or.hpp>
+	<boost/type_traits/detail/is_mem_fun_pointer_tester.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1128677198 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\is_mem_fun_pointer_impl.hpp
+	<boost/config.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/enum_params.hpp>
+	<boost/preprocessor/comma_if.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\iterate.hpp
+	<boost/preprocessor/iteration/iterate.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\iteration\iterate.hpp
+	<boost/preprocessor/arithmetic/dec.hpp>
+	<boost/preprocessor/arithmetic/inc.hpp>
+	<boost/preprocessor/array/elem.hpp>
+	<boost/preprocessor/array/size.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/slot/slot.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\array\elem.hpp
+	<boost/preprocessor/array/data.hpp>
+	<boost/preprocessor/array/size.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\array\data.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\array\size.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\slot\slot.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/slot/detail/def.hpp>
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\slot\detail\def.hpp
+
+1090881814 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\enum_params.hpp
+	<boost/preprocessor/repetition/enum_params.hpp>
+
+1095072690 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\preprocessor\repetition\enum_params.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/punctuation/comma_if.hpp>
+	<boost/preprocessor/repetition/repeat.hpp>
+
+1144221756 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\is_mem_fun_pointer_tester.hpp
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/config.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/enum_params.hpp>
+	<boost/preprocessor/comma_if.hpp>
+
+1144221756 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\is_function_ptr_tester.hpp
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/config.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/enum_params.hpp>
+	<boost/preprocessor/comma_if.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_function.hpp
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/detail/false_result.hpp>
+	<boost/config.hpp>
+	<boost/type_traits/detail/is_function_ptr_helper.hpp>
+	<boost/type_traits/detail/is_function_ptr_tester.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1128677198 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\detail\is_function_ptr_helper.hpp
+	<boost/type_traits/config.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/enum_params.hpp>
+	<boost/preprocessor/comma_if.hpp>
+
+1215753280 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\is_polymorphic.hpp
+	<boost/type_traits/intrinsics.hpp>
+	<boost/type_traits/is_class.hpp>
+	<boost/type_traits/remove_cv.hpp>
+	<boost/type_traits/detail/bool_trait_def.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/type_traits/detail/bool_trait_undef.hpp>
+
+1303716408 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\add_rvalue_reference.hpp
+	<boost/config.hpp>
+	<boost/type_traits/is_void.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/detail/type_trait_def.hpp>
+	<boost/type_traits/detail/type_trait_undef.hpp>
+
+1294319682 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\remove_reference.hpp
+	<boost/type_traits/broken_compiler_spec.hpp>
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/type_traits/msvc/remove_reference.hpp>
+	<boost/type_traits/detail/type_trait_def.hpp>
+	<boost/type_traits/detail/type_trait_undef.hpp>
+
+1278566878 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\type_traits\msvc\remove_reference.hpp
+	<boost/type_traits/msvc/typeof.hpp>
+	<boost/type_traits/is_reference.hpp>
+
+1274877242 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_convertible.hpp
+	<boost/config.hpp>
+
+1259844638 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\memory_order.hpp
+
+1235994322 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\operator_bool.hpp
+
+1322135518 e:\my documents\c++ code\bamboo\bamboo\src\wtosbits.h
+
+1324300832 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbutton.h
+
+1323178629 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccolors.h
+
+1324302922 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbutton.cpp
+	"../../WTDivWin.h"
+
+1323278726 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccolors.cpp
+	"../WTDivWin.h"
 

@@ -60,50 +60,14 @@ void cBeamMesh::RenderPainter(uint8 liLevel)
 void cBeamMesh::RenderToPainter()
 {
 
-	//float Temp[16];
 	UpdateMatrix();
 
-	//glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
-	//cRenderPointer lcTemp;
-
 	mpPainterData->SetObject(this);
-	//mpPainterData->SetMatrix(Temp);
 	mpPainterData->SetTexture(0);
-	mpPainterData->SetShader(mpShader);
+	SetOtherRenderVariables();
 	mpPainterData->RenderAgain();
 
-	//cPainter::Instance()->Add(lcTemp);
 }
-
-void cBeamMesh::Render()
-{
-	glDisable(GL_TEXTURE_2D);
-
-	if(VertexData && VertexList)
-	{
-		UpdateMatrix();
-        UpdateCache();
-		//PrepareMaterial();
-
-		//mpTexture->BindTexture();
-
-		glEnableClientState(GL_VERTEX_ARRAY);
-		//glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-		//glEnableClientState(GL_NORMAL_ARRAY);
-
-
-		if(mpShader) mpShader->Use();
-		else _USE_FIXED_FUNCTION();
-
-        SetShaderVariables();
-
-		AdditionalRenderFunctions();
-
-		RenderBeam();
-
-	}
-
-};
 
 
 void cBeamMesh::Radius(float Radius)

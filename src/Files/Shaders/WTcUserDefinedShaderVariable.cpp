@@ -18,7 +18,7 @@ void cAttributeStore::Data(float *lpmpData,uint32 liElements)
 		this->Buffer();
 }
 
-cVariableStore::cVariableStore(vShaderProgram *lpProg)
+cVariableStore::cVariableStore(cShaderProgram *lpProg)
 {
   mpAttributeID=mpUniformID=0;
   mpUniform=0;
@@ -83,7 +83,7 @@ void cVariableStore::WriteAttributes()
  }
 }
 
-void cVariableStore::Link(vShaderProgram *lpProg)
+void cVariableStore::Link(cShaderProgram *lpProg)
 {
 	cShaderVariables *lpLink=lpProg->ShaderVariables();
 	ClearLink();

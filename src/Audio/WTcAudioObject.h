@@ -4,7 +4,7 @@
  * \brief This class will allow a sound to be played.
  * This class will link an audio source and a buffer, This allows the sound data stored in the buffer to be played through the source. Each source is an audio channel and can only play one sound at a time.
  */
-class cAudioObject
+class cAudioObject : public cSignal
 {
  // This is the ID of the OpenAL source owned by this object.
  ALuint miSource;
@@ -22,6 +22,8 @@ public:
  void Play();
  /// This will return the ID of the OpenAL ID.
  ALuint Source();
+ /// This will allow you to send signals to this object.
+ void Signal(SIGNAL lsSignal);
 };
 
 #endif

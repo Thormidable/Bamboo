@@ -2,14 +2,21 @@
 #define __WTCBASE_H__
 
 #if WT_OS_TYPE==OS_WIN32
-/*This Class is responsible for initialising and starting the Program. This is so the program can be created from a single line.
- *
+/**
+ * \brief This Class is responsible for initialising and starting the Program. This is so the program can be created from a single line.
+ * \tparam cX This is the class that will first be called (The Core Process - it must inherit cProcess) and will initialise and start the game.
+ * \tparam cS This is the class that will be used for doing the Settings for the game and engine (it must inherit cUserSettings).
+ * This will create a window. Initialise the Engine and Create the first process - of type cX, before entering the main loop.
+ * This version of the class is for Windows.
+ * This is best called using the macro _START_PROGRAM(TYPE,SETTINGS).
  */
 template<class cX,class cS> class cMainThread
 {
 	cMainThread(){};
 public:
 	~cMainThread(){};
+
+ 	///Function for Starting the Engine and Game. Will Create a window and initialise all components of the engine. It will create and instance of cX and enter the main loop.
 	static uint32 Start(HINSTANCE hInstance)
 	{
 		cS *mpSettings =new cS;
@@ -41,7 +48,7 @@ public:
 		delete cKernel::Instance();
 		return gpWindow->msg.wParam;
 	};
-
+	///This will detect the Version of OpenGL the system is using as well as the GLSL compiler and print the data to the screen.
 	static void GetGLVersion()
 	{
   //  int major,minor;
@@ -72,21 +79,25 @@ public:
 
 	};
 
-
-
 };
 
 #endif
 
 #if WT_OS_TYPE==OS_LINUX
-/*This Class is responsible for initialising and starting the Program. This is so the program can be created from a single line.
- *
+/**
+ * \brief This Class is responsible for initialising and starting the Program. This is so the program can be created from a single line.
+ * \tparam cX This is the class that will first be called (The Core Process - it must inherit cProcess) and will initialise and start the game.
+ * \tparam cS This is the class that will be used for doing the Settings for the game and engine (it must inherit cUserSettings).
+ * This will create a window. Initialise the Engine and Create the first process - of type cX, before entering the main loop.
+ * This version of the class is for Linux.
+ * This is best called using the macro _START_PROGRAM(TYPE,SETTINGS).
  */
 template<class cX,class cS> class cMainThread
 {
 	cMainThread(){};
 public:
 	~cMainThread(){};
+	///Function for Starting the Engine and Game. Will Create a window and initialise all components of the engine. It will create and instance of cX and enter the main loop.
 	static uint32 Start()
 	{
 		LOGGING_INIT()
@@ -144,9 +155,9 @@ public:
 		TRACE("Exiting program and reporting success")
 		return EXIT_SUCCESS;
 	};
-
+	///This will detect the Version of OpenGL the system is using as well as the GLSL compiler and print the data to the screen.
 	static void GetGLVersion()
-	{
+		{
 int major,minor;
 	// for all versions
       char* verGL = (char*)glGetString(GL_VERSION); // ver = "3.2.0"
@@ -174,9 +185,14 @@ int major,minor;
 
 	};
 
+
 };
 
 #endif
+
+
+
+
 
 
 

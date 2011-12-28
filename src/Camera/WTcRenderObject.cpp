@@ -4,13 +4,13 @@ cRenderObject::~cRenderObject()
 {
 
 Delete();
- 
+
 }
 
 void cRenderObject::LinkCollisionObject(cCollisionObject *lpObj)
 {
   mpCollisionObject=lpObj;
-  
+
 };
 
 cRenderObject::cRenderObject()
@@ -36,32 +36,26 @@ void cRenderObject::Initialise()
   mbAwake=true;
   mbAlive=true;
 
-if(WT_USE_PAINTER_ALGORITHM)
-{
 	mpPainterData= new cRenderPointer();
 	_PAINTER->Add(mpPainterData);
 	mpPainterData->SetObject(this);
-}
  mpCollisionObject=0;
  Shader(0);
+ Transparency(0);
 }
 
 void cRenderObject::Delete()
 {
-	
+
 	if(mpCollisionObject)
 	{
 		_KILL(mpCollisionObject);
 		mpCollisionObject=0;
 	}
 
-//mpRenderer->Remove(mpNode);
-if(WT_USE_PAINTER_ALGORITHM)
-{
 	_PAINTER->Remove(mpPainterData);
 	delete mpPainterData;
 	mpPainterData=0;
-}
 
 }
 
@@ -79,7 +73,7 @@ void cRenderObject::AdditionalRenderFunctions()
 {
 // UpdateCache();
 // SetShaderVariables();
-	
+
 }
 
 void cRenderObject::AdditionalKillFunctionality()
@@ -87,34 +81,42 @@ void cRenderObject::AdditionalKillFunctionality()
 	//Delete();
 
 	if(Renderer() && mpNode) Renderer()->Remove(mpNode);else trace("Cannot _S_Kill this Node, Is it the Camera List?\n");
+	if(mpCollisionObject)
+	{
+		_KILL(mpCollisionObject);
+		mpCollisionObject=0;
+	}
 }
 
 
 
 void cRenderObject::AdditionalSleepFunctionality()
 {
-	uint32 IS_THIS_OPTIMISING_Sending_Render_Objects_to_Sleep;
-	
-if(WT_USE_PAINTER_ALGORITHM)
-{
+
 	_PAINTER->Remove(mpPainterData);
 	delete mpPainterData;
 	mpPainterData=0;
+
+if(mpCollisionObject)
+{
+    _SLEEP(mpCollisionObject);
 }
- 
+
 
 }
 
 void cRenderObject::AdditionalWakeFunctionality()
 {
-	
-if(WT_USE_PAINTER_ALGORITHM)
-{
+
 	mpPainterData=new cRenderPointer;
 	_PAINTER->Add(mpPainterData);
 	mpPainterData->SetObject(this);
+
+if(mpCollisionObject)
+{
+    _WAKE(mpCollisionObject);
 }
-	
+
 }
 
 void cRenderObject::UpdateCache()
@@ -133,15 +135,15 @@ void cRenderObject::UpdateCache()
 	{
 		mmCache=_MATRIX_STACK->Current();
 	}
-	
+
 };
 
 
 
-void cRenderObject::Shader(vShaderProgram *lpShader)
+void cRenderObject::Shader(cShaderProgram *lpShader)
 {
   mpShader=lpShader;
-  
+
   if(mpVariables)
   {
 	if(mpShader) mpVariables->Link(mpShader);
@@ -150,32 +152,42 @@ void cRenderObject::Shader(vShaderProgram *lpShader)
   if(mpShader)
   {
   	mpShader->Use();
-  	AddUniform<cUniformMatrix>("mmProj")->Data=_CAMERA->Perspective();
-  	AddUniform<cUniformMatrix>("mmGlob")->Data=mmCache.Matrix();
+  	cMatrix4 Temp;
+  	if(mb3D)
+  	{
+  	  AddUniform<cUniformMatrix>("mmProj")->Data=_CAMERA->TotalPositionMatrix();
+  	  AddUniform<cUniformMatrix>("mmGlob")->Data=mmCache.Matrix();
+  	}
+  	else
+  	{
+  	 AddUniform<cUniformMatrix>("mmProj")->Data=_CAMERA->Perspective();
+     AddUniform<cUniformMatrix>("mmGlob")->Data=mmCache.Matrix();
+  	}
+
   }
-  
+
 }
 
-vShaderProgram *cRenderObject::Shader()
+cShaderProgram *cRenderObject::Shader()
 {
   return mpShader;
-  
+
 }
 
 cRenderNode *cRenderObject::Renderer()
 {
   return mpRenderer;
-  
+
 }
 
 
 float *cRenderObject::GetPos()
 {
   return Position();
-  
+
 };
 
-float *cRenderObject::GetGlobalPos()
+float *cRenderObject::GetCachedGlobalMatrix()
 {
   return mmCache.Position();
 
@@ -198,3 +210,20 @@ void cRenderObject::SetShaderVariables()
 
 }
 
+void cRenderObject::Transparency(bool lbTrans){mbAlpha=lbTrans;}
+bool cRenderObject::Transparency(){return mbAlpha;}
+
+void cRenderObject::SetOtherRenderVariables()
+{
+    mpPainterData->SetAlpha(mbAlpha);
+    mpPainterData->SetShader(mpShader);
+}
+
+cMatrix4 vRenderObject::CalculateGlobalMatrix()
+{
+    if(Renderer())
+    {
+     return Renderer()->CalculateGlobalMatrix()*ThisMatrix();
+    }
+    else return ThisMatrix();
+}

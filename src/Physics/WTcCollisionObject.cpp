@@ -10,15 +10,15 @@ float cCollisionObject::CollisionDistance=0.0f;
 
 bool cCollisionObject::ModelModel(cCollisionObject *lpOther)
 {
-	
+
 	// Objects get assigned to pointers so code is consistent and each object type is known.
 	cMeshCollision *lpPlanes;
 	cMeshCollision *lpVerteces;
-	
+
 	// Matrix showing the relative positions of the objects.
 	cMatrix4 lmRelative;
-	
-	
+
+
 	//Determine which object is model and which is sphere
 	if(Mesh()->Verteces()<lpOther->Mesh()->Verteces())
 	{
@@ -26,7 +26,7 @@ bool cCollisionObject::ModelModel(cCollisionObject *lpOther)
 		lpPlanes=lpOther->Mesh();
 		//Invert the Matrix of the object NOT moving
 		lmRelative=lpOther->CacheMatrix().InvertRotationMatrix()*CacheMatrix();
-		
+
 	}
 	else
 	{
@@ -34,24 +34,24 @@ bool cCollisionObject::ModelModel(cCollisionObject *lpOther)
 		lpPlanes=Mesh();
 		lmRelative=CacheMatrix().InvertRotationMatrix()*lpOther->CacheMatrix();
 	}
-	
+
 	uint32 liVertex;
 	for(liVertex=0;liVertex<lpVerteces->Verteces();++liVertex)
 	{
 		float lpPos[3];
 		double lfValue;
 		float *lpPlane;
-		
+
 		float *lpVertex;
 		lpVertex=lpVerteces->Vertex(liVertex);
-		
+
 		uint32 liPlane;
 		for(liPlane=0;liPlane<lpPlanes->Planes();++liPlane)
 		{
 			lpPos[0]=lpVertex[0]*lmRelative[0]+lpVertex[1]*lmRelative[1]+lpVertex[2]*lmRelative[2]+lmRelative[12];
 			lpPos[1]=lpVertex[0]*lmRelative[4]+lpVertex[1]*lmRelative[5]+lpVertex[2]*lmRelative[6]+lmRelative[13];
 			lpPos[2]=lpVertex[0]*lmRelative[8]+lpVertex[1]*lmRelative[9]+lpVertex[2]*lmRelative[10]+lmRelative[14];
-			
+
 			lpPlane=lpPlanes->Plane(liPlane);
 
 			lfValue=lpPos[0]*lpPlane[0]+lpPos[1]*lpPlane[1]+lpPos[2]*lpPlane[2];
@@ -60,27 +60,27 @@ bool cCollisionObject::ModelModel(cCollisionObject *lpOther)
 		}
 		if(liPlane==lpPlanes->Planes()) return 1;
 	}
-	
+
 	return 0;
-	
+
 }
 
 bool cCollisionObject::RayRay(cCollisionObject *lpOther)
 {
 	cBeamCollision *lpOne,*lpTwo;
-	
+
 	// S + nV
 	lpOne=Beam();
 	// L + mU
 	lpTwo=lpOther->Beam();
-	
+
 	float lfDist[3];
 
 	lfDist[0]=CacheMatrix().Matrix()[12]-(lpOther->CacheMatrix().Matrix()[12]);
 	lfDist[1]=CacheMatrix().Matrix()[13]-(lpOther->CacheMatrix().Matrix()[13]);
 	lfDist[2]=CacheMatrix().Matrix()[14]-(lpOther->CacheMatrix().Matrix()[14]);
 
-	
+
 	float Ray1[3],Ray2[3];
 	Ray1[0]=lpOne->RayVector(0)*lpOne->Length();
 	Ray1[1]=lpOne->RayVector(1)*lpOne->Length();
@@ -89,7 +89,7 @@ bool cCollisionObject::RayRay(cCollisionObject *lpOther)
 	Ray2[0]=lpTwo->RayVector(0)*lpTwo->Length();
 	Ray2[1]=lpTwo->RayVector(1)*lpTwo->Length();
 	Ray2[2]=lpTwo->RayVector(2)*lpTwo->Length();
-	
+
 	double a,b,c,d,e,f;
 
 	a=Ray1[0]*Ray1[0]+Ray1[1]*Ray1[1]+Ray1[2]*Ray1[2];
@@ -100,6 +100,7 @@ bool cCollisionObject::RayRay(cCollisionObject *lpOther)
 	f=lfDist[0]*lfDist[0]+lfDist[1]*lfDist[1]+lfDist[2]*lfDist[2];
 
 	double det,s,t;
+	s=0.0;
 	det=a*c-b*b;
 
 	//Non Parrallel.
@@ -293,7 +294,7 @@ bool cCollisionObject::RayRay(cCollisionObject *lpOther)
 							else // Q_t(1,1) <= 0, gradient points to region 2, so minimum at t = 1
 							t = 1;
 							}
-					
+
 				}
 			}
 			else
@@ -374,13 +375,13 @@ bool cCollisionObject::RayRay(cCollisionObject *lpOther)
 			else
 				// minimum occurs at s = 0, need to determine t (see below)
 				if ( d >= -b ) t = 1; else t = -d/b;
-				
+
 		}
-		
+
 
 	}
 
-/*	
+/*
 Collision is at point lfDist from this
 //Find dist between closest points
 lfDist[0]=lfDist[0]+s*Ray1[0]-t*Ray2[0];
@@ -394,7 +395,7 @@ det=lfDist[0]*lfDist[0]+lfDist[1]*lfDist[1]+lfDist[2]*lfDist[2];
  	det=a*s*s+2*b*s*t+c*t*t+2*d*s+2*e*t+f;
 if(det<lpOne->CollisionSize()+lpTwo->CollisionSize()) {return true;}
 return 0;
-	
+
 }
 
 bool cCollisionObject::SphereModel(cCollisionObject *lpOther)
@@ -403,7 +404,7 @@ bool cCollisionObject::SphereModel(cCollisionObject *lpOther)
 // Objects get assigned to pointers so code is consistent and each object type is known.
  cSphereCollision *lpSphere;
  cMeshCollision *lpModel;
- 
+
 // Matrix showing the relative positions of the objects.
 cMatrix4 lmRelative;
 
@@ -420,7 +421,7 @@ cMatrix4 lmRelative;
 	 lpSphere=Sphere();
 	 lpModel=lpOther->Mesh();
 	 lmRelative=lpOther->CacheMatrix().InvertRotationMatrix()*CacheMatrix();
- } 
+ }
 
 uint32 liLoop;
  for(liLoop=0;liLoop<lpModel->Verteces();++liLoop)
@@ -429,7 +430,7 @@ uint32 liLoop;
 		double lfValue;
 		float *lpVertex;
 		lpVertex=lpModel->Vertex(liLoop);
-		
+
 		lpPos[0]=lpVertex[0]*lmRelative[0]+lpVertex[1]*lmRelative[1]+lpVertex[2]*lmRelative[2]+lmRelative[12];
 		lpPos[1]=lpVertex[0]*lmRelative[4]+lpVertex[1]*lmRelative[5]+lpVertex[2]*lmRelative[6]+lmRelative[13];
 		lpPos[2]=lpVertex[0]*lmRelative[8]+lpVertex[1]*lmRelative[9]+lpVertex[2]*lmRelative[10]+lmRelative[14];
@@ -448,7 +449,7 @@ bool cCollisionObject::SphereRay(cCollisionObject *lpOther)
    cBeamCollision *lpBeam;
    cSphereCollision *lpSphere;
 
-   
+
    double lfEq[2];
 
   float lfSpherePos[3],lfBeamPos[3];
@@ -459,24 +460,24 @@ bool cCollisionObject::SphereRay(cCollisionObject *lpOther)
 
 	   lpBeam=Beam();
 	   lpSphere=lpOther->Sphere();
-	   
+
 	   lfSpherePos[0]=lpOther->CacheMatrix().Matrix()[12];
 	   lfSpherePos[1]=lpOther->CacheMatrix().Matrix()[13];
 	   lfSpherePos[2]=lpOther->CacheMatrix().Matrix()[14];
-	   
+
 	   lfBeamPos[0]=CacheMatrix().Matrix()[12];
 	   lfBeamPos[1]=CacheMatrix().Matrix()[13];
-	   lfBeamPos[2]=CacheMatrix().Matrix()[14];   
+	   lfBeamPos[2]=CacheMatrix().Matrix()[14];
    }
    else
    {
 	   lpSphere=Sphere();
 	   lpBeam=lpOther->Beam();
-	   
+
 	   lfSpherePos[0]=CacheMatrix().Matrix()[12];
 	   lfSpherePos[1]=CacheMatrix().Matrix()[13];
 	   lfSpherePos[2]=CacheMatrix().Matrix()[14];
-	   
+
 	   lfBeamPos[0]=lpOther->CacheMatrix().Matrix()[12];
 	   lfBeamPos[1]=lpOther->CacheMatrix().Matrix()[13];
 	   lfBeamPos[2]=lpOther->CacheMatrix().Matrix()[14];
@@ -497,13 +498,13 @@ if(lfEq[0]<lpBeam->Length())
 }
 
 return 0;
- 
+
 
 }
 
 bool cCollisionObject::RayModel(cCollisionObject *lpOther)
 {
-	
+
  cMeshCollision *lpModel;
  cBeamCollision *lpRay;
 
@@ -544,16 +545,16 @@ for(liCount=0;liCount<lpModel->Faces();++liCount)
 {
     lpPlane=lpModel->FacePlane(liCount);
     //Find Ray / Plane intersection
-    
+
     Denom=lpPlane[0]*lpRV[0]+lpPlane[1]*lpRV[1]+lpPlane[2]*lpRV[2];
-    
+
 //    lpModel->Polygon(liCount).CalculateCenter();
     if(Denom)
     {
 	    // Denom=(lpPlane[4]-lpPlane[0]*lpRayStart[0]-lpPlane[1]*lpRayStart[1]-lpPlane[2]*lpRayStart[2])/(Denom);
 	    Denom=(lpPlane[3]-lpPlane[0]*lpRayStart[0]-lpPlane[1]*lpRayStart[1]-lpPlane[2]*lpRayStart[2])/(Denom);
 	    uint32 SHOULD_THIS_BE_MFLENGTH;
-	    
+
 	    if(Denom<1.0f)
 	    {
 		    //Find the Ray position on the face.
@@ -561,8 +562,8 @@ for(liCount=0;liCount<lpModel->Faces();++liCount)
 		    lpPosition[1]=lpRayStart[1]+lpRV[1]*Denom;
 		    lpPosition[2]=lpRayStart[2]+lpRV[2]*Denom;
 
-		    
-		    
+
+
 		    //Shift the collision point towards the centre, by up to the ray Radius
 		    lpFinalPos[0]=lpModel->mlFaces.mpList[liCount].mlCenter.mpData[0];
 		    lpFinalPos[1]=lpModel->mlFaces.mpList[liCount].mlCenter.mpData[1];
@@ -573,7 +574,7 @@ for(liCount=0;liCount<lpModel->Faces();++liCount)
 		    lpFinalPos[2]-=lpPosition[2];
 
 		    double Inv=lpFinalPos[0]*lpFinalPos[0]+lpFinalPos[1]*lpFinalPos[1]+lpFinalPos[2]*lpFinalPos[2];
-		    
+
 		    if(Inv<lpRay->Length()*lpRay->Length()) return 1;
 		    Inv=lpRay->Length()/Inv;
 
@@ -585,7 +586,7 @@ for(liCount=0;liCount<lpModel->Faces();++liCount)
 		    lpFinalPos[1]+=lpPosition[1];
 		    lpFinalPos[2]+=lpPosition[2];
 		    lfAngle=lpModel->GetAngle(lpFinalPos,liCount);
-			
+
 		    lfAngle=lpModel->GetAngle(lpPosition,liCount);
 		    if(lfAngle>WT_RAY_ANGLE_LOWER && lfAngle<WT_RAY_ANGLE_UPPER) return 1;
 	    }
@@ -602,12 +603,13 @@ return 0;
 
 float *cCollisionObject::GetPos()
 {
- return mpFollowing->GetGlobalPos();
+    #warning comment This Does not seem right. This should be the objects Local matrix...Surely
+ return mpFollowing->GetCachedGlobalMatrix();
 }
 
-void cCollisionObject::GenerateCollisionList(uint32 liType)
+cCollisionList * cCollisionObject::GenerateCollisionList(uint32 liType)
 {
-  _COLLISION_HANDLER->GenerateCollisionList(this,liType);
+  return _COLLISION_HANDLER->GenerateCollisionList(this,liType);
 }
 
 float cCollisionObject::GetCollisionSize()
@@ -675,27 +677,27 @@ bool cCollisionObject::Collision(cCollisionObject *lpOther)
 
 bool cCollisionObject::CheckCollision(cCollisionObject *lpOther)
 {
-	
+
 	if(Asleep() || lpOther->Asleep() || CreatedThisFrame() || lpOther->CreatedThisFrame()) return 0;
-	
+
 	if(!TouchCollision(lpOther)) return 0;
 
-	
-	
+
+
 	if((Type()==WT_COLLISION_RADIUS || Type()==WT_COLLISION_BEAM) && (lpOther->Type()==WT_COLLISION_RADIUS || lpOther->Type()==WT_COLLISION_BEAM)) return 1;
-	
+
 	if(Type()==WT_COLLISION_MODEL)
 	{
 		if(lpOther->Type()==WT_COLLISION_RADIUS) return SphereModel(lpOther);
 		if(lpOther->Type()==WT_COLLISION_MODEL) return ModelModel(lpOther);
 		if(lpOther->Type()==WT_COLLISION_BEAM) return RayModel(lpOther);
 	}
-	
+
 	if(Type()==WT_COLLISION_BEAM)
 	{
 		if(lpOther->Type()==WT_COLLISION_MODEL) return RayModel(lpOther);
 	}
-	
+
 	if(Type()==WT_COLLISION_RADIUS)
 	{
 		if(lpOther->Type()==WT_COLLISION_MODEL) return SphereModel(lpOther);
@@ -706,57 +708,57 @@ bool cCollisionObject::CheckCollision(cCollisionObject *lpOther)
 
 bool cCollisionObject::TouchCollision(cCollisionObject *lpOther)
 {
-	
+
 	if(Beam() || lpOther->Beam())
 	{
-		
+
 		if(Beam() && lpOther->Beam()){ return RayRay(lpOther); }
 		else
 		{
-		
+
 			return SphereRay(lpOther);
 		}
 	}
 	else
 	{
-		
+
 		return SphereSphere(lpOther);
 	}
 };
 
 cBeamCollision *cCollisionObject::SetType(cBeamMesh *lpBeam)
 {
-	
+
 	OnProcedural();
 	miType=WT_COLLISION_BEAM;
 	mpObject=new cBeamCollision;
 	Beam()->BuildObject(lpBeam->Length(),lpBeam->Radius());
 	return Beam();
-	
+
 };
 
 cRayCollision *cCollisionObject::SetType(cRenderObject *lpObj)
 {
-	
+
 	mpFollowing=lpObj;
 	OnProcedural();
 	miType=WT_COLLISION_RAY;
 	mpObject=new cRayCollision;
 	Ray()->SetSize(1.0f);
 	return Ray();
-	
+
 };
 
 bool cCollisionObject::SphereSphere(cCollisionObject *lpOther)
 {
-	
+
   if(CacheMatrix().DistanceSq(lpOther->CacheMatrix())<GetCollisionSize()+lpOther->GetCollisionSize()) return 1;
   return 0;
 }
 
 cCollisionObject::~cCollisionObject()
 {
-	
+
 	ClearProcedural();
 	mbAlive=false;
 	mbAwake=false;
@@ -782,45 +784,57 @@ void cCollisionObject::OnProcedural(){ClearProcedural();mbCreatedThisFrame=true;
 ///This will procedurally generate a Sphere or radius 1.0f;
 cSphereCollision *cCollisionObject::SetType(float lfSize)
 {
-	
+
 	OnProcedural();
 	miType=WT_COLLISION_RADIUS;
 	mpObject=new cSphereCollision;
 	mpObject->SetSize(lfSize);
-	
+
 	return Sphere();
-	
+
 };
-///This will procedurally generate a Beam of Radius lfRadius and Length lfLength.
+
 cBeamCollision *cCollisionObject::SetType(float lfLength,float lfRadius){OnProcedural(); miType=WT_COLLISION_BEAM; mpObject=new cBeamCollision; Beam()->BuildObject(lfLength,lfRadius); return Beam();};
-///This will procedureally generate a Box collision object from the array of 6 floats lpBounds. see cMeshCollision::BuildObject(float *lpBounds) for more information.
+
 cMeshCollision *cCollisionObject::SetType(float *lpBounds)
 {
-	
+
 	OnProcedural();
 	miType=WT_COLLISION_MODEL;
 	mpObject=new cMeshCollision;
 	mpObject->Mesh()->BuildObject(lpBounds);
-	
+
 	return mpObject->Mesh();
-	
+
 };
 
+cMeshCollision *cCollisionObject::SetType(float lfXP,float lfXN,float lfYP,float lfYN,float lfZP,float lfZN)
+{
+    float lpTemp[6];
+    lpTemp[0]=lfXP;
+    lpTemp[1]=lfXN;
+    lpTemp[2]=lfYP;
+    lpTemp[3]=lfYN;
+    lpTemp[4]=lfZP;
+    lpTemp[5]=lfZN;
+
+    return SetType(lpTemp);
+}
 
 
 void cCollisionObject::Signal(SIGNAL liFlags)
 {
 	/*	miFlags=(miFlags|liFlags);
 	 * miFlags=(miFlags&(~(liFlags>>16)));*/
-	
+
 	if(liFlags&WT_SIGNAL_VALUE_WAKE && Asleep())
 	{
 		if(mpObject) mbAwake=true;
 		else SetType(1.0f);
-		
-		
+
+
 		if(!mpOwner) mpOwner=cCollisionHandler::Instance()->Add(this);
-		
+
 		mbCreatedThisFrame=true;
 	}
 	if(liFlags&WT_SIGNAL_VALUE_SLEEP)
@@ -828,72 +842,72 @@ void cCollisionObject::Signal(SIGNAL liFlags)
 		if(Awake())
 		{
 			mbAwake=false;
-		
+
 			if(mpOwner){ cCollisionHandler::Instance()->RemoveFromList(mpOwner); mpOwner=0;}
-		
+
 		}
 	}
-	
+
 	if(liFlags&WT_SIGNAL_VALUE_KILL) {delete this;}
-	
+
 }
 
 
-cCollisionObject::cCollisionObject(vRenderObject *lpFollow,vProcess *lpLinked,uint32 liFilterType)
+cCollisionObject::cCollisionObject(vRenderObject *lpFollow,cProcess *lpLinked,uint32 liFilterType)
 {
 		mpObject=0;
-	
+
 		mpOwner=0;
-	
+
 		mpLinked=0;
 		mpFollowing=0;
 		ProceduralObj=false;
 		ClearProcedural();
-		
+
 	Initialise(lpFollow,lpLinked,liFilterType);
 	SetType(1.0f);
 //	cCollisionHandler::Instance()->mpList[miID].StitchIn(mpOwner);
-	
+
 };
 
-cCollisionObject::cCollisionObject(cBeamMesh *lpFollow,vProcess *lpLinked,uint32 liFilterType)
+cCollisionObject::cCollisionObject(cBeamMesh *lpFollow,cProcess *lpLinked,uint32 liFilterType)
 {
 	mpObject=0;
-	
+
 	mpOwner=0;
-	
+
 	mpLinked=0;
 	mpFollowing=0;
 	ProceduralObj=false;
 
-	
+
 	Initialise(lpFollow,lpLinked,liFilterType);
 	SetType(lpFollow);
 }
 
 void cCollisionObject::ClearProcedural()
 {
-	
-	
+
+
 	if(Procedural() && mpObject) delete mpObject;
-	
+
 	mpObject=0;
 	miType=0;
 	mbAwake=false;
-	
+
 }
 
-void cCollisionObject::Initialise(vRenderObject *lpFollow,vProcess *lpLinked,uint32 liFilterType)
+void cCollisionObject::Initialise(vRenderObject *lpFollow,cProcess *lpLinked,uint32 liFilterType)
 {
-	
+
 	ClearProcedural();
-	
-	
+
+
 	if(mpOwner){ cCollisionHandler::Instance()->RemoveFromList(mpOwner); mpOwner=0;}
-	
-	
+
+
 	SetLink(lpLinked);
-	
+
 	miType=0;
 	mbAlive=true;
 	mbAwake=false;
@@ -901,8 +915,12 @@ void cCollisionObject::Initialise(vRenderObject *lpFollow,vProcess *lpLinked,uin
 	mpFollowing=lpFollow;
 	mpFollowing->LinkCollisionObject(this);
 	miID=liFilterType;
-	
+
 			mpOwner=cCollisionHandler::Instance()->Add(this);
-	
-	
+
+
 }
+
+	cMatrix4& cCollisionObject::CacheMatrix(){return mpFollowing->mmCache;};
+	vRenderObject *cCollisionObject::RenderObject(){return mpFollowing;};
+	uint32 cCollisionObject::CollisionFilter(){return miID;};

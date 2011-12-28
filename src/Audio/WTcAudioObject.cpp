@@ -37,3 +37,9 @@ ALuint cAudioObject::Source()
   return miSource;
   
 };
+
+void cAudioObject::Signal(SIGNAL lsSignal)
+{
+ if( lsSignal & _S_KILL ) delete this;
+
+};

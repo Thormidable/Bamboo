@@ -8,4 +8,7 @@ cEventHandler *cEventHandler::Instance()
  return mpInstance;
 }
 
+cKeyStore *cEventHandler::Keyboard(){return &Key;}
+
+cMouse *cEventHandler::Mouse(){return &MouseDevice;};
 

@@ -6,8 +6,9 @@ cCamera::cCamera()
  mpRenderList=new cRenderNode(0);
  Identity();
 // gpWindow->InitialiseOpenGL();
- mmPerspective.Setup(0.5f,gpWindow->mfRatio,1.0f,20.0f);
+ mmPerspective.Setup(0.5f,gpWindow->Ratio(),1.0f,20.0f);
  UpdateProjectionMatrix();
+ cPainter::Instance();
 }
 
 cCamera::~cCamera()
@@ -16,37 +17,17 @@ cCamera::~cCamera()
  delete mpRenderList; mpRenderList=0;
 }
 
-cCameraPainter::cCameraPainter()
+void cCamera::UpdateNotRender()
 {
- cPainter::Instance();
+    ResetGLMatrix();
+    mpRenderList->RenderToPainter();
 }
-
-
-
 
 void cCamera::Render()
 {
 
-
-	//This will render the objects in their current render tree order
- glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
- ResetGLMatrix();
- mpRenderList->Render();
-#if WT_OS_TYPE==OS_WIN32
-	SwapBuffers(gpWindow->hDC);
-#endif
-#if WT_OS_TYPE==OS_LINUX
-	glXSwapBuffers(gpWindow->lpDisplay,gpWindow->lWindow);
-#endif
-
- gpWindow->Repaint=false;
-}
-
-void cCameraPainter::Render()
-{
-
-
 	ResetGLMatrix();
+
 	cPainter::Instance()->Reset();
 
 	mpRenderList->RenderToPainter();
@@ -93,8 +74,10 @@ float cCamera::Far()
 void cCamera::ResetGLMatrix()
 {
 	_MATRIX_STACK->Identity();
-	_MATRIX_STACK->Multiply(Matrix());
-	_MATRIX_STACK->Translate(mpPosition[0],mpPosition[1],mpPosition[2]);
+	mmPerspectiveCameraMatrix=mmPerspective;
+	//mmPerspectiveCameraMatrix.Multiply(Test());
+	mmPerspectiveCameraMatrix.Multiply(Matrix());
+	mmPerspectiveCameraMatrix.Translate(mpPosition);
 
 }
 
@@ -102,12 +85,7 @@ cCamera *cCamera::mpInstance=0;
 
 cCamera *cCamera::Instance()
 {
-	if (!mpInstance)
-	{
-
-		if(WT_USE_PAINTER_ALGORITHM) mpInstance=new cCameraPainter;
-		else mpInstance=new cCamera;
-	}
+	if (!mpInstance) mpInstance=new cCamera;
 
 	return mpInstance;
 }
@@ -171,4 +149,17 @@ void cCamera::Ratio(float lfRatio)
 {
  mmPerspective.Ratio(lfRatio);
 }
+
+
+	void cCamera::SetClearColor(float *lpColor)	{ 	glClearColor(lpColor[0],lpColor[1],lpColor[2],lpColor[3]); }
+	void cCamera::SetClearColor(cRGBA &lpColor){ 	glClearColor(lpColor[0],lpColor[1],lpColor[2],lpColor[3]); }
+	void cCamera::SetClearColor(cRGB &lpColor){ 	glClearColor(lpColor[0],lpColor[1],lpColor[2],1.0f); }
+	void cCamera::SetClearColor(cRGBA *lpColor){ 	glClearColor(lpColor->R(),lpColor->G(),lpColor->B(),lpColor->A()); }
+	void cCamera::SetClearColor(cRGB *lpColor){ 	glClearColor(lpColor->R(),lpColor->G(),lpColor->B(),1.0f); }
+
+float *cCamera::TotalPositionMatrix()
+{
+#warning comment Potential Minor Optimisation here. Can combine both matrices together.
+    return mmPerspectiveCameraMatrix.Matrix();
+};
 

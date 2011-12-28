@@ -20,7 +20,7 @@ public:
  cMatrix operator-(cMatrix &lVal);
  cMatrix operator-(float &lVal);
  cMatrix operator-(const float lVal);
- 
+
  cMatrix operator*(cMatrix &lVal);
  cMatrix operator*(float &lVal);
  cMatrix operator*(const float lVal);
@@ -28,9 +28,9 @@ public:
  cMatrix operator/(cMatrix &lVal);
  cMatrix operator/(float &lVal);
  cMatrix operator/(const float lVal);
- 
+
  bool Equivalent(cMatrix &lVal){return (lVal.miRows==miRows && lVal.miColumns==miColumns);};
- 
+
  cMatrix Determinant();
  cMatrix Transpose();
 
@@ -40,7 +40,7 @@ cMatrix cMatrix::Transpose()
 {
  cMatrix *lpTemp=new cMatrix(miColumns,miRows);
  int liRow,liColumn;
- 
+
  for (liRow=0;liRow<miRows;++liRow)
  {
   for (liColumn=0;liColumn<miColumns;++liColumn)
@@ -51,9 +51,10 @@ cMatrix cMatrix::Transpose()
   return lpTemp;
 }
 
-cMatrix cMatrix::Determinant(cMatrix lMatrix)
+cMatrix cMatrix::Determinant()
 {
 
+return this;
 };
 
 void cMatrix::operator=(cMatrix &lVal)
@@ -169,7 +170,7 @@ if (miColumns==lVal.miRows)
  cMatrix *lpTemp=new cMatrix(miRows,lVal.miColumns)
 
  for(liCount=0;liCount<miRows*miColumns;++liCount) {lpTemp->mpData[liCount]=0;}
- 
+
  liStep=0;
  liLittleStep=0;
 for(liElement=0;liElement<miColumns;++liElement)
@@ -179,7 +180,7 @@ for(liElement=0;liElement<miColumns;++liElement)
   for(liCount=0;liCount<miRows;++liCount)
   {
    lpTemp->mpData[liElement*miRows+liStep]+=mpData[liStep]*lVal.mpData[liLittleStep];
-   
+
    ++liStep;
    if (liStep==miRows*miColumns) liStep=0;
   }
@@ -285,3 +286,4 @@ cMatrix::cMatrix(int liRows,int liColumns)
 
 
 #endif
+

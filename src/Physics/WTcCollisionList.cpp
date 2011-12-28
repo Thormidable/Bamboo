@@ -15,16 +15,16 @@ cCollisionObject *cCollisionList::NextCollisionItem()
  }
  else { mpCurPos=mpCurPos->Next();}
  if(mpCurPos) return mpCurPos->mpData;
- 
+
  return 0;
 }
 
-vProcess *cCollisionList::NextCollisionP()
+cProcess *cCollisionList::NextCollisionP()
 {
 cCollisionObject *lpTemp=NextCollisionItem();
 while(lpTemp)
 {
- 
+
 	if(lpTemp->GetLink()) return lpTemp->GetLink();
  lpTemp=NextCollisionItem();
 }
@@ -36,12 +36,12 @@ vRenderObject *cCollisionList::NextCollisionR()
 	cCollisionObject *lpTemp=NextCollisionItem();
 	do
 	{
-		
+
 		if(lpTemp && lpTemp->RenderObject()) return lpTemp->RenderObject();
 		lpTemp=NextCollisionItem();
 	}while(lpTemp);
 	return 0;
-	
+
 }
 
 
@@ -62,7 +62,7 @@ cCollisionList::cCollisionList()
 {
 	mpCollisionList=new cLinkedList<cCollisionObject>;
 	mpCurPos=0;
-	
+
 };
 
 void cCollisionList::SortByDistance()

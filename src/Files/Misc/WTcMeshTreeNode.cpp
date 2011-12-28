@@ -62,7 +62,7 @@ void cMeshTreeNode::ReadIMF(ifstream &FileStream)
    mpMesh=new char[liTemp+1];
    FileStream.read(mpMesh,sizeof(int8)*liTemp);
    mpMesh[liTemp]=0;
-   mpMeshPoint=_GET_FILE(vMesh,mpMesh);
+   mpMeshPoint=_GET_FILE(cMesh,mpMesh);
   }
 
   //If there is a Texture Reference Write it
@@ -72,7 +72,7 @@ void cMeshTreeNode::ReadIMF(ifstream &FileStream)
    mpTexture=new char[liTemp+1];
    FileStream.read(mpTexture,sizeof(int8)*liTemp);
    mpTexture[liTemp]=0;
-   mpTexturePoint=_GET_FILE(vTexture,mpTexture);
+   mpTexturePoint=_GET_FILE(cTexture,mpTexture);
   }
 
   //If there is a Level Command read it
@@ -95,24 +95,24 @@ void cMeshTreeNode::ReadIMF(ifstream &FileStream)
  }
 }
 
-vMesh *cMeshTreeNode::Mesh()
+cMesh *cMeshTreeNode::Mesh()
 {
 if(mpMeshPoint) return mpMeshPoint;
 if(mpMesh)
 {
- mpMeshPoint=_GET_FILE(vMesh,mpMesh);
+ mpMeshPoint=_GET_FILE(cMesh,mpMesh);
  return mpMeshPoint;
 }
 return 0;
 
 }
 
-vTexture *cMeshTreeNode::Texture()
+cTexture *cMeshTreeNode::Texture()
 {
 if(mpTexturePoint) return mpTexturePoint;
 if(mpTexture)
 {
- mpTexturePoint=_GET_FILE(vTexture,mpTexture);
+ mpTexturePoint=_GET_FILE(cTexture,mpTexture);
  return mpTexturePoint;
 }
 return 0;

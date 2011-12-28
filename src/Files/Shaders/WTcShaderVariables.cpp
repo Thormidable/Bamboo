@@ -26,7 +26,7 @@ void cShaderVariables::GetUniformLocations(uint32 liProgramID,cShader **lpShader
 {
 	delete []mpUniforms;
 	delete []mpUniformText;
-	
+
 	uint32 liCount;
 	uint32 liLoop;
 	uint32 liUni;
@@ -36,7 +36,7 @@ void cShaderVariables::GetUniformLocations(uint32 liProgramID,cShader **lpShader
 	{
 		miUniforms+=lpShader[liCount]->miUniforms;
 	}
-	
+
 	mpUniforms=new int32[miUniforms];
 	mpUniformText=new string[miUniforms];
  char Variable[256];
@@ -52,7 +52,7 @@ void cShaderVariables::GetUniformLocations(uint32 liProgramID,cShader **lpShader
   		mpUniforms[liOther]=glGetUniformLocation(liProgramID,Variable);
 		mpUniformText[liOther]=Variable;
   		if(mpUniforms[liOther]==-1) {trace("Error Getting Shader Variable " << Variable);}
-  		else printf("Program ID %u : Variable ID %i : %s\n",liProgramID,mpUniforms[liOther],Variable);
+  		else printf("Program ID %lu : Variable ID %li : %s\n",liProgramID,mpUniforms[liOther],Variable);
 		++liOther;
  	}
  }
@@ -67,7 +67,6 @@ void cShaderVariables::GetAttributeLocations(uint32 liProgramID,cShader **lpShad
 	uint32 liLoop;
 	uint32 liUni;
 	uint32 liOther;
-	int32 *lpTemp;
 	miAttributes=0;
 	for(liCount=0;liCount<liShaders;++liCount)
 	{
@@ -77,7 +76,7 @@ void cShaderVariables::GetAttributeLocations(uint32 liProgramID,cShader **lpShad
 	mpAttributes=new int32[miAttributes];
 	mpAttributeText=new string[miAttributes];
  char Variable[256];
- 
+
 char *Text;
  liOther=0;
  for(liLoop=0;liLoop<liShaders;++liLoop)
@@ -90,7 +89,7 @@ char *Text;
   		mpAttributes[liOther]=glGetAttribLocation(liProgramID,Variable);
 		mpAttributeText[liOther]=Variable;
   		if(mpAttributes[liOther]==-1) {trace("Error Getting Shader Variable " << Variable);}
-  		else printf("Program ID %u : Variable ID %i : %s\n",liProgramID,mpAttributes[liOther],Variable);
+  		else printf("Program ID %lu : Variable ID %li : %s\n",liProgramID,mpAttributes[liOther],Variable);
 		++liOther;
  	}
  }

@@ -14,8 +14,8 @@ class cParticle : public cParticleForGroup,  public cSignal
 public:
 	cParticle();
 	~cParticle();
-	
-	///This will set a cParticles Speed. 
+
+	///This will set a cParticles Speed.
 	void UpdateSpeed(float *lpTemp);
 	///This is the function that will update a cParticles Position. if WT_PARTICLE_HANDLER_UPDATE_PARTICLE_POSITIONS is true then cParticleHandler will do this automatically.
 	virtual void UpdatePos();
@@ -42,7 +42,7 @@ class cWindAndGravityParticle : public cParticleForGroup
  * These Particles have the code to be affected by the variables _WIND_X,_WIND_Y and _WIND_Z. UpdatePos() will account use the current Wind and Gravity settings to calculate the speed and position of each particle.
 */
 {
-	
+
 public:
 	void UpdatePos();
 	friend class cParticleHandler;
@@ -87,8 +87,10 @@ public:
 	void RenderToPainter();
 	void RenderPainter(uint8 liLevel);
 	void RenderPainter();
-	void Render();
+
+
+
+
 };
-	
+
 #endif
-	

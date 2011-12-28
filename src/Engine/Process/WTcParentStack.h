@@ -9,29 +9,29 @@ class cParentStack
 {
 
 private:
- vProcess *mpParent;
- cLinkedNode<vProcess> *mpParentNode;
- cLinkedList<vProcess> ChildStack;
- cLinkedNode<vProcess> *ChildCursor;
- 
+ cProcess *mpParent;
+ cLinkedNode<cProcess> *mpParentNode;
+ cLinkedList<cProcess> ChildStack;
+ cLinkedNode<cProcess> *ChildCursor;
+
 public:
   ///Constructor. The process lpChild is a pointer to the newly created process which will become a child of the current process.
- cParentStack(vProcess *lpChild);
+ cParentStack(cProcess *lpChild);
  ~cParentStack();
- //This will set the parent process of the vProcess that owns this Parent Stack.
- void SetParent(vProcess *lpPar);
- //Will add the vProcess lpChild as a child of the process that owns this Parent Stack.
- cLinkedNode<vProcess> *AddChild(vProcess *lpChild);
+ //This will set the parent process of the cProcess that owns this Parent Stack.
+ void SetParent(cProcess *lpPar);
+ //Will add the cProcess lpChild as a child of the process that owns this Parent Stack.
+ cLinkedNode<cProcess> *AddChild(cProcess *lpChild);
  //Will Remove the Child contained in lpNode as no longer a child of this process.
- void RemoveChild(cLinkedNode<vProcess> *lpNode);
+ void RemoveChild(cLinkedNode<cProcess> *lpNode);
  //This will go to every child of this process and remove their Parent pointer.
  void StripChildrensParent();
  //This will Clear the parent of the process which owns this parent stack.
  void ClearParent();
  ///Returns the parent for the process which owns this cParentStack.
- vProcess *Parent();
+ cProcess *Parent();
  ///Returns the next child for the process which owns this cParentStack.
- vProcess *Child();
+ cProcess *Child();
  ///Once a signal is identified as containing the TREE flag calling this will apply the Signal as appropriate down the tree.
  void Signal(SIGNAL lsSignal);
  ///Once a signal is identified as containing the TREE flag this will apply the Signal to all the Children of this cParentStack.

@@ -19,9 +19,9 @@ public:
 
  uint32 miFormat;
  char *mpMesh;
-  vMesh *mpMeshPoint;
+  cMesh *mpMeshPoint;
  char *mpTexture;
-  vTexture *mpTexturePoint;
+  cTexture *mpTexturePoint;
  uint32 miLevel;
  float *mpPosition;
  float *mpRotation;
@@ -39,9 +39,9 @@ public:
  void ReadIMF(ifstream &FileStream);
 
  /// This will return the Mesh for this object.
- vMesh *Mesh();
+ cMesh *Mesh();
 /// This will return the Texture for this object.
- vTexture *Texture();
+ cTexture *Texture();
 /// This will return the Spatial Size for this object.
  float GetSize();
 

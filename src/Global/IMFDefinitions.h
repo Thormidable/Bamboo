@@ -23,4 +23,7 @@
 #define IMF_MODEL_UVS 4
 #define IMF_MODEL_FACES 8
 
+#define IMF_FONT_CHARACTERS 93
+#define IMF_FONT_SCALE ((double)(1.0/IMF_FONT_CHARACTERS)-0.000001)
+
 #endif

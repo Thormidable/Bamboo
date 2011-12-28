@@ -1,8 +1,8 @@
 #ifndef __WTVLIGHT_H__
 #define __WTVLIGHT_H__
-/**
+/*
  A virtual class for cLight
-**/
+*/
 class vLight
 {
 

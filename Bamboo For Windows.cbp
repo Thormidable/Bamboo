@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="Windows\Debug\libBambooWin" prefix_auto="1" extension_auto="1" />
+				<Option output="Windows\Debug\libBambooWin_d" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj\Debug\" />
 				<Option type="2" />
@@ -15,14 +15,6 @@
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
-				<Linker>
-					<Add library="glew32s" />
-					<Add library="opengl32" />
-					<Add library="glu32" />
-					<Add library="gdi32" />
-					<Add library="winmm" />
-					<Add library="openal32" />
-				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="Windows\libBambooWin" prefix_auto="1" extension_auto="1" />
@@ -40,11 +32,13 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="..\..\Includes\OpenAL 1.1 SDK\include" />
-			<Add directory="..\..\Includes\boost_1_47_0" />
+			<Add directory="..\Includes\OpenAL 1.1 SDK\include" />
+			<Add directory="..\Includes\boost_1_47_0" />
+			<Add directory="..\Includes\GLEW\include" />
 		</Compiler>
 		<Linker>
-			<Add directory="..\..\Includes\OpenAL 1.1 SDK\libs\Win32" />
+			<Add directory="..\Includes\OpenAL 1.1 SDK\libs\Win32" />
+			<Add directory="..\Includes\GLEW\lib" />
 		</Linker>
 		<Unit filename="src\Audio\WTcAudioBuffer.cpp" />
 		<Unit filename="src\Audio\WTcAudioBuffer.h" />
@@ -65,6 +59,8 @@
 		<Unit filename="src\Camera\Nodes\WTcRenderNode.h" />
 		<Unit filename="src\Camera\Renderable\WTcBeamMesh.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcBeamMesh.h" />
+		<Unit filename="src\Camera\Renderable\WTcButton.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcButton.h" />
 		<Unit filename="src\Camera\Renderable\WTcImage.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcImage.h" />
 		<Unit filename="src\Camera\Renderable\WTcLandscape.cpp" />
@@ -98,7 +94,6 @@
 		<Unit filename="src\Engine\Process\WTcParentStack.h" />
 		<Unit filename="src\Engine\Process\WTcProcess.cpp" />
 		<Unit filename="src\Engine\Process\WTcProcess.h" />
-		<Unit filename="src\Engine\Process\WTvProcess.h" />
 		<Unit filename="src\Engine\WTKernel.cpp" />
 		<Unit filename="src\Engine\WTKernel.h" />
 		<Unit filename="src\Engine\WTcBase.cpp" />
@@ -180,6 +175,8 @@
 		<Unit filename="src\Maths\WTMath.h" />
 		<Unit filename="src\Maths\WTcCameraMatrix4.cpp" />
 		<Unit filename="src\Maths\WTcCameraMatrix4.h" />
+		<Unit filename="src\Maths\WTcColors.cpp" />
+		<Unit filename="src\Maths\WTcColors.h" />
 		<Unit filename="src\Maths\WTcMatrix4.cpp" />
 		<Unit filename="src\Maths\WTcMatrix4.h" />
 		<Unit filename="src\Maths\WTcMatrixStack.cpp" />
@@ -200,6 +197,7 @@
 		<Unit filename="src\Physics\WTcCollisionObject.cpp" />
 		<Unit filename="src\Physics\WTcCollisionObject.h" />
 		<Unit filename="src\WTDivWin.h" />
+		<Unit filename="src\WTOsBits.h" />
 		<Unit filename="src\Windows\EventHandler\WTcEventHandler.cpp" />
 		<Unit filename="src\Windows\EventHandler\WTcEventHandler.h" />
 		<Unit filename="src\Windows\EventHandler\WTcKeyStore.cpp" />
@@ -215,7 +213,6 @@
 		<Unit filename="src\Windows\WTcSync.h" />
 		<Unit filename="src\Windows\WTcWindow.cpp" />
 		<Unit filename="src\Windows\WTcWindow.h" />
-		<Unit filename="src\Windows\gl3.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

@@ -1,4 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1" href="$classc_face.html" title="This class will store data about faces for a 3D Mesh. This can be used for Models, Collision Meshes or any other object using 3D Faces. Includes code for loading and saving the object types to and from IMF Files. Uses cVertex and cPlane to store the data." alt="" coords="5,5,64,35"/>
-<area shape="rect" id="node3" href="$classc_full_face_data.html" title="This class is a cFace with expanded Functionality. Allows the user to check information about the fac..." alt="" coords="112,5,219,35"/>
-</map>

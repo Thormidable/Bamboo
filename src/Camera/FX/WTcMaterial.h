@@ -4,12 +4,12 @@
 /// A class to store material data for an object. Defines the 'reflectiveness' of the surface.
 class cMaterial
 {
- // The RGBA color for the specular reflection of the material. 
+ // The RGBA color for the specular reflection of the material.
  float mpSpecular[4];
  // The shininess of the material. set from 0 - 1.0f
  float mpShine[1];
- 
- 
+
+
  public:
 	/// Will create a new material object.
         cMaterial();

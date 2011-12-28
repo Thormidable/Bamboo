@@ -10,7 +10,7 @@ class cLightSpot
 
 /** \brief cLightHandler will control the OpenGL Lights. It will turn off lights not required or possible for different renderings to increase speed and circumvent the OpenGL limit of active lights.
  * OpenGL has a limited number of lights that can be used at any one time. This handler identifies the lights which will have the greatest effect on the current object and prepares the optimal selection
- * of lights for rendering the scene. 
+ * of lights for rendering the scene.
  */
 class cLightHandler
 {
@@ -29,11 +29,11 @@ public:
   static void SetupLights();
   ///This function will return a pointer to the current cLightHandler Object.
   static cLightHandler* Instance();
-  
+
   //Add a new vLight Object to the handler.
   cMinLN<vLight> *Add(vLight *lpNew);
 
- ///Will Prepare all the Lights for Rendering generally. 
+ ///Will Prepare all the Lights for Rendering generally.
  void PrepareLight();
  ///Will Prepare the Lights for Rendering a specific Object.
  void PrepareLight(cMatrix4 *mpObj);

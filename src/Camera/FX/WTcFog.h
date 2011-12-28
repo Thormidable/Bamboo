@@ -1,7 +1,7 @@
 #ifndef __WTCFOG_H__
 #define __WTCFOG_H__
 
-/**
+/*
 * \brief This class will create and control an OpenGL scenes fog effect.
 */
 class cFog
@@ -18,27 +18,27 @@ class cFog
  float mfStart;
  // The distance from the camera that the fog effect stops.
  float mfEnd;
- 
+
 public:
-       /// Creates a clear fog effect.
+      // Creates a clear fog effect.
        cFog();
-	/// Creates a new fog object between distance lfStart and lfEnd.
+	// Creates a new fog object between distance lfStart and lfEnd.
        cFog(float lfStart,float lfEnd);
-	/// Will set the RGBA color of the fog.
+	// Will set the RGBA color of the fog.
        void SetColor(float lfRed,float lfGreen,float lfBlue,float lfAlpha);
-	/// Will set the fog equation the fog effect will use. (GL_EXP, GL_EXP2, GL_LINEAR)
+	// Will set the fog equation the fog effect will use. (GL_EXP, GL_EXP2, GL_LINEAR)
        void SetMode(char ltMode);
-	/// Will set the effect the fog has on the screen colors. 1.0f is Opaque, 0.0f is completely transparent.
+	// Will set the effect the fog has on the screen colors. 1.0f is Opaque, 0.0f is completely transparent.
        void SetDensity(float lfDensity);
-	/// Will set the near and far distances, from the camera, of the fog effect.
+	// Will set the near and far distances, from the camera, of the fog effect.
        void SetRange(float lfStart,float lfEnd);
-	/// Will return whether the fog effect is on or off.
+	// Will return whether the fog effect is on or off.
        bool On();
-	/// Will set the fog effect on.
+	// Will set the fog effect on.
        void SetOn();
-	/// Will set the fog effect off.
+	// Will set the fog effect off.
        void SetOff();
-       
+
 };
 
 #endif

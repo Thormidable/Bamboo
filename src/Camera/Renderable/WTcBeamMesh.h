@@ -35,12 +35,11 @@ public:
 
 	void BufferBeam();
 	void RenderBeam();
-  
+
 	//Functions CAlled by cPainter or cRenerNode to Render this object.
 	void RenderPainter(uint8 liLevel);
 	void RenderToPainter();
-	void Render();
-	
+
 };
 
 

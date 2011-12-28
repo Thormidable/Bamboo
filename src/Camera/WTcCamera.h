@@ -12,7 +12,11 @@ class cCamera : public cCameraMatrix4
 {
 protected:
 
+/// This object builds and controls the Perspective Matrix for the system.
 cPerspectiveMatrix mmPerspective;
+
+///This seperates out the Perspective and Camera Matrix from the main Matrix Stack
+cMatrix4 mmPerspectiveCameraMatrix;
 
 // This stores the current instance of cCamera. This means that only one cCamera object will exist at any one time. This is returned by cCamera::Instance(). Future expansions will allow multiple cCamera objects.
 static cCamera *mpInstance;
@@ -28,15 +32,16 @@ static cCamera *mpInstance;
 public:
 	/// This is cCameras destructor and will delete the entire scene graph stored in mpRenderList.
 	~cCamera();
-	/**
-	* This function will return a pointer to the current cCamera object.
-	*/
+
+	/// This function will return a pointer to the current cCamera object. This can be accessed by calling tjhe macro _CAMERA.
 	static cCamera *Instance();
 	/// This function will automatically remove all cRenderObjects from the scene graph pointed to by mpRenderList.
 	void RemoveAll();
 
-	/// This function will render the scene graph to the screen. This is used if WT_USE_PAINTER is set to false.
+	/// This function will render the scene graph to the screen. It will build a list of objects to be rendered. It will then sort, process and render them for optimal performance.
 	virtual void Render();
+	///This function will update cache matrices and other important background information but will not render.
+	virtual void UpdateNotRender();
 
 	/**
 	* \brief This function will set the color the camera will clear the screen to every frame.
@@ -48,6 +53,16 @@ public:
 	* while lfAlpha sets the translucency of the screen clear - this can be used to leave screen echos.
 	*/
 	void SetClearColor(float lfRed,float lfGreen,float lfBlue,float lfAlpha);
+	/// See cCamera::SetClearColor();
+	void SetClearColor(float *lpColor);
+	/// See cCamera::SetClearColor();
+	void SetClearColor(cRGBA &lpColor);
+	/// See cCamera::SetClearColor();
+	void SetClearColor(cRGB &lpColor);
+	/// See cCamera::SetClearColor();
+	void SetClearColor(cRGBA *lpColor);
+	/// See cCamera::SetClearColor();
+	void SetClearColor(cRGB *lpColor);
 
 	/// This creates the camera model view matrix using an Orthographic algorithm.
 	void UpdateProjectionMatrix();
@@ -68,29 +83,29 @@ public:
 	/// This will set the Furthest distance cCamera will render polygons.
 	void Far(float lfF);
 
+	///This will set the width of the closest viewing space.
 	void Width(float lfZoom);
+	///This will return the width of the closest viewing space.
 	float Width();
 
+	///This will set the height of the closest viewing space.
 	void Height(float lfHeight);
+	///This will return the height of the closest viewing space.
 	float Height();
 
+	///This will set the ratio of the closest viewing space (Height will equal Width * Ratio).
 	void Ratio(float lfRatio);
+	///This will return the ratio of the closest viewing space.
 	float Ratio();
 
 
 	// This will set the Current GL Matrix to be equivalent to the Camera matrix (essentially produces a Global Positioning Matrix).
 	void ResetGLMatrix();
 
+	///This will return the current perspective matrix
 	float *Perspective();
+
+	float *TotalPositionMatrix();
 };
 
-
-class cCameraPainter : public cCamera
-{
-	cCameraPainter();
-public:
-	/// This function will render the scene graph to cPainter instead of the screen.  This is used if WT_USE_PAINTER is set to true.
-	void Render();
-	friend class cCamera;
-};
 #endif

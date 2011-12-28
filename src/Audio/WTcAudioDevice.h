@@ -10,7 +10,7 @@ class cAudioDevice
  ALCdevice *mpDevice;
  // A pointer to the current OpenAL Context.
  ALCcontext *mpContext;
- 
+
  static cAudioDevice *mpInstance;
 public:
 	/// Constructor will start and initialise an OpenAL system.

@@ -1,4 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classcm_landscape.html" title="This will store the data for a landscape mesh. The data can be rendered through cLandscape." alt="" coords="27,83,128,112"/>
-<area shape="rect" id="node5" href="$classc_landscape_mesh_file.html" title="This is the class which the Landscape File is stored in. This can be passed to any of cmLandscape..." alt="" coords="5,160,149,189"/>
-</map>

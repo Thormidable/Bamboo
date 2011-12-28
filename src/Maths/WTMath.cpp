@@ -1,5 +1,5 @@
 #include "../WTDivWin.h"
-  
+
 double c2DVf::Angle()
 {
  return atan2(v[0],v[1]);
@@ -142,7 +142,7 @@ float c3DVi::Dot(c3DVi lpValue)
 
 float c3DVf::Dot(c3DVf lpValue)
 {
-	return v[0]*lpValue.v[0]+v[1]*lpValue.v[1]+v[2]*lpValue.v[2];	
+	return v[0]*lpValue.v[0]+v[1]*lpValue.v[1]+v[2]*lpValue.v[2];
 }
 
 c4DVf *c4DVf::operator=(c4DVf *lpValue)
@@ -150,10 +150,10 @@ c4DVf *c4DVf::operator=(c4DVf *lpValue)
  		memcpy(v,lpValue->v,sizeof(float)*4);
 		return lpValue;
 }
-c4DVf c4DVf::operator=(c4DVf lpValue)
+c4DVf &c4DVf::operator=(c4DVf &lpValue)
 {
  		memcpy(v,lpValue.v,sizeof(float)*4);
-		return lpValue;
+		return *this;
 
 }
 
@@ -163,7 +163,7 @@ float *c4DVf::operator=(float *lpValue)
  return lpValue;
 }
 
-c4DVf c4DVf::operator+=(c4DVf lpValue)
+c4DVf &c4DVf::operator+=(c4DVf &lpValue)
 {
  v[0]+=lpValue.v[0];
  v[1]+=lpValue.v[1];
@@ -204,4 +204,100 @@ float &c4DVf::operator[](uint32 liPos){return v[liPos];};
 	void c1DVf::Normalise(){v=1.0f;};
 
 	float c1DVf::Magnatude(){return v;};
+
+
+c4DVf::c4DVf(float lf0,float lf1,float lf2,float lf3)
+{
+ v[0]=lf0;
+ v[1]=lf1;
+ v[2]=lf2;
+ v[3]=lf3;
+}
+
+c4DVf::c4DVf(float *lf0)
+{
+    memcpy(v,lf0,sizeof(float)*4);
+}
+
+c3DVf::c3DVf(float lf0,float lf1,float lf2)
+{
+ v[0]=lf0;
+ v[1]=lf1;
+ v[2]=lf2;
+}
+
+c3DVf::c3DVf(float *lf0)
+{
+    memcpy(v,lf0,sizeof(float)*3);
+}
+
+
+c4DVf *c4DVf::operator=(cRGBA *lpValue)
+{
+   memcpy(v,lpValue->Color(),sizeof(float)*4);
+    return this;
+}
+
+c4DVf &c4DVf::operator=(cRGBA &lpValue)
+{
+   memcpy(v,lpValue.Color(),sizeof(float)*4);
+   return *this;
+}
+
+c4DVf *c4DVf::operator=(cRGB *lpValue)
+{
+       memcpy(v,lpValue->Color(),sizeof(float)*3);
+       v[3]=1.0f;
+    return this;
+}
+c4DVf &c4DVf::operator=(cRGB &lpValue)
+{
+       memcpy(v,lpValue.Color(),sizeof(float)*3);
+       v[3]=1.0f;
+   return *this;
+
+}
+
+c3DVf *c3DVf::operator=(cRGB *lpValue)
+{
+ memcpy(v,lpValue->Color(),sizeof(float)*3);
+ return this;
+}
+
+c3DVf &c3DVf::operator=(cRGB &lpValue)
+{
+ memcpy(v,lpValue.Color(),sizeof(float)*3);
+ return *this;
+}
+
+
+	float c2DVf::X(){return v[0];};
+	float c2DVf::Y(){return v[1];};
+	float c3DVf::X(){return v[0];};
+	float c3DVf::Y(){return v[1];};
+	float c3DVf::Z(){return v[2];};
+	float c4DVf::X(){return v[0];};
+	float c4DVf::Y(){return v[1];};
+	float c4DVf::Z(){return v[2];};
+	float c4DVf::W(){return v[3];};
+
+	int c2DVi::X(){return v[0];};
+	int c2DVi::Y(){return v[1];};
+	int c3DVi::X(){return v[0];};
+	int c3DVi::Y(){return v[1];};
+	int c3DVi::Z(){return v[2];};
+
+	
+	void c2DVf::X(float lfX){v[0]=lfX;};
+	void c2DVf::Y(float lfY){v[1]=lfY;};
+
+	void c3DVf::X(float lfX){v[0]=lfX;};
+	void c3DVf::Y(float lfY){v[1]=lfY;};
+	void c3DVf::Z(float lfZ){v[2]=lfZ;};
+
+	void c4DVf::X(float lfX){v[0]=lfX;};
+	void c4DVf::Y(float lfY){v[1]=lfY;};
+	void c4DVf::Z(float lfZ){v[2]=lfZ;};
+	void c4DVf::W(float lfW){v[3]=lfW;};
+
 	

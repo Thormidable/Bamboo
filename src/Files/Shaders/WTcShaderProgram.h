@@ -8,7 +8,7 @@
 *The cShaderProgram() can be turned on with the use function.
 
 */
-class cShaderProgram : public cFile, public vShaderProgram
+class cShaderProgram : public cFile
 {
 ///This stores the cShaderPrograms() OpenGL ID;
 uint32 miProgramID;

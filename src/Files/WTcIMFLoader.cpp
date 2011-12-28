@@ -75,8 +75,8 @@ void cIMF::LoadIMF(const char *lpPath)
 			FileStream.read((char *) &(lpTexture.miWidth),sizeof(uint32));
 			FileStream.read((char *) &(lpTexture.miDepth),sizeof(uint32));
 
-			lpTexture.mpData=new uint8[64*lpTexture.miWidth*lpTexture.miWidth*lpTexture.miDepth>>3];
-			FileStream.read((char *) lpTexture.mpData,64*lpTexture.miWidth*lpTexture.miWidth*lpTexture.miDepth>>3);
+			lpTexture.mpData=new uint8[IMF_FONT_CHARACTERS*lpTexture.miWidth*lpTexture.miWidth*lpTexture.miDepth>>3];
+			FileStream.read((char *) lpTexture.mpData,IMF_FONT_CHARACTERS*lpTexture.miWidth*lpTexture.miWidth*lpTexture.miDepth>>3);
 
 			new cFont(&lpTexture);
                 }break;

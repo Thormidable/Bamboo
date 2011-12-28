@@ -14,7 +14,7 @@ public:
 
  virtual uint8 *Data()=0;
  virtual uint32 TextureNumber()=0;
- 
+
 // virtual void Load()=0;
 
 };

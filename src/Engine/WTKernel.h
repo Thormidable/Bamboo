@@ -8,8 +8,8 @@
 using namespace std;
 /**
 * \brief Kernel Object. Handles Processes.
-* Tracks, runs and deletes current processes. Has complete control over every cProcess object. Will run all awake alive processes 
-* every process cycle, will delete dead processes. Also controls the activation of rendering frames and handling interactions with the 
+* Tracks, runs and deletes current processes. Has complete control over every cProcess object. Will run all awake alive processes
+* every process cycle, will delete dead processes. Also controls the activation of rendering frames and handling interactions with the
 * operating system.
 */
 class cKernel
@@ -17,16 +17,16 @@ class cKernel
  // Flag to Tell when Program is exiting
  bool mbKillProgram;
  // List of Processes currently existing in the programs data space.
- cLinkedList<vProcess> *mpProcess;
+ cLinkedList<cProcess> *mpProcess;
  // Currently running process.
- cLinkedNode<vProcess> *mpCursor;
+ cLinkedNode<cProcess> *mpCursor;
  cKernel();
- 
+
  // Pointer holding current Kernal Instance.
  static cKernel *mpInstance;
 
  // Variable containing current Search position in the process list.
- static cLinkedNode<vProcess> *mpSearch;
+ static cLinkedNode<cProcess> *mpSearch;
 
  // current Tick Frequency
  float mfTickFreq;
@@ -41,7 +41,7 @@ public:
  ~cKernel();
  // Will update the entire system by a single frame. Updates Processes, Rendering and Events
  void Update();
- 
+
 /*
  * \brief Will add the process pointed to by lpNew to the process list.
  * \param lpNew Pointer to newly created process.
@@ -50,7 +50,7 @@ public:
  * The constructor of a cProcess object will call this function automatically and hand itself as the parameter so
  * it will be updated every frame.
  */
- cLinkedNode<vProcess> *Add(vProcess *lpNew);
+ cLinkedNode<cProcess> *Add(cProcess *lpNew);
  /*
  * \brief Will remove the process pointed to by lpOld from the process list.
  * \param lpOld Pointer to process requiring removal from the process list.
@@ -59,20 +59,20 @@ public:
  * The Destructor of a cProcess object, will automatically call this function and hand itself as the parameter so
  * it can be deleted and will stop being updated every frame.
  */
- void Remove(cLinkedNode<vProcess> *lpOld);
+ void Remove(cLinkedNode<cProcess> *lpOld);
  /// Will Delete all the processes in the current process list. This will effectively end the program.
  void DeleteAll();
 
 /**
 * \brief This Function will search for a process of either tType OR a type which has uses the type tType as a base type.
-* \param mpType is a pointer of the type (or base type) of the desired process.
+* \tparam tType is the type of the desired process.
 * \return Will return a pointer to a process currently in the process list of the correct type.
 *
-* This Function takes the type of the pointer handed to the function and will search for a process which is of type tType or
+* This Function will search for a process which is of type tType or
 * inherits tType. Can be used to find processes of a certain type or genus. Each call of this function will continue
-* searching from the position stored in mpSearch. Between searches for processes of different types 
+* searching from the position stored in mpSearch. Between searches for processes of different types
 * use the function ResetFindProcess().
-* \code 
+* \code
 	cGunShip *mpGunShip;
 	cBattleShip *mpBattleShip;
 

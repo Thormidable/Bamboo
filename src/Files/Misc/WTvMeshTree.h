@@ -5,7 +5,7 @@
 *\brief This is a virtual class for inherited by cMeshTree().
 
 */
-class vMeshTree : public cMesh //public cFile, 
+class vMeshTree : public cMesh //public cFile,
 {
 public:
  virtual ~vMeshTree(){};
