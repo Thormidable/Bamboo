@@ -23,6 +23,21 @@
     cRGBA *cRGBA::operator=(cRGBA *lpOther){ memcpy(color,lpOther->Color(),sizeof(float)*4); return this;};
     float &cRGBA::operator[](uint32 liPos){return color[liPos];};
 
+void cRGBA::Set(float lfR,float lfG,float lfB,float lfA)
+{
+ color[0]=lfR;
+ color[1]=lfG;
+ color[2]=lfB;
+ color[3]=lfA;
+}
+
+void cRGB::Set(float lfR,float lfG,float lfB)
+{
+ color[0]=lfR;
+ color[1]=lfG;
+ color[2]=lfB;
+}
+
 cRGB::cRGB(float lfR,float lfG,float lfB)
 {
     color[0]=lfR;

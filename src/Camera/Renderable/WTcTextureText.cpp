@@ -8,21 +8,22 @@ void cText::RenderPainter(uint8 liLevel)
  {
   SetShaderVariables();
   //mpFont->BindTexture();
-
+ float lfHeight=mfHeight*0.5f;
  short liCount;
   for(liCount=0;liCount<mpString.length();++liCount)
   {
    float liRange;
+
      if(mpString[liCount]!=32)
      {
 
         liRange=IMF_FONT_SCALE*(mpFont->Character(mpString[liCount])); //(or /64)
           glBegin(GL_QUADS);
           glNormal3f(0.0f,0.0f,1.0f);
-          glTexCoord2f(1,liRange+IMF_FONT_SCALE);   glVertex3f(-mfWidth*(2*liCount+1),mfHeight,3.1f);
-          glTexCoord2f(1,liRange);            glVertex3f(-mfWidth*(2*liCount+1),-mfHeight,3.1f);
-          glTexCoord2f(0,liRange);            glVertex3f(-mfWidth*(2*liCount-1),-mfHeight,3.1f);
-          glTexCoord2f(0,liRange+IMF_FONT_SCALE);   glVertex3f(-mfWidth*(2*liCount-1),mfHeight,3.1f);
+          glTexCoord2f(1,liRange+IMF_FONT_SCALE);   glVertex3f(-mfWidth*(liCount+0.5f),lfHeight,3.1f);
+          glTexCoord2f(1,liRange);            glVertex3f(-mfWidth*(liCount+0.5f),-lfHeight,3.1f);
+          glTexCoord2f(0,liRange);            glVertex3f(-mfWidth*(liCount-0.5f),-lfHeight,3.1f);
+          glTexCoord2f(0,liRange+IMF_FONT_SCALE);   glVertex3f(-mfWidth*(liCount-0.5f),lfHeight,3.1f);
 
           glEnd();
 
@@ -80,4 +81,5 @@ void cText::Font(cFont *lpFont)
   mpFont=lpFont;
 
 }
+
 

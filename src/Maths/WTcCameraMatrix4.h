@@ -15,11 +15,14 @@
 class cCameraMatrix4
 {
  friend class cMatrix4;
-
+protected:
  // This stores the 4x4 matrix of floats that is the rotation matrix.
  float mpData[16];
  // This is a static cCameraMatrix4 to store data for operations.
  static cCameraMatrix4 mpTemp;
+
+ // Bah Hacky Hacky HAcky Hack. Suk.
+ float mpCameraMatrix[16];
  // This is a static 4x4 matrix to allow fast zeroing of this 4x4 matrix.
  static float mpZero[];
  // This is a static 4x4 matrix to allow fast restoration of this matrix to an identity matrix.
@@ -230,7 +233,12 @@ uint32 Distance2D(float *lpOther);
  /// This will return the determinant of this matrix.
  float Determinant();
 
+float *ConstructCameraMatrix();
+
  void Display();
+
+     ///This will return the pointer to the Corrected Camera Matrix.
+	float *CameraMatrix();
 };
 
 

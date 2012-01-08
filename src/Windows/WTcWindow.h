@@ -10,19 +10,22 @@
 */
 class cWindow
 {
-
+    uint8 miBorderThickness;
+    uint8 miTitleBarHeight;
+    uint16 miRenderWidth;
+    uint16 miRenderHeight;
 	// This is the window current X position on the desktop in pixels.
-	int miX;
+	uint16 miX;
 	// This is the windows current Y position on the desktop in pixels.
-	int miY;
+	uint16 miY;
 	// This is the windows current width in pixels.
-	int miWidth;
+	uint16 miWidth;
 	// This is the windows current height in pixels.
-	int miHeight;
+	uint16 miHeight;
 	//Inverse value for window width.
-	float miInvWidth;
+	float32 miInvWidth;
 	//Inverse value for window width.
-	float miInvHeight;
+	float32 miInvHeight;
 		// This is a flag telling the system if the window has been resized and so if the context needs updating.
           bool Resized;
 	// This is a flag telling the system if the window has been moved.
@@ -31,7 +34,7 @@ class cWindow
           bool Hidden;
 
 	// This is a float storing the ratio of the window to avoid distorting the view.
-          float mfRatio;
+          float32 mfRatio;
 
 public:
 // This is a flag telling the system that the window requires repainting (updating)
@@ -50,7 +53,7 @@ public:
 
 #if WT_OS_TYPE==OS_LINUX
 	Display *lpDisplay;
-	static int DisplayAttributes[5];
+	static int32 DisplayAttributes[5];
 	XVisualInfo* VisualInfo;
 	GLXContext glContext;
 	XSetWindowAttributes WindowAttributes;
@@ -69,17 +72,17 @@ public:
           bool mbQuit;
 
 	/// This is the window current X position on the desktop in pixels.
-	int X();
+	uint16 X();
 	/// This is the windows current Y position on the desktop in pixels.
-	int Y();
+	uint16 Y();
 	/// This is the windows current width in pixels.
-	int Width();
+	uint16 Width();
 	/// This is the windows current height in pixels.
-	int Height();
+	uint16 Height();
 	///Inverse value for window width.
-	float InvWidth();
+	float32 InvWidth();
 	///Inverse value for window width.
-	float InvHeight();
+	float32 InvHeight();
 
 	/// This will return the Windows Width Height Ratio.
 	float Ratio();
@@ -113,6 +116,10 @@ public:
 	// This will handle changes to the window (from the OS).
 	void HandleChanges();
 
+    void FindRenderArea();
+
+    uint16 RenderAreaWidth();
+    uint16 RenderAreaHeight();
     friend class cCamera;
     friend class cCameraPainter;
 

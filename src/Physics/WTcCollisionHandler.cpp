@@ -162,7 +162,7 @@ uint32 cCollisionHandlerBSP::FindSlot(float *lpPos)
 {
 
 uint32 liCount;
-uint32 liCount2;
+uint32 liCount2=0;
 float lfPos;
 uint32 liPosition=0;
 uint32 liRound;
@@ -172,10 +172,13 @@ for(liCount=0;liCount<WT_COLLISION_HANDLER_DIMENSIONS;++liCount)
  lfPos=lpPos[mpAxisOrder[liCount]]-mfCentre[mpAxisOrder[liCount]]+(WT_COLLISION_HANDLER_SIZE*WT_COLLISION_SPACE_SIZE/2);
  lfPos=lfPos*WT_COLLISION_SPACE_SIZE_INV;
 
-if(lfPos<0.0f) liRound=0;
+if(lfPos<0.0f){liRound=0;}
  else
-   if(lfPos>WT_COLLISION_HANDLER_SIZE) liRound=WT_COLLISION_HANDLER_SIZE;
-    else liRound=lfPos;
+ {
+
+   if(lfPos>WT_COLLISION_HANDLER_SIZE) {liRound=WT_COLLISION_HANDLER_SIZE;}
+    else {liRound=lfPos;}
+ }
 
   if(!liCount) liCount2=1;
   else  liCount2*=WT_COLLISION_HANDLER_SIZE;
@@ -208,12 +211,3 @@ uint32 liCount;
 
 }
 
-
-
-cCollisionObject *cCollisionHandler::NextCollision(cCollisionObject *lpObj,uint32 lpType)
-{
-	(void) lpObj;
-	(void) lpType;
-uint32 SERIOUSLY_FILL_THIS_OUT;
-return 0;
-}

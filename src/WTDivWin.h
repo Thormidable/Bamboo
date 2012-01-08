@@ -64,7 +64,7 @@
 #include "./Global/GlobalPointers.h"
 #include "./Global/log.h"
 #include "./Global/CException.h"
-
+#include "./PTL/WTcSingleton.h"
 #include "./PTL/WTRadix.h"
 #include "./Windows/WTcSync.h"
 
@@ -105,7 +105,7 @@
 #include "./Files/Meshes/MeshClasses/WTcPolygon.h"
 #include "./Files/Meshes/MeshClasses/WTcCluster.h"
 
-
+#include "./Physics/WTcCollisionBase.h"
 #include "./Files/CollisionMeshes/WTvCollisionData.h"
 //#include "./Files/CollisionMeshes/WTcCollisionMesh.h"
 
@@ -2147,7 +2147,7 @@
  *
  * Media Types Supported:\n
  * Shader Code:\n
- *	.shd			(text files containing the shader code)\n
+ *	.shd			(text files containing GLSL (GL Shader Language) shader code)\n
  * Model Files:\n
  *	.x\n
  *	.obj\n
@@ -2162,16 +2162,193 @@
  *	2D Textures\n
  *	Fonts 			(are composed of 64 vertical characters, with equal width and height)\n
  *	Landscape Height Maps 	(Produces a map with a polygon per pixel in the image, with RGB(0,0,0) being no height and RGB(1,1,1) being maximum terrain height)\n
+ * Sound Files: \n
+ *  .wav\n
+ * Sound Files can be converted into:\n
+ *  Audio Data files\n
  * \n
- * User Generated Media Types:\n
- * All data in these types is entered by the user into the IMF Compiler and the files are produced from that data. To activate them, insert the desired media type instead of a filename, in the add file menu.\n
- * * Shader Programs:\n
- *	Insert 'Shader Program' as file name.\n
- * Model Lists:\n
- *	Insert 'Model List' as file name.\n
- * Render Trees:\n
- *	Insert 'Render Tree' as file name.\n
- *
+ * \subsection IMFUse Using the IMF Handler :
+ * The IMF Handler has a graphical interface to ease control of it.
+ * The large list box on the left of the GUI lists all the references of objects in the file.
+ * Clicking on an item in the list will display the objects information in the middle section of the GUI.
+ * On the right are the settings and controls for the IMF Handler.
+ * \subsection IMFControls Using the IMF Handler Controls :
+ * The "Add Media File" button :\n
+ * Clicking the "Add Media File" button will open a file dialog. Selecting a file will load it into the current IMF.
+ * The IMF Handler will then ask for a string reference to identify the media file in the game engine.
+ * The files can be filtered based on types. Only types supported by the IMF Handler will be displayed.
+ * When the file is loaded it will use the current settings on the GUI.
+ * This means settings should be set before trying to add a new media file.
+ * These settings determine what type of internal format the file will be loaded into.
+ * The specifics of loading each file type will be listed in the section for the appropriate file types. \n
+ * The "Add Shader Program" button :\n
+ * Shader Programs are not loaded from a file, but generated in the IMF Handler itself.
+ * The "Add Shader Program" button will ask for a string reference to identify the shader program.
+ * It will then create a new Shader Program in the current Media file.
+ * This can be modified by following the instructions in the Shader Program section. \n
+ * The "Add Render Tree" button :\n
+ * This currently doesn't operate. This will be enabled in future versions to create fixed trees of render objects. \n
+ * The "Save IMF As..." button :\n
+ * Clicking the "Save IMF As..." button will save the current IMF. It will create a dialog to ask for the file name to use.
+ * This will write all the objects and references currently loaded into an IMF file.
+ * You do not need to add '.imf' to the end of the file name. The files can then be loaded by Bamboo. \n
+ * The "Remove Media" button :\n
+ * The "Remove media" button will remove a single selected media item from the list. Select the item from the Reference List and then click the "Remove Media" button.
+ * The "Clear File" button :\n
+ * The "Clear File" button will remove all the items from the IMF File. Essentially this will clear the current IMF file and create a new empty file. \n
+ * The "Quit" button :\n
+ * The "Quit" button will quit the program. It will not save the IMF. All changes to the file will be lost.
+ * \subsection IMFSettings IMF Handler Settings :
+ * The Handler Settings section can be found in the top right of the GUI. \n
+ * "Load Model Files As..." : \n
+ * This section has two check boxes. If the "Renderable Object" check box is ticked any model file will be converted into a Renderable mesh.
+ * If the "Collision Objects" check box is ticked any model file will be converted into a collision mesh. In both cases, the IMF Handler will require a reference for the generated mesh.
+ * If both boxes are ticked both will be generated. The Renderable Mesh will be generated first and will require its reference first. \n
+ * "Load Image Files As..." : \n
+ * This section has two radio boxes. Only one can ticked at any time.
+ * While the "Textures" radio button is ticked, Image files will be converted into textures.
+ * Textures are images that can be glued onto 3D models to texture their surface.
+ * While the "Height Maps" radio button is ticked, Image files will be converted into a Landscape height map.
+ * The lightness of each pixel represents the height of the landscapes vertex.
+ * RGB  = 0,0,0 is the lowest point on the height map, RGB = 255,255,255 being the highest point on the height map.
+ * "Load Shaders As..." : \n
+ * The "Load Shaders As..." section has three radio buttons. Only one can be selected at any time.
+ * While the "Vertex Shaders" radio button is ticked any shader files will be loaded, and processed as Vertex shaders.
+ * This means they will operate on each vertex. They can receive Uniform or Attribute variables. They can produce varying values for passing to fragment shaders.
+ * While the "Fragment Shaders" radio button is ticked and shader files will be loaded, and processes as Fragment shaders.
+ * This means they will operate on each fragment. They can receive Uniform and varying variables. Attributes cannot be accessed by fragment shaders.
+ * Varying variables which have been produced by a vertex shader can be accessed by a Fragment shader.
+ * The varying values are interpolated from the varying values created by the verteces.
+ * Currently the "Geometric Shaders" radio button cannot be ticked.
+ * "Set Font Resolution..." : \n
+ * The "Set Font Resolution..." value is the width and height of font characters that will be generated.
+ * When true type font files are loaded into Bamboo, they are rendered into character textures as OpenGL is optimised for rendering textures rather than true type fonts.
+ * For optimal performance these characters are restricted to multiples of 8.
+ * The larger the character size the clearer the characters will be, however the larger the files generated will be.
+ * \subsection IMFTypes Specifics of media types :
+ * General Media Information : \n
+ * All media will require a reference to allow it to be identified in Bamboo. This is a string.
+ * The IMF Handler will automatically assign it a new reference string, but this should be set as a descriptive string by the user.
+ * This can be changed for all media types by selecting the media files reference from the Reference List on the left of the GUI
+ * and typing a new reference ino the box labelled "Reference:" in the middle section of the GUI. This will change the medias reference. \n
+ * Selecting a file from the Reference List on the left will also configure the middle section of the GUI to display settings controls and data relating to the file selected.\n
+ * Model Meshes : \n
+ * When a Models reference is selected in the references list.
+ * It will configure the middle section of the GUI to display the models.
+ * It will show the list of Verteces, Normals, UV Co-ordinates and Vertex Indices requried to generate the triangulated faces.
+ * All faces are triangulated when compiled to optimise performance in OpenGL. \n
+ * Collision Meshes : \n
+ * A Collision Mesh cannot have any concave faces. Any concave faces (or holes in the surface) will lead to unexpected collision events.
+ * Concave faces will mean some collisions which should collide are missed. Conversely holes will catch collisions which do not exist.
+ * It also needs to have a minimal number of faces to define the boundaries of the object it is representing.
+ * Accuracy of collision meshes is less important than speed of calculations. The system will optimise out any polygon that will statistically have a minimal chance of affecting whether a collision is detected or not.
+ * Traditionally Collision Meshes have 10 - 30 polygons, but obviously the number required depends on the complexity of the model being represented. \n
+ * When a collision mesh is selected from the Reference List it will display the collision meshes critical data. A collision Mesh is actually compiled into two seperate data sets.
+ * A set of verteces and a set of polygons. A vertex has three positions representing the X,Y and Z co-ordiantes of the vertex.
+ * A Plane is composed of four values.
+ * Three values for multiplying with vertex co-ordinates to generate a distance from the origin perpendicular to the plane.
+ * The fourth value is the planes distance from the origin. This makes it quick to calculate if any point in the same co-ordinate system is above or beneath the plane.
+ * Texture Images : \n
+ * Textures should have a width and height which is a power of 2 (2,4,8,16,32,64...).
+ * This will make UV mapping more accurate and avoid the texture being padded by the graphics card.
+ * The larger the texture the larger the file generated, but the resulting image will be clearer at large magnifications.
+ * OpenGL will automatically generate mip maps for rendering the image at lower magnifications, so only the largest texture resolution desired need be compiled.
+ * When selected from the reference list the IMF Handler will display the width, height and color depth of the texture loaded.
+ * Height Maps : \n
+ * Landscapes are created from a square matrix of polygons. Each pixel in the image used to generate a height map will create a vertex.
+ * This means the landscape generated will have a number of verteces across equal to the width of the image in pixels.
+ * The landscape will have a number of verteces along equal to the height of the image in pixels.
+ * This means the number of polygons across and along are one less than the images width and height.
+ * The height of each vertex is determined by the lightness of its pixel.
+ * RGB = 0,0,0 is the lowest point on the height map, RGB = 255,255,255 being the highest point on the height map.
+ * When a Height Map is selected from the reference list the IMF Handler will display the dimensions of the height map generated.
+ * It will also update the GUI with some settings specific to the landscape selected. Changing the values will only update the selected landscape.
+ * - The value labelled "Tile X Size" is the distance in the X dimension between each vertex in the landscape.
+ * - The value labelled "Tile Z Size" is the distance in the Z dimension between each vertex in the landscape.
+ * - The value labelled "Height Range" is the value that the Y dimension of a vertex will be for a pixel with RGB = 255,255,255.
+ * This sets the highest point that is possible in the landscape.
+ * - The "Gradient Factor" is a 'skewing' effect. With verteces which are the same distance apart the gradient of any plane is determined solely by the height difference between the verteces used to generate them.
+ * This means that a vertical plane is impossible.
+ * The gradient factor determines how much verteces can move towards each other based on the height difference in the verteces.
+ * A gradient factor of one can produce a vertical plane from sufficiently spread verteces.
+ * Essentially this makes the landscape less rolling based on the range of 0 to 1.
+ * Every time the gradient effect is applied it is irreversable and stacks with any other gradient factor applied. To apply the gradient effect, click the "Apply Gradient" button.
+ * - The "Apply Gradient" button will apply the currently selected gradient factor to the landscape.
+ * .
+ * Shader Files : \n
+ * Shader Files are text files. Shaders are simply programs which are performed by the graphics card. Many shaders are available on the internet.
+ * The GLSL (GL Shading Language) is similar to C but with extra variable types, defined variables and values specific to rendering images.
+ * There are three types of Shader program. Vertex, Fragment and Geometric. Currently Geometic is not supported. Shaders are combined into Shader Programs.
+ * A shader program must have at least one vertex shader and one fragment shader. Geometry shaders are optional.
+ * Vertex Shaders control the vertices that make up a mesh.
+ * They can change the position of the verteces, values of different properties at the vertices (which are linearly interpolated across a polygons face). \n
+ * Bamboo Offers a selction of useful 'positioning matrices' mmGlobal , mmCamera , mmProjection , mmCombined. \n
+ * It will pass the objects Global Position Matrix in to a mat4 called mmGlobal.
+ * \code uniform mat4 mmGlobal;
+ * \endcode
+ * mmCamera is just the Camera Matrix. This is the Cameras Position and Rotation
+ * \code uniform mat4 mmCamera;
+ * \endcode
+ * mmProjection is just the Projection Matrix. This is the function to map 3D co-oridinates to the screen. Essentially it controls Perspective.
+ * \code uniform mat4 mmProjection;
+ * \endcode
+ * mmCombined is the Camera and Projection Matrices multiplied together.
+ * \code uniform mat4 mmCombined;
+ * \endcode
+ * These should be used to find the position of each vertex, there are several common ways to use the matrices (They should be used to find an objects position). The order of Matrix multiplications do matter. Using mmCombined is much more efficient but some shaders will want to use the camera and Projection matrices seperately.
+ * \code
+ * gl_Position=mmCombined*mmGlobal*gl_Vertex;
+ * gl_Position=mmProjection*mmCamera*mmGlobal*gl_Vertex;
+ * \endcode
+ * For 2D Objects only the mmProjection and mmGlobal are passed. The mmCamera Matrix will always be an identity matrix for 2D objects.
+ * Fragment Shaders control the render color of individual pixels. The Vertex shader is run once for every vertex in the model.
+ * The Fragment shader is run once for every pixel on the screen where the model is visible.
+ * A Geometry Shader (GS) is a Shader program that governs the processing of primitives.
+ * It happens after primitive assembly, as an additional optional step in that part of the pipeline.
+ * A GS can create new primitives, unlike vertex shaders, which are limited to a 1:1 input to output ratio.
+ * A GS can also do layered rendering; this means that the GS can specifically say that a primitive is to be rendered to a particular layer of the framebuffer.
+ * GS will be enabled in a later version of Bamboo. \n
+ * <b> One requirement is that attribute and uniform variables are declared individually on their own line. This is a requirement of the IMF Handler rather than GLSL. </b> \n
+ * When a shader is selected from the Reference List it will modify the GUI to display the Shader File display.
+ * This gives the option to change the type of shader that the currently selected shader will be used as.
+ * Clicking the appropriate radio button in the middle section of the GUI will change the type of the shader. Geometry shaders cannot be selected.
+ * It will also display the detected variables and whether they are uniform or attribute.
+ * Finally it will also display the shaders code. \n
+ * Shader Programs : \n
+ * A Shader program is a collection of Shader files, which forms a Shader Program. It must have at least one Vertex Shader and one Fragment shader. You cannot include any shader in a Shader Program more than once.
+ * If you run out of spaces in a Shader Program you must increase the Shader Programs size as described later before you can add more shader files.
+  * All vertex shaders should be included first. Followed by all the Fragment Shaders.
+ * The "Add Shader Program" button will create a Shader Program. It will then ask for a reference for the Shader Program.
+ * It is important that Shader Files are loaded before loading a Shader Program which contains them. If in the same IMF it is important put the Shader Files before any Shader Program which uses them.
+ * Selecting the Shader Program from the Reference List will modify the GUI to display the Shader File display. \n
+ * The value labelled "Number of Shaders" is the number of Shader files that the Shader Program will use. This can be changed by the user. \n
+ * The box labelled "New Shader:" is used to add new Shader Files to the Shader Program. Type in the Reference of the Shader File in the box, press enter and it will be added to the current Shader Program. \n
+ * The button labelled "Select Shader From File" will bring up a idalog listing all the references for Sahder Files in the current IMF File.
+ * Select the desired reference from the drop down menu and click 'OK' to add it to the currently selected Shader Program. This will only list vertex objects in the current file. \n
+ * The "Remove Shader Reference" button will remove the Shader Reference in the Shader Program from the Shader Program.
+ * Sound Files : \n
+ * Sound files are all compiled from .wav files.
+ * When a sound file is selected from the reference list on the left it will produce a list of information about the file.
+ * - Format:
+ * - BlockSize:
+ * - Sample Rate:
+ * - Byte Rate:
+ * - Block Align:
+ * - Data Volume:
+ * - Compression:
+ * - Channels:
+ * - Bits Per Sample:
+ * - Contains Extra Data
+ * .
+ * Font Files : \n
+ * Font files are formed from ttf files.
+ * For speed the IMF Handler renders individual images for each character at the font size specified in the GUI controls section.
+ * Some fonts extend beyond the area that Bamboo uses. This can cause the IMF Handler to crash.
+ * The IMF Handler should detect this is the case and raise a warning asking if you wish to continue.
+ * Often the IMF Handler will be able to handle fonts which extend outside the acceptable range but not always.
+ * If a warning is raised it may crash the IMF Handler, so continue at your own risk. \n
+ * Selecting a font file from the Reference List on the left of the GUI will modify the central section of the GUI to display the fonts character dimensions and color depth.
+ * Font files are compiled as 32 bit as they require an alpha channel and this allows effects to be applied to them in future versions.
  * \page CodeProgramExamples Examples of Games Code
  * This section will give a series of examples of programs for games. Initially they will be very simple. Later examples will show expanded functionality.
  * -# \ref BouncingBallExample "Example of a bouncing ball"

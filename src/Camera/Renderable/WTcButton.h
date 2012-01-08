@@ -44,7 +44,6 @@ class cButton : public cImage, public cButtonBase
     void Height(float lfHeight);
 	/// Sets the Width of the Image in Pixels to lfSize. Will make the height the appropriate height to make the box square on screen.
 	void Size(float lfSize);
-
 };
 
 /**
@@ -56,14 +55,10 @@ class cButton : public cImage, public cButtonBase
 class cTextButton : public cText, public cButtonBase
 {
 
- uint32 miPixelWidth;
- uint32 miPixelHeight;
 public:
 
 	cTextButton();
 	~cTextButton();
-	/// Sets the Position of the Image in 2D Pixels. Measured from the center of the screen.
-	void Position(float lfX,float lfY);
 	/// Sets the Width of a single character in Pixels to lfWidth.
     void Width(float lfWidth);
 	/// Sets the Height of a single character in Pixels to lfHeight.

@@ -129,7 +129,7 @@ void cBeamMesh::GenerateData(float Radius,float Length,uint16 Segments)
 
 	VertexData=new float[Segments*6];
 
-	uint32 liCount;
+	int32 liCount;
 	uint32 liCount3;
 	float Angle=2*3.141592/Segments;
 	for(liCount=0;liCount<Segments;++liCount)

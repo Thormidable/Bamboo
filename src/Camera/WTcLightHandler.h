@@ -4,8 +4,10 @@
 class cLightSpot
 {
  public:
+  cLightSpot();
   vLight* mpLight;
   double mfDist;
+  bool mbLightState;
 };
 
 /** \brief cLightHandler will control the OpenGL Lights. It will turn off lights not required or possible for different renderings to increase speed and circumvent the OpenGL limit of active lights.
@@ -14,18 +16,19 @@ class cLightSpot
  */
 class cLightHandler
 {
+ uint32 miAwake;
  static cLightHandler* mpInstance;
  cLightHandler();
 
  cMinLL<vLight> *mpLightList;
 
- cLightSpot *mpTemp;
+ cLightSpot *mpLightSlots;
 
 public:
 
   ~cLightHandler();
 
-  //Initialises OpenGL Lights
+  //Initialises OpenGL Light States
   static void SetupLights();
   ///This function will return a pointer to the current cLightHandler Object.
   static cLightHandler* Instance();
@@ -43,6 +46,17 @@ void Remove(cMinLN<vLight> *lpOld);
 
  /// Will Delete all the processes in the current Light list.
  void DeleteAll();
+
+ //Will Enable and Disable all the OpenGL lights
+ void SetLightStates();
+
+ //Will return true if there are any lights.
+ bool AnyLights();
+
+ //Will increase the number of awake lights to avoid having to count
+ void MoreAwake();
+ //Will decrease the number of awake lights to avoid having to count
+ void MoreAsleep();
 
 };
 

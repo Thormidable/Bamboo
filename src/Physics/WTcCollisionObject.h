@@ -1,34 +1,15 @@
 #ifndef __WTCCOLLISIONOBJECT_H__
 #define __WTCCOLLISIONOBJECT_H__
 
-/*
- * This is the generic class for controlling collisions.
- * The specific data for the collisions is stored in vCollisionData and it's inheriting classes (mpObject).
- *
- */
-
-class cBeamMesh;
-class cRenderObject;
-class vRenderObject;
-class cCollisionList;
-
 /**
  * \brief This Object is the base object for detecting collisions.
  * This object should be created and passed a pointer to a Renderable Object and a pointer to a cProcess.
  * This object will track the global position of its Renderable object and detect collisions with other cCollisionObject's.
  **/
-class cCollisionObject : public cSignal
+class cCollisionObject : public cCollisionBase
 {
 
 	static float CollisionDistance;
-	vCollisionData *mpObject;
-	uint8 miType;
-
-
-
-	//Is the current object procedurally generated. (IE is it controlled by the FileHandler or not). If it is procedurally generated, cCollisionObject will delete it when a new object is introduced or cCollisionObject is destroyed.
-	bool ProceduralObj;
-
 	/*
 	 * This concise little variable determines whether the object has a previous frame to act from. (IE no old matrix, no real position).
 	 * An Object can be enabled by calling
@@ -44,10 +25,8 @@ class cCollisionObject : public cSignal
 
 	//This is a pointer to the list that owns this CollisionObject.
 	cLinkedNode<cCollisionObject> *mpOwner;
-	//Internal Function to initialise object for using a file loaded object.
-	void OnFile(vCollisionData *lpPoint);
-	//Internal Function to initialise object for using a proicedurally generated object.
-	void OnProcedural();
+
+
 public:
 	cCollisionObject(vRenderObject *lpFollow,cProcess *lpLinked=0,uint32 liFilterType=0);
 	cCollisionObject(cBeamMesh *lpFollow,cProcess *lpLinked=0,uint32 liFilterType=0);
@@ -57,69 +36,18 @@ public:
 	~cCollisionObject();
 
 	///This will return whether the CollisionObject was created this frame (and so unable to track locations as Global position is unknown)
-	bool CreatedThisFrame(){return mbCreatedThisFrame;};
+	bool CreatedThisFrame();
 	///This will return whether the CollisionObject was NOT created this frame (and so unable to track locations as Global position is unknown)
-	void NotCreatedThisFrame(){mbCreatedThisFrame=false;};
+	void NotCreatedThisFrame();
 
-	///This will return a pointer to the Collision Data that this object will use to determine if there have been collisions.
-	vCollisionData *CollisionData(){return mpObject;};
 
 	///The Signal Function to allow cCollisionObject to receive Signals.
 	void Signal(SIGNAL liFlags);
-
-	///This will return true if this object has been procedurally generated.
-	bool Procedural(){return ProceduralObj;};
-	///This will return true if this object has been procedurally generated.
-	bool Loaded(){return (!ProceduralObj);};
-
-	//This will clear a Procedurally generated object. Used when cCollisionObject is deleted.
-	void ClearProcedural();
-
-	/**This is a dynamic cast on the type of collision object this is. Note ALL cCollisionData objects return true to Sphere.
-	This applies to all the functions Sphere(),Box(),Mesh(),Ray() and Beam().**/
-	cSphereCollision *Sphere(){return mpObject->Sphere();};
-	/**This is a dynamic cast on the type of collision object this is. Note ALL cCollisionData objects return true to Sphere.
-	This applies to all the functions Sphere(),Box(),Mesh(),Ray() and Beam().**/
-	cMeshCollision *Mesh(){return mpObject->Mesh();};
-	/**This is a dynamic cast on the type of collision object this is. Note ALL cCollisionData objects return true to Sphere.
-	This applies to all the functions Sphere(),Box(),Mesh(),Ray() and Beam().
-	cRayCollision Objects will also return true to Beam().**/
-	cRayCollision *Ray(){return mpObject->Ray();};
-	/**This is a dynamic cast on the type of collision object this is. Note ALL cCollisionData objects return true to Sphere.
-	This applies to all the functions Sphere(),Box(),Mesh(),Ray() and Beam().**/
-	cBeamCollision *Beam(){return mpObject->Beam();};
-	///This will take a SphereCollision Object loaded from a file, and set this Collision Object to use it.
-	void SetType(cSphereCollision *lpSphere);
-	///This will take a MeshCollision Object loaded from a file, and set this Collision Object to use it.
-	void SetType(cMeshCollision *lpMesh);
-	///This will take a BeamCollision Object loaded from a file, and set this Collision Object to use it.
-	void SetType(cBeamCollision *lpBeam);
-
-	///This will procedurally generate a Sphere or radius 1.0f;
-	cSphereCollision *SetType(float lfSize);
-	///This will procedurally generate a Beam of Radius lfRadius and Length lfLength.
-	cBeamCollision *SetType(float lfLength,float lfRadius);
-	///This will procedureally generate a Box collision object from the array of 6 floats lpBounds. see cGeneratedBoxCollision::BuildObject(float *lpBounds) for more information.
-	cMeshCollision *SetType(float *lpBounds);
-	///This will procedurally generate a Box Collision object. This is the same as handing it a float pointer.
-	cMeshCollision *SetType(float lfXP,float lfXN,float lfYP,float lfYN,float lfZP,float lfZN);
+	using cCollisionBase::SetType;
 	///This will make a ray object. See cRayCollision::BuildObject(float *lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement.
 	cRayCollision *SetType(cRenderObject *lpObj);
-	///This will make a Beam object to match a rendered Beam. (Nice and easy eh?)
-	cBeamCollision *SetType(cBeamMesh *lpBeam);
 
-	///This will return a generic pointer to the cCollisionData for this object
-	cSphereCollision *GetCollisionData()
-	{
-		if(miType==WT_COLLISION_RADIUS) return Sphere();
-		if(miType==WT_COLLISION_MODEL) return Mesh();
-		if(miType==WT_COLLISION_RAY) return Ray();
-		if(miType==WT_COLLISION_BEAM) return Beam();
-		return 0;
-	};
 
-	///This is the accurate way of determining the type of these objects.
-	uint8 Type(){return miType;};
 
 
 
@@ -198,20 +126,34 @@ public:
 	/// This will Add the cCollisionObject to the relevant Spatial Slots after it has found it's new position.
 	void PostUpdateCache();
 
+
+
+    using cCollisionBase::SphereSphere;
 	///Internal function for checking for Sphere / Sphere collision between this object and the object lpOther;
 	bool SphereSphere(cCollisionObject *lpOther);
+
+	using cCollisionBase::ModelModel;
 	///Internal function for checking for Model / Model collision between this object and the object lpOther;
 	bool ModelModel(cCollisionObject *lpOther);
+
+	using cCollisionBase::RayRay;
 	///Internal function for checking for Ray / Ray collision between this object and the object lpOther;
 	bool RayRay(cCollisionObject *lpOther);
+
+	using cCollisionBase::SphereModel;
 	///Internal function for checking for Sphere / Model collision between this object and the object lpOther;
 	bool SphereModel(cCollisionObject *lpOther);
+
+	using cCollisionBase::SphereRay;
 	///Internal function for checking for Sphere / Ray collision between this object and the object lpOther;
 	bool SphereRay(cCollisionObject *lpOther);
+
+	using cCollisionBase::RayModel;
 	///Internal function for checking for Ray / Model collision between this object and the object lpOther;
 	bool RayModel(cCollisionObject *lpOther);
 
-	float GetCollisionSize();
+
+
 };
 
 

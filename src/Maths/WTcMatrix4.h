@@ -201,11 +201,11 @@ void Rotation(cMatrix4 &lpOther);
   /// This will scale the object by a factor of lfScale.
  void Resize(float lfScale);
 /// This will scale the object along its local X axis by a factor of lfScale.
- void LResizeX(float lfScale);
+ void ResizeX(float lfScale);
 /// This will scale the object along its local Y axis by a factor of lfScale.
- void LResizeY(float lfScale);
+ void ResizeY(float lfScale);
 /// This will scale the object along its local Z axis by a factor of lfScale.
- void LResizeZ(float lfScale);
+ void ResizeZ(float lfScale);
 
 /// This will scale the object along its global X axis by a factor of lfScale.
  void GResizeX(float lfScale);
@@ -213,6 +213,35 @@ void Rotation(cMatrix4 &lpOther);
  void GResizeY(float lfScale);
 /// This will scale the object along its global Z axis by a factor of lfScale.
  void GResizeZ(float lfScale);
+
+ ///This will set the objects X Axis to the scale lfScale.
+ void ScaleX(float lfScale);
+ ///This will set the objects Y Axis to the scale lfScale.
+ void ScaleY(float lfScale);
+ ///This will set the objects Z Axis to the scale lfScale.
+ void ScaleZ(float lfScale);
+
+ ///This will get the objects X Axis scale.
+ float ScaleX();
+ ///This will get the objects Y Axis scale.
+ float ScaleY();
+ ///This will get the objects Z Axis scale.
+ float ScaleZ();
+
+ ///This will set the objects Global X Axis to the scale lfScale.
+ void GScaleX(float lfScale);
+ ///This will set the objects Global Y Axis to the scale lfScale.
+ void GScaleY(float lfScale);
+ ///This will set the objects Global Z Axis to the scale lfScale.
+ void GScaleZ(float lfScale);
+
+ ///This will get the objects Global X Axis scale.
+ float GScaleX();
+ ///This will get the objects Global Y Axis scale.
+ float GScaleY();
+ ///This will get the objects Global Z Axis scale.
+ float GScaleZ();
+
 
   /// This will return the distance between this matrix and the cMatrix4 pointed to by lpOther.
  float Distance(cMatrix4 *lpOther);

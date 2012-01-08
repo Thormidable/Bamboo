@@ -215,9 +215,18 @@ void cPainter::ShaderState(cShaderProgram *mpCurrent,cShaderProgram *mpLast)
     mpCurrent->Use();
    }
   }
-  else if(mpLast) {_USE_FIXED_FUNCTION();}
+//  else if(mpLast) {_USE_FIXED_FUNCTION();}
 }
 
+
+void cPainter::DepthState(bool mpCurrent,bool mpLast)
+{
+  if(mpCurrent != mpLast)
+  {
+   if(mpCurrent) glDisable(GL_DEPTH_TEST);
+   else glEnable(GL_DEPTH_TEST);
+  }
+}
 
 void cPainter::TextureState(uint32 mpCurrent,uint32 mpLast)
 {
@@ -262,15 +271,18 @@ glEnable(GL_DEPTH_TEST);
   {
     TextureState(mpList[liCount]->mpTexture,mpList[liCount-1]->mpTexture);
     ShaderState(mpList[liCount]->mpShader,mpList[liCount-1]->mpShader);
+    DepthState(mpList[liCount]->mbAlpha,mpList[liCount-1]->mbAlpha);
   }
   else
   {
     TextureState(mpList[liCount]->mpTexture,0);
     ShaderState(mpList[liCount]->mpShader,0);
+    if(mpList[liCount]->mbAlpha) glDisable(GL_DEPTH_TEST);
+    else glEnable(GL_DEPTH_TEST);
   }
 
+ if(_LIGHT->AnyLights()) _LIGHT->PrepareLight(&(mpList[liCount]->mpObject->mmCache));
 
-  if(mpList[liCount]->mbAlpha) glDisable(GL_DEPTH_TEST);
 
   mpList[liCount]->mpObject->RenderPainter(mpList[liCount]->miLevel);
   mpList[liCount]->mbReRender=false;

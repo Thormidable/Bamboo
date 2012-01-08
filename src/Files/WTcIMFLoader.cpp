@@ -4,7 +4,7 @@ using namespace std;
 
 void cIMF::LoadIMF(const char *lpPath)
 {
-	printf("Load File %s\n",lpPath);
+	trace("Load File " << lpPath);
 	uint32 liTemp;
 
 	ifstream FileStream;
@@ -12,10 +12,11 @@ void cIMF::LoadIMF(const char *lpPath)
 
 	if(!FileStream.is_open())
 	{
-		string msg("LoadIMP couldn't open ");
+		string msg("LoadIMF couldn't open ");
 		msg=msg+lpPath;
+		trace(msg);
 		throw CException(msg);
-		return;
+
 	}
 
 	while(!FileStream.eof())
@@ -23,7 +24,7 @@ void cIMF::LoadIMF(const char *lpPath)
 
 
             FileStream.read((char *) &liTemp,sizeof(uint32));
-            printf("liTEmp = %lu",liTemp);
+
             switch (liTemp)
             {
                 case IMF_TYPE_EOF :

@@ -30,12 +30,6 @@ trace("Loaded and Processed ShaderProgram : " << mpFileName);
 
 }
 
-
-void cShaderProgram::UseFixedFunction()
-{
-    glUseProgram(0);
-}
-
 cShaderProgram::cShaderProgram()
 {
 miProgramID=glCreateProgram();

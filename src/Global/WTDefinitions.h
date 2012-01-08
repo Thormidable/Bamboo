@@ -64,7 +64,8 @@
 #define WT_AUDIO_FILE_LOAD_ERROR 3
 #define WT_AUDIO_DEVICE_OPENING_ERROR 4
 
-
+///This tells the engine something has gone wrong.
+#define WT_COLLISION_NO_TYPE 0
 /// This tells a cCollisionObject to use a spherical collision for detecting collisions.
 #define WT_COLLISION_RADIUS 1
 /// This tells a cCollisionObject to use a cCollisionMesh to determine Collisions.
@@ -76,7 +77,9 @@
 /// This is the type for a cCollisionObject using a beam object for collisions.
 #define WT_COLLISION_BEAM 5
 ///This tells a cCollisionObject to use a Landscape to determine collisions.
-#define WT_COLLISION_LANDSCAPE 5
+#define WT_COLLISION_LANDSCAPE 6
+///This tells a cCollisionObject to use a cCollisionObject to determine collisions.
+#define WT_COLLISION_COMPOUND 7
 
 
 #define WT_LINEFEED 0x0A
@@ -113,9 +116,6 @@
 #define _GET_COLLISION_MESH_FILE(Reference) _GET_FILE(cMeshFileCollision,Reference)
 ///Will return a pointer to a Landscape Mesh object in memory with the text identifier Reference.
 #define _GET_LANDSCAPE_FILE(Reference) _GET_FILE(cLandscapeMeshFile,Reference)
-
-///Will turn off Shaders. If an object has a shader set it will override this. Also note that Fixed function is much much slower than using shaders.
-#define _USE_FIXED_FUNCTION() cShaderProgram::UseFixedFunction()
 
 #define _MODEL_POINTER cTexturedModel*
 #define _LAND_POINTER cLandscape*

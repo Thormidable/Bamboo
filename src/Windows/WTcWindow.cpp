@@ -2,11 +2,22 @@
 
 
 
+uint16 cWindow::RenderAreaWidth()
+{
+    return miRenderWidth;
+}
+uint16 cWindow::RenderAreaHeight()
+{
+    return miRenderHeight;
+}
+
+
 void cWindow::InitialiseOpenGL()
 {
     StartWindow();
     EnableOpenGL();
 
+    _CAMERA->UpdateProjectionMatrix();
 
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_DEPTH_TEST);
@@ -21,6 +32,19 @@ void cWindow::InitialiseOpenGL()
 
 #if WT_OS_TYPE==OS_WIN32
 
+void cWindow::FindRenderArea()
+{
+
+    RECT Result;
+    GetClientRect(gpWindow->hWnd,&Result);
+
+    miRenderWidth=Result.right;
+    miRenderHeight=Result.bottom;
+
+//    miBorderThickness=GetSystemMetrics(SM_CXSIZEFRAME);
+//    miTitleBarHeight=gpWindow->Height()-miRenderHeight-miBorderThickness;
+}
+
 void cWindow::HandleChanges()
 {
 	if (Resized)
@@ -29,6 +53,7 @@ void cWindow::HandleChanges()
         hRC = wglCreateContext( hDC );
 		wglMakeCurrent( hDC, hRC );
 		_CAMERA->UpdateProjectionMatrix();
+		FindRenderArea();
 	}
 	Resized=false;
 }
@@ -199,7 +224,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
           gpWindow->miHeight=HIWORD(lParam);
           gpWindow->miInvWidth=1.0f/gpWindow->miWidth;
           gpWindow->miInvHeight=1.0f/gpWindow->miHeight;
-          gpWindow->Resized=true;
+          //gpWindow->Resized=true;
           gpWindow->mfRatio=((float)gpWindow->miHeight)/gpWindow->miWidth;
           _CAMERA->UpdateProjectionMatrix();
           return 0;
@@ -210,8 +235,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
          return 0;
 
     case WM_MOVE:
-         gpWindow->miX=(int)LOWORD(lParam);
-         gpWindow->miY=(int)HIWORD(lParam);
+         gpWindow->miX=(uint16)LOWORD(lParam);
+         gpWindow->miY=(uint16)HIWORD(lParam);
          gpWindow->Moved=true;
          return 0;
 
@@ -219,13 +244,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
     case WM_MOUSEMOVE:
          if (!_MOUSE->locked)
          {
-            _MOUSE->cx=(int)LOWORD(lParam);
-            _MOUSE->cy=(int)HIWORD(lParam);
+            _MOUSE->cx=(uint16)LOWORD(lParam);
+            _MOUSE->cy=(uint16)HIWORD(lParam);
          }
          else
          {
-            _MOUSE->cx=(int)LOWORD(lParam);
-            _MOUSE->cy=(int)HIWORD(lParam);
+            _MOUSE->cx=(uint16)LOWORD(lParam);
+            _MOUSE->cy=(uint16)HIWORD(lParam);
          }
          return 0;
 
@@ -433,12 +458,21 @@ void cWindow::GetMouseSpeed()
 
 }
 
+void cWindow::FindRenderArea()
+{
+    miRenderWidth=Width();
+    miRenderHeight=Height();
+
+    miBorderThickness=0;
+    miTitleBarHeight=0;
+}
+
 #endif
 
-	int cWindow::X(){return miX;};
-	int cWindow::Y(){return miY;};
-	int cWindow::Width(){return miWidth;};
-	int cWindow::Height(){return miHeight;};
-	float cWindow::InvWidth(){return miInvWidth;};
-	float cWindow::InvHeight(){return miInvHeight;};
-	float cWindow::Ratio(){return mfRatio;};
+	uint16 cWindow::X(){return miX;};
+	uint16 cWindow::Y(){return miY;};
+	uint16 cWindow::Width(){return miWidth;};
+	uint16 cWindow::Height(){return miHeight;};
+	float32 cWindow::InvWidth(){return miInvWidth;};
+	float32 cWindow::InvHeight(){return miInvHeight;};
+	float32 cWindow::Ratio(){return mfRatio;};

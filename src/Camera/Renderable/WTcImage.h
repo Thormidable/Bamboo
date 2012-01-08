@@ -56,13 +56,15 @@ public:
 
 	/// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
        virtual void Size(float lfSize);
-
     /// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
        virtual void Width(float lfWidth);
        /// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
        virtual void Height(float lfHeight);
-    ///Sets the position os the image. distances are measured in pixels from the centre of the screen.
-       virtual void Position(float lfX,float lfY);
+
+        ///Will return the Width of this image in pixels.
+        float Width();
+        ///Will return the Height of this image in pixels.
+        float Height();
 
 };
 
@@ -78,15 +80,6 @@ class cImage3D : public cImage
 
 public:
     void SetUp();
-
-	/// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
-       void Size(float lfSize);
-    /// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
-       void Width(float lfWidth);
-       /// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
-       void Height(float lfHeight);
-    ///Sets the position os the image. distances are measured in pixels from the centre of the screen.
-       void Position(float lfX,float lfY);
 };
 
 #endif

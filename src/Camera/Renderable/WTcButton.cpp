@@ -33,10 +33,10 @@ void cTextButton::RenderPainter(uint8 liLevel)
     if(mpFont)
     {
 SetShaderVariables();
-        float lfTextLeft,lfTextTop;
+        float lfTextLeft;
         lfTextLeft=mfWidth*mpString.length()*0.5;
-        lfTextTop=(mfHeight)*0.5;
          short liCount;
+         float lfHeight=mfHeight*0.5f;
         for(liCount=0;liCount<mpString.length();++liCount)
         {
         float liRange;
@@ -46,10 +46,10 @@ SetShaderVariables();
             liRange=IMF_FONT_SCALE*(mpFont->Character(mpString[liCount])); //(or /64)
               glNormal3f(0.0f,0.0f,1.0f);
               glBegin(GL_QUADS);
-              glTexCoord2f(1,liRange+IMF_FONT_SCALE);   glVertex3f(lfTextLeft-mfWidth*(2*liCount+1),lfTextTop+mfHeight,3.1f);
-              glTexCoord2f(1,liRange);            glVertex3f(lfTextLeft-mfWidth*(2*liCount+1),lfTextTop-mfHeight,3.1f);
-              glTexCoord2f(0,liRange);            glVertex3f(lfTextLeft-mfWidth*(2*liCount-1),lfTextTop-mfHeight,3.1f);
-              glTexCoord2f(0,liRange+IMF_FONT_SCALE);   glVertex3f(lfTextLeft-mfWidth*(2*liCount-1),lfTextTop+mfHeight,3.1f);
+              glTexCoord2f(1,liRange+IMF_FONT_SCALE);   glVertex3f(lfTextLeft-mfWidth*(liCount+0.5f),lfHeight,3.1f);
+              glTexCoord2f(1,liRange);                  glVertex3f(lfTextLeft-mfWidth*(liCount+0.5f),-lfHeight,3.1f);
+              glTexCoord2f(0,liRange);                  glVertex3f(lfTextLeft-mfWidth*(liCount-0.5f),-lfHeight,3.1f);
+              glTexCoord2f(0,liRange+IMF_FONT_SCALE);   glVertex3f(lfTextLeft-mfWidth*(liCount-0.5f),lfHeight,3.1f);
 
               glEnd();
 
@@ -59,101 +59,66 @@ SetShaderVariables();
 
 }
 
-/*
-void cButton::RenderToPainter()
-{
-
-UpdateMatrix();
- mpPainterData->SetObject(this);
-if(mpFont) mpPainterData->SetTexture(mpFont->TextureNumber());
-else mpPainterData->SetTexture(0);
- SetOtherRenderVariables();
- mpPainterData->RenderAgain();
-}
-
-void cButton::Render()
-{
-
-}
-
-
-void cButton::BorderColor(cRGB lcBorder)
-{
- mcBorderColor=lcBorder;
-}
-
-void cButton::FrontColor(cRGB lcFront)
-{
-    mcFrontColor=lcFront;
-}
-*/
-
 void cButton::Position(float lfX,float lfY)
 {
-    XCenter=gpWindow->Width()*0.5f+lfX;
-    YCenter=gpWindow->Height()*0.5f-lfY;
-    mpData[12]=(lfX*gpWindow->InvWidth()*_CAMERA->Width()*4);
-    mpData[13]=(lfY*gpWindow->InvHeight()*_CAMERA->Height()*4);
-
+    XCenter=lfX;
+    YCenter=gpWindow->RenderAreaHeight()-lfY;
+    mpData[12]=lfX;
+    mpData[13]=lfY;
 }
 
 
 
 void cButton::Width(float lfWidth)
 {
-    XRange=lfWidth;
-    mfWidth=lfWidth*gpWindow->InvWidth()*_CAMERA->Width()*4;
+    XRange=lfWidth*0.5;
+    mfWidth=lfWidth;
 }
 void cButton::Height(float lfHeight)
 {
-    YRange=lfHeight;
-    mfHeight=lfHeight*gpWindow->InvHeight()*_CAMERA->Height()*4;
+    YRange=lfHeight*0.5;
+    mfHeight=lfHeight;
 }
 
 void cButton::Size(float lfSize)
 {
-  XRange=lfSize;
+  XRange=lfSize*0.5;
   YRange=XRange*gpWindow->Ratio();
-  mfWidth=lfSize*gpWindow->InvWidth()*_CAMERA->Width()*4;
+  mfWidth=lfSize;
   mfHeight=mfWidth*gpWindow->Ratio();
 }
 
-void cTextButton::Position(float lfX,float lfY)
-{
-    XCenter=(gpWindow->Width()*0.5f+lfX*0.6f);
-    YCenter=(gpWindow->Height()*0.5f-lfY*0.6f);
-    mpData[12]=(lfX*gpWindow->InvWidth()*_CAMERA->Width()*4);
-    mpData[13]=(lfY*gpWindow->InvHeight()*_CAMERA->Height()*4);
-
-}
 void cTextButton::Width(float lfWidth)
 {
-	miPixelWidth=lfWidth;
-	XRange=lfWidth*Text().length();
-    mfWidth=lfWidth*gpWindow->InvWidth()*_CAMERA->Width()*4;
+	XRange=lfWidth*0.5*Text().length();
+    mfWidth=lfWidth;
 }
 
 void cTextButton::Height(float lfHeight)
 {
-	miPixelHeight=lfHeight;
-	YRange=lfHeight;
-    mfHeight=lfHeight*gpWindow->InvHeight()*_CAMERA->Height()*4;
+	YRange=lfHeight*0.5;
+    mfHeight=lfHeight;
 }
 
 void cTextButton::Size(float lfSize)
 {
-  miPixelWidth=lfSize;
-  XRange=lfSize*Text().length();
-  miPixelHeight=lfSize*gpWindow->Ratio();
-  YRange=miPixelHeight;
-  mfWidth=lfSize*gpWindow->InvWidth()*_CAMERA->Width()*4;
-  mfHeight=mfWidth*gpWindow->Ratio();
+  XRange=lfSize*0.5*Text().length();
+  mfWidth=lfSize;
+  YRange=mfHeight=mfWidth*gpWindow->Ratio();
 }
 
 
 bool cButtonBase::Hover()
 {
-  return _MOUSE->x>XCenter-XRange && _MOUSE->x<XCenter+XRange && _MOUSE->y>YCenter-YRange && _MOUSE->y<YCenter+YRange;
+        printf("Render Area Width Hegiht : %i %i\n",gpWindow->RenderAreaWidth(),gpWindow->RenderAreaHeight());
+        printf("Centre X Y : %f %f\n",XCenter,YCenter);
+        printf("Range X Y : %f %f\n",XRange,YRange);
+        printf("Mouse X Y : %i %i\n",_MOUSE->x,_MOUSE->y);
+
+return _MOUSE->x>XCenter-XRange
+      && _MOUSE->x<XCenter+XRange
+      && _MOUSE->y>YCenter-YRange
+      && _MOUSE->y<YCenter+YRange;
 }
 
 bool cButtonBase::Pressed()
@@ -188,9 +153,9 @@ bool cButtonBase::Clicked()
 
 bool cTextButton::Hover()
 {
-	Width(miPixelWidth);
- 	 Height(miPixelHeight);
-	 printf("X RANGE : %f\nY RANGE : %f\n",XRange,YRange);
+	//Width(cImage::Width());
+ 	// Height(cImage::Height());
 	return cButtonBase::Hover();
 }
+
 

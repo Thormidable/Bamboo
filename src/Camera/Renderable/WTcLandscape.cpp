@@ -31,17 +31,14 @@ void cLandscape::RenderPainter(uint8 liLevel)
 
 void cLandscape::RenderToPainter()
 {
- float Temp[16];
- UpdateMatrix();
- glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
 
+ UpdateMatrix();
 
  mpPainterData->SetObject(this);
- //mpPainterData->SetMatrix(Temp);
  mpPainterData->SetTexture(mpTexture->TextureNumber());
-SetOtherRenderVariables();
-mpPainterData->RenderAgain();
- //cPainter::Instance()->Add(lcTemp);
+ SetOtherRenderVariables();
+ mpPainterData->RenderAgain();
+
 }
 
 

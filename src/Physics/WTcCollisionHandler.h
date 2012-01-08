@@ -70,10 +70,6 @@ public:
 
  virtual cCollisionList *GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType)=0;
 
-
-  /// This will step through the CollisionList to find the next collision.
-  cCollisionObject *NextCollision(cCollisionObject *lpObj,uint32 lpType=0);
-
  /// This will deconstruct the class.
  virtual ~cCollisionHandler();
 

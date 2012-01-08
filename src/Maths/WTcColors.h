@@ -38,6 +38,8 @@ public:
     cRGBA *operator=(c4DVf *lpOther);
 	///Array operator to allow the user to access components by position. R=0, G=1, B=2, A=3.
     float &operator[](uint32);
+    ///Set the values with floats
+    void Set(float lfR=0.0f,float lfG=0.0f,float lfB=0.0f,float lfA=1.0f);
 };
 
 /**
@@ -70,6 +72,8 @@ public:
     cRGB *operator=(c3DVf *lpOther);
 		///Array operator to allow the user to access components by position. R=0, G=1, B=2;
     float &operator[](uint32);
+    ///Set the values with floats
+    void Set(float lfR=0.0f,float lfG=0.0f,float lfB=0.0f);
 };
 
 #endif

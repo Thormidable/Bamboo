@@ -155,13 +155,16 @@ void cRenderObject::Shader(cShaderProgram *lpShader)
   	cMatrix4 Temp;
   	if(mb3D)
   	{
-  	  AddUniform<cUniformMatrix>("mmProj")->Data=_CAMERA->TotalPositionMatrix();
-  	  AddUniform<cUniformMatrix>("mmGlob")->Data=mmCache.Matrix();
+      AddUniform<cUniformMatrix>("mmProjection")->Data=_CAMERA->Perspective();
+      AddUniform<cUniformMatrix>("mmCamera")->Data=_CAMERA->CameraMatrix();
+  	  AddUniform<cUniformMatrix>("mmCombined")->Data=_CAMERA->TotalPositionMatrix();
+  	  AddUniform<cUniformMatrix>("mmGlobal")->Data=mmCache.Matrix();
+
   	}
   	else
   	{
-  	 AddUniform<cUniformMatrix>("mmProj")->Data=_CAMERA->Perspective();
-     AddUniform<cUniformMatrix>("mmGlob")->Data=mmCache.Matrix();
+     AddUniform<cUniformMatrix>("mmProjection")->Data=_CAMERA->Perspective2D();
+     AddUniform<cUniformMatrix>("mmGlobal")->Data=mmCache.Matrix();
   	}
 
   }

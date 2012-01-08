@@ -934,7 +934,7 @@ void cCameraMatrix4::Display()
 
  printf("\n");
  printf("[%f %f %f %f,\n %f %f %f %f,\n %f %f %f %f,\n %f %f %f %f]\n",mpData[0],mpData[4],mpData[8],mpData[12],mpData[1],mpData[5],mpData[9],mpData[13],mpData[2],mpData[6],mpData[10],mpData[14],mpData[3],mpData[7],mpData[11],mpData[15]);
-
+ printf("Position : %f %f %f\n",mpPosition[0],mpPosition[1],mpPosition[2]);
 }
 
 
@@ -964,15 +964,25 @@ void cCameraMatrix4::Multiply(cCameraMatrix4 *lpOther)
 }
 void cCameraMatrix4::Multiply(cCameraMatrix4 &lpOther)
 {
-    Equals(&operator*(lpOther));
+    operator*(lpOther);
+	memcpy(mpData,mpTemp.Matrix(),sizeof(float)*16);
+	memcpy(mpPosition,mpTemp.Position(),sizeof(float)*3);
 }
 void cCameraMatrix4::Multiply(cMatrix4 *lpOther)
 {
-    Equals(&operator*(lpOther->ConvertToCameraMatrix()));
+	cCameraMatrix4 lcTemp;
+	lcTemp=lpOther->ConvertToCameraMatrix();
+    operator*(lcTemp);
+	memcpy(mpData,mpTemp.Matrix(),sizeof(float)*16);
+	memcpy(mpPosition,mpTemp.Position(),sizeof(float)*3);
 }
 void cCameraMatrix4::Multiply(cMatrix4 &lpOther)
 {
-    Equals(&operator*(lpOther.ConvertToCameraMatrix()));
+    cCameraMatrix4 lcTemp;
+	lcTemp=lpOther.ConvertToCameraMatrix();
+    operator*(lcTemp);
+	memcpy(mpData,mpTemp.Matrix(),sizeof(float)*16);
+	memcpy(mpPosition,mpTemp.Position(),sizeof(float)*3);
 }
 
   float *cCameraMatrix4::Matrix(){return mpData;};
@@ -980,3 +990,21 @@ void cCameraMatrix4::Multiply(cMatrix4 &lpOther)
   float cCameraMatrix4::X(){return mpPosition[0];};
   float cCameraMatrix4::Y(){return mpPosition[1];};
   float cCameraMatrix4::Z(){return mpPosition[2];};
+
+float *cCameraMatrix4::ConstructCameraMatrix()
+{
+
+ memcpy(mpCameraMatrix,mpData,sizeof(float)*16);
+
+ mpCameraMatrix[12]=mpPosition[0]*mpData[0]+mpPosition[1]*mpData[4]+mpPosition[2]*mpData[8];
+ mpCameraMatrix[13]=mpPosition[0]*mpData[1]+mpPosition[1]*mpData[5]+mpPosition[2]*mpData[9];
+ mpCameraMatrix[14]=mpPosition[0]*mpData[2]+mpPosition[1]*mpData[6]+mpPosition[2]*mpData[10];
+ //mpTemp[15]=mpPosition[0]*mpData[3]+mpPosition[1]*mpData[7]+mpPosition[2]*mpData[11];
+ return mpCameraMatrix;
+}
+
+float *cCameraMatrix4::CameraMatrix()
+{
+    #warning comment Make so mpCameraMatrix is unneccessary.
+ return mpCameraMatrix;
+};

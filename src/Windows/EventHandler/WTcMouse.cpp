@@ -17,9 +17,6 @@ if(locked)
 {
 
 #if WT_OS_TYPE==OS_WIN32
-	/*GetCursorPos(&Pos);
-	xs=Pos.x-cx;
-	ys=Pos.y-cy;*/
 	xs=x;
 	ys=y;
 	x=y=0;
@@ -33,6 +30,7 @@ if(locked)
 }
 else
 {
+
 	xs=cx-x;
 	ys=cy-y;
 	x=cx;

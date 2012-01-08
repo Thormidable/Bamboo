@@ -7,14 +7,11 @@ class cSpotLight : public cLight
  // Stores the Direction of the spotlight
  float mpDirection[4];
 
-void SetupLights();
-
 public:
-  // This will set the Global Direction the Spot light will point in. X,Y,Z,Cutoff
-  void Direction(float lfX,float lfY,float lfZ, float lfA);
 
-	// Will bind this light source for use in OpenGL.
-        void PrepareLight();
+    cSpotLight();
+  // This will set the Global Direction the Spot light will point in. X,Y,Z,Cutoff
+  void Direction(float lfX,float lfY,float lfZ,float lfA);
 
 	// Will bind this light to light number liLight in OpenGL.
 	void PrepareLight(uint32 liLight);

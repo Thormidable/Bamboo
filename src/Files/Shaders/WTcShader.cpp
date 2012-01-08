@@ -104,9 +104,7 @@ mpShaderText[0]=lpData->mpShaderText;
 if(miShaderType == IMF_SHADER_TYPE_NULL) {miShaderID=0; return;}
 if(miShaderType == IMF_SHADER_TYPE_VERTEX)
 {
-    printf("Get SAhder\n");
     miShaderID=glCreateShader(GL_VERTEX_SHADER);
-    printf("Get SAhder : %lu\n",miShaderID);
 }
 if(miShaderType == IMF_SHADER_TYPE_FRAGMENT) miShaderID=glCreateShader(GL_FRAGMENT_SHADER);
 //if(miShaderType == IMF_SHADER_TYPE_GEOMETRY) miShaderID=glCreateShader(GL_GEOMETRY_SHADER);

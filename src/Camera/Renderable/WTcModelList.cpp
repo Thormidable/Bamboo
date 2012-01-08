@@ -206,7 +206,7 @@ void cModelList::RenderCode(cModelListNode *lpNode)
   glEnableClientState(GL_NORMAL_ARRAY);
 
   if(lpNode->mpShader) lpNode->mpShader->Use();
-  else _USE_FIXED_FUNCTION();
+
 
  lpNode->mpMesh->RenderMesh();
 

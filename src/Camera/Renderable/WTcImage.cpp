@@ -47,21 +47,20 @@ mpPainterData->RenderAgain();
 }
 }
 
-void cImage::Position(float lfX,float lfY)
-{
-    mpData[12]=(lfX*gpWindow->InvWidth()*_CAMERA->Width()*4);
-    mpData[13]=(lfY*gpWindow->InvHeight()*_CAMERA->Height()*4);
-
-}
-
 void cImage::Width(float lfWidth)
 {
-    mfWidth=lfWidth*gpWindow->InvWidth()*_CAMERA->Width()*2;
+    mfWidth=lfWidth;
 }
 void cImage::Height(float lfHeight)
 {
-    mfHeight=lfHeight*gpWindow->InvHeight()*_CAMERA->Height()*2;
+    mfHeight=lfHeight;
 }
+void cImage::Size(float lfSize)
+{
+  mfWidth=lfSize;
+  mfHeight=mfWidth*gpWindow->Ratio();
+}
+
 
 void cImage::RenderPainter(uint8 liLevel)
 {
@@ -71,22 +70,23 @@ void cImage::RenderPainter(uint8 liLevel)
  {
      ResizeArrays();
      SetShaderVariables();
-
+    float lfWidth=mfWidth*0.5f;
+    float lfHeight=mfHeight*0.5f;
    glBegin(GL_QUADS);
 
     glNormal3f(0.0f,0.0f,1.0f);
     glTexCoord2f(0.0f,0.0f);
-    glVertex3f(-mfWidth,-mfHeight,2.1f);
+    glVertex3f(-lfWidth,-lfHeight,2.1f);
 
 
     glTexCoord2f(1.0f,0.0f);
-    glVertex3f(mfWidth,-mfHeight,2.1f);
+    glVertex3f(lfWidth,-lfHeight,2.1f);
 
     glTexCoord2f(1.0f,1.0f);
-    glVertex3f(mfWidth,mfHeight,2.1f);
+    glVertex3f(lfWidth,lfHeight,2.1f);
 
     glTexCoord2f(0.0f,1.0f);
-    glVertex3f(-mfWidth,mfHeight,2.1f);
+    glVertex3f(-lfWidth,lfHeight,2.1f);
 
    glEnd();
 
@@ -136,11 +136,6 @@ unsigned int cImage::TextureNumber()
   if(mpPixmap) return mpPixmap->TextureNumber(); return 0;
 }
 
-void cImage::Size(float lfSize)
-{
-  mfWidth=lfSize*gpWindow->InvWidth()*_CAMERA->Width()*2;
-  mfHeight=mfWidth*gpWindow->Ratio();
-}
 
 void cImage3D::SetUp()
 {
@@ -149,22 +144,15 @@ void cImage3D::SetUp()
  Transparency(true);
 }
 
-void cImage3D::Size(float lfSize)
-{
-    mfHeight=mfWidth=lfSize;
-}
 
-void cImage3D::Width(float lfWidth)
-{
-    mfWidth=lfWidth;
-}
 
-void cImage3D::Height(float lfHeight)
-{
-    mfHeight=lfHeight;
-}
+	float cImage::Width()
+	{
+	  return mfWidth;
+	}
 
-void cImage3D::Position(float lfX,float lfY)
-{
-    cMatrix4::Position(lfX,lfY);
-}
+
+	float cImage::Height()
+	{
+	    return mfHeight;
+	}

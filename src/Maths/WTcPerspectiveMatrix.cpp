@@ -99,19 +99,6 @@ void cPerspectiveMatrix::Setup(float lfWidth,float lfRatio,float lfNear,float lf
  mfNear=lfNear;
  mfFar=lfFar;
 
- //glDepthRangef(mfNear,mfFar);
- /*
- double Equation[4];
-
- Equation[0]=Equation[1]=Equation[2]=Equation[3]=0.0
-
- Equation[2]=1.0;
- Equation[3]=mfNear;
-
- glClipPlane(0, const GLdouble *equation)
- */
-
-
 }
 
 void cPerspectiveMatrix::Frustum()

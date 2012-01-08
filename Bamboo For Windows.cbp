@@ -29,6 +29,29 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
+			<Target title="64 Debug">
+				<Option output="Windows\Debug\libBambooWin64_d" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Debug\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="64 Release">
+				<Option output="Windows\libBambooWin64" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Release\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
@@ -37,7 +60,7 @@
 			<Add directory="..\Includes\GLEW\include" />
 		</Compiler>
 		<Linker>
-			<Add directory="..\Includes\OpenAL 1.1 SDK\libs\Win32" />
+			<Add directory="..\Includes\OpenAL 1.1 SDK\libs" />
 			<Add directory="..\Includes\GLEW\lib" />
 		</Linker>
 		<Unit filename="src\Audio\WTcAudioBuffer.cpp" />
@@ -146,8 +169,6 @@
 		<Unit filename="src\Files\Shaders\WTcShaderVariables.h" />
 		<Unit filename="src\Files\Shaders\WTcUserDefinedShaderVariable.cpp" />
 		<Unit filename="src\Files\Shaders\WTcUserDefinedShaderVariable.h" />
-		<Unit filename="src\Files\Shaders\WTvShader.h" />
-		<Unit filename="src\Files\Shaders\WTvShaderProgram.h" />
 		<Unit filename="src\Files\Textures\WTcTexture.cpp" />
 		<Unit filename="src\Files\Textures\WTcTexture.h" />
 		<Unit filename="src\Files\Textures\WTvTexture.h" />
@@ -190,6 +211,9 @@
 		<Unit filename="src\PTL\WTRadix.cpp" />
 		<Unit filename="src\PTL\WTRadix.h" />
 		<Unit filename="src\PTL\WTcPushPopStack.h" />
+		<Unit filename="src\PTL\WTcSingleton.h" />
+		<Unit filename="src\Physics\WTcCollisionBase.cpp" />
+		<Unit filename="src\Physics\WTcCollisionBase.h" />
 		<Unit filename="src\Physics\WTcCollisionHandler.cpp" />
 		<Unit filename="src\Physics\WTcCollisionHandler.h" />
 		<Unit filename="src\Physics\WTcCollisionList.cpp" />

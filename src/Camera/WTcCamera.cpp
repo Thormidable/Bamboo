@@ -5,10 +5,9 @@ cCamera::cCamera()
  trace("Creating cCamera::cCamera()");
  mpRenderList=new cRenderNode(0);
  Identity();
-// gpWindow->InitialiseOpenGL();
- mmPerspective.Setup(0.5f,gpWindow->Ratio(),1.0f,20.0f);
- UpdateProjectionMatrix();
- cPainter::Instance();
+ mmPerspective.Setup(1.0f,gpWindow->Ratio(),1.0f,20.0f);
+
+  cPainter::Instance();
 }
 
 cCamera::~cCamera()
@@ -29,7 +28,7 @@ void cCamera::Render()
 	ResetGLMatrix();
 
 	cPainter::Instance()->Reset();
-
+    _LIGHT->SetLightStates();
 	mpRenderList->RenderToPainter();
 
 	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -58,6 +57,8 @@ void cCamera::UpdateProjectionMatrix()
 {
 	#warning comment This runs every frame. Only neccessary on frames when window is resized or values are changed.
   mmPerspective.Frustum();
+  gpWindow->FindRenderArea();
+  mmPerspective2D.Orthographic(gpWindow->Width(),0.0f,gpWindow->Height(),0.0f,1.0f,20.0f);
 
 }
 
@@ -75,10 +76,7 @@ void cCamera::ResetGLMatrix()
 {
 	_MATRIX_STACK->Identity();
 	mmPerspectiveCameraMatrix=mmPerspective;
-	//mmPerspectiveCameraMatrix.Multiply(Test());
-	mmPerspectiveCameraMatrix.Multiply(Matrix());
-	mmPerspectiveCameraMatrix.Translate(mpPosition);
-
+    mmPerspectiveCameraMatrix.Multiply(ConstructCameraMatrix());
 }
 
 cCamera *cCamera::mpInstance=0;
@@ -121,6 +119,10 @@ float *cCamera::Perspective()
  return mmPerspective.Matrix();
 }
 
+float *cCamera::Perspective2D()
+{
+ return mmPerspective2D.Matrix();
+}
 void cCamera::Width(float lfZoom)
 {
 	mmPerspective.Width(lfZoom);
@@ -162,4 +164,6 @@ float *cCamera::TotalPositionMatrix()
 #warning comment Potential Minor Optimisation here. Can combine both matrices together.
     return mmPerspectiveCameraMatrix.Matrix();
 };
+
+
 

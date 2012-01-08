@@ -36,8 +36,6 @@ public:
   void Use();
  ///This will return the number of cShader() objects used by this system.
   uint32 Size(){return mcList.Size();};
-  ///This will turn off the usuage of shaders and return the system to using the Fixed Function Pipeline.
-  static void UseFixedFunction();
 
   ///This will return a pointer to the cShader() object in position liCount of the cShader() List;
   cShader* operator[](uint32 liCount){if(mpShader) return mpShader[liCount]; else return 0;};

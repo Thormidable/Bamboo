@@ -38,17 +38,6 @@ cmLandscape::cmLandscape(cmLandscapeArray *lpArray)
 
 	PrepareLandscape();
 	BufferMesh();
-/*uint32 liLoop1,liLoop2,liArrayPos=0;
-
-	for(liLoop1=0;liLoop1<miZSteps;++liLoop1) //Z
- {
-	 for(liLoop2=0;liLoop2<miXSteps;++liLoop2) //X
-  {
-	liArrayPos+=3;
-	   	  printf("Vertex %d : %f %f %f\n",(liArrayPos/3)-1,mpVertex[liArrayPos-3],mpVertex[liArrayPos-2],mpVertex[liArrayPos-1]);
-  }
- }
-*/
 
 };
 

@@ -96,11 +96,7 @@ void cParticleGroup::RenderToPainter()
 {
 	Refresh();
 
-	float Temp[16];
 	UpdateMatrix();
-
-
-	glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
 
 	mpPainterData->SetObject(this);
 	mpPainterData->SetTexture(0);

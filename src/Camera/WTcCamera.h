@@ -14,6 +14,8 @@ protected:
 
 /// This object builds and controls the Perspective Matrix for the system.
 cPerspectiveMatrix mmPerspective;
+///This controls the projection matrix for 2D objects. Best not to play with.
+cPerspectiveMatrix mmPerspective2D;
 
 ///This seperates out the Perspective and Camera Matrix from the main Matrix Stack
 cMatrix4 mmPerspectiveCameraMatrix;
@@ -104,6 +106,11 @@ public:
 
 	///This will return the current perspective matrix
 	float *Perspective();
+
+
+
+	///This will return the current perspective matrix for 2D objects.
+	float *Perspective2D();
 
 	float *TotalPositionMatrix();
 };

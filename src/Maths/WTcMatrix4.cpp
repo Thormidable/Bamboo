@@ -452,15 +452,6 @@ return mpTemp;
 
 }
 
-void cMatrix4::Translate(float lfX,float lfY,float lfZ)
-{
-
- mpData[12]=mpData[0]*lfX+mpData[4]*lfY+mpData[8]*lfZ+mpData[12];
- mpData[13]=mpData[1]*lfX+mpData[5]*lfY+mpData[9]*lfZ+mpData[13];
- mpData[14]=mpData[2]*lfX+mpData[6]*lfY+mpData[10]*lfZ+mpData[14];
- mpData[15]=mpData[3]*lfX+mpData[7]*lfY+mpData[11]*lfZ+mpData[15];
-
-}
 
 // 0 4 8  12   3  2  1  0
 // 1 5 9  13   7  6  5  4
@@ -815,14 +806,14 @@ void cMatrix4::Resize(float lfScale)
  mpData[10]=mpData[10]*lfScale;
 }
 
-void cMatrix4::LResizeX(float lfScale)
+void cMatrix4::ResizeX(float lfScale)
 {
  mpData[0]=mpData[0]*lfScale;
  mpData[1]=mpData[1]*lfScale;
  mpData[2]=mpData[2]*lfScale;
 }
 
-void cMatrix4::LResizeY(float lfScale)
+void cMatrix4::ResizeY(float lfScale)
 {
 
  mpData[4]=mpData[4]*lfScale;
@@ -830,13 +821,90 @@ void cMatrix4::LResizeY(float lfScale)
  mpData[6]=mpData[6]*lfScale;
 }
 
-void cMatrix4::LResizeZ(float lfScale)
+void cMatrix4::ResizeZ(float lfScale)
 {
 
  mpData[8]=mpData[8]*lfScale;
  mpData[9]=mpData[9]*lfScale;
  mpData[10]=mpData[10]*lfScale;
 }
+
+ void cMatrix4::ScaleX(float lfScale)
+ {
+     double lfCurrent=lfScale/ScaleX();
+     mpData[0]*=lfCurrent;
+     mpData[1]*=lfCurrent;
+     mpData[2]*=lfCurrent;
+ }
+ void cMatrix4::ScaleY(float lfScale)
+ {
+     double lfCurrent=lfScale/ScaleY();
+     mpData[4]*=lfCurrent;
+     mpData[5]*=lfCurrent;
+     mpData[6]*=lfCurrent;
+ }
+
+ void cMatrix4::ScaleZ(float lfScale)
+ {
+     double lfCurrent=lfScale/ScaleZ();
+     mpData[8]*=lfCurrent;
+     mpData[9]*=lfCurrent;
+     mpData[10]*=lfCurrent;
+ }
+
+  void cMatrix4::GScaleX(float lfScale)
+ {
+     double lfCurrent=lfScale/GScaleX();
+     mpData[0]*=lfCurrent;
+     mpData[4]*=lfCurrent;
+     mpData[8]*=lfCurrent;
+ }
+ void cMatrix4::GScaleY(float lfScale)
+ {
+     double lfCurrent=lfScale/GScaleY();
+     mpData[1]*=lfCurrent;
+     mpData[5]*=lfCurrent;
+     mpData[9]*=lfCurrent;
+ }
+
+ void cMatrix4::GScaleZ(float lfScale)
+ {
+     double lfCurrent=lfScale/GScaleZ();
+     mpData[2]*=lfCurrent;
+     mpData[6]*=lfCurrent;
+     mpData[10]*=lfCurrent;
+ }
+
+
+ float cMatrix4::ScaleX()
+ {
+     return sqrt(mpData[0]*mpData[0]+mpData[1]*mpData[1]+mpData[2]*mpData[2]);
+ }
+
+ float cMatrix4::ScaleY()
+ {
+     return sqrt(mpData[4]*mpData[4]+mpData[5]*mpData[5]+mpData[6]*mpData[6]);
+ }
+
+ float cMatrix4::ScaleZ()
+ {
+     return sqrt(mpData[8]*mpData[8]+mpData[9]*mpData[9]+mpData[10]*mpData[10]);
+ }
+
+  float cMatrix4::GScaleX()
+ {
+     return sqrt(mpData[0]*mpData[0]+mpData[4]*mpData[4]+mpData[8]*mpData[8]);
+ }
+
+ float cMatrix4::GScaleY()
+ {
+     return sqrt(mpData[1]*mpData[1]+mpData[5]*mpData[5]+mpData[9]*mpData[9]);
+ }
+
+ float cMatrix4::GScaleZ()
+ {
+     return sqrt(mpData[2]*mpData[2]+mpData[6]*mpData[6]+mpData[10]*mpData[10]);
+ }
 
 void cMatrix4::GResizeX(float lfScale)
 {
@@ -1318,11 +1386,22 @@ cMatrix4 *cMatrix4::ThisMatrixPointer()
 
 void cMatrix4::Translate(float *lpDist)
 {
- mpData[12]=mpData[0]*lpDist[0]+mpData[4]*lpDist[1]+mpData[8]*lpDist[2]+mpData[12];
- mpData[13]=mpData[1]*lpDist[0]+mpData[5]*lpDist[1]+mpData[9]*lpDist[2]+mpData[13];
- mpData[14]=mpData[2]*lpDist[0]+mpData[6]*lpDist[1]+mpData[10]*lpDist[2]+mpData[14];
- mpData[15]=mpData[3]*lpDist[0]+mpData[7]*lpDist[1]+mpData[11]*lpDist[2]+mpData[15];
+ mpData[12]+=mpData[0]*lpDist[0]+mpData[4]*lpDist[1]+mpData[8]*lpDist[2];
+ mpData[13]+=mpData[1]*lpDist[0]+mpData[5]*lpDist[1]+mpData[9]*lpDist[2];
+ mpData[14]+=mpData[2]*lpDist[0]+mpData[6]*lpDist[1]+mpData[10]*lpDist[2];
+ mpData[15]+=mpData[3]*lpDist[0]+mpData[7]*lpDist[1]+mpData[11]*lpDist[2];
 };
+
+void cMatrix4::Translate(float lfX,float lfY,float lfZ)
+{
+
+ mpData[12]=mpData[0]*lfX+mpData[4]*lfY+mpData[8]*lfZ+mpData[12];
+ mpData[13]=mpData[1]*lfX+mpData[5]*lfY+mpData[9]*lfZ+mpData[13];
+ mpData[14]=mpData[2]*lfX+mpData[6]*lfY+mpData[10]*lfZ+mpData[14];
+ mpData[15]=mpData[3]*lfX+mpData[7]*lfY+mpData[11]*lfZ+mpData[15];
+
+};
+
 
 void cMatrix4::Multiply(cMatrix4 &Other)
 {
@@ -1336,17 +1415,23 @@ void cMatrix4::Multiply(cMatrix4 *Other)
 
 void cMatrix4::Multiply(float *Other)
 {
-    Equals(&operator*(Other));
+    Equals(operator*(Other).Matrix());
 }
 
 void cMatrix4::Multiply(cCameraMatrix4 *Other)
 {
-    Equals(&operator*(Other->ConvertToMatrix()));
+	cMatrix4 lcTemp;
+	lcTemp=Other->ConvertToMatrix();
+    operator*(lcTemp);
+	memcpy(mpData,mpTemp.Matrix(),sizeof(float)*16);
 }
 
 void cMatrix4::Multiply(cCameraMatrix4 &Other)
 {
-    Equals(&operator*(Other.ConvertToMatrix()));
+    cMatrix4 lcTemp;
+	lcTemp=Other.ConvertToMatrix();
+    operator*(lcTemp);
+	memcpy(mpData,mpTemp.Matrix(),sizeof(float)*16);
 }
 
 void cMatrix4::Equals(float *lpOther)
