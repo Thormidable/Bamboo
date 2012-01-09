@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 void cRenderPointer::RenderAgain()
 {

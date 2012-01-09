@@ -1,16 +1,14 @@
 #ifndef __WTCCAMERAMATRIX4_H__
 #define __WTCCAMERAMATRIX4_H__
 /**
-* \brief This is a translation matrix for a camera object.
-* This is a translation matrix for a camera. All the translations
-* are inverted. Distances are 'reversed', Local rotations are 'globalised'
+* \brief This is a translation matrix for a camera object
+* A Special Matric for Cameras. All the translations are inverted. Distances are 'reversed', Local rotations are 'globalised'
 * and Global roatations are 'localised'. Effectively all the translations are
 * inverted before they are applied to this matrix.
-* The matrix Layout is four columns, each one representing a different axis or translation. \n
-* Xx, Yx, Zx, 0.0f, Xy Yy Zy 0.0f, Xz Yz Xz 0.0f, 0.0, 0.0, 0.0, 1.0f. \n
+* The matrix Layout is four columns, each one representing a different axis or translation.
+* Xx, Yx, Zx, 0.0f, Xy Yy Zy 0.0f, Xz Yz Xz 0.0f, 0.0, 0.0, 0.0, 1.0f.
 * The Position of the Camera Matrix is kept seperate to the 4x4 matrix.
-* Functions which accept cCameraMatrix objects or pointers automatically account for the differences in format.
-* Otherwise one or the other should be Converted using the cMatrix4::ConvertToCameraMatrix() or cCameraMatrix4::ConvertToMatrix() functions.
+* Functions which accept Camera Matrix objects or pointers automatically account for the differences in format. Use the Conversion functions to convert this.
 */
 class cCameraMatrix4
 {
@@ -37,7 +35,7 @@ public:
  /// This will return the position vector of this objects matrix.
  float *Position();
 
-/// The position of this matrix has been seperated from the rest of the matrix as the camera should rotate around 0,0,0, not itself?
+/// The position of this matrix has been seperated from the rest of the matrix as the camera should rotate around 0,0,0, not itself
 float mpPosition[3];
 
  /// This will return the X position of this objects matrix.
@@ -217,7 +215,7 @@ void Position(float lfX,float lfY);
  /// This will return the 2D distance between this matrix and the matrix pointed to by lpOther.
 uint32 Distance2D(float *lpOther);
 
- /// This will return this cCameraMatrix in the format of a cMatrix4. This is because they have different formats.
+ // This will return this cCameraMatrix in the format of a cMatrix4. This is because they have different formats.
  cMatrix4 &ConvertToMatrix();
 
  /// This will return the transpose of this objects matrix ready for multiplications etc.

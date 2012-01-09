@@ -1,179 +1,6 @@
-﻿#ifndef __WTDIVWIN_H__
-#define __WTDIVWIN_H__
+﻿#ifndef __WTBAMBOO_H__
+#define __WTBAMBOO_H__
 
-
-#include <stdint.h>
-#include <unistd.h>
-
-#include "WTOsBits.h"
-
-#if WT_OS_TYPE==OS_WIN32
-	#include <windows.h>
-
-    #define GLEW_STATIC 1
-
-	#include <glew.h>
-    #include <glext.h>
-    #include <wglext.h>
-    #include <GL/gl.h>
-
-    #include <al.h>
-    #include <alc.h>
-
-	#include "./Windows/WTWindowsKeyCodes.h"
-#endif
-
-#if WT_OS_TYPE==OS_LINUX
-	#include <GL/glxew.h>
-
-	#include <sys/time.h>
-
-	#include <X11/keysym.h>
-	#include <X11/Xlib.h>
-	#include <X11/X.h>
-
-#include <AL/al.h>
-#include <AL/alc.h>
-
-	#include "./Windows/WTXWindowsKeyCodes.h"
-#endif
-
-#include "./Global/WTDefinitions.h"
-#include "./Global/WTSettings.h"
-
-
-#include "./Global/WTSetDefinitions.h"
-#include "./Global/WTGameSettings.h"
-#include "./Global/IMFDefinitions.h"
-#include "./Global/WTcFlags.h"
-
-
-#include <typeinfo>
-
-//#include <GL/gl.h>
-
-
-
-
-#include <cmath>
-#include <cstring>
-#include <iostream>
-#include <fstream>
-#include <sstream>
-
-#include "./Global/GlobalPointers.h"
-#include "./Global/log.h"
-#include "./Global/CException.h"
-#include "./PTL/WTcSingleton.h"
-#include "./PTL/WTRadix.h"
-#include "./Windows/WTcSync.h"
-
-#include "./Windows/WTcWindow.h"
-
-#include "./PTL/WTLLTemplate.h"
-#include "./PTL/WTMinLinkedList.h"
-#include "./PTL/WTLimitedList.h"
-#include "./PTL/WTcPushPopStack.h"
-
-
-#include "./Maths/WTMath.h"
-#include "./Maths/WTcColors.h"
-#include "./Maths/WTcMatrix4.h"
-#include "./Maths/WTcPerspectiveMatrix.h"
-#include "./Maths/WTcMatrixStack.h"
-#include "./Maths/WTcCameraMatrix4.h"
-#include "./Files/WTString.h"
-
-#include "./Engine/WTcSignal.h"
-#include "./Engine/WTKernel.h"
-#include "./Engine/Process/WTcParentStack.h"
-#include "./Engine/Process/WTcProcess.h"
-#include "./Engine/WTcFrameRate.h"
-
-#include "./Files/WTvFile.h"
-#include "./Files/WTcFileHandler.h"
-#include "./Files/WTcFile.h"
-
-#include "./Files/Misc/WTcReferenceList.h"
-
-#include "./Files/WTcIMFLoader.h"
-
-#include "./Files/Meshes/MeshClasses/WTcVertex.h"
-#include "./Files/Meshes/MeshClasses/WTcPlane.h"
-#include "./Files/Meshes/MeshClasses/WTcFace.h"
-#include "./Files/Meshes/MeshClasses/WTcFullFaceData.h"
-#include "./Files/Meshes/MeshClasses/WTcPolygon.h"
-#include "./Files/Meshes/MeshClasses/WTcCluster.h"
-
-#include "./Physics/WTcCollisionBase.h"
-#include "./Files/CollisionMeshes/WTvCollisionData.h"
-//#include "./Files/CollisionMeshes/WTcCollisionMesh.h"
-
-#include "./Files/Textures/WTcTexture.h"
-#include "./Files/Fonts/WTcFont.h"
-
-#include "./Files/Shaders/WTcShader.h"
-#include "./Files/Shaders/WTcShaderVariables.h"
-#include "./Files/Shaders/WTcShaderProgram.h"
-#include "./Files/Shaders/WTcUserDefinedShaderVariable.h"
-
-
-#include "./Camera/FX/WTcFog.h"
-#include "./Camera/WTvRenderObject.h"
-#include "./Files/Meshes/WTcMesh.h"
-
-#include "./Files/Misc/WTcMeshTreeNode.h"
-#include "./Files/Misc/WTvMeshTree.h"
-#include "./Files/Misc/WTcMeshTree.h"
-
-#include "./Files/Meshes/WTv2DPolygon.h"
-
-#include "./Physics/WTcCollisionObject.h"
-
-#include "./Camera/WTcCamera.h"
-#include "./Camera/WTcRenderPointer.h"
-#include "./Camera/WTcRenderObject.h"
-
-#include "./Camera/Nodes/WTcRenderNode.h"
-
-#include "./Files/Meshes/WTcmLandscape.h"
-
-
-         #include "./Camera/FX/WTcMaterial.h"
-
-	 #include "./Camera/FX/WTvLight.h"
-	 #include "./Camera/WTcLightHandler.h"
-         #include "./Camera/FX/WTcLight.h"
-         #include "./Camera/FX/WTcSpotLight.h"
-
-         #include "./Camera/Renderable/WTcImage.h"
-         #include "./Camera/Renderable/WTcTextureText.h"
-         #include "./Camera/Renderable/WTcTexturedModel.h"
-         #include "./Camera/Renderable/WTcModelList.h"
-         #include "./Camera/Renderable/WTcLandscape.h"
-	 #include "./Camera/Renderable/WTcPoint.h"
-	 #include "./Camera/Renderable/WTcLine.h"
-	 #include "./Camera/Renderable/WTcParticleGroup.h"
-	 #include "./Camera/Renderable/WTcParticle.h"
-	 #include "./Camera/Renderable/WTcBeamMesh.h"
-	 #include "./Camera/Renderable/WTcButton.h"
-
-#include "./Camera/WTcPainter.h"
-
-#include "./Windows/EventHandler/WTcKeyStore.h"
-#include "./Windows/EventHandler/WTcMouse.h"
-#include "./Windows/EventHandler/WTcEventHandler.h"
-
-#include "./Audio/WTcAudioDevice.h"
-#include "./Audio/WTcAudioBuffer.h"
-#include "./Audio/WTcAudioObject.h"
-#include "./Files/Audio/WTcAudioData.h"
-#include "./Files/Audio/WTcSoundObject.h"
-
-#include "./Physics/WTcCollisionList.h"
-#include "./Physics/WTcCollisionHandler.h"
-
-#include "./Engine/WTcBase.h"
 
 
 /**
@@ -201,9 +28,7 @@
  * - Select '@EngineName Project' or '@EngineName Project Win'
  * - Follow the dialogues and give it its own folder.
  * - Insert Code
- **/
-
-/**
+ * .
  * \page ReferenceLists Reference Lists
  * This Section contains useful lists and information which may require regular visitation while using Bamboo.
  * -# \ref MacroListPage "List of Useful Macros"
@@ -314,11 +139,12 @@
  *  - _COLLISION_RENDER_LOOP(lpList,lpVar)
  *  	- This will start a Loop to step through a collision list. lpList should point to the Collision List and lpVar will point at the current Render object in the collision list.\n
  *  	.
+ *  .
  *
  * \section MatrixUsagePage Positioning, Rotating and Moving Objects.
  * cMatrix4.h \n
  *
- * The cMatrix4 class and cCameraMatrix classes are very similar. See the . The CameraMatrix maintains an inverted cMatrix4 matrix as the translations applied to the camera must be inverted to give the same effect as to normal objects. Otherwise the effects are the same for cMatrix4 and cCameraMatrix. \n
+ * The cMatrix4 class and cCameraMatrix classes are very similar. See the . The cCameraMatrix4 maintains an inverted cMatrix4 matrix as the translations applied to the camera must be inverted to give the same effect as to normal objects. Otherwise the effects are the same for cMatrix4 and cCameraMatrix. \n
  * Most Render Objects have inherited the cMatrix4 class meaning that these functions can be called to move and rotate Render Objects. Calling these functions, will apply the defined translations to the current object. Some are relative to the current translation and some are relative to the position of the Render Node controlling this object. Either way, the translations stack. \n
  * It is important to note that although the cCameraMatrix4 and cMatrix4 can interact with each other (and be set to match each other) cCameraMatrix4 is the inverse of cMatrix4. Also the order of rotations and postions to use the matrix is different. They can transfer rotations and positions between they types using the Equals and Copy functions. \n
  * \n
@@ -438,10 +264,10 @@
  * void cMatrix4::GRotateOrigin(float lfAngle) \n
  * void cMatrix4::GRotate(float lfAngle,float lfX,float lfY) \n
  *
- * \section CameraMatrixUsagePage Positioning, Rotating and Moving The Camera.
+ * \section CameraMatrixUsagePage Positioning, Rotating and Moving The Camera
  * cCameraMatrix4.h
  * \n
- * The cCameraMatrix4 is the matrix used for the camera. The format is different to the cMatrix4 class as it is used in a differnt manner. Many of the functions are called the same thing and have the same function.
+ * The cCameraMatrix4 is the matrix used for the camera. The format is different to the cMatrix4 class as it is used in a different manner. Many of the functions are called the same thing and have the same function.
  * It also has a few additional functions which are useful for Camera manipulation. \n
  * \n
  * float *cCameraMatrix4::Matrix() \n
@@ -643,44 +469,63 @@
  *
  * This Section contains the complete list of engine settings. They are all variables. Most can be modified during run time. Ones which cannot are listed here.
  *
- * WT_USE_PAINTER_ALGORITHM
- *	- This determines whether the system will render objects in the order they sit in the Render Tree, or to use the Painter Algorithm and sort them for speed. Should always be enabled.\n
- * WT_OPENGL_LIGHTS
- *	- This is the number of Lights that you wish OpenGL to use simultaneously to light an object.\n
- * USE_LIGHT_HANDLER
- *	- The light handler will determine the closest WT_OPENGL_LIGHTS to the object and render the object only using their influence. This allows the user to improve performance and / or use more lights than OpenGL can support. This should not be changed while running \n
- * WT_COLLISION_HANDLER_TYPE WT_COLLISION_HANDLER_TYPE_TYPE
- *	- This determines the Type of Collision handler used to sort Collisions. It can be set to either WT_COLLISION_HANDLER_TYPE_TYPE or WT_COLLISION_HANDLER_TYPE_BSP.\n
- * WT_RAY_ANGLE_RANGE
- *	- Ummmm, something to do with Ray Angles.\n
- * WT_COLLISION_HANDLER_SIZE
- *	- This will set the number of slots that the Collision Handler will use for filtering collisions. See relevant documentation.Should not be modified at runtime\n
- * WT_COLLISION_HANDLER_DIMENSIONS
- *	- This sets the number of dimensions the BSP Collision Handler should use (1,2 or 3) WT_COLLISION_HANDLER_DIMENSIONS_1D,WT_COLLISION_HANDLER_DIMENSIONS_2D, WT_COLLISION_HANDLER_DIMENSIONS_3D. This should not be modified at runtime\n
- * WT_COLLISION_SPACE_SIZE
- *	- This is the spatial size of each slot for the BSP. It should be at least (preferably more) than half the largest object size, that will be involved in collisions.\n
- * WT_DEFINE_OS
- *	- This is the OS that the engine is running under. So far OS_LINUX or OS_WINDOWS. This shgould be determined automatically when compiled.\n
- * _GRAVITY_X
- *	- This is the X Axis value of gravity, to be used by particle objects.\n
- * _GRAVITY_Y
- *	- This is the Y Axis value of gravity, to be used by particle objects.\n
- * _GRAVITY_Z
- *	- This is the Z Axis value of gravity, to be used by particle objects.\n
- * _WIND_X
- *	- This is the X Axis value of wind, to be used by particle objects.\n
- * _WIND_Y
- *	- This is the Y Axis value of wind, to be used by particle objects.\n
- * _WIND_Z
- *	- This is the Z Axis value of wind, to be used by particle objects.\n
- * WT_MAX_PARTICLES
- *	- This is the maximum particles that cParticleHandler should need to maintain at any one time. Should not be modifed at run time.\n
- * WT_PARTICLE_HANDLER_UPDATE_PARTICLE_POSITIONS
- *	- When true, the Particle handler will automatically update the particles speed and position based on Wind and Gravity.\n
- * WT_VERTEX_RANGE_CHECK_SIMILAR
- *	- This is the maximum allowed distance between verteces in a collision object for them to be counted as a single vertex.\n
- * WT_USE_PARENT_STACK
- *	- This will determine whether the system should automatically track each process' parent and children.Should not be used (At the moment)\n
+ * - WT_USE_PAINTER_ALGORITHM
+ *	- This determines whether the system will render objects in the order they sit in the Render Tree, or to use the Painter Algorithm and sort them for speed. Should always be enabled.
+ *  .
+ * - WT_OPENGL_LIGHTS
+ *	- This is the number of Lights that you wish OpenGL to use simultaneously to light an object.
+ *  .
+ * - USE_LIGHT_HANDLER
+ *	- The light handler will determine the closest WT_OPENGL_LIGHTS to the object and render the object only using their influence. This allows the user to improve performance and / or use more lights than OpenGL can support. This should not be changed while running
+ *  .
+ * - WT_COLLISION_HANDLER_TYPE WT_COLLISION_HANDLER_TYPE_TYPE
+ *	- This determines the Type of Collision handler used to sort Collisions. It can be set to either WT_COLLISION_HANDLER_TYPE_TYPE or WT_COLLISION_HANDLER_TYPE_BSP.
+ *  .
+ * - WT_RAY_ANGLE_RANGE
+ *	- This is the Angle Range for detecting whether a ray and polygon has collided. Should be smaller than 0.5 degrees. Large values will make the collisions more common.
+ *  .
+ * - WT_COLLISION_HANDLER_SIZE
+ *	- This will set the number of slots that the Collision Handler will use for filtering collisions. See relevant documentation.Should not be modified at runtime
+ *  .
+ * - WT_COLLISION_HANDLER_DIMENSIONS
+ *	- This sets the number of dimensions the BSP Collision Handler should use (1,2 or 3) WT_COLLISION_HANDLER_DIMENSIONS_1D,WT_COLLISION_HANDLER_DIMENSIONS_2D, WT_COLLISION_HANDLER_DIMENSIONS_3D. This should not be modified at runtime
+ *  .
+ * - WT_COLLISION_SPACE_SIZE
+ *	- This is the spatial size of each slot for the BSP. It should be at least (preferably more) than half the largest object size, that will be involved in collisions.
+ *  .
+ * - WT_DEFINE_OS
+ *	- This is the OS that the engine is running under. So far OS_LINUX or OS_WINDOWS. This shgould be determined automatically when compiled.
+ *  .
+ * - _GRAVITY_X
+ *	- This is the X Axis value of gravity, to be used by particle objects.
+ *  .
+ * - _GRAVITY_Y
+ *	- This is the Y Axis value of gravity, to be used by particle objects.
+ *  .
+ * - _GRAVITY_Z
+ *	- This is the Z Axis value of gravity, to be used by particle objects.
+ *  .
+ * - _WIND_X
+ *	- This is the X Axis value of wind, to be used by particle objects.
+ *  .
+ * - _WIND_Y
+ *	- This is the Y Axis value of wind, to be used by particle objects.
+ *  .
+ * - _WIND_Z
+ *	- This is the Z Axis value of wind, to be used by particle objects.
+ *  .
+ * - WT_MAX_PARTICLES
+ *	- This is the maximum particles that cParticleHandler should need to maintain at any one time. Should not be modifed at run time.
+ *  .
+ * - WT_PARTICLE_HANDLER_UPDATE_PARTICLE_POSITIONS
+ *	- When true, the Particle handler will automatically update the particles speed and position based on Wind and Gravity.
+ *  .
+ * - WT_VERTEX_RANGE_CHECK_SIMILAR
+ *	- This is the maximum allowed distance between verteces in a collision object for them to be counted as a single vertex.
+ *  .
+ * - WT_USE_PARENT_STACK
+ *	- This will determine whether the system should automatically track each process' parent and children.Should not be used (At the moment)
+ *  .
  *
  * \section ObjectsUsingTheCreateMacro List of Objects using or not using the Create Macro.
  * This section contains information of which objects which are handled by Bamboo. This means they should be created using the _CREATE() macro and killed with signals.
@@ -699,6 +544,7 @@
  *  - cPoint
  *  - cParticleGroup
  *  - cParticle
+ *  .
  * - cCollisionObject
  * - cAudioObject
  * .
@@ -721,6 +567,7 @@
  *  - cmLandscape
  *  - cShader
  *  - cShaderProgram
+ *  .
  * - cRGB
  * - cRGBA
  * - cCollisionList
@@ -801,7 +648,6 @@
 * - A \b pointer records the address location of another variable. See the section \ref BasicsPagePointers Pointers
 * - Most of the types listed above have sub types. There are also 'classes' which can be imagined as user defined types.
 * .
-* \n
 * Declaring a variable : \n
 *       The line must start with the type of variable, followed by the user defined name of the variable and finishing with a semicolon.
 * \code
@@ -846,7 +692,7 @@
 * int unsigned Order_Error;
 * \endcode
 *
-* Variables must be declared before use so the computer knows how to access and store the data.
+* Variables must be declared before use so the computer knows how to access and store the data. \n
 *
 * To write a value to a variable use the equals sign. The variable which will store the value goes to the left of the equals sign. The value which will be written to the variable goes to the right of the equals sign. \n
 * In the box/card model, this is equivalent to writing a value on a card and putting it into a box. Remember: Each variable can hold one number at a time - each box can only hold one card at a time.
@@ -1656,7 +1502,7 @@
 * In the template there is the main loop. Create a new project and look at the file main.cpp. In the file you will see the following code:
 *\code
 * //Using @EngineName in Windows
-* #include <WTDivWin.h>
+* #include <WTBamboo.h>
 *
 * //Windows Specific Main function. This will give access to inputs and windows signals.
 * int WINAPI WinMain (HINSTANCE hInstance,
@@ -1672,7 +1518,7 @@
 *\endcode
 *\code
 * //Using @EngineName in Linux
-* #include <WTDivWin.h>
+* #include <WTBamboo.h>
 *
 * //C++ standard main function.
 * int main ()
@@ -2297,8 +2143,8 @@
  * \endcode
  * These should be used to find the position of each vertex, there are several common ways to use the matrices (They should be used to find an objects position). The order of Matrix multiplications do matter. Using mmCombined is much more efficient but some shaders will want to use the camera and Projection matrices seperately.
  * \code
- * gl_Position=mmCombined*mmGlobal*gl_Vertex;
- * gl_Position=mmProjection*mmCamera*mmGlobal*gl_Vertex;
+ gl_Position=mmCombined*mmGlobal*gl_Vertex;
+ gl_Position=mmProjection*mmCamera*mmGlobal*gl_Vertex;
  * \endcode
  * For 2D Objects only the mmProjection and mmGlobal are passed. The mmCamera Matrix will always be an identity matrix for 2D objects.
  * Fragment Shaders control the render color of individual pixels. The Vertex shader is run once for every vertex in the model.
@@ -3522,7 +3368,7 @@ public:
 \endcode
 * \section CompleteNoCommentsBouncingBallExample Previous Example without comments
 * Same Code without comments to show amount of code required to make this simple game.
-*\code
+\code
  _PROCESS(cBall)
  {
  public:
@@ -3709,5 +3555,184 @@ public:
 * Probably less than 150 lines of code to make a simple game!
 */
 
+
+
+#include <stdint.h>
+#include <unistd.h>
+
+#include "./WTOsBits.h"
+
+#if WT_OS_TYPE==OS_WIN32
+	#include <windows.h>
+
+    #define GLEW_STATIC 1
+
+	#include <glew.h>
+    #include <glext.h>
+    #include <wglext.h>
+    #include <GL/gl.h>
+
+    #include <al.h>
+    #include <alc.h>
+
+	#include "./Windows/WTWindowsKeyCodes.h"
+#endif
+
+#if WT_OS_TYPE==OS_LINUX
+	#include <GL/glxew.h>
+
+	#include <sys/time.h>
+
+	#include <X11/keysym.h>
+	#include <X11/Xlib.h>
+	#include <X11/X.h>
+
+#include <AL/al.h>
+#include <AL/alc.h>
+
+	#include "./Windows/WTXWindowsKeyCodes.h"
+#endif
+
+#include "./Global/WTDefinitions.h"
+#include "./Global/WTSettings.h"
+
+
+#include "./Global/WTSetDefinitions.h"
+#include "./Global/WTGameSettings.h"
+#include "./Global/IMFDefinitions.h"
+#include "./Global/WTcFlags.h"
+
+
+#include <typeinfo>
+
+//#include <GL/gl.h>
+
+
+
+
+#include <cmath>
+#include <cstring>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+
+#include "./Global/GlobalPointers.h"
+#include "./Global/log.h"
+#include "./Global/CException.h"
+#include "./PTL/WTcSingleton.h"
+#include "./PTL/WTRadix.h"
+#include "./Windows/WTcSync.h"
+
+#include "./Windows/WTcWindow.h"
+
+#include "./PTL/WTLLTemplate.h"
+#include "./PTL/WTMinLinkedList.h"
+#include "./PTL/WTLimitedList.h"
+#include "./PTL/WTcPushPopStack.h"
+
+
+#include "./Maths/WTMath.h"
+#include "./Maths/WTcColors.h"
+#include "./Maths/WTcMatrix4.h"
+#include "./Maths/WTcPerspectiveMatrix.h"
+#include "./Maths/WTcMatrixStack.h"
+#include "./Maths/WTcCameraMatrix4.h"
+#include "./Files/WTString.h"
+
+#include "./Engine/WTcSignal.h"
+#include "./Engine/WTKernel.h"
+#include "./Engine/Process/WTcParentStack.h"
+#include "./Engine/Process/WTcProcess.h"
+#include "./Engine/WTcFrameRate.h"
+
+#include "./Files/WTvFile.h"
+#include "./Files/WTcFileHandler.h"
+#include "./Files/WTcFile.h"
+
+#include "./Files/Misc/WTcReferenceList.h"
+
+#include "./Files/WTcIMFLoader.h"
+
+#include "./Files/Meshes/MeshClasses/WTcVertex.h"
+#include "./Files/Meshes/MeshClasses/WTcPlane.h"
+#include "./Files/Meshes/MeshClasses/WTcFace.h"
+#include "./Files/Meshes/MeshClasses/WTcFullFaceData.h"
+#include "./Files/Meshes/MeshClasses/WTcPolygon.h"
+#include "./Files/Meshes/MeshClasses/WTcCluster.h"
+
+#include "./Physics/WTcCollisionBase.h"
+#include "./Files/CollisionMeshes/WTvCollisionData.h"
+#include "./Files/CollisionMeshes/WTcSphereCollision.h"
+#include "./Files/CollisionMeshes/WTcMeshCollision.h"
+#include "./Files/CollisionMeshes/WTcBeamCollision.h"
+#include "./Files/CollisionMeshes/WTcRayCollision.h"
+#include "./Files/CollisionMeshes/WTcMeshFileCollision.h"
+#include "./Files/CollisionMeshes/WTcCompoundCollision.h"
+
+#include "./Files/Textures/WTcTexture.h"
+#include "./Files/Fonts/WTcFont.h"
+
+#include "./Files/Shaders/WTcShader.h"
+#include "./Files/Shaders/WTcShaderVariables.h"
+#include "./Files/Shaders/WTcShaderProgram.h"
+#include "./Files/Shaders/WTcUserDefinedShaderVariable.h"
+
+
+#include "./Camera/FX/WTcFog.h"
+#include "./Camera/WTvRenderObject.h"
+#include "./Files/Meshes/WTcMesh.h"
+
+#include "./Files/Misc/WTcMeshTreeNode.h"
+#include "./Files/Misc/WTvMeshTree.h"
+#include "./Files/Misc/WTcMeshTree.h"
+
+#include "./Files/Meshes/WTv2DPolygon.h"
+
+#include "./Physics/WTcCollisionObject.h"
+
+#include "./Camera/WTcCamera.h"
+#include "./Camera/WTcRenderPointer.h"
+#include "./Camera/WTcRenderObject.h"
+
+#include "./Camera/Nodes/WTcRenderNode.h"
+
+#include "./Files/Meshes/WTcmLandscape.h"
+
+
+         #include "./Camera/FX/WTcMaterial.h"
+
+	 #include "./Camera/FX/WTvLight.h"
+	 #include "./Camera/WTcLightHandler.h"
+         #include "./Camera/FX/WTcLight.h"
+         #include "./Camera/FX/WTcSpotLight.h"
+
+         #include "./Camera/Renderable/WTcImage.h"
+         #include "./Camera/Renderable/WTcTextureText.h"
+         #include "./Camera/Renderable/WTcTexturedModel.h"
+         #include "./Camera/Renderable/WTcModelList.h"
+         #include "./Camera/Renderable/WTcLandscape.h"
+	 #include "./Camera/Renderable/WTcPoint.h"
+	 #include "./Camera/Renderable/WTcLine.h"
+	 #include "./Camera/Renderable/WTcParticleGroup.h"
+	 #include "./Camera/Renderable/WTcParticle.h"
+	 #include "./Camera/Renderable/WTcBeamMesh.h"
+	 #include "./Camera/Renderable/WTcButton.h"
+
+#include "./Camera/WTcPainter.h"
+
+#include "./Windows/EventHandler/WTcKeyStore.h"
+#include "./Windows/EventHandler/WTcMouse.h"
+#include "./Windows/EventHandler/WTcEventHandler.h"
+
+#include "./Audio/WTcAudioDevice.h"
+#include "./Audio/WTcAudioBuffer.h"
+#include "./Audio/WTcAudioObject.h"
+#include "./Files/Audio/WTcAudioData.h"
+#include "./Files/Audio/WTcSoundObject.h"
+
+#include "./Physics/WTcCollisionList.h"
+#include "./Physics/WTcCollisionHandler.h"
+
+#include "./Engine/WTcBase.h"
 
 #endif

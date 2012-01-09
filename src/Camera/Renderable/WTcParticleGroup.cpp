@@ -1,6 +1,6 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 
-
+#if WT_FULL_VERSION_BAMBOO
 
 	cParticleSettings &cParticleSettings::operator=(cParticleSettings &lpOther)
 	{
@@ -176,3 +176,4 @@ void cParticleForGroup::SetColor(cRGBA &lpRGB){Color=lpRGB;};
 	void cParticleForGroup::SetPosition(float *lpPos){memcpy(Position,lpPos,sizeof(float)*3);};
     void cParticleForGroup::UpdateFade(){Life-=FadeSpeed*WT_TIME_IND;};
 
+#endif

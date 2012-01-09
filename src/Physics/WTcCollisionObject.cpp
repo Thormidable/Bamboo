@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 
 float cCollisionObject::mfStaticSize[3]={0.0f,0.0f,0.0f};
@@ -77,6 +77,108 @@ bool cCollisionObject::Collision(cCollisionObject *lpOther)
 }
 
 
+cCollisionObject::~cCollisionObject()
+{
+
+	mbAlive=false;
+	mbAwake=false;
+	mpLinked=0;
+
+
+if(mpOwner){ cCollisionHandler::Instance()->RemoveFromList(mpOwner); mpOwner=0;}
+
+mpFollowing->LinkCollisionObject(0);
+
+
+};
+
+void cCollisionObject::AdditionalKillFunctionality()
+{
+    //delete this;
+}
+
+cCollisionObject::cCollisionObject(vRenderObject *lpFollow,cProcess *lpLinked,uint32 liFilterType)
+{
+
+		mpOwner=0;
+
+		mpLinked=0;
+		mpFollowing=0;
+
+	Initialise(lpFollow,lpLinked,liFilterType);
+	SetType(1.0f);
+
+};
+
+
+void cCollisionObject::Initialise(vRenderObject *lpFollow,cProcess *lpLinked,uint32 liFilterType)
+{
+
+	ClearProcedural();
+
+
+	if(mpOwner){ cCollisionHandler::Instance()->RemoveFromList(mpOwner); mpOwner=0;}
+
+
+	SetLink(lpLinked);
+
+	miType=0;
+	mbAlive=true;
+	mbAwake=true;
+	if(mpFollowing) mpFollowing->LinkCollisionObject(0);
+	mpFollowing=lpFollow;
+	mpFollowing->LinkCollisionObject(this);
+	miID=liFilterType;
+
+			mpOwner=cCollisionHandler::Instance()->Add(this);
+
+    mbCreatedThisFrame=true;
+
+}
+
+	cMatrix4& cCollisionObject::CacheMatrix(){return mpFollowing->mmCache;};
+	vRenderObject *cCollisionObject::RenderObject(){return mpFollowing;};
+	uint32 cCollisionObject::CollisionFilter(){return miID;};
+
+
+	bool cCollisionObject::CreatedThisFrame(){return mbCreatedThisFrame;};
+
+	void cCollisionObject::NotCreatedThisFrame(){mbCreatedThisFrame=false;};
+
+
+
+void cCollisionObject::Signal(SIGNAL liFlags)
+{
+
+	if(liFlags&WT_SIGNAL_VALUE_WAKE && Asleep())
+	{
+		if(mpObject) mbAwake=true;
+		else cCollisionBase::SetType(1.0f);
+
+		if(!mpOwner) mpOwner=cCollisionHandler::Instance()->Add(this);
+
+	}
+	if(liFlags&WT_SIGNAL_VALUE_SLEEP)
+	{
+		if(Awake())
+		{
+			mbAwake=false;
+
+			if(mpOwner){ cCollisionHandler::Instance()->RemoveFromList(mpOwner); mpOwner=0;}
+
+		}
+	}
+
+	if(liFlags&WT_SIGNAL_VALUE_KILL) {delete this;}
+
+}
+
+	bool cCollisionObject::SphereSphere(cCollisionObject *lpOther)
+	{
+        return SphereSphere(Sphere(),mpFollowing->mmCache,lpOther->Sphere(),lpOther->mpFollowing->mmCache);
+	};
+
+#if WT_FULL_VERSION_BAMBOO
 
 bool cCollisionObject::CheckCollision(cCollisionObject *lpOther)
 {
@@ -123,33 +225,6 @@ bool cCollisionObject::TouchCollision(cCollisionObject *lpOther)
 	}
 };
 
-cCollisionObject::~cCollisionObject()
-{
-
-	mbAlive=false;
-	mbAwake=false;
-	mpLinked=0;
-
-
-if(mpOwner){ cCollisionHandler::Instance()->RemoveFromList(mpOwner); mpOwner=0;}
-
-mpFollowing->LinkCollisionObject(0);
-
-
-};
-
-cCollisionObject::cCollisionObject(vRenderObject *lpFollow,cProcess *lpLinked,uint32 liFilterType)
-{
-
-		mpOwner=0;
-
-		mpLinked=0;
-		mpFollowing=0;
-
-	Initialise(lpFollow,lpLinked,liFilterType);
-	SetType(1.0f);
-
-};
 
 cCollisionObject::cCollisionObject(cBeamMesh *lpFollow,cProcess *lpLinked,uint32 liFilterType)
 {
@@ -162,40 +237,6 @@ cCollisionObject::cCollisionObject(cBeamMesh *lpFollow,cProcess *lpLinked,uint32
 	Initialise(lpFollow,lpLinked,liFilterType);
 	SetType(lpFollow);
 };
-
-void cCollisionObject::Initialise(vRenderObject *lpFollow,cProcess *lpLinked,uint32 liFilterType)
-{
-
-	ClearProcedural();
-
-
-	if(mpOwner){ cCollisionHandler::Instance()->RemoveFromList(mpOwner); mpOwner=0;}
-
-
-	SetLink(lpLinked);
-
-	miType=0;
-	mbAlive=true;
-	mbAwake=true;
-	if(mpFollowing) mpFollowing->LinkCollisionObject(0);
-	mpFollowing=lpFollow;
-	mpFollowing->LinkCollisionObject(this);
-	miID=liFilterType;
-
-			mpOwner=cCollisionHandler::Instance()->Add(this);
-
-    mbCreatedThisFrame=true;
-
-}
-
-	cMatrix4& cCollisionObject::CacheMatrix(){return mpFollowing->mmCache;};
-	vRenderObject *cCollisionObject::RenderObject(){return mpFollowing;};
-	uint32 cCollisionObject::CollisionFilter(){return miID;};
-
-
-	bool cCollisionObject::CreatedThisFrame(){return mbCreatedThisFrame;};
-
-	void cCollisionObject::NotCreatedThisFrame(){mbCreatedThisFrame=false;};
 
 cRayCollision *cCollisionObject::SetType(cRenderObject *lpObj)
 {
@@ -210,38 +251,6 @@ cRayCollision *cCollisionObject::SetType(cRenderObject *lpObj)
 };
 
 
-
-void cCollisionObject::Signal(SIGNAL liFlags)
-{
-
-	if(liFlags&WT_SIGNAL_VALUE_WAKE && Asleep())
-	{
-		if(mpObject) mbAwake=true;
-		else cCollisionBase::SetType(1.0f);
-
-		if(!mpOwner) mpOwner=cCollisionHandler::Instance()->Add(this);
-
-	}
-	if(liFlags&WT_SIGNAL_VALUE_SLEEP)
-	{
-		if(Awake())
-		{
-			mbAwake=false;
-
-			if(mpOwner){ cCollisionHandler::Instance()->RemoveFromList(mpOwner); mpOwner=0;}
-
-		}
-	}
-
-	if(liFlags&WT_SIGNAL_VALUE_KILL) {delete this;}
-
-}
-
-
-	bool cCollisionObject::SphereSphere(cCollisionObject *lpOther)
-	{
-        return SphereSphere(Sphere(),mpFollowing->mmCache,lpOther->Sphere(),lpOther->mpFollowing->mmCache);
-	};
 
 	bool cCollisionObject::ModelModel(cCollisionObject *lpOther)
 	{
@@ -270,3 +279,20 @@ void cCollisionObject::Signal(SIGNAL liFlags)
 	    if(Mesh()){return RayModel(lpOther->Beam(),(lpOther->mpFollowing->mmCache),Mesh(),(mpFollowing->mmCache));}
 	    else{return RayModel(Beam(),(mpFollowing->mmCache),lpOther->Mesh(),(lpOther->mpFollowing->mmCache));}
 	};
+
+#else
+
+bool cCollisionObject::CheckCollision(cCollisionObject *lpOther)
+{
+
+	if(Asleep() || lpOther->Asleep() || CreatedThisFrame() || lpOther->CreatedThisFrame()) return 0;
+	return TouchCollision(lpOther);
+
+}
+
+bool cCollisionObject::TouchCollision(cCollisionObject *lpOther)
+{
+		return SphereSphere(Sphere(),mpFollowing->mmCache,lpOther->Sphere(),lpOther->mpFollowing->mmCache);
+};
+
+#endif

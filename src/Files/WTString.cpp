@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 char *Find(char* lcPath,char *lcFind)
 {

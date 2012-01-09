@@ -1,5 +1,5 @@
 
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 #ifdef USE_LOGGING
 

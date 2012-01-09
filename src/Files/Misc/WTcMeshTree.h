@@ -8,6 +8,8 @@
 #define WT_MESHTREE_ROTATION 0x10
 #define WT_MESHTREE_TOPVALUE 0x20
 
+#if WT_FULL_VERSION_BAMBOO
+
 using namespace std;
 /**
 *\brief This will load the information from an IMF file to be handed to a cMeshTree()
@@ -55,5 +57,7 @@ public:
  ///This will calculate the spatial size of this cMeshTree()
  float FindSize();
 };
+
+#endif
 
 #endif

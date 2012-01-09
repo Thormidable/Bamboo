@@ -1,4 +1,4 @@
-#include "../../../WTDivWin.h"
+#include "../../../WTBamboo.h"
 //#include "../HList.h"
 
 bool cVertex::Similar(cVertex lpOther)

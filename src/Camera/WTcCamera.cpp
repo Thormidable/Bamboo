@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 cCamera::cCamera()
 {
@@ -88,14 +88,14 @@ cCamera *cCamera::Instance()
 	return mpInstance;
 }
 
-/// This will return a pointer to the scene graph.
+
 cRenderNode *cCamera::RenderList()
 {
   return mpRenderList;
 
 };
 
-/// This will return a virtual pointer to the the scene graph.
+
 vRenderObject *cCamera::vRenderList()
 {
   return (vRenderObject*)mpRenderList;

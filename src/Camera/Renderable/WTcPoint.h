@@ -1,5 +1,6 @@
 #ifndef __WTCPOINT_H__
 #define __WTCPOINT_H__
+
 /**
 * \brief A Renderable object for rendering single points.
 */

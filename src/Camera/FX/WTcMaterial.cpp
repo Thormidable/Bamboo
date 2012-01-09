@@ -1,5 +1,6 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 
+#if WT_FULL_VERSION_BAMBOO
 
 cMaterial::cMaterial()
 {
@@ -29,3 +30,4 @@ void cMaterial::PrepareMaterial()
  glMaterialfv(GL_FRONT, GL_SHININESS, mpShine);
 }
 
+#endif

@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="Windows\Debug\libBambooWin_d" prefix_auto="1" extension_auto="1" />
+				<Option output="C:\SilkCircuit\Bamboo\lib\libBambooWin_d" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj\Debug\" />
 				<Option type="2" />
@@ -17,7 +17,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="Windows\libBambooWin" prefix_auto="1" extension_auto="1" />
+				<Option output="C:\SilkCircuit\Bamboo\lib\libBambooWin" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj\Release\" />
 				<Option type="2" />
@@ -129,11 +129,22 @@
 		<Unit filename="src\Files\Audio\WTcAudioData.h" />
 		<Unit filename="src\Files\Audio\WTcSoundObject.cpp" />
 		<Unit filename="src\Files\Audio\WTcSoundObject.h" />
+		<Unit filename="src\Files\CollisionMeshes\WTcBeamCollision.cpp" />
+		<Unit filename="src\Files\CollisionMeshes\WTcBeamCollision.h" />
+		<Unit filename="src\Files\CollisionMeshes\WTcCompoundCollision.cpp" />
+		<Unit filename="src\Files\CollisionMeshes\WTcCompoundCollision.h" />
+		<Unit filename="src\Files\CollisionMeshes\WTcMeshCollision.cpp" />
+		<Unit filename="src\Files\CollisionMeshes\WTcMeshCollision.h" />
+		<Unit filename="src\Files\CollisionMeshes\WTcMeshFileCollision.cpp" />
+		<Unit filename="src\Files\CollisionMeshes\WTcMeshFileCollision.h" />
+		<Unit filename="src\Files\CollisionMeshes\WTcRayCollision.cpp" />
+		<Unit filename="src\Files\CollisionMeshes\WTcRayCollision.h" />
+		<Unit filename="src\Files\CollisionMeshes\WTcSphereCollision.cpp" />
+		<Unit filename="src\Files\CollisionMeshes\WTcSphereCollision.h" />
 		<Unit filename="src\Files\CollisionMeshes\WTvCollisionData.cpp" />
 		<Unit filename="src\Files\CollisionMeshes\WTvCollisionData.h" />
 		<Unit filename="src\Files\Fonts\WTcFont.cpp" />
 		<Unit filename="src\Files\Fonts\WTcFont.h" />
-		<Unit filename="src\Files\Fonts\WTvFont.h" />
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcCluster.cpp" />
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcCluster.h" />
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcFace.cpp" />
@@ -152,8 +163,6 @@
 		<Unit filename="src\Files\Meshes\WTcmLandscape.h" />
 		<Unit filename="src\Files\Meshes\WTv2DPolygon.cpp" />
 		<Unit filename="src\Files\Meshes\WTv2DPolygon.h" />
-		<Unit filename="src\Files\Meshes\WTvMesh.h" />
-		<Unit filename="src\Files\Meshes\WTvmLandscape.h" />
 		<Unit filename="src\Files\Misc\WTcMeshTree.cpp" />
 		<Unit filename="src\Files\Misc\WTcMeshTree.h" />
 		<Unit filename="src\Files\Misc\WTcMeshTreeNode.cpp" />
@@ -220,7 +229,7 @@
 		<Unit filename="src\Physics\WTcCollisionList.h" />
 		<Unit filename="src\Physics\WTcCollisionObject.cpp" />
 		<Unit filename="src\Physics\WTcCollisionObject.h" />
-		<Unit filename="src\WTDivWin.h" />
+		<Unit filename="src\WTBamboo.h" />
 		<Unit filename="src\WTOsBits.h" />
 		<Unit filename="src\Windows\EventHandler\WTcEventHandler.cpp" />
 		<Unit filename="src\Windows\EventHandler\WTcEventHandler.h" />
@@ -228,9 +237,6 @@
 		<Unit filename="src\Windows\EventHandler\WTcKeyStore.h" />
 		<Unit filename="src\Windows\EventHandler\WTcMouse.cpp" />
 		<Unit filename="src\Windows\EventHandler\WTcMouse.h" />
-		<Unit filename="src\Windows\ExtensionWrapper\glext.h" />
-		<Unit filename="src\Windows\ExtensionWrapper\glxext.h" />
-		<Unit filename="src\Windows\ExtensionWrapper\wglext.h" />
 		<Unit filename="src\Windows\WTWindowsKeyCodes.h" />
 		<Unit filename="src\Windows\WTXWindowsKeyCodes.h" />
 		<Unit filename="src\Windows\WTcSync.cpp" />

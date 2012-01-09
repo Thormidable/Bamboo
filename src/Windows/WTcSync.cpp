@@ -36,7 +36,7 @@ Copyright (c) 2007 Alice Blunt
 */
 
 
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 
 

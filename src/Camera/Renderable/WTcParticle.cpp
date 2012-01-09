@@ -1,4 +1,6 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
+
+#if WT_FULL_VERSION_BAMBOO
 
 cParticle::cParticle()
 {
@@ -215,3 +217,5 @@ cParticleHandler::~cParticleHandler()
   DeleteAll();
 
 };
+
+#endif

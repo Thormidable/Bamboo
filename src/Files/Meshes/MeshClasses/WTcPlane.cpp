@@ -1,4 +1,4 @@
-#include "../../../WTDivWin.h"
+#include "../../../WTBamboo.h"
 //#include "../HList.h"
 
 void cPlaneList::GeneratePlanes(float *lpVerteces,uint16 *lpFaces,uint32 liFaces)

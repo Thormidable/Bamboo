@@ -1,4 +1,6 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
+
+#if WT_FULL_VERSION_BAMBOO
 
 cMeshTreeArray::cMeshTreeArray()
 {
@@ -15,7 +17,7 @@ cMeshTreeArray::~cMeshTreeArray()
 
 cMeshTree::~cMeshTree()
 {
- if(mpList) delete []mpList; 
+ if(mpList) delete []mpList;
 }
 
 cMeshTree::cMeshTree(cMeshTreeArray *lpArray)
@@ -26,7 +28,7 @@ cMeshTree::cMeshTree(cMeshTreeArray *lpArray)
  }
  else
  {  mpFileName[0]=0; }
- 
+
  mpList=lpArray->mpList;
  miTreeLength=lpArray->miTreeLength;
  FindSize();
@@ -69,4 +71,4 @@ for(liListPos=0;liListPos<miTreeLength;++liListPos)
  return mfSize;
 }
 
-
+#endif

@@ -1,4 +1,6 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
+
+#if WT_FULL_VERSION_BAMBOO
 
 cLightHandler::cLightHandler()
 {
@@ -158,3 +160,5 @@ void cLightHandler::PrepareLight(cMatrix4 *lpObject)
  }
  else PrepareLight();
 }
+
+#endif

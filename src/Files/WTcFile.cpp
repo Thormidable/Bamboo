@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 #include <fstream>
 #include <cstdio>
 
@@ -8,10 +8,10 @@ using namespace std;
 cFile::cFile()
 {
 	mpFileName[0]=0;
-	
+
 	mpFileHandler=cFileHandler::Instance();
 	mpNode=mpFileHandler->Add(this);
-	
+
 }
 
 cFile::~cFile()

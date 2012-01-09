@@ -2,133 +2,148 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Release" />
 	<File name="src\Audio\WTcAudioBuffer.cpp" open="0" top="0" tabpos="24">
-		<Cursor position="132" topLine="0" />
+		<Cursor position="21" topLine="0" />
 	</File>
 	<File name="src\Audio\WTcAudioBuffer.h" open="0" top="0" tabpos="9">
 		<Cursor position="0" topLine="0" />
 	</File>
+	<File name="src\Audio\WTcAudioDevice.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="252" topLine="0" />
+	</File>
 	<File name="src\Audio\WTcAudioDevice.h" open="0" top="0" tabpos="11">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src\Audio\WTcAudioObject.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="2886" topLine="120" />
+	<File name="src\Audio\WTcAudioObject.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="1353" topLine="39" />
 	</File>
-	<File name="src\Audio\WTcAudioObject.h" open="1" top="0" tabpos="2">
-		<Cursor position="1327" topLine="30" />
+	<File name="src\Audio\WTcAudioObject.h" open="0" top="0" tabpos="5">
+		<Cursor position="1142" topLine="36" />
+	</File>
+	<File name="src\Camera\FX\WTcFog.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1250" topLine="53" />
+	</File>
+	<File name="src\Camera\FX\WTcFog.h" open="0" top="0" tabpos="0">
+		<Cursor position="1557" topLine="14" />
 	</File>
 	<File name="src\Camera\FX\WTcLight.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="139" topLine="0" />
+		<Cursor position="2806" topLine="72" />
 	</File>
 	<File name="src\Camera\FX\WTcLight.h" open="0" top="0" tabpos="3">
-		<Cursor position="2229" topLine="51" />
+		<Cursor position="3116" topLine="55" />
+	</File>
+	<File name="src\Camera\FX\WTcMaterial.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="601" topLine="2" />
+	</File>
+	<File name="src\Camera\FX\WTcMaterial.h" open="0" top="0" tabpos="0">
+		<Cursor position="859" topLine="0" />
 	</File>
 	<File name="src\Camera\FX\WTcSpotLight.cpp" open="0" top="0" tabpos="17">
-		<Cursor position="233" topLine="0" />
+		<Cursor position="58" topLine="0" />
 	</File>
-	<File name="src\Camera\FX\WTcSpotLight.h" open="1" top="0" tabpos="18">
-		<Cursor position="325" topLine="0" />
+	<File name="src\Camera\FX\WTcSpotLight.h" open="0" top="0" tabpos="18">
+		<Cursor position="477" topLine="0" />
 	</File>
-	<File name="src\Camera\FX\WTvLight.h" open="0" top="0" tabpos="10">
-		<Cursor position="368" topLine="0" />
+	<File name="src\Camera\FX\WTvLight.h" open="1" top="0" tabpos="6">
+		<Cursor position="45" topLine="0" />
 	</File>
-	<File name="src\Camera\Nodes\WTcRenderNode.cpp" open="1" top="0" tabpos="8">
-		<Cursor position="2259" topLine="127" />
+	<File name="src\Camera\Nodes\WTcRenderNode.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="1072" topLine="40" />
 	</File>
-	<File name="src\Camera\Nodes\WTcRenderNode.h" open="0" top="0" tabpos="20">
-		<Cursor position="3106" topLine="50" />
+	<File name="src\Camera\Nodes\WTcRenderNode.h" open="0" top="0" tabpos="19">
+		<Cursor position="2852" topLine="37" />
 	</File>
 	<File name="src\Camera\Renderable\WTcBeamMesh.cpp" open="0" top="0" tabpos="14">
-		<Cursor position="2502" topLine="128" />
+		<Cursor position="5019" topLine="204" />
 	</File>
 	<File name="src\Camera\Renderable\WTcBeamMesh.h" open="0" top="0" tabpos="30">
-		<Cursor position="1298" topLine="10" />
+		<Cursor position="947" topLine="19" />
 	</File>
-	<File name="src\Camera\Renderable\WTcButton.cpp" open="1" top="0" tabpos="12">
-		<Cursor position="533" topLine="72" />
+	<File name="src\Camera\Renderable\WTcButton.cpp" open="1" top="1" tabpos="7">
+		<Cursor position="480" topLine="29" />
 	</File>
 	<File name="src\Camera\Renderable\WTcButton.h" open="0" top="0" tabpos="3">
-		<Cursor position="2307" topLine="42" />
+		<Cursor position="2933" topLine="51" />
 	</File>
 	<File name="src\Camera\Renderable\WTcImage.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="0" topLine="36" />
+		<Cursor position="24" topLine="0" />
 	</File>
 	<File name="src\Camera\Renderable\WTcImage.h" open="0" top="0" tabpos="2">
-		<Cursor position="2564" topLine="0" />
+		<Cursor position="463" topLine="0" />
 	</File>
 	<File name="src\Camera\Renderable\WTcLandscape.cpp" open="0" top="0" tabpos="24">
-		<Cursor position="774" topLine="23" />
+		<Cursor position="1568" topLine="25" />
 	</File>
 	<File name="src\Camera\Renderable\WTcLandscape.h" open="0" top="0" tabpos="33">
-		<Cursor position="845" topLine="7" />
+		<Cursor position="1077" topLine="0" />
 	</File>
 	<File name="src\Camera\Renderable\WTcLine.cpp" open="0" top="0" tabpos="25">
-		<Cursor position="811" topLine="44" />
+		<Cursor position="24" topLine="0" />
 	</File>
 	<File name="src\Camera\Renderable\WTcLine.h" open="0" top="0" tabpos="34">
 		<Cursor position="702" topLine="29" />
 	</File>
 	<File name="src\Camera\Renderable\WTcModelList.cpp" open="0" top="0" tabpos="26">
-		<Cursor position="4420" topLine="193" />
+		<Cursor position="5399" topLine="221" />
 	</File>
 	<File name="src\Camera\Renderable\WTcModelList.h" open="0" top="0" tabpos="35">
-		<Cursor position="3643" topLine="72" />
+		<Cursor position="5656" topLine="123" />
 	</File>
 	<File name="src\Camera\Renderable\WTcParticle.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="654" topLine="24" />
+		<Cursor position="4069" topLine="190" />
 	</File>
 	<File name="src\Camera\Renderable\WTcParticle.h" open="0" top="0" tabpos="1">
-		<Cursor position="3515" topLine="60" />
+		<Cursor position="3568" topLine="68" />
 	</File>
 	<File name="src\Camera\Renderable\WTcParticleGroup.cpp" open="0" top="0" tabpos="27">
-		<Cursor position="2483" topLine="93" />
+		<Cursor position="4466" topLine="148" />
 	</File>
 	<File name="src\Camera\Renderable\WTcParticleGroup.h" open="0" top="0" tabpos="36">
-		<Cursor position="1852" topLine="61" />
+		<Cursor position="2073" topLine="69" />
 	</File>
-	<File name="src\Camera\Renderable\WTcPoint.cpp" open="0" top="0" tabpos="28">
-		<Cursor position="688" topLine="15" />
+	<File name="src\Camera\Renderable\WTcPoint.cpp" open="0" top="0" tabpos="18">
+		<Cursor position="823" topLine="24" />
 	</File>
-	<File name="src\Camera\Renderable\WTcPoint.h" open="0" top="0" tabpos="37">
-		<Cursor position="530" topLine="3" />
+	<File name="src\Camera\Renderable\WTcPoint.h" open="0" top="0" tabpos="22">
+		<Cursor position="48" topLine="0" />
 	</File>
 	<File name="src\Camera\Renderable\WTcTextureText.cpp" open="0" top="0" tabpos="10">
-		<Cursor position="855" topLine="0" />
+		<Cursor position="24" topLine="0" />
 	</File>
 	<File name="src\Camera\Renderable\WTcTextureText.h" open="0" top="0" tabpos="11">
 		<Cursor position="322" topLine="0" />
 	</File>
 	<File name="src\Camera\Renderable\WTcTexturedModel.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="550" topLine="0" />
+		<Cursor position="24" topLine="0" />
 	</File>
 	<File name="src\Camera\Renderable\WTcTexturedModel.h" open="0" top="0" tabpos="39">
 		<Cursor position="1092" topLine="0" />
 	</File>
-	<File name="src\Camera\WTcCamera.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="2792" topLine="93" />
+	<File name="src\Camera\WTcCamera.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="21" topLine="0" />
 	</File>
-	<File name="src\Camera\WTcCamera.h" open="1" top="0" tabpos="11">
+	<File name="src\Camera\WTcCamera.h" open="0" top="0" tabpos="11">
 		<Cursor position="4724" topLine="85" />
 	</File>
 	<File name="src\Camera\WTcLightHandler.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="1178" topLine="14" />
+		<Cursor position="3545" topLine="133" />
 	</File>
 	<File name="src\Camera\WTcLightHandler.h" open="0" top="0" tabpos="7">
-		<Cursor position="1726" topLine="5" />
+		<Cursor position="1800" topLine="36" />
 	</File>
-	<File name="src\Camera\WTcPainter.cpp" open="0" top="0" tabpos="14">
-		<Cursor position="6165" topLine="271" />
+	<File name="src\Camera\WTcPainter.cpp" open="0" top="0" tabpos="16">
+		<Cursor position="6167" topLine="281" />
 	</File>
-	<File name="src\Camera\WTcPainter.h" open="0" top="0" tabpos="16">
-		<Cursor position="2493" topLine="32" />
+	<File name="src\Camera\WTcPainter.h" open="0" top="0" tabpos="17">
+		<Cursor position="734" topLine="8" />
 	</File>
-	<File name="src\Camera\WTcRenderObject.cpp" open="1" top="0" tabpos="10">
-		<Cursor position="2830" topLine="143" />
+	<File name="src\Camera\WTcRenderObject.cpp" open="0" top="0" tabpos="10">
+		<Cursor position="742" topLine="41" />
 	</File>
-	<File name="src\Camera\WTcRenderObject.h" open="1" top="0" tabpos="14">
+	<File name="src\Camera\WTcRenderObject.h" open="0" top="0" tabpos="14">
 		<Cursor position="5079" topLine="82" />
 	</File>
 	<File name="src\Camera\WTcRenderPointer.cpp" open="0" top="0" tabpos="12">
-		<Cursor position="190" topLine="0" />
+		<Cursor position="21" topLine="0" />
 	</File>
 	<File name="src\Camera\WTcRenderPointer.h" open="0" top="0" tabpos="11">
 		<Cursor position="542" topLine="9" />
@@ -136,101 +151,179 @@
 	<File name="src\Camera\WTvRenderObject.h" open="0" top="0" tabpos="11">
 		<Cursor position="1449" topLine="18" />
 	</File>
+	<File name="src\Engine\Process\WTcParentStack.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="24" topLine="0" />
+	</File>
+	<File name="src\Engine\Process\WTcProcess.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="24" topLine="0" />
+	</File>
 	<File name="src\Engine\Process\WTcProcess.h" open="0" top="0" tabpos="0">
 		<Cursor position="1637" topLine="73" />
 	</File>
-	<File name="src\Engine\WTKernel.cpp" open="0" top="0" tabpos="15">
-		<Cursor position="1434" topLine="33" />
+	<File name="src\Engine\WTKernel.cpp" open="0" top="0" tabpos="9">
+		<Cursor position="946" topLine="41" />
 	</File>
 	<File name="src\Engine\WTKernel.h" open="0" top="0" tabpos="14">
-		<Cursor position="690" topLine="12" />
+		<Cursor position="635" topLine="0" />
 	</File>
 	<File name="src\Engine\WTcBase.cpp" open="0" top="0" tabpos="26">
-		<Cursor position="25" topLine="0" />
+		<Cursor position="21" topLine="0" />
 	</File>
 	<File name="src\Engine\WTcBase.h" open="0" top="0" tabpos="27">
 		<Cursor position="4740" topLine="120" />
 	</File>
-	<File name="src\Engine\WTcSignal.cpp" open="0" top="0" tabpos="9">
-		<Cursor position="65" topLine="0" />
+	<File name="src\Engine\WTcFrameRate.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="21" topLine="0" />
+	</File>
+	<File name="src\Engine\WTcSignal.cpp" open="0" top="0" tabpos="15">
+		<Cursor position="435" topLine="0" />
 	</File>
 	<File name="src\Files\Audio\WTcAudioData.cpp" open="0" top="0" tabpos="5">
-		<Cursor position="1402" topLine="13" />
+		<Cursor position="24" topLine="0" />
 	</File>
 	<File name="src\Files\Audio\WTcAudioData.h" open="0" top="0" tabpos="6">
 		<Cursor position="1050" topLine="3" />
 	</File>
 	<File name="src\Files\Audio\WTcSoundObject.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="311" topLine="0" />
+		<Cursor position="24" topLine="0" />
 	</File>
 	<File name="src\Files\Audio\WTcSoundObject.h" open="0" top="0" tabpos="8">
 		<Cursor position="0" topLine="0" />
 	</File>
+	<File name="src\Files\CollisionMeshes\WTcBeamCollision.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="881" topLine="2" />
+	</File>
+	<File name="src\Files\CollisionMeshes\WTcBeamCollision.h" open="0" top="0" tabpos="0">
+		<Cursor position="68" topLine="0" />
+	</File>
+	<File name="src\Files\CollisionMeshes\WTcCompoundCollision.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2293" topLine="51" />
+	</File>
+	<File name="src\Files\CollisionMeshes\WTcCompoundCollision.h" open="0" top="0" tabpos="0">
+		<Cursor position="3758" topLine="49" />
+	</File>
+	<File name="src\Files\CollisionMeshes\WTcMeshCollision.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="3402" topLine="88" />
+	</File>
+	<File name="src\Files\CollisionMeshes\WTcMeshCollision.h" open="0" top="0" tabpos="0">
+		<Cursor position="2169" topLine="23" />
+	</File>
+	<File name="src\Files\CollisionMeshes\WTcMeshFileCollision.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="609" topLine="0" />
+	</File>
+	<File name="src\Files\CollisionMeshes\WTcMeshFileCollision.h" open="0" top="0" tabpos="0">
+		<Cursor position="546" topLine="0" />
+	</File>
+	<File name="src\Files\CollisionMeshes\WTcRayCollision.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="808" topLine="0" />
+	</File>
+	<File name="src\Files\CollisionMeshes\WTcRayCollision.h" open="0" top="0" tabpos="0">
+		<Cursor position="990" topLine="0" />
+	</File>
+	<File name="src\Files\CollisionMeshes\WTcSphereCollision.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="583" topLine="0" />
+	</File>
+	<File name="src\Files\CollisionMeshes\WTcSphereCollision.h" open="0" top="0" tabpos="0">
+		<Cursor position="988" topLine="0" />
+	</File>
 	<File name="src\Files\CollisionMeshes\WTvCollisionData.cpp" open="0" top="0" tabpos="19">
-		<Cursor position="6342" topLine="194" />
+		<Cursor position="24" topLine="0" />
 	</File>
-	<File name="src\Files\CollisionMeshes\WTvCollisionData.h" open="0" top="0" tabpos="1">
-		<Cursor position="9472" topLine="219" />
+	<File name="src\Files\CollisionMeshes\WTvCollisionData.h" open="1" top="0" tabpos="5">
+		<Cursor position="793" topLine="7" />
 	</File>
-	<File name="src\Files\Fonts\WTcFont.cpp" open="1" top="0" tabpos="18">
-		<Cursor position="1199" topLine="24" />
+	<File name="src\Files\Fonts\WTcFont.cpp" open="0" top="0" tabpos="18">
+		<Cursor position="1324" topLine="21" />
 	</File>
 	<File name="src\Files\Fonts\WTcFont.h" open="0" top="0" tabpos="16">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src\Files\Fonts\WTvFont.h" open="1" top="0" tabpos="18">
-		<Cursor position="0" topLine="0" />
+	<File name="src\Files\Meshes\MeshClasses\WTcCluster.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="27" topLine="0" />
 	</File>
-	<File name="src\Files\Meshes\WTcMesh.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="1340" topLine="27" />
+	<File name="src\Files\Meshes\MeshClasses\WTcFace.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="27" topLine="0" />
+	</File>
+	<File name="src\Files\Meshes\MeshClasses\WTcFullFaceData.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="27" topLine="0" />
+	</File>
+	<File name="src\Files\Meshes\MeshClasses\WTcPlane.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="27" topLine="0" />
+	</File>
+	<File name="src\Files\Meshes\MeshClasses\WTcPolygon.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="27" topLine="0" />
+	</File>
+	<File name="src\Files\Meshes\MeshClasses\WTcVertex.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="27" topLine="0" />
+	</File>
+	<File name="src\Files\Meshes\WTcMesh.cpp" open="0" top="0" tabpos="22">
+		<Cursor position="24" topLine="0" />
 	</File>
 	<File name="src\Files\Meshes\WTcMesh.h" open="0" top="0" tabpos="4">
 		<Cursor position="4969" topLine="87" />
 	</File>
 	<File name="src\Files\Meshes\WTcmLandscape.cpp" open="0" top="0" tabpos="14">
-		<Cursor position="8477" topLine="403" />
+		<Cursor position="18383" topLine="842" />
 	</File>
 	<File name="src\Files\Meshes\WTcmLandscape.h" open="0" top="0" tabpos="13">
-		<Cursor position="1153" topLine="141" />
+		<Cursor position="6841" topLine="165" />
 	</File>
 	<File name="src\Files\Meshes\WTv2DPolygon.cpp" open="0" top="0" tabpos="10">
-		<Cursor position="456" topLine="9" />
+		<Cursor position="24" topLine="0" />
 	</File>
-	<File name="src\Files\Meshes\WTvMesh.h" open="0" top="0" tabpos="10">
-		<Cursor position="1271" topLine="10" />
+	<File name="src\Files\Misc\WTcMeshTree.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1835" topLine="43" />
+	</File>
+	<File name="src\Files\Misc\WTcMeshTree.h" open="0" top="0" tabpos="0">
+		<Cursor position="1895" topLine="32" />
+	</File>
+	<File name="src\Files\Misc\WTcMeshTreeNode.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="3033" topLine="98" />
+	</File>
+	<File name="src\Files\Misc\WTcMeshTreeNode.h" open="0" top="0" tabpos="0">
+		<Cursor position="1414" topLine="25" />
+	</File>
+	<File name="src\Files\Misc\WTcReferenceList.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="24" topLine="0" />
+	</File>
+	<File name="src\Files\Misc\WTvMeshTree.h" open="0" top="0" tabpos="0">
+		<Cursor position="955" topLine="10" />
 	</File>
 	<File name="src\Files\Shaders\WTcShader.cpp" open="0" top="0" tabpos="22">
-		<Cursor position="2810" topLine="105" />
+		<Cursor position="24" topLine="0" />
 	</File>
 	<File name="src\Files\Shaders\WTcShaderProgram.cpp" open="0" top="0" tabpos="23">
-		<Cursor position="2104" topLine="66" />
+		<Cursor position="24" topLine="0" />
 	</File>
-	<File name="src\Files\Shaders\WTcShaderProgram.h" open="1" top="0" tabpos="15">
+	<File name="src\Files\Shaders\WTcShaderProgram.h" open="0" top="0" tabpos="15">
 		<Cursor position="950" topLine="0" />
 	</File>
 	<File name="src\Files\Shaders\WTcShaderVariables.cpp" open="0" top="0" tabpos="12">
-		<Cursor position="8604" topLine="0" />
+		<Cursor position="24" topLine="0" />
 	</File>
-	<File name="src\Files\Shaders\WTcShaderVariables.h" open="1" top="0" tabpos="16">
+	<File name="src\Files\Shaders\WTcShaderVariables.h" open="0" top="0" tabpos="16">
 		<Cursor position="504" topLine="0" />
 	</File>
 	<File name="src\Files\Shaders\WTcUserDefinedShaderVariable.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="3225" topLine="152" />
+		<Cursor position="24" topLine="9" />
 	</File>
-	<File name="src\Files\Shaders\WTcUserDefinedShaderVariable.h" open="1" top="0" tabpos="13">
+	<File name="src\Files\Shaders\WTcUserDefinedShaderVariable.h" open="0" top="0" tabpos="13">
 		<Cursor position="953" topLine="0" />
 	</File>
-	<File name="src\Files\Textures\WTcTexture.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="1558" topLine="31" />
+	<File name="src\Files\Textures\WTcTexture.cpp" open="0" top="0" tabpos="23">
+		<Cursor position="397" topLine="27" />
 	</File>
-	<File name="src\Files\WTcFile.cpp" open="1" top="0" tabpos="18">
-		<Cursor position="0" topLine="0" />
+	<File name="src\Files\WTString.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="21" topLine="0" />
 	</File>
-	<File name="src\Files\WTcFileHandler.cpp" open="1" top="0" tabpos="19">
-		<Cursor position="126" topLine="0" />
+	<File name="src\Files\WTcFile.cpp" open="0" top="0" tabpos="18">
+		<Cursor position="21" topLine="0" />
 	</File>
-	<File name="src\Files\WTcIMFLoader.cpp" open="1" top="1" tabpos="20">
-		<Cursor position="241" topLine="0" />
+	<File name="src\Files\WTcFileHandler.cpp" open="0" top="0" tabpos="19">
+		<Cursor position="21" topLine="0" />
+	</File>
+	<File name="src\Files\WTcIMFLoader.cpp" open="0" top="0" tabpos="20">
+		<Cursor position="21" topLine="0" />
 	</File>
 	<File name="src\Files\WTcIMFLoader.h" open="0" top="0" tabpos="4">
 		<Cursor position="0" topLine="0" />
@@ -238,56 +331,59 @@
 	<File name="src\Global\IMFDefinitions.h" open="0" top="0" tabpos="17">
 		<Cursor position="704" topLine="0" />
 	</File>
-	<File name="src\Global\WTDefinitions.h" open="1" top="0" tabpos="4">
-		<Cursor position="4674" topLine="117" />
+	<File name="src\Global\WTDefinitions.h" open="0" top="0" tabpos="20">
+		<Cursor position="90" topLine="0" />
 	</File>
-	<File name="src\Global\WTSettings.cpp" open="0" top="0" tabpos="18">
-		<Cursor position="1906" topLine="44" />
+	<File name="src\Global\WTSettings.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="299" topLine="0" />
 	</File>
-	<File name="src\Global\WTSettings.h" open="0" top="0" tabpos="19">
-		<Cursor position="768" topLine="66" />
+	<File name="src\Global\WTSettings.h" open="0" top="0" tabpos="8">
+		<Cursor position="1114" topLine="15" />
+	</File>
+	<File name="src\Global\log.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="22" topLine="0" />
 	</File>
 	<File name="src\Global\log.h" open="0" top="0" tabpos="16">
 		<Cursor position="1294" topLine="42" />
 	</File>
 	<File name="src\Maths\WTMath.cpp" open="0" top="0" tabpos="16">
-		<Cursor position="4438" topLine="196" />
+		<Cursor position="21" topLine="0" />
 	</File>
-	<File name="src\Maths\WTMath.h" open="0" top="0" tabpos="8">
-		<Cursor position="1008" topLine="0" />
+	<File name="src\Maths\WTMath.h" open="0" top="0" tabpos="21">
+		<Cursor position="1570" topLine="66" />
 	</File>
-	<File name="src\Maths\WTcCameraMatrix4.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="28384" topLine="977" />
+	<File name="src\Maths\WTcCameraMatrix4.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="21" topLine="0" />
 	</File>
-	<File name="src\Maths\WTcCameraMatrix4.h" open="1" top="0" tabpos="6">
+	<File name="src\Maths\WTcCameraMatrix4.h" open="0" top="0" tabpos="6">
 		<Cursor position="1140" topLine="7" />
 	</File>
 	<File name="src\Maths\WTcColors.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="1806" topLine="12" />
+		<Cursor position="21" topLine="0" />
 	</File>
 	<File name="src\Maths\WTcColors.h" open="0" top="0" tabpos="5">
 		<Cursor position="2409" topLine="24" />
 	</File>
-	<File name="src\Maths\WTcMatrix4.cpp" open="1" top="0" tabpos="9">
-		<Cursor position="44397" topLine="1368" />
+	<File name="src\Maths\WTcMatrix4.cpp" open="0" top="0" tabpos="9">
+		<Cursor position="21" topLine="0" />
 	</File>
 	<File name="src\Maths\WTcMatrix4.h" open="0" top="0" tabpos="1">
-		<Cursor position="10508" topLine="211" />
+		<Cursor position="863" topLine="0" />
 	</File>
 	<File name="src\Maths\WTcMatrixStack.cpp" open="0" top="0" tabpos="17">
-		<Cursor position="344" topLine="0" />
+		<Cursor position="21" topLine="0" />
 	</File>
 	<File name="src\Maths\WTcMatrixStack.h" open="0" top="0" tabpos="0">
 		<Cursor position="546" topLine="0" />
 	</File>
 	<File name="src\Maths\WTcPerspectiveMatrix.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="2957" topLine="145" />
+		<Cursor position="21" topLine="0" />
 	</File>
 	<File name="src\Maths\WTcPerspectiveMatrix.h" open="0" top="0" tabpos="13">
 		<Cursor position="822" topLine="12" />
 	</File>
-	<File name="src\PTL\WTLLTemplate.h" open="0" top="0" tabpos="27">
-		<Cursor position="768" topLine="0" />
+	<File name="src\PTL\WTLLTemplate.h" open="0" top="0" tabpos="21">
+		<Cursor position="5734" topLine="200" />
 	</File>
 	<File name="src\PTL\WTLimitedList.h" open="0" top="0" tabpos="12">
 		<Cursor position="4930" topLine="19" />
@@ -298,53 +394,56 @@
 	<File name="src\PTL\WTMinLinkedList.h" open="0" top="0" tabpos="11">
 		<Cursor position="320" topLine="144" />
 	</File>
+	<File name="src\PTL\WTRadix.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="21" topLine="0" />
+	</File>
 	<File name="src\PTL\WTcSingleton.h" open="0" top="0" tabpos="28">
 		<Cursor position="58" topLine="0" />
 	</File>
-	<File name="src\Physics\WTcCollisionBase.cpp" open="0" top="0" tabpos="18">
-		<Cursor position="3066" topLine="101" />
+	<File name="src\Physics\WTcCollisionBase.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="17453" topLine="683" />
 	</File>
-	<File name="src\Physics\WTcCollisionBase.h" open="0" top="0" tabpos="4">
-		<Cursor position="5824" topLine="80" />
+	<File name="src\Physics\WTcCollisionBase.h" open="1" top="0" tabpos="4">
+		<Cursor position="1645" topLine="34" />
 	</File>
-	<File name="src\Physics\WTcCollisionHandler.cpp" open="0" top="0" tabpos="9">
-		<Cursor position="4570" topLine="182" />
+	<File name="src\Physics\WTcCollisionHandler.cpp" open="0" top="0" tabpos="14">
+		<Cursor position="2660" topLine="98" />
 	</File>
 	<File name="src\Physics\WTcCollisionHandler.h" open="0" top="0" tabpos="10">
 		<Cursor position="4020" topLine="47" />
 	</File>
 	<File name="src\Physics\WTcCollisionList.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="1080" topLine="36" />
+		<Cursor position="21" topLine="0" />
 	</File>
 	<File name="src\Physics\WTcCollisionList.h" open="0" top="0" tabpos="11">
 		<Cursor position="1995" topLine="24" />
 	</File>
-	<File name="src\Physics\WTcCollisionObject.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="1275" topLine="48" />
+	<File name="src\Physics\WTcCollisionObject.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="6942" topLine="267" />
 	</File>
-	<File name="src\Physics\WTcCollisionObject.h" open="0" top="0" tabpos="3">
-		<Cursor position="5236" topLine="111" />
+	<File name="src\Physics\WTcCollisionObject.h" open="1" top="0" tabpos="1">
+		<Cursor position="5148" topLine="129" />
 	</File>
-	<File name="src\WTDivWin.h" open="1" top="0" tabpos="17">
-		<Cursor position="111981" topLine="2257" />
+	<File name="src\WTBamboo.h" open="0" top="0" tabpos="6">
+		<Cursor position="152243" topLine="3633" />
 	</File>
 	<File name="src\WTOsBits.h" open="0" top="0" tabpos="9">
-		<Cursor position="426" topLine="0" />
+		<Cursor position="487" topLine="1" />
 	</File>
 	<File name="src\Windows\EventHandler\WTcEventHandler.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="249" topLine="0" />
+		<Cursor position="24" topLine="0" />
 	</File>
 	<File name="src\Windows\EventHandler\WTcEventHandler.h" open="0" top="0" tabpos="6">
 		<Cursor position="870" topLine="0" />
 	</File>
 	<File name="src\Windows\EventHandler\WTcKeyStore.cpp" open="0" top="0" tabpos="10">
-		<Cursor position="362" topLine="0" />
+		<Cursor position="24" topLine="0" />
 	</File>
 	<File name="src\Windows\EventHandler\WTcKeyStore.h" open="0" top="0" tabpos="0">
 		<Cursor position="465" topLine="0" />
 	</File>
 	<File name="src\Windows\EventHandler\WTcMouse.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="341" topLine="11" />
+		<Cursor position="24" topLine="0" />
 	</File>
 	<File name="src\Windows\EventHandler\WTcMouse.h" open="0" top="0" tabpos="7">
 		<Cursor position="952" topLine="15" />
@@ -355,8 +454,11 @@
 	<File name="src\Windows\WTXWindowsKeyCodes.h" open="0" top="0" tabpos="5">
 		<Cursor position="3248" topLine="60" />
 	</File>
-	<File name="src\Windows\WTcWindow.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="811" topLine="0" />
+	<File name="src\Windows\WTcSync.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="539" topLine="7" />
+	</File>
+	<File name="src\Windows\WTcWindow.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="402" topLine="119" />
 	</File>
 	<File name="src\Windows\WTcWindow.h" open="0" top="0" tabpos="4">
 		<Cursor position="405" topLine="0" />

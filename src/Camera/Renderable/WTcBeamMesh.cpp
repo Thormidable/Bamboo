@@ -1,4 +1,6 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
+
+#if WT_FULL_VERSION_BAMBOO
 
 cBeamMesh::~cBeamMesh()
 {
@@ -230,3 +232,4 @@ void cBeamMesh::GenerateData(float Radius,float Length,uint16 Segments)
 	 18,19,20,21,22,23,24,25
  };
  */
+#endif

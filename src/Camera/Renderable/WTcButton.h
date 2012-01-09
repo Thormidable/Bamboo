@@ -1,6 +1,8 @@
 #ifndef __WTCBUTTON_H__
 #define __WTCBUTTON_H__
 
+#if WT_FULL_VERSION_BAMBOO
+
 /**
  * \brief Base Class for Buttons. Contains code for detecting Mouse Hover, Button is Pressed and Clicked.
  * Contains basic code for Button functionality. See cButton and cTextButton for specific instances.
@@ -76,3 +78,5 @@ public:
 };
 
 #endif // __WTCBUTTON_H__
+
+#endif

@@ -1,4 +1,4 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 
 void cUserVariable::SetID(int32 liID)
 {

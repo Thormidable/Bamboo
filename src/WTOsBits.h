@@ -28,7 +28,7 @@
 #elif defined(__x86_64__)
    #define WT_OS_BITS OS_64_BIT
 #else
-	#warning comment Base Pointer size undetectable for your archetecture. Needs to be set manually in WTDivWin.h . Library may need recompiling.
+	#warning comment Base Pointer size undetectable for your archetecture. Needs to be set manually in WTBamboo.h . Library may need recompiling.
 #endif
 
 //Manual def of OS Type.

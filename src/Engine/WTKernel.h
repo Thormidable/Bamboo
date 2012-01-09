@@ -1,7 +1,6 @@
 #ifndef __WTKERNEL_H__
 #define __WTKERNEL_H__
 
-#include "../WTDivWin.h"
 
 
 

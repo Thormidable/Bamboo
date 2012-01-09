@@ -1,6 +1,8 @@
 #ifndef __WTCMODELLIST_H__
 #define __WTCMODELLIST_H__
 
+#if WT_FULL_VERSION_BAMBOO
+
 #define WT_MODELLIST_NEWLEVEL 0xFF
 
 class cModelList;
@@ -146,5 +148,7 @@ void SetMesh(uint32 liPos, cMesh *lpMesh);
 
 
 };
+
+#endif
 
 #endif

@@ -1,4 +1,4 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 
 float v2DPolygon::mpVertex[12]=
 {
@@ -18,7 +18,7 @@ float v2DPolygon::mpTextCoords[8]=
  0.0f,1.0f,
  0.0f,0.0f
 };
- 
+
 float v2DPolygon::mpNormals[12]=
 {
  0.0f,0.0f,1.0f,

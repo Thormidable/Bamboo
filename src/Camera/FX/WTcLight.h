@@ -1,5 +1,7 @@
 #ifndef __WTCLIGHT_H__
 #define __WTCLIGHT_H__
+
+#if WT_FULL_VERSION_BAMBOO
 // Creates an OpenGL light effect
 class cLight : public vLight
 {
@@ -80,5 +82,6 @@ protected:
 	void Signal(SIGNAL lsSignal);
 
 };
+#endif
 
 #endif

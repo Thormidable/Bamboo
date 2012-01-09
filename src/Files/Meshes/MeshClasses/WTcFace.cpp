@@ -1,4 +1,4 @@
-#include "../../../WTDivWin.h"
+#include "../../../WTBamboo.h"
 //#include "../HList.h"
 
 
@@ -28,7 +28,7 @@ void cFace::OutputIMFFace(ofstream &FileStream)
 	Verteces[0].OutputIMFVertex(FileStream);
 	Verteces[1].OutputIMFVertex(FileStream);
 	Verteces[2].OutputIMFVertex(FileStream);
-	
+
 	Plane.OutputIMFPlane(FileStream);
 };
 
@@ -37,6 +37,6 @@ void cFace::LoadIMFFace(ifstream &FileStream)
 	Verteces[0].LoadIMFVertex(FileStream);
 	Verteces[1].LoadIMFVertex(FileStream);
 	Verteces[2].LoadIMFVertex(FileStream);
-	
+
 	Plane.LoadIMFPlane(FileStream);
 };

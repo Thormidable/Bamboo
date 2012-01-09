@@ -1,4 +1,4 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 #include <cmath>
 
 bool cImage::mbFirst=1;

@@ -1,4 +1,4 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 
 uint32 cShaderVariables::GetUniformPosition(string Name)
 {

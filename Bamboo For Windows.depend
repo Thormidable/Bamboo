@@ -1139,8 +1139,8 @@
 1320932372 source:e:\my documents\c++ code\bamboo\bamboowin\bamboo\src\files\audio\wtcsoundobject.cpp
 	"../../WTDivWin.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiobuffer.cpp
-	"../WTDivWin.h"
+1326071679 source:e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiobuffer.cpp
+	"../WTBamboo.h"
 
 1326025338 e:\my documents\c++ code\bamboo\bamboo\src\wtdivwin.h
 	<stdint.h>
@@ -1275,9 +1275,9 @@
 
 1321873341 e:\my documents\c++ code\bamboo\bamboo\src\windows\wtxwindowskeycodes.h
 
-1325456780 e:\my documents\c++ code\bamboo\bamboo\src\global\wtdefinitions.h
+1326131775 e:\my documents\c++ code\bamboo\bamboo\src\global\wtdefinitions.h
 
-1325003631 e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.h
+1326124599 e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\global\wtsetdefinitions.h
 
@@ -1313,15 +1313,15 @@
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtcpushpopstack.h
 
-1324912978 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtmath.h
+1326039111 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtmath.h
 
-1325895134 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrix4.h
+1326122321 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrix4.h
 
 1321362966 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcperspectivematrix.h
 
 1323181541 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrixstack.h
 
-1326024601 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccameramatrix4.h
+1326125795 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccameramatrix4.h
 
 1318429910 e:\my documents\c++ code\bamboo\bamboo\src\files\wtstring.h
 
@@ -1329,8 +1329,7 @@
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtvprocess.h
 
-1323191877 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtkernel.h
-	"../WTDivWin.h"
+1326072414 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtkernel.h
 
 1323189121 e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcparentstack.h
 
@@ -1360,7 +1359,7 @@
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtccluster.h
 
-1325458644 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.h
+1326133111 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtvtexture.h
 
@@ -1382,7 +1381,7 @@
 
 1323189382 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.h
 
-1323186160 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcfog.h
+1326131892 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcfog.h
 
 1325004918 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtvrenderobject.h
 
@@ -1390,15 +1389,15 @@
 
 1323188919 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmesh.h
 
-1323189445 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtreenode.h
+1326132110 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtreenode.h
 
-1323191997 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtvmeshtree.h
+1326132117 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtvmeshtree.h
 
-1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtree.h
+1326132103 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtree.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtv2dpolygon.h
 
-1325452423 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.h
+1326132882 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.h
 
 1326024387 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.h
 
@@ -1410,17 +1409,17 @@
 
 1321959800 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtvmlandscape.h
 
-1323189605 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmlandscape.h
+1326131988 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmlandscape.h
 
-1323191231 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcmaterial.h
+1326131918 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcmaterial.h
 
-1325899456 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtvlight.h
+1326133287 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtvlight.h
 
-1325898557 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtclighthandler.h
+1326131948 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtclighthandler.h
 
-1325901473 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtclight.h
+1326131909 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtclight.h
 
-1325900351 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcspotlight.h
+1326131926 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcspotlight.h
 
 1325080485 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcimage.h
 
@@ -1428,19 +1427,19 @@
 
 1325004431 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturedmodel.h
 
-1325004376 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodellist.h
+1326132043 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodellist.h
 
-1325004349 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtclandscape.h
+1326132030 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtclandscape.h
 
-1325004418 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.h
+1326132067 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.h
 
 1325004357 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcline.h
 
-1325004411 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.h
+1326132058 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.h
 
-1325004918 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticle.h
+1326132051 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticle.h
 
-1325004310 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.h
+1326132085 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.h
 
 1325853289 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcpainter.h
 
@@ -1452,9 +1451,9 @@
 
 1323191231 e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiodevice.h
 
-1323191231 e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiobuffer.h
+1326123392 e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiobuffer.h
 
-1326018135 e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudioobject.h
+1326123380 e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudioobject.h
 
 1320930707 e:\my documents\c++ code\bamboo\bamboo\src\files\audio\wtcaudiodata.h
 
@@ -1466,219 +1465,219 @@
 
 1323278591 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcbase.h
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiodevice.cpp
-	"../WTDivWin.h"
+1326071689 source:e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudiodevice.cpp
+	"../WTBamboo.h"
 
-1326019074 source:e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudioobject.cpp
-	"../WTDivWin.h"
+1326117242 source:e:\my documents\c++ code\bamboo\bamboo\src\audio\wtcaudioobject.cpp
+	"../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcfog.cpp
-	"../../WTDivWin.h"
+1326132218 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcfog.cpp
+	"../../WTBamboo.h"
 
-1325900380 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtclight.cpp
-	"../../WTDivWin.h"
+1326132225 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtclight.cpp
+	"../../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcmaterial.cpp
-	"../../WTDivWin.h"
+1326132232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcmaterial.cpp
+	"../../WTBamboo.h"
 
-1325900445 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcspotlight.cpp
-	"../../WTDivWin.h"
+1326132242 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcspotlight.cpp
+	"../../WTBamboo.h"
 
-1325004997 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\nodes\wtcrendernode.cpp
-	"../../WTDivWin.h"
+1326072230 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\nodes\wtcrendernode.cpp
+	"../../WTBamboo.h"
 
-1325458543 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.cpp
-	"../../WTDivWin.h"
+1326072231 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.cpp
+	"../../WTBamboo.h"
 
-1325080517 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcimage.cpp
-	"../../WTDivWin.h"
+1326072232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcimage.cpp
+	"../../WTBamboo.h"
 	<cmath>
 
-1325159414 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtclandscape.cpp
-	"../../WTDivWin.h"
+1326072232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtclandscape.cpp
+	"../../WTBamboo.h"
 
-1325004162 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcline.cpp
-	"../../WTDivWin.h"
+1326072232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcline.cpp
+	"../../WTBamboo.h"
 
-1325337660 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodellist.cpp
-	"../../WTDivWin.h"
+1326072232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodellist.cpp
+	"../../WTBamboo.h"
 
-1325004224 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticle.cpp
-	"../../WTDivWin.h"
+1326072232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticle.cpp
+	"../../WTBamboo.h"
 
-1325159449 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.cpp
-	"../../WTDivWin.h"
+1326072232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.cpp
+	"../../WTBamboo.h"
 
-1325004256 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.cpp
-	"../../WTDivWin.h"
+1326113313 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.cpp
+	"../../WTBamboo.h"
 
-1325081277 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturetext.cpp
-	"../../WTDivWin.h"
+1326072232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturetext.cpp
+	"../../WTBamboo.h"
 
-1325004296 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturedmodel.cpp
-	"../../WTDivWin.h"
+1326072232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturedmodel.cpp
+	"../../WTBamboo.h"
 
-1326024362 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.cpp
-	"../WTDivWin.h"
+1326123487 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.cpp
+	"../WTBamboo.h"
 
-1325899718 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtclighthandler.cpp
-	"../WTDivWin.h"
+1326072232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtclighthandler.cpp
+	"../WTBamboo.h"
 
-1325901503 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcpainter.cpp
-	"../WTDivWin.h"
+1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcpainter.cpp
+	"../WTBamboo.h"
 
-1326025234 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderobject.cpp
-	"../WTDivWin.h"
+1326115261 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderobject.cpp
+	"../WTBamboo.h"
 
-1323190163 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderpointer.cpp
-	"../WTDivWin.h"
+1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderpointer.cpp
+	"../WTBamboo.h"
 
-1323189132 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcparentstack.cpp
-	"../../WTDivWin.h"
+1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcparentstack.cpp
+	"../../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcprocess.cpp
-	"../../WTDivWin.h"
+1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcprocess.cpp
+	"../../WTBamboo.h"
 
-1325003433 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtkernel.cpp
-	"../WTDivWin.h"
+1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtkernel.cpp
+	"../WTBamboo.h"
 
-1323278593 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcbase.cpp
-	"../WTDivWin.h"
+1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcbase.cpp
+	"../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcframerate.cpp
-	"../WTDivWin.h"
+1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcframerate.cpp
+	"../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcsignal.cpp
-	"../WTDivWin.h"
+1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcsignal.cpp
+	"../WTBamboo.h"
 
-1320930838 source:e:\my documents\c++ code\bamboo\bamboo\src\files\audio\wtcaudiodata.cpp
-	"../../WTDivWin.h"
+1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\files\audio\wtcaudiodata.cpp
+	"../../WTBamboo.h"
 
-1320932372 source:e:\my documents\c++ code\bamboo\bamboo\src\files\audio\wtcsoundobject.cpp
-	"../../WTDivWin.h"
+1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\files\audio\wtcsoundobject.cpp
+	"../../WTBamboo.h"
 
-1325458138 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.cpp
-	"../../WTDivWin.h"
+1326130858 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.cpp
+	"../../WTBamboo.h"
 
-1322822929 source:e:\my documents\c++ code\bamboo\bamboo\src\files\fonts\wtcfont.cpp
-	"../../WTDivWin.h"
+1326071927 source:e:\my documents\c++ code\bamboo\bamboo\src\files\fonts\wtcfont.cpp
+	"../../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtccluster.cpp
-	"../../../WTDivWin.h"
+1326072234 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtccluster.cpp
+	"../../../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcface.cpp
-	"../../../WTDivWin.h"
+1326072234 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcface.cpp
+	"../../../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcfullfacedata.cpp
-	"../../../WTDivWin.h"
+1326072234 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcfullfacedata.cpp
+	"../../../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcplane.cpp
-	"../../../WTDivWin.h"
+1326072234 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcplane.cpp
+	"../../../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcpolygon.cpp
-	"../../../WTDivWin.h"
+1326072234 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcpolygon.cpp
+	"../../../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcvertex.cpp
-	"../../../WTDivWin.h"
+1326072234 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcvertex.cpp
+	"../../../WTBamboo.h"
 
-1325860538 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmesh.cpp
-	"../../WTDivWin.h"
+1326072231 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmesh.cpp
+	"../../WTBamboo.h"
 
-1325159549 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmlandscape.cpp
-	"../../WTDivWin.h"
+1326072234 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmlandscape.cpp
+	"../../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtv2dpolygon.cpp
-	"../../WTDivWin.h"
+1326072234 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtv2dpolygon.cpp
+	"../../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtree.cpp
-	"../../WTDivWin.h"
+1326072234 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtree.cpp
+	"../../WTBamboo.h"
 
-1323189874 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtreenode.cpp
-	"../../WTDivWin.h"
+1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtreenode.cpp
+	"../../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcreferencelist.cpp
-	"../../WTDivWin.h"
+1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcreferencelist.cpp
+	"../../WTBamboo.h"
 
-1325900820 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshader.cpp
-	"../../WTDivWin.h"
+1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshader.cpp
+	"../../WTBamboo.h"
 
-1325337221 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.cpp
-	"../../WTDivWin.h"
+1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.cpp
+	"../../WTBamboo.h"
 
-1321873474 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshadervariables.cpp
-	"../../WTDivWin.h"
+1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshadervariables.cpp
+	"../../WTBamboo.h"
 
-1323189925 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.cpp
-	"../../WTDivWin.h"
+1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.cpp
+	"../../WTBamboo.h"
 
-1321534365 source:e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtctexture.cpp
-	"../../WTDivWin.h"
+1326071661 source:e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtctexture.cpp
+	"../../WTBamboo.h"
 
-1318432896 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtstring.cpp
-	"../WTDivWin.h"
+1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtstring.cpp
+	"../WTBamboo.h"
 
-1318584601 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtcfile.cpp
-	"../WTDivWin.h"
+1326072231 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtcfile.cpp
+	"../WTBamboo.h"
 	<fstream>
 	<cstdio>
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtcfilehandler.cpp
-	"../WTDivWin.h"
+1326072231 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtcfilehandler.cpp
+	"../WTBamboo.h"
 
-1325900821 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtcimfloader.cpp
-	"../WTDivWin.h"
+1326072231 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtcimfloader.cpp
+	"../WTBamboo.h"
 
-1325003586 source:e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.cpp
-	"../WTDivWin.h"
+1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.cpp
+	"../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\global\log.cpp
-	"../WTDivWin.h"
+1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\global\log.cpp
+	"../WTBamboo.h"
 
-1324746490 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtmath.cpp
-	"../WTDivWin.h"
+1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtmath.cpp
+	"../WTBamboo.h"
 
-1326024599 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccameramatrix4.cpp
-	"../WTDivWin.h"
+1326072230 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccameramatrix4.cpp
+	"../WTBamboo.h"
 	<cmath>
 
-1326023202 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrix4.cpp
-	"../WTDivWin.h"
+1326072230 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrix4.cpp
+	"../WTBamboo.h"
 
-1318416017 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrixstack.cpp
-	"../WTDivWin.h"
+1326072236 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrixstack.cpp
+	"../WTBamboo.h"
 
-1325079169 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcperspectivematrix.cpp
-	"../WTDivWin.h"
+1326072236 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcperspectivematrix.cpp
+	"../WTBamboo.h"
 
-1318401353 source:e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtradix.cpp
-	"../WTDivWin.h"
+1326072236 source:e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtradix.cpp
+	"../WTBamboo.h"
 
-1325458338 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionhandler.cpp
-	"../WTDivWin.h"
+1326072236 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionhandler.cpp
+	"../WTBamboo.h"
 
-1323190093 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionlist.cpp
-	"../WTDivWin.h"
+1326072236 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionlist.cpp
+	"../WTBamboo.h"
 
-1325455901 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.cpp
-	"../WTDivWin.h"
+1326111973 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.cpp
+	"../WTBamboo.h"
 
-1321871059 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtceventhandler.cpp
-	"../../WTDivWin.h"
+1326072236 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtceventhandler.cpp
+	"../../WTBamboo.h"
 
-1321887241 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtckeystore.cpp
-	"../../WTDivWin.h"
+1326072236 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtckeystore.cpp
+	"../../WTBamboo.h"
 
-1325079160 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtcmouse.cpp
-	"../../WTDivWin.h"
+1326072236 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtcmouse.cpp
+	"../../WTBamboo.h"
 
-1321224803 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcsync.cpp
+1326072237 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcsync.cpp
 	<windows.h>
 	<unistd.h>
 	<sys/time.h>
-	"../WTDivWin.h"
+	"../WTBamboo.h"
 
-1326019160 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcwindow.cpp
-	"../WTDivWin.h"
+1326072230 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcwindow.cpp
+	"../WTBamboo.h"
 
 1165588258 c:\program files\openal 1.1 sdk\include\al.h
 
@@ -5466,22 +5465,156 @@
 
 1235994322 e:\my documents\c++ code\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\operator_bool.hpp
 
-1322135518 e:\my documents\c++ code\bamboo\bamboo\src\wtosbits.h
+1326072317 e:\my documents\c++ code\bamboo\bamboo\src\wtosbits.h
 
-1325082010 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbutton.h
+1326132014 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbutton.h
 
 1325895520 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccolors.h
 
-1325239036 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbutton.cpp
-	"../../WTDivWin.h"
+1326072231 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbutton.cpp
+	"../../WTBamboo.h"
 
-1325895486 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccolors.cpp
-	"../WTDivWin.h"
+1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccolors.cpp
+	"../WTBamboo.h"
 
-1325455978 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionbase.h
+1326132874 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionbase.h
 
-1325456504 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionbase.cpp
-	"../WTDivWin.h"
+1326072236 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionbase.cpp
+	"../WTBamboo.h"
 
 1325903167 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtcsingleton.h
+
+1326130937 e:\my documents\c++ code\bamboo\bamboo\src\wtbamboo.h
+	<stdint.h>
+	<unistd.h>
+	"./WTOsBits.h"
+	<windows.h>
+	<glew.h>
+	<glext.h>
+	<wglext.h>
+	<GL/gl.h>
+	<al.h>
+	<alc.h>
+	"./Windows/WTWindowsKeyCodes.h"
+	<GL/glxew.h>
+	<sys/time.h>
+	<X11/keysym.h>
+	<X11/Xlib.h>
+	<X11/X.h>
+	<AL/al.h>
+	<AL/alc.h>
+	"./Windows/WTXWindowsKeyCodes.h"
+	"./Global/WTDefinitions.h"
+	"./Global/WTSettings.h"
+	"./Global/WTSetDefinitions.h"
+	"./Global/WTGameSettings.h"
+	"./Global/IMFDefinitions.h"
+	"./Global/WTcFlags.h"
+	<typeinfo>
+	<cmath>
+	<cstring>
+	<iostream>
+	<fstream>
+	<sstream>
+	"./Global/GlobalPointers.h"
+	"./Global/log.h"
+	"./Global/CException.h"
+	"./PTL/WTcSingleton.h"
+	"./PTL/WTRadix.h"
+	"./Windows/WTcSync.h"
+	"./Windows/WTcWindow.h"
+	"./PTL/WTLLTemplate.h"
+	"./PTL/WTMinLinkedList.h"
+	"./PTL/WTLimitedList.h"
+	"./PTL/WTcPushPopStack.h"
+	"./Maths/WTMath.h"
+	"./Maths/WTcColors.h"
+	"./Maths/WTcMatrix4.h"
+	"./Maths/WTcPerspectiveMatrix.h"
+	"./Maths/WTcMatrixStack.h"
+	"./Maths/WTcCameraMatrix4.h"
+	"./Files/WTString.h"
+	"./Engine/WTcSignal.h"
+	"./Engine/WTKernel.h"
+	"./Engine/Process/WTcParentStack.h"
+	"./Engine/Process/WTcProcess.h"
+	"./Engine/WTcFrameRate.h"
+	"./Files/WTvFile.h"
+	"./Files/WTcFileHandler.h"
+	"./Files/WTcFile.h"
+	"./Files/Misc/WTcReferenceList.h"
+	"./Files/WTcIMFLoader.h"
+	"./Files/Meshes/MeshClasses/WTcVertex.h"
+	"./Files/Meshes/MeshClasses/WTcPlane.h"
+	"./Files/Meshes/MeshClasses/WTcFace.h"
+	"./Files/Meshes/MeshClasses/WTcFullFaceData.h"
+	"./Files/Meshes/MeshClasses/WTcPolygon.h"
+	"./Files/Meshes/MeshClasses/WTcCluster.h"
+	"./Physics/WTcCollisionBase.h"
+	"./Files/CollisionMeshes/WTvCollisionData.h"
+	"./Files/CollisionMeshes/WTcSphereCollision.h"
+	"./Files/CollisionMeshes/WTcMeshCollision.h"
+	"./Files/CollisionMeshes/WTcBeamCollision.h"
+	"./Files/CollisionMeshes/WTcRayCollision.h"
+	"./Files/CollisionMeshes/WTcMeshFileCollision.h"
+	"./Files/CollisionMeshes/WTcCompoundCollision.h"
+	"./Files/Textures/WTcTexture.h"
+	"./Files/Fonts/WTcFont.h"
+	"./Files/Shaders/WTcShader.h"
+	"./Files/Shaders/WTcShaderVariables.h"
+	"./Files/Shaders/WTcShaderProgram.h"
+	"./Files/Shaders/WTcUserDefinedShaderVariable.h"
+	"./Camera/FX/WTcFog.h"
+	"./Camera/WTvRenderObject.h"
+	"./Files/Meshes/WTcMesh.h"
+	"./Files/Misc/WTcMeshTreeNode.h"
+	"./Files/Misc/WTvMeshTree.h"
+	"./Files/Misc/WTcMeshTree.h"
+	"./Files/Meshes/WTv2DPolygon.h"
+	"./Physics/WTcCollisionObject.h"
+	"./Camera/WTcCamera.h"
+	"./Camera/WTcRenderPointer.h"
+	"./Camera/WTcRenderObject.h"
+	"./Camera/Nodes/WTcRenderNode.h"
+	"./Files/Meshes/WTcmLandscape.h"
+	"./Camera/FX/WTcMaterial.h"
+	"./Camera/FX/WTvLight.h"
+	"./Camera/WTcLightHandler.h"
+	"./Camera/FX/WTcLight.h"
+	"./Camera/FX/WTcSpotLight.h"
+	"./Camera/Renderable/WTcImage.h"
+	"./Camera/Renderable/WTcTextureText.h"
+	"./Camera/Renderable/WTcTexturedModel.h"
+	"./Camera/Renderable/WTcModelList.h"
+	"./Camera/Renderable/WTcLandscape.h"
+	"./Camera/Renderable/WTcPoint.h"
+	"./Camera/Renderable/WTcLine.h"
+	"./Camera/Renderable/WTcParticleGroup.h"
+	"./Camera/Renderable/WTcParticle.h"
+	"./Camera/Renderable/WTcBeamMesh.h"
+	"./Camera/Renderable/WTcButton.h"
+	"./Camera/WTcPainter.h"
+	"./Windows/EventHandler/WTcKeyStore.h"
+	"./Windows/EventHandler/WTcMouse.h"
+	"./Windows/EventHandler/WTcEventHandler.h"
+	"./Audio/WTcAudioDevice.h"
+	"./Audio/WTcAudioBuffer.h"
+	"./Audio/WTcAudioObject.h"
+	"./Files/Audio/WTcAudioData.h"
+	"./Files/Audio/WTcSoundObject.h"
+	"./Physics/WTcCollisionList.h"
+	"./Physics/WTcCollisionHandler.h"
+	"./Engine/WTcBase.h"
+
+1326131870 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcspherecollision.h
+
+1326131801 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcmeshcollision.h
+
+1326131876 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcbeamcollision.h
+
+1326131818 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcraycollision.h
+
+1326131809 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcmeshfilecollision.h
+
+1326131789 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtccompoundcollision.h
 

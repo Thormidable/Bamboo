@@ -1,4 +1,6 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
+
+#if WT_FULL_VERSION_BAMBOO
 
 float cMeshTreeNode::mpStartPos[3]={0.0f,0.0f,0.0f};
 float cMeshTreeNode::mpStartRot[9]={1.0f,0.0f,0.0f,0.0f,1.0f,0.0f,0.0f,0.0f,1.0f};
@@ -123,3 +125,5 @@ float cMeshTreeNode::GetSize()
 if(Mesh()) return Mesh()->GetSize();
 return 0.0f;
 }
+
+#endif

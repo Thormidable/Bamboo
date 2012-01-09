@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 cCollisionHandler *cCollisionHandler::spInstance=0;
 

@@ -1,5 +1,6 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 
+#if WT_FULL_VERSION_BAMBOO
 
 cLandscape::cLandscape()
 {
@@ -52,5 +53,4 @@ void cLandscape::RenderToPainter()
 	/// Will return the height of the vertex at liX,liZ. (position is based on number of segments NOT distance)
 	float cLandscape::GetVertexHeight(int liX,int liZ){if(mpLandscape) return mpLandscape->GetVertexHeight(liX,liZ); else return 0.0f;};
 
-
-
+#endif

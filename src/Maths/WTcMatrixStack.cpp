@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 
 uint16 cMatrixStack::miDepth=0;
@@ -58,7 +58,7 @@ void cMatrixStack::SetDepth(uint16 liDepth)
 {
  if(mpInstance) {mpInstance->ChangeSize(liDepth); mpInstance->UpdateCurrent();}
  miDepth=liDepth;
- 
+
 }
 
 void cMatrixStack::Identity()

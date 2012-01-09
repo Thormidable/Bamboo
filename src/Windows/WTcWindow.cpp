@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 
 
@@ -23,7 +23,6 @@ void cWindow::InitialiseOpenGL()
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_BLEND);
     glBlendFunc (GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
-
 
 
 	glShadeModel(GL_SMOOTH);
@@ -123,7 +122,7 @@ void cWindow::StartWindow()
 
 {
    hWnd=CreateWindowEx(0,
-		wcex.lpszClassName, "DivWin",
+		wcex.lpszClassName, "Bamboo",
 		WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE | WS_SIZEBOX,
 		//WS_OVERLAPPED | WS_CAPTION | WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX,
 		//WS_OVERLAPPEDWINDOW| WS_VISIBLE,
@@ -340,7 +339,7 @@ void cWindow::StartWindow()
                         CWBorderPixel|CWColormap|CWEventMask, &WindowAttributes);
 
  XMapWindow(lpDisplay, lWindow);
- XStoreName(lpDisplay, lWindow, "GLDivWin");
+ XStoreName(lpDisplay, lWindow, "GLBamboo");
 }
 
 void cWindow::EnableOpenGL()

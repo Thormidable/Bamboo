@@ -1,4 +1,4 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 
 cParentStack::cParentStack(cProcess *lpChild)
 {

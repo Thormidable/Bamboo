@@ -1,6 +1,8 @@
 #ifndef __WTCPARTICLEGROUP_H__
 #define __WTCPARTICLEGROUP_H__
 
+#if WT_FULL_VERSION_BAMBOO
+
 class cParticleSettings
 {
 public:
@@ -95,3 +97,4 @@ public:
 
 #endif
 
+#endif

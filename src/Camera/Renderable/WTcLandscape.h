@@ -1,6 +1,8 @@
 #ifndef __WTCLANDSCAPE_H__
 #define __WTCLANDSCAPE_H__
 
+#if WT_FULL_VERSION_BAMBOO
+
 /**
  * \brief A height map based, matrix structured Landscape.
  * Landscape is composed of a matrix of square polygons. The heights
@@ -39,5 +41,7 @@ public:
 	float GetVertexHeight(int liX,int liZ);
 
 };
+
+#endif
 
 #endif

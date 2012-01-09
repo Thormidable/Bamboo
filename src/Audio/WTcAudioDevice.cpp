@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 cAudioDevice *cAudioDevice::mpInstance=0;
 
@@ -31,6 +31,6 @@ cAudioDevice::~cAudioDevice()
 
 cAudioDevice *cAudioDevice::Instance()
 {
-  if(!mpInstance) mpInstance=new cAudioDevice; 
+  if(!mpInstance) mpInstance=new cAudioDevice;
   return mpInstance;
 };

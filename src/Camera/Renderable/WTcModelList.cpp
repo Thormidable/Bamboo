@@ -1,4 +1,6 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
+
+#if WT_FULL_VERSION_BAMBOO
 
 cModelListNode::~cModelListNode()
 {
@@ -247,3 +249,4 @@ for(liListPos=0;liListPos<miLength;++liListPos)
 
 }
 */
+#endif

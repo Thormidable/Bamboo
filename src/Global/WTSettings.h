@@ -14,14 +14,8 @@ public:
 	friend class cBase;
 	template<class cX,class cS> friend class cMainThread;
 };
-/**
-* If this define is set to true then the system will use cPainter to sort
-* cRenderObjects based on Position, material, texture and model for optimised Rendering.
-* This is best used for large numbers of objects using repeated textures and materials
-* or for when rendering translucent objects, to render based on camera depth.
-*/
 
-
+///This is the number of Items the Painter can hold at start
 extern uint16 WT_PAINTER_STARTING_SIZE;
 
 ///Flag defining the maximum number of levels that the cPushPopStack class will use.

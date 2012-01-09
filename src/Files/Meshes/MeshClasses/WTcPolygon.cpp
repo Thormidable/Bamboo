@@ -1,4 +1,4 @@
-#include "../../../WTDivWin.h"
+#include "../../../WTBamboo.h"
 //#include "../HList.h"
 
 void cPolygon::GeneratePolygon(cVertex *lpVertex,uint32 liVerteces)
@@ -299,7 +299,7 @@ void cPolygonList::Combine()
 		{
 			if(mpList[li1].Plane==mpList[li2].Plane)
 			{
-			    
+
                 mpList[li1].Plane.Display();
                 mpList[li2].Plane.Display();
 				mpList[li1].Verteces.ChangeSize(mpList[li1].Verteces.Items()+mpList[li2].Verteces.Items());

@@ -1,9 +1,9 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 cRenderObject::~cRenderObject()
 {
 
-Delete();
+//Delete();
 
 }
 
@@ -18,7 +18,6 @@ cRenderObject::cRenderObject()
  mpRenderer=cCamera::Instance()->RenderList();
  mpNode=mpRenderer->Add(this);
  mpVariables=0;
- Shader(0);
 Initialise();
 }
 
@@ -27,7 +26,6 @@ cRenderObject::cRenderObject(cRenderNode *lpNode)
  mpVariables=0;
   mpRenderer=lpNode;
   mpNode=lpNode->Add(this);
-  Shader(0);
 Initialise();
 }
 
@@ -47,16 +45,20 @@ void cRenderObject::Initialise()
 void cRenderObject::Delete()
 {
 
-	if(mpCollisionObject)
+
+/*
+	if(Renderer() && mpNode)
 	{
-		_KILL(mpCollisionObject);
-		mpCollisionObject=0;
-	}
+	    Renderer()->Remove(mpNode);
+    }
+    else
+    {
+      trace("Cannot _S_Kill this Node, Is it the Camera List\n");
+    }
 
-	_PAINTER->Remove(mpPainterData);
-	delete mpPainterData;
-	mpPainterData=0;
-
+    mbAwake=false;
+    mbAlive=false;
+*/
 }
 
 cLinkedNode<vRenderObject> *cRenderObject::SetRenderNode(cRenderNode *lpRenderer)
@@ -78,24 +80,36 @@ void cRenderObject::AdditionalRenderFunctions()
 
 void cRenderObject::AdditionalKillFunctionality()
 {
-	//Delete();
-
-	if(Renderer() && mpNode) Renderer()->Remove(mpNode);else trace("Cannot _S_Kill this Node, Is it the Camera List?\n");
-	if(mpCollisionObject)
+    	if(mpCollisionObject)
 	{
 		_KILL(mpCollisionObject);
 		mpCollisionObject=0;
 	}
+
+    if(mpPainterData)
+    {
+    _PAINTER->Remove(mpPainterData);
+	delete mpPainterData;
+	mpPainterData=0;
+    }
+
+	if(Renderer() && mpNode)
+        Renderer()->Remove(mpNode);
+    else
+        trace("Cannot _S_Kill this Node, Is it the Camera List\n");
+
 }
 
 
 
 void cRenderObject::AdditionalSleepFunctionality()
 {
-
-	_PAINTER->Remove(mpPainterData);
-	delete mpPainterData;
-	mpPainterData=0;
+    if(mpPainterData)
+    {
+        _PAINTER->Remove(mpPainterData);
+        delete mpPainterData;
+        mpPainterData=0;
+    }
 
 if(mpCollisionObject)
 {

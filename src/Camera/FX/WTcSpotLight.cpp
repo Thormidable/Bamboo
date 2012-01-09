@@ -1,4 +1,6 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
+
+#if WT_FULL_VERSION_BAMBOO
 
 void cSpotLight::Direction(float lfX,float lfY,float lfZ,float lfA)
 {
@@ -23,3 +25,5 @@ void cSpotLight::PrepareLight(uint32 liLight)
  glLightf(GL_LIGHT0+liLight, GL_SPOT_CUTOFF, mpDirection[3]);
  glLightfv(GL_LIGHT0+liLight, GL_SPOT_DIRECTION, mpDirection);
 }
+
+#endif

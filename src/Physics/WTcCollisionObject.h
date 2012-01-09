@@ -29,7 +29,7 @@ class cCollisionObject : public cCollisionBase
 
 public:
 	cCollisionObject(vRenderObject *lpFollow,cProcess *lpLinked=0,uint32 liFilterType=0);
-	cCollisionObject(cBeamMesh *lpFollow,cProcess *lpLinked=0,uint32 liFilterType=0);
+
 
 	void Initialise(vRenderObject *lpFollow,cProcess *lpLinked,uint32 liFilterType);
 
@@ -132,27 +132,32 @@ public:
 	///Internal function for checking for Sphere / Sphere collision between this object and the object lpOther;
 	bool SphereSphere(cCollisionObject *lpOther);
 
-	using cCollisionBase::ModelModel;
-	///Internal function for checking for Model / Model collision between this object and the object lpOther;
-	bool ModelModel(cCollisionObject *lpOther);
+	#if WT_FULL_VERSION_BAMBOO
 
-	using cCollisionBase::RayRay;
-	///Internal function for checking for Ray / Ray collision between this object and the object lpOther;
-	bool RayRay(cCollisionObject *lpOther);
+        cCollisionObject(cBeamMesh *lpFollow,cProcess *lpLinked=0,uint32 liFilterType=0);
 
-	using cCollisionBase::SphereModel;
-	///Internal function for checking for Sphere / Model collision between this object and the object lpOther;
-	bool SphereModel(cCollisionObject *lpOther);
+        using cCollisionBase::ModelModel;
+        ///Internal function for checking for Model / Model collision between this object and the object lpOther;
+        bool ModelModel(cCollisionObject *lpOther);
 
-	using cCollisionBase::SphereRay;
-	///Internal function for checking for Sphere / Ray collision between this object and the object lpOther;
-	bool SphereRay(cCollisionObject *lpOther);
+        using cCollisionBase::RayRay;
+        ///Internal function for checking for Ray / Ray collision between this object and the object lpOther;
+        bool RayRay(cCollisionObject *lpOther);
 
-	using cCollisionBase::RayModel;
-	///Internal function for checking for Ray / Model collision between this object and the object lpOther;
-	bool RayModel(cCollisionObject *lpOther);
+        using cCollisionBase::SphereModel;
+        ///Internal function for checking for Sphere / Model collision between this object and the object lpOther;
+        bool SphereModel(cCollisionObject *lpOther);
 
+        using cCollisionBase::SphereRay;
+        ///Internal function for checking for Sphere / Ray collision between this object and the object lpOther;
+        bool SphereRay(cCollisionObject *lpOther);
 
+        using cCollisionBase::RayModel;
+        ///Internal function for checking for Ray / Model collision between this object and the object lpOther;
+        bool RayModel(cCollisionObject *lpOther);
+    #endif
+
+    void AdditionalKillFunctionality();
 
 };
 

@@ -1,4 +1,4 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 
 using namespace std;
 
@@ -34,7 +34,7 @@ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
 
 if(miDepth==24) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, miWidth,miWidth*IMF_FONT_CHARACTERS, 0, GL_BGR, GL_UNSIGNED_BYTE,mpData);
-if(miDepth==32) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, miWidth,miWidth*IMF_FONT_CHARACTERS, 0, GL_RGBA, GL_UNSIGNED_BYTE,mpData);
+if(miDepth==32) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, miWidth,miWidth*IMF_FONT_CHARACTERS, 0, GL_BGRA, GL_UNSIGNED_BYTE,mpData);
 }
 
 

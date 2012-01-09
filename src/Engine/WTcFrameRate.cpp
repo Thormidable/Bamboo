@@ -1,11 +1,11 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 cFrameRate *cFrameRate::mpInstance=0;
 
 cFrameRate *cFrameRate::Instance()
 {
 	if(!mpInstance) mpInstance=new cFrameRate; return mpInstance;
-	
+
 };
 
 cFrameRate::cFrameRate()

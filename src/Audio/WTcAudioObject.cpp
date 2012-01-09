@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 cAudioListener *cAudioListener::mpInstance=0;
 
@@ -49,6 +49,14 @@ void cAudioListener::Orientation(float *lpList)
     memcpy(spOrientation,lpList,sizeof(float)*6);
 }
 
+bool cAudioObject::Playing()
+{
+ int Playing;
+ alGetSourcei(miSource,AL_SOURCE_STATE,&Playing);
+ if(Playing==AL_PLAYING) return 1;
+ return 0;
+}
+
 cAudioObject::cAudioObject()
 {
  cAudioDevice::Instance();
@@ -73,7 +81,7 @@ void cAudioObject::Play()
  if(Awake()) alSourcePlay(miSource);
 }
 
-void cAudioObject::SetBuffer(cAudioBuffer *lpBuffer)
+void cAudioObject::Buffer(cAudioBuffer *lpBuffer)
 {
  mpBuffer=lpBuffer;
 

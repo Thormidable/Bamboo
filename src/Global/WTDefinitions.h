@@ -1,6 +1,7 @@
 #ifndef __WTDEFINITIONS_H__
 #define __WTDEFINITIONS_H__
 
+#define WT_FULL_VERSION_BAMBOO 1
 
 #define RANDOM_NUMBER static_cast<double>(rand())/static_cast<double>(RAND_MAX)
 #define ZEROED_RANDOM_NUMBER ((static_cast<double>(rand())/static_cast<double>(RAND_MAX)-0.5)*2)
@@ -264,7 +265,7 @@
 #define _PROCESS_TIME _FRAME_RATE->ProcessTime()
 
 #if WT_OS_TYPE==OS_WIN32
-	///Function which will start the engine running. See \ref DivWinExplanation.
+	///Function which will start the engine running. See \ref BambooExplanation.
 	#define _START_PROGRAM(TYPE,SETTINGS,INSTANCE) cMainThread<TYPE,SETTINGS>::Start(INSTANCE)
 
 	#if WT_OS_BITS==OS_32_BIT
@@ -276,7 +277,7 @@
 #endif
 
 #if WT_OS_TYPE==OS_LINUX
-	///Function which will start the engine running. See \ref DivWinExplanation.
+	///Function which will start the engine running. See \ref BambooExplanation.
 	#define _START_PROGRAM(TYPE,SETTINGS) cMainThread<TYPE,SETTINGS>::Start()
 
 #endif

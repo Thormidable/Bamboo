@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 cFileHandler::cFileHandler()
 {
@@ -37,6 +37,6 @@ cLinkedNode<vFile> *cFileHandler::Add(vFile *lpNew)
 }
 
 void cFileHandler::Delete(cLinkedNode<vFile> *lpNode)
-{ 
+{
 	if(mpFiles) mpFiles->Delete(lpNode);
 }

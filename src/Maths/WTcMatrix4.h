@@ -1,6 +1,6 @@
 #ifndef __WTCMATRIX4_H__
 #define __WTCMATRIX4_H__
-//#include "WTDivWin.h"
+
 
 class cCameraMatrix4;
 /**
@@ -337,7 +337,7 @@ float *operator=(float *lVal);
  ///Returns a pointer to this matrix
  cMatrix4 *ThisMatrixPointer();
 
- /// THis will find the inverse of the matrix if it is a standard rotation / translation matrix. (0,1,2,4,5,6,8,9,10 are orthogonal. 3,7,11 are zero. 12,13,14 are position and 15 is one.)
+ /// This will find the inverse of the matrix if it is a standard rotation / translation matrix. (0,1,2,4,5,6,8,9,10 are orthogonal. 3,7,11 are zero. 12,13,14 are position and 15 is one.)
  cMatrix4 InvertRotationMatrix();
  /// This will return the transpose of this objects matrix.
  cMatrix4 Transpose();

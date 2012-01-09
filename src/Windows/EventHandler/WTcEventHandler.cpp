@@ -1,4 +1,4 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 
 cEventHandler *cEventHandler::mpInstance=0;
 

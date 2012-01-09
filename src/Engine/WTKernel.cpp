@@ -1,5 +1,5 @@
 
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 cWindow *gpWindow;
 //cAudioDevice *gpAudioDevice;

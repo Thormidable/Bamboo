@@ -1,4 +1,6 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
+
+#if WT_FULL_VERSION_BAMBOO
 
 cButton::cButton()
 {
@@ -158,4 +160,4 @@ bool cTextButton::Hover()
 	return cButtonBase::Hover();
 }
 
-
+#endif

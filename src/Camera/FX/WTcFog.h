@@ -1,6 +1,7 @@
 #ifndef __WTCFOG_H__
 #define __WTCFOG_H__
 
+#if WT_FULL_VERSION_BAMBOO
 /*
 * \brief This class will create and control an OpenGL scenes fog effect.
 */
@@ -40,5 +41,6 @@ public:
        void SetOff();
 
 };
+#endif
 
 #endif

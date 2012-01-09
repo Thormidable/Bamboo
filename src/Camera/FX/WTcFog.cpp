@@ -1,5 +1,6 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 
+#if WT_FULL_VERSION_BAMBOO
 cFog::cFog()
 {
  lbOn=1;
@@ -9,7 +10,7 @@ cFog::cFog()
  mpColor[1]=1.0;
  mpColor[2]=1.0;
  mpColor[3]=0.5;
- 
+
  mfDensity=0.25;
  mfStart=cCamera::Instance()->Near();
  mfEnd=cCamera::Instance()->Far();
@@ -26,7 +27,7 @@ cFog::cFog(float lfStart,float lfEnd)
  mpColor[3]=0.5;
 
  mfDensity=0.25;
- 
+
  mfStart=lfStart;
  mfEnd=lfEnd;
 }
@@ -58,13 +59,13 @@ void cFog::SetColor(float lfRed,float lfGreen,float lfBlue,float lfAlpha)
 void cFog::SetMode(char ltMode)
 {
   mtMode=ltMode;
-  
+
 }
 
 void cFog::SetDensity(float lfDensity)
 {
   mfDensity=lfDensity;
-  
+
 }
 
 
@@ -77,5 +78,7 @@ void cFog::SetRange(float lfStart,float lfEnd)
 bool cFog::On()
 {
   return lbOn;
-  
+
 }
+
+#endif

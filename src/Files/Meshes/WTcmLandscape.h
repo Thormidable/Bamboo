@@ -1,6 +1,8 @@
 #ifndef __WTCMLANDSCAPEMESH_H__
 #define __WTCMLANDSCAPEMESH_H__
 
+#if WT_FULL_VERSION_BAMBOO
+
 #define WT_LANDSCAPE_NODES miXSteps*miZSteps
 #define WT_LANDSCAPE_POLYGONS (miXSteps-1)*(miZSteps-1)
 
@@ -188,5 +190,7 @@ public:
 friend class cmLandscape;
 
 };
+
+#endif
 
 #endif

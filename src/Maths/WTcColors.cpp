@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
     float cRGB::R(){return color[0];};
     float cRGB::G(){return color[1];};

@@ -1,6 +1,5 @@
 #ifndef __WTCBUFFER_H__
 #define __WTCBUFFER_H__
-///
 /**
  * \brief This class will create a buffer space to store sound data.
  * This class will create and initialise an OpenAL buffer. The Buffer stores the sound data and is linked to a cAudioObject to allow it to be played.

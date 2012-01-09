@@ -1,6 +1,7 @@
 #ifndef __WTCPARTICLE_H__
 #define __WTCPARTICLE_H__
 
+#if WT_FULL_VERSION_BAMBOO
 
 class cParticle : public cParticleForGroup,  public cSignal
 /**
@@ -92,5 +93,7 @@ public:
 
 
 };
+
+#endif
 
 #endif

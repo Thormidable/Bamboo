@@ -1,5 +1,8 @@
 #ifndef __WTVLIGHT_H__
 #define __WTVLIGHT_H__
+
+#if WT_FULL_VERSION_BAMBOO
+
 /*
  A virtual class for cLight
 */
@@ -18,5 +21,7 @@ public:
 	virtual float *Position()=0;
 
 };
+
+#endif
 
 #endif

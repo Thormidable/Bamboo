@@ -1,6 +1,8 @@
 #ifndef __WTCLIGHTHANDLER_H__
 #define __WTCLIGHTHANDLER_H__
 
+#if WT_FULL_VERSION_BAMBOO
+
 class cLightSpot
 {
  public:
@@ -59,5 +61,7 @@ void Remove(cMinLN<vLight> *lpOld);
  void MoreAsleep();
 
 };
+
+#endif
 
 #endif

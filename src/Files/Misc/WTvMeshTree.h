@@ -1,6 +1,8 @@
 #ifndef __WTVMESHTREE_H__
 #define __WTVMESHTREE_H__
 
+#if WT_FULL_VERSION_BAMBOO
+
 /**
 *\brief This is a virtual class for inherited by cMeshTree().
 
@@ -33,5 +35,7 @@ virtual void RenderMesh(){(void) 0;};
 virtual void ResetPosition(){(void) 0;};
 
 };
+
+#endif
 
 #endif

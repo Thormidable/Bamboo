@@ -1,6 +1,8 @@
 #ifndef __WTCMATERIAL_H__
 #define __WTCMATERIAL_H__
 
+#if WT_FULL_VERSION_BAMBOO
+
 /// A class to store material data for an object. Defines the 'reflectiveness' of the surface.
 class cMaterial
 {
@@ -22,5 +24,7 @@ class cMaterial
 
 
 };
+
+#endif
 
 #endif

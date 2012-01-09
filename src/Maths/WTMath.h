@@ -67,11 +67,11 @@ public:
 	///Return this Vectors Z Value
 	float Z();
 
-	//Set this Vectors X Value
+	///Set this Vectors X Value
 	void X(float lfX);
-	//Set this Vectors Y Value
+	///Set this Vectors Y Value
 	void Y(float lfY);
-	//Set this Vectors Z Value
+	///Set this Vectors Z Value
 	void Z(float lfZ);
 
 

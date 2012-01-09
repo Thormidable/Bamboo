@@ -1,6 +1,8 @@
 #ifndef __WTCSPOTLIGHT_H__
 #define __WTCSPOTLIGHT_H__
 
+#if WT_FULL_VERSION_BAMBOO
+
 class cSpotLight : public cLight
 {
 
@@ -18,4 +20,6 @@ public:
 
 
 };
+#endif
+
 #endif

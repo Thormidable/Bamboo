@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 double c2DVf::Angle()
 {
@@ -287,7 +287,7 @@ c3DVf &c3DVf::operator=(cRGB &lpValue)
 	int c3DVi::Y(){return v[1];};
 	int c3DVi::Z(){return v[2];};
 
-	
+
 	void c2DVf::X(float lfX){v[0]=lfX;};
 	void c2DVf::Y(float lfY){v[1]=lfY;};
 
@@ -300,4 +300,3 @@ c3DVf &c3DVf::operator=(cRGB &lpValue)
 	void c4DVf::Z(float lfZ){v[2]=lfZ;};
 	void c4DVf::W(float lfW){v[3]=lfW;};
 
-	

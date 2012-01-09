@@ -1,5 +1,8 @@
 #ifndef __WTCMESHTREENODE_H__
 #define __WTCMESHTREENODE_H__
+
+#if WT_FULL_VERSION_BAMBOO
+
 /**
 *\brief This object will store the data for a single item in a cMeshTree().
 *This stores the Position, Rotation, Mesh, Texture, Tree Level, for this object.
@@ -47,5 +50,7 @@ public:
 
 
 };
+
+#endif
 
 #endif

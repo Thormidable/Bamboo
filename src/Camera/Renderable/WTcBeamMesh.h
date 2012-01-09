@@ -1,6 +1,8 @@
 #ifndef __WTCBEAMMESH_H__
 #define __WTCBEAMMESH_H__
 
+#if WT_FULL_VERSION_BAMBOO
+
 /**
 *\brief A Procedurally generated cylindrical Renderable Object.
 *This class will generate a cylinder with specified dimensions and segments. The origin for the cylinder is in the radial center of one end of the cylinder.
@@ -42,5 +44,7 @@ public:
 
 };
 
+
+#endif
 
 #endif

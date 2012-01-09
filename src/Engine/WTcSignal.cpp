@@ -1,10 +1,10 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 
 void cSignal::Signal(SIGNAL liFlags)
 {
 	/*	miFlags=(miFlags|liFlags);
 	 *	miFlags=(miFlags&(~(liFlags>>16)));*/
-	
+
 	if(liFlags&WT_SIGNAL_VALUE_WAKE && !mbAwake) {mbAwake=true; AdditionalWakeFunctionality();}
 	if(liFlags&WT_SIGNAL_VALUE_SLEEP && mbAwake) {mbAwake=false; AdditionalSleepFunctionality();}
 	if(liFlags&WT_SIGNAL_VALUE_KILL && mbAlive) {mbAlive=false; mbAwake=false; AdditionalKillFunctionality();}

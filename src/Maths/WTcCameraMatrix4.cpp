@@ -1,4 +1,4 @@
-#include "../WTDivWin.h"
+#include "../WTBamboo.h"
 #include <cmath>
 
 cCameraMatrix4 cCameraMatrix4::mpTemp;

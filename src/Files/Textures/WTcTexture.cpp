@@ -1,4 +1,4 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 
 using namespace std;
 
@@ -47,7 +47,7 @@ else {glEnable(GL_TEXTURE_2D); glGenerateMipmapEXT(GL_TEXTURE_2D);}
 
 
 if(miDepth==24) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, Width(),Height(), 0, GL_BGR, GL_UNSIGNED_BYTE,mpData);
-if(miDepth==32) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, Width(),Height(), 0, GL_RGBA, GL_UNSIGNED_BYTE,mpData);
+if(miDepth==32) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, Width(),Height(), 0, GL_BGRA, GL_UNSIGNED_BYTE,mpData);
 }
 
 void cTexture::BindTexture()

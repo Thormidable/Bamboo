@@ -1,4 +1,6 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
+
+#if WT_FULL_VERSION_BAMBOO
 
 cLight::~cLight()
 {
@@ -98,3 +100,4 @@ void cLight::Signal(SIGNAL lsSignal)
     }
 }
 
+#endif

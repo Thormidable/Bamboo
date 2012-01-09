@@ -1,4 +1,4 @@
-#include "../../WTDivWin.h"
+#include "../../WTBamboo.h"
 
 
 cPoint::cPoint()
@@ -18,6 +18,7 @@ cPoint::cPoint(cRenderNode *lpRenderer) : cRenderObject(lpRenderer)
 
 void cPoint::RenderPainter(uint8 liLevel)
 {
+
 (void) liLevel;
     SetShaderVariables();
   glPointSize(mfPointSize);
@@ -40,7 +41,7 @@ void cPoint::RenderToPainter()
  mpPainterData->SetObject(this);
  SetOtherRenderVariables();
  mpPainterData->RenderAgain();
- cPainter::Instance()->Add(mpPainterData);
+// cPainter::Instance()->Add(mpPainterData);
 }
 
 
