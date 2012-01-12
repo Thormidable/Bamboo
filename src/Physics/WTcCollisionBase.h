@@ -49,17 +49,17 @@ public:
 	#if WT_FULL_VERSION_BAMBOO
         /**This is a dynamic cast on the type of collision object this is. Note ALL cCollisionData objects return true to Sphere.
         This applies to all the functions Sphere(),Box(),Mesh(),Ray(),Compound() and Beam().**/
-        cMeshCollision *Mesh();
+       virtual cMeshCollision *Mesh();
         /**This is a dynamic cast on the type of collision object this is. Note ALL cCollisionData objects return true to Sphere.
         This applies to all the functions Sphere(),Box(),Mesh(),Ray(),Compound() and Beam().
         cRayCollision Objects will also return true to Beam().**/
-        cRayCollision *Ray();
+       virtual  cRayCollision *Ray();
         /**This is a dynamic cast on the type of collision object this is. Note ALL cCollisionData objects return true to Sphere.
         This applies to all the functions Sphere(),Box(),Mesh(),Ray(),Compound() and Beam().**/
-        cBeamCollision *Beam();
+        virtual cBeamCollision *Beam();
         /**This is a dynamic cast on the type of collision object this is. Note ALL cCollisionData objects return true to Sphere.
         This applies to all the functions Sphere(),Box(),Mesh(),Ray(),Compound() and Beam().**/
-        cCompoundCollision *Compound();
+        virtual cCompoundCollision *Compound();
 	#endif
 	///This will take a SphereCollision Object loaded from a file, and set this Collision Object to use it.
 	void SetType(cSphereCollision *lpSphere);

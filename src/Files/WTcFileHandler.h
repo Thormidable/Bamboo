@@ -1,7 +1,7 @@
 #ifndef __WTCFILEHANDLER_H__
 #define __WTCFILEHANDLER_H__
 
-/** 
+/**
 * \brief This is the handler for the file system.
 * This handles all files loaded from a hdd. It will give allow processes
 * to use files loaded else where, using either the filenames or if loaded from an IMF

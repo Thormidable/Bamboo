@@ -1,5 +1,7 @@
 #include "../../WTBamboo.h"
 
+#if WT_FULL_VERSION_BAMBOO
+
 void cText::RenderPainter(uint8 liLevel)
 {
 
@@ -83,3 +85,4 @@ void cText::Font(cFont *lpFont)
 }
 
 
+#endif

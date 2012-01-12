@@ -291,7 +291,7 @@ int cWindow::DisplayAttributes[]={ GLX_RGBA, GLX_DEPTH_SIZE, 24, GLX_DOUBLEBUFFE
 
 cWindow::cWindow()
 {
-
+gpWindow=this;
 mbQuit=0;
 miX=0;
 miY=0;

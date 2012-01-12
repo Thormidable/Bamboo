@@ -12,7 +12,7 @@ class cMeshTreeNode
  /// This will store the position of this object.
  static float mpStartPos[3];
  /// This will store the rotation vectors for the object.
- static float mpStartRot[9];
+ static float mpStartRot[3];
 public:
  cMeshTreeNode();
  ~cMeshTreeNode();
@@ -25,6 +25,8 @@ public:
   cMesh *mpMeshPoint;
  char *mpTexture;
   cTexture *mpTexturePoint;
+  char *mpShader;
+  cShaderProgram *mpShaderPoint;
  uint32 miLevel;
  float *mpPosition;
  float *mpRotation;
@@ -32,6 +34,8 @@ public:
  void RemoveMesh();
 /// This will Remove and Delete the Texture.
  void RemoveTexture();
+ /// This will Remove and Delete the Texture.
+ void RemoveShader();
 /// This will reset the Tree Level.
  void RemoveStackLevel();
 /// This will Reset the Position.
@@ -45,6 +49,8 @@ public:
  cMesh *Mesh();
 /// This will return the Texture for this object.
  cTexture *Texture();
+ /// This will return the Texture for this object.
+ cShaderProgram *ShaderProgram();
 /// This will return the Spatial Size for this object.
  float GetSize();
 

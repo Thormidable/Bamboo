@@ -6,7 +6,8 @@
 #define WT_MESHTREE_LEVEL 0x4
 #define WT_MESHTREE_POSITION 0x8
 #define WT_MESHTREE_ROTATION 0x10
-#define WT_MESHTREE_TOPVALUE 0x20
+#define WT_MESHTREE_SHADER 0x20
+#define WT_MESHTREE_TOPVALUE 0x40
 
 #if WT_FULL_VERSION_BAMBOO
 
@@ -33,7 +34,7 @@ public:
 *\brief This will store the data for a cModelList()
 
 */
-class cMeshTree : public vMeshTree
+class cMeshTree : public cMesh
 {
   ///This points to an Array of cMeshTreeNode() objects.
    cMeshTreeNode *mpList;

@@ -1,7 +1,5 @@
 #include "../../WTBamboo.h"
 
-#if WT_FULL_VERSION_BAMBOO
-
 cMaterial::cMaterial()
 {
 mpSpecular[0]=1.0;
@@ -30,4 +28,4 @@ void cMaterial::PrepareMaterial()
  glMaterialfv(GL_FRONT, GL_SHININESS, mpShine);
 }
 
-#endif
+

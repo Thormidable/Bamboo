@@ -8,6 +8,8 @@ cFrameRate *cFrameRate::Instance()
 
 };
 
+#if WT_OS_TYPE==OS_WIN32
+
 cFrameRate::cFrameRate()
 {
   giProcessesPerFrame=WT_STARTING_PROCESSES_PER_FRAME;
@@ -16,6 +18,19 @@ cFrameRate::cFrameRate()
   giInvProcesesPerSecond=giInvFramesPerSecond/giProcessesPerFrame;
 };
 
+#endif
+
+
+#if WT_OS_TYPE==OS_LINUX
+
+cFrameRate::cFrameRate()
+{
+  giProcessesPerFrame=WT_STARTING_PROCESSES_PER_FRAME;
+  giFramesPerSecond=WT_STARTING_FRAMES_PER_SECOND;
+  giInvFramesPerSecond=1.0f/giFramesPerSecond;
+  giInvProcesesPerSecond=giInvFramesPerSecond/giProcessesPerFrame;
+};
+#endif
 void cFrameRate::SetFrameRate(uint8 lfFramesPerSecond){giFramesPerSecond=lfFramesPerSecond;giInvFramesPerSecond=1.0f/giFramesPerSecond; giInvProcesesPerSecond=giInvFramesPerSecond/giProcessesPerFrame;};
 void cFrameRate::SetProcessesPerFrame(uint8 liPPS){giProcessesPerFrame=liPPS; giInvProcesesPerSecond=giInvFramesPerSecond/giProcessesPerFrame;};
 float cFrameRate::FrameTime(){return giInvFramesPerSecond;};

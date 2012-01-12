@@ -280,8 +280,9 @@ glEnable(GL_DEPTH_TEST);
     if(mpList[liCount]->mbAlpha) glDisable(GL_DEPTH_TEST);
     else glEnable(GL_DEPTH_TEST);
   }
-
- if(_LIGHT->AnyLights()) _LIGHT->PrepareLight(&(mpList[liCount]->mpObject->mmCache));
+  #if WT_FULL_VERSION_BAMBOO
+    if(_LIGHT->AnyLights()) _LIGHT->PrepareLight(&(mpList[liCount]->mpObject->mmCache));
+  #endif
 
 
   mpList[liCount]->mpObject->RenderPainter(mpList[liCount]->miLevel);

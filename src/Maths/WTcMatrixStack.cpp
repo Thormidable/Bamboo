@@ -7,13 +7,14 @@ cMatrixStack *cMatrixStack::mpInstance=0;
 
 cMatrixStack::cMatrixStack(uint16 liDepth) : cLimitedList<cMatrix4>(liDepth)
 {
+	miDepth=liDepth;
 	UpdateCurrent();
 	mmCurrent->Identity();
 }
 
 cMatrixStack *cMatrixStack::Instance()
 {
-	if(!mpInstance) mpInstance=new cMatrixStack(miDepth);
+	if(!mpInstance) mpInstance=new cMatrixStack(8);
 	return mpInstance;
 }
 

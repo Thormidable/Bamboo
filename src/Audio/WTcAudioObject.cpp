@@ -61,6 +61,8 @@ cAudioObject::cAudioObject()
 {
  cAudioDevice::Instance();
  alGenSources(1, &miSource);
+ mbAwake=true;
+ mbAlive=true;
 }
 
 cAudioObject::cAudioObject(cAudioBuffer *lpBuffer)
@@ -69,6 +71,8 @@ cAudioObject::cAudioObject(cAudioBuffer *lpBuffer)
  alGenSources(1, &miSource);
  mpBuffer=lpBuffer;
  alSourcei(miSource,AL_BUFFER,lpBuffer->Buffer());
+  mbAwake=true;
+ mbAlive=true;
 }
 
 cAudioObject::~cAudioObject()

@@ -40,7 +40,7 @@ public:
 	};
 
     ///Constructor for producing a 0 length List
-	cLimitedList(){mpList=0;miItems=0;};
+	cLimitedList(){mpList=0;miItems=0;miSpaces=0;};
 
     ///Will initialise the array to the size of liSpaces.This will destroy any data in the array.
 	void Init(uint32 liSpaces)

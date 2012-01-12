@@ -84,8 +84,11 @@ trace("New Render Cycle")
 
 if(_FPS)
 {
-gpTimer->Tick();
-if(gpTimer->GetTimeMod()< _TIME_PER_FRAME) gpTimer->SleepWrap(_TIME_PER_FRAME-gpTimer->GetTimeMod());
+	gpTimer->Tick();
+	if(gpTimer->GetTimeMod()< _TIME_PER_FRAME)
+	{
+		gpTimer->SleepWrap((_TIME_PER_FRAME-gpTimer->GetTimeMod())*1000);
+	}
 }
 	trace("Update Timer")
 	gpTimer->Tick();
@@ -110,12 +113,14 @@ trace("Deleting cCamera");
 trace("Deleting cCollisionHandler");
 	delete cCollisionHandler::Instance();
 
+#if WT_FULL_VERSION_BAMBOO
 	trace("Deleting cLightHandler");
 	delete cLightHandler::Instance();
-#if WT_USE_PAINTER_ALGORITHM
+#endif
+
 	trace("Deleting cPainter");
 	delete cPainter::Instance();
-#endif
+
 	trace("Deleting cSync");
 	delete gpTimer;
 	trace("Deleting cWindow");

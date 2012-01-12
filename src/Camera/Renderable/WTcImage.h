@@ -1,5 +1,8 @@
 #ifndef __WTCIMAGE_H__
 #define __WTCIMAGE_H__
+
+#if WT_FULL_VERSION_BAMBOO
+
 /**
 * \brief A 2D renderable object.
 * \param lpTexture pointer to the texture to bind to this 2D object
@@ -81,5 +84,7 @@ class cImage3D : public cImage
 public:
     void SetUp();
 };
+
+#endif
 
 #endif

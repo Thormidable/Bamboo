@@ -1,6 +1,8 @@
 #include "../../WTBamboo.h"
 #include <cmath>
 
+#if WT_FULL_VERSION_BAMBOO
+
 bool cImage::mbFirst=1;
 float cImage::mpVertex[12];
 uint16 cImage::mpFaces[6];
@@ -156,3 +158,5 @@ void cImage3D::SetUp()
 	{
 	    return mfHeight;
 	}
+
+#endif

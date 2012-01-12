@@ -81,7 +81,7 @@ void cIMF::LoadIMF(const char *lpPath)
 
 			new cFont(&lpTexture);
                 }break;
-
+#if WT_FULL_VERSION_BAMBOO
                 case IMF_TYPE_TREE :
 		{
 			trace("Type Tree")
@@ -145,6 +145,7 @@ void cIMF::LoadIMF(const char *lpPath)
 			new cLandscapeMeshFile(&lpLandscape);
 
                 }break;
+    #endif
 
                 case IMF_TYPE_SHADER :
 		{
@@ -160,7 +161,7 @@ void cIMF::LoadIMF(const char *lpPath)
 			cShaderProgram *lpProgram = new cShaderProgram;
 			lpProgram->LoadIMF(FileStream);
                 }break;
-
+#if WT_FULL_VERSION_BAMBOO
                 case IMF_TYPE_COLLISION_OBJECT :
 		{
 		    trace("Type Collision Mesh")
@@ -171,7 +172,7 @@ void cIMF::LoadIMF(const char *lpPath)
 		    lpTemp=new cMeshFileCollision();
 		    lpTemp->LoadIMF(FileStream);
                 }break;
-
+#endif
                 case IMF_TYPE_SOUND_OBJECT :
                 {
                     trace("Type Sound Object")
@@ -187,6 +188,7 @@ void cIMF::LoadIMF(const char *lpPath)
 			FileStream.read((char *) &liTemp,sizeof(uint32));
 			FileStream.ignore(liTemp);
                 }break;
+
 	}
 
      }

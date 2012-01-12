@@ -11,7 +11,7 @@ class cModelListNode
 {
  cMesh *mpMesh;
  cTexture *mpTexture;
- cMatrix4 mmMatrix;
+ cMatrix4 mmCacheMatrix;
   uint8 miLevel;
   cShaderProgram *mpShader;
 	// Will take a cMeshTreeNode as loaded from cIMF::LoadIMF() and will link Object names to files in memory.
@@ -29,7 +29,7 @@ public:
 friend class cModelList;
 };
 
-/*
+/**
 * \brief Model list is a 'static' render tree holding data for a series of renderable objects. It counts as a single renderable object.
 * \param lpTree a pointer to the cMeshTree object loaded from cIMF::LoadIMF()
 * \param lpRenderer Places this object beneath lpRenderer in the scene graph.
@@ -57,34 +57,34 @@ static float lsPosition[16];
 
 float mfSize;
 public:
- /*
+ /**
  * \brief This is the constructor for cModelList. It will create the list based on the cMeshTree file lpTree.
  * \param lpTree This is the file containing the data for the structure (and models etc.) of the render tree.
  */
  cModelList(cMeshTree *lpTree);
-/*
+/**
  * \brief This is the constructor for cModelList. It will create the list based on the cMeshTree file lpTree, and will be owned by lpRenderer.
  * \param lpTree This is the file containing the data for the structure (and models etc.) of the render tree.
  * \param lpRenderer This is the cRenderNode which will own this renderable object.
  */
 cModelList(cRenderNode *lpRenderer,cMeshTree *lpTree);
 
-// Will re-initialise this cModelList using the file lpTree. It will have the structure and models of the file.
+/// Will re-initialise this cModelList using the file lpTree. It will have the structure and models of the file.
 void LoadTree(cMeshTree *lpTree);
 
- // Create an empty cModelList of size liLength.
+ /// Create an empty cModelList of size liLength.
  cModelList(uint32 liLength);
- // Create an empty cModelList of size liLength. lpRenderer will own this ModelList.
+ /// Create an empty cModelList of size liLength. lpRenderer will own this ModelList.
  cModelList(cRenderNode *lpRenderer,uint32 liLength);
  ~cModelList();
 
- // Will reset this object to be an empty cModelList of size liLength.
+ /// Will reset this object to be an empty cModelList of size liLength.
  void Initialise(uint32 liLength);
 
- // Will return the current size of the cModelList.
+ /// Will return the current size of the cModelList.
  uint32 ListLength();
 
- /*
+ /**
  * \brief Will return a pointer to the matrix of model[liPos].
  * \param liPos The number of the object in the list.
  * \return returns a pointer to the matrix of model[liPos]
@@ -106,26 +106,26 @@ private :
   inline void RenderCode(cModelListNode *lpNode);
 public:
 
- /*
+ /**
  * \brief This will bind a texture for a single model in the model list.
  * \param liPos the number of the object in mpList this function will affect.
  * \param lpTexture a pointer to the Texture to bind to object number liPos.
  */
  void SetTexture(uint32 liPos, cTexture *lpTexture);
- /*
+ /**
  * \brief This will bind a texture for a single model in the model list.
  * \param liPos the number of the object in mpList this function will affect.
  * \param lpTexture a pointer to the Shader for object number liPos to use.
  */
  void SetShader(uint32 liPos, cShaderProgram *lpShader);
 
- /*
+ /**
  * \brief This will set a mesh for a single model in the model list.
  * \param liPos the number of the object in mpList this function will affect.
  * \param lpMesh a pointer to the mesh to use for object number liPos.
  */
 void SetMesh(uint32 liPos, cMesh *lpMesh);
-/*
+/**
  * \brief This will set a command for a single model in the model list.
  * \param liPos the number of the object in mpList this function will affect.
  * \param liCom The command to be called before rendering model number liPos.
@@ -135,7 +135,7 @@ void SetMesh(uint32 liPos, cMesh *lpMesh);
  */
  void SetCommand(uint32 liPos,uint8 liCom);
 
- /*
+ /**
  * \brief This will turn on Transparency for a single model in the model list.
  * \param liPos The number of the object in mpList this function will affect.
  * \param lbAlpha Where Transparency should be on or off.

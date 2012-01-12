@@ -1,6 +1,8 @@
 #ifndef __WTCTEXTURETEXT_H__
 #define __WTCTEXTURETEXT_H__
 
+#if WT_FULL_VERSION_BAMBOO
+
 using namespace std;
 /// This class is a text renderable object
 class cText : public cImage
@@ -53,4 +55,6 @@ inline void cText::Add(const T &t)
      ss << t;
     mpString += ss.str();
 }
+#endif
+
 #endif

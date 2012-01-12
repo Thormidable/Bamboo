@@ -7,6 +7,7 @@ using namespace std;
 
 cFile::cFile()
 {
+	memset(mpFileName,0,64*sizeof(uint8));
 	mpFileName[0]=0;
 
 	mpFileHandler=cFileHandler::Instance();

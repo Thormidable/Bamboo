@@ -28,7 +28,9 @@ void cCamera::Render()
 	ResetGLMatrix();
 
 	cPainter::Instance()->Reset();
-    _LIGHT->SetLightStates();
+	#if WT_FULL_VERSION_BAMBOO
+        _LIGHT->SetLightStates();
+    #endif
 	mpRenderList->RenderToPainter();
 
 	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

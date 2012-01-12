@@ -23,6 +23,8 @@ cLight::cLight()
  Specular(1.0f,1.0f,1.0f,0.0f);
  Attenuation(2.0f);
  AttenuationType(0);
+ mbAwake=true;
+ mbAlive=true;
  mpLightHandler->MoreAwake();
 }
 

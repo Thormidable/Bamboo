@@ -3,7 +3,7 @@
 #if WT_FULL_VERSION_BAMBOO
 
 float cMeshTreeNode::mpStartPos[3]={0.0f,0.0f,0.0f};
-float cMeshTreeNode::mpStartRot[9]={1.0f,0.0f,0.0f,0.0f,1.0f,0.0f,0.0f,0.0f,1.0f};
+float cMeshTreeNode::mpStartRot[3]={0.0f,0.0f,0.0f};
 
 void cMeshTreeNode::Initialise()
 {
@@ -77,12 +77,28 @@ void cMeshTreeNode::ReadIMF(ifstream &FileStream)
    mpTexturePoint=_GET_FILE(cTexture,mpTexture);
   }
 
+  if(miFormat&WT_MESHTREE_SHADER)
+  {
+   FileStream.read((int8*) &liTemp,sizeof(uint32));
+   mpShader=new char[liTemp+1];
+   FileStream.read(mpShader,sizeof(int8)*liTemp);
+   mpShader[liTemp]=0;
+   mpShaderPoint=_GET_FILE(cShaderProgram,mpShader);
+  }
+
   //If there is a Level Command read it
   if(miFormat&WT_MESHTREE_LEVEL) {FileStream.read((int8*) &miLevel,sizeof(uint32));}
   //If there is a Position read it
   if(miFormat&WT_MESHTREE_POSITION) {mpPosition=new float[3];FileStream.read((int8*) mpPosition,sizeof(float)*3);}
   //If there is a Rotation read it
-  if(miFormat&WT_MESHTREE_ROTATION) {mpRotation=new float[9]; FileStream.read((int8*) mpRotation,sizeof(float)*9);}
+  if(miFormat&WT_MESHTREE_ROTATION)
+  {
+      mpRotation=new float[3];
+      FileStream.read((int8*) mpRotation,sizeof(float)*3);
+      mpRotation[0]*=3.141592/90.0;
+      mpRotation[1]*=3.141592/90.0;
+      mpRotation[2]*=3.141592/90.0;
+  }
  }
  else
  {
@@ -116,6 +132,17 @@ if(mpTexture)
 {
  mpTexturePoint=_GET_FILE(cTexture,mpTexture);
  return mpTexturePoint;
+}
+return 0;
+}
+
+cShaderProgram *cMeshTreeNode::ShaderProgram()
+{
+if(mpShaderPoint) return mpShaderPoint;
+if(mpShader)
+{
+ mpShaderPoint=_GET_FILE(cShaderProgram,mpShader);
+ return mpShaderPoint;
 }
 return 0;
 }

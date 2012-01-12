@@ -16,7 +16,7 @@ uint8 giProcessesPerFrame;
 uint8 giFramesPerSecond;
 float giInvFramesPerSecond;
 float giInvProcesesPerSecond;
-	
+
 static cFrameRate *mpInstance;
 
 cFrameRate();
@@ -28,7 +28,7 @@ public:
 	void SetFrameRate(uint8 lfFramesPerSecond);
 	/// This is the number of times the Process cycle will be run for every rendered frame. Rendering is very slow and CPU intensive compared to the Procesing cycle. The Human eye cannot differentiate between very fast rendering rates, but increased numbers of processing cycles will increase accuracy of collisions and make events smoother.
 	void SetProcessesPerFrame(uint8 liPPS);
-	/// this will return the amount of time that passes for every rendered frame. 
+	/// this will return the amount of time that passes for every rendered frame.
 	float FrameTime();
 	/// This is the amount of time that passes every Process Cycle measured in seconds. Multiplying any distances moved by this will convert them into distance per second. This allows the user to change the running frame rate without affecting the speed the user experiences. If the Frame rate and Process Rate are not going to be changed this can be ignored.
 	float ProcessTime();

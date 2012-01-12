@@ -494,7 +494,7 @@
  *	- This is the spatial size of each slot for the BSP. It should be at least (preferably more) than half the largest object size, that will be involved in collisions.
  *  .
  * - WT_DEFINE_OS
- *	- This is the OS that the engine is running under. So far OS_LINUX or OS_WINDOWS. This shgould be determined automatically when compiled.
+ *	- This is the OS that the engine is running under. So far OS_LINUX or OS_WINDOWS. This should be determined automatically when compiled.
  *  .
  * - _GRAVITY_X
  *	- This is the X Axis value of gravity, to be used by particle objects.
