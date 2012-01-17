@@ -69,7 +69,7 @@ public:
 	void Size(float lfSize);
 
 
-	void RenderPainter(uint8 liLevel);
+	void RenderPainter();
 	bool Hover();
 /*
 	// This should be called after the text is updated to ensure the box collision parameters are correct.

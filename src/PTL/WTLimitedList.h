@@ -59,6 +59,8 @@ public:
 	cLimitedList(uint32 liSpaces)
 	{
 		mpList=0;
+		miSpaces=0;
+		//miItems=0;
 		Init(liSpaces);
 	};
 
@@ -187,10 +189,13 @@ public:
 	///This will delete all items in the list. Clear the list to size 0. It will not delete this list object.
     void DeleteAll()
     {
-        uint32 liCount;
-		for(liCount=0;liCount<miItems;++liCount); delete mpList[liCount];
-        delete []mpList;
-		mpList=0;
+		if(mpList)
+		{
+			uint32 liCount;
+			for(liCount=0;liCount<miItems;++liCount); delete mpList[liCount];
+        	delete []mpList;
+			mpList=0;
+		}
 		miItems=0;
 		miSpaces=0;
     }
@@ -203,6 +208,8 @@ public:
 	cX *operator[](uint32 liItem){return mpList[liItem];};
 	/// Will return the pointer at position liItem in the list.
 	cX *Item(uint32 liItem){return mpList[liItem];};
+
+	cX **ArrayPos(uint32 liItem){return mpList+liItem;};
 	/// Will Add the pointer lpValue to the list. Once added the Array will control deleting the object pointed to by lpValue. It will also expand the array to acomodate the item as required.
 	void Add(cX *lpValue){if(miItems>=miSpaces) ChangeSize(miSpaces*1.5); mpList[miItems++]=lpValue;};
 	/// This will remove the item liPos from the List. It will delete the item and shuffle all the other items in teh list to the front of the list.
@@ -210,7 +217,7 @@ public:
 	{
 		if (mpList[liPos] && liPos<miItems)
 		{
-			delete []mpList[liPos]; mpList[liPos]=0;
+			delete mpList[liPos]; mpList[liPos]=0;
 			--miItems;
 			memmove(mpList[liPos],mpList[liPos+2],sizeof(cX*)*miItems-liPos);
 		}
@@ -225,6 +232,22 @@ public:
 		mpList[li1]=mpList[li2];
 		mpList[li2]=lpTemp;
 		}
+	};
+
+    void Remove(cX* lpItem)
+    {
+        int32 liCheck=GetItemPos(lpItem);
+        if(liCheck>=0) Remove(liCheck);
+    };
+
+	int32 GetItemPos(cX* lpItem)
+	{
+	    uint32 liCount;
+	    for(liCount=0;liCount<miItems;++liCount)
+	    {
+	        if(mpList[liCount]==lpItem) return liCount;
+	    }
+	    return -1;
 	};
 };
 

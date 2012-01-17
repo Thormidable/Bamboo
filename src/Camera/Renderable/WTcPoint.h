@@ -13,12 +13,10 @@ public:
  /// cPoint constructor
  cPoint();
  /// cPoint constructor. Will be owned by lpRenderer.
- cPoint(cRenderNode *lpRenderer);
+ cPoint(vRenderNode *lpRenderer);
 
  // Will render this object to the cPainter render list.
-  void RenderPainter(uint8 liLevel);
- // Will render this object from the cPainter render list to the screen.
-  void RenderToPainter();
+  void RenderPainter();
 
       ///Will return the color of this point object.
       float* Color();

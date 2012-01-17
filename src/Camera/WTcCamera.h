@@ -112,7 +112,7 @@ public:
 	///This will return the current perspective matrix for 2D objects.
 	float *Perspective2D();
 
-	float *TotalPositionMatrix();
+	float *PerspectiveCameraMatrix();
 };
 
 #endif

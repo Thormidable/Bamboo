@@ -1,7 +1,7 @@
 #include "../../WTBamboo.h"
 //#include <cmath>
 
-cLine::cLine()
+cLine::cLine() : cRenderObject(1)
 {
  Identity();
 
@@ -24,15 +24,15 @@ mfColor[3]=0.0f;
 
 }
 
-cLine::cLine(cRenderNode *lpRenderer) : cRenderObject(lpRenderer)
+cLine::cLine(vRenderNode *lpRenderer) : cRenderObject(lpRenderer,1)
 {
  Identity();
 }
 
 
-void cLine::RenderPainter(uint8 liLevel)
+void cLine::RenderPainter()
 {
- (void) liLevel;
+
   SetShaderVariables();
   glBegin(GL_LINES);
     glColor4fv(mfColor.Color());
@@ -41,21 +41,6 @@ void cLine::RenderPainter(uint8 liLevel)
   glEnd();
 }
 
-void cLine::RenderToPainter()
-{
- float Temp[16];
- UpdateMatrix();
-
- glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
-
- mpPainterData->SetObject(this);
-
- SetOtherRenderVariables();
-
-mpPainterData->RenderAgain();
-
-
-}
 
 
 void cLine::Color(float lfR,float lfG,float lfB,float lfA)

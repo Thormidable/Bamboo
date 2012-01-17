@@ -26,7 +26,7 @@ cCollisionList *cCollisionHandlerBSP::GenerateCollisionList(cCollisionObject *lp
 
 	uint32 liSlot=FindSlot(lpCheck);
 
-	while(NextListItem(liSlot)) {if(mpColCur->mpData->Collision(lpCheck,lpCol))lpList->AddCollision(mpColCur->mpData);}
+	while(NextListItem(liSlot)) {if(mpColCur->Data()->Collision(lpCheck,lpCol))lpList->AddCollision(mpColCur->Data());}
 
 	return lpList;
 }
@@ -40,9 +40,9 @@ if(lpType)
 	while(NextListItem(lpType))
 		{
 
-			if(mpColCur->mpData!=lpObj)
+			if(mpColCur->Data()!=lpObj)
 			{
-				if(mpColCur->mpData->Collision(lpObj)){lpList->AddCollision(mpColCur->mpData);}
+				if(mpColCur->Data()->Collision(lpObj)){lpList->AddCollision(mpColCur->Data());}
 			}
 		}
 }
@@ -50,9 +50,9 @@ else
 	while(NextListItem())
 	{
 		printf("Next Item\n");
-	if(mpColCur->mpData!=lpObj)
+	if(mpColCur->Data()!=lpObj)
 	{printf("Is not original object\n");
-		if(mpColCur->mpData->Collision(lpObj)) lpList->AddCollision(mpColCur->mpData);
+		if(mpColCur->Data()->Collision(lpObj)) lpList->AddCollision(mpColCur->Data());
 
 	}
   }
@@ -113,8 +113,8 @@ bool cCollisionHandlerType::NextListItem(uint32 lpType)
 
 void cCollisionHandlerType::RemoveFromList(cLinkedNode<cCollisionObject> *lpOld)
 {
- if(lpOld->mpData)
- mpList[FindSlot(lpOld->mpData)].Remove(lpOld);
+ if(lpOld->Data())
+ mpList[FindSlot(lpOld->Data())].Remove(lpOld);
 
 }
 
@@ -150,7 +150,7 @@ mpColCur=0;
 
 void cCollisionHandlerType::Remove(cLinkedNode<cCollisionObject> *lpOld)
 {
- lpOld->mpData->Signal(_S_KILL);
+ lpOld->Data()->Signal(_S_KILL);
 }
 
 

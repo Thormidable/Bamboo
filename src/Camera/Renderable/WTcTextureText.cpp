@@ -2,24 +2,51 @@
 
 #if WT_FULL_VERSION_BAMBOO
 
-void cText::RenderPainter(uint8 liLevel)
+void cText::AddFont(string lsFontSlot,cFont *lpFont)
+{
+ uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(lsFontSlot);
+ if(liPos)
+ {
+		AddTexture(liPos-1,lpFont);
+ 	//	miCharSize=lpFont->Height();
+ }
+}
+
+void cText::AddFont(cFont *lpFont)
 {
 
- (void) liLevel;
- if(mpFont)
+ int8 liSlot=ReturnFreeSlot();
+ if(liSlot)
+ {
+ 		string lsTextureSlot="Font";
+ 		std::stringstream out;
+ 		out << liSlot;
+		lsTextureSlot.append(out.str());
+		uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(lsTextureSlot);
+	 	if(liPos)
+		{
+			AddTexture(liPos-1,lpFont);
+			//miCharSize=lpFont->Height();
+		}
+ }
+}
+
+void cText::RenderPainter()
+{
+
+
+ if(Textures())
  {
   SetShaderVariables();
-  //mpFont->BindTexture();
+
  float lfHeight=mfHeight*0.5f;
- short liCount;
+ uint32 liCount;
   for(liCount=0;liCount<mpString.length();++liCount)
   {
-   float liRange;
-
+	float liRange;
      if(mpString[liCount]!=32)
      {
-
-        liRange=IMF_FONT_SCALE*(mpFont->Character(mpString[liCount])); //(or /64)
+		 liRange=IMF_FONT_SCALE*(cFont::Character(mpString[liCount])); //(or /64)
           glBegin(GL_QUADS);
           glNormal3f(0.0f,0.0f,1.0f);
           glTexCoord2f(1,liRange+IMF_FONT_SCALE);   glVertex3f(-mfWidth*(liCount+0.5f),lfHeight,3.1f);
@@ -31,8 +58,6 @@ void cText::RenderPainter(uint8 liLevel)
 
     }
 
-
-
   }
  }
 }
@@ -41,22 +66,6 @@ std::string &cText::Text()
 {
  return mpString;
 }
-
-void cText::RenderToPainter()
-{
-
- if(mpFont)
- {
-  UpdateMatrix();
-     mpPainterData->SetObject(this);
-     mpPainterData->SetTexture(mpFont->TextureNumber());
-     SetOtherRenderVariables();
-     mpPainterData->RenderAgain();
- }
-}
-
-
-
 
 
 
@@ -68,7 +77,6 @@ void cText::Text(char *lsText)
 cText::cText(const char *lsText)
 {
 
- mpFont=0;
  mpString=lsText;
 }
 
@@ -78,11 +86,6 @@ cText::cText()
 
 }
 
-void cText::Font(cFont *lpFont)
-{
-  mpFont=lpFont;
-
-}
 
 
 #endif

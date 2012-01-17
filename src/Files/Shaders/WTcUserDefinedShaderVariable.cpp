@@ -101,7 +101,26 @@ void cVariableStore::Link(cShaderProgram *lpProg)
 
 };
 
+void cUniformTexture::Write()
+{
+	/*	glActiveTexture(GL_TEXTURE0+miTextureSlot);
+	Data->BindTexture(miTextureSlot);
+	glUniform1i(miID,miTextureSlot);*/
+}
 
+void cUniformTexture::UpdateShaderState()
+{
+
+};
+
+cUniformTexture::cUniformTexture(uint8 liTex)
+{
+	miTextureSlot=liTex;
+};
+
+cUniformFont::cUniformFont(uint8 liTex) : cUniformTexture(liTex)
+{
+};
 
 void cUniformVector1::Write()
 {

@@ -15,7 +15,7 @@ template<class T> class cLinkedNode
 {
 	friend class cLinkedList<T>;
 
-	cLinkedNode(){mpNext=0;mpPrev=0;mpData=0;mpList=0;}
+	cLinkedNode(T *lpNew){mpNext=0;mpPrev=0;mpData=lpNew;mpList=0;}
 
 	/// This is a pointer to the next cLinkedNode owned by the linked list cLinkedList.
 	cLinkedNode *mpNext;
@@ -30,15 +30,21 @@ template<class T> class cLinkedNode
 	{
 		delete mpData;
 		mpData=0;
+		mpNext=0;
+		mpPrev=0;
 	};
 
-public:
-	/// This is a pointer to the data owned by this node.
+		/// This is a pointer to the data owned by this node.
 	T *mpData;
+
+public:
+
 	/// This will return a pointer to the next node in the linked list. see cLinkedList.
 	cLinkedNode<T> *Next(){return mpNext;}
 	/// This will return a pointer to the previous node in the linked list. see cLinkedList.
 	cLinkedNode<T> *Previous(){return mpPrev;}
+
+	T *Data(){return mpData;};
 };
 
 /**
@@ -131,24 +137,6 @@ if(mpStart)
  Initialise();
 }
 
-/*
- if(mpStart)
- {
-  mpTemp=mpStart;
-  while(mpTemp->mpNext)
-  {
-      printf("mpTemp : %p\n",mpTemp);
-      printf("mpTemp->mpNext : %p\n",mpTemp->mpNext);
-      mpTemp=mpTemp->mpNext;
-      printf("mpTemp->mpPrev : %p\n",mpTemp->mpPrev);
-      printf("mpTemp->mpNext->mpNext : %p\n",mpTemp->mpNext);
-      delete mpTemp->mpPrev;
-  }
-   delete mpTemp;
-  }
- Initialise();
-//trace("Done, you linked list is gone")
-*/
 }
 
 
@@ -277,9 +265,9 @@ template<class T> cLinkedList<T>::cLinkedList(T *lpData)
 {
 //  cLinkedNode<T> *mpTemp;
 	Initialise();
-	mpTemp=new cLinkedNode<T>;
+	mpTemp=new cLinkedNode<T>(lpData);
 	StitchIn(mpTemp);
-	mpTemp->mpData=lpData;
+	//mpTemp->mpData=lpData;
 
 //	mpTemp=0;
 
@@ -289,9 +277,9 @@ template<class T> cLinkedList<T>::cLinkedList(T *lpData)
 template<class T> cLinkedNode<T> *cLinkedList<T>::Insert(T *lpData)
 {
 
-	mpTemp=new cLinkedNode<T>;
+	mpTemp=new cLinkedNode<T>(lpData);
 	StitchIn(mpTemp);
-	mpTemp->mpData=lpData;
+	//mpTemp->mpData=lpData;
 
 	//++miSize;
 	return mpTemp;

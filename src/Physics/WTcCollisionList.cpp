@@ -14,7 +14,7 @@ cCollisionObject *cCollisionList::NextCollisionItem()
 	 mpCurPos=mpCollisionList->Start();
  }
  else { mpCurPos=mpCurPos->Next();}
- if(mpCurPos) return mpCurPos->mpData;
+ if(mpCurPos) return mpCurPos->Data();
 
  return 0;
 }

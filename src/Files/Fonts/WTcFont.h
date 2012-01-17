@@ -12,7 +12,7 @@ class cFont : public cTexture
     ~cFont();
     //
     cFont(cTextureArray *lpData);
-    uint8 Character(uint8 lcChar);
+    static uint8 Character(uint8 lcChar);
     uint32 Height(){return miWidth;}
     void UpdateTexture();
     void BindTexture();

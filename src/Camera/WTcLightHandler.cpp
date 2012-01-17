@@ -52,7 +52,7 @@ void cLightHandler::SetupLights()
 
 cMinLN<vLight> *cLightHandler::Add(vLight *lpNew)
 {
-	trace("cLightHandler::Add")
+	//trace("cLightHandler::Add")
 	if (!mpLightList)
 	{
 		mpLightList=new cMinLL<vLight>(lpNew);
@@ -75,7 +75,7 @@ void cLightHandler::Remove(cMinLN<vLight> *lpOld)
 
 void cLightHandler::PrepareLight()
 {
- trace("cLightHandler::PrepareLights");
+ //trace("cLightHandler::PrepareLights");
  uint32 liCount=0;
  cMinLN<vLight> *lpCursor=mpLightList->mpStart;
  while(lpCursor)
@@ -112,7 +112,7 @@ void cLightHandler::PrepareLight(cMatrix4 *lpObject)
 {
  if(miAwake>WT_OPENGL_LIGHTS)
  {
-    trace("cLightHandler::PrepareLight(Object)");
+    //trace("cLightHandler::PrepareLight(Object)");
     double lfDist;
     cLightSpot *lpLarge;
     uint32 liCount;

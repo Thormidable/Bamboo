@@ -72,12 +72,13 @@ class cParticleGroup : public cRenderObject
 	cParticleSettings Data;
 	cParticleForGroup **mpParticles;
 	uint32 miParticles;
+	uint32 miSpaces;
 	bool mbRespawn;
 	bool mbUseGravity;
 
 public:
-
-	cParticleGroup(uint32 liParticles,cRenderNode *lpNode);
+	cParticleGroup(uint32 liParticles);
+	cParticleGroup(uint32 liParticles,vRenderNode *lpNode);
 	cParticleSettings &Settings(){return Data;};
 	~cParticleGroup();
 	void Settings(cParticleSettings &lpOther){Data=lpOther;}
@@ -89,8 +90,8 @@ public:
 	void UseGravity(){mbUseGravity=true;};
 	void NotUseGravity(){mbUseGravity=false;};
 	void RenderPainter();
-	void RenderPainter(uint8 liLevel);
-	void RenderToPainter();
+
+	uint32 LivingParticles();
 
 };
 

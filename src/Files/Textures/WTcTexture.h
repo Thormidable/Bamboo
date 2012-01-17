@@ -30,8 +30,8 @@ public:
 //       virtual void Load()=0;
 
 protected:
- int miWidth,miHeight,miDepth;
- unsigned int miTexture;
+ uint32 miWidth,miHeight,miDepth;
+ GLuint miTexture;
  uint8 *mpData;
 
 };

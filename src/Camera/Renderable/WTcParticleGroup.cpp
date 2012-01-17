@@ -20,70 +20,78 @@
 
 void cParticleGroup::Refresh()
 {
-	uint32 THERE_SHOULD_BE_SOME_CODE_HERE;
 
-	uint32 liCount;
-	uint32 liFound=0;
-	for(liCount=0;liCount<miParticles;++liCount)
+	if(mbRespawn)
 	{
-
-		if(mpParticles[liCount]->Life<=0.0f)
+		uint32 liCount;
+		for(liCount=0;liCount<miParticles;++liCount)
 		{
-			if(mbRespawn) mpParticles[liCount]->Spawn(Data);
-			else{ delete mpParticles[liCount]; mpParticles[liCount]=0;}
-		}
-		else
-		{
-			mpParticles[liCount]->UpdatePos();
-			mpParticles[liFound++]=mpParticles[liCount];
+			if(mpParticles[liCount]->Life<=0.0f)
+			{
+				mpParticles[liCount]->Spawn(Data);
+			}
+			else
+			{
+				mpParticles[liCount]->UpdatePos();
+			}
 		}
 	}
-	if(!mbRespawn) miParticles=liFound;
+	else
+	{
+	 	uint32 liFound=0;
+		uint32 liCount;
+		for(liCount=0;liCount<miParticles;++liCount)
+		{
 
+			if(mpParticles[liCount]->Life<=0.0f)
+			{
+				delete mpParticles[liCount];
+				mpParticles[liCount]=0;
+			}
+			else
+			{
+				mpParticles[liCount]->UpdatePos();
+				mpParticles[liFound++]=mpParticles[liCount];
+			}
+		}
+
+	 	if(liFound<miParticles)
+	 	{
+			liCount=liFound;
+			do
+			{
+				mpParticles[liCount++]=0;
+			} while(liCount<miParticles);
+
+		  	miParticles=liFound;
+	 	}
+
+	}
 
 };
 
 
 
 
-void cParticleGroup::RenderPainter(uint8 liLevel)
-{
-	( void) liLevel;
-	RenderPainter();
-}
-
 void cParticleGroup::RenderPainter()
 {
 
-//	 AdditionalRenderFunctions();
+
 	SetShaderVariables();
 
 	 uint32 MAKE_THIS_A_SHADER_FUNCTION_TO_MAKE_POINT_SIZE_WORK;
 
-	 //_CAMERA->ResetGLMatrix();
 	 uint32 liCount;
 	 uint32 liFound=0;
 
+	Refresh();
 
 	 glBegin(GL_POINTS);
 	 for(liCount=0;liCount<miParticles;++liCount)
 	 {
-		 if(mpParticles[liCount]->Life<=0.0f)
-		 {
-			 if(mbRespawn) mpParticles[liFound++]->Spawn(Data);
-			 else{ delete mpParticles[liCount]; mpParticles[liCount]=0;}
-		}
-		else
-		{
-			mpParticles[liCount]->UpdatePos();
-			mpParticles[liCount]->UpdateFade();
-			mpParticles[liFound++]=mpParticles[liCount];
-
-
 			glColor4fv(mpParticles[liCount]->Color.Color());
 			glVertex3f(mpParticles[liCount]->Position[0],mpParticles[liCount]->Position[1],mpParticles[liCount]->Position[2]);
 
-		}
 	 }
 	 glEnd();
 
@@ -91,39 +99,41 @@ void cParticleGroup::RenderPainter()
 
 }
 
-
-void cParticleGroup::RenderToPainter()
+cParticleGroup::cParticleGroup(uint32 liParticles) : cRenderObject(true)
 {
-	Refresh();
+	miSpaces=liParticles;
+	miParticles=0;
+	mpParticles=new cParticleForGroup*[miSpaces];
+	memset(mpParticles,0,sizeof(cParticleForGroup*)*miSpaces);
+	mbRespawn=0;
+};
 
-	UpdateMatrix();
-
-	mpPainterData->SetObject(this);
-	mpPainterData->SetTexture(0);
-	SetOtherRenderVariables();
-	mpPainterData->RenderAgain();
-
-
-}
-
-
-cParticleGroup::cParticleGroup(uint32 liParticles,cRenderNode* lpNode=0) : cRenderObject(lpNode)
+cParticleGroup::cParticleGroup(uint32 liParticles,vRenderNode* lpNode) : cRenderObject(lpNode,true)
 {
-	miParticles=liParticles;
-	mpParticles=new cParticleForGroup*[miParticles];
-	memset(mpParticles,0,sizeof(cParticleForGroup*)*miParticles);
+	miSpaces=liParticles;
+	miParticles=0;
+	mpParticles=new cParticleForGroup*[miSpaces];
+	memset(mpParticles,0,sizeof(cParticleForGroup*)*miSpaces);
+	mbRespawn=0;
+	mbUseGravity=0;
+};
+
+uint32 cParticleGroup::LivingParticles()
+{
+ return miParticles;
 };
 
 
 void cParticleGroup::RespawnAll()
 {
 	uint32 liCount;
-	for(liCount=0;liCount<miParticles;++liCount)
+	for(liCount=0;liCount<miSpaces;++liCount)
 	{
 		if(!mpParticles[liCount]) mpParticles[liCount]=new cParticleForGroup;
 
 		mpParticles[liCount]->Spawn(Data);
 	}
+	miParticles=miSpaces;
 };
 
 
@@ -156,11 +166,17 @@ cParticleGroup::~cParticleGroup()
  uint32 liCount;
  for(liCount=0;liCount<miParticles;++liCount)
  {
-  if(mpParticles[liCount]) delete mpParticles[liCount];
+  if(mpParticles[liCount])
+  {
+	  delete mpParticles[liCount];
+	  mpParticles[liCount]=0;
+  }
+
  }
  delete []mpParticles;
  mpParticles=0;
  miParticles=0;
+ miSpaces=0;
 }
 
 void cParticleForGroup::SetColor(float *lpRGB){Color=lpRGB;};

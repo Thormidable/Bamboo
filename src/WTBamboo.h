@@ -533,7 +533,7 @@
  * - cProcess
  * - cRenderObject
  *  - cImage
- *  - cTexturedModel
+ *  - cModel
  *  - cTextButton
  *  - cButton
  *  - cText
@@ -572,7 +572,27 @@
  * - cRGBA
  * - cCollisionList
  * .
- **/
+ *
+ *\section OptimisationTechniques Optimisation Techniques
+ * Bamboo is written to be as optimised as possible while remaining very simple. There are many things that can be done to optimise your code.
+ * Reduce Collisions: \n
+ * It is very important to only check for collisions that matter. Collisions should only detected one way (I.E. either From the Tank to the Bullet OR from the Bullet to the Tank, not both).
+ * Use cCollisionObject::CollisionFilter() to minimise the collision checks that are made. \n
+ * Turn off Lighting where not required: \n
+ *  If an object will not use the lighting settings there is no point
+ * Reduce Matrix Multiplications: \n
+ * Where possible use the minimum of Matrix multiplications. Both in shaders and in programs. Don't use cRenderObject::CalculateGlobalMatrix() unless absolutely neccessay. try to use cRenderObject::GetCacheMatrix() instead.
+ * It will not include changes to the Global matrix this frame but it is very fast. Use the highest level of Matrices possible in a shader.
+ *
+ * \section CommonMistakes Common Mistakes
+ * <b> My Textures aren't working: </b> \n
+ * Has the Mesh got UV Co-ordinates. The entire model will just use 0,0 if it doesn't have co-ordinates.\n
+ * <b> My Lighting isn't working: </b> \n
+ * If the model is entirely black it may not have Normals. A Mesh without normals cannot use lighting.
+ * If the lighting is not using the correct lights it may be worth checking if lighting is enabled for the current object with cRenderObject::Lighting(bool). \n
+ * <b> My Transparent Textures and Images are not working:</b> \n
+ * Check that the Texture has an alpha channel to enable transparency. Check that Transparency is enabled with cRenderObject::Transparent(bool) \n
+ * */
 
 /**
 * \page ProgrammingBasics Basic Programming Concepts
@@ -778,11 +798,11 @@
 * \code
 * //Example of Grammar
 *
-* //cTexturedModel is a Type of variable specific to @EngineName
-* cTexturedModel New_Textured_Model;
+* //cModel is a Type of variable specific to @EngineName
+* cModel New_Textured_Model;
 *
 * //There can be pointers to every type of variable
-* cTexturedModel *Textured_Model_Pointer;
+* cModel *Textured_Model_Pointer;
 *
 * //Assigning the address of New_Textured_Model to Textured_Model_Pointer.
 * Textured_Model_Pointer = &New_Textured_Model;
@@ -1339,33 +1359,33 @@
 * The \b . operator allows the access to variables and functions within a variable whose type is a class.
 * \code
 * //Example of C++ Code
-* //cTexturedModel is a Renderable object supplied by @EngineName.
-* cTexturedModel My_Textured_Model;
-* //Position( float , float , float) is a function within the class cTexturedModel.
+* //cModel is a Renderable object supplied by @EngineName.
+* cModel My_Textured_Model;
+* //Position( float , float , float) is a function within the class cModel.
 * My_Textured_Model.Position( 1.0 , 1.0 , 1.0 );
 * // My_Textured_Model is now Positioned at 1.0 , 1.0 , 1.0 .
 * \endcode
-* Creating a copy of My_Textured_Model would result in having two cTexturedModel objects on screen.
+* Creating a copy of My_Textured_Model would result in having two cModel objects on screen.
 * This is where the true value of the pointer symbol comes into play.
 * By creating a pointer to an object it will allow other parts of the program to control the class without making a copy of it.
 * A Pointer to a class allows the user to access the variables and functions within a class.
 * \code
 * //Example of C++ Code
-* //cTexturedModel is a Renderable object supplied by @EngineName.
-* cTexturedModel My_Textured_Model;
-* cTexturedModel *My_Textured_Model_Pointer;
+* //cModel is a Renderable object supplied by @EngineName.
+* cModel My_Textured_Model;
+* cModel *My_Textured_Model_Pointer;
 *
 * //Get the pointer to My_Textured_Model;
 * My_Textured_Model_Pointer = &My_Textured_Model;
 *
-* //Position( float , float , float ) is within the class cTexturedModel.
-* //This will position the cTexturedModel My_Textured_Model at:
+* //Position( float , float , float ) is within the class cModel.
+* //This will position the cModel My_Textured_Model at:
 * // X Co-ordinate of 1.0
 * // Y Co-ordinate of 1.0
 * // Z Co-ordinate of 1.0
 * My_Textured_Model_Pointer -> Position( 1.0 , 1.0 , 1.0 );
 * \endcode
-* The user does not need to understand the maths that positions the cTexturedModel at 1.0 , 1.0 , 1.0 .
+* The user does not need to understand the maths that positions the cModel at 1.0 , 1.0 , 1.0 .
 * Thanks to classes moving and rotating Renderable Objects becomes quick and simple. \n
 *
 * Creating New Classes : \n
@@ -1748,7 +1768,7 @@
  * \code
  * void player::Run()
  * {
- * 	mpHull=_CREATE(cTexturedModel(mpShipNode));
+ * 	mpHull=_CREATE(cModel(mpShipNode));
  *	mpHull->Mesh(_GET_MESH_FILE("Mesh"));
  *	mpHull->Texture(_GET_TEXTURE_FILE("Texture"));
  *	mpHull->Shader(_GET_SHADER_FILE("TexturingProgram"));
@@ -1757,34 +1777,30 @@
  *
  * Currently there are lots of Render Objects:
  *
- * class cTexturedModel;
- * class cLandscape;
- * class cRenderNode;
- * class cBeamMesh;
- * class cImage;
- * class cTextureText;
- * class cLine;
- * class cParticle;
- * class cParticleGroup;
- * class cParticleHandler;
- * class cModelList;
- * class cPoint;
- * class cButton;
- * class cTextButton;
- *
- * See the relevant documentation for each for how to use them.
- *
- *
- * The Renderable Object allows the user to develop their own Renderable Objects and links them to the renderer. A Renderable object must inherit cRenderObject and must also define the virtual function Render(), This will be called every time the renderable object needs to be rendered. It should also define all empty virtual functions in vRenderObject and cRenderObject,
- *
- * Declaration of a Renderable Object:
- *	class player : public cRenderObject
- * {
- * public : Render();
- * };
- *
- * Render():
- *
+ * class cModel; \n
+ * class cLandscape; \n
+ * class cBeamMesh; \n
+ * class cImage; \n
+ * class cTextureText; \n
+ * class cLine; \n
+ * class cParticle; \n
+ * class cParticleGroup; \n
+ * class cParticleHandler; \n
+ * class cPoint; \n
+ * class cButton; \n
+ * class cTextButton; \n
+ * \n
+ * There are also Render Nodes. These do not display on the screen bu manipulate the position of other objects.
+ * Essentially they create new co-ordinate systems. This allows objects to be positioned and rotated to other objects or points in space.
+ * This allows the 'gluing' or 'linking' of objects together. This allows the creating of models with limbs, or turrets etc. \n
+ * class cRenderNode; \n
+ * class cNodeList; \n
+ * \n
+ * See the relevant documentation for each for how to use them. \n
+ *\n
+ * The Renderable Object allows the user to develop their own Renderable Objects and links them to the renderer.
+ * A Renderable object must inherit cRenderObject and must also define the virtual function Render(), This will be called every time the renderable object needs to be rendered.
+ * It should also define all empty virtual functions in vRenderObject and cRenderObject.
  *
  * \section FilesAccessPage Loading and Accessing Files
  *
@@ -1951,13 +1967,16 @@
  * \section RenderNodesPage Creating Local Co-ordinate systems
  *
  * WTcRenderNode.h
+ * WTcNodeList.h
  *
- * RenderNodes are a special type of Render Object. Render Nodes have no visual rendering to screen. Instead they manipulate other Render Objects. Specifically, a Translation applied to a Render Node will affect any Render Objects Controlled by the RenderNode. This means the objects controlled by the Render Node will move as if the Render Nodes position was 0,0,0.
+ * <b> cRenderNode: </b>
+ * RenderNodes are a special type of Render Object. Render Nodes have no visual rendering to screen. Instead they manipulate other Render Objects. Specifically, a Translation applied to a Render Node will affect any Render Objects Controlled by the RenderNode.
+ * This means the objects controlled by the Render Node will move as if the Render Nodes position was 0,0,0.
  *
  * \code
  * mpNodePoint=_CREATE(cRenderNode());
  * mpNodePoint->Position(0.0f,0.0f,0.0f);
- * mpModel=_CREATE(cTexturedModel(mpNodePoint));
+ * mpModel=_CREATE(cModel(mpNodePoint));
  * mpModel->Position(10.0f,0.0f,0.0f);
  *
  * // mpModel is now at 10.0f,0.0f,0.0f.
@@ -1973,10 +1992,82 @@
  * \endcode
  *
  * To control a Render Object by a Render Node object pass a pointer to the Render Node as the first argument in the Render Objects Constructor.
- * Render Node objects can control any Render Object, including Render Nodes. This means that there can be many levels of Render Nodes before reaching a Renderable Object, making positioning of complex positional relationships easy.
+ * Render Node objects can control any Render Object, including Render Nodes. This means that there can be many levels of Render Nodes before reaching a Renderable Object, making positioning of complex positional relationships easy. \n
+ *\n
+ *<b> cNodeList:</b>
+ * There are also NodeLists. These are static objects. They are initialised to hold a certain number of objects and only support rotations around the local axis.
+ * These are good for predictable structure shapes which do not change often.
+ * Each object is given a level and will position and rotate itself around the last object with a lower depth value.
  *
+ * \code
+ * //Create a Tree with 14 slots.
+ * mpNodeList=_CREATE(cNodeList(14));
  *
- * See Also: cModelList
+ * //Create 14 new cModels to fill the NodeList
+ * uint32 liCount;
+ * for(liCount=0;liCount<14;++liCount)
+ * {
+ * 	_CREATE(mpNodeList);
+ * }
+ *
+ * //Set Mesh and Level for each Item
+ * //Make Object 0 use the Mesh "Torso"
+ * mpNodeList->GetListItem(0)->Mesh(_GET_MESH_FILE("Torso"));
+ * //The torso is the top of the tree. This is the object all other objects will base their position on.
+ * mpNodeList->SetLevel(0,0);
+ *
+ * //Make Object 1 use the Mesh "Head"
+ * mpNodeList->GetListItem(1)->Mesh(_GET_MESH_FILE("Head"));
+ * //Make Object 1 linked to the Torso (last object with a Depth lower than this objects)
+ * mpNodeList->SetLevel(1,1);
+ *
+ * //Make Object 2 use the Mesh "LeftUpperArm"
+ * mpNodeList->GetListItem(2)->Mesh(_GET_MESH_FILE("LeftUpperArm"));
+ * //Make Object 2 linked to the Torso.
+ * mpNodeList->SetLevel(2,1);
+ *
+ * //Make Object 3 use the Mesh "LeftForeArm"
+ * mpNodeList->GetListItem(3)->Mesh(_GET_MESH_FILE("LeftForeArm"));
+ * //Make Object 3 Linked to the LeftUpperArm
+ * mpNodeList->SetLevel(3,2);
+ *
+ * //Make Object 4 use the Mesh "LeftHand"
+ * mpNodeList->GetListItem(4)->Mesh(_GET_MESH_FILE("LeftHand"));
+ * //Make Object 4 Linked to the "LeftForeArm"
+ * mpNodeList->SetLevel(4,3);
+ *
+ * //You have now built a torso with a head and a left arm. repeat for the other limbs.
+ * mpNodeList->GetListItem(5)->Mesh(_GET_MESH_FILE("RightUpperArm"));
+ * mpNodeList->SetLevel(5,1);
+ *
+ * mpNodeList->GetListItem(6)->Mesh(_GET_MESH_FILE("RightForeArm"));
+ * mpNodeList->SetLevel(6,2);
+ *
+ * mpNodeList->GetListItem(7)->Mesh(_GET_MESH_FILE("RightHand"));
+ * mpNodeList->SetLevel(7,3);
+ *
+ * mpNodeList->GetListItem(8)->Mesh(_GET_MESH_FILE("LeftThigh"));
+ * mpNodeList->SetLevel(8,1);
+ *
+ * mpNodeList->GetListItem(9)->Mesh(_GET_MESH_FILE("LeftShin"));
+ * mpNodeList->SetLevel(9,2);
+ *
+ * mpNodeList->GetListItem(10)->Mesh(_GET_MESH_FILE("LeftFoot"));
+ * mpNodeList->SetLevel(10,3);
+
+ * mpNodeList->GetListItem(11)->Mesh(_GET_MESH_FILE("RightThigh"));
+ * mpNodeList->SetLevel(11,1);
+ *
+ * mpNodeList->GetListItem(12)->Mesh(_GET_MESH_FILE("RightShin"));
+ * mpNodeList->SetLevel(12,2);
+ *
+ * mpNodeList->GetListItem(13)->Mesh(_GET_MESH_FILE("RightFoot"));
+ * mpNodeList->SetLevel(13,3);
+ *
+ * //You now have a skeleton for a humanoid robot. Moving limbs requires moving any one object and the rest of the objects linked will autoamtically move.
+ * //This can be build into a MeshTree in the IMF Handler so it can be loaded from a file.
+ * \endcode
+ *
  * \section IMFGenerationPage IMF File Generation and Usage
  *
  * IMF Files are generated by the IMF Compiler. The IMF Compiler is a seperate program to the @EngineName engine and has a text based interface. The Compiler should be run from the terminal, so the user can view and use the interface.
@@ -2033,7 +2124,7 @@
  * It will then create a new Shader Program in the current Media file.
  * This can be modified by following the instructions in the Shader Program section. \n
  * The "Add Render Tree" button :\n
- * This currently doesn't operate. This will be enabled in future versions to create fixed trees of render objects. \n
+ * This allows the user to generate cNodeList Objects and store them in an IMF file. \n
  * The "Save IMF As..." button :\n
  * Clicking the "Save IMF As..." button will save the current IMF. It will create a dialog to ask for the file name to use.
  * This will write all the objects and references currently loaded into an IMF file.
@@ -2194,7 +2285,45 @@
  * Often the IMF Handler will be able to handle fonts which extend outside the acceptable range but not always.
  * If a warning is raised it may crash the IMF Handler, so continue at your own risk. \n
  * Selecting a font file from the Reference List on the left of the GUI will modify the central section of the GUI to display the fonts character dimensions and color depth.
- * Font files are compiled as 32 bit as they require an alpha channel and this allows effects to be applied to them in future versions.
+ * Font files are compiled as 32 bit as they require an alpha channel and this allows effects to be applied to them in future versions. \n
+ * Mesh Trees : \n
+ * Mesh Trees are generated in the IMF Handler. They allow you to produce structures composed of seperate objects.
+ * These objects can be ordered into a tree with a hierachy of linking. This means an object can be linked to another object making its movements based off the movements of the object with a lower depth.
+ * Objects in a Mesh Tree must be cModel types and so can be given a Mesh, Texture and shader. The Mesh and Shader are compulsory for an object to be rendered. The Texture is optional.
+ * The objects are also given a depth. Each object will be linked to the previous object in the list with a lower depth value. 0 should be the base object. Objects which base their movement off of the base object should have a depth value of 1.
+ * Objects based off of an object with a depth of 1 should have a depth of 2 and be after the object they wish to follow and before the next object with a depth value of 1. \n
+ * \n
+ * \n
+ * A0 \n
+ *  |- B1 \n
+ *  |  |- E2 \n
+ *  |  |  |- K3 \n
+ *  |  |\n
+ *  |  |- F2 \n
+ *  |\n
+ *  |- C1
+ *  |  | \n
+ *  |  |- G2 \n
+ *  |  |- H2 \n
+ *  |\n
+ *  |- D1 \n
+ *     |
+ *     |- I2 \n
+ *     |- J2 \n
+ * \n
+ * would be listed (Showing order and depth value of each item): \n
+ * A0 \n
+ * B1 \n
+ * E2 \n
+ * K3 \n
+ * F2 \n
+ * C1 \n
+ * G2 \n
+ * H2 \n
+ * D1 \n
+ * I2 \n
+ * J2 \n
+
  * \page CodeProgramExamples Examples of Games Code
  * This section will give a series of examples of programs for games. Initially they will be very simple. Later examples will show expanded functionality.
  * -# \ref BouncingBallExample "Example of a bouncing ball"
@@ -2215,7 +2344,7 @@
  {
  public:
  //Create pointer so cCore can  access the object it creates.
- cTexturedModel *BallPointer;
+ cModel *BallPointer;
 
  float BallSpeed;
 
@@ -2229,7 +2358,7 @@
 		 _LOAD_FILE( "Demonstration1.imf" );
 
 	//Create a Textured Model to put the ball on screen.
-	BallPointer =  _CREATE(cTexturedModel);
+	BallPointer =  _CREATE(cModel);
 
 	//Set the mesh it will use.
 	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
@@ -2313,7 +2442,7 @@
  {
  public:
  //Create pointer so cCore can  access the object it creates.
- cTexturedModel *BallPointer;
+ cModel *BallPointer;
 
  //Create a variable for each dimension the ball moves in.
  //This could be a c3DVf which is a 3 dimensional vector
@@ -2332,7 +2461,7 @@
 	 _LOAD_FILE( "Demonstration1.imf" );
 
 	//Create a Textured Model to put the ball on screen.
-	BallPointer =  _CREATE(cTexturedModel);
+	BallPointer =  _CREATE(cModel);
 
 	//Set the mesh it will use.
 	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
@@ -2422,7 +2551,7 @@
  {
  public:
  //Create pointer so cCore can  access the object it creates.
- cTexturedModel *BallPointer;
+ cModel *BallPointer;
 
  //Create a pointer so cCore can play the bounce sound.
  cAudioObject *BallBounce;
@@ -2442,7 +2571,7 @@
 	 _LOAD_FILE( "Demonstration2.imf" );
 
 	//Create a Textured Model to put the ball on screen.
-	BallPointer =  _CREATE(cTexturedModel);
+	BallPointer =  _CREATE(cModel);
 
 	//Set the mesh it will use.
 	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
@@ -2535,7 +2664,7 @@
  {
  public:
  //Create pointer so cCore can  access the object it creates.
- cTexturedModel *BallPointer;
+ cModel *BallPointer;
 
  //Create a pointer so cCore can play the bounce sound.
  cAudioObject *BallBounce;
@@ -2551,7 +2680,7 @@
 		//Since cCore will create this process
 		//media will be loaded before we get to this point.
 		//Create a Textured Model to put the ball on screen.
-	BallPointer =  _CREATE(cTexturedModel);
+	BallPointer =  _CREATE(cModel);
 
 		//Set the mesh it will use.
 	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
@@ -2763,7 +2892,7 @@ _PROCESS(cBullet)
  {
  public:
  //Create pointer so cCore can  access the object it creates.
- cTexturedModel *BallPointer;
+ cModel *BallPointer;
 
  //Create a pointer so cCore can play the bounce sound.
  cAudioObject *BallBounce;
@@ -2781,7 +2910,7 @@ _PROCESS(cBullet)
 		//Note the media will have been loaded in cCore.
 		//Since cCore Creates this process media will be loaded before we get to this point.
 		//Create a Textured Model to put the ball on screen.
-	BallPointer =  _CREATE(cTexturedModel);
+	BallPointer =  _CREATE(cModel);
 		//Set the mesh it will use.
 	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
 		//Set the Texture it will use.
@@ -3049,7 +3178,7 @@ public:
  public:
 
  	//Create pointer so cCore can  access the object it creates.
- cTexturedModel *BallPointer;
+ cModel *BallPointer;
 
  	//Create a pointer so cCore can play the bounce sound.
  cAudioObject *BallBounce;
@@ -3071,7 +3200,7 @@ public:
 	//Since cCore Creates this process
 	//Our media will be loaded before we get to this point.
 	//Create a Textured Model to put the ball on screen.
-	BallPointer =  _CREATE(cTexturedModel);
+	BallPointer =  _CREATE(cModel);
 
 	//Set the mesh it will use.
 	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
@@ -3374,7 +3503,7 @@ public:
  public:
 
 
- cTexturedModel *BallPointer;
+ cModel *BallPointer;
  cAudioObject *BallBounce;
  cCollisionObject *BallCollision;
  c3DVf BallSpeed;
@@ -3382,7 +3511,7 @@ public:
 
  	cBall()
 	{
-	BallPointer =  _CREATE(cTexturedModel);
+	BallPointer =  _CREATE(cModel);
 	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
 	BallPointer -> Texture( _GET_MESH_FILE( "BallTexture" ) );
 	BallPointer -> Shader( _GET_SHADER_FILE( "TexturingProgram" ) );
@@ -3674,11 +3803,11 @@ public:
 
 #include "./Files/Shaders/WTcShader.h"
 #include "./Files/Shaders/WTcShaderVariables.h"
-#include "./Files/Shaders/WTcShaderProgram.h"
 #include "./Files/Shaders/WTcUserDefinedShaderVariable.h"
-
+#include "./Files/Shaders/WTcShaderProgram.h"
 
 #include "./Camera/FX/WTcFog.h"
+#include "./Camera/WTcRenderOwner.h"
 #include "./Camera/WTvRenderObject.h"
 #include "./Files/Meshes/WTcMesh.h"
 
@@ -3690,27 +3819,27 @@ public:
 
 #include "./Physics/WTcCollisionObject.h"
 
+#include "./Camera/WTcTextureStack.h"
 #include "./Camera/WTcCamera.h"
 #include "./Camera/WTcRenderPointer.h"
 #include "./Camera/WTcRenderObject.h"
 
 #include "./Camera/Nodes/WTcRenderNode.h"
+#include "./Camera/Nodes/WTcNodeList.h"
 
 #include "./Files/Meshes/WTcmLandscape.h"
 
 
-         #include "./Camera/FX/WTcMaterial.h"
-
-	 #include "./Camera/FX/WTvLight.h"
+     #include "./Camera/FX/WTcMaterial.h"
+     #include "./Camera/FX/WTvLight.h"
 	 #include "./Camera/WTcLightHandler.h"
          #include "./Camera/FX/WTcLight.h"
          #include "./Camera/FX/WTcSpotLight.h"
 
          #include "./Camera/Renderable/WTcImage.h"
          #include "./Camera/Renderable/WTcTextureText.h"
-         #include "./Camera/Renderable/WTcTexturedModel.h"
-         #include "./Camera/Renderable/WTcModelList.h"
-         #include "./Camera/Renderable/WTcLandscape.h"
+         #include "./Camera/Renderable/WTcModel.h"
+	 #include "./Camera/Renderable/WTcLandscape.h"
 	 #include "./Camera/Renderable/WTcPoint.h"
 	 #include "./Camera/Renderable/WTcLine.h"
 	 #include "./Camera/Renderable/WTcParticleGroup.h"

@@ -2,7 +2,7 @@
 #define __WTCSHADERVARIABLES_H__
 
 /*
- * \brief cShaderVariables will store the bindings for User defined variables for each cShaderProgram.
+ * brief cShaderVariables will store the bindings for User defined variables for each cShaderProgram.
  * This will automatically extract the user definable variables for a shader program (As identified in the IMF).
  * This allows the system to access all the User defined Variables.
  *

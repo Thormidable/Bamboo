@@ -23,14 +23,13 @@ public:
  /// cLine constructor
  cLine();
  /// cLine constructor. Will be owned by lpRenderer.
- cLine(cRenderNode *lpRenderer);
+ cLine(vRenderNode *lpRenderer);
 
 
 
  // Will render this object to the cPainter render list.
-  void RenderPainter(uint8 liLevel);
- // Will render this object from the cPainter render list to the screen.
-  void RenderToPainter();
+  void RenderPainter();
+
 
       ///Will return a pointer to the color of this line (RGBA).
       cRGBA* Color();

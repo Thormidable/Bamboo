@@ -5,7 +5,7 @@ cCamera::cCamera()
  trace("Creating cCamera::cCamera()");
  mpRenderList=new cRenderNode(0);
  Identity();
- mmPerspective.Setup(1.0f,gpWindow->Ratio(),1.0f,20.0f);
+ mmPerspective.Setup(1.0f,gpWindow->Ratio(),1.0f,100.0f);
 
   cPainter::Instance();
 }
@@ -60,7 +60,7 @@ void cCamera::UpdateProjectionMatrix()
 	#warning comment This runs every frame. Only neccessary on frames when window is resized or values are changed.
   mmPerspective.Frustum();
   gpWindow->FindRenderArea();
-  mmPerspective2D.Orthographic(gpWindow->Width(),0.0f,gpWindow->Height(),0.0f,1.0f,20.0f);
+  mmPerspective2D.Orthographic(gpWindow->Width(),0.0f,gpWindow->Height(),0.0f,1.0f,10.0f);
 
 }
 
@@ -161,7 +161,7 @@ void cCamera::Ratio(float lfRatio)
 	void cCamera::SetClearColor(cRGBA *lpColor){ 	glClearColor(lpColor->R(),lpColor->G(),lpColor->B(),lpColor->A()); }
 	void cCamera::SetClearColor(cRGB *lpColor){ 	glClearColor(lpColor->R(),lpColor->G(),lpColor->B(),1.0f); }
 
-float *cCamera::TotalPositionMatrix()
+float *cCamera::PerspectiveCameraMatrix()
 {
 #warning comment Potential Minor Optimisation here. Can combine both matrices together.
     return mmPerspectiveCameraMatrix.Matrix();

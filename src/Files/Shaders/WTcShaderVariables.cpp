@@ -5,7 +5,7 @@ uint32 cShaderVariables::GetUniformPosition(string Name)
  uint32 liCount;
  for(liCount=0;liCount<miUniforms;++liCount)
  {
-	if(mpUniformText[liCount]==Name) return liCount;
+	if(mpUniformText[liCount]==Name) return liCount+1;
  }
  return 0;
 
@@ -16,8 +16,9 @@ uint32 cShaderVariables::GetAttributePosition(string Name)
 uint32 liCount;
  for(liCount=0;liCount<miAttributes;++liCount)
  {
-	if(mpAttributeText[liCount]==Name) return liCount;
- }
+	if(mpAttributeText[liCount]==Name) return liCount+1;
+
+}
  return 0;
 
 }

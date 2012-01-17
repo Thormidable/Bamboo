@@ -10,27 +10,21 @@
  * from a bitmap.
 */
 
-class cLandscape : public cRenderObject, public cMaterial
+class cLandscape : virtual public cRenderObject, public cMaterial
 {
  //This is an array of Vertexs, with a single vertex per point (so smoothing Normals are required)
 // Pointer to the cmLandscape file which holds the data for this landscape object.
  cmLandscape *mpLandscape;
-// Pointer to the texture which is bound to this landscape object.
- cTexture *mpTexture;
+
 
 public:
 
- // Function to render this object to the cPainter render list.
- void RenderToPainter();
  // Function to render this object from the cPainter render list.
- void RenderPainter(uint8 liLevel);
+ void RenderPainter();
 
 
-	cLandscape();
 	/// Create a landscape object and set its height map and texture.
-	cLandscape(cmLandscape *lpModel, cTexture *lpTexture);
-	/// Set the texture bound to this landscape object.
-	void Texture(cTexture *lpTexture);
+	cLandscape(cmLandscape *lpModel=0);
 	/// Set the current height map for this landscape object.
 	void Landscape(cmLandscape *lpLandscape);
 	/// Will return the height at Global co-ordinates lfX,lfZ.

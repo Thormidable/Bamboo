@@ -36,6 +36,7 @@ cMeshTree::cMeshTree(cMeshTreeArray *lpArray)
 
 float cMeshTree::FindSize()
 {
+	/*
  float lfPos[miTreeLength][4];
  mfSize=0.0f;
  uint32 liListPos;
@@ -69,6 +70,9 @@ for(liListPos=0;liListPos<miTreeLength;++liListPos)
 	    }
  }
  return mfSize;
+ */
+	return 1.0f;
 }
+
 
 #endif

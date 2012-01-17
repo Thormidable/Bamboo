@@ -452,37 +452,6 @@ return mpTemp;
 
 }
 
-
-// 0 4 8  12   3  2  1  0
-// 1 5 9  13   7  6  5  4
-// 2 6 10 14   11 10 9  8
-// 3 7 11 15   15 14 13 12
-/*
-cMatrix4 &cMatrix4::operator*(cMatrix4 &lVal)
-{
- mpTemp.mpData[0]=mpData[0]*lVal.mpData[0]+mpData[4]*lVal.mpData[1]+mpData[8]*lVal.mpData[2]+mpData[12]*lVal.mpData[3];
- mpTemp.mpData[1]=mpData[1]*lVal.mpData[0]+mpData[5]*lVal.mpData[1]+mpData[9]*lVal.mpData[2]+mpData[13]*lVal.mpData[3];
- mpTemp.mpData[2]=mpData[2]*lVal.mpData[0]+mpData[6]*lVal.mpData[1]+mpData[10]*lVal.mpData[2]+mpData[14]*lVal.mpData[3];
- mpTemp.mpData[3]=mpData[3]*lVal.mpData[0]+mpData[7]*lVal.mpData[1]+mpData[11]*lVal.mpData[2]+mpData[15]*lVal.mpData[3];
-
- mpTemp.mpData[4]=mpData[0]*lVal.mpData[4]+mpData[4]*lVal.mpData[5]+mpData[8]*lVal.mpData[6]+mpData[12]*lVal.mpData[7];
- mpTemp.mpData[5]=mpData[1]*lVal.mpData[4]+mpData[5]*lVal.mpData[5]+mpData[9]*lVal.mpData[6]+mpData[13]*lVal.mpData[7];
- mpTemp.mpData[6]=mpData[2]*lVal.mpData[4]+mpData[6]*lVal.mpData[5]+mpData[10]*lVal.mpData[6]+mpData[14]*lVal.mpData[7];
- mpTemp.mpData[7]=mpData[3]*lVal.mpData[4]+mpData[7]*lVal.mpData[5]+mpData[11]*lVal.mpData[6]+mpData[15]*lVal.mpData[7];
-
- mpTemp.mpData[8]=mpData[0]*lVal.mpData[8]+mpData[4]*lVal.mpData[9]+mpData[8]*lVal.mpData[10]+mpData[12]*lVal.mpData[11];
- mpTemp.mpData[9]=mpData[1]*lVal.mpData[8]+mpData[5]*lVal.mpData[9]+mpData[9]*lVal.mpData[10]+mpData[13]*lVal.mpData[11];
- mpTemp.mpData[10]=mpData[2]*lVal.mpData[8]+mpData[6]*lVal.mpData[9]+mpData[10]*lVal.mpData[10]+mpData[14]*lVal.mpData[11];
- mpTemp.mpData[11]=mpData[3]*lVal.mpData[8]+mpData[7]*lVal.mpData[9]+mpData[11]*lVal.mpData[10]+mpData[15]*lVal.mpData[11];
-
- mpTemp.mpData[12]=mpData[0]*lVal.mpData[12]+mpData[4]*lVal.mpData[13]+mpData[8]*lVal.mpData[14]+mpData[12]*lVal.mpData[15];
- mpTemp.mpData[13]=mpData[1]*lVal.mpData[12]+mpData[5]*lVal.mpData[13]+mpData[9]*lVal.mpData[14]+mpData[13]*lVal.mpData[15];
- mpTemp.mpData[14]=mpData[2]*lVal.mpData[12]+mpData[6]*lVal.mpData[13]+mpData[10]*lVal.mpData[14]+mpData[14]*lVal.mpData[15];
- mpTemp.mpData[15]=mpData[3]*lVal.mpData[12]+mpData[7]*lVal.mpData[13]+mpData[11]*lVal.mpData[14]+mpData[15]*lVal.mpData[15];
-
- return mpTemp;
-}
-*/
 cMatrix4 cMatrix4::operator*(cMatrix4 lVal)
 {
  mpTemp.mpData[0]=mpData[0]*lVal.mpData[0]+mpData[4]*lVal.mpData[1]+mpData[8]*lVal.mpData[2]+mpData[12]*lVal.mpData[3];
@@ -586,32 +555,6 @@ void cMatrix4::PositionZ(float lfZ)
 {
  mpData[14]=lfZ;
 }
-
-/* //this is HORRIBLY inefficient, however it represents the full
- //maths required to calculate the rotations
- mpRotate.Identity();
-
- mpRotate[10]=mpRotate[5]=cos(lfAngle);
- mpRotate[6]=sin(lfAngle);
- mpRotate[9]=-sin(lfAngle);
-
-mpTemp.mpData[0]=mpData[0]*mpRotate.mpData[0]+mpData[4]*mpRotate.mpData[1]+mpData[8]*mpRotate.mpData[2]+mpData[12]*mpRotate.mpData[3];
-mpTemp.mpData[1]=mpData[1]*mpRotate.mpData[0]+mpData[5]*mpRotate.mpData[1]+mpData[9]*mpRotate.mpData[2]+mpData[13]*mpRotate.mpData[3];
-mpTemp.mpData[2]=mpData[2]*mpRotate.mpData[0]+mpData[6]*mpRotate.mpData[1]+mpData[10]*mpRotate.mpData[2]+mpData[14]*mpRotate.mpData[3];
-mpTemp.mpData[3]=mpData[3]*mpRotate.mpData[0]+mpData[7]*mpRotate.mpData[1]+mpData[11]*mpRotate.mpData[2]+mpData[15]*mpRotate.mpData[3];
-
-mpTemp.mpData[4]=mpData[0]*mpRotate.mpData[4]+mpData[4]*mpRotate.mpData[5]+mpData[8]*mpRotate.mpData[6]+mpData[12]*mpRotate.mpData[7];
-mpTemp.mpData[5]=mpData[1]*mpRotate.mpData[4]+mpData[5]*mpRotate.mpData[5]+mpData[9]*mpRotate.mpData[6]+mpData[13]*mpRotate.mpData[7];
-mpTemp.mpData[6]=mpData[2]*mpRotate.mpData[4]+mpData[6]*mpRotate.mpData[5]+mpData[10]*mpRotate.mpData[6]+mpData[14]*mpRotate.mpData[7];
-mpTemp.mpData[7]=mpData[3]*mpRotate.mpData[4]+mpData[7]*mpRotate.mpData[5]+mpData[11]*mpRotate.mpData[6]+mpData[15]*mpRotate.mpData[7];
-
-mpTemp.mpData[8]=mpData[0]*mpRotate.mpData[8]+mpData[4]*mpRotate.mpData[9]+mpData[8]*mpRotate.mpData[10]+mpData[12]*mpRotate.mpData[11];
-mpTemp.mpData[9]=mpData[1]*mpRotate.mpData[8]+mpData[5]*mpRotate.mpData[9]+mpData[9]*mpRotate.mpData[10]+mpData[13]*mpRotate.mpData[11];
-mpTemp.mpData[10]=mpData[2]*mpRotate.mpData[8]+mpData[6]*mpRotate.mpData[9]+mpData[10]*mpRotate.mpData[10]+mpData[14]*mpRotate.mpData[11];
-mpTemp.mpData[11]=mpData[3]*mpRotate.mpData[8]+mpData[7]*mpRotate.mpData[9]+mpData[11]*mpRotate.mpData[10]+mpData[15]*mpRotate.mpData[11];
-
-memcpy(mpData,mpTemp.mpData,12*sizeof(float));
-*/
 
 void cMatrix4::RotateX(float lfAngle)
 {

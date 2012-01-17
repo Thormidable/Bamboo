@@ -85,8 +85,6 @@ public:
 	void DeleteAll();
 	void Refresh();
 	void ForceRefresh(){lbRefresh=true;};
-	void RenderToPainter();
-	void RenderPainter(uint8 liLevel);
 	void RenderPainter();
 
 

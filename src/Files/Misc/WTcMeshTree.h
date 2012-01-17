@@ -38,7 +38,7 @@ class cMeshTree : public cMesh
 {
   ///This points to an Array of cMeshTreeNode() objects.
    cMeshTreeNode *mpList;
-  /// This stores the length of the Tree!!! SOD.
+  /// This stores the length of the Tree.
    uint32 miTreeLength;
 
 public:
@@ -47,8 +47,8 @@ public:
 
  ~cMeshTree();
 
- /// This is actually the length of the Tree!!! SOD.
- uint32 Size(){return miTreeLength;};
+ /// This is actually the length of the Tree.
+ uint32 TreeSize(){return miTreeLength;};
   ///This will return a pointer to the first item of mpList.
  cMeshTreeNode *NodeList(){return mpList;};
  ///This will return a pointer to the cMeshTreeNode in position liCount in mpList.

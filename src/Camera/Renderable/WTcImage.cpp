@@ -10,18 +10,13 @@ float cImage::mpTextCoords[8];
 float cImage::mpNormals[12];
 
 
+
+
+
 cImage::~cImage(){}
-
-cImage::cImage(cTexture *lpTexture)
-{
- mpPixmap=lpTexture;
- SetUp();
-}
-
 
 cImage::cImage()
 {
- mpPixmap=0;
  SetUp();
 }
 
@@ -33,21 +28,6 @@ void cImage::SetUp()
 }
 
 
-void cImage::RenderToPainter()
-{
-if(mpPixmap)
-{
-
- UpdateMatrix();
-
- mpPainterData->SetObject(this);
- mpPainterData->SetTexture(TextureNumber());
- SetOtherRenderVariables();
-
-mpPainterData->RenderAgain();
-
-}
-}
 
 void cImage::Width(float lfWidth)
 {
@@ -64,11 +44,10 @@ void cImage::Size(float lfSize)
 }
 
 
-void cImage::RenderPainter(uint8 liLevel)
+void cImage::RenderPainter()
 {
-(void) liLevel;
 
- if(mpPixmap)
+ if(Textures())
  {
      ResizeArrays();
      SetShaderVariables();
@@ -77,28 +56,23 @@ void cImage::RenderPainter(uint8 liLevel)
    glBegin(GL_QUADS);
 
     glNormal3f(0.0f,0.0f,1.0f);
-    glTexCoord2f(0.0f,0.0f);
+    glMultiTexCoord2f(GL_TEXTURE0,0.0f,0.0f);
     glVertex3f(-lfWidth,-lfHeight,2.1f);
 
 
-    glTexCoord2f(1.0f,0.0f);
+    glMultiTexCoord2f(GL_TEXTURE0,1.0f,0.0f);
     glVertex3f(lfWidth,-lfHeight,2.1f);
 
-    glTexCoord2f(1.0f,1.0f);
+    glMultiTexCoord2f(GL_TEXTURE0,1.0f,1.0f);
     glVertex3f(lfWidth,lfHeight,2.1f);
 
-    glTexCoord2f(0.0f,1.0f);
+    glMultiTexCoord2f(GL_TEXTURE0,0.0f,1.0f);
     glVertex3f(-lfWidth,lfHeight,2.1f);
 
    glEnd();
 
  }
 
-}
-
-void cImage::Texture(cTexture *lpGraph)
-{
- mpPixmap=lpGraph;
 }
 
 
@@ -131,11 +105,6 @@ void cImage::ResizeArrays()
 {
  mpVertex[7]=mpVertex[4]=mpVertex[3]=mpVertex[0]=mfWidth;
 
-}
-
-unsigned int cImage::TextureNumber()
-{
-  if(mpPixmap) return mpPixmap->TextureNumber(); return 0;
 }
 
 

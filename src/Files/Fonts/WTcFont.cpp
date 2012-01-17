@@ -50,11 +50,6 @@ uint8 cFont::Character(uint8 lcChar)
 {
 if(lcChar>126 || lcChar<33) return 0xFF;
 return lcChar-33;
-/*
-if(lcChar>96) return lcChar-71; //a-z
-if(lcChar>63) return lcChar-65; //A-Z
-if(lcChar>47) return lcChar+4; //0-9
-return 0xFF;
-*/
+
 }
 

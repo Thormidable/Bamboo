@@ -26,7 +26,7 @@ void cParentStack::StripChildrensParent()
  ChildStack.mpTemp=ChildStack.Start();
  while(ChildStack.mpTemp)
  {
-	 if(ChildStack.mpTemp->mpData && ChildStack.mpTemp->mpData->ParentStack()) {ChildStack.mpTemp->mpData->ParentStack()->ClearParent();}
+	 if(ChildStack.mpTemp->Data() && ChildStack.mpTemp->Data()->ParentStack()) {ChildStack.mpTemp->Data()->ParentStack()->ClearParent();}
   ChildStack.mpTemp=ChildStack.mpTemp->Next();
  }
 }
@@ -36,7 +36,7 @@ void cParentStack::ChildSignal(SIGNAL lsSignal)
  ChildStack.mpTemp=ChildStack.Start();
  while(ChildStack.mpTemp)
  {
-  ChildStack.mpTemp->mpData->Signal(lsSignal);
+  ChildStack.mpTemp->Data()->Signal(lsSignal);
   ChildStack.mpTemp=ChildStack.mpTemp->Next();
  }
 }
@@ -48,7 +48,7 @@ cProcess *cParentStack::Child()
   if(ChildCursor->Next())
   {
    ChildCursor=ChildCursor->Next();
-   return ChildCursor->mpData;
+   return ChildCursor->Data();
   }
   ChildCursor=0;
   return 0;
@@ -56,7 +56,7 @@ cProcess *cParentStack::Child()
  else
  {
   ChildCursor=ChildStack.Start();
-  return ChildCursor->mpData;
+  return ChildCursor->Data();
  }
 
 }

@@ -29,12 +29,12 @@ cTextButton::~cTextButton()
     //dtor
 }
 
-void cTextButton::RenderPainter(uint8 liLevel)
+void cTextButton::RenderPainter()
 {
-    (void) liLevel;
-    if(mpFont)
+
+    if(Textures())
     {
-SetShaderVariables();
+	SetShaderVariables();
         float lfTextLeft;
         lfTextLeft=mfWidth*mpString.length()*0.5;
          short liCount;
@@ -45,7 +45,7 @@ SetShaderVariables();
          if(mpString[liCount]!=32)
          {
 
-            liRange=IMF_FONT_SCALE*(mpFont->Character(mpString[liCount])); //(or /64)
+            liRange=IMF_FONT_SCALE*(cFont::Character(mpString[liCount])); //(or /64)
               glNormal3f(0.0f,0.0f,1.0f);
               glBegin(GL_QUADS);
               glTexCoord2f(1,liRange+IMF_FONT_SCALE);   glVertex3f(lfTextLeft-mfWidth*(liCount+0.5f),lfHeight,3.1f);
@@ -64,7 +64,7 @@ SetShaderVariables();
 void cButton::Position(float lfX,float lfY)
 {
     XCenter=lfX;
-    YCenter=gpWindow->RenderAreaHeight()-lfY;
+    YCenter=lfY;
     mpData[12]=lfX;
     mpData[13]=lfY;
 }
@@ -112,15 +112,11 @@ void cTextButton::Size(float lfSize)
 
 bool cButtonBase::Hover()
 {
-        printf("Render Area Width Hegiht : %i %i\n",gpWindow->RenderAreaWidth(),gpWindow->RenderAreaHeight());
-        printf("Centre X Y : %f %f\n",XCenter,YCenter);
-        printf("Range X Y : %f %f\n",XRange,YRange);
-        printf("Mouse X Y : %i %i\n",_MOUSE->x,_MOUSE->y);
 
 return _MOUSE->x>XCenter-XRange
       && _MOUSE->x<XCenter+XRange
-      && _MOUSE->y>YCenter-YRange
-      && _MOUSE->y<YCenter+YRange;
+      && _MOUSE->y>gpWindow->RenderAreaHeight()-YCenter-YRange
+      && _MOUSE->y<gpWindow->RenderAreaHeight()-YCenter+YRange;
 }
 
 bool cButtonBase::Pressed()

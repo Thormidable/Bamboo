@@ -49,27 +49,12 @@ void cBeamMesh::BufferBeam()
 }
 
 
-void cBeamMesh::RenderPainter(uint8 liLevel)
+void cBeamMesh::RenderPainter()
 {
-(void) liLevel;
-
-	//PrepareMaterial();
-	//AdditionalRenderFunctions();
 	SetShaderVariables();
 	RenderBeam();
 }
 
-void cBeamMesh::RenderToPainter()
-{
-
-	UpdateMatrix();
-
-	mpPainterData->SetObject(this);
-	mpPainterData->SetTexture(0);
-	SetOtherRenderVariables();
-	mpPainterData->RenderAgain();
-
-}
 
 
 void cBeamMesh::Radius(float Radius)

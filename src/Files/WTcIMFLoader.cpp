@@ -35,7 +35,7 @@ void cIMF::LoadIMF(const char *lpPath)
 
                 case IMF_TYPE_MODEL :
 		{
-			trace("Type Model")
+		//	trace("Type Model")
 			cMeshArray lpDataStore;
 			lpDataStore.LoadIMF(FileStream);
 			new cMesh(&lpDataStore);
@@ -43,7 +43,7 @@ void cIMF::LoadIMF(const char *lpPath)
 
                 case IMF_TYPE_TEXTURE :
 		{
-			trace("Type Texture")
+		//	trace("Type Texture")
 			cTextureArray lpTexture;
 			FileStream.ignore(sizeof(uint32));
 
@@ -64,7 +64,7 @@ void cIMF::LoadIMF(const char *lpPath)
 
                 case IMF_TYPE_FONT :
 		{
-			trace("Type Font")
+		//	trace("Type Font")
 			cTextureArray lpTexture;
 			FileStream.ignore(sizeof(uint32));
 
@@ -84,7 +84,7 @@ void cIMF::LoadIMF(const char *lpPath)
 #if WT_FULL_VERSION_BAMBOO
                 case IMF_TYPE_TREE :
 		{
-			trace("Type Tree")
+		//	trace("Type Tree")
 			cMeshTreeArray lpTree;
 
 			//Skip uint32 holding the Size of Block
@@ -111,7 +111,7 @@ void cIMF::LoadIMF(const char *lpPath)
 
                 case IMF_TYPE_MATRIX_LANDSCAPE :
 		{
-			trace("Type Matrix Landscape")
+		//	trace("Type Matrix Landscape")
 			cmLandscapeArray lpLandscape;
 			liTemp=0;
 
@@ -149,7 +149,7 @@ void cIMF::LoadIMF(const char *lpPath)
 
                 case IMF_TYPE_SHADER :
 		{
-			trace("Type Shader Object")
+		//	trace("Type Shader Object")
 			cShaderArray lShaderArray;
 			lShaderArray.LoadIMF(FileStream);
 			new cShader(&lShaderArray);
@@ -157,14 +157,14 @@ void cIMF::LoadIMF(const char *lpPath)
 
                 case IMF_TYPE_SHADER_PROGRAM :
 		{
-			trace("Type Shader Program Object");
+		//	trace("Type Shader Program Object");
 			cShaderProgram *lpProgram = new cShaderProgram;
 			lpProgram->LoadIMF(FileStream);
                 }break;
 #if WT_FULL_VERSION_BAMBOO
                 case IMF_TYPE_COLLISION_OBJECT :
 		{
-		    trace("Type Collision Mesh")
+		//    trace("Type Collision Mesh")
 		    //cCollisionArray lpArray;
 		    //lpArray.LoadIMF(FileStream);
 		    //new cCollisionMesh(&lpArray);
@@ -175,7 +175,7 @@ void cIMF::LoadIMF(const char *lpPath)
 #endif
                 case IMF_TYPE_SOUND_OBJECT :
                 {
-                    trace("Type Sound Object")
+         //           trace("Type Sound Object")
                     cSoundObject *lpSound;
                     lpSound=new cSoundObject();
                     lpSound->LoadIMF(FileStream);

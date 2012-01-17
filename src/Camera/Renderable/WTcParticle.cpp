@@ -32,7 +32,7 @@ void cParticle::AdditionalWakeFunctionality()
 cParticleHandler *cParticleHandler::spthis;
 
 
-cParticleHandler::cParticleHandler()
+cParticleHandler::cParticleHandler() : cRenderObject(1)
 {
 	lbRefresh=false;
 	miParticles=0;
@@ -145,23 +145,6 @@ glEnable(GL_VERTEX_PROGRAM_POINT_SIZE);
 	glColor4fv(lpTemp);
 
 	glDisable(GL_VERTEX_PROGRAM_POINT_SIZE);
-}
-
-void cParticleHandler::RenderPainter(uint8 liLevel)
-{
-(void) liLevel;
-RenderPainter();
-}
-
-
-void cParticleHandler::RenderToPainter()
-{
-
-    _CAMERA->Identity();
-
-	mpPainterData->SetObject(this);
-	SetOtherRenderVariables();
-	mpPainterData->RenderAgain();
 }
 
 

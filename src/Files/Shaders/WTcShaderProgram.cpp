@@ -1,5 +1,7 @@
 #include "../../WTBamboo.h"
 
+
+
 void cShaderProgram::LoadIMF(ifstream &FileStream)
 {
  uint32 liBuff;
@@ -28,6 +30,24 @@ void cShaderProgram::LoadIMF(ifstream &FileStream)
 trace("Loaded and Processed ShaderProgram : " << mpFileName);
 
 
+	StoredVariables()->Link(this);
+
+ 	Use();
+
+	cUniformMatrix *lpTemp;
+
+	  lpTemp=AddUniform<cUniformMatrix>("mm2DProjection");
+	  if(lpTemp) lpTemp->Data=_CAMERA->Perspective2D();
+
+      lpTemp=AddUniform<cUniformMatrix>("mmProjection");
+	  if(lpTemp) lpTemp->Data=_CAMERA->Perspective();
+
+      lpTemp=AddUniform<cUniformMatrix>("mmCamera");
+	  if(lpTemp)lpTemp->Data=_CAMERA->CameraMatrix();
+
+   	  lpTemp=AddUniform<cUniformMatrix>("mmCombined");
+	  if(lpTemp) lpTemp->Data=_CAMERA->PerspectiveCameraMatrix();
+
 }
 
 cShaderProgram::cShaderProgram()
@@ -36,6 +56,7 @@ miProgramID=glCreateProgram();
 printf("Shader Program ID: %u\n",miProgramID);
 mpShader=0;
 mpVariables=0;
+mpStoredVariables=0;
 }
 
 cShaderProgram::~cShaderProgram()
@@ -44,6 +65,7 @@ glUseProgram(0);
  if(miProgramID){glDeleteProgram(miProgramID); miProgramID=0;}
  delete []mpShader; mpShader=0;
  delete mpVariables; mpVariables=0;
+ delete mpStoredVariables; mpStoredVariables=0;
 }
 
 void cShaderProgram::AttachShader(cShader *lpShader)
@@ -60,9 +82,7 @@ void cShaderProgram::DetachShader(cShader *lpShader)
 void cShaderProgram::Link()
 {
  int liStatus;
-/* 	 Use();
- 	 mpVariables->GetAttributeLocations(miProgramID,mpShader,Size());
-	 mpVariables->GetUniformLocations(miProgramID,mpShader,Size());*/
+
  mpVariables->BindAttributes(miProgramID);
  glLinkProgram(miProgramID);
  glGetProgramiv(miProgramID,GL_LINK_STATUS,&liStatus);
@@ -101,3 +121,27 @@ cShaderVariables *cShaderProgram::ShaderVariables()
 {
 	return mpVariables;
 }
+
+
+
+
+cVariableStore *cShaderProgram::StoredVariables()
+{
+ if(!mpStoredVariables) mpStoredVariables=new cVariableStore(this);
+ return mpStoredVariables;
+}
+
+void cShaderProgram::SetShaderVariables()
+{
+ if(mpStoredVariables)
+ {
+  Use();
+  mpStoredVariables->WriteUniforms();
+  mpStoredVariables->WriteAttributes();
+ }
+
+}
+
+
+
+

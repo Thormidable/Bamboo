@@ -15,6 +15,7 @@ public:
 	template<class cX,class cS> friend class cMainThread;
 };
 
+extern uint8 WT_TEXTURE_NUMBER_ALLOWED;
 ///This is the number of Items the Painter can hold at start
 extern uint16 WT_PAINTER_STARTING_SIZE;
 

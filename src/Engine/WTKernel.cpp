@@ -43,15 +43,15 @@ while(mpProcess)
   		{
 		  ++liProcessCount;
 		//XXXXXXXXXXXXXXXXX LOOK AT THIS
-			if(mpCursor->mpData && mpCursor->mpData->Awake())
+			if(mpCursor->Data() && mpCursor->Data()->Awake())
 			{
 			  //printf("cPainter::lpValue %p\n",cPainter::lpValue);
-				mpCursor->mpData->Run();
+				mpCursor->Data()->Run();
 				mpCursor=mpCursor->Next();
 			}
 			else
 			{
-				if(!(mpCursor->mpData->Alive()))
+				if(!(mpCursor->Data()->Alive()))
 				{
 					if(mpCursor->Next())
 					{
@@ -87,6 +87,7 @@ if(_FPS)
 	gpTimer->Tick();
 	if(gpTimer->GetTimeMod()< _TIME_PER_FRAME)
 	{
+		printf("Time for Frame : %f s\n",gpTimer->GetTimeMod());
 		gpTimer->SleepWrap((_TIME_PER_FRAME-gpTimer->GetTimeMod())*1000);
 	}
 }

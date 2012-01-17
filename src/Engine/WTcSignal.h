@@ -14,6 +14,7 @@ protected:
 	bool mbAwake;
 	bool mbAlive;
 public:
+	cSignal();
 	///This is the function that will handle a system signal. Possible signals to be passed in are _S_SLEEP,_S_WAKE,_S_KILL,_S_SLEEP_TREE, _S_WAKE_TREE,_S_KILL_TREE.
 	virtual void Signal(SIGNAL lsSignal);
 	///This will return true if the object is Awake.

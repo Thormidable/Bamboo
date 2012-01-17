@@ -57,7 +57,25 @@ public:
 	void Write()=0;
 };
 
+class cUniformTexture : public cUniformStore
+{
+protected:
+ uint8 miTextureSlot;
+public:
 
+	cUniformTexture(uint8 miTextureSlot);
+	void Write();
+	void UpdateShaderState();
+	cTexture *Data;
+
+};
+
+class cUniformFont : public cUniformTexture
+{
+
+public:
+	cUniformFont(uint8 liTex);
+};
 /**
  *\brief This is a specific type of cUniformStore for Controlling Uniform variable from a cShaderProgram.
  * See cUniformStore. *
@@ -128,6 +146,7 @@ public:
 	///The data is buffered here.
 	float *Data;
 };
+
 /**
  *\brief This is a specific type of cUserVariable for Controlling an array of Attribute with a single value per vertex.
  * See cAttributeStore.
@@ -190,6 +209,8 @@ public:
 };
 
 
+
+
 /**
  *\brief This is the class through which the user will access Variables in cShaderProgram's.
  *
@@ -206,9 +227,9 @@ protected:
  uint32 miAttributes;
  int32 *mpAttributeID;
  cAttributeStore **mpAttribute;
- void Link(cShaderProgram *lpProg);
-public:
 
+public:
+	void Link(cShaderProgram *lpProg);
 	cVariableStore(cShaderProgram *lpProg);
 	virtual void WriteUniforms();
 	virtual void WriteAttributes();

@@ -1,5 +1,11 @@
 #include "../WTBamboo.h"
 
+cSignal::cSignal()
+{
+ mbAwake=true;
+ mbAlive=true;
+}
+
 void cSignal::Signal(SIGNAL liFlags)
 {
 	/*	miFlags=(miFlags|liFlags);

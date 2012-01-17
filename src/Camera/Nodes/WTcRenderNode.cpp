@@ -4,32 +4,31 @@ void cRenderNode::Initialise()
 {
 	mbAwake=true;
 	mbAlive=true;
-
+	mpObjects=0;
+	mbDying=false;
 }
-
 
 
 cRenderNode::cRenderNode()
 {
- mpObjects=0;
  mpRenderer=cCamera::Instance()->RenderList();
- mpNode=mpRenderer->Add(this);
+ mcOwnerNode=mpRenderer->Add(this);
  Initialise();
  Identity();
 }
 
-cRenderNode::cRenderNode(cRenderNode *lpRenderer)
+cRenderNode::cRenderNode(vRenderNode *lpRenderer)
 {
-	mpObjects=0;
+
  if(lpRenderer)
  {
   mpRenderer=lpRenderer;
-  mpNode=lpRenderer->Add(this);
+  mcOwnerNode=lpRenderer->Add(this);
  }
  else
  {
   mpRenderer=0; //This represents the top level
-  mpNode=0;
+  mcOwnerNode.Node=0;
  }
  Initialise();
  Identity();
@@ -38,29 +37,35 @@ cRenderNode::cRenderNode(cRenderNode *lpRenderer)
 
 cRenderNode::~cRenderNode()
 {
-//	if(mpRenderer) mpRenderer->Remove(mpNode);
- DeleteAll();
+
+	mbDying=true;
+	delete mpObjects;
+	mpObjects=0;
+	mpRenderer=0;
+	mcOwnerNode.Node=0;
+
 }
 
-void cRenderNode::DeleteAll()
+void cRenderNode::DeleteAll(){ delete mpObjects; mpObjects=0;}
+
+cRenderOwner cRenderNode::Add(vRenderObject *lpNew)
 {
-
-// mpObjects->DeleteAll();
-// mpObjects->Initialise();
- delete mpObjects; mpObjects=0;
-
+ cRenderOwner lcOwner;
+ if(!mpObjects) {mpObjects=new cLinkedList<vRenderObject>(lpNew); lcOwner.Node=mpObjects->Start();}
+ else lcOwner.Node=mpObjects->Insert(lpNew);
+ return lcOwner;
 }
 
-cLinkedNode<vRenderObject> *cRenderNode::Add(vRenderObject *lpNew)
+/*
+void cRenderNode::Remove(cRenderOwner lpOld)
 {
- if(!mpObjects) {mpObjects=new cLinkedList<vRenderObject>(lpNew); return mpObjects->Start();}
- else return mpObjects->Insert(lpNew);
-}
+	printf("Here as well\n");
+	mpObjects->Delete(lpOld.Node);
+	mpRenderer=0;
+	mcOwnerNode.Node=0;
+	mcOwnerNode.List=0;
 
-void cRenderNode::Remove(cLinkedNode<vRenderObject> *lpOld)
-{
-	mpObjects->Delete(lpOld);
-}
+}*/
 
 
 void cRenderNode::RenderToPainter()
@@ -68,9 +73,9 @@ void cRenderNode::RenderToPainter()
  if (mpObjects)
  {
 
-	_MATRIX_STACK->Push();
+	//_MATRIX_STACK->Push();
 
-  //glMultMatrixf(Matrix());
+
   UpdateMatrix();
   UpdateCache();
   mpCursor=mpObjects->Start();
@@ -78,15 +83,15 @@ void cRenderNode::RenderToPainter()
   {
 		_MATRIX_STACK->Push();
 
-	if(mpCursor->mpData->Awake())
+	if(mpCursor->Data()->Awake())
 	{
-		mpCursor->mpData->RenderToPainter();
-		mpCursor->mpData->UpdateCache();
+		mpCursor->Data()->RenderToPainter();
+		mpCursor->Data()->UpdateCache();
 		mpCursor=mpCursor->Next();
 	}
 	else
 	{
-		if(!(mpCursor->mpData->Alive()))
+		if(!(mpCursor->Data()->Alive()))
 		{
 
 			if(mpCursor->Next())
@@ -112,59 +117,16 @@ void cRenderNode::RenderToPainter()
   }
   AdditionalRenderFunctions();
 
-	_MATRIX_STACK->Pop();
+//	_MATRIX_STACK->Pop();
 
  }
 }
 
-void cRenderNode::AdditionalRenderFunctions()
-{
-
-};
-
-void cRenderNode::RenderPainter(uint8 liLevel){(void) liLevel;};
-void cRenderNode::RenderPainter(){};
+void cRenderNode::AdditionalRenderFunctions(){};
 
 
-cLinkedList<vRenderObject> *cRenderNode::RenderList()
-{
-  return mpObjects;
 
-};
+cLinkedList<vRenderObject> *cRenderNode::RenderList(){ return mpObjects;};
 
-cRenderNode *cRenderNode::Renderer()
-{
-  return mpRenderer;
-
-}
-
-void cRenderNode::LinkCollisionObject(cCollisionObject *lpObj)
-{
-  (void) lpObj; uint32 MAKE_RENDER_NODES_SUITABLE_FOR_COLLISION_OBJECTS;
-
-};
-
-void cRenderNode::UpdateCache()
-{
-	mmCache=_MATRIX_STACK->Current();
-  //glGetFloatv(GL_MODELVIEW_MATRIX,mmCache.Matrix());
-}
-
-
-float *cRenderNode::GetPos()
-{
-  return Position();
-
-};
-
-float *cRenderNode::GetCachedGlobalMatrix()
-{
-  return mmCache.Position();
-
-};
-
-cVariableStore *cRenderNode::Variables()
-{
- return 0;
-}
+void cRenderNode::LinkCollisionObject(cCollisionObject *lpObj){  (void) lpObj; uint32 MAKE_RENDER_NODES_SUITABLE_FOR_COLLISION_OBJECTS;};
 

@@ -12,8 +12,6 @@
 class cImage : public cRenderObject
 {
 protected:
- // This is the texture image which will form the sprite.
- cTexture *mpPixmap;
  // This is the size of the sprite on the screen.
  float mfWidth;
 
@@ -34,11 +32,6 @@ protected:
        	// Updates arrays to make the image of size mfSize.
        void ResizeArrays();
 public:
-	/** Constructor for cImage.
-	* \brief Will construct a new cImage class, and set the cTexture it will use.
-	* \param lpTexture the cTexture that this object will use.
-	*/
-       cImage(cTexture *lpTexture);
  	/// Constructor for cImage. Will Create an Empty cImage Object.
        cImage();
 	// This function will set this object to being a 2D object and initialise the arrays.
@@ -46,16 +39,10 @@ public:
 	//Destructor for cImage.
        ~cImage();
 
-	/// Will set the current cTexture this object will use.
-        void Texture(cTexture *lpObject);
-
-	/// This returns the Texture ID of the texture this object will use.
-        virtual unsigned int TextureNumber();
 
 	// Function to render this object from the cPainter render list.
-       void RenderPainter(uint8 liLevel);
-	// Function to render this object to the cPainter render list.
-       void RenderToPainter();
+       void RenderPainter();
+
 
 	/// Sets the size of the image on screen. Makes the width be lfSize pixels and makes the height to make it appear square.
        virtual void Size(float lfSize);
@@ -68,6 +55,8 @@ public:
         float Width();
         ///Will return the Height of this image in pixels.
         float Height();
+
+
 
 };
 

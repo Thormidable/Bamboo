@@ -1277,7 +1277,7 @@
 
 1326377741 e:\my documents\c++ code\bamboo\bamboo\src\global\wtdefinitions.h
 
-1326124599 e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.h
+1326552509 e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\global\wtsetdefinitions.h
 
@@ -1305,11 +1305,11 @@
 
 1325243090 e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcwindow.h
 
-1323191231 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtlltemplate.h
+1326666846 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtlltemplate.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtminlinkedlist.h
 
-1326194424 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtlimitedlist.h
+1326551414 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtlimitedlist.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtcpushpopstack.h
 
@@ -1325,7 +1325,7 @@
 
 1318429910 e:\my documents\c++ code\bamboo\bamboo\src\files\wtstring.h
 
-1323267849 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcsignal.h
+1326451461 e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcsignal.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtvprocess.h
 
@@ -1363,27 +1363,27 @@
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtvtexture.h
 
-1323189225 e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtctexture.h
+1326663042 e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtctexture.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\fonts\wtvfont.h
 
-1323189299 e:\my documents\c++ code\bamboo\bamboo\src\files\fonts\wtcfont.h
+1326628072 e:\my documents\c++ code\bamboo\bamboo\src\files\fonts\wtcfont.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtvshader.h
 
 1323189326 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshader.h
 
-1323184431 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshadervariables.h
+1326582656 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshadervariables.h
 
 1318865200 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtvshaderprogram.h
 
-1325337205 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.h
+1326622822 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.h
 
-1323189382 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.h
+1326565259 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.h
 
 1326131892 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcfog.h
 
-1325004918 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtvrenderobject.h
+1326668698 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtvrenderobject.h
 
 1321280704 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtvmesh.h
 
@@ -1393,19 +1393,19 @@
 
 1326298519 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtvmeshtree.h
 
-1326298788 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtree.h
+1326390434 e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtree.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtv2dpolygon.h
 
 1326132882 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.h
 
-1326024387 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.h
+1326631171 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.h
 
-1323189526 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderpointer.h
+1326625229 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderpointer.h
 
-1325004892 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderobject.h
+1326668928 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderobject.h
 
-1325004985 e:\my documents\c++ code\bamboo\bamboo\src\camera\nodes\wtcrendernode.h
+1326668704 e:\my documents\c++ code\bamboo\bamboo\src\camera\nodes\wtcrendernode.h
 
 1321959800 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtvmlandscape.h
 
@@ -1421,27 +1421,27 @@
 
 1326131926 e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcspotlight.h
 
-1326137178 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcimage.h
+1326627373 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcimage.h
 
-1326137187 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturetext.h
+1326645154 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturetext.h
 
-1326133995 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturedmodel.h
+1326390950 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturedmodel.h
 
-1326377517 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodellist.h
+1326393869 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodellist.h
 
-1326132030 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtclandscape.h
+1326563432 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtclandscape.h
 
-1326132067 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.h
+1326563503 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.h
 
-1325004357 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcline.h
+1326623873 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcline.h
 
-1326132058 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.h
+1326655671 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.h
 
-1326132051 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticle.h
+1326560815 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticle.h
 
-1326132085 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.h
+1326630060 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.h
 
-1325853289 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcpainter.h
+1326625475 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcpainter.h
 
 1321870726 e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtckeystore.h
 
@@ -1483,53 +1483,53 @@
 1326132242 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\fx\wtcspotlight.cpp
 	"../../WTBamboo.h"
 
-1326072230 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\nodes\wtcrendernode.cpp
+1326668605 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\nodes\wtcrendernode.cpp
 	"../../WTBamboo.h"
 
-1326132253 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.cpp
+1326630037 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.cpp
 	"../../WTBamboo.h"
 
-1326137164 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcimage.cpp
+1326627373 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcimage.cpp
 	"../../WTBamboo.h"
 	<cmath>
 
-1326132269 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtclandscape.cpp
+1326563542 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtclandscape.cpp
 	"../../WTBamboo.h"
 
-1326072232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcline.cpp
+1326624091 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcline.cpp
 	"../../WTBamboo.h"
 
-1326299448 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodellist.cpp
+1326394065 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodellist.cpp
 	"../../WTBamboo.h"
 
-1326132287 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticle.cpp
+1326624302 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticle.cpp
 	"../../WTBamboo.h"
 
-1326132295 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.cpp
+1326655651 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.cpp
 	"../../WTBamboo.h"
 
-1326113313 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.cpp
+1326624327 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.cpp
 	"../../WTBamboo.h"
 
-1326137118 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturetext.cpp
+1326629652 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturetext.cpp
 	"../../WTBamboo.h"
 
 1326072232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturedmodel.cpp
 	"../../WTBamboo.h"
 
-1326134053 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.cpp
+1326631120 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.cpp
 	"../WTBamboo.h"
 
-1326132312 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtclighthandler.cpp
+1326451100 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtclighthandler.cpp
 	"../WTBamboo.h"
 
-1326134081 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcpainter.cpp
+1326626609 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcpainter.cpp
 	"../WTBamboo.h"
 
-1326115261 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderobject.cpp
+1326669182 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderobject.cpp
 	"../WTBamboo.h"
 
-1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderpointer.cpp
+1326665198 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderpointer.cpp
 	"../WTBamboo.h"
 
 1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcparentstack.cpp
@@ -1538,7 +1538,7 @@
 1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\process\wtcprocess.cpp
 	"../../WTBamboo.h"
 
-1326196293 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtkernel.cpp
+1326552066 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtkernel.cpp
 	"../WTBamboo.h"
 
 1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcbase.cpp
@@ -1547,7 +1547,7 @@
 1326195995 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcframerate.cpp
 	"../WTBamboo.h"
 
-1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcsignal.cpp
+1326451449 source:e:\my documents\c++ code\bamboo\bamboo\src\engine\wtcsignal.cpp
 	"../WTBamboo.h"
 
 1326072233 source:e:\my documents\c++ code\bamboo\bamboo\src\files\audio\wtcaudiodata.cpp
@@ -1559,7 +1559,7 @@
 1326130858 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.cpp
 	"../../WTBamboo.h"
 
-1326071927 source:e:\my documents\c++ code\bamboo\bamboo\src\files\fonts\wtcfont.cpp
+1326628067 source:e:\my documents\c++ code\bamboo\bamboo\src\files\fonts\wtcfont.cpp
 	"../../WTBamboo.h"
 
 1326072234 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtccluster.cpp
@@ -1580,7 +1580,7 @@
 1326072234 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcvertex.cpp
 	"../../../WTBamboo.h"
 
-1326072231 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmesh.cpp
+1326570752 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmesh.cpp
 	"../../WTBamboo.h"
 
 1326132402 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtcmlandscape.cpp
@@ -1589,10 +1589,10 @@
 1326072234 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtv2dpolygon.cpp
 	"../../WTBamboo.h"
 
-1326132412 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtree.cpp
+1326449219 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtree.cpp
 	"../../WTBamboo.h"
 
-1326299290 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtreenode.cpp
+1326536323 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcmeshtreenode.cpp
 	"../../WTBamboo.h"
 
 1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcreferencelist.cpp
@@ -1601,16 +1601,16 @@
 1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshader.cpp
 	"../../WTBamboo.h"
 
-1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.cpp
+1326631162 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.cpp
 	"../../WTBamboo.h"
 
-1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshadervariables.cpp
+1326583966 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshadervariables.cpp
 	"../../WTBamboo.h"
 
-1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.cpp
+1326575521 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.cpp
 	"../../WTBamboo.h"
 
-1326071661 source:e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtctexture.cpp
+1326580662 source:e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtctexture.cpp
 	"../../WTBamboo.h"
 
 1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtstring.cpp
@@ -1624,10 +1624,10 @@
 1326072231 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtcfilehandler.cpp
 	"../WTBamboo.h"
 
-1326134208 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtcimfloader.cpp
+1326450047 source:e:\my documents\c++ code\bamboo\bamboo\src\files\wtcimfloader.cpp
 	"../WTBamboo.h"
 
-1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.cpp
+1326552507 source:e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.cpp
 	"../WTBamboo.h"
 
 1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\global\log.cpp
@@ -1640,7 +1640,7 @@
 	"../WTBamboo.h"
 	<cmath>
 
-1326072230 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrix4.cpp
+1326467945 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrix4.cpp
 	"../WTBamboo.h"
 
 1326195407 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtcmatrixstack.cpp
@@ -1676,7 +1676,7 @@
 	<sys/time.h>
 	"../WTBamboo.h"
 
-1326192906 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcwindow.cpp
+1326548277 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcwindow.cpp
 	"../WTBamboo.h"
 
 1165588258 c:\program files\openal 1.1 sdk\include\al.h
@@ -5467,11 +5467,11 @@
 
 1326072317 e:\my documents\c++ code\bamboo\bamboo\src\wtosbits.h
 
-1326132014 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbutton.h
+1326563411 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbutton.h
 
 1325895520 e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccolors.h
 
-1326132260 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbutton.cpp
+1326648386 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcbutton.cpp
 	"../../WTBamboo.h"
 
 1326072235 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccolors.cpp
@@ -5484,7 +5484,7 @@
 
 1325903167 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtcsingleton.h
 
-1326156049 e:\my documents\c++ code\bamboo\bamboo\src\wtbamboo.h
+1326668992 e:\my documents\c++ code\bamboo\bamboo\src\wtbamboo.h
 	<stdint.h>
 	<unistd.h>
 	"./WTOsBits.h"
@@ -5562,9 +5562,10 @@
 	"./Files/Fonts/WTcFont.h"
 	"./Files/Shaders/WTcShader.h"
 	"./Files/Shaders/WTcShaderVariables.h"
-	"./Files/Shaders/WTcShaderProgram.h"
 	"./Files/Shaders/WTcUserDefinedShaderVariable.h"
+	"./Files/Shaders/WTcShaderProgram.h"
 	"./Camera/FX/WTcFog.h"
+	"./Camera/WTcRenderOwner.h"
 	"./Camera/WTvRenderObject.h"
 	"./Files/Meshes/WTcMesh.h"
 	"./Files/Misc/WTcMeshTreeNode.h"
@@ -5572,10 +5573,12 @@
 	"./Files/Misc/WTcMeshTree.h"
 	"./Files/Meshes/WTv2DPolygon.h"
 	"./Physics/WTcCollisionObject.h"
+	"./Camera/WTcTextureStack.h"
 	"./Camera/WTcCamera.h"
 	"./Camera/WTcRenderPointer.h"
 	"./Camera/WTcRenderObject.h"
 	"./Camera/Nodes/WTcRenderNode.h"
+	"./Camera/Nodes/WTcNodeList.h"
 	"./Files/Meshes/WTcmLandscape.h"
 	"./Camera/FX/WTcMaterial.h"
 	"./Camera/FX/WTvLight.h"
@@ -5584,8 +5587,7 @@
 	"./Camera/FX/WTcSpotLight.h"
 	"./Camera/Renderable/WTcImage.h"
 	"./Camera/Renderable/WTcTextureText.h"
-	"./Camera/Renderable/WTcTexturedModel.h"
-	"./Camera/Renderable/WTcModelList.h"
+	"./Camera/Renderable/WTcModel.h"
 	"./Camera/Renderable/WTcLandscape.h"
 	"./Camera/Renderable/WTcPoint.h"
 	"./Camera/Renderable/WTcLine.h"
@@ -5635,4 +5637,23 @@
 
 1326132385 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcspherecollision.cpp
 	"../../WTBamboo.h"
+
+1326561842 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcrendervariablesettemplates.h
+
+1326646242 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtctexturestack.h
+
+1326668714 e:\my documents\c++ code\bamboo\bamboo\src\camera\nodes\wtcnodelist.h
+
+1326562227 e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodel.h
+
+1326667666 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtctexturestack.cpp
+	"../WTBamboo.h"
+
+1326647618 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\nodes\wtcnodelist.cpp
+	"../../WTBamboo.h"
+
+1326570633 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcmodel.cpp
+	"../../WTBamboo.h"
+
+1326668923 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderowner.h
 

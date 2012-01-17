@@ -8,6 +8,7 @@
 *The cShaderProgram() can be turned on with the use function.
 
 */
+
 class cShaderProgram : public cFile
 {
 ///This stores the cShaderPrograms() OpenGL ID;
@@ -46,6 +47,64 @@ public:
 
 
 
+
+
+
+
+
+
+
+
+
+ protected:
+cVariableStore *mpStoredVariables;
+
+public:
+
+cVariableStore *StoredVariables();
+
+
+  ///This function returns a pointer to the Buffering object for the Uniform Variable with ID liPos in the currently assigned cShaderProgram. See cUniformStore. cType should be a class which inherites from cUniformStore.
+  template <class cType> cType* AddUniform(uint32 liPos);
+  ///This function returns a pointer to the Buffering object for the Uniform Variable with ID liPos in the currently assigned cShaderProgram. See cAttributeStore.  cType should be a class which inherites from cAttributeStore.
+  template <class cType> cType* AddAttribute(uint32 liPos);
+  ///This function returns a pointer to the Buffering object for the Uniform Variable called 'name' in the currently assigned cShaderProgram. See cUniformStore.  cType should be a class which inherites from cUniformStore.
+  template <class cType> cType* AddUniform(string name);
+  ///This function returns a pointer to the Buffering object for the Attribute Variable called 'name' in the currently assigned cShaderProgram. See cAttributeStore.  cType should be a class which inherites from cAttributeStore.
+  template <class cType> cType* AddAttribute(string name);
+
+  void SetShaderVariables();
+
+
 };
+
+
+
+
+
+template <class cType> cType* cShaderProgram::AddUniform(uint32 liPos)
+{
+ return StoredVariables()->CreateUniform(liPos,new cType);
+};
+
+template <class cType> cType* cShaderProgram::AddAttribute(uint32 liPos)
+{
+ return StoredVariables()->CreateAttribute(liPos,new cType);
+};
+
+template <class cType> cType* cShaderProgram::AddUniform(string name)
+{
+ uint32 liPos=ShaderVariables()->GetUniformPosition(name);
+ if(liPos) return StoredVariables()->CreateUniform(liPos-1,new cType);
+ else return 0;
+};
+
+template <class cType> cType* cShaderProgram::AddAttribute(string name)
+{
+ uint32 liPos=ShaderVariables()->GetAttributePosition(name);
+ if(liPos) return StoredVariables()->CreateAttribute(liPos,new cType);
+ else return 0;
+};
+
 
 #endif

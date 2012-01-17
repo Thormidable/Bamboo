@@ -1,6 +1,7 @@
 #ifndef __WTCRENDEROBJECT_H__
 #define __WTCRENDEROBJECT_H__
 
+
 class cRenderNode;
 /**
 * \brief This class contains the base code for all renderable objects. Any renderable object should inherit this class.
@@ -12,42 +13,42 @@ class cRenderNode;
 * change the co-ordinate system for this renderable object.
 * \code
 	cRenderNode mpNode=new cRenderNode;
-	cTexturedModel mpObject=new cTexturedModel(mpNode);
-	mpNode.LAdvance(1.0f,0.0f,0.0f);
-	mpObject.LAdvance(1.0f,0.0f,0.0f);
+	cModel mpObject=new cModel(mpNode);
+	mpNode.Advance(1.0f,0.0f,0.0f);
+	mpObject.Advance(1.0f,0.0f,0.0f);
 * \endcode
 * After this code mpObject will be at 2.0f,0.0f,0.0.
 * This Function should only be used for Creating New Renderable Object Types. It should be virtual.
 */
-class cRenderObject : public vRenderObject
+class cRenderObject : public vRenderObject, public cTextureStack
 {
 
  //This pointer points to the cRenderNode which owns this cRenderObject.
- cRenderNode *mpRenderer;
+ vRenderNode *mpRenderer;
  //This pointer points to the cLinkedNode which owns this cRenderObject. (cLinkedNode fors a linked list owned by mpRenderer.
- cLinkedNode<vRenderObject> *mpNode;
+ cRenderOwner mcOwnerNode;
 
  //A Pointer to the cCollisionObject linked to this program.
  cCollisionObject *mpCollisionObject;
 
- cVariableStore *mpVariables;
 
  virtual void Initialise();
 
  bool mbAlpha;
+ bool mbLighting;
+
+
 
 protected:
 
-void SetOtherRenderVariables();
+
+void SetPainterVariables();
   // A Pointer to the cRenderPointer Object for this Renderable Object. Used when cPainter is enabled.
  cRenderPointer *mpPainterData;
  // A Pointer to the position in the list that the cRenderPointer is at in cPainter.
  cRenderPointer **mpSlot;
 
- 	/// The current shader that this program will use.
-	cShaderProgram *mpShader;
 
-	void SetShaderVariables();
 public:
 
 	/// Will set the shader this object will use.
@@ -58,25 +59,26 @@ public:
  /// Constructor for cRenderObject. Creates a new render object and adds itself to cCamera::mpRenderList.
  cRenderObject();
  /// Constructor for cRenderObject. Creates a new render object and adds itself to lpNode.
- cRenderObject(cRenderNode *lpNode);
+ cRenderObject(vRenderNode *lpNode);
+ /// Constructor for cRenderObject. Creates a new render object and adds itself to cCamera::mpRenderList.
+ cRenderObject(bool lbNoTextures);
+ /// Constructor for cRenderObject. Creates a new render object and adds itself to lpNode.
+ cRenderObject(vRenderNode *lpNode,bool lbNoTextures);
+
  // Destructor for cRenderObject.
  ~cRenderObject();
 
  ///This will set the Collision Object that is linked to this renderable object. This should be called automatically when a cCollisionObject is created.
  void LinkCollisionObject(cCollisionObject *lpObj);
 
- /// Returns the cRenderNode which owns this renderable process.
- cRenderNode *Renderer();
+ /// Returns the vRenderNode which owns this renderable process.
+ vRenderNode *Renderer();
 
 
   // virtual functions to allow polymorphism. see cCamera::RenderPainter();
-  virtual void RenderPainter(){};
-  // virtual function to allow polymorphism. see cCamera::RenderPainter();
-  virtual void RenderPainter(uint8 liLevel)=0;
-  // virtual function to allow polymorphism. see cCamera::RenderToPainter();
-  virtual void RenderToPainter()=0;
+  virtual void RenderPainter()=0;
 
-
+  void RenderToPainter();
  /// Will remove this object from the render list owned by mpRenderer.
   void Delete();/// Will return a pointer to the Shader Program that is currently bound to this model.
  /**
@@ -84,10 +86,8 @@ public:
  * \param lpNode The cRenderNode which will now own this renderable object.
  * \return This function returns the new cLinkedNode which now owns this renderable object.
  */
- cLinkedNode<vRenderObject> *SetRenderNode(cRenderNode *lpNode);
+ cRenderOwner &SetRenderNode(vRenderNode *lpNode);
 
- /// virtual function for polymorphism. Should return the texture ID of this renderable objects Texture.
- unsigned int TextureNumber(){return 0;}
 
   //This will contain additional functions to perform when an object renders.
   void AdditionalRenderFunctions();
@@ -101,6 +101,18 @@ public:
   ///This function will update the object cache. For consistency all Renderable Objects must update the cache as they are rendered. This will be the global position of the object and is used to get consistent positions throughout a frame for collision detection.
   void UpdateCache();
 
+  using cTextureStack::AddTexture;
+	///Will Add the Texture lpTexture to the next Texture Slot.
+   void AddTexture(string lsTextureSlot,cTexture *lpTexture);
+    ///This will Add the Texture to the next free Texture sampler following the default rules (default is "Texture0" "Texture1" "Texture2") This is a slow compared to AddTexture(string,cTexture*) . It also allows for mistakes in naming of samplers in the shader.
+   void AddTexture(cTexture *lpTexture);
+
+   ///Will remove the texture in TextureSlot labelled lsTextureSlot.
+   void RemoveTexture(string lsTextureSlot);
+
+   ///Will remove the texture in Textureslot number liTexSlot. (Texture0 Texture1 Texture2 etc.)
+   void RemoveTexture(uint8 liTexSlot);
+
   /// This will return the Local position of the selected object.
   float *GetPos();
   /**
@@ -110,8 +122,27 @@ public:
   **/
   float *GetCachedGlobalMatrix();
 
-  //This is the internal control for recording and updating user defined variables in the assigned cShaderProgram.
-  cVariableStore *Variables();
+
+
+
+  ///This will set whether this object uses transparency (Transparent objects are rendered after all other objects and in reverse distance order).
+   void Transparency(bool lbTrans);
+   ///This will return whether this object is using transparency.
+   bool Transparency();
+
+	///This will set whether lighting is used for the object.
+   void Lighting(bool lbLighting);
+	///This will return whether lighting is enabled for the object.
+   bool Lighting();
+
+
+
+   protected:
+cVariableStore *mpVariables;
+cShaderProgram *mpShader;
+
+public:
+
 
   ///This function returns a pointer to the Buffering object for the Uniform Variable with ID liPos in the currently assigned cShaderProgram. See cUniformStore. cType should be a class which inherites from cUniformStore.
   template <class cType> cType* AddUniform(uint32 liPos);
@@ -122,33 +153,36 @@ public:
   ///This function returns a pointer to the Buffering object for the Attribute Variable called 'name' in the currently assigned cShaderProgram. See cAttributeStore.  cType should be a class which inherites from cAttributeStore.
   template <class cType> cType* AddAttribute(string name);
 
-  ///This will set whether this object uses transparency (Transparent objects are rendered after all other objects and in reverse distance order).
-   void Transparency(bool lbTrans);
-   ///This will return whether this object is using transparency.
-   bool Transparency();
+
+  void SetShaderVariables();
+
+  cVariableStore* Variables();
 
 };
 
 template <class cType> cType* cRenderObject::AddUniform(uint32 liPos)
 {
  return Variables()->CreateUniform(liPos,new cType);
-}
+};
 
 template <class cType> cType* cRenderObject::AddAttribute(uint32 liPos)
 {
  return Variables()->CreateAttribute(liPos,new cType);
-}
+};
 
 template <class cType> cType* cRenderObject::AddUniform(string name)
 {
- return Variables()->CreateUniform(mpShader->ShaderVariables()->GetUniformPosition(name),new cType);
-}
+	uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(name);
+ if(liPos) return Variables()->CreateUniform(liPos-1,new cType);
+ else return 0;
+};
 
 template <class cType> cType* cRenderObject::AddAttribute(string name)
 {
- return Variables()->CreateAttribute(mpShader->ShaderVariables()->GetAttributePosition(name),new cType);
-}
-
+ uint32 liPos=mpShader->ShaderVariables()->GetAttributePosition(name);
+ if(liPos) return Variables()->CreateAttribute(liPos-1,new cType);
+ else return 0;
+};
 
 
 #endif

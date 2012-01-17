@@ -1,7 +1,7 @@
 #include "../../WTBamboo.h"
 
 
-cPoint::cPoint()
+cPoint::cPoint() : cRenderObject(1)
 {
  Identity();
 mfColor[0]=0.0f;
@@ -10,16 +10,15 @@ mfColor[2]=0.0f;
 mfColor[3]=0.0f;
 }
 
-cPoint::cPoint(cRenderNode *lpRenderer) : cRenderObject(lpRenderer)
+cPoint::cPoint(vRenderNode *lpRenderer) : cRenderObject(lpRenderer,1)
 {
  Identity();
 }
 
 
-void cPoint::RenderPainter(uint8 liLevel)
+void cPoint::RenderPainter()
 {
 
-(void) liLevel;
     SetShaderVariables();
   glPointSize(mfPointSize);
   glBegin(GL_POINTS);
@@ -28,20 +27,6 @@ void cPoint::RenderPainter(uint8 liLevel)
   glEnd();
 
 
-}
-
-void cPoint::RenderToPainter()
-{
-// float Temp[16];
- UpdateMatrix();
-
-// glGetFloatv(GL_MODELVIEW_MATRIX,Temp);
-
-
- mpPainterData->SetObject(this);
- SetOtherRenderVariables();
- mpPainterData->RenderAgain();
-// cPainter::Instance()->Add(mpPainterData);
 }
 
 

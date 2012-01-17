@@ -7,40 +7,36 @@ using namespace std;
 /// This class is a text renderable object
 class cText : public cImage
 {
-    protected:
- // The current font texture that this text will use.
- cFont *mpFont;
+protected:
  // A character array storing the string this text will use.
  std::string mpString;
-
 public:
 	/// Creates a text object and gives it a text string to use.
        cText(const char *lsText);
 	/// Creates an empty text object with no text string.
        cText();
 
-	/// Will set the font texture the text will use.
-       void Font(cFont *lpFont);
 	/// Will set the text string the cText object will render.
        void Text(char *lsText);
 	/// Will accept a generic data type to render to the screen (will convert to a string).
-       template <class T> void Value(const T &t);
+       template <class T> void Value(T &t);
 
-       template <class T> void Add(const T &t);
-       // Will return the ID of the font currently bound to this text.
-       unsigned int TextureNumber(){return mpFont->TextureNumber();}
+       template <class T> void Add(T &t);
 	// Will render the text string from the cPainter render list to the screen.
-       void RenderPainter(uint8 liLevel);
-	// Will render the text string to the cPainter render list.
-       void RenderToPainter();
+       void RenderPainter();
 
        std::string &Text();
+
+	   		///Will Add the Font lcFont to this object using the uniform variable labelled lsFontSlot.
+		void AddFont(string lsFontSlot,cFont *lcFont);
+		///Will Add the Font lcFont to the first free default Font slot ("Font0" "Font1" "Font2"). This is slower than AddFont(string,cFont*). Also it allows for mistakes in the naming of samplers in the shader.
+		void AddFont(cFont *lcFont);
 };
 
 //#include <sstream>
 
 template <class T>
-inline void cText::Value (const T &t)
+inline void cText::Value ( T &t)
 {
     std::stringstream ss;
     ss << t;
@@ -49,7 +45,7 @@ inline void cText::Value (const T &t)
 
 
 template <class T>
-inline void cText::Add(const T &t)
+inline void cText::Add(T &t)
 {
      std::stringstream ss;
      ss << t;

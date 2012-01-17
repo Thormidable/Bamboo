@@ -44,7 +44,7 @@ template<class cX> cX *cFileHandler::File(const char *lpFilename)
 	mpCursor=mpFiles->Start();
 	while(mpCursor)
 	{
-		if (!strcmp(mpCursor->mpData->FileName(),lpFilename) && dynamic_cast<cX*>(mpCursor->mpData)) return dynamic_cast<cX*>(mpCursor->mpData);
+		if (dynamic_cast<cX*>(mpCursor->Data()) && !strcmp(mpCursor->Data()->FileName(),lpFilename)) return dynamic_cast<cX*>(mpCursor->Data());
 		mpCursor=mpCursor->Next();
 	}
 	trace("IMF object " << lpFilename << " not found in memory.");

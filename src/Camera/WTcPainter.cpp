@@ -137,7 +137,11 @@ for(liPass=0;liPass<pbits;liPass+=8)
   //Reset the bucket sizes
   memset(lpStarts,0,1024);
  //Find the size of each bucket;
-  for(liFindPos=0;liFindPos<miPos;++liFindPos) {++lpStarts[(reinterpret_cast<psize>(mpList[liFindPos]->mpShader)>>liPass)&0xff];}
+  for(liFindPos=0;liFindPos<miPos;++liFindPos)
+  {
+	  ++lpStarts[(mpList[liFindPos]->mpShader>>liPass)&0xff];
+
+}
 
   //Convert bucket sizes to bucket starts.
   liSum=liOld=0;
@@ -149,7 +153,11 @@ for(liPass=0;liPass<pbits;liPass+=8)
   }
 
   //Fill the Buckets.
-  for(liFindPos=0;liFindPos<miPos;++liFindPos){mpBucket[lpStarts[(reinterpret_cast<psize>(mpList[liFindPos]->mpShader)>>liPass)&0xff]++]=mpList[liFindPos];}
+  for(liFindPos=0;liFindPos<miPos;++liFindPos)
+  {
+	  mpBucket[(lpStarts[(mpList[liFindPos]->mpShader>>liPass)&0xff])++]=mpList[liFindPos];
+
+}
 
   lpSwitch=mpBucket;
   mpBucket=mpList;
@@ -157,7 +165,7 @@ for(liPass=0;liPass<pbits;liPass+=8)
 }
 }
 
-void cPainter::SortByTexture()
+void cPainter::SortByTexture(uint8 liTexSlot)
 {
  unsigned short liPass;
  unsigned int liFindPos;
@@ -170,7 +178,12 @@ for(liPass=0;liPass<25;liPass+=8)
   //Reset the bucket sizes
   memset(lpStarts,0,1024);
  //Find the size of each bucket;
-  for(liFindPos=0;liFindPos<miPos;++liFindPos) {++lpStarts[(mpList[liFindPos]->mpTexture>>liPass)&0xff];}
+  for(liFindPos=0;liFindPos<miPos;++liFindPos)
+  {
+	   mpList[liFindPos]->UpdateTexture(liTexSlot);
+	  ++lpStarts[(mpList[liFindPos]->mpTexture>>liPass)&0xff];
+
+  }
 
   //Convert bucket sizes to bucket starts.
   liSum=liOld=0;
@@ -208,13 +221,12 @@ mpList=lpSwitch;
 
 void cPainter::ShaderState(cShaderProgram *mpCurrent,cShaderProgram *mpLast)
 {
-  if(mpCurrent)
-  {
+
    if(mpCurrent!=mpLast)
    {
     mpCurrent->Use();
+	mpCurrent->SetShaderVariables();
    }
-  }
 //  else if(mpLast) {_USE_FIXED_FUNCTION();}
 }
 
@@ -228,20 +240,9 @@ void cPainter::DepthState(bool mpCurrent,bool mpLast)
   }
 }
 
-void cPainter::TextureState(uint32 mpCurrent,uint32 mpLast)
+void cPainter::TextureState(cTexture *mpCurrent,cTexture *mpLast)//,uint32 liUniform,uint8 liTexSlot)
 {
 
-  if(mpCurrent)
-  {
-   if(!mpLast) {glEnable(GL_TEXTURE_2D); glEnableClientState(GL_TEXTURE_COORD_ARRAY);}
-   if(mpCurrent!=mpLast)
-   {
-      glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-    //glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
-    glBindTexture(GL_TEXTURE_2D,mpCurrent);
-   }
-  }
-  else if(mpLast) {glDisableClientState(GL_TEXTURE_COORD_ARRAY); glDisable(GL_TEXTURE_2D);}
 }
 
 void cPainter::Render()
@@ -250,9 +251,10 @@ void cPainter::Render()
 
  SortByDistance();
 
+ SortByTexture(0);
+
  SortByShader();
 
- SortByTexture();
 
  SortByAlpha();
 
@@ -269,23 +271,25 @@ glEnable(GL_DEPTH_TEST);
 
   if(liCount)
   {
-    TextureState(mpList[liCount]->mpTexture,mpList[liCount-1]->mpTexture);
-    ShaderState(mpList[liCount]->mpShader,mpList[liCount-1]->mpShader);
+	mpList[liCount]->mpObject->TextureItem(0).TextureState(&(mpList[liCount-1]->mpObject->TextureItem(0)),0);
+//    TextureState(mpList[liCount]->mpObject,mpList[liCount-1]->mpObject,0);
+    ShaderState(mpList[liCount]->ShaderPoint,mpList[liCount-1]->ShaderPoint);
     DepthState(mpList[liCount]->mbAlpha,mpList[liCount-1]->mbAlpha);
   }
   else
   {
-    TextureState(mpList[liCount]->mpTexture,0);
-    ShaderState(mpList[liCount]->mpShader,0);
+	  mpList[liCount]->mpObject->TextureItem(0).FirstTextureState(0);
+    //TextureState(mpList[liCount],0,0);
+    ShaderState(mpList[liCount]->ShaderPoint,0);
     if(mpList[liCount]->mbAlpha) glDisable(GL_DEPTH_TEST);
     else glEnable(GL_DEPTH_TEST);
   }
   #if WT_FULL_VERSION_BAMBOO
-    if(_LIGHT->AnyLights()) _LIGHT->PrepareLight(&(mpList[liCount]->mpObject->mmCache));
+    if(_LIGHT->AnyLights() && mpList[liCount]->mpObject->Lighting()) _LIGHT->PrepareLight(&(mpList[liCount]->mpObject->mmCache));
   #endif
 
+	mpList[liCount]->mpObject->RenderPainter();
 
-  mpList[liCount]->mpObject->RenderPainter(mpList[liCount]->miLevel);
   mpList[liCount]->mbReRender=false;
   }
  }

@@ -78,6 +78,8 @@
 		<Unit filename="src\Camera\FX\WTcSpotLight.cpp" />
 		<Unit filename="src\Camera\FX\WTcSpotLight.h" />
 		<Unit filename="src\Camera\FX\WTvLight.h" />
+		<Unit filename="src\Camera\Nodes\WTcNodeList.cpp" />
+		<Unit filename="src\Camera\Nodes\WTcNodeList.h" />
 		<Unit filename="src\Camera\Nodes\WTcRenderNode.cpp" />
 		<Unit filename="src\Camera\Nodes\WTcRenderNode.h" />
 		<Unit filename="src\Camera\Renderable\WTcBeamMesh.cpp" />
@@ -90,8 +92,8 @@
 		<Unit filename="src\Camera\Renderable\WTcLandscape.h" />
 		<Unit filename="src\Camera\Renderable\WTcLine.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcLine.h" />
-		<Unit filename="src\Camera\Renderable\WTcModelList.cpp" />
-		<Unit filename="src\Camera\Renderable\WTcModelList.h" />
+		<Unit filename="src\Camera\Renderable\WTcModel.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcModel.h" />
 		<Unit filename="src\Camera\Renderable\WTcParticle.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcParticle.h" />
 		<Unit filename="src\Camera\Renderable\WTcParticleGroup.cpp" />
@@ -100,8 +102,6 @@
 		<Unit filename="src\Camera\Renderable\WTcPoint.h" />
 		<Unit filename="src\Camera\Renderable\WTcTextureText.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcTextureText.h" />
-		<Unit filename="src\Camera\Renderable\WTcTexturedModel.cpp" />
-		<Unit filename="src\Camera\Renderable\WTcTexturedModel.h" />
 		<Unit filename="src\Camera\WTcCamera.cpp" />
 		<Unit filename="src\Camera\WTcCamera.h" />
 		<Unit filename="src\Camera\WTcLightHandler.cpp" />
@@ -110,8 +110,11 @@
 		<Unit filename="src\Camera\WTcPainter.h" />
 		<Unit filename="src\Camera\WTcRenderObject.cpp" />
 		<Unit filename="src\Camera\WTcRenderObject.h" />
+		<Unit filename="src\Camera\WTcRenderOwner.h" />
 		<Unit filename="src\Camera\WTcRenderPointer.cpp" />
 		<Unit filename="src\Camera\WTcRenderPointer.h" />
+		<Unit filename="src\Camera\WTcTextureStack.cpp" />
+		<Unit filename="src\Camera\WTcTextureStack.h" />
 		<Unit filename="src\Camera\WTvRenderObject.h" />
 		<Unit filename="src\Engine\Process\WTcParentStack.cpp" />
 		<Unit filename="src\Engine\Process\WTcParentStack.h" />
@@ -180,7 +183,6 @@
 		<Unit filename="src\Files\Shaders\WTcUserDefinedShaderVariable.h" />
 		<Unit filename="src\Files\Textures\WTcTexture.cpp" />
 		<Unit filename="src\Files\Textures\WTcTexture.h" />
-		<Unit filename="src\Files\Textures\WTvTexture.h" />
 		<Unit filename="src\Files\WTString.cpp" />
 		<Unit filename="src\Files\WTString.h" />
 		<Unit filename="src\Files\WTcFile.cpp" />

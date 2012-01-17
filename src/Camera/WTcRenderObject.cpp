@@ -2,85 +2,7 @@
 
 cRenderObject::~cRenderObject()
 {
-
-//Delete();
-
-}
-
-void cRenderObject::LinkCollisionObject(cCollisionObject *lpObj)
-{
-  mpCollisionObject=lpObj;
-
-};
-
-cRenderObject::cRenderObject()
-{
- mpRenderer=cCamera::Instance()->RenderList();
- mpNode=mpRenderer->Add(this);
- mpVariables=0;
-Initialise();
-}
-
-cRenderObject::cRenderObject(cRenderNode *lpNode)
-{
- mpVariables=0;
-  mpRenderer=lpNode;
-  mpNode=lpNode->Add(this);
-Initialise();
-}
-
-void cRenderObject::Initialise()
-{
-  mbAwake=true;
-  mbAlive=true;
-
-	mpPainterData= new cRenderPointer();
-	_PAINTER->Add(mpPainterData);
-	mpPainterData->SetObject(this);
- mpCollisionObject=0;
- Shader(0);
- Transparency(0);
-}
-
-void cRenderObject::Delete()
-{
-
-
-/*
-	if(Renderer() && mpNode)
-	{
-	    Renderer()->Remove(mpNode);
-    }
-    else
-    {
-      trace("Cannot _S_Kill this Node, Is it the Camera List\n");
-    }
-
-    mbAwake=false;
-    mbAlive=false;
-*/
-}
-
-cLinkedNode<vRenderObject> *cRenderObject::SetRenderNode(cRenderNode *lpRenderer)
-{
- if(mpRenderer==lpRenderer) return mpNode;
- if(mpRenderer) mpRenderer->Remove(mpNode);
- mpRenderer=lpRenderer;
- mpNode=lpRenderer->Add(this);
- return mpNode;
-}
-
-
-void cRenderObject::AdditionalRenderFunctions()
-{
-// UpdateCache();
-// SetShaderVariables();
-
-}
-
-void cRenderObject::AdditionalKillFunctionality()
-{
-    	if(mpCollisionObject)
+    if(mpCollisionObject)
 	{
 		_KILL(mpCollisionObject);
 		mpCollisionObject=0;
@@ -93,11 +15,195 @@ void cRenderObject::AdditionalKillFunctionality()
 	mpPainterData=0;
     }
 
-	if(Renderer() && mpNode)
-        Renderer()->Remove(mpNode);
+	delete mpVariables;
+	mpVariables=0;
+
+}
+
+void cRenderObject::LinkCollisionObject(cCollisionObject *lpObj)
+{
+  mpCollisionObject=lpObj;
+
+};
+
+cRenderObject::cRenderObject()
+{
+	printf("This:%p\n",this);
+ mpRenderer=cCamera::Instance()->RenderList();
+ printf("cRenderObject::cRenderObject()\n");
+ printf("Renderer() : %p\n",mpRenderer);
+ mcOwnerNode=mpRenderer->Add(this);
+
+Initialise();
+}
+
+cRenderObject::cRenderObject(vRenderNode *lpNode)
+{
+	printf("This:%p\n",this);
+ printf("cRenderObject::cRenderObject(vRenderNode *lpNode)\n");
+ printf("Renderer() : %p\n",lpNode);
+  mpRenderer=lpNode;
+  mcOwnerNode=lpNode->Add(this);
+Initialise();
+}
+
+
+cRenderObject::cRenderObject(bool lbNoTextures): cTextureStack(lbNoTextures)
+{
+	printf("This:%p\n",this);
+	 mpRenderer=cCamera::Instance()->RenderList();
+	  printf("cRenderObject::cRenderObject()\n");
+ printf("Renderer() : %p\n",mpRenderer);
+ mcOwnerNode=mpRenderer->Add(this);
+
+Initialise();
+}
+
+cRenderObject::cRenderObject(vRenderNode *lpNode,bool lbNoTextures) : cTextureStack(lbNoTextures)
+{
+	printf("This:%p\n",this);
+	 printf("cRenderObject::cRenderObject(vRenderNode *lpNode)\n");
+ printf("Renderer() : %p\n",lpNode);
+  mpRenderer=lpNode;
+  mcOwnerNode=lpNode->Add(this);
+Initialise();
+
+}
+void cRenderObject::AddTexture(string lsTextureSlot,cTexture *lpTexture)
+{
+ if(mpShader)
+ {
+ 	uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(lsTextureSlot);
+ 	if(liPos) AddTexture(liPos-1,lpTexture);
+ }
+}
+
+void cRenderObject::RemoveTexture(string lsTextureSlot)
+{
+  	if(mpShader)
+	{
+		uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(lsTextureSlot);
+		if(liPos) RemoveTextureByUniform(liPos-1);
+	}
+}
+
+void cRenderObject::RemoveTexture(uint8 liSlot)
+{
+	RemoveTextureBySlot(liSlot);
+}
+
+
+void cRenderObject::AddTexture(cTexture *lpTexture)
+{
+
+ int8 liSlot=ReturnFreeSlot();
+ if(liSlot && mpShader)
+ {
+ 		string lsTextureSlot="Texture";
+ 		std::stringstream out;
+ 		out << miTextures;
+		lsTextureSlot.append(out.str());
+		uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(lsTextureSlot);
+	 	if(liPos) AddTexture(liPos-1,lpTexture);
+ }
+}
+
+
+
+void cRenderObject::Initialise()
+{
+  mbAwake=true;
+  mbAlive=true;
+mpVariables=0;
+		mpShader=0;
+	mpPainterData= new cRenderPointer();
+	_PAINTER->Add(mpPainterData);
+	mpPainterData->SetObject(this);
+ mpCollisionObject=0;
+
+ Transparency(0);
+ Lighting(1);
+}
+
+void cRenderObject::Delete()
+{
+
+}
+
+
+vRenderNode* vRenderNode::Renderer(){return mpRenderer;};
+void vRenderNode::RenderPainter(){};
+void vRenderNode::UpdateCache()
+{
+	mmCache=_MATRIX_STACK->Current();
+	mmTotalCache=_CAMERA->PerspectiveCameraMatrix();
+	mmTotalCache.Multiply(mmCache);
+}
+float* vRenderNode::GetPos(){return Position();};
+float* vRenderNode::GetCachedGlobalMatrix(){return mmCache.Matrix();}
+
+void vRenderNode::AdditionalKillFunctionality()
+{
+
+}
+
+cVariableStore* vRenderNode::Variables(){return 0;}
+
+cRenderOwner &cRenderObject::SetRenderNode(vRenderNode *lpRenderer)
+{
+ if(mpRenderer==lpRenderer) return mcOwnerNode;
+ //if(mpRenderer) mpRenderer->Remove(mcOwnerNode);
+ mpRenderer=lpRenderer;
+ mcOwnerNode=lpRenderer->Add(this);
+ return mcOwnerNode;
+}
+
+
+void cRenderObject::AdditionalRenderFunctions()
+{
+// UpdateCache();
+// SetShaderVariables();
+
+}
+
+void cRenderObject::AdditionalKillFunctionality()
+{
+	    if(mpCollisionObject)
+	{
+		_KILL(mpCollisionObject);
+		mpCollisionObject=0;
+	}
+
+    if(mpPainterData)
+    {
+    _PAINTER->Remove(mpPainterData);
+	delete mpPainterData;
+	mpPainterData=0;
+    }
+
+	delete mpVariables;
+	mpVariables=0;
+
+    /*
+    if(mpCollisionObject)
+	{
+		_KILL(mpCollisionObject);
+		mpCollisionObject=0;
+	}
+
+    if(mpPainterData)
+    {
+    _PAINTER->Remove(mpPainterData);
+	delete mpPainterData;
+	mpPainterData=0;
+    }
+    */
+/*
+	if(Renderer() && mcOwnerNode.Node)
+        Renderer()->Remove(mcOwnerNode);
     else
         trace("Cannot _S_Kill this Node, Is it the Camera List\n");
-
+*/
 }
 
 
@@ -142,12 +248,16 @@ void cRenderObject::UpdateCache()
 		mpCollisionObject->PreUpdateCache();
 
 		mmCache=_MATRIX_STACK->Current();
+		mmTotalCache=_CAMERA->PerspectiveCameraMatrix();
+		mmTotalCache.Multiply(mmCache);
 
 		mpCollisionObject->PostUpdateCache();
 	}
 	else
 	{
 		mmCache=_MATRIX_STACK->Current();
+		mmTotalCache=_CAMERA->PerspectiveCameraMatrix();
+	    mmTotalCache.Multiply(mmCache);
 	}
 
 };
@@ -156,6 +266,8 @@ void cRenderObject::UpdateCache()
 
 void cRenderObject::Shader(cShaderProgram *lpShader)
 {
+ if(!lpShader && mpShader) ClearTextureStack();
+
   mpShader=lpShader;
 
   if(mpVariables)
@@ -165,22 +277,11 @@ void cRenderObject::Shader(cShaderProgram *lpShader)
   }
   if(mpShader)
   {
-  	mpShader->Use();
-  	cMatrix4 Temp;
-  	if(mb3D)
-  	{
-      AddUniform<cUniformMatrix>("mmProjection")->Data=_CAMERA->Perspective();
-      AddUniform<cUniformMatrix>("mmCamera")->Data=_CAMERA->CameraMatrix();
-  	  AddUniform<cUniformMatrix>("mmCombined")->Data=_CAMERA->TotalPositionMatrix();
-  	  AddUniform<cUniformMatrix>("mmGlobal")->Data=mmCache.Matrix();
-
-  	}
-  	else
-  	{
-     AddUniform<cUniformMatrix>("mmProjection")->Data=_CAMERA->Perspective2D();
-     AddUniform<cUniformMatrix>("mmGlobal")->Data=mmCache.Matrix();
-  	}
-
+	  mpShader->Use();
+	cUniformMatrix *lpMatrix=AddUniform<cUniformMatrix>("mmGlobal");
+		if(lpMatrix) lpMatrix->Data=mmCache.Matrix();
+	lpMatrix=AddUniform<cUniformMatrix>("mmTotal");
+		if(lpMatrix) lpMatrix->Data=mmTotalCache.Matrix();
   }
 
 }
@@ -191,7 +292,7 @@ cShaderProgram *cRenderObject::Shader()
 
 }
 
-cRenderNode *cRenderObject::Renderer()
+vRenderNode *cRenderObject::Renderer()
 {
   return mpRenderer;
 
@@ -210,28 +311,27 @@ float *cRenderObject::GetCachedGlobalMatrix()
 
 };
 
-cVariableStore *cRenderObject::Variables()
+void cRenderObject::RenderToPainter()
 {
- if(!mpVariables) mpVariables=new cVariableStore(mpShader);
- return mpVariables;
+if(Shader())
+{
+ UpdateMatrix();
+ mpPainterData->SetObject(this);
+ SetPainterVariables();
+ mpPainterData->RenderAgain();
+}
 
 }
 
-void cRenderObject::SetShaderVariables()
-{
- if(mpVariables)
- {
-  mpVariables->WriteUniforms();
-  mpVariables->WriteAttributes();
- }
 
-}
+
 
 void cRenderObject::Transparency(bool lbTrans){mbAlpha=lbTrans;}
 bool cRenderObject::Transparency(){return mbAlpha;}
 
-void cRenderObject::SetOtherRenderVariables()
+void cRenderObject::SetPainterVariables()
 {
+	//mpPainterData->SetTexture(mpTextures);
     mpPainterData->SetAlpha(mbAlpha);
     mpPainterData->SetShader(mpShader);
 }
@@ -244,3 +344,30 @@ cMatrix4 vRenderObject::CalculateGlobalMatrix()
     }
     else return ThisMatrix();
 }
+
+
+   void cRenderObject::Lighting(bool lbLighting){mbLighting=lbLighting;};
+
+   bool cRenderObject::Lighting(){return mbLighting;};
+
+
+
+
+cVariableStore *cRenderObject::Variables()
+{
+ if(!mpVariables) mpVariables=new cVariableStore(mpShader);
+ return mpVariables;
+}
+
+void cRenderObject::SetShaderVariables()
+{
+ if(mpVariables)
+ {
+  mpShader->Use();
+  mpVariables->WriteUniforms();
+  mpVariables->WriteAttributes();
+ }
+
+}
+
+
