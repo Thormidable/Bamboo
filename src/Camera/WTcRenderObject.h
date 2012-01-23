@@ -53,6 +53,9 @@ public:
 
 	/// Will set the shader this object will use.
 	void Shader(cShaderProgram *lpShader);
+
+	/// Will set the shader to use the Shader Program with the specified reference.
+	void Shader(string lcString);
 	/// Will return a pointer to the Shader Program that is currently bound to this model.
 	cShaderProgram *Shader();
 
@@ -92,20 +95,36 @@ public:
   //This will contain additional functions to perform when an object renders.
   void AdditionalRenderFunctions();
 
-  //This contains any Code to be run for this object in the event of its death (as deletion of the object may be delayed after death).
-  virtual void AdditionalKillFunctionality();
+  //This contains any Code to be run when this process .
+  virtual void Stop();
   //This contains any Code to be run when the object is sent to sleep.
-  virtual void AdditionalSleepFunctionality();
+  virtual void OnSleep();
   //This contains any Code to be run when the object is woken up.
-  virtual void AdditionalWakeFunctionality();
+  virtual void OnWake();
   ///This function will update the object cache. For consistency all Renderable Objects must update the cache as they are rendered. This will be the global position of the object and is used to get consistent positions throughout a frame for collision detection.
   void UpdateCache();
 
   using cTextureStack::AddTexture;
-	///Will Add the Texture lpTexture to the next Texture Slot.
+	/**
+	* \brief Will Add the Texture lpTexture to the Texture slot with the name matching lsTextureSlot.
+	* Multitexturing in shaders is controlled using uniform sampler types:
+	* \code
+	* uniform sampler2D Texture0;
+	* \endcode
+	* This takes a 2D Texture and names it Texture0. By default Bamboo shaders use the names Texture0, Texture1 ,Texture2 etc.
+	* If you use different names for your texture samplers they will need to be linked to the correct sampler name using this function.
+	* This is faster than AddTexture(cTexture*)
+	*/
    void AddTexture(string lsTextureSlot,cTexture *lpTexture);
-    ///This will Add the Texture to the next free Texture sampler following the default rules (default is "Texture0" "Texture1" "Texture2") This is a slow compared to AddTexture(string,cTexture*) . It also allows for mistakes in naming of samplers in the shader.
+
+   void AddTexture(string lsTextureSlot,string lcTextureReference);
+
+    /**This will Add the Texture to the next free Texture sampler following the default rules (default is "Texture0" "Texture1" "Texture2") This is a slow compared to AddTexture(string,cTexture*)
+    * It also allows for mistakes in naming of samplers in the shader if the samplers are not named "Texture0" "Texture1" "Texture2" etc.
+    */
    void AddTexture(cTexture *lpTexture);
+
+   void AddTexture(string lcTextureReference);
 
    ///Will remove the texture in TextureSlot labelled lsTextureSlot.
    void RemoveTexture(string lsTextureSlot);
@@ -135,6 +154,8 @@ public:
 	///This will return whether lighting is enabled for the object.
    bool Lighting();
 
+   void KillAll();
+
 
 
    protected:
@@ -144,15 +165,28 @@ cShaderProgram *mpShader;
 public:
 
 
-  ///This function returns a pointer to the Buffering object for the Uniform Variable with ID liPos in the currently assigned cShaderProgram. See cUniformStore. cType should be a class which inherites from cUniformStore.
-  template <class cType> cType* AddUniform(uint32 liPos);
-  ///This function returns a pointer to the Buffering object for the Uniform Variable with ID liPos in the currently assigned cShaderProgram. See cAttributeStore.  cType should be a class which inherites from cAttributeStore.
-  template <class cType> cType* AddAttribute(uint32 liPos);
-  ///This function returns a pointer to the Buffering object for the Uniform Variable called 'name' in the currently assigned cShaderProgram. See cUniformStore.  cType should be a class which inherites from cUniformStore.
-  template <class cType> cType* AddUniform(string name);
-  ///This function returns a pointer to the Buffering object for the Attribute Variable called 'name' in the currently assigned cShaderProgram. See cAttributeStore.  cType should be a class which inherites from cAttributeStore.
-  template <class cType> cType* AddAttribute(string name);
+  ///This will set a Uniform Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time.
+  void SetUniform(string lcString,void *Data);
+  ///This will set an Attribute Array Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time.
+  void SetAttribute(string lcString,void *Data,uint32 liElements);
+  ///This will set a Uniform Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time.
+  void SetVariable(string lcString,void *Data);
+  ///This will set an Attribute Array Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time.
+  void SetVariable(string lcString,void *Data,uint32 liElements);
 
+  ///This will set the pointer for the Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use.
+  void SetUniformPointer(string lcString,void *Data);
+  ///This will set the pointer for the Attribute Array Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use.
+  void SetAttributePointer(string lcString,void *Data,uint32 liElements);
+  ///This will set the pointer for the Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use.
+  void SetVariablePointer(string lcString,void *Data);
+  ///This will set the pointer for the Attribute Array Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use.
+  void SetVariablePointer(string lcString,void *Data,uint32 liElements);
+
+   ///This will return a pointer to the Variable of Type cType with the reference lcString.
+  template<class cType> cType *GetVariable(string lcString);
+  ///This will return a pointer to the Variable of Type cType in position liPos of the Variable List.
+  template<class cType> cType *GetVariable(uint32 liPos);
 
   void SetShaderVariables();
 
@@ -160,29 +194,28 @@ public:
 
 };
 
-template <class cType> cType* cRenderObject::AddUniform(uint32 liPos)
+template <class cType> cType* cRenderObject::GetVariable(uint32 liPos)
 {
- return Variables()->CreateUniform(liPos,new cType);
+ if(liPos<mpVariables->Variables())
+ {
+	return dynamic_cast<cType*>(&(mpVariables->GetVariable(liPos)));
+ }
+ return 0;
 };
 
-template <class cType> cType* cRenderObject::AddAttribute(uint32 liPos)
+template <class cType> cType* cRenderObject::GetVariable(string lcString)
 {
- return Variables()->CreateAttribute(liPos,new cType);
+ uint32 liPos=mpShader->ShaderVariableSet()->GetVariablePosition(lcString);
+ if(liPos)
+ {
+	return GetVariable<cType>(liPos-1);
+ }
+ return 0;
 };
 
-template <class cType> cType* cRenderObject::AddUniform(string name)
-{
-	uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(name);
- if(liPos) return Variables()->CreateUniform(liPos-1,new cType);
- else return 0;
-};
 
-template <class cType> cType* cRenderObject::AddAttribute(string name)
-{
- uint32 liPos=mpShader->ShaderVariables()->GetAttributePosition(name);
- if(liPos) return Variables()->CreateAttribute(liPos-1,new cType);
- else return 0;
-};
+
+
 
 
 #endif

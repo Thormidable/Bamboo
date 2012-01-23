@@ -2,9 +2,14 @@
 
 #if WT_FULL_VERSION_BAMBOO
 
+void cText::AddFont(string lsFontSlot,string lcFont)
+{
+ AddFont(lsFontSlot,_GET_FONT_FILE(lcFont.c_str()));
+}
+
 void cText::AddFont(string lsFontSlot,cFont *lpFont)
 {
- uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(lsFontSlot);
+ uint32 liPos=mpShader->ShaderVariableSet()->GetUniformPosition(lsFontSlot);
  if(liPos)
  {
 		AddTexture(liPos-1,lpFont);
@@ -22,7 +27,7 @@ void cText::AddFont(cFont *lpFont)
  		std::stringstream out;
  		out << liSlot;
 		lsTextureSlot.append(out.str());
-		uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(lsTextureSlot);
+		uint32 liPos=mpShader->ShaderVariableSet()->GetUniformPosition(lsTextureSlot);
 	 	if(liPos)
 		{
 			AddTexture(liPos-1,lpFont);
@@ -30,6 +35,12 @@ void cText::AddFont(cFont *lpFont)
 		}
  }
 }
+
+void cText::AddFont(string lcFont)
+{
+ AddFont(_GET_FONT_FILE(lcFont.c_str()));
+}
+
 
 void cText::RenderPainter()
 {

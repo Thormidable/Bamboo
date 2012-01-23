@@ -118,7 +118,7 @@
 ///Will return a pointer to a Landscape Mesh object in memory with the text identifier Reference.
 #define _GET_LANDSCAPE_FILE(Reference) _GET_FILE(cLandscapeMeshFile,Reference)
 ///Will return a pointer to a cModelList Mesh Tree object in memory with the text identifier Reference.
-#define _GET_MODELLIST_FILE(References) _GET_FILE(cMeshTree,Reference)
+#define _GET_MODELLIST_FILE(Reference) _GET_FILE(cMeshTree,Reference)
 
 #define _MODEL_POINTER cTexturedModel*
 #define _LAND_POINTER cLandscape*

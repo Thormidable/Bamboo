@@ -56,6 +56,10 @@ public:
 
  /// This will link the OpenAL buffer pointed to by lpBuffer to this Audio Object ready to be played.
  void Buffer(cAudioBuffer *lpBuffer);
+
+ /// This will link the OpenAL buffer pointed to by lpBuffer to the Audio Object with the reference lcBuffer ready to be played.
+ void Buffer(string lcBuffer);
+
  /// This will play a sound through the OpenAL source from the buffer.
  void Play();
  ///Returns true if the sound is playing. Returns false if it isn't.

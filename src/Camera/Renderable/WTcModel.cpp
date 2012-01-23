@@ -18,6 +18,12 @@ void cModel::Mesh(cMesh *lpGraph)
  mpMesh=lpGraph;
 }
 
+void cModel::Mesh(const char* lcReference)
+{
+ mpMesh=_GET_MESH_FILE(lcReference);
+}
+
+
 cMesh *cModel::Mesh(){return mpMesh;}
 
 void cModel::RenderPainter()

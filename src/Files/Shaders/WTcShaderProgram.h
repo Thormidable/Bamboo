@@ -9,6 +9,7 @@
 
 */
 
+
 class cShaderProgram : public cFile
 {
 ///This stores the cShaderPrograms() OpenGL ID;
@@ -18,8 +19,7 @@ cReferenceList mcList;
 /// This points to an array of pointers pointing to all the Shaders required to be linked to create this Shader Program.
 cShader **mpShader;
 
-cShaderVariables *mpVariables;
-
+cShaderVariableSet *mpVariableSet;
 public:
   ///Public Constructor.
   cShaderProgram();
@@ -43,18 +43,7 @@ public:
  /// This will allow the cShaderProgram() to extract a list of string references for Shaders. It will then find pointers to the cShader() objects and compile the program using them.
  void LoadIMF(ifstream &FileStream);
 
- cShaderVariables *ShaderVariables();
-
-
-
-
-
-
-
-
-
-
-
+ cShaderVariableSet *ShaderVariableSet();
 
  protected:
 cVariableStore *mpStoredVariables;
@@ -63,48 +52,56 @@ public:
 
 cVariableStore *StoredVariables();
 
-
-  ///This function returns a pointer to the Buffering object for the Uniform Variable with ID liPos in the currently assigned cShaderProgram. See cUniformStore. cType should be a class which inherites from cUniformStore.
-  template <class cType> cType* AddUniform(uint32 liPos);
-  ///This function returns a pointer to the Buffering object for the Uniform Variable with ID liPos in the currently assigned cShaderProgram. See cAttributeStore.  cType should be a class which inherites from cAttributeStore.
-  template <class cType> cType* AddAttribute(uint32 liPos);
-  ///This function returns a pointer to the Buffering object for the Uniform Variable called 'name' in the currently assigned cShaderProgram. See cUniformStore.  cType should be a class which inherites from cUniformStore.
-  template <class cType> cType* AddUniform(string name);
-  ///This function returns a pointer to the Buffering object for the Attribute Variable called 'name' in the currently assigned cShaderProgram. See cAttributeStore.  cType should be a class which inherites from cAttributeStore.
-  template <class cType> cType* AddAttribute(string name);
-
   void SetShaderVariables();
 
 
+  ///This will set a Uniform Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time.
+  void SetUniform(string lcString,void *Data);
+  ///This will set an Attribute Array Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time.
+  void SetAttribute(string lcString,void *Data,uint32 liElements);
+  ///This will set a Uniform Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time.
+  void SetVariable(string lcString,void *Data);
+  ///This will set an Attribute Array Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time.
+  void SetVariable(string lcString,void *Data,uint32 liElements);
+
+  ///This will set the pointer for the Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use.
+  void SetUniformPointer(string lcString,void *Data);
+  ///This will set the pointer for the Attribute Array Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use.
+  void SetAttributePointer(string lcString,void *Data,uint32 liElements);
+  ///This will set the pointer for the Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use.
+  void SetVariablePointer(string lcString,void *Data);
+  ///This will set the pointer for the Attribute Array Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use.
+  void SetVariablePointer(string lcString,void *Data,uint32 liElements);
+
+   ///This will return a pointer to the Variable of Type cType with the reference lcString.
+  template<class cType> cType *GetVariable(string lcString);
+  ///This will return a pointer to the Variable of Type cType in position liPos of the Variable List.
+  template<class cType> cType *GetVariable(uint32 liPos);
+
+
 };
 
 
-
-
-
-template <class cType> cType* cShaderProgram::AddUniform(uint32 liPos)
+template <class cType> cType* cShaderProgram::GetVariable(uint32 liPos)
 {
- return StoredVariables()->CreateUniform(liPos,new cType);
+ if(liPos<mpStoredVariables->Variables())
+ {
+	return dynamic_cast<cType*>(&mpStoredVariables[liPos]);
+ }
+ return 0;
 };
 
-template <class cType> cType* cShaderProgram::AddAttribute(uint32 liPos)
+template <class cType> cType* cShaderProgram::GetVariable(string lcString)
 {
- return StoredVariables()->CreateAttribute(liPos,new cType);
+ uint32 liPos=mpVariableSet->GetVariablePosition(lcString);
+ if(liPos)
+ {
+	return GetVariable<cType>(liPos-1);
+ }
+ return 0;
 };
 
-template <class cType> cType* cShaderProgram::AddUniform(string name)
-{
- uint32 liPos=ShaderVariables()->GetUniformPosition(name);
- if(liPos) return StoredVariables()->CreateUniform(liPos-1,new cType);
- else return 0;
-};
 
-template <class cType> cType* cShaderProgram::AddAttribute(string name)
-{
- uint32 liPos=ShaderVariables()->GetAttributePosition(name);
- if(liPos) return StoredVariables()->CreateAttribute(liPos,new cType);
- else return 0;
-};
 
 
 #endif

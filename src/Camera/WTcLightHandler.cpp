@@ -132,6 +132,8 @@ void cLightHandler::PrepareLight(cMatrix4 *lpObject)
       lpCursor=lpCursor->Next();
     }
 
+    lpLarge=&mpLightSlots[0];
+
     while(lpCursor)
       {
           if(lpCursor->mpData->Awake())

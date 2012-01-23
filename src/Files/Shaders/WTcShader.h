@@ -2,11 +2,84 @@
 #define __WTCSHADER_H__
 
 using namespace std;
-/*
-*This is the transfer class to transfer shader data from raw data to a cShader class
-*This will collect raw data from an IMF class and process it ready to be handed to a cShader() object.
 
-*/
+
+using namespace std;
+
+class cShader;
+class cShaderVariableSet;
+
+class cShaderVariable
+{
+protected:
+    uint8 miType;
+    char *mpStart;
+	int32 miID;
+	void SetID(int32 liID);
+public:
+    cShaderVariable();
+	~cShaderVariable();
+    void Set(bool lbUniform,uint8 liType,char* liStart);
+    uint8 Type();
+    bool Uniform();
+    bool Attribute();
+    char *Start();
+    void SetType(uint8 liType);
+    void SetScope(bool lbUniform);
+    void AdjustStart(char *liChangeStart,int32 liChange);
+	int32 ID();
+
+	cShaderVariable &operator=(cShaderVariable &lcOther);
+
+    void UpdateStart(char *lpStart);
+
+    void LoadIMF(ifstream &FileStream);
+    static uint32 Size();
+    friend class cShader;
+	friend class cShaderVariableSet;
+};
+
+
+class cShader : public cFile
+{
+protected:
+   uint32 miCharCount;
+   uint32 *mpLines;
+   const GLchar **mpShaderText;
+   uint8 miShaderType;
+  uint32 miLines;
+
+   uint32 miVariables;
+   uint32 miVariableSpaces;
+   cShaderVariable *mpVariables;
+   GLuint miShaderID;
+
+public:
+        cShader();
+
+	~cShader();
+        void LoadIMF(ifstream &FileStream);
+
+	uint8 ShaderType();
+	 void SetType(uint8 liType);
+	 GLuint ID();
+
+	void Clear();
+	void SetLines(int liL);
+    uint8 Type();
+
+
+	void BufferAndCompile();
+
+	void BreakIntoLines(char *lpShaderText);
+
+	uint32 Variables();
+	cShaderVariable &Variable(uint32 liPos);
+
+
+};
+
+/*
 class cShaderArray
 {
 
@@ -43,14 +116,8 @@ public:
 	//This will load the Shader code from the IMF file. FileStream should just be at the start of a Shader object in an IMF file.
 	void LoadIMF(ifstream &FileStream);
 
-};
+};	uint8 Type(){return miShaderType;};
 
-/*
- *\brief This is a text file representation of a Vertex or Fragment shader.
- * This will load the Fragment or Vertex Shader into graphics memory ready to be compiled and combined in a cShaderProgram.
- *
- *
- */
 
 class cShader : public cFile
 {
@@ -87,5 +154,6 @@ public:
 
 
 };
+*/
 
 #endif

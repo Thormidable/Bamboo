@@ -205,8 +205,7 @@ void cMesh::RenderMesh()
 glBindBuffer(GL_ARRAY_BUFFER, mBuffer1);
 	glVertexPointer(3,GL_FLOAT,0,0);
 	glNormalPointer(GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*3*sizeof(float)));
-
-	glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*6*sizeof(float)));
+    glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*6*sizeof(float)));
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
 

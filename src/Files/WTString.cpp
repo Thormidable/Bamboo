@@ -73,6 +73,26 @@ void LineCopy(char*lcTo,char *lcFrom,const char *lcEnd)
  lcTo[0]=0;
 }
 
+bool CompareVariables(char *lcFirst,const char *lcSecond,const char *lcEnds)
+{
+ while(*lcFirst==*lcSecond && *lcFirst && *lcSecond)
+ {
+     ++lcFirst;
+     ++lcSecond;
+ }
+ bool lbFirst,lbSecond;
+ lbFirst=*lcFirst;
+ lbSecond=*lcSecond;
+ while((lbFirst || lbSecond) && *lcEnds)
+ {
+     if(*lcFirst==*lcEnds) lbFirst=false;
+     if(*lcSecond==*lcEnds) lbSecond=false;
+	 ++lcEnds;
+ }
+ if(lbFirst || lbSecond) return 0;
+ else return true;
+}
+
 void LineCopy(char*lcTo,char *lcFrom)
 {
  while(lcFrom[0]!=0x0A && lcFrom[0])
@@ -107,4 +127,21 @@ uint16 StrLength(char *lpString)
  uint16 liCount=0;
  while(lpString[liCount]){++liCount;}
  return liCount;
+}
+
+uint32 StringLength(char *lcString,char *lcEnds)
+{
+ char* lcTemp=lcString;
+ while(*lcTemp)
+ {
+	char *lcTempEnd=lcEnds;
+ 	while(*lcTempEnd)
+ 	{
+  		if(*lcTemp==*lcTempEnd) return (uint16)(lcTemp-lcString);
+
+		++lcTempEnd;
+ 	}
+	++lcTemp;
+ }
+ return (uint16)(lcTemp-lcString);
 }

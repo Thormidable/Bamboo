@@ -45,6 +45,8 @@ virtual void RenderToPainter()=0;
  virtual void Transparency(bool lbTrans){(void)lbTrans;};
  virtual bool Transparency(){return 0;};
 
+ virtual void KillAll()=0;
+
 /**
 * \brief This will calculate on the fly the global position matrix of the object. It does not contain Cameras Position Matrix.
 * This will actually traverse the render tree and calculate the Global position matrix. This is pretty slow and best avoided if possible.
@@ -69,6 +71,8 @@ public:
 
        virtual cRenderOwner Add(vRenderObject *lpNew)=0;
 
+        virtual void Remove(cRenderOwner lpOwner)=0;
+
 	   virtual void RenderPainter();
 	   virtual void RenderToPainter()=0;
 	   virtual void UpdateCache();
@@ -76,8 +80,9 @@ public:
        virtual float* GetCachedGlobalMatrix();
        virtual cVariableStore* Variables();
 
-       void AdditionalKillFunctionality();
+       void Stop();
 
+        virtual void StartKillAll()=0;
 };
 
 #endif

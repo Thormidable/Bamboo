@@ -20,4 +20,8 @@ char *FindOn(char* lcPath,char *lcFind);
 char *FindOn(char *lcPath,char lcFind);
 /// This will return the length of the string lpString.
 uint16 StrLength(char *lpString);
+///One of these MUST be zero terminated. The other should be either zero terminated or terminated with a character in lcEnds. lcEnds should be zero terminated.
+bool CompareVariables(char *lcFirst,const char *lcSecond,const char *lcEnds);
+///Will return the length of the String until 0 or one of the lcEnds String is found.
+uint32 StringLength(char *lcString,char *lcEnds);
 #endif

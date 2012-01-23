@@ -44,7 +44,7 @@ public:
 	* \brief Will remove the current object from the render list.
 	* \param lpOld This should be mpNode.
 	*/
-       //void Remove(cRenderOwner lpOld);
+       void Remove(cRenderOwner lpOld);
 	/*
 	* \brief Will add the current object to the render list owned by lpNew.
 	* \param lpNew This should be the cRenderNode that will control this object.
@@ -65,8 +65,12 @@ public:
        // The Collision Object that is linked to this cRenderNode.
 	void LinkCollisionObject(cCollisionObject *lpObj);
 
-// This will perform additional functions, when this object is rendered.
- void AdditionalRenderFunctions();
+    // This will perform additional functions, when this object is rendered.
+    void AdditionalRenderFunctions();
+
+    //This will Delete the tree from this point down.
+    void StartKillAll();
+    void KillAll();
 
 };
 

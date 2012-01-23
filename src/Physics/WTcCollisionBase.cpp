@@ -31,6 +31,7 @@ void cCollisionBase::ClearProcedural()
 
 }
 
+
 uint8 cCollisionBase::Type(){return miType;};
 
 
@@ -122,7 +123,7 @@ cCompoundCollision *cCollisionBase::SetType()
 
 void cCollisionBase::SetType(cMeshCollision *lpMesh){OnFile(lpMesh); miType=WT_COLLISION_MODEL;};
 void cCollisionBase::SetType(cBeamCollision *lpBeam){OnFile(lpBeam); miType=WT_COLLISION_BEAM;};
-
+void cCollisionBase::SetType(string lcMeshReference){SetType(_GET_COLLISION_MESH_FILE(lcMeshReference.c_str()));};
 
 cBeamCollision *cCollisionBase::SetType(float lfLength,float lfRadius){OnProcedural(); miType=WT_COLLISION_BEAM; mpObject=new cBeamCollision; Beam()->BuildObject(lfLength,lfRadius); return Beam();};
 

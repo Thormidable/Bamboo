@@ -28,10 +28,7 @@ void cRenderObject::LinkCollisionObject(cCollisionObject *lpObj)
 
 cRenderObject::cRenderObject()
 {
-	printf("This:%p\n",this);
  mpRenderer=cCamera::Instance()->RenderList();
- printf("cRenderObject::cRenderObject()\n");
- printf("Renderer() : %p\n",mpRenderer);
  mcOwnerNode=mpRenderer->Add(this);
 
 Initialise();
@@ -39,9 +36,6 @@ Initialise();
 
 cRenderObject::cRenderObject(vRenderNode *lpNode)
 {
-	printf("This:%p\n",this);
- printf("cRenderObject::cRenderObject(vRenderNode *lpNode)\n");
- printf("Renderer() : %p\n",lpNode);
   mpRenderer=lpNode;
   mcOwnerNode=lpNode->Add(this);
 Initialise();
@@ -50,10 +44,7 @@ Initialise();
 
 cRenderObject::cRenderObject(bool lbNoTextures): cTextureStack(lbNoTextures)
 {
-	printf("This:%p\n",this);
 	 mpRenderer=cCamera::Instance()->RenderList();
-	  printf("cRenderObject::cRenderObject()\n");
- printf("Renderer() : %p\n",mpRenderer);
  mcOwnerNode=mpRenderer->Add(this);
 
 Initialise();
@@ -61,9 +52,6 @@ Initialise();
 
 cRenderObject::cRenderObject(vRenderNode *lpNode,bool lbNoTextures) : cTextureStack(lbNoTextures)
 {
-	printf("This:%p\n",this);
-	 printf("cRenderObject::cRenderObject(vRenderNode *lpNode)\n");
- printf("Renderer() : %p\n",lpNode);
   mpRenderer=lpNode;
   mcOwnerNode=lpNode->Add(this);
 Initialise();
@@ -73,7 +61,7 @@ void cRenderObject::AddTexture(string lsTextureSlot,cTexture *lpTexture)
 {
  if(mpShader)
  {
- 	uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(lsTextureSlot);
+ 	uint32 liPos=mpShader->ShaderVariableSet()->GetUniformPosition(lsTextureSlot);
  	if(liPos) AddTexture(liPos-1,lpTexture);
  }
 }
@@ -82,7 +70,7 @@ void cRenderObject::RemoveTexture(string lsTextureSlot)
 {
   	if(mpShader)
 	{
-		uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(lsTextureSlot);
+		uint32 liPos=mpShader->ShaderVariableSet()->GetUniformPosition(lsTextureSlot);
 		if(liPos) RemoveTextureByUniform(liPos-1);
 	}
 }
@@ -92,18 +80,17 @@ void cRenderObject::RemoveTexture(uint8 liSlot)
 	RemoveTextureBySlot(liSlot);
 }
 
-
 void cRenderObject::AddTexture(cTexture *lpTexture)
 {
 
- int8 liSlot=ReturnFreeSlot();
- if(liSlot && mpShader)
+ int32 liSlot=ReturnFreeSlot();
+ if(liSlot>=0 && mpShader)
  {
  		string lsTextureSlot="Texture";
- 		std::stringstream out;
- 		out << miTextures;
+		std::stringstream out;
+		out << liSlot;
 		lsTextureSlot.append(out.str());
-		uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(lsTextureSlot);
+		uint32 liPos=mpShader->ShaderVariableSet()->GetUniformPosition(lsTextureSlot);
 	 	if(liPos) AddTexture(liPos-1,lpTexture);
  }
 }
@@ -130,25 +117,6 @@ void cRenderObject::Delete()
 
 }
 
-
-vRenderNode* vRenderNode::Renderer(){return mpRenderer;};
-void vRenderNode::RenderPainter(){};
-void vRenderNode::UpdateCache()
-{
-	mmCache=_MATRIX_STACK->Current();
-	mmTotalCache=_CAMERA->PerspectiveCameraMatrix();
-	mmTotalCache.Multiply(mmCache);
-}
-float* vRenderNode::GetPos(){return Position();};
-float* vRenderNode::GetCachedGlobalMatrix(){return mmCache.Matrix();}
-
-void vRenderNode::AdditionalKillFunctionality()
-{
-
-}
-
-cVariableStore* vRenderNode::Variables(){return 0;}
-
 cRenderOwner &cRenderObject::SetRenderNode(vRenderNode *lpRenderer)
 {
  if(mpRenderer==lpRenderer) return mcOwnerNode;
@@ -166,9 +134,9 @@ void cRenderObject::AdditionalRenderFunctions()
 
 }
 
-void cRenderObject::AdditionalKillFunctionality()
+void cRenderObject::Stop()
 {
-	    if(mpCollisionObject)
+	if(mpCollisionObject)
 	{
 		_KILL(mpCollisionObject);
 		mpCollisionObject=0;
@@ -184,31 +152,17 @@ void cRenderObject::AdditionalKillFunctionality()
 	delete mpVariables;
 	mpVariables=0;
 
-    /*
-    if(mpCollisionObject)
-	{
-		_KILL(mpCollisionObject);
-		mpCollisionObject=0;
-	}
-
-    if(mpPainterData)
-    {
-    _PAINTER->Remove(mpPainterData);
-	delete mpPainterData;
-	mpPainterData=0;
-    }
-    */
-/*
-	if(Renderer() && mcOwnerNode.Node)
-        Renderer()->Remove(mcOwnerNode);
-    else
-        trace("Cannot _S_Kill this Node, Is it the Camera List\n");
-*/
 }
 
+void cRenderObject::KillAll()
+{
+//    mpRenderer->Remove(mcOwnerNode);
+//delete this;
+};
 
 
-void cRenderObject::AdditionalSleepFunctionality()
+
+void cRenderObject::OnSleep()
 {
     if(mpPainterData)
     {
@@ -225,7 +179,7 @@ if(mpCollisionObject)
 
 }
 
-void cRenderObject::AdditionalWakeFunctionality()
+void cRenderObject::OnWake()
 {
 
 	mpPainterData=new cRenderPointer;
@@ -263,25 +217,30 @@ void cRenderObject::UpdateCache()
 };
 
 
+void cRenderObject::Shader(string lcString)
+{
+	Shader(_GET_SHADER_FILE(lcString.c_str()));
+}
 
 void cRenderObject::Shader(cShaderProgram *lpShader)
 {
  if(!lpShader && mpShader) ClearTextureStack();
 
+
   mpShader=lpShader;
 
-  if(mpVariables)
-  {
-	if(mpShader) mpVariables->Link(mpShader);
-	else mpVariables->ClearLink();
-  }
   if(mpShader)
   {
-	  mpShader->Use();
-	cUniformMatrix *lpMatrix=AddUniform<cUniformMatrix>("mmGlobal");
-		if(lpMatrix) lpMatrix->Data=mmCache.Matrix();
-	lpMatrix=AddUniform<cUniformMatrix>("mmTotal");
-		if(lpMatrix) lpMatrix->Data=mmTotalCache.Matrix();
+	   if(!mpVariables) mpVariables=new cVariableStore(lpShader);
+  	   else
+       {
+  			if(mpShader) mpVariables->Link(mpShader);
+  			else mpVariables->ClearLink();
+  		}
+
+	mpShader->Use();
+	SetVariablePointer("mmGlobal",mmCache.Matrix());
+    SetVariablePointer("mmTotal",mmTotalCache.Matrix());
   }
 
 }
@@ -331,7 +290,6 @@ bool cRenderObject::Transparency(){return mbAlpha;}
 
 void cRenderObject::SetPainterVariables()
 {
-	//mpPainterData->SetTexture(mpTextures);
     mpPainterData->SetAlpha(mbAlpha);
     mpPainterData->SetShader(mpShader);
 }
@@ -363,11 +321,73 @@ void cRenderObject::SetShaderVariables()
 {
  if(mpVariables)
  {
-  mpShader->Use();
-  mpVariables->WriteUniforms();
-  mpVariables->WriteAttributes();
+//  mpShader->Use();
+	/*SetVariable("mmGlobal",mmCache.Matrix());
+    SetVariable("mmTotal",mmTotalCache.Matrix());*/
+  mpVariables->WriteVariables();
  }
 
 }
 
 
+void cRenderObject::SetAttribute(string lcString,void *Data,uint32 liElements)
+{
+	if(mpShader)
+	{
+		uint32 liPos=mpShader->ShaderVariableSet()->GetAttributePosition(lcString);
+		if(liPos) mpVariables->GetVariable(liPos-1)->DataValue(Data,liElements);
+	}
+};
+
+void cRenderObject::SetVariable(string lcString,void *Data,uint32 liElements)
+{
+	SetAttribute(lcString,Data,liElements);
+};
+
+void cRenderObject::SetUniform(string lcString,void *Data)
+{
+	if(mpShader)
+	{
+		uint32 liPos=mpShader->ShaderVariableSet()->GetUniformPosition(lcString);
+		if(liPos) mpVariables->GetVariable(liPos-1)->DataValue(Data);
+	}
+};
+
+void cRenderObject::SetVariable(string lcString,void *Data)
+{
+	SetUniform(lcString,Data);
+};
+
+void cRenderObject::SetUniformPointer(string lcString,void *Data)
+{
+	if(mpShader)
+	{
+		uint32 liPos=mpShader->ShaderVariableSet()->GetUniformPosition(lcString);
+		if(liPos) mpVariables->GetVariable(liPos-1)->DataPointer(Data);
+	}
+};
+void cRenderObject::SetAttributePointer(string lcString,void *Data,uint32 liElements)
+{
+	if(mpShader)
+	{
+		uint32 liPos=mpShader->ShaderVariableSet()->GetAttributePosition(lcString);
+		if(liPos) mpVariables->GetVariable(liPos-1)->DataPointer(Data,liElements);
+	}
+};
+void cRenderObject::SetVariablePointer(string lcString,void *Data)
+{
+	SetUniformPointer(lcString,Data);
+};
+void cRenderObject::SetVariablePointer(string lcString,void *Data,uint32 liElements)
+{
+	SetAttributePointer(lcString,Data,liElements);
+};
+
+void cRenderObject::AddTexture(string lcTextureReference)
+{
+	AddTexture(_GET_TEXTURE_FILE(lcTextureReference.c_str()));
+};
+void cRenderObject::AddTexture(string lsTextureSlot,string lcTextureReference)
+{
+	AddTexture(lsTextureSlot,_GET_TEXTURE_FILE(lcTextureReference.c_str()));
+};

@@ -150,9 +150,10 @@ void cIMF::LoadIMF(const char *lpPath)
                 case IMF_TYPE_SHADER :
 		{
 		//	trace("Type Shader Object")
-			cShaderArray lShaderArray;
-			lShaderArray.LoadIMF(FileStream);
-			new cShader(&lShaderArray);
+			cShader *lpTemp;
+			lpTemp=new cShader();
+			lpTemp->LoadIMF(FileStream);
+			lpTemp->BufferAndCompile();
                 }break;
 
                 case IMF_TYPE_SHADER_PROGRAM :

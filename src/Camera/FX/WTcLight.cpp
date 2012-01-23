@@ -84,20 +84,20 @@ void cLight::Signal(SIGNAL lsSignal)
 	{
 	    mpLightHandler->MoreAwake();
 	    mbAwake=true;
-	    AdditionalWakeFunctionality();
+	    OnWake();
     }
 	if(lsSignal&WT_SIGNAL_VALUE_SLEEP && mbAwake)
 	{
 	    mpLightHandler->MoreAsleep();
 	    mbAwake=false;
-	    AdditionalSleepFunctionality();
+	    OnSleep();
 	}
 	if(lsSignal&WT_SIGNAL_VALUE_KILL && mbAlive)
 	{
 	    if(mbAwake) mpLightHandler->MoreAsleep();
 	    mbAlive=false;
 	    mbAwake=false;
-	    AdditionalKillFunctionality();
+	    Stop();
 	    mpLightHandler->Remove(mpNode);
     }
 }

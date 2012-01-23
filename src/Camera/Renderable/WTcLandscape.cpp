@@ -4,10 +4,16 @@
 
 cLandscape::cLandscape(cmLandscape *lpModel)
 {
- //This function needs serious cutting down
  mpLandscape=lpModel;
 	mb3D=true;
 }
+
+void cLandscape::Landscape(string lsLandscape)
+{
+ mpLandscape=_GET_LANDSCAPE_FILE(lsLandscape.c_str());
+}
+
+
 
 
 void cLandscape::RenderPainter()

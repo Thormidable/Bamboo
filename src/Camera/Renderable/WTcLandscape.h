@@ -27,6 +27,8 @@ public:
 	cLandscape(cmLandscape *lpModel=0);
 	/// Set the current height map for this landscape object.
 	void Landscape(cmLandscape *lpLandscape);
+	/// Set the current height map for this landscape object to use.
+	void Landscape(string lsLandscape);
 	/// Will return the height at Global co-ordinates lfX,lfZ.
 	float GetHeight(float lfX,float lfZ);
 	/// Will return the height at the Local position lfX,lfZ (relative to landscapes corner)

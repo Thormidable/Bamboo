@@ -24,8 +24,8 @@ void cMaterial::SetShine(float lfShine)
 
 void cMaterial::PrepareMaterial()
 {
- glMaterialfv(GL_FRONT, GL_SPECULAR, mpSpecular);
- glMaterialfv(GL_FRONT, GL_SHININESS, mpShine);
+ //glMaterialfv(GL_FRONT, GL_SPECULAR, mpSpecular);
+ //glMaterialfv(GL_FRONT, GL_SHININESS, mpShine);
 }
 
 

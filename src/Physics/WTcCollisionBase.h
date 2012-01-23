@@ -71,6 +71,8 @@ public:
         void SetType(cBeamCollision *lpBeam);
         ///This will take a cCompoundCollision Object loaded from a file and set this Collision Object to use it.
         void SetType(cCompoundCollision *lpCompound);
+		///This will take a MeshCollision Object with reference lcMeshReference, and set this Collision Object to use it.
+		void SetType(string lcMeshReference);
     #endif
 
 	///This will procedurally generate a Sphere or radius 1.0f;

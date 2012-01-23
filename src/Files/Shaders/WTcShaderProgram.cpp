@@ -4,7 +4,9 @@
 
 void cShaderProgram::LoadIMF(ifstream &FileStream)
 {
- uint32 liBuff;
+
+
+	uint32 liBuff;
  FileStream.ignore(sizeof(uint32));
 
  FileStream.read((int8 *)&liBuff,sizeof(uint32));
@@ -13,9 +15,10 @@ void cShaderProgram::LoadIMF(ifstream &FileStream)
 
 
  mcList.LoadIMF(FileStream);
-
+	delete []mpShader;
  mpShader = new cShader*[Size()];
- mpVariables = new cShaderVariables;
+ 	delete mpVariableSet;
+ mpVariableSet = new cShaderVariableSet;
 
  for(liBuff=0;liBuff<mcList.Size();++liBuff)
   {
@@ -29,25 +32,21 @@ void cShaderProgram::LoadIMF(ifstream &FileStream)
 
 trace("Loaded and Processed ShaderProgram : " << mpFileName);
 
-
 	StoredVariables()->Link(this);
 
  	Use();
 
-	cUniformMatrix *lpTemp;
+	SetVariablePointer("mm2DProjection",_CAMERA->Perspective2D());
+    SetVariablePointer("mmProjection",_CAMERA->Perspective());
+    SetVariablePointer("mmCamera",_CAMERA->CameraMatrix());
+   	SetVariablePointer("mmCombined",_CAMERA->PerspectiveCameraMatrix());
+}
 
-	  lpTemp=AddUniform<cUniformMatrix>("mm2DProjection");
-	  if(lpTemp) lpTemp->Data=_CAMERA->Perspective2D();
 
-      lpTemp=AddUniform<cUniformMatrix>("mmProjection");
-	  if(lpTemp) lpTemp->Data=_CAMERA->Perspective();
-
-      lpTemp=AddUniform<cUniformMatrix>("mmCamera");
-	  if(lpTemp)lpTemp->Data=_CAMERA->CameraMatrix();
-
-   	  lpTemp=AddUniform<cUniformMatrix>("mmCombined");
-	  if(lpTemp) lpTemp->Data=_CAMERA->PerspectiveCameraMatrix();
-
+cVariableStore *cShaderProgram::StoredVariables()
+{
+ if(!mpStoredVariables) mpStoredVariables=new cVariableStore(this);
+ return mpStoredVariables;
 }
 
 cShaderProgram::cShaderProgram()
@@ -55,7 +54,7 @@ cShaderProgram::cShaderProgram()
 miProgramID=glCreateProgram();
 printf("Shader Program ID: %u\n",miProgramID);
 mpShader=0;
-mpVariables=0;
+mpVariableSet=0;
 mpStoredVariables=0;
 }
 
@@ -64,7 +63,8 @@ cShaderProgram::~cShaderProgram()
 glUseProgram(0);
  if(miProgramID){glDeleteProgram(miProgramID); miProgramID=0;}
  delete []mpShader; mpShader=0;
- delete mpVariables; mpVariables=0;
+ //delete mpVariableSet;
+ mpVariableSet=0;
  delete mpStoredVariables; mpStoredVariables=0;
 }
 
@@ -83,7 +83,7 @@ void cShaderProgram::Link()
 {
  int liStatus;
 
- mpVariables->BindAttributes(miProgramID);
+ mpVariableSet->BindAttributes(miProgramID);
  glLinkProgram(miProgramID);
  glGetProgramiv(miProgramID,GL_LINK_STATUS,&liStatus);
  if(!liStatus)
@@ -96,8 +96,8 @@ void cShaderProgram::Link()
 		if(mpShader[liStatus]->Type()==IMF_SHADER_TYPE_VERTEX) Types[0]=0;
 		if(mpShader[liStatus]->Type()==IMF_SHADER_TYPE_FRAGMENT) Types[1]=0;
 	 }
-	 if(Types[0]) trace("No Vertex Shader Linked to Program");
-	 if(Types[1]) trace("No Fragment Shader Linked to Program");
+	 if(Types[0]) trace("No Vertex Shader Linked to Program. This is required.");
+	 if(Types[1]) trace("No Fragment Shader Linked to Program. This is required.");
 
 	 trace("Shader Program failed to Link");
 
@@ -106,8 +106,7 @@ void cShaderProgram::Link()
  {
 	 trace("Shader Program Linked");
 	 Use();
- 	 mpVariables->GetAttributeLocations(miProgramID,mpShader,Size());
-	 mpVariables->GetUniformLocations(miProgramID,mpShader,Size());
+ 	 mpVariableSet->GetVariableLocations(miProgramID,mpShader,Size());
  }
 }
 
@@ -117,31 +116,61 @@ void cShaderProgram::Use()
 }
 
 
-cShaderVariables *cShaderProgram::ShaderVariables()
+cShaderVariableSet *cShaderProgram::ShaderVariableSet()
 {
-	return mpVariables;
+	return mpVariableSet;
 }
 
 
 
 
-cVariableStore *cShaderProgram::StoredVariables()
-{
- if(!mpStoredVariables) mpStoredVariables=new cVariableStore(this);
- return mpStoredVariables;
-}
 
 void cShaderProgram::SetShaderVariables()
 {
  if(mpStoredVariables)
  {
-  Use();
-  mpStoredVariables->WriteUniforms();
-  mpStoredVariables->WriteAttributes();
+  mpStoredVariables->WriteVariables();
  }
-
 }
 
 
+void cShaderProgram::SetUniform(string lcString,void *Data)
+{
+	uint32 liPos=mpVariableSet->GetUniformPosition(lcString);
+	if(liPos) mpStoredVariables->GetVariable(liPos-1)->DataValue(Data);
+};
+void cShaderProgram::SetAttribute(string lcString,void *Data,uint32 liElements)
+{
+	uint32 liPos=mpVariableSet->GetAttributePosition(lcString);
+	if(liPos) mpStoredVariables->GetVariable(liPos-1)->DataValue(Data,liElements);
+};
+void cShaderProgram::SetVariable(string lcString,void *Data)
+{
+	SetUniform(lcString,Data);
+};
+void cShaderProgram::SetVariable(string lcString,void *Data,uint32 liElements)
+{
+	SetAttribute(lcString,Data,liElements);
+};
+
+
+void cShaderProgram::SetUniformPointer(string lcString,void *Data)
+{
+		uint32 liPos=mpVariableSet->GetUniformPosition(lcString);
+		if(liPos) mpStoredVariables->GetVariable(liPos-1)->DataPointer(Data);
+};
+void cShaderProgram::SetAttributePointer(string lcString,void *Data,uint32 liElements)
+{
+		uint32 liPos=mpVariableSet->GetAttributePosition(lcString);
+		if(liPos) mpStoredVariables->GetVariable(liPos-1)->DataPointer(Data,liElements);
+};
+void cShaderProgram::SetVariablePointer(string lcString,void *Data)
+{
+	SetUniformPointer(lcString,Data);
+};
+void cShaderProgram::SetVariablePointer(string lcString,void *Data,uint32 liElements)
+{
+	SetAttributePointer(lcString,Data,liElements);
+};
 
 

@@ -26,11 +26,11 @@ public:
 	///This will return true if the object is Dead.
 	bool Dead();
 	///Virtual Functions to allow additional commands to be processed when a kill signal is received by an object. This can be user modified for classes inheriting cProcess.
-	virtual void AdditionalKillFunctionality(){};
+	virtual void Stop(){};
 	///Virtual Functions to allow additional commands to be processed when a sleep signal is received by an object. This can be user modified for classes inheriting cProcess.
-	virtual void AdditionalSleepFunctionality(){};
+	virtual void OnSleep(){};
 	///Virtual Functions to allow additional commands to be processed when a wake signal is received by an object. This can be user modified for classes inheriting cProcess.
-	virtual void AdditionalWakeFunctionality(){};
+	virtual void OnWake(){};
 };
 
 /** \brief Class for handling user specified signals sent between classes inheriting cProcess.

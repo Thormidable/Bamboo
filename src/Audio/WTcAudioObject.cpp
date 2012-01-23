@@ -93,6 +93,11 @@ void cAudioObject::Buffer(cAudioBuffer *lpBuffer)
 
 }
 
+void cAudioObject::Buffer(string lcBuffer)
+{
+ Buffer(_GET_AUDIO_FILE(lcBuffer.c_str()));
+}
+
 ALuint cAudioObject::Source()
 {
   return miSource;

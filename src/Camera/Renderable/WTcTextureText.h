@@ -27,10 +27,14 @@ public:
 
        std::string &Text();
 
-	   		///Will Add the Font lcFont to this object using the uniform variable labelled lsFontSlot.
+		///Will Add the Font lcFont to this object using the uniform variable labelled lsFontSlot.
 		void AddFont(string lsFontSlot,cFont *lcFont);
+		///Will Add the Font with reference lcFont to this object using the uniform variable labelled lsFontSlot.
+		void AddFont(string lsFontSlot,string lcFont);
 		///Will Add the Font lcFont to the first free default Font slot ("Font0" "Font1" "Font2"). This is slower than AddFont(string,cFont*). Also it allows for mistakes in the naming of samplers in the shader.
 		void AddFont(cFont *lcFont);
+		///Will Add the Font with Reference lcFont to the first free default Font slot ("Font0" "Font1" "Font2"). This is slower than AddFont(string,cFont*). Also it allows for mistakes in the naming of samplers in the shader.
+		void AddFont(string lcFont);
 };
 
 //#include <sstream>

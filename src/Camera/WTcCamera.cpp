@@ -13,7 +13,9 @@ cCamera::cCamera()
 cCamera::~cCamera()
 {
  trace("Destroying cCamera");
- delete mpRenderList; mpRenderList=0;
+ mpRenderList->StartKillAll();
+ delete mpRenderList;
+ mpRenderList=0;
 }
 
 void cCamera::UpdateNotRender()

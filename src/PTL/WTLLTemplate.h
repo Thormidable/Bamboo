@@ -25,6 +25,10 @@ template<class T> class cLinkedNode
 	cLinkedList<T> *mpList;
 
 	void List(cLinkedList<T> *lpTemp){mpList=lpTemp;};
+		/// This is a pointer to the data owned by this node.
+	T *mpData;
+
+public:
 	/// This will delete the data owned by this node as it is deconstructed.
 	~cLinkedNode()
 	{
@@ -33,11 +37,6 @@ template<class T> class cLinkedNode
 		mpNext=0;
 		mpPrev=0;
 	};
-
-		/// This is a pointer to the data owned by this node.
-	T *mpData;
-
-public:
 
 	/// This will return a pointer to the next node in the linked list. see cLinkedList.
 	cLinkedNode<T> *Next(){return mpNext;}

@@ -122,9 +122,11 @@ void cTextureSlot::TextureState(cTextureSlot *lpPrevious,uint8 liTexSlot)
   }
   else
   {
-		  glClientActiveTexture(GL_TEXTURE0);
-		  glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-		  glDisable(GL_TEXTURE_2D);
+      //glActiveTexture(GL_TEXTURE0+liTexSlot);
+       //glClientActiveTexture(GL_TEXTURE+liTexSlot);
+       //if(!liTexSlot) glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+      //    glClientActiveTexture(GL_TEXTURE+liTexSlot);
+        // glDisable(GL_TEXTURE_2D);
   }
  }
 }

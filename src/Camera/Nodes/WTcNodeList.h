@@ -63,6 +63,8 @@ cNodeList(vRenderNode *lpRenderer,cMeshTree *lpTree);
 
 /// Will re-initialise this cNodeList using the file lpTree. It will have the structure and models of the file.
 void LoadTree(cMeshTree *lpTree);
+///Will re-initialise this cNodeList using the ModelList with reference lcTree. It will have the structure and models of the file.
+void LoadTree(string lcTree);
 
  /// Create an empty cNodeList of size liLength.
  cNodeList(uint32 liLength);
@@ -105,6 +107,9 @@ public:
  * Anything else is the number of matrices that will be popped off the matrix stack.
  */
  void SetLevel(uint16 liPos,uint8 liCom);
+
+ void StartKillAll();
+ void KillAll();
 
 
 };

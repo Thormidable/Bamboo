@@ -19,6 +19,8 @@ public:
 
 	/// Will set the mesh the model will use.
         void Mesh(cMesh *lpObject);
+    ///Will set the mesh the model will use. Works on a media reference.
+        void Mesh(const char* lcReference);
 
 	/// Will return the currently set Mesh.
 		cMesh *Mesh();

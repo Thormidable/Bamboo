@@ -56,25 +56,46 @@ cRenderOwner cRenderNode::Add(vRenderObject *lpNew)
  return lcOwner;
 }
 
-/*
+
 void cRenderNode::Remove(cRenderOwner lpOld)
 {
-	printf("Here as well\n");
 	mpObjects->Delete(lpOld.Node);
-	mpRenderer=0;
-	mcOwnerNode.Node=0;
-	mcOwnerNode.List=0;
+}
 
-}*/
+void cRenderNode::StartKillAll()
+{
+    KillAll();
+    if(mpRenderer) mpRenderer->Remove(mcOwnerNode);
+    else trace("This is the Camera cRenderNode. Cannot Delete.");
+}
 
+void cRenderNode::KillAll()
+{
+    if(mpObjects)
+    {
+        mpCursor=mpObjects->Start();
+        if(mpCursor)
+        {
+        while(mpCursor->Next())
+        {
+            mpCursor->Data()->KillAll();
+            mpCursor=mpCursor->Next();
+            delete mpCursor->Previous();
+        }
+            mpCursor->Data()->KillAll();
+            delete mpCursor;
+
+        mpObjects->Initialise();
+        delete mpObjects;
+        }
+    }
+    mpObjects=0;
+}
 
 void cRenderNode::RenderToPainter()
 {
  if (mpObjects)
  {
-
-	//_MATRIX_STACK->Push();
-
 
   UpdateMatrix();
   UpdateCache();
@@ -115,9 +136,7 @@ void cRenderNode::RenderToPainter()
 	_MATRIX_STACK->Pop();
 
   }
-  AdditionalRenderFunctions();
-
-//	_MATRIX_STACK->Pop();
+  //AdditionalRenderFunctions();
 
  }
 }

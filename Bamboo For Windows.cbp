@@ -108,6 +108,7 @@
 		<Unit filename="src\Camera\WTcLightHandler.h" />
 		<Unit filename="src\Camera\WTcPainter.cpp" />
 		<Unit filename="src\Camera\WTcPainter.h" />
+		<Unit filename="src\Camera\WTcRenderNodeObject.cpp" />
 		<Unit filename="src\Camera\WTcRenderObject.cpp" />
 		<Unit filename="src\Camera\WTcRenderObject.h" />
 		<Unit filename="src\Camera\WTcRenderOwner.h" />

@@ -250,8 +250,10 @@ void cPainter::Render()
  uint32 liCount;
 
  SortByDistance();
-
- SortByTexture(0);
+for(liCount=0;liCount<WT_TEXTURE_NUMBER_ALLOWED;++liCount)
+{
+ SortByTexture(liCount);
+}
 
  SortByShader();
 
@@ -271,19 +273,27 @@ glEnable(GL_DEPTH_TEST);
 
   if(liCount)
   {
-	mpList[liCount]->mpObject->TextureItem(0).TextureState(&(mpList[liCount-1]->mpObject->TextureItem(0)),0);
-//    TextureState(mpList[liCount]->mpObject,mpList[liCount-1]->mpObject,0);
+   uint8 liTexSlot;
+    for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
+    {
+            mpList[liCount]->mpObject->TextureItem(liTexSlot).TextureState(&(mpList[liCount-1]->mpObject->TextureItem(liTexSlot)),liTexSlot);
+    }
     ShaderState(mpList[liCount]->ShaderPoint,mpList[liCount-1]->ShaderPoint);
     DepthState(mpList[liCount]->mbAlpha,mpList[liCount-1]->mbAlpha);
   }
   else
   {
-	  mpList[liCount]->mpObject->TextureItem(0).FirstTextureState(0);
-    //TextureState(mpList[liCount],0,0);
+
+      uint8 liTexSlot;
+    for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
+    {
+	  mpList[liCount]->mpObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
+    }
     ShaderState(mpList[liCount]->ShaderPoint,0);
-    if(mpList[liCount]->mbAlpha) glDisable(GL_DEPTH_TEST);
-    else glEnable(GL_DEPTH_TEST);
+  if(mpList[liCount]->mbAlpha) glDisable(GL_DEPTH_TEST);
+  else glEnable(GL_DEPTH_TEST);
   }
+
   #if WT_FULL_VERSION_BAMBOO
     if(_LIGHT->AnyLights() && mpList[liCount]->mpObject->Lighting()) _LIGHT->PrepareLight(&(mpList[liCount]->mpObject->mmCache));
   #endif

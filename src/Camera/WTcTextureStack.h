@@ -25,7 +25,7 @@ class cTextureStack
 protected:
 	uint8 miTextures;
 public:
-	///Set bool to 1 if this is an object not requiring textures
+	//Set bool to 1 if this is an object not requiring textures
 	cTextureStack(bool lbNoTextures);
 	cTextureStack();
 	~cTextureStack();
@@ -33,7 +33,7 @@ public:
 	cTextureSlot &TextureItem(uint8 liPos);
 	void AddTexture(uint32 liUniform,cTexture *lpTexture);
 	int8 ReturnFreeSlot();
-	///This will return the number of Textures linked to this object.
+	//This will return the number of Textures linked to this object.
    uint8 Textures();
    void CreateStatic();
    void RemoveTextureByUniform(uint32 liTexSlot);

@@ -35,7 +35,7 @@ if(lpNode->miFormat&WT_MESHTREE_SHADER)
 
 	if(lpNode->miFormat&WT_MESHTREE_TEXTURE)
 	{
-		lpObject->AddTexture("Texture",lpNode->Texture());
+		lpObject->AddTexture("Texture0",lpNode->Texture());
 	}
 
 	if(lpNode->miFormat&WT_MESHTREE_LEVEL)
@@ -60,6 +60,11 @@ if(lpNode->miFormat&WT_MESHTREE_SHADER)
 }
 }
 
+void cNodeList::LoadTree(string lcTree)
+{
+ LoadTree(_GET_MODELLIST_FILE(lcTree.c_str()));
+}
+
 float cNodeList::lsPosition[16];
 
 cNodeList::~cNodeList()
@@ -70,9 +75,7 @@ cNodeList::~cNodeList()
 
 void cNodeList::DeleteAll()
 {
-
-mpList.DeleteAll();
-
+	mpList.DeleteAll();
 }
 cNodeList::cNodeList(uint32 liLength)
 {
@@ -159,13 +162,31 @@ void cNodeList::Remove(cRenderOwner lpCurrent)
     mpList.Remove(lpCurrent.List);
 }
 
+void cNodeList::StartKillAll()
+{
+    KillAll();
+    if(mpRenderer) mpRenderer->Remove(mcOwnerNode);
+    else trace("This is the Camera cNodeList. Cannot Delete.");
+}
+
+void cNodeList::KillAll()
+{
+    uint32 liCount;
+    for(liCount=0;liCount<mpList.Items();++liCount)
+    {
+        mpList[liCount]->mpObject->KillAll();
+        delete mpList[liCount];
+        mpList.ZeroItem(liCount);
+    }
+    mpList.SetItems(0);
+
+
+}
 
 void cNodeList::RenderToPainter()
 {
   uint32 liListPos;
   miLevel=0;
-  //cMatrix4 &lpIdentity;
-  //lpIdentity.Identity();
 
   UpdateMatrix();
   UpdateCache();
@@ -189,7 +210,6 @@ void cNodeList::RenderToPainter()
 	}
 	else
 	{
-		//If too many Levels
 		if(mpList[liListPos]->miLevel<miLevel)
 		{
 			while(mpList[liListPos]->miLevel<miLevel)
@@ -215,7 +235,7 @@ void cNodeList::RenderToPainter()
  }
  while(miLevel>0){ _MATRIX_STACK->Pop(); --miLevel;}
 
-AdditionalRenderFunctions();
+//AdditionalRenderFunctions();
   _MATRIX_STACK->Pop();
 
 }

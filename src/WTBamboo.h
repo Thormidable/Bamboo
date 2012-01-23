@@ -469,8 +469,8 @@
  *
  * This Section contains the complete list of engine settings. They are all variables. Most can be modified during run time. Ones which cannot are listed here.
  *
- * - WT_USE_PAINTER_ALGORITHM
- *	- This determines whether the system will render objects in the order they sit in the Render Tree, or to use the Painter Algorithm and sort them for speed. Should always be enabled.
+ * - WT_TEXTURE_NUMBER_ALLOWED
+ *	- This is the number of textures that can be applied to a single object. This is limited by your graphics card. Keep this as low as possible for the shaders used.
  *  .
  * - WT_OPENGL_LIGHTS
  *	- This is the number of Lights that you wish OpenGL to use simultaneously to light an object.
@@ -539,6 +539,7 @@
  *  - cText
  *  - cLandscape
  *  - cRenderNode
+ *  - cNodeList
  *  - cBeamMesh
  *  - cLine
  *  - cPoint
@@ -558,7 +559,7 @@
  * - cMatrix4
  * - cCameraMatrix4
  * - cMatrixStack
- * - cFile (These should be used to access media)
+ * - cFile (These are for loaded media files. You should not need to create objects of these types)
  *  - cSoundObject
  *  - cMeshFileCollision
  *  - cTexture
@@ -575,23 +576,26 @@
  *
  *\section OptimisationTechniques Optimisation Techniques
  * Bamboo is written to be as optimised as possible while remaining very simple. There are many things that can be done to optimise your code.
- * Reduce Collisions: \n
+ * <b>Reduce Collisions:</b> \n
  * It is very important to only check for collisions that matter. Collisions should only detected one way (I.E. either From the Tank to the Bullet OR from the Bullet to the Tank, not both).
  * Use cCollisionObject::CollisionFilter() to minimise the collision checks that are made. \n
- * Turn off Lighting where not required: \n
+ * <b>Turn off Lighting where not required:</b> \n
  *  If an object will not use the lighting settings there is no point
- * Reduce Matrix Multiplications: \n
+ * <b>Reduce Matrix Multiplications:</b> \n
  * Where possible use the minimum of Matrix multiplications. Both in shaders and in programs. Don't use cRenderObject::CalculateGlobalMatrix() unless absolutely neccessay. try to use cRenderObject::GetCacheMatrix() instead.
  * It will not include changes to the Global matrix this frame but it is very fast. Use the highest level of Matrices possible in a shader.
  *
  * \section CommonMistakes Common Mistakes
  * <b> My Textures aren't working: </b> \n
- * Has the Mesh got UV Co-ordinates. The entire model will just use 0,0 if it doesn't have co-ordinates.\n
+ * Has the Mesh got UV Co-ordinates? The entire model will have random colors or be faded to a very dark color without UV co-ordinates. \n
+ * The object must have its shader assigned before it can receive any textures.
  * <b> My Lighting isn't working: </b> \n
  * If the model is entirely black it may not have Normals. A Mesh without normals cannot use lighting.
  * If the lighting is not using the correct lights it may be worth checking if lighting is enabled for the current object with cRenderObject::Lighting(bool). \n
  * <b> My Transparent Textures and Images are not working:</b> \n
  * Check that the Texture has an alpha channel to enable transparency. Check that Transparency is enabled with cRenderObject::Transparent(bool) \n
+ * <b>When I change an Objects shader it goes funny:</b> \n
+ * Each shader assigns its variables to a location specific to that cShaderProgram. This is done by the graphics card. Variables should be reassigned when an objects shader is changed.
  * */
 
 /**
@@ -1405,7 +1409,7 @@
 *  //As this code is run EVERY time an instance of this process is created.
 * };
 *
-* ~Process_Name()
+* void Stop()
 * {
 *  //Destructor Code goes here.
 *  //This should send a _KILL signal to objects you wish to die when this process dies.
@@ -1430,7 +1434,7 @@
 * Classes have a few special functions. Classes can have Constructors and Destructors. Constructors are automatically processed any time an instance of a class is created. Destructors are automatically processed any time an instance of a class is deleted.
 * This means that a Constructor can be used to setup a class ready to be used. A Destructor should be used to 'clean' up a class which is being deleted.
 * The Constructor is a function with no return type (not even void) and a name which exactly matches the name of the class. It can have arguments.
-* The Destructor is a function with no return type (not even void) and a name which begins with the tilde character \b ~ and is followed by the name of the class.
+* The Destructor is a function called Stop() with no return type (void). Stop will be called whenever a process is killed. Do not use the normal c++ destructor using the tilde key '~' as it is unpredictable about when this will occur.
 * \code
 * class My_Class
 * {
@@ -1457,7 +1461,7 @@
 *	};
 *
 *	// Destructor for the class My_Class.
-*	~My_Class()
+*	void Stop()
 *	{
 *	};
 *
@@ -1568,8 +1572,8 @@
  * The Kernel does not need to be understood by the user, but is refered to later so a brief description will be given here. The Kernel owns and controls all the processes in the program.
  * The kernel will create itself as soon as any Process is created. It will automatically grab any process as soon as it is created and can sort their run order. A Pointer to the cKernel can always be found by calling the macro _KERNEL (cKernel::Instance()). If this function is called and there is no cKernel, the function will create one. The Constructor is private, so there can be only one cKernel.
  * The Kernel is entirely automatic and should require no inputs from the user. However it can supply useful information and functionality to the user.
- * KillAll():
- * Calling KillAll() will kill every running process. This will cause Update() to exit, and traditionally end the program. However it is possible to KillAll(), then create a new core process, and call Update() again, thereby ‘restarting’ the program.
+ * cKernel::KillAll():
+ * Calling cKernel::KillAll() will kill every running process. This will cause Update() to exit, and traditionally end the program. However it is possible to cKernel::KillAll(), then create a new core process, and call Update() again, thereby ‘restarting’ the program.
  *
  * _FIND_PROCESS(TYPE)
  * Calling _FIND_PROCESS() will automatically search the cKernel for any processes of class type TYPE. It will return a pointer to the next process of class type TYPE everytime it is called. When there are no more processes of class type TYPE it will return 0.
@@ -1591,7 +1595,7 @@
  *
  *  void Run();
  *
- *  ~cCore();
+ *  void Stop();
  *
  * };
  * \endcode
@@ -1635,35 +1639,33 @@
 * }
 * \endcode
 *
-* ~cCore():
-*	This is called when the object is deleted, not when it is killed. It is difficult to predict reliably where this will be called, so it is best not to put code in this function. Use AdditionalKillFunctionality() instead, to ensure the code runs when then object is killed.
 *
-* AdditionalKillFunctionality():
+* Stop():
 *	This is called whenever the cCore Process is Killed. This will only activate if the process was alive and is now dead. This should be used to kill or transfer control of Render Objects that are owned by this process, or unload files that are no longer used.
 *
 * \code
-* void cCore::AdditionalKillFunctionality()
+* void cCore::Stop()
 * {
 * _KILL(mpRenderObjectPointer);
 * mpProcessPointer_SIGNAL(_S_SLEEP);
 * }
 * \endcode
 *
-* AdditionalSleepFunctionality():
+* OnSleep():
 *	This is called whenever the cCore Process is made to Sleep. This will only activate if the process was awake and is now asleep. This is generally used to sleep Render Objects that are owned by this process.
 *
 * \code
-* void cCore::AdditionalSleepFunctionality()
+* void cCore::OnSleep()
 * {
  * mpRenderObjectPointer->Signal(_S_SLEEP);
  * }
  * \endcode
  *
- * AdditionalWakeFunctionality():
+ * OnWake():
  *	This is called whenever the cCore Process is made to Wake. This will only activate if the process was asleep and is now awake. This is generally used to wake Render Objects that were slept when cCore was sent to sleep.
  *
  * \code
- * void cCore::AdditionalSleepFunctionality()
+ * void cCore::OnWake()
  * {
  * mpRenderObjectPointer->Signal(_S_WAKE);
  * }
@@ -1802,6 +1804,23 @@
  * A Renderable object must inherit cRenderObject and must also define the virtual function Render(), This will be called every time the renderable object needs to be rendered.
  * It should also define all empty virtual functions in vRenderObject and cRenderObject.
  *
+ * \section MultiTexturing Texturing Objects
+ * In the latest release Multiple Textures have been implemented. This means that you can send, a texture, a bump map and a lighting map to a single model and produce much more complicated shader effects. \n
+ * For those who don't want a detailed overview.
+ * - Your shaders should call their uniform sampler2D variables "Texture0" "Texture1" "Texture2" etc.
+ * - In the class cUserSettings set the variable WT_TEXTURE_NUMBER_ALLOWED to the number of simultaneous textures required. This is 2 by default.
+ * - An Object can only have textures applied to it once it has a shader. Use the function cRenderObject::Shader(cShaderProgram*).
+ * - Use the function cRenderObject::AddTexture(cTexture*) to add a texture to a cRenderObject. They will be added to the object and placed in slots in the order they are added.
+ * \n
+ * Textures are applied to Renderable objects using the function AddTexture(string,cTexture*). This function will add the Texture pointer to the Texture slot with the name matching lsTextureSlot.
+ * Alternatively AddTexture(cTexture*) can be used. This will add the texture to the next free texture slot in the shader named "Texture0" "Texture1" "Texture2" etc. \n
+ * Declaring Textures in Fragment Shaders:
+ * Multitexturing in shaders is controlled using uniform sampler types:
+ * \code
+ * uniform sampler2D Texture0;
+ * \endcode
+ * This takes a 2D Texture and names it Texture0. By default Bamboo shaders use the names Texture0, Texture1 ,Texture2 etc. If you use different names for your texture samplers they will need to be linked to their textures using AddTexture(string,cTexture*). \n
+
  * \section FilesAccessPage Loading and Accessing Files
  *
  * WTcFile.h
@@ -2418,7 +2437,7 @@
 		}
 	};
 
-	~cCore()
+	void Stop()
 	{
 		//When this dies we want the ball to disappear.
 		_KILL(BallPointer);
@@ -2533,7 +2552,7 @@
 
 	};
 
-	~cCore()
+	void Stop()
 	{
 		//When this dies we want the ball to disappear.
 		_KILL(BallPointer);
@@ -2637,7 +2656,7 @@
 
 	};
 
-	~cCore()
+	void Stop()
 	{
 
 		//When this dies we want the ball to disappear.
@@ -2748,7 +2767,7 @@
 
 	};
 
-	~cBall()
+	void Stop()
 	{
 		//When this dies we want the ball to disappear.
 		_KILL(BallPointer);
@@ -2816,7 +2835,7 @@ _PROCESS(cBullet)
 		}
    };
 
-   ~cBullet()
+   void Stop()
    {
 		//If something else killed this bullet RenderPoint is not dead.
 		//If this bullet killed itself, RenderPoint is 0.
@@ -2874,7 +2893,7 @@ _PROCESS(cBullet)
 		}
 	};
 
-	~cCore()
+	void Stop()
 	{
 
 	};
@@ -2987,7 +3006,7 @@ _PROCESS(cBullet)
 
 	};
 
-	~cBall()
+	void Stop()
 	{
 			//When this dies we want the ball to disappear.
 		_KILL(BallPointer);
@@ -3083,7 +3102,7 @@ _PROCESS(cBullet)
 		delete ListOfCollisions;
    };
 
-   ~cBullet()
+   void Stop()
    {
 			//If something else has killed this bullet then RenderPoint will still be alive.
 		if(RenderPoint != 0)
@@ -3158,7 +3177,7 @@ public:
 		}
 	};
 
-	~cCore()
+	void Stop()
 	{
 
 	};
@@ -3281,7 +3300,7 @@ public:
 
 	};
 
-	~cBall()
+	void Stop()
 	{
 		//When this dies we want the ball to disappear.
 		_KILL(BallPointer);
@@ -3407,7 +3426,7 @@ _PROCESS(cBullet)
 		delete ListOfCollisions;
    };
 
-   ~cBullet()
+   void Stop()
    {
 			//If something else has killed this bullet then RenderPoint will still be alive.
 		if(RenderPoint != 0)
@@ -3487,7 +3506,7 @@ public:
 		}
 	};
 
-	~cCore()
+	void Stop()
 	{
 
 	};
@@ -3555,7 +3574,7 @@ public:
 
 	};
 
-	~cBall()
+	void Stop()
 	{
 
 		_KILL(BallPointer);
@@ -3629,7 +3648,7 @@ _PROCESS(cBullet)
 		delete ListOfCollisions;
    };
 
-   ~cBullet()
+   void Stop()
    {
 		if(RenderPoint != 0)
 		{
@@ -3673,7 +3692,7 @@ public:
 		}
 	};
 
-	~cCore()
+	void Stop()
 	{
 
 	};

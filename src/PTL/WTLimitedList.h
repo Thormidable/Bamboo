@@ -209,6 +209,10 @@ public:
 	/// Will return the pointer at position liItem in the list.
 	cX *Item(uint32 liItem){return mpList[liItem];};
 
+    void ZeroItem(uint32 liItem){mpList[liItem]=0;};
+
+    void SetItems(uint32 liItems){if(liItems<miSpaces) miItems=liItems; else miItems=miSpaces;};
+
 	cX **ArrayPos(uint32 liItem){return mpList+liItem;};
 	/// Will Add the pointer lpValue to the list. Once added the Array will control deleting the object pointed to by lpValue. It will also expand the array to acomodate the item as required.
 	void Add(cX *lpValue){if(miItems>=miSpaces) ChangeSize(miSpaces*1.5); mpList[miItems++]=lpValue;};
