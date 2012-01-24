@@ -55,7 +55,7 @@ cRGBA::cRGBA(float lfR,float lfG,float lfB,float lfA)
     color[0]=lfR;
     color[1]=lfG;
     color[2]=lfB;
-    color[2]=lfA;
+    color[3]=lfA;
 }
 cRGBA::cRGBA(float *lfRGB)
 {

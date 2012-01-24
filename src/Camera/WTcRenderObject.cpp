@@ -202,20 +202,28 @@ void cRenderObject::UpdateCache()
 		mpCollisionObject->PreUpdateCache();
 
 		mmCache=_MATRIX_STACK->Current();
-		mmTotalCache=_CAMERA->PerspectiveCameraMatrix();
-		mmTotalCache.Multiply(mmCache);
+		RecalculateTotalMatrix();
 
 		mpCollisionObject->PostUpdateCache();
 	}
 	else
 	{
 		mmCache=_MATRIX_STACK->Current();
-		mmTotalCache=_CAMERA->PerspectiveCameraMatrix();
-	    mmTotalCache.Multiply(mmCache);
+		RecalculateTotalMatrix();
 	}
 
 };
 
+void cRenderObject::CalculateMatrices()
+{
+	UpdateCache();
+};
+
+void cRenderObject::RecalculateTotalMatrix()
+{
+	mmTotalCache=_COMBINED_MATRIX;
+	mmTotalCache.Multiply(mmCache);
+};
 
 void cRenderObject::Shader(string lcString)
 {
@@ -277,7 +285,6 @@ if(Shader())
  UpdateMatrix();
  mpPainterData->SetObject(this);
  SetPainterVariables();
- mpPainterData->RenderAgain();
 }
 
 }
@@ -321,9 +328,7 @@ void cRenderObject::SetShaderVariables()
 {
  if(mpVariables)
  {
-//  mpShader->Use();
-	/*SetVariable("mmGlobal",mmCache.Matrix());
-    SetVariable("mmTotal",mmTotalCache.Matrix());*/
+
   mpVariables->WriteVariables();
  }
 

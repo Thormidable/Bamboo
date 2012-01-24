@@ -23,6 +23,8 @@ public:
  /// Links The cCollisionObject lpObj to this Renderable Object.
  virtual void LinkCollisionObject(cCollisionObject *lpObj){(void) lpObj;};
 
+ virtual void RecalculateTotalMatrix()=0;
+ virtual void CalculateMatrices()=0;
 
  /// Renders this object from the cPainter render list to the screen.
 virtual void RenderPainter()=0;
@@ -79,6 +81,8 @@ public:
        virtual float* GetPos();
        virtual float* GetCachedGlobalMatrix();
        virtual cVariableStore* Variables();
+	   virtual void RecalculateTotalMatrix()=0;
+	   virtual void CalculateMatrices()=0;
 
        void Stop();
 

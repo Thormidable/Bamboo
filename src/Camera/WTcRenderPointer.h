@@ -16,7 +16,6 @@ protected:
   bool           mbAlpha;
   psize mpShader;
   cShaderProgram *ShaderPoint;
-  bool mbReRender;
 
 public:
 	cRenderPointer();
@@ -30,8 +29,6 @@ void SetShader(cShaderProgram *lpShader);
 void SetAlpha(bool lbAlpha);
 ///This will all the user to set some / all of the parameters for this object.
 void SetAll(cRenderObject *lpObject,cShaderProgram *lpShader=0,bool lbAlpha=0);
-///This tells cPainter that this object will require rendering in the painter algorithm to allow it to be displayed on the screen.
-void RenderAgain();
 
 void UpdateTexture(uint8 liTexSlot);
  friend class cPainter;

@@ -183,6 +183,75 @@ void cNodeList::KillAll()
 
 }
 
+
+void cNodeList::RecalculateTotalMatrix()
+{
+uint32 liListPos;
+ for(liListPos=0;liListPos<mpList.Items();++liListPos)
+ {
+  if(mpList[liListPos]->mpObject)
+  {
+	mpList[liListPos]->mpObject->RecalculateTotalMatrix();
+  }
+ }
+
+}
+
+
+void cNodeList::CalculateMatrices()
+{
+  uint32 liListPos;
+  miLevel=0;
+
+  UpdateMatrix();
+  UpdateCache();
+
+  _MATRIX_STACK->Push();
+
+ for(liListPos=0;liListPos<mpList.Items();++liListPos)
+ {
+
+  if(mpList[liListPos]->mpObject)
+  {
+
+	// If need to add another level
+	if(mpList[liListPos]->miLevel>miLevel)
+	{
+		while(mpList[liListPos]->miLevel>miLevel)
+		{
+			_MATRIX_STACK->Push();
+			++miLevel;
+		}
+	}
+	else
+	{
+		if(mpList[liListPos]->miLevel<miLevel)
+		{
+			while(mpList[liListPos]->miLevel<miLevel)
+			{
+				_MATRIX_STACK->Pop();
+				--miLevel;
+			}
+		}
+		else
+		{
+				// If Level is correct
+				_MATRIX_STACK->Pop();
+				_MATRIX_STACK->Push();
+		}
+	}
+	mpList[liListPos]->mpObject->UpdateMatrix();
+	mpList[liListPos]->mpObject->CalculateMatrices();
+  }
+ }
+ while(miLevel>0){ _MATRIX_STACK->Pop(); --miLevel;}
+
+//AdditionalRenderFunctions();
+  _MATRIX_STACK->Pop();
+
+}
+
+
 void cNodeList::RenderToPainter()
 {
   uint32 liListPos;

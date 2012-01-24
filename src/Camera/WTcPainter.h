@@ -49,8 +49,6 @@ void Remove(cRenderPointer *lfSlot);
  void SortByTexture(uint8 liTexSlot);
  // This will sort the array mpList based on the alpha value that each object uses.
  void SortByAlpha();
- // This will compare the Texture of the next object with the last and will udate the texture bindings if required.
- void TextureState(cTexture *mpCurrent,cTexture *mpLast);
  // This will comapre the ShaderProgram of the next object with the previous object and will set the correct shader or fixed function to use.
  void ShaderState(cShaderProgram *mpCurrent,cShaderProgram *mpLast);
  //This will control Depth Testing for transparent and other objects.

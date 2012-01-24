@@ -91,6 +91,8 @@ cRenderOwner Add(vRenderObject*);
 cRenderOwner Add(vRenderObject *lpNew,uint8 miLevel);
 void Remove(cRenderOwner Owner);
 
+void RecalculateTotalMatrix();
+void CalculateMatrices();
 
 
 ///Will delete all Render Obnjects inside this object

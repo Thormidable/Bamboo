@@ -36,10 +36,10 @@ trace("Loaded and Processed ShaderProgram : " << mpFileName);
 
  	Use();
 
-	SetVariablePointer("mm2DProjection",_CAMERA->Perspective2D());
-    SetVariablePointer("mmProjection",_CAMERA->Perspective());
-    SetVariablePointer("mmCamera",_CAMERA->CameraMatrix());
-   	SetVariablePointer("mmCombined",_CAMERA->PerspectiveCameraMatrix());
+	SetVariablePointer("mm2DProjection",_2DPROJECTION_MATRIX);
+    SetVariablePointer("mmProjection",_PROJECTION_MATRIX);
+    SetVariablePointer("mmCamera",_CAMERA_MATRIX);
+   	SetVariablePointer("mmCombined",_COMBINED_MATRIX);
 }
 
 

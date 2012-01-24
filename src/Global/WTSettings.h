@@ -15,6 +15,8 @@ public:
 	template<class cX,class cS> friend class cMainThread;
 };
 
+extern uint8 WT_VIEWPORTS_ALLOWED;
+
 ///This is the number of Textures which can be linked to any single object. The limit on this is based on teh graphics card. Almost all modern graphics cards support two, though some support up to 8. Keep this to the minimum number required for the shaders being used. If multitexturing is not being used set this to 1.
 extern uint8 WT_TEXTURE_NUMBER_ALLOWED;
 ///This is the number of Items the Painter can hold at start. It will expand as required, but each expansion has a non negligable overhead.

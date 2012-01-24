@@ -291,4 +291,9 @@
 ///Allows the User to set the maximum depth the Matrix stack will store.
 #define _MATRIX_STACK_MAX_DEPTH(VALUE) cMatrixStack::SetDepth(VALUE)
 
+#define _PROJECTION_MATRIX cPerspectiveControl::ProjectionMatrix()
+#define _2DPROJECTION_MATRIX cPerspectiveControl::Projection2DMatrix()
+#define _CAMERA_MATRIX cPerspectiveControl::CameraMatrix()
+#define _COMBINED_MATRIX cPerspectiveControl::CombinedMatrix()
+
 #endif

@@ -3840,6 +3840,7 @@ public:
 
 #include "./Camera/WTcTextureStack.h"
 #include "./Camera/WTcCamera.h"
+#include "./Camera/WTcExtraViewport.h"
 #include "./Camera/WTcRenderPointer.h"
 #include "./Camera/WTcRenderObject.h"
 

@@ -156,6 +156,8 @@ public:
 
    void KillAll();
 
+   void RecalculateTotalMatrix();
+   void CalculateMatrices();
 
 
    protected:

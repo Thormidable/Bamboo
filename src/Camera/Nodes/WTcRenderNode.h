@@ -15,7 +15,7 @@
 class cRenderNode : public vRenderNode
 //public cMatrix4, public cSignal
 {
-	bool mbDying;
+
  // Dynamic Linked List of renderable objects.
  cLinkedList<vRenderObject> *mpObjects;
 
@@ -40,6 +40,8 @@ public:
   cMatrix4 &operator=(cMatrix4 &lpOther);
   float *operator=(float *lpOther);
 
+  void CalculateMatrices();
+  void RecalculateTotalMatrix();
 	/*
 	* \brief Will remove the current object from the render list.
 	* \param lpOld This should be mpNode.

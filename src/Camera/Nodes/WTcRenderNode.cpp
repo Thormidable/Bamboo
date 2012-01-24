@@ -5,7 +5,6 @@ void cRenderNode::Initialise()
 	mbAwake=true;
 	mbAlive=true;
 	mpObjects=0;
-	mbDying=false;
 }
 
 
@@ -38,7 +37,6 @@ cRenderNode::cRenderNode(vRenderNode *lpRenderer)
 cRenderNode::~cRenderNode()
 {
 
-	mbDying=true;
 	delete mpObjects;
 	mpObjects=0;
 	mpRenderer=0;
@@ -90,6 +88,95 @@ void cRenderNode::KillAll()
         }
     }
     mpObjects=0;
+}
+
+void cRenderNode::RecalculateTotalMatrix()
+{
+ if(mpObjects)
+ {
+  mpCursor=mpObjects->Start();
+  while(mpCursor)
+  {
+	if(mpCursor->Data()->Awake())
+	{
+		mpCursor->Data()->RecalculateTotalMatrix();
+		mpCursor=mpCursor->Next();
+	}
+	else
+	{
+		if(!(mpCursor->Data()->Alive()))
+		{
+
+			if(mpCursor->Next())
+			{
+				mpCursor=mpCursor->Next();
+				mpObjects->Delete(mpCursor->Previous());
+			}
+			else
+			{
+
+				mpObjects->Delete(mpCursor);
+				mpCursor=0;
+			}
+		}
+		else
+		{
+			mpCursor=mpCursor->Next();
+		}
+	}
+
+
+  }
+  //AdditionalRenderFunctions();
+
+ }
+
+}
+
+
+void cRenderNode::CalculateMatrices()
+{
+ if (mpObjects)
+ {
+
+  UpdateMatrix();
+  UpdateCache();
+  mpCursor=mpObjects->Start();
+  while(mpCursor)
+  {
+		_MATRIX_STACK->Push();
+
+	if(mpCursor->Data()->Awake())
+	{
+		mpCursor->Data()->UpdateMatrix();
+		mpCursor->Data()->CalculateMatrices();
+		mpCursor=mpCursor->Next();
+	}
+	else
+	{
+		if(!(mpCursor->Data()->Alive()))
+		{
+
+			if(mpCursor->Next())
+			{
+				mpCursor=mpCursor->Next();
+				mpObjects->Delete(mpCursor->Previous());
+			}
+			else
+			{
+
+				mpObjects->Delete(mpCursor);
+				mpCursor=0;
+			}
+		}
+		else
+		{
+			mpCursor=mpCursor->Next();
+		}
+	}
+	_MATRIX_STACK->Pop();
+  }
+ }
 }
 
 void cRenderNode::RenderToPainter()

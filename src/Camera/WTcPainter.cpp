@@ -77,9 +77,9 @@ void cPainter::SortByDistance()
   float lfX,lfY,lfZ;
 
 
-  lfX=mpList[liPass]->mpObject->mmCache.Matrix()[12];
-  lfY=mpList[liPass]->mpObject->mmCache.Matrix()[13];
-  lfZ=mpList[liPass]->mpObject->mmCache.Matrix()[14];
+  lfX=mpList[liPass]->mpObject->mmTotalCache.Matrix()[12];
+  lfY=mpList[liPass]->mpObject->mmTotalCache.Matrix()[13];
+  lfZ=mpList[liPass]->mpObject->mmTotalCache.Matrix()[14];
 
   mpList[liPass]->miDist=static_cast<uint32>(lfX*lfX+lfY*lfY+lfZ*lfZ);
  }
@@ -240,13 +240,10 @@ void cPainter::DepthState(bool mpCurrent,bool mpLast)
   }
 }
 
-void cPainter::TextureState(cTexture *mpCurrent,cTexture *mpLast)//,uint32 liUniform,uint8 liTexSlot)
-{
-
-}
-
 void cPainter::Render()
 {
+
+
  uint32 liCount;
 
  SortByDistance();
@@ -260,16 +257,11 @@ for(liCount=0;liCount<WT_TEXTURE_NUMBER_ALLOWED;++liCount)
 
  SortByAlpha();
 
-
-
 glEnableClientState(GL_VERTEX_ARRAY);
 glEnableClientState(GL_NORMAL_ARRAY);
 glEnable(GL_DEPTH_TEST);
  for(liCount=0;liCount<miPos;liCount++)
  {
-
-  if(mpList[liCount]->mbReRender)
-  {
 
   if(liCount)
   {
@@ -298,10 +290,9 @@ glEnable(GL_DEPTH_TEST);
     if(_LIGHT->AnyLights() && mpList[liCount]->mpObject->Lighting()) _LIGHT->PrepareLight(&(mpList[liCount]->mpObject->mmCache));
   #endif
 
+
 	mpList[liCount]->mpObject->RenderPainter();
 
-  mpList[liCount]->mbReRender=false;
-  }
  }
 }
 

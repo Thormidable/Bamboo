@@ -1,10 +1,5 @@
 #include "../WTBamboo.h"
 
-void cRenderPointer::RenderAgain()
-{
-  mbReRender=true;
-
-};
 
 cRenderPointer::cRenderPointer()
 {
@@ -14,7 +9,6 @@ cRenderPointer::cRenderPointer()
  mbAlpha=false;
  mpShader=0;
  ShaderPoint=0;
- mbReRender=false;
 }
 
 cRenderPointer cRenderPointer::operator=(cRenderPointer lcOther)

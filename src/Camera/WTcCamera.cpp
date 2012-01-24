@@ -1,11 +1,29 @@
 #include "../WTBamboo.h"
 
+cMatrix4 cPerspectiveControl::mmCombined;
+cMatrix4 cPerspectiveControl::mmCamera;
+cMatrix4 cPerspectiveControl::mmProjection;
+cMatrix4 cPerspectiveControl::mm2DProjection;
+
+cPerspectiveControl::cPerspectiveControl()
+{
+	mmPerspective.Setup(1.0f,gpWindow->Ratio(),1.0f,100.0f);
+	Identity();
+}
+
+float *cPerspectiveControl::CameraMatrix(){return mmCamera.Matrix();};
+float *cPerspectiveControl::CombinedMatrix(){return mmCombined.Matrix();};
+float *cPerspectiveControl::ProjectionMatrix(){return mmProjection.Matrix();};
+float *cPerspectiveControl::Projection2DMatrix(){return mm2DProjection.Matrix();};
+
 cCamera::cCamera()
 {
  trace("Creating cCamera::cCamera()");
  mpRenderList=new cRenderNode(0);
- Identity();
- mmPerspective.Setup(1.0f,gpWindow->Ratio(),1.0f,100.0f);
+
+
+ if(WT_VIEWPORTS_ALLOWED) mpViewportHandler=new cViewportHandler(this,WT_VIEWPORTS_ALLOWED);
+ else mpViewportHandler=0;
 
   cPainter::Instance();
 }
@@ -14,42 +32,74 @@ cCamera::~cCamera()
 {
  trace("Destroying cCamera");
  mpRenderList->StartKillAll();
- delete mpRenderList;
- mpRenderList=0;
+ delete mpRenderList; mpRenderList=0;
+ delete mpViewportHandler; mpViewportHandler=0;
 }
 
 void cCamera::UpdateNotRender()
 {
     ResetGLMatrix();
-    mpRenderList->RenderToPainter();
+    mpRenderList->CalculateMatrices();
 }
 
-void cCamera::Render()
+void cCamera::UpdateRenderSettings()
 {
-
+	UpdateViewport();
 	ResetGLMatrix();
+}
 
-	cPainter::Instance()->Reset();
+void cCamera::UpdateRenderState()
+{
 	#if WT_FULL_VERSION_BAMBOO
         _LIGHT->SetLightStates();
     #endif
-	mpRenderList->RenderToPainter();
+	cPainter::Instance()->Reset();
 
-	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	mpRenderList->RenderToPainter();
+}
+
+void cCamera::RecalculateTotalMatrices()
+{
+ mpRenderList->RecalculateTotalMatrix();
+}
+
+void cCamera::RecalculateAllMatrices()
+{
+mpRenderList->CalculateMatrices();
+}
+
+void cCamera::RenderObjects()
+{
+
+
 	cPainter::Instance()->Render();
+
+}
+
+void cCamera::UpdateScreen()
+{
 	#if WT_OS_TYPE==OS_WIN32
-	SwapBuffers(gpWindow->hDC);
+		SwapBuffers(gpWindow->hDC);
 	#endif
 	#if WT_OS_TYPE==OS_LINUX
-	glXSwapBuffers(gpWindow->lpDisplay,gpWindow->lWindow);
+		glXSwapBuffers(gpWindow->lpDisplay,gpWindow->lWindow);
 	#endif
 	gpWindow->Repaint=false;
+
+};
+
+void cCamera::Render()
+{
+	UpdateRenderSettings();
+	UpdateRenderState();
+	ClearViewport();
+	RenderObjects();
+
+	if(mpViewportHandler) mpViewportHandler->Render();
+
+	UpdateScreen();
 }
 
-void cCamera::SetClearColor(float lfRed,float lfGreen,float lfBlue,float lfAlpha)
-{
- glClearColor(lfRed,lfGreen,lfBlue,lfAlpha);
-}
 
 void cCamera::RemoveAll()
 {
@@ -57,30 +107,48 @@ void cCamera::RemoveAll()
  mpRenderList=0;
 }
 
-void cCamera::UpdateProjectionMatrix()
+void cPerspectiveControl::UpdateProjectionMatrix()
 {
 	#warning comment This runs every frame. Only neccessary on frames when window is resized or values are changed.
   mmPerspective.Frustum();
-  gpWindow->FindRenderArea();
-  mmPerspective2D.Orthographic(gpWindow->Width(),0.0f,gpWindow->Height(),0.0f,1.0f,10.0f);
+  mmPerspective2D.Orthographic(mfViewportWidth,0.0f,mfViewportHeight,0.0f,1.0f,10.0f);
 
 }
 
-float cCamera::Near()
+void cCamera::UpdateProjectionMatrix()
+{
+
+  mmPerspective.Frustum();
+  gpWindow->FindRenderArea();
+  mfViewportWidth=gpWindow->Width();
+  mfViewportHeight=gpWindow->Height();
+  mmPerspective2D.Orthographic(mfViewportWidth,0.0f,mfViewportHeight,0.0f,1.0f,10.0f);
+
+}
+
+float cPerspectiveControl::Near()
 {
  return mmPerspective.Near();
 }
 
-float cCamera::Far()
+float cPerspectiveControl::Far()
 {
  return mmPerspective.Far();
 }
 
-void cCamera::ResetGLMatrix()
+void cPerspectiveControl::ResetGLMatrix()
 {
 	_MATRIX_STACK->Identity();
-	mmPerspectiveCameraMatrix=mmPerspective;
-    mmPerspectiveCameraMatrix.Multiply(ConstructCameraMatrix());
+	mmCamera=ConstructCameraMatrix();
+    mmCombined=mmPerspective;
+	mmCombined.Multiply(mmCamera.Matrix());
+	mmProjection=mmPerspective;
+	mm2DProjection=mmPerspective2D;
+
+	printf("mmCamera");
+	mmCamera.Display();
+	printf("\nmmProjection");
+	mmProjection.Display();
 }
 
 cCamera *cCamera::mpInstance=0;
@@ -106,68 +174,106 @@ vRenderObject *cCamera::vRenderList()
 
 };
 
-void cCamera::Near(float lfN)
+void cPerspectiveControl::Near(float lfN)
 {
   mmPerspective.Near(lfN);
 
 };
 
-void cCamera::Far(float lfF)
+void cPerspectiveControl::Far(float lfF)
 {
   mmPerspective.Far(lfF);
 
 };
 
-float *cCamera::Perspective()
-{
- return mmPerspective.Matrix();
-}
 
-float *cCamera::Perspective2D()
-{
- return mmPerspective2D.Matrix();
-}
-void cCamera::Width(float lfZoom)
+void cPerspectiveControl::Width(float lfZoom)
 {
 	mmPerspective.Width(lfZoom);
 }
-float cCamera::Width()
+float cPerspectiveControl::Width()
 {
 	return mmPerspective.Width();
 }
 
-void cCamera::Height(float lfHeight)
+void cPerspectiveControl::Height(float lfHeight)
 {
 	mmPerspective.Height(lfHeight);
 }
 
-float cCamera::Height()
+float cPerspectiveControl::Height()
 {
 	return mmPerspective.Height();
 }
 
-float cCamera::Ratio()
+float cPerspectiveControl::Ratio()
 {
   return mmPerspective.Ratio();
 }
 
-void cCamera::Ratio(float lfRatio)
+void cPerspectiveControl::Ratio(float lfRatio)
 {
  mmPerspective.Ratio(lfRatio);
 }
 
-
-	void cCamera::SetClearColor(float *lpColor)	{ 	glClearColor(lpColor[0],lpColor[1],lpColor[2],lpColor[3]); }
-	void cCamera::SetClearColor(cRGBA &lpColor){ 	glClearColor(lpColor[0],lpColor[1],lpColor[2],lpColor[3]); }
-	void cCamera::SetClearColor(cRGB &lpColor){ 	glClearColor(lpColor[0],lpColor[1],lpColor[2],1.0f); }
-	void cCamera::SetClearColor(cRGBA *lpColor){ 	glClearColor(lpColor->R(),lpColor->G(),lpColor->B(),lpColor->A()); }
-	void cCamera::SetClearColor(cRGB *lpColor){ 	glClearColor(lpColor->R(),lpColor->G(),lpColor->B(),1.0f); }
-
-float *cCamera::PerspectiveCameraMatrix()
+void cViewportControl::ClearViewport()
 {
-#warning comment Potential Minor Optimisation here. Can combine both matrices together.
-    return mmPerspectiveCameraMatrix.Matrix();
-};
+ SetClearColor();
+ glScissor(mfViewportX,mfViewportY,mfViewportWidth,mfViewportHeight);
+ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
 
 
+void cViewportControl::SetClearColor()
+{
+glClearColor(mcClearColor.R(),mcClearColor.G(),mcClearColor.B(),mcClearColor.A());
+}
+
+void cViewportControl::ClearColor(float lfRed,float lfGreen,float lfBlue,float lfAlpha)
+{
+ mcClearColor.Set(lfRed,lfGreen,lfBlue,lfAlpha);
+}
+
+	void cViewportControl::ClearColor(float *lpColor){mcClearColor=lpColor;};
+	void cViewportControl::ClearColor(cRGBA &lpColor){mcClearColor=lpColor;}
+	void cViewportControl::ClearColor(cRGB &lpColor){ mcClearColor=lpColor;}
+	void cViewportControl::ClearColor(cRGBA *lpColor){mcClearColor=lpColor;}
+	void cViewportControl::ClearColor(cRGB *lpColor){ mcClearColor=lpColor;}
+	cRGBA cViewportControl::ClearColor(){ return mcClearColor;}
+
+
+
+
+
+	void cViewportControl::Viewport(float lfX,float lfY,float lfWidth,float lfHeight)
+	{
+		mfViewportHeight=lfHeight;
+		mfViewportWidth=lfWidth;
+		mfViewportX=lfX;
+		mfViewportY=lfY;
+	};
+	void cViewportControl::ViewportX(float lfX){mfViewportX=lfX;};
+	void cViewportControl::ViewportY(float lfY){mfViewportY=lfY;};
+	void cViewportControl::ViewportWidth(float lfWidth){mfViewportWidth=lfWidth;};
+	void cViewportControl::ViewportHeight(float lfHeight){mfViewportHeight=lfHeight;};
+
+	void cViewportControl::UpdateViewport()
+	{
+		glViewport(mfViewportX,mfViewportY,mfViewportWidth,mfViewportHeight);
+	};
+
+	cViewportControl::cViewportControl()
+	{
+		mfViewportHeight=gpWindow->Height();
+		mfViewportWidth=gpWindow->Width();
+		mfViewportX=mfViewportY=0.0f;
+
+
+	};
+
+	cViewportControl::cViewportControl(float lfX,float lfY,float lfWidth,float lfHeight)
+	{
+		Viewport(lfX,lfY,lfWidth,lfHeight);
+
+	};
 
