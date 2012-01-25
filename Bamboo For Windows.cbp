@@ -104,10 +104,14 @@
 		<Unit filename="src\Camera\Renderable\WTcTextureText.h" />
 		<Unit filename="src\Camera\WTcCamera.cpp" />
 		<Unit filename="src\Camera\WTcCamera.h" />
+		<Unit filename="src\Camera\WTcExtraViewport.cpp" />
+		<Unit filename="src\Camera\WTcExtraViewport.h" />
 		<Unit filename="src\Camera\WTcLightHandler.cpp" />
 		<Unit filename="src\Camera\WTcLightHandler.h" />
 		<Unit filename="src\Camera\WTcPainter.cpp" />
 		<Unit filename="src\Camera\WTcPainter.h" />
+		<Unit filename="src\Camera\WTcPerspectiveControl.cpp" />
+		<Unit filename="src\Camera\WTcPerspectiveControl.h" />
 		<Unit filename="src\Camera\WTcRenderNodeObject.cpp" />
 		<Unit filename="src\Camera\WTcRenderObject.cpp" />
 		<Unit filename="src\Camera\WTcRenderObject.h" />

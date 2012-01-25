@@ -2,23 +2,20 @@
 
 void *cPainter::lpValue=0;
 
-cPainter *cPainter::mpInstance=0;
-
-
+/*
 cPainter *cPainter::Instance()
 {
 
  if(!mpInstance) { mpInstance=new cPainter(); mpInstance->Resize(WT_PAINTER_STARTING_SIZE);}
  return mpInstance;
 }
-
+*/
 cPainter::cPainter()//uint32 liSize)
 {
 
  mpList=0;
  mpBucket=0;
  miSize=0;
-// miAllocated=0;
  miPos=0;
 
   glEnableClientState(GL_VERTEX_ARRAY);

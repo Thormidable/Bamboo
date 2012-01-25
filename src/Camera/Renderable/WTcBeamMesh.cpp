@@ -11,12 +11,17 @@ cBeamMesh::~cBeamMesh()
 
 }
 
-cBeamMesh::cBeamMesh(float Radius,float Length,uint16 Segments,cRenderNode *lpNode): cRenderObject(lpNode)
+cBeamMesh::cBeamMesh(float Radius,float Length,uint16 Segments,vRenderNode *lpNode): cRenderObject(lpNode)
 {
 	VertexData=0; VertexList=0; GenerateData(Radius,Length,Segments);
 	mpShader=0;
 };
 
+cBeamMesh::cBeamMesh(float Radius,float Length,uint16 Segments,cCamera *lpNode) : cRenderObject(lpNode)
+{
+	VertexData=0; VertexList=0; GenerateData(Radius,Length,Segments);
+	mpShader=0;
+}
 
 void cBeamMesh::RenderBeam()
 {
@@ -54,6 +59,7 @@ void cBeamMesh::RenderPainter()
 	SetShaderVariables();
 	RenderBeam();
 }
+
 
 
 

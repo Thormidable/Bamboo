@@ -14,6 +14,7 @@ class cParticle : public cParticleForGroup,  public cSignal
 
 public:
 	cParticle();
+	cParticle(cCamera *lpCamera);
 	~cParticle();
 
 	///This will set a cParticles Speed.
@@ -21,9 +22,9 @@ public:
 	///This is the function that will update a cParticles Position. if WT_PARTICLE_HANDLER_UPDATE_PARTICLE_POSITIONS is true then cParticleHandler will do this automatically.
 	virtual void UpdatePos();
 
-	void AdditionalKillFunctionality();
-	void AdditionalSleepFunctionality();
-	void AdditionalWakeFunctionality();
+	void Stop();
+	void OnSleep();
+	void OnWake();
 };
 
 class cGravityParticle : public cParticleForGroup
@@ -59,18 +60,16 @@ public:
 **/
 class cParticleHandler : public cRenderObject
 {
-
+	friend class cCamera;
 	uint32 FINISH_THIS;
 	uint32 miParticles;
 	cParticle **mpParticles;
 	uint32 miMaxParticles;
-	static cParticleHandler *spthis;
+	//static cParticleHandler *spthis;
 	bool lbRefresh;
 	cParticleHandler();
 	~cParticleHandler();
 public:
-	///Returns a pointer to the current cParticleHandler.
-	static cParticleHandler *Instance();
 	//This will resize the number of particles the cParticleHandler can process. The system is resized as required.
 	void Resize(uint32 liSize);
 	//This will add the specified Particle to this HAndler.

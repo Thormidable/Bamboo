@@ -16,6 +16,8 @@ public:
  cModel();
  /// cModel constructor. Will be owned by lpRenderer.
  cModel(vRenderNode *lpRenderer);
+ /// cModel constructor. Will be owned by the cRenderNode of the cCamera lpCamera.
+ cModel(cCamera *lpCamera);
 
 	/// Will set the mesh the model will use.
         void Mesh(cMesh *lpObject);

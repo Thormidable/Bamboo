@@ -15,7 +15,7 @@ cExtraViewport::cExtraViewport(cCamera *lpCamera)
 
 cExtraViewport::~cExtraViewport()
 {
- //lpCamera->mpViewportHandler->Remove(this);
+ //mpHandler->Remove(this);
 };
 
 void cExtraViewport::UpdateRenderSettings()
@@ -85,3 +85,15 @@ void cExtraViewport::UpdateProjectionMatrix()
   mmPerspective2D.Orthographic(mfViewportWidth,0.0f,mfViewportHeight,0.0f,1.0f,10.0f);
 
 }
+
+void cViewportHandler::UpdateWindowSize()
+{
+ uint8 liPos;
+ for(liPos=0;liPos<mcList.Items();++liPos)
+ {
+		mcList[liPos]->UpdateWindowSize();
+
+ }
+
+};
+

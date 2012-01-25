@@ -24,7 +24,8 @@ public:
  cLine();
  /// cLine constructor. Will be owned by lpRenderer.
  cLine(vRenderNode *lpRenderer);
-
+/// cLine constructor. Will be owned by the cRenderNode of the cCamera lpCamera.
+ cLine(cCamera *lpCamera);
 
 
  // Will render this object to the cPainter render list.

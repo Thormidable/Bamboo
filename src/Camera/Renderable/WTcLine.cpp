@@ -24,6 +24,11 @@ mfColor[3]=0.0f;
 
 }
 
+cLine::cLine(cCamera *lpCamera) : cRenderObject(lpCamera,1)
+{
+Identity();
+}
+
 cLine::cLine(vRenderNode *lpRenderer) : cRenderObject(lpRenderer,1)
 {
  Identity();

@@ -14,6 +14,8 @@ public:
  cPoint();
  /// cPoint constructor. Will be owned by lpRenderer.
  cPoint(vRenderNode *lpRenderer);
+ /// cPoint constructor. Will be owned by the cRenderNode of cCamera lpCamera.
+ cPoint(cCamera *lpCamera);
 
  // Will render this object to the cPainter render list.
   void RenderPainter();

@@ -13,8 +13,10 @@ protected:
 public:
 	/// Creates a text object and gives it a text string to use.
        cText(const char *lsText);
+	   cText(const char *lsText,cCamera *lpCamera);
 	/// Creates an empty text object with no text string.
        cText();
+	   cText(cCamera *lpCamera);
 
 	/// Will set the text string the cText object will render.
        void Text(char *lsText);

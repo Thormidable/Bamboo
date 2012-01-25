@@ -37,6 +37,7 @@ class cButton : public cImage, public cButtonBase
     public:
 
     cButton();
+	cButton(cCamera *lpCamera);
     ~cButton();
 	/// Sets the Position of the Image in 2D Pixels. Measured from the center of the screen.
 	void Position(float lfX,float lfY);
@@ -60,6 +61,7 @@ class cTextButton : public cText, public cButtonBase
 public:
 
 	cTextButton();
+	cTextButton(cCamera *lpCamera);
 	~cTextButton();
 	/// Sets the Width of a single character in Pixels to lfWidth.
     void Width(float lfWidth);

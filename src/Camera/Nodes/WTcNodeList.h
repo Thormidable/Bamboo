@@ -59,8 +59,10 @@ public:
  * \param lpTree This is the file containing the data for the structure (and models etc.) of the render tree.
  * \param lpRenderer This is the vRenderNode which will own this renderable object.
  */
-cNodeList(vRenderNode *lpRenderer,cMeshTree *lpTree);
-
+cNodeList(cMeshTree *lpTree,vRenderNode *lpRenderer);
+cNodeList(cMeshTree *lpTree,cCamera *lpCamera);
+cNodeList(uint32 liLength,cCamera *lpCamera);
+cNodeList(bool lpTopLevel,uint32 liLength,cCamera *lpCamera);
 /// Will re-initialise this cNodeList using the file lpTree. It will have the structure and models of the file.
 void LoadTree(cMeshTree *lpTree);
 ///Will re-initialise this cNodeList using the ModelList with reference lcTree. It will have the structure and models of the file.
@@ -69,7 +71,8 @@ void LoadTree(string lcTree);
  /// Create an empty cNodeList of size liLength.
  cNodeList(uint32 liLength);
  /// Create an empty cNodeList of size liLength. lpRenderer will own this ModelList.
- cNodeList(vRenderNode *lpRenderer,uint32 liLength);
+ cNodeList(uint32 liLength,vRenderNode *lpRenderer);
+
  ~cNodeList();
 
  /// Will reset this object to be an empty cNodeList of size liLength.

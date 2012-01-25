@@ -2,6 +2,14 @@
 
 #if WT_FULL_VERSION_BAMBOO
 
+
+cLandscape::cLandscape(cmLandscape *lpModel,cCamera *lpCamera) : cRenderObject(lpCamera)
+{
+ mpLandscape=lpModel;
+	mb3D=true;
+}
+
+
 cLandscape::cLandscape(cmLandscape *lpModel)
 {
  mpLandscape=lpModel;

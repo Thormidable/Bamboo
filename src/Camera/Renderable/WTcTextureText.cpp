@@ -87,8 +87,17 @@ void cText::Text(char *lsText)
 
 cText::cText(const char *lsText)
 {
-
  mpString=lsText;
+}
+
+cText::cText(cCamera *lpCamera) : cImage(lpCamera)
+{
+
+}
+
+cText::cText(const char *lsText,cCamera *lpCamera) : cImage(lpCamera)
+{
+	mpString=lsText;
 }
 
 cText::cText()
@@ -96,7 +105,6 @@ cText::cText()
 
 
 }
-
 
 
 #endif

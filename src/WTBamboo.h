@@ -3839,6 +3839,7 @@ public:
 #include "./Physics/WTcCollisionObject.h"
 
 #include "./Camera/WTcTextureStack.h"
+#include "./Camera/WTcPerspectiveControl.h"
 #include "./Camera/WTcCamera.h"
 #include "./Camera/WTcExtraViewport.h"
 #include "./Camera/WTcRenderPointer.h"

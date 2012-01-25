@@ -11,6 +11,26 @@ Position(0.0f,0.0f);
 Size(100);
 }
 
+cButton::cButton(cCamera *lpCamera) : cImage(lpCamera)
+{
+MouseOver=false;
+Set2D();
+
+Position(0.0f,0.0f);
+Size(100);
+
+}
+
+cTextButton::cTextButton(cCamera *lpCamera) : cText(lpCamera)
+{
+MouseOver=false;
+Set2D();
+
+Position(0.0f,0.0f);
+Size(20);
+
+}
+
 cTextButton::cTextButton()
 {
 MouseOver=false;
@@ -60,6 +80,8 @@ void cTextButton::RenderPainter()
     }
 
 }
+
+
 
 void cButton::Position(float lfX,float lfY)
 {

@@ -4,9 +4,7 @@
 
 cNodeListNode::~cNodeListNode()
 {
-//delete mpObject;
 mpObject=0;
-
 }
 
 cNodeListNode::cNodeListNode(vRenderObject *lpObject,uint8 liLevel)
@@ -70,6 +68,7 @@ float cNodeList::lsPosition[16];
 cNodeList::~cNodeList()
 {
     DeleteAll();
+    mpCamera=0;
 }
 
 
@@ -77,58 +76,79 @@ void cNodeList::DeleteAll()
 {
 	mpList.DeleteAll();
 }
+
+
+
 cNodeList::cNodeList(uint32 liLength)
 {
-
+ mpCamera=cCamera::Instance();
  mpRenderer=cCamera::Instance()->RenderList();
  mcOwnerNode=mpRenderer->Add(this);
 
 	InitialiseList(liLength);
 }
 
-cNodeList::cNodeList(vRenderNode *lpRenderer,uint32 liLength)
+cNodeList::cNodeList(cMeshTree *lpTree,cCamera *lpCamera)
 {
+  mpCamera=lpCamera;
+  mpRenderer=lpCamera->RenderList();
+  mcOwnerNode=mpRenderer->Add(this);
 
- if(lpRenderer)
- {
+	mpMeshTree=lpTree;
+	LoadTree(lpTree);
+};
+cNodeList::cNodeList(uint32 liLength,cCamera *lpCamera)
+{
+  mpCamera=lpCamera;
+  mpRenderer=lpCamera->RenderList();
+  mcOwnerNode=mpRenderer->Add(this);
+
+ Identity();
+ InitialiseList(liLength);
+};
+
+cNodeList::cNodeList(uint32 liLength,vRenderNode *lpRenderer)
+{
   mpRenderer=lpRenderer;
+  mpCamera=mpRenderer->Camera();
   mcOwnerNode=lpRenderer->Add(this);
- }
- else
- {
-  mpRenderer=0; //This represents the top level
-  mcOwnerNode.Node=0;;
- }
+
  Identity();
  InitialiseList(liLength);
 }
 
+cNodeList::cNodeList(bool lpTopLevel,uint32 liLength,cCamera *lpCamera)
+{
+  mpRenderer=0;
+  mcOwnerNode.Node=0;
+  mpCamera=lpCamera;
+
+   Identity();
+ InitialiseList(liLength);
+
+};
 
 cNodeList::cNodeList(cMeshTree *lpTree)
 {
+    mpCamera=cCamera::Instance();
+	 mpRenderer=mpCamera->RenderList();
 
-	 mpRenderer=cCamera::Instance()->RenderList();
  	mcOwnerNode=mpRenderer->Add(this);
 	mpMeshTree=lpTree;
 	LoadTree(lpTree);
+	Identity();
 }
 
-cNodeList::cNodeList(vRenderNode *lpRenderer,cMeshTree *lpTree)
+cNodeList::cNodeList(cMeshTree *lpTree,vRenderNode *lpRenderer)
 {
 
-     if(lpRenderer)
- {
   mpRenderer=lpRenderer;
   mcOwnerNode=lpRenderer->Add(this);
- }
- else
- {
-  mpRenderer=0; //This represents the top level
-  mcOwnerNode.Node=0;;
- }
+  mpCamera=mpRenderer->Camera();
 
 	mpMeshTree=lpTree;
 	LoadTree(lpTree);
+	Identity();
 }
 
 void cNodeList::LoadTree(cMeshTree *lpTree)

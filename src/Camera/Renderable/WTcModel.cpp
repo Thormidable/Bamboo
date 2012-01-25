@@ -13,6 +13,12 @@ cModel::cModel(vRenderNode *lpRenderer) : cRenderObject(lpRenderer)
  mpMesh=0;
 }
 
+cModel::cModel(cCamera *lpCamera) : cRenderObject(lpCamera)
+{
+ Identity();
+ mpMesh=0;
+}
+
 void cModel::Mesh(cMesh *lpGraph)
 {
  mpMesh=lpGraph;

@@ -10,9 +10,8 @@
 */
 class cPainter
 {
- // This is a pointer to the current instance of cPainter.
- static cPainter *mpInstance;
- cPainter();
+
+
 
  // This is a pointer which will point to an array of buckets to group objects as they are sorted.
  cRenderPointer **mpBucket;
@@ -28,9 +27,9 @@ class cPainter
 public:
  ~cPainter();
 
+ cPainter();
+
  static void *lpValue;
- // This will return the current instance of the cPainter algorithm, if there is no current instance a new one will be created. This should always be used and NOT cPainter();
- static cPainter *Instance();
 
 //This function will add the cRenderPointer Object pointed to by lfData.
 void Add(cRenderPointer *lfData);

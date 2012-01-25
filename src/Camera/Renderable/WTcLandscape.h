@@ -22,7 +22,8 @@ public:
  // Function to render this object from the cPainter render list.
  void RenderPainter();
 
-
+	/// Create a landscape object and set its height map and texture. Can also assign the Landscape to a Camera
+ 	cLandscape(cmLandscape *lpModel,cCamera *lpCamera);
 	/// Create a landscape object and set its height map and texture.
 	cLandscape(cmLandscape *lpModel=0);
 	/// Set the current height map for this landscape object.

@@ -223,9 +223,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
           gpWindow->miHeight=HIWORD(lParam);
           gpWindow->miInvWidth=1.0f/gpWindow->miWidth;
           gpWindow->miInvHeight=1.0f/gpWindow->miHeight;
-          //gpWindow->Resized=true;
           gpWindow->mfRatio=((float)gpWindow->miHeight)/gpWindow->miWidth;
-          _CAMERA->UpdateProjectionMatrix();
+          cCameraHandler::Instance()->UpdateWindowSize();
           return 0;
          }
         return 0;
@@ -420,6 +419,7 @@ void cWindow::HandleMessages()
 			gpWindow->Moved=true;
 			gpWindow->Resized=true;
 			gpWindow->mfRatio=((float)gpWindow->miHeight)/gpWindow->miWidth;
+			cCameraHandler::Instance()->UpdateWindowSize();
 			break;
 		}
 		if(Event.type == DestroyNotify)
@@ -435,7 +435,8 @@ void cWindow::HandleChanges()
  if(Resized)
 {
 	//cCamera::Instance()->Frustum();
-	_CAMERA->UpdateProjectionMatrix();
+	//_CAMERA->UpdateProjectionMatrix();
+
 }
 }
 

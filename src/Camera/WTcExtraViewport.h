@@ -29,6 +29,7 @@ public:
 
 	void Add(cExtraViewport *lpNew);
 	void Remove(cExtraViewport *lpOld);
+	void UpdateWindowSize();
 	friend class cCamera;
 
 };

@@ -20,6 +20,16 @@ cImage::cImage()
  SetUp();
 }
 
+cImage::cImage(vRenderNode *lpRenderNode) : cRenderObject(lpRenderNode)
+{
+ SetUp();
+}
+
+cImage::cImage(cCamera *lpCamera) : cRenderObject(lpCamera)
+{
+ SetUp();
+}
+
 void cImage::SetUp()
 {
  Set2D();
@@ -127,5 +137,20 @@ void cImage3D::SetUp()
 	{
 	    return mfHeight;
 	}
+
+cImage3D::cImage3D()
+{
+
+}
+
+cImage3D::cImage3D(vRenderNode *lpNode): cImage(lpNode)
+{
+
+}
+
+cImage3D::cImage3D(cCamera *lpCamera): cImage(lpCamera)
+{
+
+}
 
 #endif

@@ -1,5 +1,23 @@
 #include "../WTBamboo.h"
 
+cRenderObject::cRenderObject(cCamera *lpCamera)
+{
+ mpRenderer=lpCamera->RenderList();
+ mcOwnerNode=mpRenderer->Add(this);
+
+Initialise();
+
+};
+/// Constructor for cRenderObject. Creates a new render object and adds itself to the cRenderNode of the cCamera lpCamera.
+cRenderObject::cRenderObject(cCamera *lpCamera,bool lbNoTextures)  : cTextureStack(lbNoTextures)
+{
+	 mpRenderer=lpCamera->RenderList();
+ mcOwnerNode=mpRenderer->Add(this);
+
+Initialise();
+
+};
+
 cRenderObject::~cRenderObject()
 {
     if(mpCollisionObject)
@@ -10,7 +28,7 @@ cRenderObject::~cRenderObject()
 
     if(mpPainterData)
     {
-    _PAINTER->Remove(mpPainterData);
+		mpRenderer->Camera()->Painter()->Remove(mpPainterData);
 	delete mpPainterData;
 	mpPainterData=0;
     }
@@ -104,7 +122,7 @@ void cRenderObject::Initialise()
 mpVariables=0;
 		mpShader=0;
 	mpPainterData= new cRenderPointer();
-	_PAINTER->Add(mpPainterData);
+	mpRenderer->Camera()->Painter()->Add(mpPainterData);
 	mpPainterData->SetObject(this);
  mpCollisionObject=0;
 
@@ -144,7 +162,7 @@ void cRenderObject::Stop()
 
     if(mpPainterData)
     {
-    _PAINTER->Remove(mpPainterData);
+    mpRenderer->Camera()->Painter()->Remove(mpPainterData);
 	delete mpPainterData;
 	mpPainterData=0;
     }
@@ -166,7 +184,7 @@ void cRenderObject::OnSleep()
 {
     if(mpPainterData)
     {
-        _PAINTER->Remove(mpPainterData);
+        mpRenderer->Camera()->Painter()->Remove(mpPainterData);
         delete mpPainterData;
         mpPainterData=0;
     }
@@ -183,7 +201,7 @@ void cRenderObject::OnWake()
 {
 
 	mpPainterData=new cRenderPointer;
-	_PAINTER->Add(mpPainterData);
+	mpRenderer->Camera()->Painter()->Add(mpPainterData);
 	mpPainterData->SetObject(this);
 
 if(mpCollisionObject)

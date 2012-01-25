@@ -77,10 +77,14 @@ class cParticleGroup : public cRenderObject
 	bool mbUseGravity;
 
 public:
+
 	cParticleGroup(uint32 liParticles);
 	cParticleGroup(uint32 liParticles,vRenderNode *lpNode);
+	cParticleGroup(uint32 liParticles,cCamera *lpCamera);
 	cParticleSettings &Settings(){return Data;};
 	~cParticleGroup();
+
+	void Initialise(uint32 liParticles);
 	void Settings(cParticleSettings &lpOther){Data=lpOther;}
 	void RespawnAll();
 	void RespawnOn(){mbRespawn=true;};

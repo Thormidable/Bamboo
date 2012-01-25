@@ -75,11 +75,12 @@ while(mpProcess)
 	trace(liProcessCount << " Processes Processed this Cycle")
 
 	++liPTF;
-	if(liPTF<_PPF) cCamera::Instance()->UpdateNotRender();
+	if(liPTF<_PPF) cCameraHandler::Instance()->UpdateNotRenderCameras(); //cCamera::Instance()->UpdateNotRender();
 	}
 	liPTF=0;
 trace("New Render Cycle")
-	cCamera::Instance()->Render();
+//	cCamera::Instance()->Render();
+cCameraHandler::Instance()->RenderCameras();
 
 
 if(_FPS)
@@ -119,8 +120,8 @@ trace("Deleting cCollisionHandler");
 	delete cLightHandler::Instance();
 #endif
 
-	trace("Deleting cPainter");
-	delete cPainter::Instance();
+	//trace("Deleting cPainter");
+	//delete cPainter::Instance();
 
 	trace("Deleting cSync");
 	delete gpTimer;

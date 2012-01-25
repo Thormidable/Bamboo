@@ -32,6 +32,10 @@ public:
 	/// Constructs a new cRenderNode which is owned by lpRenderer.
        cRenderNode(vRenderNode *lpRenderer);
 
+        //Constructor for generating Top level RenderNodes
+       cRenderNode(bool lpTopLevel,cCamera *lpCamera);
+	   cRenderNode(cCamera *lpCamera);
+
        ~cRenderNode();
 
         void Initialise();

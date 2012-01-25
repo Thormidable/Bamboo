@@ -1,6 +1,6 @@
 #ifndef __WTVRENDEROBJECT_H__
 #define __WTVRENDEROBJECT_H__
-
+class cCamera;
 class cRenderOwner;
 class cCollisionObject;
 class vMesh;
@@ -65,6 +65,8 @@ protected:
    vRenderNode *mpRenderer;
     // cLinkedNode which owns this renderable object.
  cRenderOwner mcOwnerNode;
+
+ cCamera *mpCamera;
 public:
     	/// Returns the cRenderNode which owns this object.
        vRenderNode *Renderer();
@@ -83,6 +85,7 @@ public:
        virtual cVariableStore* Variables();
 	   virtual void RecalculateTotalMatrix()=0;
 	   virtual void CalculateMatrices()=0;
+	   cCamera *Camera();
 
        void Stop();
 

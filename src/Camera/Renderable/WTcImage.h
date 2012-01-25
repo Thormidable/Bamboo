@@ -3,6 +3,9 @@
 
 #if WT_FULL_VERSION_BAMBOO
 
+class cImage3D;
+
+
 /**
 * \brief A 2D renderable object.
 * \param lpTexture pointer to the texture to bind to this 2D object
@@ -11,6 +14,8 @@
 */
 class cImage : public cRenderObject
 {
+	friend class cImage3D;
+
 protected:
  // This is the size of the sprite on the screen.
  float mfWidth;
@@ -31,9 +36,12 @@ protected:
        void InitialiseArrays();
        	// Updates arrays to make the image of size mfSize.
        void ResizeArrays();
+
+	   cImage(vRenderNode *lpRenderNode);
 public:
  	/// Constructor for cImage. Will Create an Empty cImage Object.
        cImage();
+	   cImage(cCamera *lpCamera);
 	// This function will set this object to being a 2D object and initialise the arrays.
        virtual void SetUp();
 	//Destructor for cImage.
@@ -71,6 +79,9 @@ class cImage3D : public cImage
 {
 
 public:
+	cImage3D();
+	cImage3D(vRenderNode *lpCamera);
+	cImage3D(cCamera *lpCamera);
     void SetUp();
 };
 

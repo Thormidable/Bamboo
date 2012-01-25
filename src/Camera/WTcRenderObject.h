@@ -67,6 +67,10 @@ public:
  cRenderObject(bool lbNoTextures);
  /// Constructor for cRenderObject. Creates a new render object and adds itself to lpNode.
  cRenderObject(vRenderNode *lpNode,bool lbNoTextures);
+ /// Constructor for cRenderObject. Creates a new render object and adds itself to the cRenderNode of the cCamera lpCamera.
+ cRenderObject(cCamera *lpCamera);
+/// Constructor for cRenderObject. Creates a new render object and adds itself to the cRenderNode of the cCamera lpCamera.
+ cRenderObject(cCamera *lpCamera,bool lbNoTextures);
 
  // Destructor for cRenderObject.
  ~cRenderObject();

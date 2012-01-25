@@ -16,6 +16,11 @@ void vRenderNode::Stop()
 
 }
 
+cCamera *vRenderNode::Camera()
+{
+    return mpCamera;
+}
+
 cVariableStore* vRenderNode::Variables(){return 0;}
 
 

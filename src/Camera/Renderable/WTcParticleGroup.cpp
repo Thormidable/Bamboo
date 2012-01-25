@@ -101,14 +101,20 @@ void cParticleGroup::RenderPainter()
 
 cParticleGroup::cParticleGroup(uint32 liParticles) : cRenderObject(true)
 {
-	miSpaces=liParticles;
-	miParticles=0;
-	mpParticles=new cParticleForGroup*[miSpaces];
-	memset(mpParticles,0,sizeof(cParticleForGroup*)*miSpaces);
-	mbRespawn=0;
+	Initialise(liParticles);
 };
 
+cParticleGroup::cParticleGroup(uint32 liParticles,cCamera *lpCamera) : cRenderObject(lpCamera,true)
+{
+	Initialise(liParticles);
+}
+
 cParticleGroup::cParticleGroup(uint32 liParticles,vRenderNode* lpNode) : cRenderObject(lpNode,true)
+{
+	Initialise(liParticles);
+};
+
+void cParticleGroup::Initialise(uint32 liParticles)
 {
 	miSpaces=liParticles;
 	miParticles=0;
@@ -116,7 +122,7 @@ cParticleGroup::cParticleGroup(uint32 liParticles,vRenderNode* lpNode) : cRender
 	memset(mpParticles,0,sizeof(cParticleForGroup*)*miSpaces);
 	mbRespawn=0;
 	mbUseGravity=0;
-};
+}
 
 uint32 cParticleGroup::LivingParticles()
 {

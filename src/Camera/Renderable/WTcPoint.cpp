@@ -15,6 +15,10 @@ cPoint::cPoint(vRenderNode *lpRenderer) : cRenderObject(lpRenderer,1)
  Identity();
 }
 
+cPoint::cPoint(cCamera *lpCamera) : cRenderObject(lpCamera,1)
+{
+ Identity();
+}
 
 void cPoint::RenderPainter()
 {

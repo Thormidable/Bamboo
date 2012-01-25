@@ -4,35 +4,42 @@
 
 cParticle::cParticle()
 {
-	 cParticleHandler::Instance()->Add(this);
+	 _CAMERA->ParticleHandler()->Add(this);
 	FadeSpeed=0.0f;
 };
+
+cParticle::cParticle(cCamera *lpCamera)
+{
+	 lpCamera->ParticleHandler()->Add(this);
+	FadeSpeed=0.0f;
+};
+
 
 cParticle::~cParticle()
 {
 
 };
 
-void cParticle::AdditionalKillFunctionality()
+void cParticle::Stop()
 {
 Life=0.0f;
 }
 
-void cParticle::AdditionalSleepFunctionality()
+void cParticle::OnSleep()
 {
- cParticleHandler::Instance()->Remove(this);
+ //cParticleHandler::Instance()->Remove(this);
 }
 
-void cParticle::AdditionalWakeFunctionality()
+void cParticle::OnWake()
 {
- cParticleHandler::Instance()->Add(this);
+ //cParticleHandler::Instance()->Add(this);
 }
 
 
-cParticleHandler *cParticleHandler::spthis;
+//cParticleHandler *cParticleHandler::spthis;
 
 
-cParticleHandler::cParticleHandler() : cRenderObject(1)
+cParticleHandler::cParticleHandler() : cRenderObject((vRenderNode*)0,1)
 {
 	lbRefresh=false;
 	miParticles=0;
@@ -40,13 +47,14 @@ cParticleHandler::cParticleHandler() : cRenderObject(1)
 	mpParticles=new cParticle*[WT_MAX_PARTICLES];
 }
 
+/*
 cParticleHandler *cParticleHandler::Instance()
 {
 	if(!spthis) spthis=new cParticleHandler;
 	return spthis;
 
 };
-
+*/
 void cParticleHandler::Resize(uint32 liSize)
 {
 	miMaxParticles=liSize;
@@ -131,14 +139,15 @@ glEnable(GL_VERTEX_PROGRAM_POINT_SIZE);
 	uint32 liCount;
 	for(liCount=0;liCount<miParticles;++liCount)
 	{
-
-		if(WT_PARTICLE_HANDLER_UPDATE_PARTICLE_POSITIONS) mpParticles[liCount]->UpdatePos();
-		glPointSize(mpParticles[liCount]->Size);
-		glColor4fv(mpParticles[liCount]->Color.Color());
-        glBegin(GL_POINTS);
-            glColor4fv(mpParticles[liCount]->Color.Color());
-            glVertex3fv(mpParticles[liCount]->Position);
-        glEnd();
+		if(mpParticles[liCount]->Awake())
+		{
+			if(WT_PARTICLE_HANDLER_UPDATE_PARTICLE_POSITIONS) mpParticles[liCount]->UpdatePos();
+			glPointSize(mpParticles[liCount]->Size);
+        	glBegin(GL_POINTS);
+            	glColor4fv(mpParticles[liCount]->Color.Color());
+            	glVertex3fv(mpParticles[liCount]->Position);
+        	glEnd();
+		}
 	}
 
 	float lpTemp[4]={1.0f,1.0f,1.0f,1.0f};

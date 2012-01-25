@@ -10,7 +10,9 @@ void cRenderNode::Initialise()
 
 cRenderNode::cRenderNode()
 {
- mpRenderer=cCamera::Instance()->RenderList();
+ mpCamera=cCamera::Instance();
+ mpRenderer=mpCamera->RenderList();
+
  mcOwnerNode=mpRenderer->Add(this);
  Initialise();
  Identity();
@@ -18,17 +20,29 @@ cRenderNode::cRenderNode()
 
 cRenderNode::cRenderNode(vRenderNode *lpRenderer)
 {
-
- if(lpRenderer)
- {
   mpRenderer=lpRenderer;
   mcOwnerNode=lpRenderer->Add(this);
- }
- else
- {
-  mpRenderer=0; //This represents the top level
-  mcOwnerNode.Node=0;
- }
+  mpCamera=mpRenderer->Camera();
+
+ Initialise();
+ Identity();
+}
+
+cRenderNode::cRenderNode(bool lpTopLevel,cCamera *lpCamera)
+{
+ mpRenderer=0;
+ mcOwnerNode.Node=0;
+ mpCamera=lpCamera;
+ Initialise();
+ Identity();
+
+}
+cRenderNode::cRenderNode(cCamera *lpCamera)
+{
+
+  mpRenderer=lpCamera->RenderList();
+  mcOwnerNode=mpRenderer->Add(this);
+  mpCamera=lpCamera;
  Initialise();
  Identity();
 }
@@ -41,6 +55,7 @@ cRenderNode::~cRenderNode()
 	mpObjects=0;
 	mpRenderer=0;
 	mcOwnerNode.Node=0;
+	mpCamera=0;
 
 }
 
