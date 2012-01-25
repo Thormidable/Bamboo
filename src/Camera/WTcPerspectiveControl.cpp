@@ -129,6 +129,11 @@ float cViewportControl::ViewportProportionalHeight(){return mfProportionalHeight
 float cViewportControl::ViewportProportionalX(){return mfProportionalX;};
 float cViewportControl::ViewportProportionalY(){return mfProportionalY;};
 
+float cViewportControl::ViewportWidth(){return mfViewportWidth;};
+float cViewportControl::ViewportHeight(){return mfViewportHeight;};
+float cViewportControl::ViewportX(){return mfViewportX;};
+float cViewportControl::ViewportY(){return mfViewportY;};
+
 void cViewportControl::SetClearColor()
 {
 glClearColor(mcClearColor.R(),mcClearColor.G(),mcClearColor.B(),mcClearColor.A());

@@ -110,7 +110,7 @@
  *  	- Function telling the system to used the fixed function pipeline and not use shaders. This will slow the system and disable functionality. Disadvised.
  *  	.
  *  - _CAMERA
- *  	- A Pointer to the cCamera Object.
+ *  	- A Pointer to the default cCamera Object.
  *  	.
  *  - _LIGHT
  *  	- A Pointer to the cLightHandler Object.
@@ -120,9 +120,6 @@
  *  	.
  *  - _FILE
  *  	- A Pointer to the cFileHandler Object.
- *  	.
- *  - _PAINTER
- *  	- A Pointer to the cPainter Object.
  *  	.
  *  - _COLLISION_HANDLER
  *  	- A Pointer to the cCollisionHandlerObject.
@@ -468,7 +465,12 @@
  * \section EngineSettingsPage Engine Settings
  *
  * This Section contains the complete list of engine settings. They are all variables. Most can be modified during run time. Ones which cannot are listed here.
- *
+ * - WT_STARTING_CAMERA_SLOTS
+ *  - This is the number of cCamera slots created in the cCameraHandler at start. The number of slots will be increased as required, but this involves some overhead.
+ *  .
+ * - WT_STARTING_VIEWPORT_SLOTS
+ *  - This is the number of cViewport slots created in the cViewportHandler at start. The number of slots will be increased as required, but this involves some overhead.
+ *  .
  * - WT_TEXTURE_NUMBER_ALLOWED
  *	- This is the number of textures that can be applied to a single object. This is limited by your graphics card. Keep this as low as possible for the shaders used.
  *  .
@@ -532,6 +534,8 @@
  * These objects should never be deleted, they should only be destroyed by being signaled with a _KILL() signal or cSignal::Signal() function.
  * - cProcess
  * - cRenderObject
+ * - cCamera
+ * - cViewport
  *  - cImage
  *  - cModel
  *  - cTextButton
@@ -2086,7 +2090,52 @@
  * //You now have a skeleton for a humanoid robot. Moving limbs requires moving any one object and the rest of the objects linked will autoamtically move.
  * //This can be build into a MeshTree in the IMF Handler so it can be loaded from a file.
  * \endcode
+ * \section MultipleCamerasViewports Multiple Cameras and Viewports
+ * Bamboo has full support for multiple cCamera Objects, cViewport objects and rendering to specified regions.
+ * cCameras are seperate cameras. They store a scene graph (tree of vRenderObjects and vRenderNodes) and will render them to the specified region of the screen.
+ * cCameras are controlled by signals, so _CREATE() should be used to create them and _KILL() should be used to kill them. Once killed, all objects in their scene graph will be destroyed and so should not be accessed.
+ * Each cCamera Object has it's own objects so creating a Render Object in one will not affect another. \n
+ * cViewports are slightly different. They also render a scene graph to the screen in a specified region, but do not have a scene graph of their own.
+ * All cViewports are owned by a cCamera object and will render the cCamera objects scene graph. This is much more efficient than using a second cCamera as only one scene graph is stored and updated. It allows the user to view the same scene as it's camera from a different position, rotation or perspective.
+ * All vRenderObjects can be passed a cCamera as an argument in their constructor which will make them use the specified cCamera. If they are passed a vRenderNode as a parameter, they will become a child of the cCamera which owns the vRenderNode which owns the vRenderObject.
+ * the _CAMERA pointer will always point to the first cCamera object and will be used as a default when no cCamera is specified.
+ * \code
+ * //Create a Model on the default cCamera object and have the cCamera follow it at a distance of 60.
+ * cModel* lpModel=_CREATE(cModel);
+ * lpModel->Mesh("MyMesh");
+ * lpModel->Shader("TexturingProgram");
+ * lpModel->Texture("MyTexture");
+ * _CAMERA->Follow(lpModel,60.0f);
  *
+ * //Create a Viewport owned by the default cCamera object. and have the cCamera follow it at a distance of 60.
+ * cViewport *lpViewport=_CREATE(cViewport);
+ * //Set the View port to render to the area X : 100 - 300 and Y : 100 - 400.
+ * lpViewport->Viewport(100.0,100.0,200.0,300.0);
+ * //Set the Viewport to follow the model at a distance of 20
+ * lpViewport->Follow(lpModel,20.0);
+ *
+ * //The model will appear twice on screen.
+ * //Once across the entire screen at a distance of 60.
+ * //Once in the area, X:100-300 Y:100-400 at a distance of 20.
+ *
+ *
+ * //Create a new cCamera. Set it to use the region proportional to the screen size of X:0.5-0.75 Y:0.5-0.6.
+ * cCamera *lpCamera=_CREATE(cCamera);
+ * lpCamera->Proportional(true);
+ * lpCamera->Viewport(0.5,0.25,0.5,0.1);
+ *
+ * //Create a Model and make the cCamera lpCamera its parent.
+ * cModel* lpModel2=_CREATE(cModel(lpCamera));
+ * lpModel2->Mesh("MySecondMesh");
+ * lpModel2->Shader("TexturingProgram");
+ * lpModel2->Texture("MySecondTexture");
+ *
+ * //Make the second Camera Follow lpModel2.
+ * lpCamera->Follow(lpModel2,30);
+ *
+ * //lpModel will not appear in the screen region used by lpCamera as the object is not owned by lpCamera.
+ * //lpModel2 will not appear in either the screen region used by the default camera or its viewport.
+ * //As the object is not owned by the default camera.
  * \section IMFGenerationPage IMF File Generation and Usage
  *
  * IMF Files are generated by the IMF Compiler. The IMF Compiler is a seperate program to the @EngineName engine and has a text based interface. The Compiler should be run from the terminal, so the user can view and use the interface.

@@ -15,8 +15,9 @@ public:
 	template<class cX,class cS> friend class cMainThread;
 };
 
+///This is the number of cCamera slots created in the cCameraHandler at start. The number of slots will be increased as required, but this involves some overhead.
 extern uint8 WT_STARTING_CAMERA_SLOTS;
-
+///This is the number of cViewport slots created in the cViewportHandler at start. The number of slots will be increased as required, but this involves some overhead.
 extern uint8 WT_STARTING_VIEWPORT_SLOTS;
 
 

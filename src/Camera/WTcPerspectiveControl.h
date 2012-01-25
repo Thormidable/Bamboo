@@ -4,6 +4,14 @@
 class cViewportHandler;
 class cExtraViewport;
 
+/**
+ \brief The cViewportControl allows the user to control the region of the screen a cCamera or cViewport object will render to.
+ This class allows the user to set a region of the screen for a cCamera or cViewport to render to.
+ It can be either Proportional to screens width and height or Fixed.
+ If the region is proportional the co-ordinates and sizes of the region are in the range 0.0f to 1.0f representing 0 up to the entire screen size.
+ If the region is fixed the co-ordinates and sizes of the region are measured in pixels.
+ The X and Y Co-ordinates specify the Lower Left corner of the region. The width and height determine the size of the region.
+ */
 class cViewportControl
 {
 protected:
@@ -18,39 +26,63 @@ protected:
  void SetClearColor();
 
 public:
-
+    //Constructor to create a new cViewportControl
 	cViewportControl();
 	cViewportControl(float lfX,float lfY,float lfWidth,float lfHeight);
 	cViewportControl(float lfX,float lfY,float lfWidth,float lfHeight, bool lbProportional);
 
+    /// This will set the fixed size of a cViewport Control. Takes X,Y, Width and Height.
 	void Viewport(float lfX,float lfY,float lfWidth,float lfHeight);
+	/// This will set the X Co-ordinate of the Viewport.
 	void ViewportX(float lfX);
+	/// This will set the Y Co-ordinate of the Viewport.
 	void ViewportY(float lfY);
+	/// This will set the Width of the Viewport.
 	void ViewportWidth(float lfWidth);
+	/// This will set the Height of the Viewport.
 	void ViewportHeight(float lfHeight);
 
+    /// This will set the proportional size of a cViewport Control. Takes X,Y, Width and Height.
 	void ViewportProportional(float lfX,float lfY,float lfWidth,float lfHeight);
+	/// This will set the proportional Width of the Viewport.
 	void ViewportProportionalWidth(float lfWidth);
+	/// This will set the proportional Height of the Viewport.
 	void ViewportProportionalHeight(float lfHeight);
+	/// This will set the proportional X Co-ordinate of the Viewport.
 	void ViewportProportionalX(float lfX);
+	/// This will set the proportional Y Co-ordinate of the Viewport.
 	void ViewportProportionalY(float lfY);
-
+///This will return the Proportional Width of the Viewport region.
 float ViewportProportionalWidth();
+///This will return the Proportional Height of the Viewport region.
 float ViewportProportionalHeight();
+///This will return the Proportional X Co-ordinate of the Viewport region.
 float ViewportProportionalX();
+///This will return the Proportional Y Co-ordinate of the Viewport region.
 float ViewportProportionalY();
 
+///This will return the Width of the Viewports region.
+float ViewportWidth();
+///This will return the Height of the Viewports region.
+float ViewportHeight();
+///This will return the X Co-ordinate of the Viewports region.
+float ViewportX();
+///This will return the Y Co-ordinate of the Viewports region.
+float ViewportY();
+
+    ///This will turn on or off the use of Proportional co-ordinate systems.
 	void Proportional(bool lbSet);
+	///This will return whether proportional co-ordinate systems are being used or not.
 	bool Proportional();
+
 	void ClearViewport();
 		/**
-	* \brief This function will set the color the camera will clear the screen to every frame.
-	* \param lfRed This is the red component of the color that cCamera will clear the screen to.
-	* \param lfGreen This is the green component of the color that cCamera will clear the screen to.
-	* \param lfBlue This is the blue component of the color that cCamera will clear the screen to.
-	* \param lfAlpha This is the alpha component of the color that cCamera will clear the screen to.
-	* This function sets the color that the camera will clear the screen to every frame. RGB defines the color
-	* while lfAlpha sets the translucency of the screen clear - this can be used to leave screen echos.
+	* \brief This function will set the color the Viewport will clear the region to every frame.
+	* \param lfRed This is the red component of the color that a Viewport will clear the region to.
+	* \param lfGreen This is the green component of the color that a Viewport will clear the region to.
+	* \param lfBlue This is the blue component of the color that cCamera will clear the region to.
+	* \param lfAlpha This is the alpha component of the color that cCamera will clear the region to.
+	* This function sets the color that the camera will clear the screen to every frame. RGB defines the color.
 	*/
 	void ClearColor(float lfRed=0.0f,float lfGreen=0.0f,float lfBlue=0.0f,float lfAlpha=1.0f);
 	/// See cCamera::ClearColor(float,float,float,float);
@@ -70,6 +102,11 @@ float ViewportProportionalY();
 	virtual void UpdateWindowSize()=0;
 };
 
+/**
+ \brief cPerspectiveControl affects how a cViewport or cCamera will render its view.
+ This can be imagined as a lens. The user can set the field of view, both in width and height.
+ You can set a near and far clipping plane. Adjustments to the parameters will only take effect after the function cPerspectiveControl::UpdateProjectionMatrix() is called.
+*/
 class cPerspectiveControl : public cCameraMatrix4, public cViewportControl
 {
 protected:
@@ -124,7 +161,7 @@ public:
 
 	void UpdateWindowSize();
 
-		/// This creates the camera model view matrix using an Orthographic algorithm.
+    /// This Updates the perspective matrices with the specified parameters.
 	virtual void UpdateProjectionMatrix();
 
 };

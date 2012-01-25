@@ -1,30 +1,30 @@
 #include "../WTBamboo.h"
 
 
-cExtraViewport::cExtraViewport()
+cViewport::cViewport()
 {
  mpHandler=_CAMERA->mpViewportHandler;
  if(mpHandler) mpHandler->Add(this);
 };
 
-cExtraViewport::cExtraViewport(cCamera *lpCamera)
+cViewport::cViewport(cCamera *lpCamera)
 {
  mpHandler=lpCamera->mpViewportHandler;
  if(mpHandler) mpHandler->Add(this);
 };
 
-cExtraViewport::~cExtraViewport()
+cViewport::~cViewport()
 {
  //mpHandler->Remove(this);
 };
 
-void cExtraViewport::UpdateRenderSettings()
+void cViewport::UpdateRenderSettings()
 {
 	UpdateViewport();
 	ResetGLMatrix();
 }
 
-void cExtraViewport::Stop()
+void cViewport::Stop()
 {
  if(mpHandler)
  {
@@ -37,7 +37,7 @@ void cExtraViewport::Stop()
  }
 }
 
-void cExtraViewport::PrepareForRender()
+void cViewport::PrepareForRender()
 {
 		UpdateProjectionMatrix();
 		UpdateViewport();
@@ -69,16 +69,16 @@ cViewportHandler::cViewportHandler(cCamera *lpCamera,uint8 liViewports)
  glEnable(GL_SCISSOR_TEST);
 }
 
-void cViewportHandler::Add(cExtraViewport *lpNew)
+void cViewportHandler::Add(cViewport *lpNew)
 {
  mcList.Add(lpNew);
 }
-void cViewportHandler::Remove(cExtraViewport *lpOld)
+void cViewportHandler::Remove(cViewport *lpOld)
 {
 	mcList.Remove(lpOld);
 }
 
-void cExtraViewport::UpdateProjectionMatrix()
+void cViewport::UpdateProjectionMatrix()
 {
 
   mmPerspective.Frustum();

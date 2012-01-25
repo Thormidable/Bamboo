@@ -223,7 +223,7 @@ public:
 		{
 			delete mpList[liPos]; mpList[liPos]=0;
 			--miItems;
-			memmove(mpList[liPos],mpList[liPos+2],sizeof(cX*)*miItems-liPos);
+			if(miItems-liPos) memmove(mpList[liPos],mpList[liPos+2],sizeof(cX*)*miItems-liPos);
 		}
 	};
     ///This will switch the positions of the items at positions li1 and li2 in the list.

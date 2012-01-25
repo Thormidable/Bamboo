@@ -208,14 +208,3 @@ void cCameraHandler::UpdateScreen()
 };
 
 
-/*
- * void cCameraHandler::RenderCameras()
-{
- mcList[0]->UpdateNotRender();
-}
-
-void cCameraHandler::UpdateNotRenderCameras()
-{
- mcList[0]->UpdateNotRender();
-}
-*/
