@@ -15,7 +15,7 @@ cViewport::cViewport(cCamera *lpCamera)
 
 cViewport::~cViewport()
 {
- //mpHandler->Remove(this);
+ mpHandler=0;
 };
 
 void cViewport::UpdateRenderSettings()
@@ -29,7 +29,6 @@ void cViewport::Stop()
  if(mpHandler)
  {
 	 mpHandler->Remove(this);
- 	mpHandler=0;
  }
  else
  {

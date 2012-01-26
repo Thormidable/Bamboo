@@ -223,8 +223,8 @@
 	<File name="src\Files\CollisionMeshes\WTcBeamCollision.h" open="0" top="0" tabpos="0">
 		<Cursor position="68" topLine="0" />
 	</File>
-	<File name="src\Files\CollisionMeshes\WTcCompoundCollision.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="2293" topLine="51" />
+	<File name="src\Files\CollisionMeshes\WTcCompoundCollision.cpp" open="1" top="1" tabpos="45">
+		<Cursor position="382" topLine="0" />
 	</File>
 	<File name="src\Files\CollisionMeshes\WTcCompoundCollision.h" open="0" top="0" tabpos="0">
 		<Cursor position="3758" topLine="49" />
@@ -277,8 +277,8 @@
 	<File name="src\Files\Meshes\MeshClasses\WTcPlane.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="27" topLine="0" />
 	</File>
-	<File name="src\Files\Meshes\MeshClasses\WTcPolygon.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="27" topLine="0" />
+	<File name="src\Files\Meshes\MeshClasses\WTcPolygon.cpp" open="1" top="0" tabpos="44">
+		<Cursor position="7804" topLine="312" />
 	</File>
 	<File name="src\Files\Meshes\MeshClasses\WTcVertex.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="27" topLine="0" />
@@ -296,7 +296,7 @@
 		<Cursor position="6841" topLine="165" />
 	</File>
 	<File name="src\Files\Meshes\WTv2DPolygon.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="625" topLine="3" />
+		<Cursor position="455" topLine="11" />
 	</File>
 	<File name="src\Files\Misc\WTcMeshTree.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="492" topLine="25" />
@@ -323,7 +323,7 @@
 		<Cursor position="791" topLine="20" />
 	</File>
 	<File name="src\Files\Shaders\WTcShaderProgram.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="1325" topLine="38" />
+		<Cursor position="2149" topLine="78" />
 	</File>
 	<File name="src\Files\Shaders\WTcShaderProgram.h" open="1" top="0" tabpos="6">
 		<Cursor position="950" topLine="30" />
@@ -335,7 +335,7 @@
 		<Cursor position="921" topLine="0" />
 	</File>
 	<File name="src\Files\Shaders\WTcUserDefinedShaderVariable.cpp" open="1" top="0" tabpos="14">
-		<Cursor position="214" topLine="359" />
+		<Cursor position="2673" topLine="147" />
 	</File>
 	<File name="src\Files\Shaders\WTcUserDefinedShaderVariable.h" open="1" top="0" tabpos="15">
 		<Cursor position="11192" topLine="319" />
@@ -460,8 +460,8 @@
 	<File name="src\Physics\WTcCollisionObject.h" open="0" top="0" tabpos="1">
 		<Cursor position="5148" topLine="129" />
 	</File>
-	<File name="src\WTBamboo.h" open="1" top="1" tabpos="40">
-		<Cursor position="104031" topLine="2075" />
+	<File name="src\WTBamboo.h" open="1" top="0" tabpos="40">
+		<Cursor position="167695" topLine="3908" />
 	</File>
 	<File name="src\WTOsBits.h" open="0" top="0" tabpos="9">
 		<Cursor position="487" topLine="1" />

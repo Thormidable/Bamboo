@@ -1513,6 +1513,7 @@
 * -# \ref SignalsPage "Signals and Flags"
 * -# \ref CollisionsPage "Detecting Collisions"
 * -# \ref RenderNodesPage "Creating Local Co-ordinate systems"
+* -# \ref MultipleCamerasViewports "Multiple Cameras and Viewport Control"
 * -# \ref IMFGenerationPage "IMF File Generation and Usage"
 * .
 * \section MainLoop Overview of Bamboo
@@ -1775,9 +1776,9 @@
  * void player::Run()
  * {
  * 	mpHull=_CREATE(cModel(mpShipNode));
- *	mpHull->Mesh(_GET_MESH_FILE("Mesh"));
- *	mpHull->Texture(_GET_TEXTURE_FILE("Texture"));
- *	mpHull->Shader(_GET_SHADER_FILE("TexturingProgram"));
+ *	mpHull->Mesh("Mesh");
+ *	mpHull->Texture("Texture");
+ *	mpHull->Shader("TexturingProgram");
  * }
  *\endcode
  *
@@ -1817,7 +1818,7 @@
  * - Use the function cRenderObject::AddTexture(cTexture*) to add a texture to a cRenderObject. They will be added to the object and placed in slots in the order they are added.
  * \n
  * Textures are applied to Renderable objects using the function AddTexture(string,cTexture*). This function will add the Texture pointer to the Texture slot with the name matching lsTextureSlot.
- * Alternatively AddTexture(cTexture*) can be used. This will add the texture to the next free texture slot in the shader named "Texture0" "Texture1" "Texture2" etc. \n
+ * Alternatively AddTexture(cTexture*) or AddTexture(string) can be used. This will add the texture to the next free texture slot in the shader named "Texture0" "Texture1" "Texture2" etc. \n
  * Declaring Textures in Fragment Shaders:
  * Multitexturing in shaders is controlled using uniform sampler types:
  * \code
@@ -1851,7 +1852,7 @@
  *
  * Useful Macros:
  *
- * These will return a pointer to the file of the appropriate type with the Test Identifier 'Reference'. The files are checked for type, however giving files the smae text
+ * These will return a pointer to the file of the appropriate type with the Test Identifier 'Reference'. The files are checked for type, however giving files the same text
  * identifier is bad practice.
  * _GET_TEXTURE_FILE(Reference)
  * _GET_MESH_FILE(Reference)
@@ -1888,7 +1889,7 @@
  * mAO = new cAudioObject;
  *
  * //Load the sound file into the buffer
- * mAO->SetBuffer( _GET_AUDIO_FILE("SoundReference") );
+ * mAO->SetBuffer( "SoundReference" );
  *
  * //Play the sound
  * mAO->Play();
@@ -2035,56 +2036,56 @@
  *
  * //Set Mesh and Level for each Item
  * //Make Object 0 use the Mesh "Torso"
- * mpNodeList->GetListItem(0)->Mesh(_GET_MESH_FILE("Torso"));
+ * mpNodeList->GetListItem(0)->Mesh("Torso"));
  * //The torso is the top of the tree. This is the object all other objects will base their position on.
  * mpNodeList->SetLevel(0,0);
  *
  * //Make Object 1 use the Mesh "Head"
- * mpNodeList->GetListItem(1)->Mesh(_GET_MESH_FILE("Head"));
+ * mpNodeList->GetListItem(1)->Mesh("Head"));
  * //Make Object 1 linked to the Torso (last object with a Depth lower than this objects)
  * mpNodeList->SetLevel(1,1);
  *
  * //Make Object 2 use the Mesh "LeftUpperArm"
- * mpNodeList->GetListItem(2)->Mesh(_GET_MESH_FILE("LeftUpperArm"));
+ * mpNodeList->GetListItem(2)->Mesh("LeftUpperArm"));
  * //Make Object 2 linked to the Torso.
  * mpNodeList->SetLevel(2,1);
  *
  * //Make Object 3 use the Mesh "LeftForeArm"
- * mpNodeList->GetListItem(3)->Mesh(_GET_MESH_FILE("LeftForeArm"));
+ * mpNodeList->GetListItem(3)->Mesh("LeftForeArm"));
  * //Make Object 3 Linked to the LeftUpperArm
  * mpNodeList->SetLevel(3,2);
  *
  * //Make Object 4 use the Mesh "LeftHand"
- * mpNodeList->GetListItem(4)->Mesh(_GET_MESH_FILE("LeftHand"));
+ * mpNodeList->GetListItem(4)->Mesh("LeftHand"));
  * //Make Object 4 Linked to the "LeftForeArm"
  * mpNodeList->SetLevel(4,3);
  *
  * //You have now built a torso with a head and a left arm. repeat for the other limbs.
- * mpNodeList->GetListItem(5)->Mesh(_GET_MESH_FILE("RightUpperArm"));
+ * mpNodeList->GetListItem(5)->Mesh("RightUpperArm");
  * mpNodeList->SetLevel(5,1);
  *
- * mpNodeList->GetListItem(6)->Mesh(_GET_MESH_FILE("RightForeArm"));
+ * mpNodeList->GetListItem(6)->Mesh("RightForeArm");
  * mpNodeList->SetLevel(6,2);
  *
- * mpNodeList->GetListItem(7)->Mesh(_GET_MESH_FILE("RightHand"));
+ * mpNodeList->GetListItem(7)->Mesh("RightHand");
  * mpNodeList->SetLevel(7,3);
  *
- * mpNodeList->GetListItem(8)->Mesh(_GET_MESH_FILE("LeftThigh"));
+ * mpNodeList->GetListItem(8)->Mesh("LeftThigh");
  * mpNodeList->SetLevel(8,1);
  *
- * mpNodeList->GetListItem(9)->Mesh(_GET_MESH_FILE("LeftShin"));
+ * mpNodeList->GetListItem(9)->Mesh("LeftShin");
  * mpNodeList->SetLevel(9,2);
  *
- * mpNodeList->GetListItem(10)->Mesh(_GET_MESH_FILE("LeftFoot"));
+ * mpNodeList->GetListItem(10)->Mesh("LeftFoot");
  * mpNodeList->SetLevel(10,3);
 
- * mpNodeList->GetListItem(11)->Mesh(_GET_MESH_FILE("RightThigh"));
+ * mpNodeList->GetListItem(11)->Mesh("RightThigh");
  * mpNodeList->SetLevel(11,1);
  *
- * mpNodeList->GetListItem(12)->Mesh(_GET_MESH_FILE("RightShin"));
+ * mpNodeList->GetListItem(12)->Mesh("RightShin");
  * mpNodeList->SetLevel(12,2);
  *
- * mpNodeList->GetListItem(13)->Mesh(_GET_MESH_FILE("RightFoot"));
+ * mpNodeList->GetListItem(13)->Mesh("RightFoot");
  * mpNodeList->SetLevel(13,3);
  *
  * //You now have a skeleton for a humanoid robot. Moving limbs requires moving any one object and the rest of the objects linked will autoamtically move.
@@ -2136,6 +2137,7 @@
  * //lpModel will not appear in the screen region used by lpCamera as the object is not owned by lpCamera.
  * //lpModel2 will not appear in either the screen region used by the default camera or its viewport.
  * //As the object is not owned by the default camera.
+ * \endcode
  * \section IMFGenerationPage IMF File Generation and Usage
  *
  * IMF Files are generated by the IMF Compiler. The IMF Compiler is a seperate program to the @EngineName engine and has a text based interface. The Compiler should be run from the terminal, so the user can view and use the interface.

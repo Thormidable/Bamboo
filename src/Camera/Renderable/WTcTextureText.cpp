@@ -20,8 +20,8 @@ void cText::AddFont(string lsFontSlot,cFont *lpFont)
 void cText::AddFont(cFont *lpFont)
 {
 
- int8 liSlot=ReturnFreeSlot();
- if(liSlot)
+ int32 liSlot=ReturnFreeSlot();
+ if(liSlot>=0)
  {
  		string lsTextureSlot="Font";
  		std::stringstream out;

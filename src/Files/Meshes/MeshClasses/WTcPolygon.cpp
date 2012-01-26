@@ -325,7 +325,7 @@ void cPolygonList::OrderDistance()
 	for(liLoop=0;liLoop<Items()-1;++liLoop)
 	{
 		uint32 liCount;
-		uint32 liDistance;
+		uint32 liDistance=0;
 		for(liCount=liLoop+1;liCount<Items();++liCount)
 		{
 			liDistance=liLoop;

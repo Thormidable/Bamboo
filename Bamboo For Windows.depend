@@ -1277,7 +1277,7 @@
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\global\wtdefinitions.h
 
-1327500232 e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.h
+1327507184 e:\my documents\c++ code\bamboo\bamboo\src\global\wtsettings.h
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\global\wtsetdefinitions.h
 
@@ -1399,7 +1399,7 @@
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.h
 
-1327503103 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.h
+1327505632 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.h
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrenderpointer.h
 
@@ -1511,7 +1511,7 @@
 1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtcpoint.cpp
 	"../../WTBamboo.h"
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturetext.cpp
+1327574586 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturetext.cpp
 	"../../WTBamboo.h"
 
 1326072232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\renderable\wtctexturedmodel.cpp
@@ -1601,7 +1601,7 @@
 1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshader.cpp
 	"../../WTBamboo.h"
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.cpp
+1327573141 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.cpp
 	"../../WTBamboo.h"
 
 1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshadervariables.cpp
@@ -1676,7 +1676,7 @@
 	<sys/time.h>
 	"../WTBamboo.h"
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcwindow.cpp
+1327572259 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\wtcwindow.cpp
 	"../WTBamboo.h"
 
 1165588258 c:\program files\openal 1.1 sdk\include\al.h
@@ -5484,7 +5484,7 @@
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtcsingleton.h
 
-1327500232 e:\my documents\c++ code\bamboo\bamboo\src\wtbamboo.h
+1327577498 e:\my documents\c++ code\bamboo\bamboo\src\wtbamboo.h
 	<stdint.h>
 	<unistd.h>
 	"./WTOsBits.h"
@@ -5662,13 +5662,13 @@
 1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcrendernodeobject.cpp
 	"../WTBamboo.h"
 
-1327500232 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcperspectivecontrol.h
+1327505055 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcperspectivecontrol.h
 
-1327503524 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcextraviewport.h
+1327503744 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcextraviewport.h
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcextraviewport.cpp
+1327572518 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcextraviewport.cpp
 	"../WTBamboo.h"
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcperspectivecontrol.cpp
+1327504341 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcperspectivecontrol.cpp
 	"../WTBamboo.h"
 

@@ -27,6 +27,8 @@ void cWindow::InitialiseOpenGL()
 
 	glShadeModel(GL_SMOOTH);
 
+	FindRenderArea();
+
 }
 
 #if WT_OS_TYPE==OS_WIN32
@@ -420,6 +422,7 @@ void cWindow::HandleMessages()
 			gpWindow->Resized=true;
 			gpWindow->mfRatio=((float)gpWindow->miHeight)/gpWindow->miWidth;
 			cCameraHandler::Instance()->UpdateWindowSize();
+			FindRenderArea();
 			break;
 		}
 		if(Event.type == DestroyNotify)
