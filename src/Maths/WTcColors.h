@@ -25,6 +25,14 @@ public:
     float B();
 	///Returns the Alpha component of the color.
     float A();
+	///Sets the Red Component.
+	void R(float lfR);
+	///Sets the Green Component.
+	void G(float lfG);
+	///Sets the Blue Component.
+	void B(float lfB);
+	///Sets the Alpha Component.
+	void A(float lfA);
 	///Returns a float pointer to the array of components
     float *Color();
     float *operator=(float *lpOther);
@@ -61,6 +69,12 @@ public:
     float G();
 	///Returns the Green component of the color.
     float B();
+	///Sets the Red Component.
+	void R(float lfR);
+	///Sets the Green Component.
+	void G(float lfG);
+	///Sets the Blue Component.
+	void B(float lfB);
 	///Returns a float pointer to the array of components
     float *Color();
     float *operator=(float *lpOther);

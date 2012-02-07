@@ -1,0 +1,170 @@
+\hypertarget{classcm_landscape}{
+\section{cmLandscape Class Reference}
+\label{classcm_landscape}\index{cmLandscape@{cmLandscape}}
+}
+
+
+This will store the data for a landscape mesh. The data can be rendered through \hyperlink{classc_landscape}{cLandscape}.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcm_landscape_a559d50ea2cd594a12b87f556990043df}{
+uint16 $\ast$ \hyperlink{classcm_landscape_a559d50ea2cd594a12b87f556990043df}{FaceData} ()}
+\label{classcm_landscape_a559d50ea2cd594a12b87f556990043df}
+
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the landscapes face data array. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_adb8e0e4968124d0ddae602ab5a51c147}{
+uint32 \hyperlink{classcm_landscape_adb8e0e4968124d0ddae602ab5a51c147}{Faces} ()}
+\label{classcm_landscape_adb8e0e4968124d0ddae602ab5a51c147}
+
+\begin{DoxyCompactList}\small\item\em This will return the number of quadrilateral faces in the landscape. (actually this appears to be the number of nodes in the face data array. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_a5d46433c68a7a1076ad738a5f0d28dc0}{
+\hyperlink{classcm_landscape_a5d46433c68a7a1076ad738a5f0d28dc0}{cmLandscape} (\hyperlink{classcm_landscape_array}{cmLandscapeArray} $\ast$lpArray)}
+\label{classcm_landscape_a5d46433c68a7a1076ad738a5f0d28dc0}
+
+\begin{DoxyCompactList}\small\item\em Constructor to make Landscape Mesh out of an IMF File. Will Make a Landscape from an Landscape Array. \end{DoxyCompactList}\item 
+\hyperlink{classcm_landscape_aa1df1ae24ed2c5bb8616f21eeee3d036}{cmLandscape} (\hyperlink{classcm_landscape}{cmLandscape} $\ast$lpArray)
+\begin{DoxyCompactList}\small\item\em $\ast$ This will create a new landscape mesh using the data in lpArray. \end{DoxyCompactList}\item 
+\hyperlink{classcm_landscape_ae3c071c7ee84599c0fa47eba90290615}{cmLandscape} (uint32 liXSteps, uint32 liZSteps, float lfXSize, float lfZSize)
+\begin{DoxyCompactList}\small\item\em $\ast$ This will create a new landscape array to the resolution and size specified. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_aacdffaddb3fa324b0f2a88d471dea80e}{
+virtual void \hyperlink{classcm_landscape_aacdffaddb3fa324b0f2a88d471dea80e}{PrepareLandscape} ()}
+\label{classcm_landscape_aacdffaddb3fa324b0f2a88d471dea80e}
+
+\begin{DoxyCompactList}\small\item\em This will create all the absent data for the landscape. Vertex Positions, Normals, UVs and face data. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_a89d6a6a810182d712241fa3c17de5d2b}{
+virtual float \hyperlink{classcm_landscape_a89d6a6a810182d712241fa3c17de5d2b}{GetHeightLocal} (float lfX, float lfZ)}
+\label{classcm_landscape_a89d6a6a810182d712241fa3c17de5d2b}
+
+\begin{DoxyCompactList}\small\item\em This will return the height of the landscape (using interpolation) at the position lfX,lfZ relative to the landscapes 0,0 corner. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_af7ad1920fc8458d4c88c062df87325dd}{
+float \hyperlink{classcm_landscape_af7ad1920fc8458d4c88c062df87325dd}{GetVertexHeight} (uint32 liX, uint32 liZ)}
+\label{classcm_landscape_af7ad1920fc8458d4c88c062df87325dd}
+
+\begin{DoxyCompactList}\small\item\em This will return the height of the landscapes vertex numbered liX,liZ in the array. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_a352b08b5196e23102b44faa033776962}{
+virtual void \hyperlink{classcm_landscape_a352b08b5196e23102b44faa033776962}{SetHeight} (uint32 liX, uint32 liZ, float lfHeight)}
+\label{classcm_landscape_a352b08b5196e23102b44faa033776962}
+
+\begin{DoxyCompactList}\small\item\em This will set the height of the landscapes vertex numbered liX,liZ in the array. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_a533445e9429089809658e64114a2b9f7}{
+void \hyperlink{classcm_landscape_a533445e9429089809658e64114a2b9f7}{SetHeightRange} (float lfRange)}
+\label{classcm_landscape_a533445e9429089809658e64114a2b9f7}
+
+\begin{DoxyCompactList}\small\item\em Will scale the landscape to fit the new height range. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_afcb4ebc6f4aa1a61f49ca56bf82ec199}{
+void \hyperlink{classcm_landscape_afcb4ebc6f4aa1a61f49ca56bf82ec199}{SetXStep} (float lfStep)}
+\label{classcm_landscape_afcb4ebc6f4aa1a61f49ca56bf82ec199}
+
+\begin{DoxyCompactList}\small\item\em Will scale the landscape step size along the X axis to be lfStep. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_a552a5c4d887833220f02902ab8a1ffb5}{
+void \hyperlink{classcm_landscape_a552a5c4d887833220f02902ab8a1ffb5}{SetZStep} (float lfStep)}
+\label{classcm_landscape_a552a5c4d887833220f02902ab8a1ffb5}
+
+\begin{DoxyCompactList}\small\item\em Will scale the landscape step size along the Z axis to be lfStep. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_acfa7d1b32173940cfc8a91d6ab5dc370}{
+void \hyperlink{classcm_landscape_acfa7d1b32173940cfc8a91d6ab5dc370}{CreateNormalArray} ()}
+\label{classcm_landscape_acfa7d1b32173940cfc8a91d6ab5dc370}
+
+\begin{DoxyCompactList}\small\item\em This will reinitialise the landscapes normal values. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_a074a4aa5de458c966817b57b8822d470}{
+void \hyperlink{classcm_landscape_a074a4aa5de458c966817b57b8822d470}{SetXZStep} (float lfXStep, float lfZStep)}
+\label{classcm_landscape_a074a4aa5de458c966817b57b8822d470}
+
+\begin{DoxyCompactList}\small\item\em This will scale the landscape step size along both the X and Z axis to be lfXStep and lfZStep respectively. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_a0ee9507ed64e727af58ccfaacd88d333}{
+void \hyperlink{classcm_landscape_a0ee9507ed64e727af58ccfaacd88d333}{Randomize} (float liHeight, uint8 liSize)}
+\label{classcm_landscape_a0ee9507ed64e727af58ccfaacd88d333}
+
+\begin{DoxyCompactList}\small\item\em This will randomise the landscape to a maximum height of liheight and then smooth the heights within liSize of each vertex. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_a3196745ccd7e5d3f37463602732180c2}{
+void \hyperlink{classcm_landscape_a3196745ccd7e5d3f37463602732180c2}{Randomize} (float liHeight)}
+\label{classcm_landscape_a3196745ccd7e5d3f37463602732180c2}
+
+\begin{DoxyCompactList}\small\item\em This will just randomise the landscape up to a maximum height of liHeight. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_a09446d68d55f92099236f2773ab24828}{
+void \hyperlink{classcm_landscape_a09446d68d55f92099236f2773ab24828}{Randomize} (uint32 Lines, float lfHeightRange)}
+\label{classcm_landscape_a09446d68d55f92099236f2773ab24828}
+
+\begin{DoxyCompactList}\small\item\em This will randomise the landscape, by laying Lines number of random bisecting lines, which raise the landscape by lfHeightRange each. lfHeightRange is 0.001 by default. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_af71af80653f52a4a355386f677f1fdc2}{
+void \hyperlink{classcm_landscape_af71af80653f52a4a355386f677f1fdc2}{BufferMesh} ()}
+\label{classcm_landscape_af71af80653f52a4a355386f677f1fdc2}
+
+\begin{DoxyCompactList}\small\item\em This will move the mesh data to the graphics card memory. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_ad067bfe6199f7a42f2a35c72a97d676d}{
+virtual void \hyperlink{classcm_landscape_ad067bfe6199f7a42f2a35c72a97d676d}{RenderMesh} ()}
+\label{classcm_landscape_ad067bfe6199f7a42f2a35c72a97d676d}
+
+\begin{DoxyCompactList}\small\item\em This will render the mesh directly from graphics memory. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_ab6cabac9d07c5eedbbc7ac486923c8a5}{
+uint32 \hyperlink{classcm_landscape_ab6cabac9d07c5eedbbc7ac486923c8a5}{Width} ()}
+\label{classcm_landscape_ab6cabac9d07c5eedbbc7ac486923c8a5}
+
+\begin{DoxyCompactList}\small\item\em This will return miXSteps. \end{DoxyCompactList}\item 
+\hypertarget{classcm_landscape_a52b5ec340ef68b2a601fdca23607c3db}{
+uint32 \hyperlink{classcm_landscape_a52b5ec340ef68b2a601fdca23607c3db}{Length} ()}
+\label{classcm_landscape_a52b5ec340ef68b2a601fdca23607c3db}
+
+\begin{DoxyCompactList}\small\item\em This will reutrn miZSteps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcm_landscape_aa170c6f782be192b0b2fe0bb3bac46b3}{
+class \hyperlink{classcm_landscape_aa170c6f782be192b0b2fe0bb3bac46b3}{cLandscapeMeshFile}}
+\label{classcm_landscape_aa170c6f782be192b0b2fe0bb3bac46b3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This will store the data for a landscape mesh. The data can be rendered through \hyperlink{classc_landscape}{cLandscape}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcm_landscape_aa1df1ae24ed2c5bb8616f21eeee3d036}{
+\index{cmLandscape@{cmLandscape}!cmLandscape@{cmLandscape}}
+\index{cmLandscape@{cmLandscape}!cmLandscape@{cmLandscape}}
+\subsubsection[{cmLandscape}]{\setlength{\rightskip}{0pt plus 5cm}cmLandscape::cmLandscape (
+\begin{DoxyParamCaption}
+\item[{{\bf cmLandscape} $\ast$}]{lpArray}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_aa1df1ae24ed2c5bb8616f21eeee3d036}
+
+
+$\ast$ This will create a new landscape mesh using the data in lpArray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lpArray} & This is the \hyperlink{classcm_landscape_array}{cmLandscapeArray} holding landscape data for this object. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcm_landscape_ae3c071c7ee84599c0fa47eba90290615}{
+\index{cmLandscape@{cmLandscape}!cmLandscape@{cmLandscape}}
+\index{cmLandscape@{cmLandscape}!cmLandscape@{cmLandscape}}
+\subsubsection[{cmLandscape}]{\setlength{\rightskip}{0pt plus 5cm}cmLandscape::cmLandscape (
+\begin{DoxyParamCaption}
+\item[{uint32}]{liXSteps, }
+\item[{uint32}]{liZSteps, }
+\item[{float}]{lfXSize, }
+\item[{float}]{lfZSize}
+\end{DoxyParamCaption}
+)}}
+\label{classcm_landscape_ae3c071c7ee84599c0fa47eba90290615}
+
+
+$\ast$ This will create a new landscape array to the resolution and size specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em liXSteps} & Number of Nodes to form the landscape along the Landscapes X axis. \\
+\hline
+{\em liZSteps} & Number of Nodes to form the landscape along the Landscapes Z axis. \\
+\hline
+{\em lfXSize} & Size of landscape polygons along the landscapes X axis. \\
+\hline
+{\em lfZSize} & Size of landscape polygons along the landscapes Z axis. \\
+\hline
+\end{DoxyParams}

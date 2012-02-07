@@ -22,7 +22,7 @@ class cBeamMesh : public cRenderObject
 public:
 	///Constructor to Create a Beam with the specified Dimensions. Segments must be an even integer.
 	cBeamMesh(float Radius=0.1f,float Length=1.0f,uint16 Segments=6,vRenderNode *lpNode=cCamera::Instance()->RenderList());
-	cBeamMesh(float Radius=0.1f,float Length=1.0f,uint16 Segments=6,cCamera *lpNode=cCamera::Instance());
+	cBeamMesh(float Radius,float Length,uint16 Segments,cCamera *lpNode);
 	~cBeamMesh();
 	///Sets the Length of the Cylinder.
 	void Length(float Length);

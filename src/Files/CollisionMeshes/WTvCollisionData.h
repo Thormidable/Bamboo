@@ -10,7 +10,8 @@ class cCompoundCollision;
 /// Virtual Class so cCollisionObject can access the Collision data object it needs.
 class vCollisionData
 {
-
+    protected:
+    //uint8 miType;
 public:
 	vCollisionData(){};
 	virtual ~vCollisionData(){};
@@ -32,6 +33,8 @@ public:
 	#endif
 	//Will Update the collision Data Object based off the new global position matrix. This is important for rays.
 	virtual void Update(cMatrix4 &New)=0;
+
+	virtual uint8 Type(){return WT_COLLISION_NO_TYPE;};
 
 };
 

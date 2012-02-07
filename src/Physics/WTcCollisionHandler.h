@@ -68,7 +68,7 @@ public:
  /// This will return a pointer to the classes current instance and if there is none it will create one.
  static cCollisionHandler *Instance();
 
- virtual cCollisionList *GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType)=0;
+ virtual cCollisionList *GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType=0)=0;
 
  /// This will deconstruct the class.
  virtual ~cCollisionHandler();

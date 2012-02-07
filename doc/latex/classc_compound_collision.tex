@@ -1,0 +1,86 @@
+\hypertarget{classc_compound_collision}{
+\section{cCompoundCollision Class Reference}
+\label{classc_compound_collision}\index{cCompoundCollision@{cCompoundCollision}}
+}
+
+
+The \hyperlink{classc_compound_collision}{cCompoundCollision} object is a type of \hyperlink{classv_collision_data}{vCollisionData} for combining multiple Collision Objects into a single object. This allows the user to construct a collision object out of several simpler objects. This makes it possible to produce 'concave' faces by using several objects with exclusively convex faces. It is a \hyperlink{classc_limited_pointer_list}{cLimitedPointerList} so can have the size of the array adjusted to store as many objects as are required. If there is a collision with any object within this compound Object then the \hyperlink{classc_compound_collision}{cCompoundCollision} object has collided. Negative Collision Objects will be added at a future date. Each Object within the \hyperlink{classc_compound_collision}{cCompoundCollision} Object has a \hyperlink{classc_matrix4}{cMatrix4} to allow it to be positioned and rotated as required. This class should either be started with a list size -\/ \hyperlink{classc_compound_collision_a8769934e6b4193ad31663288f8f55d0a}{cCompoundCollision(uint32 liSize)} -\/ or call the function \hyperlink{classc_limited_pointer_list_ab72b03a5d82ee318bf21d3102bdfecda}{Init(uint32 liSize)} before it is used.  
+
+
+
+
+Collaboration diagram for cCompoundCollision:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_compound_collision__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_compound_collision_a6b8a94a617eb5198133d0759aeb3de02}{
+\hyperlink{classc_compound_collision_a6b8a94a617eb5198133d0759aeb3de02}{cCompoundCollision} ()}
+\label{classc_compound_collision_a6b8a94a617eb5198133d0759aeb3de02}
+
+\begin{DoxyCompactList}\small\item\em Constructor creting a 0 length list. \end{DoxyCompactList}\item 
+\hypertarget{classc_compound_collision_a8769934e6b4193ad31663288f8f55d0a}{
+\hyperlink{classc_compound_collision_a8769934e6b4193ad31663288f8f55d0a}{cCompoundCollision} (uint32 liSize)}
+\label{classc_compound_collision_a8769934e6b4193ad31663288f8f55d0a}
+
+\begin{DoxyCompactList}\small\item\em Constructor creating a list of length liSize. \end{DoxyCompactList}\item 
+\hypertarget{classc_compound_collision_ac95481f434fe511808ed362139442056}{
+virtual \hyperlink{classc_compound_collision_ac95481f434fe511808ed362139442056}{$\sim$cCompoundCollision} ()}
+\label{classc_compound_collision_ac95481f434fe511808ed362139442056}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{classc_compound_collision_ad54119082da305da69cce7c9b58e7135}{
+\hyperlink{classc_compound_collision}{cCompoundCollision} $\ast$ \hyperlink{classc_compound_collision_ad54119082da305da69cce7c9b58e7135}{Compound} ()}
+\label{classc_compound_collision_ad54119082da305da69cce7c9b58e7135}
+
+\begin{DoxyCompactList}\small\item\em Will return a pointer if this object contains a Compound collision data objecty. Otherwise returns 0;. \end{DoxyCompactList}\item 
+\hypertarget{classc_compound_collision_a0f0b6cd5120d20e6ad65a5ba2b27fc97}{
+\hyperlink{classv_collision_data}{vCollisionData} $\ast$ \hyperlink{classc_compound_collision_a0f0b6cd5120d20e6ad65a5ba2b27fc97}{operator\mbox{[}$\,$\mbox{]}} (uint32 liPos)}
+\label{classc_compound_collision_a0f0b6cd5120d20e6ad65a5ba2b27fc97}
+
+\begin{DoxyCompactList}\small\item\em \mbox{[}\mbox{]} operator to access the \hyperlink{classv_collision_data}{vCollisionData} Objects within this \hyperlink{classc_compound_collision}{cCompoundCollision} Object. \end{DoxyCompactList}\item 
+\hypertarget{classc_compound_collision_a0561694de30328b4aa20058ab36896a8}{
+void \hyperlink{classc_compound_collision_a0561694de30328b4aa20058ab36896a8}{AddType} (\hyperlink{classv_collision_data}{vCollisionData} $\ast$lpOther)}
+\label{classc_compound_collision_a0561694de30328b4aa20058ab36896a8}
+
+\begin{DoxyCompactList}\small\item\em For adding a created \hyperlink{classv_collision_data}{vCollisionData} object. \hyperlink{classc_sphere_collision}{cSphereCollision}, \hyperlink{classc_mesh_collision}{cMeshCollision}, \hyperlink{classc_beam_collision}{cBeamCollision} etc. \end{DoxyCompactList}\item 
+\hypertarget{classc_compound_collision_a83f2917503be59a302ffe5ac7ea5b83d}{
+\hyperlink{classc_sphere_collision}{cSphereCollision} $\ast$ \hyperlink{classc_compound_collision_a83f2917503be59a302ffe5ac7ea5b83d}{AddType} (float lfSize)}
+\label{classc_compound_collision_a83f2917503be59a302ffe5ac7ea5b83d}
+
+\begin{DoxyCompactList}\small\item\em This will procedurally generate a Sphere or radius 1.0f;. \end{DoxyCompactList}\item 
+\hypertarget{classc_compound_collision_ac3ab2e52fd2ea45debe26100e29183e4}{
+\hyperlink{classc_beam_collision}{cBeamCollision} $\ast$ \hyperlink{classc_compound_collision_ac3ab2e52fd2ea45debe26100e29183e4}{AddType} (float lfLength, float lfRadius)}
+\label{classc_compound_collision_ac3ab2e52fd2ea45debe26100e29183e4}
+
+\begin{DoxyCompactList}\small\item\em This will procedurally generate a Beam of Radius lfRadius and Length lfLength. \end{DoxyCompactList}\item 
+\hypertarget{classc_compound_collision_ab30aa4fa5730514f1c046676523b9f19}{
+\hyperlink{classc_mesh_collision}{cMeshCollision} $\ast$ \hyperlink{classc_compound_collision_ab30aa4fa5730514f1c046676523b9f19}{AddType} (float $\ast$lpBounds)}
+\label{classc_compound_collision_ab30aa4fa5730514f1c046676523b9f19}
+
+\begin{DoxyCompactList}\small\item\em This will procedureally generate a Box collision object from the array of 6 floats lpBounds. see cGeneratedBoxCollision::BuildObject(float $\ast$lpBounds) for more information. \end{DoxyCompactList}\item 
+\hypertarget{classc_compound_collision_a094a1e2b828fc8bd1ce0e5ab903125d6}{
+\hyperlink{classc_mesh_collision}{cMeshCollision} $\ast$ \hyperlink{classc_compound_collision_a094a1e2b828fc8bd1ce0e5ab903125d6}{AddType} (float lfXP, float lfXN, float lfYP, float lfYN, float lfZP, float lfZN)}
+\label{classc_compound_collision_a094a1e2b828fc8bd1ce0e5ab903125d6}
+
+\begin{DoxyCompactList}\small\item\em This will procedurally generate a Box Collision object. This is the same as handing it a float pointer. \end{DoxyCompactList}\item 
+\hypertarget{classc_compound_collision_a8b37e865b51fd5864582f8388ab4f1c4}{
+\hyperlink{classc_beam_collision}{cBeamCollision} $\ast$ \hyperlink{classc_compound_collision_a8b37e865b51fd5864582f8388ab4f1c4}{AddType} (\hyperlink{classc_beam_mesh}{cBeamMesh} $\ast$lpBeam)}
+\label{classc_compound_collision_a8b37e865b51fd5864582f8388ab4f1c4}
+
+\begin{DoxyCompactList}\small\item\em This will make a Beam object to match a rendered Beam. (Nice and easy eh?) \end{DoxyCompactList}\item 
+\hypertarget{classc_compound_collision_ad96f10a72496cb8879cf7b82d5403f81}{
+uint8 \hyperlink{classc_compound_collision_ad96f10a72496cb8879cf7b82d5403f81}{Type} ()}
+\label{classc_compound_collision_ad96f10a72496cb8879cf7b82d5403f81}
+
+\begin{DoxyCompactList}\small\item\em Will return the Objects Type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classc_compound_collision}{cCompoundCollision} object is a type of \hyperlink{classv_collision_data}{vCollisionData} for combining multiple Collision Objects into a single object. This allows the user to construct a collision object out of several simpler objects. This makes it possible to produce 'concave' faces by using several objects with exclusively convex faces. It is a \hyperlink{classc_limited_pointer_list}{cLimitedPointerList} so can have the size of the array adjusted to store as many objects as are required. If there is a collision with any object within this compound Object then the \hyperlink{classc_compound_collision}{cCompoundCollision} object has collided. Negative Collision Objects will be added at a future date. Each Object within the \hyperlink{classc_compound_collision}{cCompoundCollision} Object has a \hyperlink{classc_matrix4}{cMatrix4} to allow it to be positioned and rotated as required. This class should either be started with a list size -\/ \hyperlink{classc_compound_collision_a8769934e6b4193ad31663288f8f55d0a}{cCompoundCollision(uint32 liSize)} -\/ or call the function \hyperlink{classc_limited_pointer_list_ab72b03a5d82ee318bf21d3102bdfecda}{Init(uint32 liSize)} before it is used. 

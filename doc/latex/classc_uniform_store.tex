@@ -1,0 +1,50 @@
+\hypertarget{classc_uniform_store}{
+\section{cUniformStore Class Reference}
+\label{classc_uniform_store}\index{cUniformStore@{cUniformStore}}
+}
+
+
+This is a specific type of \hyperlink{classc_user_variable}{cUserVariable} for Controlling Uniform variables. This is a virtual class type of \hyperlink{classc_user_variable}{cUserVariable}. It is still virtual but is specialised for Uniform variables. This will store a copy of the data set by the user. This means the user must pass the new values to this when they are changed. Uniform Variables are variables which are the same for every vertex in the object. see \hyperlink{classc_float_uniform_store}{cFloatUniformStore}, \hyperlink{classc_int_uniform_store}{cIntUniformStore}, \hyperlink{classc_boolean_uniform_store}{cBooleanUniformStore}.  
+
+
+
+
+Collaboration diagram for cUniformStore:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classc_uniform_store__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_uniform_store_a411655ecc2215907e4d8d0a89698fb63}{
+void \hyperlink{classc_uniform_store_a411655ecc2215907e4d8d0a89698fb63}{Write} ()=0}
+\label{classc_uniform_store_a411655ecc2215907e4d8d0a89698fb63}
+
+\begin{DoxyCompactList}\small\item\em This is an empty virtual function but would normally write the buffered data to the graphics card to be used by a \hyperlink{classc_shader_program}{cShaderProgram}. \end{DoxyCompactList}\item 
+\hypertarget{classc_uniform_store_a38387f1488bdae7ccc74196659cb3ede}{
+void \hyperlink{classc_uniform_store_a38387f1488bdae7ccc74196659cb3ede}{DataValue} (void $\ast$lpData, uint32 liElements)}
+\label{classc_uniform_store_a38387f1488bdae7ccc74196659cb3ede}
+
+\begin{DoxyCompactList}\small\item\em This will Set the Array of Data an Attribute Variable will Use. This will copy the data. It will not automatically update, but the data can be deallocated at any time. \end{DoxyCompactList}\item 
+\hypertarget{classc_uniform_store_a08f744432a74e4765d42df24d00c4135}{
+void \hyperlink{classc_uniform_store_a08f744432a74e4765d42df24d00c4135}{DataPointer} (void $\ast$lpData, uint32 liElements)}
+\label{classc_uniform_store_a08f744432a74e4765d42df24d00c4135}
+
+\begin{DoxyCompactList}\small\item\em This will Set the Array of Data an Attribute Variable will Use. This will not copy the data, but will store a pointer to the data. It will automatically update, but the data passed to it should not be deallocated while the shader is in use. \end{DoxyCompactList}\item 
+\hypertarget{classc_uniform_store_ad2332410c6b979b8a950c49a8400f789}{
+void \hyperlink{classc_uniform_store_ad2332410c6b979b8a950c49a8400f789}{DataValue} (void $\ast$lpData)=0}
+\label{classc_uniform_store_ad2332410c6b979b8a950c49a8400f789}
+
+\begin{DoxyCompactList}\small\item\em This will Set the Data a Uniform Variable will Use. This will copy the data. It will not automatically update, but the data can be deallocated at any time. \end{DoxyCompactList}\item 
+\hypertarget{classc_uniform_store_a00ceec8165d75bd5e55c69e96375e523}{
+virtual void \hyperlink{classc_uniform_store_a00ceec8165d75bd5e55c69e96375e523}{DataPointer} (void $\ast$lpData)=0}
+\label{classc_uniform_store_a00ceec8165d75bd5e55c69e96375e523}
+
+\begin{DoxyCompactList}\small\item\em This will Set the Data a Uniform Variable will Use. This will not copy the data, but will store a pointer to the data. It will automatically update, but the data passed to it should not be deallocated while the shader is in use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a specific type of \hyperlink{classc_user_variable}{cUserVariable} for Controlling Uniform variables. This is a virtual class type of \hyperlink{classc_user_variable}{cUserVariable}. It is still virtual but is specialised for Uniform variables. This will store a copy of the data set by the user. This means the user must pass the new values to this when they are changed. Uniform Variables are variables which are the same for every vertex in the object. see \hyperlink{classc_float_uniform_store}{cFloatUniformStore}, \hyperlink{classc_int_uniform_store}{cIntUniformStore}, \hyperlink{classc_boolean_uniform_store}{cBooleanUniformStore}. 

@@ -2,7 +2,7 @@
 
 cSphereCollision::cSphereCollision(){mfSize=0.0f;};
 cSphereCollision::~cSphereCollision(){};
-void cSphereCollision::SetSize(float lfSize){mfSize=lfSize*lfSize;};
+void cSphereCollision::SetSize(float lfSize){mfSize=lfSize;};
 float cSphereCollision::CollisionSize(){return mfSize;};
 cSphereCollision *cSphereCollision::Sphere(){return this;};
 
@@ -14,3 +14,5 @@ cSphereCollision *cSphereCollision::Sphere(){return this;};
 #endif
 
 void cSphereCollision::Update(cMatrix4 &New){(void) New;};
+
+uint8 cSphereCollision::Type(){return WT_COLLISION_RADIUS;}

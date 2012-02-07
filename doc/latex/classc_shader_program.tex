@@ -1,0 +1,125 @@
+\hypertarget{classc_shader_program}{
+\section{cShaderProgram Class Reference}
+\label{classc_shader_program}\index{cShaderProgram@{cShaderProgram}}
+}
+
+
+A \hyperlink{classc_shader_program_ab032906ae85885362543784fea60cc87}{cShaderProgram()} is a series of cShader() objects compiled into a program. \hyperlink{classc_shader_program}{cShaderProgram} is a \hyperlink{classc_file_a5bb81f36e954af61b581e3c1fd06e0de}{cFile()} object. The \hyperlink{classc_shader_program_ab032906ae85885362543784fea60cc87}{cShaderProgram()} finds a pointer to all the Shaders that compose it and compile them into a program. A cShader() object can be used in many different programs. The \hyperlink{classc_shader_program_ab032906ae85885362543784fea60cc87}{cShaderProgram()} can be produced manually using the \hyperlink{classc_shader_program_a0f0adf11f436c0d8149b6c5e196fe859}{AttachShader()} and \hyperlink{classc_shader_program_a2e6bc46c158959bcea66b4e321416b72}{Link()} functions. The \hyperlink{classc_shader_program_ab032906ae85885362543784fea60cc87}{cShaderProgram()} can be turned on with the use function.  
+
+
+
+
+Collaboration diagram for cShaderProgram:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_shader_program__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_shader_program_ab032906ae85885362543784fea60cc87}{
+\hyperlink{classc_shader_program_ab032906ae85885362543784fea60cc87}{cShaderProgram} ()}
+\label{classc_shader_program_ab032906ae85885362543784fea60cc87}
+
+\begin{DoxyCompactList}\small\item\em Public Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_acc07aad8793b71f3bbd389bb56ff2415}{
+\hyperlink{classc_shader_program_acc07aad8793b71f3bbd389bb56ff2415}{$\sim$cShaderProgram} ()}
+\label{classc_shader_program_acc07aad8793b71f3bbd389bb56ff2415}
+
+\begin{DoxyCompactList}\small\item\em Public Destructor. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_a1affe56cbdde65835335cc1aeb21a851}{
+uint32 \hyperlink{classc_shader_program_a1affe56cbdde65835335cc1aeb21a851}{ID} ()}
+\label{classc_shader_program_a1affe56cbdde65835335cc1aeb21a851}
+
+\begin{DoxyCompactList}\small\item\em This will return the OpenGL Shader Program ID for this \hyperlink{classc_shader_program_ab032906ae85885362543784fea60cc87}{cShaderProgram()} object. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_a0f0adf11f436c0d8149b6c5e196fe859}{
+void \hyperlink{classc_shader_program_a0f0adf11f436c0d8149b6c5e196fe859}{AttachShader} (cShader $\ast$lpShader)}
+\label{classc_shader_program_a0f0adf11f436c0d8149b6c5e196fe859}
+
+\begin{DoxyCompactList}\small\item\em This will manually Attach the cShader() object lpShader to the OpenGL Shader Program miProgramID. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_af9df3e552dd368f2a17bc2cd9629c94b}{
+void \hyperlink{classc_shader_program_af9df3e552dd368f2a17bc2cd9629c94b}{DetachShader} (cShader $\ast$lpShader)}
+\label{classc_shader_program_af9df3e552dd368f2a17bc2cd9629c94b}
+
+\begin{DoxyCompactList}\small\item\em This will manually remove the cShader() object lpShader from the OpenGL Shader Program miProgramID. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_a2e6bc46c158959bcea66b4e321416b72}{
+void \hyperlink{classc_shader_program_a2e6bc46c158959bcea66b4e321416b72}{Link} ()}
+\label{classc_shader_program_a2e6bc46c158959bcea66b4e321416b72}
+
+\begin{DoxyCompactList}\small\item\em This will \hyperlink{classc_shader_program_a2e6bc46c158959bcea66b4e321416b72}{Link()} the compiled cShader() objects together. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_a875d9dca579f3b2ea1d81b65faf80738}{
+void \hyperlink{classc_shader_program_a875d9dca579f3b2ea1d81b65faf80738}{Use} ()}
+\label{classc_shader_program_a875d9dca579f3b2ea1d81b65faf80738}
+
+\begin{DoxyCompactList}\small\item\em This will turn on shaders and make this shader the current shader system. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_a1f3e7bf1c63c0bde8e537981ed555933}{
+uint32 \hyperlink{classc_shader_program_a1f3e7bf1c63c0bde8e537981ed555933}{Size} ()}
+\label{classc_shader_program_a1f3e7bf1c63c0bde8e537981ed555933}
+
+\begin{DoxyCompactList}\small\item\em This will return the number of cShader() objects used by this system. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_a1a75e17e0116f72f0079c6097f66ac22}{
+cShader $\ast$ \hyperlink{classc_shader_program_a1a75e17e0116f72f0079c6097f66ac22}{operator\mbox{[}$\,$\mbox{]}} (uint32 liCount)}
+\label{classc_shader_program_a1a75e17e0116f72f0079c6097f66ac22}
+
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the cShader() object in position liCount of the cShader() List;. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_ac8f1caa093d9651daf5e303e877ed47d}{
+void \hyperlink{classc_shader_program_ac8f1caa093d9651daf5e303e877ed47d}{LoadIMF} (ifstream \&FileStream)}
+\label{classc_shader_program_ac8f1caa093d9651daf5e303e877ed47d}
+
+\begin{DoxyCompactList}\small\item\em This will allow the \hyperlink{classc_shader_program_ab032906ae85885362543784fea60cc87}{cShaderProgram()} to extract a list of string references for Shaders. It will then find pointers to the cShader() objects and compile the program using them. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_af32e0719b95d317afd621a800f7cfc47}{
+void \hyperlink{classc_shader_program_af32e0719b95d317afd621a800f7cfc47}{SetUniform} (string lcString, void $\ast$Data)}
+\label{classc_shader_program_af32e0719b95d317afd621a800f7cfc47}
+
+\begin{DoxyCompactList}\small\item\em This will set a Uniform Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_a0792c520e3eb96219e4cbea9747dceef}{
+void \hyperlink{classc_shader_program_a0792c520e3eb96219e4cbea9747dceef}{SetAttribute} (string lcString, void $\ast$Data, uint32 liElements)}
+\label{classc_shader_program_a0792c520e3eb96219e4cbea9747dceef}
+
+\begin{DoxyCompactList}\small\item\em This will set an Attribute Array Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_a82767fc2f7e1b06cccde88e0203cee4f}{
+void \hyperlink{classc_shader_program_a82767fc2f7e1b06cccde88e0203cee4f}{SetVariable} (string lcString, void $\ast$Data)}
+\label{classc_shader_program_a82767fc2f7e1b06cccde88e0203cee4f}
+
+\begin{DoxyCompactList}\small\item\em This will set a Uniform Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_aa39fb33d84ff062b70c20f4a8696df5d}{
+void \hyperlink{classc_shader_program_aa39fb33d84ff062b70c20f4a8696df5d}{SetVariable} (string lcString, void $\ast$Data, uint32 liElements)}
+\label{classc_shader_program_aa39fb33d84ff062b70c20f4a8696df5d}
+
+\begin{DoxyCompactList}\small\item\em This will set an Attribute Array Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_abd7136989bf490d648b0eab6ce3eccf8}{
+void \hyperlink{classc_shader_program_abd7136989bf490d648b0eab6ce3eccf8}{SetUniformPointer} (string lcString, void $\ast$Data)}
+\label{classc_shader_program_abd7136989bf490d648b0eab6ce3eccf8}
+
+\begin{DoxyCompactList}\small\item\em This will set the pointer for the Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_af3f096988b319a510178eac210955e1c}{
+void \hyperlink{classc_shader_program_af3f096988b319a510178eac210955e1c}{SetAttributePointer} (string lcString, void $\ast$Data, uint32 liElements)}
+\label{classc_shader_program_af3f096988b319a510178eac210955e1c}
+
+\begin{DoxyCompactList}\small\item\em This will set the pointer for the Attribute Array Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_a1e1afdd0656a4b7ee567f73e01069c1d}{
+void \hyperlink{classc_shader_program_a1e1afdd0656a4b7ee567f73e01069c1d}{SetVariablePointer} (string lcString, void $\ast$Data)}
+\label{classc_shader_program_a1e1afdd0656a4b7ee567f73e01069c1d}
+
+\begin{DoxyCompactList}\small\item\em This will set the pointer for the Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_a93ab1d3e9d7ef349ed3886a8832b30b7}{
+void \hyperlink{classc_shader_program_a93ab1d3e9d7ef349ed3886a8832b30b7}{SetVariablePointer} (string lcString, void $\ast$Data, uint32 liElements)}
+\label{classc_shader_program_a93ab1d3e9d7ef349ed3886a8832b30b7}
+
+\begin{DoxyCompactList}\small\item\em This will set the pointer for the Attribute Array Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_a732325d1dd8a9d7d58c180fdb54130fc}{
+{\footnotesize template$<$class cType $>$ }\\cType $\ast$ \hyperlink{classc_shader_program_a732325d1dd8a9d7d58c180fdb54130fc}{GetVariable} (string lcString)}
+\label{classc_shader_program_a732325d1dd8a9d7d58c180fdb54130fc}
+
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the Variable of Type cType with the reference lcString. \end{DoxyCompactList}\item 
+\hypertarget{classc_shader_program_ac835acf65bc2484ca55bab4c79027b77}{
+{\footnotesize template$<$class cType $>$ }\\cType $\ast$ \hyperlink{classc_shader_program_ac835acf65bc2484ca55bab4c79027b77}{GetVariable} (uint32 liPos)}
+\label{classc_shader_program_ac835acf65bc2484ca55bab4c79027b77}
+
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the Variable of Type cType in position liPos of the Variable List. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classc_shader_program_ab032906ae85885362543784fea60cc87}{cShaderProgram()} is a series of cShader() objects compiled into a program. \hyperlink{classc_shader_program}{cShaderProgram} is a \hyperlink{classc_file_a5bb81f36e954af61b581e3c1fd06e0de}{cFile()} object. The \hyperlink{classc_shader_program_ab032906ae85885362543784fea60cc87}{cShaderProgram()} finds a pointer to all the Shaders that compose it and compile them into a program. A cShader() object can be used in many different programs. The \hyperlink{classc_shader_program_ab032906ae85885362543784fea60cc87}{cShaderProgram()} can be produced manually using the \hyperlink{classc_shader_program_a0f0adf11f436c0d8149b6c5e196fe859}{AttachShader()} and \hyperlink{classc_shader_program_a2e6bc46c158959bcea66b4e321416b72}{Link()} functions. The \hyperlink{classc_shader_program_ab032906ae85885362543784fea60cc87}{cShaderProgram()} can be turned on with the use function. 

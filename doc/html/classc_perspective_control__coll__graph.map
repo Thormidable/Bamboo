@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classc_camera_matrix4.html" title="This is a translation matrix for a camera object A Special Matric for Cameras. All the translations a..." alt="" coords="5,101,123,131"/>
+<area shape="rect" id="node5" href="$classc_viewport_control.html" title="The cViewportControl allows the user to control the region of the screen a cCamera or cViewport objec..." alt="" coords="223,101,345,131"/>
+<area shape="rect" id="node7" href="$classc_r_g_b_a.html" title="this is a Color Variable. It can Store 4 components: Red, Green, Blue and Alpha. Alpha of 0..." alt="" coords="251,5,317,35"/>
+<area shape="rect" id="node9" href="$classc_matrix4.html" title="this is a standard 4x4 translation matrix for objects. This is a standard 4x4 translation matrix for ..." alt="" coords="369,101,441,131"/>
+</map>

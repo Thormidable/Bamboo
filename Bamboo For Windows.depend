@@ -1283,7 +1283,7 @@
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\global\wtgamesettings.h
 
-1327500232 e:\my documents\c++ code\bamboo\bamboo\src\global\imfdefinitions.h
+1327830486 e:\my documents\c++ code\bamboo\bamboo\src\global\imfdefinitions.h
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\global\wtcflags.h
 
@@ -1309,7 +1309,7 @@
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtminlinkedlist.h
 
-1327501102 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtlimitedlist.h
+1327626662 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtlimitedlist.h
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtcpushpopstack.h
 
@@ -1359,7 +1359,7 @@
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtccluster.h
 
-1327500232 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.h
+1327587397 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.h
 
 1318401353 e:\my documents\c++ code\bamboo\bamboo\src\files\textures\wtvtexture.h
 
@@ -1397,7 +1397,7 @@
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\wtv2dpolygon.h
 
-1327500232 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.h
+1327592321 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.h
 
 1327505632 e:\my documents\c++ code\bamboo\bamboo\src\camera\wtccamera.h
 
@@ -1574,7 +1574,7 @@
 1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcplane.cpp
 	"../../../WTBamboo.h"
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcpolygon.cpp
+1327577908 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcpolygon.cpp
 	"../../../WTBamboo.h"
 
 1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\meshes\meshclasses\wtcvertex.cpp
@@ -1598,7 +1598,7 @@
 1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\misc\wtcreferencelist.cpp
 	"../../WTBamboo.h"
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshader.cpp
+1327833526 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshader.cpp
 	"../../WTBamboo.h"
 
 1327573141 source:e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.cpp
@@ -1658,7 +1658,7 @@
 1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionlist.cpp
 	"../WTBamboo.h"
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.cpp
+1327592326 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionobject.cpp
 	"../WTBamboo.h"
 
 1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\windows\eventhandler\wtceventhandler.cpp
@@ -5477,14 +5477,14 @@
 1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\maths\wtccolors.cpp
 	"../WTBamboo.h"
 
-1327500232 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionbase.h
+1327586105 e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionbase.h
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionbase.cpp
+1327587645 source:e:\my documents\c++ code\bamboo\bamboo\src\physics\wtccollisionbase.cpp
 	"../WTBamboo.h"
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\ptl\wtcsingleton.h
 
-1327577498 e:\my documents\c++ code\bamboo\bamboo\src\wtbamboo.h
+1327680344 e:\my documents\c++ code\bamboo\bamboo\src\wtbamboo.h
 	<stdint.h>
 	<unistd.h>
 	"./WTOsBits.h"
@@ -5558,6 +5558,7 @@
 	"./Files/CollisionMeshes/WTcRayCollision.h"
 	"./Files/CollisionMeshes/WTcMeshFileCollision.h"
 	"./Files/CollisionMeshes/WTcCompoundCollision.h"
+	"./Files/CollisionMeshes/WTcCompoundCollisionFile.h"
 	"./Files/Textures/WTcTexture.h"
 	"./Files/Fonts/WTcFont.h"
 	"./Files/Shaders/WTcShader.h"
@@ -5610,34 +5611,34 @@
 	"./Physics/WTcCollisionHandler.h"
 	"./Engine/WTcBase.h"
 
-1327500232 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcspherecollision.h
+1327587473 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcspherecollision.h
 
-1327500232 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcmeshcollision.h
+1327586686 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcmeshcollision.h
 
-1327500232 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcbeamcollision.h
+1327586686 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcbeamcollision.h
 
-1327500232 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcraycollision.h
+1327586686 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcraycollision.h
 
 1327500232 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcmeshfilecollision.h
 
-1327500232 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtccompoundcollision.h
+1327679069 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtccompoundcollision.h
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcbeamcollision.cpp
+1327586069 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcbeamcollision.cpp
 	"../../WTBamboo.h"
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtccompoundcollision.cpp
+1327626464 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtccompoundcollision.cpp
 	"../../WTBamboo.h"
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcmeshcollision.cpp
+1327585977 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcmeshcollision.cpp
 	"../../WTBamboo.h"
 
 1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcmeshfilecollision.cpp
 	"../../WTBamboo.h"
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcraycollision.cpp
+1327585995 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcraycollision.cpp
 	"../../WTBamboo.h"
 
-1327500232 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcspherecollision.cpp
+1327586004 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtcspherecollision.cpp
 	"../../WTBamboo.h"
 
 1326561842 e:\my documents\c++ code\bamboo\bamboo\src\files\shaders\wtcrendervariablesettemplates.h
@@ -5671,4 +5672,9 @@
 
 1327504341 source:e:\my documents\c++ code\bamboo\bamboo\src\camera\wtcperspectivecontrol.cpp
 	"../WTBamboo.h"
+
+1327831794 e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtccompoundcollisionfile.h
+
+1327831247 source:e:\my documents\c++ code\bamboo\bamboo\src\files\collisionmeshes\wtccompoundcollisionfile.cpp
+	"../../WTBamboo.h"
 

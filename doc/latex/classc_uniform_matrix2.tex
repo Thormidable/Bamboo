@@ -1,0 +1,37 @@
+\hypertarget{classc_uniform_matrix2}{
+\section{cUniformMatrix2 Class Reference}
+\label{classc_uniform_matrix2}\index{cUniformMatrix2@{cUniformMatrix2}}
+}
+
+
+This is a specific type of \hyperlink{classc_uniform_store}{cUniformStore} for Controlling Uniform variable from a \hyperlink{classc_shader_program}{cShaderProgram}. See \hyperlink{classc_uniform_store}{cUniformStore}.  
+
+
+
+
+Collaboration diagram for cUniformMatrix2:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classc_uniform_matrix2__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_uniform_matrix2_a10a57f7b856f2883fc8e31e3730cff04}{
+void \hyperlink{classc_uniform_matrix2_a10a57f7b856f2883fc8e31e3730cff04}{Write} ()}
+\label{classc_uniform_matrix2_a10a57f7b856f2883fc8e31e3730cff04}
+
+\begin{DoxyCompactList}\small\item\em This will Write the buffered value to the Graphics card. \end{DoxyCompactList}\item 
+\hypertarget{classc_uniform_matrix2_a3dc883ced4979df51a043331c3ec7bbd}{
+void \hyperlink{classc_uniform_matrix2_a3dc883ced4979df51a043331c3ec7bbd}{DataValue} (void $\ast$lpData)}
+\label{classc_uniform_matrix2_a3dc883ced4979df51a043331c3ec7bbd}
+
+\begin{DoxyCompactList}\small\item\em This will Set the Data a Uniform Variable will Use. This will copy the data. It will not automatically update, but the data can be deallocated at any time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a specific type of \hyperlink{classc_uniform_store}{cUniformStore} for Controlling Uniform variable from a \hyperlink{classc_shader_program}{cShaderProgram}. See \hyperlink{classc_uniform_store}{cUniformStore}. 
+
+This Object holds a 2x2 Matrix of floats to be used by \hyperlink{classc_shader_program}{cShaderProgram}. WARNING: Data points to the Array instead of buffering the data. This means the Array must not be deleted, but will be automatically updated. 

@@ -6,8 +6,6 @@ void cShaderVariable::LoadIMF(ifstream &FileStream)
 {
     FileStream.read((char*)&miType,sizeof(uint8));
     FileStream.read((char*)&miID,sizeof(uint32));
-	printf("cShaderVariable:: miType=%u\n",miType);
-	printf("cShaderVariable::miID=%u\n",miID);
     mpStart=0;
 }
 

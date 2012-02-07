@@ -192,7 +192,7 @@ public:
 		if(mpList)
 		{
 			uint32 liCount;
-			for(liCount=0;liCount<miItems;++liCount); delete mpList[liCount];
+			for(liCount=0;liCount<miItems;++liCount) delete mpList[liCount];
         	delete []mpList;
 			mpList=0;
 		}

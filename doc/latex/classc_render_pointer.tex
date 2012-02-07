@@ -1,0 +1,47 @@
+\hypertarget{classc_render_pointer}{
+\section{cRenderPointer Class Reference}
+\label{classc_render_pointer}\index{cRenderPointer@{cRenderPointer}}
+}
+
+
+This class is a temporary store for a cRenderObjects data. This is the complete render matrix and all other data required to render the object.  
+
+
+
+
+Collaboration diagram for cRenderPointer:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_render_pointer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_render_pointer_a896535cf0d3f8282aac2c2a1694f554e}{
+void \hyperlink{classc_render_pointer_a896535cf0d3f8282aac2c2a1694f554e}{SetObject} (\hyperlink{classc_render_object}{cRenderObject} $\ast$lpObject)}
+\label{classc_render_pointer_a896535cf0d3f8282aac2c2a1694f554e}
+
+\begin{DoxyCompactList}\small\item\em Will Set the \hyperlink{classc_render_object}{cRenderObject} that this will link to. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_pointer_a7a20298c7c71e5eada122331d3ea95e5}{
+void \hyperlink{classc_render_pointer_a7a20298c7c71e5eada122331d3ea95e5}{SetShader} (\hyperlink{classc_shader_program}{cShaderProgram} $\ast$lpShader)}
+\label{classc_render_pointer_a7a20298c7c71e5eada122331d3ea95e5}
+
+\begin{DoxyCompactList}\small\item\em This will set the shader to be used by the object. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_pointer_acb4e6f40867bc7f7592ba5c5d500f29e}{
+void \hyperlink{classc_render_pointer_acb4e6f40867bc7f7592ba5c5d500f29e}{SetAlpha} (bool lbAlpha)}
+\label{classc_render_pointer_acb4e6f40867bc7f7592ba5c5d500f29e}
+
+\begin{DoxyCompactList}\small\item\em This will set the Alpha of the object. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_pointer_a7415447aae9ba48f26a8e388a387a252}{
+void \hyperlink{classc_render_pointer_a7415447aae9ba48f26a8e388a387a252}{SetAll} (\hyperlink{classc_render_object}{cRenderObject} $\ast$lpObject, \hyperlink{classc_shader_program}{cShaderProgram} $\ast$lpShader=0, bool lbAlpha=0)}
+\label{classc_render_pointer_a7415447aae9ba48f26a8e388a387a252}
+
+\begin{DoxyCompactList}\small\item\em This will all the user to set some / all of the parameters for this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is a temporary store for a cRenderObjects data. This is the complete render matrix and all other data required to render the object. 
+
+This is a storage class for the cPainter class. It stores all the relevant data about a Renderable Object to allow it to be processed by cPainter. 

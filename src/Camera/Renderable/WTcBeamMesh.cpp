@@ -25,7 +25,7 @@ cBeamMesh::cBeamMesh(float Radius,float Length,uint16 Segments,cCamera *lpNode) 
 
 void cBeamMesh::RenderBeam()
 {
-
+	glDisable(GL_CULL_FACE);
 	glDisable(GL_NORMAL_ARRAY);
 
 	glBindBuffer(GL_ARRAY_BUFFER, mBuffer1);
@@ -34,9 +34,10 @@ void cBeamMesh::RenderBeam()
 
 	glVertexPointer(3,GL_FLOAT,0,0);
 
-	glDrawElements(GL_TRIANGLE_STRIP,miSegments*4-1,GL_UNSIGNED_SHORT,0);
+	glDrawElements(GL_TRIANGLE_STRIP,miSegments*4-3,GL_UNSIGNED_SHORT,0);
 
 	glEnable(GL_NORMAL_ARRAY);
+	glEnable(GL_CULL_FACE);
 }
 
 void cBeamMesh::BufferBeam()
@@ -49,7 +50,7 @@ void cBeamMesh::BufferBeam()
 	glBufferData(GL_ARRAY_BUFFER, sizeof(float)*(miSegments*6), VertexData, GL_STATIC_DRAW);
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint16)*(miSegments*4-1), VertexList, GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint16)*(miSegments*4), VertexList, GL_STATIC_DRAW);
 
 }
 
@@ -115,6 +116,7 @@ void cBeamMesh::Length(float Length)
 
 void cBeamMesh::GenerateData(float Radius,float Length,uint16 Segments)
 {
+
 	mfRadius=Radius;
 	mfLength=Length;
 	miSegments=Segments;
@@ -142,41 +144,57 @@ void cBeamMesh::GenerateData(float Radius,float Length,uint16 Segments)
 
 
 
-
-	liCount3=(Segments*4-1);
+int16 HalfSegments=Segments>>1;
+ liCount3=(Segments*4-3);
 	if(VertexList) delete []VertexList;
 	VertexList=new uint16[liCount3];
 
-	VertexList[0]=0;
+	//Set Start and Ends
+	 VertexList[0]=0;
+	 VertexList[liCount3-1]=Segments*2-1;
 
 	//Build Ends
+	//Triangle Strip!
 	for(liCount=1;liCount*2<Segments;++liCount)
 	{
-		liCount3=liCount*2;
+		//1,3,5
 		VertexList[liCount*2-1]=Segments-liCount;
+		//2,4,6
 		VertexList[liCount*2]=liCount;
 
- 		VertexList[Segments*4-2-liCount*2+1]=2*Segments-liCount;
- 		VertexList[Segments*4-2-liCount*2]=Segments+liCount;
+		//Top-1,Top-3,Top-5
+ 		VertexList[liCount3-liCount*2-1]=Segments*2-1-liCount;
+		//Top-2, Top-4,Top-6
+		VertexList[liCount3-liCount*2]=Segments+liCount-1;
 	}
 
+	VertexList[Segments-1]=HalfSegments;
 
-
-	int16 HalfSegments=Segments>>1;
 //build walls
 
-	for(liCount=0;liCount<Segments;++liCount)
+	VertexList[Segments]=Segments+HalfSegments;
+
+	for(liCount=1;liCount<=Segments;++liCount)
 	{
-		if(liCount>=HalfSegments){HalfSegments=-HalfSegments;}
-		VertexList[Segments+liCount*2-1]=HalfSegments+liCount;
-		VertexList[Segments+liCount*2]=Segments+HalfSegments+liCount;
+			VertexList[Segments+liCount*2-1]=HalfSegments+liCount;
+			if(VertexList[Segments+liCount*2-1]>=Segments) VertexList[Segments+liCount*2-1]-=Segments;
+			VertexList[Segments+liCount*2]=VertexList[Segments+liCount*2-1]+Segments;
+	}
+
+	VertexList[Segments*3-1]=Segments+HalfSegments;
+
+
+	for(liCount=0;liCount<Segments*2-2;++liCount)
+	{
+		uint16 liTemp;
+		liTemp=VertexList[liCount];
+		VertexList[liCount]=VertexList[Segments*4-4-liCount];
+		VertexList[Segments*4-4-liCount]=liTemp;
 
 	}
 
-	VertexList[Segments*3-1]=Segments+(Segments>>1);
-	VertexList[Segments*4-2]=Segments;
-
 	BufferBeam();
+
 }
 /*
  * float cBeamMesh::Verteces[78]=

@@ -1,0 +1,265 @@
+\hypertarget{classc_render_object}{
+\section{cRenderObject Class Reference}
+\label{classc_render_object}\index{cRenderObject@{cRenderObject}}
+}
+
+
+This class contains the base code for all renderable objects. Any renderable object should inherit this class.  
+
+
+
+
+Collaboration diagram for cRenderObject:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_render_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_render_object_abd47a58de22adfe1e9a1970f66a2f4cd}{
+void \hyperlink{classc_render_object_abd47a58de22adfe1e9a1970f66a2f4cd}{Shader} (\hyperlink{classc_shader_program}{cShaderProgram} $\ast$lpShader)}
+\label{classc_render_object_abd47a58de22adfe1e9a1970f66a2f4cd}
+
+\begin{DoxyCompactList}\small\item\em Will set the shader this object will use. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a75f92ce4ba7b36a07e24be0643e4f020}{
+void \hyperlink{classc_render_object_a75f92ce4ba7b36a07e24be0643e4f020}{Shader} (string lcString)}
+\label{classc_render_object_a75f92ce4ba7b36a07e24be0643e4f020}
+
+\begin{DoxyCompactList}\small\item\em Will set the shader to use the Shader Program with the specified reference. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a46f43819b5b1d7a3796e5cb25cf26687}{
+\hyperlink{classc_shader_program}{cShaderProgram} $\ast$ \hyperlink{classc_render_object_a46f43819b5b1d7a3796e5cb25cf26687}{Shader} ()}
+\label{classc_render_object_a46f43819b5b1d7a3796e5cb25cf26687}
+
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the Shader Program that is currently bound to this model. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a4c53fe5d3df67ba2e15001e9c939f94f}{
+\hyperlink{classc_render_object_a4c53fe5d3df67ba2e15001e9c939f94f}{cRenderObject} ()}
+\label{classc_render_object_a4c53fe5d3df67ba2e15001e9c939f94f}
+
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classc_render_object}{cRenderObject}. Creates a new render object and adds itself to cCamera::mpRenderList. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_ac2f9afc83efee8f326bf4f746e59d759}{
+\hyperlink{classc_render_object_ac2f9afc83efee8f326bf4f746e59d759}{cRenderObject} (vRenderNode $\ast$lpNode)}
+\label{classc_render_object_ac2f9afc83efee8f326bf4f746e59d759}
+
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classc_render_object}{cRenderObject}. Creates a new render object and adds itself to lpNode. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a5721ec744bfaf97aed8f5ec9e212aa39}{
+\hyperlink{classc_render_object_a5721ec744bfaf97aed8f5ec9e212aa39}{cRenderObject} (bool lbNoTextures)}
+\label{classc_render_object_a5721ec744bfaf97aed8f5ec9e212aa39}
+
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classc_render_object}{cRenderObject}. Creates a new render object and adds itself to cCamera::mpRenderList. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a9a0f0cb2996914f11569fbf215ab7306}{
+\hyperlink{classc_render_object_a9a0f0cb2996914f11569fbf215ab7306}{cRenderObject} (vRenderNode $\ast$lpNode, bool lbNoTextures)}
+\label{classc_render_object_a9a0f0cb2996914f11569fbf215ab7306}
+
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classc_render_object}{cRenderObject}. Creates a new render object and adds itself to lpNode. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a22971185fccf5b0ea77761eca31fc1eb}{
+\hyperlink{classc_render_object_a22971185fccf5b0ea77761eca31fc1eb}{cRenderObject} (\hyperlink{classc_camera}{cCamera} $\ast$lpCamera)}
+\label{classc_render_object_a22971185fccf5b0ea77761eca31fc1eb}
+
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classc_render_object}{cRenderObject}. Creates a new render object and adds itself to the \hyperlink{classc_render_node}{cRenderNode} of the \hyperlink{classc_camera}{cCamera} lpCamera. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a1a654b5029882db9175593b1f717c798}{
+\hyperlink{classc_render_object_a1a654b5029882db9175593b1f717c798}{cRenderObject} (\hyperlink{classc_camera}{cCamera} $\ast$lpCamera, bool lbNoTextures)}
+\label{classc_render_object_a1a654b5029882db9175593b1f717c798}
+
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classc_render_object}{cRenderObject}. Creates a new render object and adds itself to the \hyperlink{classc_render_node}{cRenderNode} of the \hyperlink{classc_camera}{cCamera} lpCamera. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a9cd352514159783b312cf9d3a6168e8e}{
+void \hyperlink{classc_render_object_a9cd352514159783b312cf9d3a6168e8e}{LinkCollisionObject} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpObj)}
+\label{classc_render_object_a9cd352514159783b312cf9d3a6168e8e}
+
+\begin{DoxyCompactList}\small\item\em This will set the Collision Object that is linked to this renderable object. This should be called automatically when a \hyperlink{classc_collision_object}{cCollisionObject} is created. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a532344b60df3ebd0cf893fa550df318e}{
+vRenderNode $\ast$ \hyperlink{classc_render_object_a532344b60df3ebd0cf893fa550df318e}{Renderer} ()}
+\label{classc_render_object_a532344b60df3ebd0cf893fa550df318e}
+
+\begin{DoxyCompactList}\small\item\em Returns the vRenderNode which owns this renderable process. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a7f1424d2badbe9e09bc6fd4af6616fa0}{
+void \hyperlink{classc_render_object_a7f1424d2badbe9e09bc6fd4af6616fa0}{Delete} ()}
+\label{classc_render_object_a7f1424d2badbe9e09bc6fd4af6616fa0}
+
+\begin{DoxyCompactList}\small\item\em Will remove this object from the render list owned by mpRenderer. \end{DoxyCompactList}\item 
+cRenderOwner \& \hyperlink{classc_render_object_a247947b8d810bf556af4677dd5165983}{SetRenderNode} (vRenderNode $\ast$lpNode)
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the Shader Program that is currently bound to this model. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a4e4d06cfc220b466c5057105c10d658c}{
+virtual void \hyperlink{classc_render_object_a4e4d06cfc220b466c5057105c10d658c}{Stop} ()}
+\label{classc_render_object_a4e4d06cfc220b466c5057105c10d658c}
+
+\begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a kill signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a59b3e3fc3d973b88483db3a802fc4744}{
+virtual void \hyperlink{classc_render_object_a59b3e3fc3d973b88483db3a802fc4744}{OnSleep} ()}
+\label{classc_render_object_a59b3e3fc3d973b88483db3a802fc4744}
+
+\begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a sleep signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_ae64dcff609168192347a8fd833325bcb}{
+virtual void \hyperlink{classc_render_object_ae64dcff609168192347a8fd833325bcb}{OnWake} ()}
+\label{classc_render_object_ae64dcff609168192347a8fd833325bcb}
+
+\begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a wake signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_aeeb8da742f1a844179a74a99e9aa4433}{
+void \hyperlink{classc_render_object_aeeb8da742f1a844179a74a99e9aa4433}{UpdateCache} ()}
+\label{classc_render_object_aeeb8da742f1a844179a74a99e9aa4433}
+
+\begin{DoxyCompactList}\small\item\em This function will update the object cache. For consistency all Renderable Objects must update the cache as they are rendered. This will be the global position of the object and is used to get consistent positions throughout a frame for collision detection. \end{DoxyCompactList}\item 
+void \hyperlink{classc_render_object_ae6383e70912480e39209e5ed6297380c}{AddTexture} (string lsTextureSlot, cTexture $\ast$lpTexture)
+\begin{DoxyCompactList}\small\item\em Will Add the Texture lpTexture to the Texture slot with the name matching lsTextureSlot. Multitexturing in shaders is controlled using uniform sampler types: \end{DoxyCompactList}\item 
+void \hyperlink{classc_render_object_ad45b379f57731d803f7a52e58d91d3aa}{AddTexture} (cTexture $\ast$lpTexture)
+\item 
+\hypertarget{classc_render_object_a6e353a1713c4c6c46922a42e950f0d5a}{
+void \hyperlink{classc_render_object_a6e353a1713c4c6c46922a42e950f0d5a}{RemoveTexture} (string lsTextureSlot)}
+\label{classc_render_object_a6e353a1713c4c6c46922a42e950f0d5a}
+
+\begin{DoxyCompactList}\small\item\em Will remove the texture in TextureSlot labelled lsTextureSlot. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_afd3f36d943e2438f52afb11133a526ca}{
+void \hyperlink{classc_render_object_afd3f36d943e2438f52afb11133a526ca}{RemoveTexture} (uint8 liTexSlot)}
+\label{classc_render_object_afd3f36d943e2438f52afb11133a526ca}
+
+\begin{DoxyCompactList}\small\item\em Will remove the texture in Textureslot number liTexSlot. (Texture0 Texture1 Texture2 etc.) \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_aed36706b1114b4ed11f2e5d8e8dd3ace}{
+float $\ast$ \hyperlink{classc_render_object_aed36706b1114b4ed11f2e5d8e8dd3ace}{GetPos} ()}
+\label{classc_render_object_aed36706b1114b4ed11f2e5d8e8dd3ace}
+
+\begin{DoxyCompactList}\small\item\em This will return the Local position of the selected object. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a7b3312f28505306fa8610d9e097f7b0e}{
+float $\ast$ \hyperlink{classc_render_object_a7b3312f28505306fa8610d9e097f7b0e}{GetCachedGlobalMatrix} ()}
+\label{classc_render_object_a7b3312f28505306fa8610d9e097f7b0e}
+
+\begin{DoxyCompactList}\small\item\em This will return the global position of the object as rendered at the end of last frame. This will return the cached Global position matrix as it was at the end of the last frame. This will only be updated when rendering occurs. For a 'current' global matrix the function cCameraMatrix4::CalculateGlobalMatrix() will actually calculate the current matrix. However it is very slow. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a2c8ef4ef4f7a005caae010b3e287a588}{
+void \hyperlink{classc_render_object_a2c8ef4ef4f7a005caae010b3e287a588}{Transparency} (bool lbTrans)}
+\label{classc_render_object_a2c8ef4ef4f7a005caae010b3e287a588}
+
+\begin{DoxyCompactList}\small\item\em This will set whether this object uses transparency (Transparent objects are rendered after all other objects and in reverse distance order). \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a740268aff52c1fa6cc5fde5122da35fa}{
+bool \hyperlink{classc_render_object_a740268aff52c1fa6cc5fde5122da35fa}{Transparency} ()}
+\label{classc_render_object_a740268aff52c1fa6cc5fde5122da35fa}
+
+\begin{DoxyCompactList}\small\item\em This will return whether this object is using transparency. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a67191d0fe8aceaa10052a542b3c34650}{
+void \hyperlink{classc_render_object_a67191d0fe8aceaa10052a542b3c34650}{Lighting} (bool lbLighting)}
+\label{classc_render_object_a67191d0fe8aceaa10052a542b3c34650}
+
+\begin{DoxyCompactList}\small\item\em This will set whether lighting is used for the object. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a11fd3f36150b07198b069d8d9461b370}{
+bool \hyperlink{classc_render_object_a11fd3f36150b07198b069d8d9461b370}{Lighting} ()}
+\label{classc_render_object_a11fd3f36150b07198b069d8d9461b370}
+
+\begin{DoxyCompactList}\small\item\em This will return whether lighting is enabled for the object. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_afd82d3c16f9f42165e94c343eb6c671e}{
+void \hyperlink{classc_render_object_afd82d3c16f9f42165e94c343eb6c671e}{SetUniform} (string lcString, void $\ast$Data)}
+\label{classc_render_object_afd82d3c16f9f42165e94c343eb6c671e}
+
+\begin{DoxyCompactList}\small\item\em This will set a Uniform Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a3b22fe9279c0fe21c28f65c3777318aa}{
+void \hyperlink{classc_render_object_a3b22fe9279c0fe21c28f65c3777318aa}{SetAttribute} (string lcString, void $\ast$Data, uint32 liElements)}
+\label{classc_render_object_a3b22fe9279c0fe21c28f65c3777318aa}
+
+\begin{DoxyCompactList}\small\item\em This will set an Attribute Array Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a4682c572a677af8b63883e7e01bbdb1c}{
+void \hyperlink{classc_render_object_a4682c572a677af8b63883e7e01bbdb1c}{SetVariable} (string lcString, void $\ast$Data)}
+\label{classc_render_object_a4682c572a677af8b63883e7e01bbdb1c}
+
+\begin{DoxyCompactList}\small\item\em This will set a Uniform Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a2ac23f3c4b20c29a46be82b015ef67cb}{
+void \hyperlink{classc_render_object_a2ac23f3c4b20c29a46be82b015ef67cb}{SetVariable} (string lcString, void $\ast$Data, uint32 liElements)}
+\label{classc_render_object_a2ac23f3c4b20c29a46be82b015ef67cb}
+
+\begin{DoxyCompactList}\small\item\em This will set an Attribute Array Variable named lcString. This will store the data and not automatically update. The data can be deallocated at any time. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a000b32ac1da318565314489ca596601c}{
+void \hyperlink{classc_render_object_a000b32ac1da318565314489ca596601c}{SetUniformPointer} (string lcString, void $\ast$Data)}
+\label{classc_render_object_a000b32ac1da318565314489ca596601c}
+
+\begin{DoxyCompactList}\small\item\em This will set the pointer for the Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a3add8b05fc1d7f4d910149a4f86e2877}{
+void \hyperlink{classc_render_object_a3add8b05fc1d7f4d910149a4f86e2877}{SetAttributePointer} (string lcString, void $\ast$Data, uint32 liElements)}
+\label{classc_render_object_a3add8b05fc1d7f4d910149a4f86e2877}
+
+\begin{DoxyCompactList}\small\item\em This will set the pointer for the Attribute Array Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a5b2c5a5e573530b243e1d1017bac0d80}{
+void \hyperlink{classc_render_object_a5b2c5a5e573530b243e1d1017bac0d80}{SetVariablePointer} (string lcString, void $\ast$Data)}
+\label{classc_render_object_a5b2c5a5e573530b243e1d1017bac0d80}
+
+\begin{DoxyCompactList}\small\item\em This will set the pointer for the Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a6a5096bbe100657432f3d5d33cc837d3}{
+void \hyperlink{classc_render_object_a6a5096bbe100657432f3d5d33cc837d3}{SetVariablePointer} (string lcString, void $\ast$Data, uint32 liElements)}
+\label{classc_render_object_a6a5096bbe100657432f3d5d33cc837d3}
+
+\begin{DoxyCompactList}\small\item\em This will set the pointer for the Attribute Array Variable named lcString. This will not store the data and will automatically update with changes to the data stored in Data. The data should not be deallocated while the Shader is in use. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a2ef2b6f9daee8fe9c8f9c9cd65f4fea4}{
+{\footnotesize template$<$class cType $>$ }\\cType $\ast$ \hyperlink{classc_render_object_a2ef2b6f9daee8fe9c8f9c9cd65f4fea4}{GetVariable} (string lcString)}
+\label{classc_render_object_a2ef2b6f9daee8fe9c8f9c9cd65f4fea4}
+
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the Variable of Type cType with the reference lcString. \end{DoxyCompactList}\item 
+\hypertarget{classc_render_object_a1a10a22c158e96f72a8971ae52f69f38}{
+{\footnotesize template$<$class cType $>$ }\\cType $\ast$ \hyperlink{classc_render_object_a1a10a22c158e96f72a8971ae52f69f38}{GetVariable} (uint32 liPos)}
+\label{classc_render_object_a1a10a22c158e96f72a8971ae52f69f38}
+
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the Variable of Type cType in position liPos of the Variable List. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class contains the base code for all renderable objects. Any renderable object should inherit this class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lpNode} & lpNode is not required, but will add the renderable object to the \hyperlink{classc_render_node}{cRenderNode} pointed to by lpNode. This class should be inherited by any renderable object. If it is handed no parameters then it will add itself to cCamera::mpRenderList, which is owned by \hyperlink{classc_camera}{cCamera}. If you wish to produce a scene graph, the new renderable object can be handed a pointer to a \hyperlink{classc_render_node}{cRenderNode}. Any translations applied to lpNode will change the co-\/ordinate system for this renderable object. 
+\begin{DoxyCode}
+        cRenderNode mpNode=new cRenderNode;
+        cModel mpObject=new cModel(mpNode);
+        mpNode.Advance(1.0f,0.0f,0.0f);
+        mpObject.Advance(1.0f,0.0f,0.0f);
+\end{DoxyCode}
+ After this code mpObject will be at 2.0f,0.0f,0.0. This Function should only be used for Creating New Renderable Object Types. It should be virtual. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_render_object_ae6383e70912480e39209e5ed6297380c}{
+\index{cRenderObject@{cRenderObject}!AddTexture@{AddTexture}}
+\index{AddTexture@{AddTexture}!cRenderObject@{cRenderObject}}
+\subsubsection[{AddTexture}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderObject::AddTexture (
+\begin{DoxyParamCaption}
+\item[{string}]{lsTextureSlot, }
+\item[{cTexture $\ast$}]{lpTexture}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_object_ae6383e70912480e39209e5ed6297380c}
+
+
+Will Add the Texture lpTexture to the Texture slot with the name matching lsTextureSlot. Multitexturing in shaders is controlled using uniform sampler types: 
+
+
+\begin{DoxyCode}
+ uniform sampler2D Texture0;
+\end{DoxyCode}
+ This takes a 2D Texture and names it Texture0. By default Bamboo shaders use the names Texture0, Texture1 ,Texture2 etc. If you use different names for your texture samplers they will need to be linked to the correct sampler name using this function. This is faster than \hyperlink{classc_render_object_ad45b379f57731d803f7a52e58d91d3aa}{AddTexture(cTexture$\ast$)} \hypertarget{classc_render_object_ad45b379f57731d803f7a52e58d91d3aa}{
+\index{cRenderObject@{cRenderObject}!AddTexture@{AddTexture}}
+\index{AddTexture@{AddTexture}!cRenderObject@{cRenderObject}}
+\subsubsection[{AddTexture}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderObject::AddTexture (
+\begin{DoxyParamCaption}
+\item[{cTexture $\ast$}]{lpTexture}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_object_ad45b379f57731d803f7a52e58d91d3aa}
+This will Add the Texture to the next free Texture sampler following the default rules (default is \char`\"{}Texture0\char`\"{} \char`\"{}Texture1\char`\"{} \char`\"{}Texture2\char`\"{}) This is a slow compared to \hyperlink{classc_render_object_ae6383e70912480e39209e5ed6297380c}{AddTexture(string,cTexture$\ast$)} It also allows for mistakes in naming of samplers in the shader if the samplers are not named \char`\"{}Texture0\char`\"{} \char`\"{}Texture1\char`\"{} \char`\"{}Texture2\char`\"{} etc. \hypertarget{classc_render_object_a247947b8d810bf556af4677dd5165983}{
+\index{cRenderObject@{cRenderObject}!SetRenderNode@{SetRenderNode}}
+\index{SetRenderNode@{SetRenderNode}!cRenderObject@{cRenderObject}}
+\subsubsection[{SetRenderNode}]{\setlength{\rightskip}{0pt plus 5cm}cRenderOwner\& cRenderObject::SetRenderNode (
+\begin{DoxyParamCaption}
+\item[{vRenderNode $\ast$}]{lpNode}
+\end{DoxyParamCaption}
+)}}
+\label{classc_render_object_a247947b8d810bf556af4677dd5165983}
+
+
+Will return a pointer to the Shader Program that is currently bound to this model. 
+
+Will move the current renderable object from the current \hyperlink{classc_render_node}{cRenderNode} to lpNode. 
+\begin{DoxyParams}{Parameters}
+{\em lpNode} & The \hyperlink{classc_render_node}{cRenderNode} which will now own this renderable object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function returns the new \hyperlink{classc_linked_node}{cLinkedNode} which now owns this renderable object. 
+\end{DoxyReturn}

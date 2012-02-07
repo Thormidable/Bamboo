@@ -85,7 +85,7 @@ void cParticleGroup::RenderPainter()
 	 uint32 liFound=0;
 
 	Refresh();
-
+	glPointSize(mpParticles[0]->Size);
 	 glBegin(GL_POINTS);
 	 for(liCount=0;liCount<miParticles;++liCount)
 	 {

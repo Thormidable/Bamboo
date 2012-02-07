@@ -1,0 +1,56 @@
+\hypertarget{classc_signal}{
+\section{cSignal Class Reference}
+\label{classc_signal}\index{cSignal@{cSignal}}
+}
+
+
+Class for handling Signals sent between objects (\hyperlink{classc_process}{cProcess}, \hyperlink{classc_render_object}{cRenderObject}, \hyperlink{classc_collision_object}{cCollisionObject}). Allows the user to wake, sleep and kill objects. For \hyperlink{classc_process}{cProcess} (while \hyperlink{classc_parent_stack}{cParentStack} is enabled) also allows signals to be sent to a process that will recursively affect all the children of that process. Possible signals to be passed in are \_\-S\_\-SLEEP,\_\-S\_\-WAKE,\_\-S\_\-KILL,\_\-S\_\-SLEEP\_\-TREE, \_\-S\_\-WAKE\_\-TREE,\_\-S\_\-KILL\_\-TREE User Specified Signals are controlled by the class \hyperlink{classc_user_signal}{cUserSignal}.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_signal_a545074be1da41d00050bed3cd2fb2305}{
+virtual void \hyperlink{classc_signal_a545074be1da41d00050bed3cd2fb2305}{Signal} (SIGNAL lsSignal)}
+\label{classc_signal_a545074be1da41d00050bed3cd2fb2305}
+
+\begin{DoxyCompactList}\small\item\em This is the function that will handle a system signal. Possible signals to be passed in are \_\-S\_\-SLEEP,\_\-S\_\-WAKE,\_\-S\_\-KILL,\_\-S\_\-SLEEP\_\-TREE, \_\-S\_\-WAKE\_\-TREE,\_\-S\_\-KILL\_\-TREE. \end{DoxyCompactList}\item 
+\hypertarget{classc_signal_a64e6fb4aee9b3a6bee5b56c7b86294cd}{
+bool \hyperlink{classc_signal_a64e6fb4aee9b3a6bee5b56c7b86294cd}{Awake} ()}
+\label{classc_signal_a64e6fb4aee9b3a6bee5b56c7b86294cd}
+
+\begin{DoxyCompactList}\small\item\em This will return true if the object is Awake. \end{DoxyCompactList}\item 
+\hypertarget{classc_signal_a90286da3e933e6fe2560fd0dfec777b2}{
+bool \hyperlink{classc_signal_a90286da3e933e6fe2560fd0dfec777b2}{Asleep} ()}
+\label{classc_signal_a90286da3e933e6fe2560fd0dfec777b2}
+
+\begin{DoxyCompactList}\small\item\em This will return true if the object is Asleep. \end{DoxyCompactList}\item 
+\hypertarget{classc_signal_aff5636e7aacacc05512c121610e3ec5e}{
+bool \hyperlink{classc_signal_aff5636e7aacacc05512c121610e3ec5e}{Alive} ()}
+\label{classc_signal_aff5636e7aacacc05512c121610e3ec5e}
+
+\begin{DoxyCompactList}\small\item\em This will return true if the object is Alive. \end{DoxyCompactList}\item 
+\hypertarget{classc_signal_a85f403bacc2e87bb16f4282bd145484b}{
+bool \hyperlink{classc_signal_a85f403bacc2e87bb16f4282bd145484b}{Dead} ()}
+\label{classc_signal_a85f403bacc2e87bb16f4282bd145484b}
+
+\begin{DoxyCompactList}\small\item\em This will return true if the object is Dead. \end{DoxyCompactList}\item 
+\hypertarget{classc_signal_a560b2a6f66d35ac165639b6a54b5ccfb}{
+virtual void \hyperlink{classc_signal_a560b2a6f66d35ac165639b6a54b5ccfb}{Stop} ()}
+\label{classc_signal_a560b2a6f66d35ac165639b6a54b5ccfb}
+
+\begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a kill signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \end{DoxyCompactList}\item 
+\hypertarget{classc_signal_a35df6ce0c2350bf9cf9b6ce6718e6bcf}{
+virtual void \hyperlink{classc_signal_a35df6ce0c2350bf9cf9b6ce6718e6bcf}{OnSleep} ()}
+\label{classc_signal_a35df6ce0c2350bf9cf9b6ce6718e6bcf}
+
+\begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a sleep signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \end{DoxyCompactList}\item 
+\hypertarget{classc_signal_ac65d437205fc1b578f75ca2edf79683f}{
+virtual void \hyperlink{classc_signal_ac65d437205fc1b578f75ca2edf79683f}{OnWake} ()}
+\label{classc_signal_ac65d437205fc1b578f75ca2edf79683f}
+
+\begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a wake signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for handling Signals sent between objects (\hyperlink{classc_process}{cProcess}, \hyperlink{classc_render_object}{cRenderObject}, \hyperlink{classc_collision_object}{cCollisionObject}). Allows the user to wake, sleep and kill objects. For \hyperlink{classc_process}{cProcess} (while \hyperlink{classc_parent_stack}{cParentStack} is enabled) also allows signals to be sent to a process that will recursively affect all the children of that process. Possible signals to be passed in are \_\-S\_\-SLEEP,\_\-S\_\-WAKE,\_\-S\_\-KILL,\_\-S\_\-SLEEP\_\-TREE, \_\-S\_\-WAKE\_\-TREE,\_\-S\_\-KILL\_\-TREE User Specified Signals are controlled by the class \hyperlink{classc_user_signal}{cUserSignal}. 

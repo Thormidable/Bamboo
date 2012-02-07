@@ -25,17 +25,17 @@ while(mpProcess)
 {
 	while(liPTF<_PPF)
 	{
-		trace("Handle Messages")
+	//	trace("Handle Messages")
 		gpWindow->HandleMessages();
 		gpWindow->HandleChanges();
 
-		trace("Update Mouse / Window")
+		//trace("Update Mouse / Window")
 		_MOUSE->Update();
         _KEYBOARD->UpdateKeyboard();
 
 		if(gpWindow->mbQuit || mbKillProgram) return;
 
-	  trace("New Process Cycle")
+	  //trace("New Process Cycle")
 		//cLinkedNode<cProcess> *lpCursor;
 		mpCursor=mpProcess->Start();
 		liProcessCount=0;
@@ -78,7 +78,7 @@ while(mpProcess)
 	if(liPTF<_PPF) cCameraHandler::Instance()->UpdateNotRenderCameras(); //cCamera::Instance()->UpdateNotRender();
 	}
 	liPTF=0;
-trace("New Render Cycle")
+//trace("New Render Cycle")
 //	cCamera::Instance()->Render();
 cCameraHandler::Instance()->RenderCameras();
 
@@ -92,7 +92,7 @@ if(_FPS)
 		gpTimer->SleepWrap((_TIME_PER_FRAME-gpTimer->GetTimeMod())*1000);
 	}
 }
-	trace("Update Timer")
+//	trace("Update Timer")
 	gpTimer->Tick();
 	printf("FPS:%f\n",gpTimer->GetCPS());
 

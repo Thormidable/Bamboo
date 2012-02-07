@@ -1,0 +1,25 @@
+\hypertarget{classc_particle_handler}{
+\section{cParticleHandler Class Reference}
+\label{classc_particle_handler}\index{cParticleHandler@{cParticleHandler}}
+}
+
+
+Collaboration diagram for cParticleHandler:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_particle_handler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_particle_handler_a930db2797d94f26b57e430e155ad81ba}{
+class \hyperlink{classc_particle_handler_a930db2797d94f26b57e430e155ad81ba}{cCamera}}
+\label{classc_particle_handler_a930db2797d94f26b57e430e155ad81ba}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This call will take all cParticleFree inheriting Particles (Inc \hyperlink{classc_gravity_particle}{cGravityParticle} and \hyperlink{classc_wind_and_gravity_particle}{cWindAndGravityParticle}) and will deal with them as a block for efficiency and so the user does not need to track them. All coordinates must be converted to global co-\/ordinates when they are created. This will keep the overheads for particles low as they can be handled as a group. Particles can still be controlled by the Toplevel class. Particles will automatically be updated every frame if WT\_\-PARTICLE\_\-HANDLER\_\-UPDATE\_\-PARTICLE\_\-POSITIONS is true. May be issues with time dependancy. Essentially this class will work in teh background and handle objects of types \hyperlink{classc_particle}{cParticle},\hyperlink{classc_gravity_particle}{cGravityParticle},\hyperlink{classc_wind_and_gravity_particle}{cWindAndGravityParticle}. 

@@ -28,7 +28,13 @@ public:
 	///Will return a float array with the beams global vector representing the direction it is pointing in. This should be normalised.
 	float *RayVector();
 	///Will return the length of the beam.
+
 	float Length();
+	///Will return the Objects Type
+	uint8 Type();
+
+	float Radius();
+	void Radius(float lfRadius);
 };
 #endif
 

@@ -8,7 +8,8 @@
  **/
 class cCollisionObject : public cCollisionBase
 {
-
+    friend class cCompoundCollision;
+protected:
 	static float CollisionDistance;
 	/*
 	 * This concise little variable determines whether the object has a previous frame to act from. (IE no old matrix, no real position).
@@ -44,9 +45,6 @@ public:
 	///The Signal Function to allow cCollisionObject to receive Signals.
 	void Signal(SIGNAL liFlags);
 	using cCollisionBase::SetType;
-	///This will make a ray object. See cRayCollision::BuildObject(float *lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement.
-	cRayCollision *SetType(cRenderObject *lpObj);
-
 
 
 
@@ -155,9 +153,26 @@ public:
         using cCollisionBase::RayModel;
         ///Internal function for checking for Ray / Model collision between this object and the object lpOther;
         bool RayModel(cCollisionObject *lpOther);
+
+	using cCollisionBase::SetTypeCompound;
+	///This will make a ray object. See cRayCollision::BuildObject(float *lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement.
+	cRayCollision *SetType(cRenderObject *lpObj);
+	///This will make a ray object. See cRayCollision::BuildObject(float *lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement.
+	cRayCollision *SetTypeRay(cRenderObject *lpObj);
+	///This will use the cCompoundCollisionFile with reference lcReference.
+	cCompoundCollision *SetTypeCompound(string lcReference);
+	///This will use the cCompoundCollisionFile pointed to by lpData.
+	cCompoundCollision *SetType(cCompoundCollisionFile *lpData);
+	///This will use the cCompoundCollisionFile pointed to by lpData.
+	cCompoundCollision *SetTypeCompound(cCompoundCollisionFile *lpData);
+
+
+
     #endif
 
-    void AdditionalKillFunctionality();
+    void Stop();
+
+    bool CompoundCollision(cCompoundCollision* lpCompound,cMatrix4 &lcCompoundCollision, vCollisionData *lpOther,cMatrix4 &lpOtherMatrix);
 
 };
 

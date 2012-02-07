@@ -94,3 +94,11 @@ cRGB *cRGB::operator=(c3DVf *lpOther)
     memcpy(color,lpOther->v,sizeof(float)*3);
     return this;
 }
+
+void cRGB::R(float lfR){color[0]=lfR;};
+void cRGB::G(float lfG){color[1]=lfG;};
+void cRGB::B(float lfB){color[2]=lfB;};
+void cRGBA::R(float lfR){color[0]=lfR;};
+void cRGBA::G(float lfG){color[1]=lfG;};
+void cRGBA::B(float lfB){color[2]=lfB;};
+void cRGBA::A(float lfA){color[3]=lfA;};

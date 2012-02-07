@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classc_mouse.html" title="This will store all the input data for a single mouse. It also controls the interpretation of the inp..." alt="" coords="5,5,72,35"/>
+<area shape="rect" id="node4" href="$classc_key_store.html" title="This class stores all the input data for a single keyboard." alt="" coords="109,5,192,35"/>
+</map>

@@ -1,0 +1,648 @@
+This Section contains useful lists and information which may require regular visitation while using Bamboo.
+\begin{DoxyEnumerate}
+\item \hyperlink{_reference_lists_MacroListPage}{List of Useful Macros}
+\item \hyperlink{_reference_lists_MatrixUsagePage}{Positioning, Rotating and Moving Objects}
+\item \hyperlink{_reference_lists_CameraMatrixUsagePage}{Positioning, Rotationg and Aiming the Camera}
+\item \hyperlink{_reference_lists_KeyIdentifiersList}{List of Key Identifiers}
+\item \hyperlink{_reference_lists_EngineSettingsPage}{Engine Settings}
+\item \hyperlink{_reference_lists_ObjectsUsingTheCreateMacro}{List of types owned by Bamboo}
+\end{DoxyEnumerate}\hypertarget{_reference_lists_MacroListPage}{}\section{List of Useful Macros}\label{_reference_lists_MacroListPage}
+This section contains a list of useful Macros for accessing various functions or variables.
+\begin{DoxyItemize}
+\item RANDOM\_\-NUMBER
+\begin{DoxyItemize}
+\item returns a Randomly generated number between 0.0f and 1.0f.
+\end{DoxyItemize}
+\item SIGNAL()
+\begin{DoxyItemize}
+\item A Class Type for passing Signals between Process', Render Objects and Collision Objects.
+\end{DoxyItemize}
+\item \_\-KEY(KEY\_\-ID)
+\begin{DoxyItemize}
+\item Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List.
+\end{DoxyItemize}
+\item \_\-MOUSE
+\begin{DoxyItemize}
+\item Reference giving access the systems mouse states.
+\end{DoxyItemize}
+\item \_\-LOAD(FileName)
+\begin{DoxyItemize}
+\item Function for loading a file. Takes the filename as an input. Same as \_\-LOAD\_\-FILE(FileName);
+\end{DoxyItemize}
+\item \_\-LOAD\_\-FILE(FileName)
+\begin{DoxyItemize}
+\item Function for loading a file. Takes the filename as an input. Same as \_\-LOAD(FileName);
+\end{DoxyItemize}
+\item \_\-GET\_\-FILE(FileType,FileName)
+\begin{DoxyItemize}
+\item Function returning a pointer of type FileType to the IMF Object with the reference FileName.
+\end{DoxyItemize}
+\item \_\-CREATE(Type)
+\begin{DoxyItemize}
+\item Function operating like the new operator. Will create a new Process, Render Object or Collision Object and return a pointer of type Type.
+\end{DoxyItemize}
+\item \_\-KILL\_\-THIS()
+\begin{DoxyItemize}
+\item Will Kill the current process.
+\end{DoxyItemize}
+\item \_\-KILL(Pointer)
+\begin{DoxyItemize}
+\item Will Kill the process pointed to by Pointer.
+\end{DoxyItemize}
+\item \_\-SLEEP(Process)
+\begin{DoxyItemize}
+\item Will Sleep the process pointer to by Process.
+\end{DoxyItemize}
+\item \_\-SLEEP\_\-THIS()
+\begin{DoxyItemize}
+\item Will Sleep the current process.
+\end{DoxyItemize}
+\item \_\-WAKE(Process)
+\begin{DoxyItemize}
+\item Will Wake the process pointed to by Process.
+\end{DoxyItemize}
+\item \_\-SIGNAL(Flag)
+\begin{DoxyItemize}
+\item Function which will send a signal to the process this function is called from, to signal the action, Flag. (Signal Flags are defined in the Signal List).
+\end{DoxyItemize}
+\item \_\-USE\_\-SHADER(FileName)
+\begin{DoxyItemize}
+\item Function telling the system to buffer for use the shader with reference FileName.
+\end{DoxyItemize}
+\item \_\-GET\_\-SHADER\_\-FILE(Reference)
+\begin{DoxyItemize}
+\item Function returning a pointer to the \hyperlink{classc_shader_program}{cShaderProgram} with the name Reference.
+\end{DoxyItemize}
+\item \_\-GET\_\-TEXTURE\_\-FILE(Reference)
+\begin{DoxyItemize}
+\item Function returning a pointer to the vTexture Object with the name Reference.
+\end{DoxyItemize}
+\item \_\-GET\_\-MESH\_\-FILE(Reference)
+\begin{DoxyItemize}
+\item Function returning a pointer to the vMesh Object with the name Reference.
+\end{DoxyItemize}
+\item \_\-GET\_\-FONT\_\-FILE(Reference)
+\begin{DoxyItemize}
+\item Function returning a pointer to the \hyperlink{classc_font}{cFont} Object with the name Reference.
+\end{DoxyItemize}
+\item \_\-GET\_\-AUDIO\_\-FILE(Reference)
+\begin{DoxyItemize}
+\item Function returning a pointer to the cAudioData Object with the name Reference.
+\end{DoxyItemize}
+\item \_\-GET\_\-COLLISION\_\-MESH\_\-FILE(Reference)
+\begin{DoxyItemize}
+\item Function returning a pointer to the cCollisionBoxFile Object with the name Reference (Collision Mesh).
+\end{DoxyItemize}
+\item \_\-GET\_\-LANDSCAPE\_\-FILE(Reference)
+\begin{DoxyItemize}
+\item Function returning a pointer to the \hyperlink{classcm_landscape}{cmLandscape} Object with the name Reference.
+\end{DoxyItemize}
+\item \_\-USE\_\-FIXED\_\-FUNCTION()
+\begin{DoxyItemize}
+\item Function telling the system to used the fixed function pipeline and not use shaders. This will slow the system and disable functionality. Disadvised.
+\end{DoxyItemize}
+\item \_\-CAMERA
+\begin{DoxyItemize}
+\item A Pointer to the default \hyperlink{classc_camera}{cCamera} Object.
+\end{DoxyItemize}
+\item \_\-LIGHT
+\begin{DoxyItemize}
+\item A Pointer to the \hyperlink{classc_light_handler}{cLightHandler} Object.
+\end{DoxyItemize}
+\item \_\-KERNEL
+\begin{DoxyItemize}
+\item A Pointer to the \hyperlink{classc_kernel}{cKernel} Object.
+\end{DoxyItemize}
+\item \_\-FILE
+\begin{DoxyItemize}
+\item A Pointer to the \hyperlink{classc_file_handler}{cFileHandler} Object.
+\end{DoxyItemize}
+\item \_\-COLLISION\_\-HANDLER
+\begin{DoxyItemize}
+\item A Pointer to the cCollisionHandlerObject.
+\end{DoxyItemize}
+\item \_\-RESET\_\-COLLISION
+\begin{DoxyItemize}
+\item This will reset a stepping Collision Search, ready for a fresh search. (Not issue for Generating Collision Lists)
+\end{DoxyItemize}
+\item WT\_\-TIME\_\-IND
+\begin{DoxyItemize}
+\item This is the current frame length in seconds. Multiply anything time dependant by this to make it time independant. (It is a float multiplyer, think before use.)\par
+
+\end{DoxyItemize}
+\item \_\-COLLISION\_\-PROCESS\_\-LOOP(lpList,lpVar)
+\begin{DoxyItemize}
+\item This will start a Loop to step through a collision list. lpList should point to the Collision List and lpVar will point at the current process in the collision list.\par
+
+\end{DoxyItemize}
+\item \_\-COLLISION\_\-RENDER\_\-LOOP(lpList,lpVar)
+\begin{DoxyItemize}
+\item This will start a Loop to step through a collision list. lpList should point to the Collision List and lpVar will point at the current Render object in the collision list.\par
+
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{_reference_lists_MatrixUsagePage}{}\section{Positioning, Rotating and Moving Objects.}\label{_reference_lists_MatrixUsagePage}
+cMatrix4.h \par
+
+
+The \hyperlink{classc_matrix4}{cMatrix4} class and cCameraMatrix classes are very similar. See the . The \hyperlink{classc_camera_matrix4}{cCameraMatrix4} maintains an inverted \hyperlink{classc_matrix4}{cMatrix4} matrix as the translations applied to the camera must be inverted to give the same effect as to normal objects. Otherwise the effects are the same for \hyperlink{classc_matrix4}{cMatrix4} and cCameraMatrix. \par
+ Most Render Objects have inherited the \hyperlink{classc_matrix4}{cMatrix4} class meaning that these functions can be called to move and rotate Render Objects. Calling these functions, will apply the defined translations to the current object. Some are relative to the current translation and some are relative to the position of the Render Node controlling this object. Either way, the translations stack. \par
+ It is important to note that although the \hyperlink{classc_camera_matrix4}{cCameraMatrix4} and \hyperlink{classc_matrix4}{cMatrix4} can interact with each other (and be set to match each other) \hyperlink{classc_camera_matrix4}{cCameraMatrix4} is the inverse of \hyperlink{classc_matrix4}{cMatrix4}. Also the order of rotations and postions to use the matrix is different. They can transfer rotations and positions between they types using the Equals and Copy functions. \par
+ \par
+ The X Axis points 90 to the Right perpendicular to the objects facing. \par
+ The Y Axis points 90 Upwards, perpendicular to the objects facing. \par
+ The Z Axis is the objects facing. \par
+ \par
+ These Classes can be used for 2D or 3D Translations. There are different functions for 2D and 3D translations. The standard Bamboo Objects automatically identify if they should be 2D or 3D. \par
+ \par
+ void \hyperlink{classc_matrix4_a6aa4f58a001499cd666f9d65f3a821a0}{cMatrix4::Identity()}; \par
+ void \hyperlink{classc_matrix4_acf16f37d849137d2e410ec20f2b4e74d}{cMatrix4::Zero()}; \par
+ \par
+ 3D Object Translation Functions: \par
+ void \hyperlink{classc_matrix4_a746ce09337cbf6a3292cbe15991efd79}{cMatrix4::Set3D()} \par
+ float \hyperlink{classc_matrix4_a39cf7cefa0672684e69eb4af89366270}{cMatrix4::Determinant()}; \par
+ \hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a7473299a57ffcfe284e6fd9005b98592}{cMatrix4::InvertRotationMatrix()}; \par
+ \hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_ac8b6f1a9352943cd86ef4c088c438307}{cMatrix4::Transpose()}; \par
+ void \hyperlink{classc_matrix4_af728db2d340a48de20d9f9e143e3a19b}{cMatrix4::Translate(float lfX,float lfY,float lfZ)}; \par
+ \par
+ float$\ast$ \hyperlink{classc_matrix4_a8697973a28e45b0866cce4cdba2e216d}{cMatrix4::Matrix()}; \par
+ float$\ast$ \hyperlink{classc_matrix4_a1e70788aed256a22cf62b11a12e0db74}{cMatrix4::Matrix(uint8 lcData)}; \par
+ float$\ast$ \hyperlink{classc_matrix4_a7b0917b0f0a69d73ed41d05fd37d52ac}{cMatrix4::Position()}; \par
+ float \hyperlink{classc_matrix4_aff5d7d1cf3cf0b9ddb9e55e2f799012f}{cMatrix4::X()}; \par
+ float \hyperlink{classc_matrix4_aa22f36646d19566a438a297cb9a9bfb5}{cMatrix4::Y()}; \par
+ float \hyperlink{classc_matrix4_a8b62f500f8194b06dab12e85e57fd9ef}{cMatrix4::Z()}; \par
+ float$\ast$ \hyperlink{classc_matrix4_a958689f28a118eac91104f5a847ac0fd}{cMatrix4::XVect()}; \par
+ float$\ast$ \hyperlink{classc_matrix4_acff0242ac76b2ccd854eeec0d4913abe}{cMatrix4::YVect()}; \par
+ float$\ast$ \hyperlink{classc_matrix4_ab3d5e1a9ca6652c84265d4d164494699}{cMatrix4::ZVect()}; \par
+ \par
+ void \hyperlink{classc_matrix4_ae3bb670db30cee45d59aef1599289086}{cMatrix4::Position(float $\ast$lpPos)}; \par
+ void \hyperlink{classc_matrix4_adf27db7265e42ccbbb5a6779800c39ea}{cMatrix4::PositionX(float lfX)}; \par
+ void \hyperlink{classc_matrix4_a4f7469486d7557e158ebc70a261c853c}{cMatrix4::PositionY(float lfY)}; \par
+ void \hyperlink{classc_matrix4_a6baf253feb5e27b5e3e81971d9f5d718}{cMatrix4::PositionZ(float lfZ)}; \par
+ void \hyperlink{classc_matrix4_a79457e17d6ab9a0c5db16c94405be35c}{cMatrix4::Position(cMatrix4 \&lpOther)}; \par
+ void \hyperlink{classc_matrix4_a6e0051199566d89193d7c2e07e957eb4}{cMatrix4::Position(cMatrix4 $\ast$lpOther)}; \par
+ void \hyperlink{classc_matrix4_ac182a447e047d9071b035b374e8abf45}{cMatrix4::Position(c2DVf $\ast$lpPosition)}; \par
+ void \hyperlink{classc_matrix4_a81cd364d37dc5eae6f968551331ad7a3}{cMatrix4::Position(float lfX,float lfY)}; \par
+ void \hyperlink{classc_matrix4_a8a49976693c27e4fbb5fce427eb6bcf5}{cMatrix4::Position(c3DVf $\ast$lpPosition)}; \par
+ void \hyperlink{classc_matrix4_ae404d9b94cb676d9896385fef1eda422}{cMatrix4::Position(float lfX,float lfY,float lfZ)};\par
+ \par
+ void \hyperlink{classc_matrix4_a91f9e8d79d7721ba35f59c754a5507d1}{cMatrix4::Advance(float $\ast$lfDistance)}; \par
+ void \hyperlink{classc_matrix4_a6c53b28448e2d2531a19cd49955f5901}{cMatrix4::Advance(c2DVf $\ast$lfDistances)}; \par
+ void \hyperlink{classc_matrix4_a86aefa3a444eaabd4ad1a66e4857f40e}{cMatrix4::Advance(c3DVf $\ast$lfDistances)}; \par
+ void \hyperlink{classc_matrix4_a07d410e6592dacf244ad118d70443181}{cMatrix4::Advance(c2DVf \&lfDistances)}; \par
+ void \hyperlink{classc_matrix4_ac07dd71793d6df522efa2098f9e1daa6}{cMatrix4::Advance(c3DVf \&lfDistances)}; \par
+ void \hyperlink{classc_matrix4_ad0744229e75d1053c3a2e4bcfe8dc46f}{cMatrix4::Advance(float lfDistance)}; \par
+ void \hyperlink{classc_matrix4_aa23f7d55e4eddcba673f8a6e44f63c3e}{cMatrix4::AdvanceX(float lfDistance)}; \par
+ void \hyperlink{classc_matrix4_ae28d0f2cfe996ec5422cdaec98f30c9a}{cMatrix4::AdvanceY(float lfDistance)}; \par
+ void \hyperlink{classc_matrix4_a31d0d26e3b91628365871ad10dc33f8e}{cMatrix4::AdvanceZ(float lfDistance)}; \par
+ void \hyperlink{classc_matrix4_ab956ec27a465b889126632475fd7d703}{cMatrix4::Advance(float lfX,float lfY)}; \par
+ void \hyperlink{classc_matrix4_a00d27c2daab0e05c403c8fb86445fb81}{cMatrix4::Advance(float lfX,float lfY, float lfZ)}; \par
+ void \hyperlink{classc_matrix4_a6796b615c465903d48fe0c8094b1f7c1}{cMatrix4::GAdvanceX(float lfX)}; \par
+ void \hyperlink{classc_matrix4_af4453f95ef875b0c5002d72bade65bb1}{cMatrix4::GAdvanceY(float lfX)}; \par
+ void \hyperlink{classc_matrix4_a0fd4e894762e73050e8e2e38acdfaf0d}{cMatrix4::GAdvanceZ(float lfX)}; \par
+ void \hyperlink{classc_matrix4_a2dc12cbe708c7bc63ca2beff47c0c835}{cMatrix4::GAdvance(float lfX,float lfY)}; \par
+ void \hyperlink{classc_matrix4_ac1c16ceb7ac4c2f771fc0d4662df643c}{cMatrix4::GAdvance(float lfX,float lfY,float lfZ)}; \par
+ \par
+ void \hyperlink{classc_matrix4_ac86eb165802e359a11ace5db20b73c72}{cMatrix4::Angle(float lfAngle)}; \par
+ \par
+ void \hyperlink{classc_matrix4_a04a196147274eb6b3d1aca1782c26091}{cMatrix4::GRotateOrigin(float lfAngle)}; \par
+ void \hyperlink{classc_matrix4_a5115db44a0c51d97be3d5791fb19d18a}{cMatrix4::GRotate(float lfAngle,float lfX,float lfY)}; \par
+ \par
+ void \hyperlink{classc_matrix4_aeca3db3711d09781ec4ecf78a0423574}{cMatrix4::Rotation(float $\ast$lpRotation)}; \par
+ void \hyperlink{classc_matrix4_a2777b2361f3656d4f8c1413456ea22d2}{cMatrix4::Rotation(cMatrix4 $\ast$lpRotation)}; \par
+ void \hyperlink{classc_matrix4_aa3eadfc363f0d3696e8f9468ccd3782b}{cMatrix4::Rotation(cMatrix4 \&lpOther)}; \par
+ \par
+ void \hyperlink{classc_matrix4_ab21d0553250b8ca4b0388105afc79478}{cMatrix4::Rotate(float lfAngle)}; \par
+ void \hyperlink{classc_matrix4_af3c238c3d65276912b3071c33c9a8e59}{cMatrix4::RotateX(float lfAngle)}; \par
+ void \hyperlink{classc_matrix4_ac625c531c3644462cc91ed53bef5e1e9}{cMatrix4::RotateY(float lfAngle)}; \par
+ void \hyperlink{classc_matrix4_a784f4dd7106e393b654d17ff78cc49a7}{cMatrix4::RotateZ(float lfAngle)}; \par
+ \par
+ void \hyperlink{classc_matrix4_a0be08400d130f819bbedbb35f551d4c7}{cMatrix4::GRotateX(float lfAngle)}; \par
+ void \hyperlink{classc_matrix4_a0ae1a3c85f3b00127217b67c7d75a7cc}{cMatrix4::GRotateY(float lfAngle)}; \par
+ void \hyperlink{classc_matrix4_a1d082ca0f1c634d262309eb75a9e2df5}{cMatrix4::GRotateZ(float lfAngle)}; \par
+ \par
+ void \hyperlink{classc_matrix4_a517140950c736c74a44d34704b44c83d}{cMatrix4::GRotateX(float lfAngle,float lfX,float lfY,float lfZ)}; \par
+ void \hyperlink{classc_matrix4_a5b1505c43d9382bc625fc1eb53d44360}{cMatrix4::GRotateY(float lfAngle,float lfX,float lfY,float lfZ)}; \par
+ void \hyperlink{classc_matrix4_a5b357f5686b74e0feeff7eaae070f566}{cMatrix4::GRotateZ(float lfAngle,float lfX,float lfY,float lfZ)}; \par
+ \par
+ void \hyperlink{classc_matrix4_a3ddcb503ea46911e194a9b881a6f0bee}{cMatrix4::GRotateOriginX(float lfAngle)}; \par
+ void \hyperlink{classc_matrix4_abe68a204b91201b33adc32f5b354631e}{cMatrix4::GRotateOriginY(float lfAngle)}; \par
+ void \hyperlink{classc_matrix4_af5ecfcfab719acf23ddb1148ad24825a}{cMatrix4::GRotateOriginZ(float lfAngle)}; \par
+ \par
+ void \hyperlink{classc_matrix4_adb76264fa82ef10ebb24b64d6293bc9d}{cMatrix4::Equals(float $\ast$lpOther)}; \par
+ void \hyperlink{classc_matrix4_a943edd1e04048bd2bcb93987a6c47819}{cMatrix4::Equals(cMatrix4 $\ast$lpOther)}; \par
+ void \hyperlink{classc_matrix4_a2b04c467006fe476d6f2e5efc61b3ead}{cMatrix4::Equals(cMatrix4 \&lpOther)}; \par
+ void \hyperlink{classc_matrix4_a0af5e0b1dbbe6d7f4c512a5f07f1e273}{cMatrix4::Equals(cCameraMatrix4 \&lpOther)}; \par
+ void \hyperlink{classc_matrix4_a12b028ad76a776c5a01d695ea620962b}{cMatrix4::Equals(cCameraMatrix4 $\ast$lpOther)}; \par
+ \par
+ void \hyperlink{classc_matrix4_a4785b8464f65d9784db634f3a6f34e52}{cMatrix4::Resize(float lfScale)}; \par
+ \par
+ void cMatrix4::LResizeX(float lfScale); \par
+ void cMatrix4::LResizeY(float lfScale); \par
+ void cMatrix4::LResizeZ(float lfScale); \par
+ \par
+ void \hyperlink{classc_matrix4_ac2be3e4653b0c8324c6a505e54544043}{cMatrix4::GResizeX(float lfScale)}; \par
+ void \hyperlink{classc_matrix4_a13fda6e0dc1b19f7f136c1963bbdac77}{cMatrix4::GResizeY(float lfScale)}; \par
+ void \hyperlink{classc_matrix4_a74217e4c12e8f5623a572535ba443bc4}{cMatrix4::GResizeZ(float lfScale)}; \par
+ \par
+ float \hyperlink{classc_matrix4_acd04bb06d1d12807b203b0aaf9e9b608}{cMatrix4::Distance(cMatrix4 $\ast$lpOther)}; \par
+ float \hyperlink{classc_matrix4_a83fd4655f67a81cb42f3c50262ec593e}{cMatrix4::Distance(float $\ast$lpOther)}; \par
+ double \hyperlink{classc_matrix4_afb4a1edc36d2de9330e48bd182fe2a9b}{cMatrix4::DistanceSq(cMatrix4 $\ast$lpOther)}; \par
+ double \hyperlink{classc_matrix4_ad225d8db157a99b593f774e08c266722}{cMatrix4::DistanceSq(cMatrix4 lpOther)}; \par
+ double \hyperlink{classc_matrix4_ac524fac9525c6ff780e95c648b229e41}{cMatrix4::DistanceSq(float $\ast$lpOther)}; \par
+ \par
+ float \&\hyperlink{classc_matrix4_a4b91a4d790f5a0decc76d41e54b80049}{cMatrix4::operator\mbox{[}$\,$\mbox{]}(uint16 liPos)}; \par
+ float \&\hyperlink{classc_matrix4_a1e17bf69091f804aec716524dbdec375}{cMatrix4::operator()(uint16 liColumn,uint16 liRow)}; \par
+ 2D Object Translation Functions: \par
+ void \hyperlink{classc_matrix4_ad24236403317622459c3309938be9d21}{cMatrix4::Set2D()} \par
+ \par
+ void \hyperlink{classc_matrix4_ab956ec27a465b889126632475fd7d703}{cMatrix4::Advance(float lfX,float lfY)} \par
+ void \hyperlink{classc_matrix4_a2dc12cbe708c7bc63ca2beff47c0c835}{cMatrix4::GAdvance(float lfX,float lfY)} \par
+ \par
+ void \hyperlink{classc_matrix4_ac86eb165802e359a11ace5db20b73c72}{cMatrix4::Angle(float lfAngle)} \par
+ void \hyperlink{classc_matrix4_ab21d0553250b8ca4b0388105afc79478}{cMatrix4::Rotate(float lfAngle)} \par
+ void \hyperlink{classc_matrix4_a04a196147274eb6b3d1aca1782c26091}{cMatrix4::GRotateOrigin(float lfAngle)} \par
+ void \hyperlink{classc_matrix4_a5115db44a0c51d97be3d5791fb19d18a}{cMatrix4::GRotate(float lfAngle,float lfX,float lfY)} \par
+\hypertarget{_reference_lists_CameraMatrixUsagePage}{}\section{Positioning, Rotating and Moving The Camera}\label{_reference_lists_CameraMatrixUsagePage}
+cCameraMatrix4.h \par
+ The \hyperlink{classc_camera_matrix4}{cCameraMatrix4} is the matrix used for the camera. The format is different to the \hyperlink{classc_matrix4}{cMatrix4} class as it is used in a different manner. Many of the functions are called the same thing and have the same function. It also has a few additional functions which are useful for Camera manipulation. \par
+ \par
+ float $\ast$cCameraMatrix4::Matrix() \par
+ float $\ast$cCameraMatrix4::Position() \par
+ \par
+ float \hyperlink{classc_camera_matrix4_a0133c16b734fa93e767ea89964799fb5}{cCameraMatrix4::X()} \par
+ float \hyperlink{classc_camera_matrix4_aec72cb78c62b2e0970824262b0b4aa1f}{cCameraMatrix4::Y()} \par
+ float \hyperlink{classc_camera_matrix4_a7e3030fcedbd3b74270b26ea2b61904c}{cCameraMatrix4::Z()} \par
+ \par
+ void \hyperlink{classc_camera_matrix4_a7110b0f3aa924a2cfefe8ca149e0b41f}{cCameraMatrix4::Position(c3DVf $\ast$lpPosition)} \par
+ void \hyperlink{classc_camera_matrix4_a1aa471464a30ce27fe339b743b840516}{cCameraMatrix4::Position(float lfX,float lfY,float lfZ)} \par
+ void \hyperlink{classc_camera_matrix4_af130ddef040458f01b9a2365f41c567a}{cCameraMatrix4::PositionX(float lfX)} \par
+ void \hyperlink{classc_camera_matrix4_adce3f6365faf3af907994f50c004c736}{cCameraMatrix4::PositionY(float lfY)} \par
+ void \hyperlink{classc_camera_matrix4_a6ea814a92ce2d7fcc1ba66490127b2f2}{cCameraMatrix4::PositionZ(float lfZ)} \par
+ \par
+ void \hyperlink{classc_camera_matrix4_a4a07cdf5cb578378193487a1ac304380}{cCameraMatrix4::AdvanceX(float lfDistance)} \par
+ void \hyperlink{classc_camera_matrix4_a1c644144c6673fad0d45ac2a28065edb}{cCameraMatrix4::AdvanceY(float lfDistance)} \par
+ void \hyperlink{classc_camera_matrix4_a18915056c461b31b5ea916715fa2582f}{cCameraMatrix4::AdvanceZ(float lfDistance)} \par
+ void \hyperlink{classc_camera_matrix4_acd0e691c270f18c80965bf8da4442d5b}{cCameraMatrix4::Advance(float lfX,float lfY,float lfZ)} \par
+ \par
+ void \hyperlink{classc_camera_matrix4_a69ef5c53bd239d2f1041ac9330c2cc08}{cCameraMatrix4::GAdvanceX(float lfDistance)} \par
+ void \hyperlink{classc_camera_matrix4_a7cb5d64085acdcc74dcad1e965a52b3b}{cCameraMatrix4::GAdvanceY(float lfDistance)} \par
+ void \hyperlink{classc_camera_matrix4_afd68814e78dd2ffaec2f9bc4289aca36}{cCameraMatrix4::GAdvanceZ(float lfDistance)} \par
+ void \hyperlink{classc_camera_matrix4_a342b888f43a65b6c4a14b818c2519157}{cCameraMatrix4::GAdvance(float lfX,float lfY,float lfZ)} \par
+ \par
+ void \hyperlink{classc_camera_matrix4_a1de293dc89d68f1688098dc82a1c2655}{cCameraMatrix4::Rotate(float lfAngle)} \par
+ void \hyperlink{classc_camera_matrix4_abb8a5e1d961915829f3200b74319af61}{cCameraMatrix4::RotateX(float lfAngle)} \par
+ void \hyperlink{classc_camera_matrix4_a86e20cd48f8a5427d98361d9b838273d}{cCameraMatrix4::RotateY(float lfAngle)} \par
+ void \hyperlink{classc_camera_matrix4_ab0d7c6b5cdc0b9581633736404a3b843}{cCameraMatrix4::RotateZ(float lfAngle)} \par
+ \par
+ void \hyperlink{classc_camera_matrix4_a09c8d44629bf63643c8f09ccdc2294bc}{cCameraMatrix4::GRotateX(float lfAngle)} \par
+ void \hyperlink{classc_camera_matrix4_a48eb5374c0e7fa4eca25f48a6411052d}{cCameraMatrix4::GRotateY(float lfAngle)} \par
+ void \hyperlink{classc_camera_matrix4_a993d7410719b1fd7d871f728527a3947}{cCameraMatrix4::GRotateZ(float lfAngle)} \par
+ \par
+ void \hyperlink{classc_camera_matrix4_a2fc16f6a7aa3ffec1317f71645aa857b}{cCameraMatrix4::GRotateX(float lfAngle,float lfX,float lfY,float lfZ)} \par
+ void \hyperlink{classc_camera_matrix4_a775326e51bf492340e8768d219a4e5e2}{cCameraMatrix4::GRotateY(float lfAngle,float lfX,float lfY,float lfZ)} \par
+ void \hyperlink{classc_camera_matrix4_a8c99ce20f8594e9a66e0a7b2830ec9e9}{cCameraMatrix4::GRotateZ(float lfAngle,float lfX,float lfY,float lfZ)} \par
+ \par
+ void \hyperlink{classc_camera_matrix4_a620ba52edfd711f011d43a441eece9bc}{cCameraMatrix4::Resize(float lfScale)} \par
+ void \hyperlink{classc_camera_matrix4_ab5ec9054a71a9df7bb671829875600f2}{cCameraMatrix4::ResizeX(float lfScale)} \par
+ void \hyperlink{classc_camera_matrix4_a44507dbaa203a79c420d9ceef985e186}{cCameraMatrix4::ResizeY(float lfScale)} \par
+ void \hyperlink{classc_camera_matrix4_a6c4d89f66c5b6568b5f334c3ab4a7414}{cCameraMatrix4::ResizeZ(float lfScale)} \par
+ \par
+ void \hyperlink{classc_camera_matrix4_a9984a8427cd90e77a2fb6462ecf99ecc}{cCameraMatrix4::GResizeX(float lfScale)} \par
+ void \hyperlink{classc_camera_matrix4_aa2a9326b7f2a6f00aa5b45057c69ecd3}{cCameraMatrix4::GResizeY(float lfScale)} \par
+ void \hyperlink{classc_camera_matrix4_a1ab7808cf06ddf7ec373b926c77f85c6}{cCameraMatrix4::GResizeZ(float lfScale)} \par
+ \par
+ uint32 \hyperlink{classc_camera_matrix4_adf5481b8c761008b9611e0b071e70914}{cCameraMatrix4::Distance3D(float $\ast$lpOther)} \par
+ \par
+ void \hyperlink{classc_camera_matrix4_aeee787e0f5895a613e8be9efbade408f}{cCameraMatrix4::Follow(cMatrix4$\ast$ lpOther,float lfDist)} \par
+ void \hyperlink{classc_camera_matrix4_a0bb6a232830c5e5571677b048cc1c45d}{cCameraMatrix4::Follow(cMatrix4\& lpOther,float lfDist)} \par
+ void \hyperlink{classc_camera_matrix4_aa8ca47d59f6b3b454d700329bdbbdeea}{cCameraMatrix4::PointAt(float $\ast$mpPos)} \par
+ void \hyperlink{classc_camera_matrix4_af4d7a8a24ba247bbd035e22ef609981c}{cCameraMatrix4::PointAt(cMatrix4 $\ast$mpPos)} \par
+ void \hyperlink{classc_camera_matrix4_aa4cd6a1c22791a336c3eb21d0a0d94e4}{cCameraMatrix4::PointAt(cMatrix4 \&mpPos)} \par
+ void \hyperlink{classc_camera_matrix4_ac9e73a11692a91065a59af310e8e246b}{cCameraMatrix4::PointAt(c3DVf \&mpPos)} \par
+ void \hyperlink{classc_camera_matrix4_aee6a49404715d0a891f7e59c0124fc16}{cCameraMatrix4::PointAt(c3DVf $\ast$mpPos)} \par
+ \par
+ void \hyperlink{classc_camera_matrix4_ac22d068fd30bfd2c5cb23dc06822f500}{cCameraMatrix4::Equals(cCameraMatrix4 $\ast$lpOther)} \par
+ void \hyperlink{classc_camera_matrix4_a6ef73d4d654a0dcf9ffc146908bd88ed}{cCameraMatrix4::Equals(cCameraMatrix4 \&lpOther)} \par
+ void \hyperlink{classc_camera_matrix4_ab6b4ff506c700a7e209dae84eb52d4ef}{cCameraMatrix4::Equals(cMatrix4 $\ast$lpOther)} \par
+ void \hyperlink{classc_camera_matrix4_a21037a9e876362aea2c9461f38e50304}{cCameraMatrix4::Equals(cMatrix4 \&lpOther)} \par
+ \par
+ void \hyperlink{classc_camera_matrix4_a3856050392bac0f5391a280acc7e1f45}{cCameraMatrix4::Multiply(cCameraMatrix4 $\ast$lpOther)} \par
+ void \hyperlink{classc_camera_matrix4_a7a539cb44fa348ad19408ddcb928c49c}{cCameraMatrix4::Multiply(cCameraMatrix4 \&lpOther)} \par
+ void \hyperlink{classc_camera_matrix4_a7d72fd4af4f6c427a71e7084a10ca1b3}{cCameraMatrix4::Multiply(cMatrix4 $\ast$lpOther)} \par
+ void \hyperlink{classc_camera_matrix4_a81a6d3f77fb020b58ea788b42f581905}{cCameraMatrix4::Multiply(cMatrix4 \&lpOther)} \par
+ \par
+ float \&\hyperlink{classc_camera_matrix4_ad9cd70439ad670a7ecc0e9198b5e0516}{cCameraMatrix4::operator\mbox{[}$\,$\mbox{]}(uint16 liPos)} \par
+ float \&\hyperlink{classc_camera_matrix4_a47de224c654b31aa8c22e55ec1d58ed0}{cCameraMatrix4::operator()(uint16 liColumn,uint16 liRow)} \par
+ \par
+ void \hyperlink{classc_camera_matrix4_a62fa2879539cc733e661d02b8a898578}{cCameraMatrix4::Position(c2DVf $\ast$lpPosition)} \par
+ void \hyperlink{classc_camera_matrix4_a293ac7d2919eae7205b568ea56fa104c}{cCameraMatrix4::Position(float lfX,float lfY)} \par
+ void \hyperlink{classc_camera_matrix4_a6be0f1f82cc4ee5a5953cb3b569b4285}{cCameraMatrix4::Angle(float lfAngle)} \par
+ uint32 \hyperlink{classc_camera_matrix4_a02c68197ed3c64c95985269f5b9f66a4}{cCameraMatrix4::Distance2D(float $\ast$lpOther)} \par
+
+
+\hyperlink{classc_matrix4}{cMatrix4} \&cCameraMatrix4::ConvertToMatrix() \par
+ \hyperlink{classc_camera_matrix4}{cCameraMatrix4} \hyperlink{classc_camera_matrix4_ac1fa4dd9add669a8faecd0ca79713278}{cCameraMatrix4::Transpose()} \par
+ void \hyperlink{classc_camera_matrix4_a97d111c444dd87ecec278e585fe058a7}{cCameraMatrix4::InvSign()} \par
+ void \hyperlink{classc_camera_matrix4_a23a05c1aff8a58dc662f5b871b422c17}{cCameraMatrix4::Identity()} \par
+ void \hyperlink{classc_camera_matrix4_a1ec81a7ec3274f89d2b8fb94923345c0}{cCameraMatrix4::Zero()} \par
+ float \hyperlink{classc_camera_matrix4_a4f3456fc67fbd37692a8daa9d11d5fc6}{cCameraMatrix4::Determinant()} \par
+\hypertarget{_reference_lists_KeyIdentifiersList}{}\section{List of Key Identifiers}\label{_reference_lists_KeyIdentifiersList}
+These correspond to the Key codes for the Macro \_\-KEY() 
+\begin{DoxyCode}
+ if(_KEY(KEY_SPACE)) _CREATE(Bulltets());
+ if(_KEY(KEY_TAB)) _KERNEL->KillAll();
+\end{DoxyCode}
+
+
+KEY\_\-BACKSPACE \par
+ KEY\_\-TAB \par
+ KEY\_\-ENTER \par
+ KEY\_\-RETURN \par
+ KEY\_\-SHIFT \par
+ KEY\_\-CONTROL \par
+ KEY\_\-CTRL \par
+ KEY\_\-ALTERNATE \par
+ KEY\_\-ALT \par
+ KEY\_\-PAUSE \par
+ KEY\_\-CAPSLOCK \par
+ KEY\_\-CAPITALLOCK \par
+ KEY\_\-ESCAPE \par
+ KEY\_\-ESC \par
+ KEY\_\-SPACE \par
+ KEY\_\-PGUP \par
+ KEY\_\-PAGEUP \par
+ KEY\_\-PGDN \par
+ KEY\_\-PAGEDOWN \par
+ KEY\_\-END \par
+ KEY\_\-HOME \par
+ KEY\_\-LEFT \par
+ KEY\_\-LEFTARROW \par
+ KEY\_\-RIGHT \par
+ KEY\_\-RIGHTARROW \par
+ KEY\_\-UP \par
+ KEY\_\-UPARROW \par
+ KEY\_\-DOWN \par
+ KEY\_\-DOWNARROW \par
+ KEY\_\-SELECT \par
+ KEY\_\-EARLYPRINT \par
+ KEY\_\-EARLYPRINTSCREEN \par
+ KEY\_\-EXECUTE \par
+ KEY\_\-PRINT \par
+ KEY\_\-PRINTSCREEN \par
+ KEY\_\-INS \par
+ KEY\_\-INSERT \par
+ KEY\_\-DEL \par
+ KEY\_\-DELETE \par
+ KEY\_\-HELP \par
+ \par
+ KEY\_\-0 \par
+ KEY\_\-1 \par
+ KEY\_\-2 \par
+ KEY\_\-3 \par
+ KEY\_\-4 \par
+ KEY\_\-5 \par
+ KEY\_\-6 \par
+ KEY\_\-7 \par
+ KEY\_\-8 \par
+ KEY\_\-9 \par
+ \par
+ KEY\_\-A \par
+ KEY\_\-B \par
+ KEY\_\-C \par
+ KEY\_\-D \par
+ KEY\_\-E \par
+ KEY\_\-F \par
+ KEY\_\-G \par
+ KEY\_\-H \par
+ KEY\_\-I \par
+ KEY\_\-J \par
+ KEY\_\-K \par
+ KEY\_\-L \par
+ KEY\_\-M \par
+ KEY\_\-N \par
+ KEY\_\-O \par
+ KEY\_\-P \par
+ KEY\_\-Q \par
+ KEY\_\-R \par
+ KEY\_\-S \par
+ KEY\_\-T \par
+ KEY\_\-U \par
+ KEY\_\-V \par
+ KEY\_\-W \par
+ KEY\_\-X \par
+ KEY\_\-Y \par
+ KEY\_\-Z \par
+
+
+KEY\_\-a \par
+ KEY\_\-b \par
+ KEY\_\-c \par
+ KEY\_\-d \par
+ KEY\_\-e \par
+ KEY\_\-f \par
+ KEY\_\-g \par
+ KEY\_\-h \par
+ KEY\_\-i \par
+ KEY\_\-j \par
+ KEY\_\-k \par
+ KEY\_\-l \par
+ KEY\_\-m \par
+ KEY\_\-n \par
+ KEY\_\-o \par
+ KEY\_\-p \par
+ KEY\_\-q \par
+ KEY\_\-r \par
+ KEY\_\-s \par
+ KEY\_\-t \par
+ KEY\_\-u \par
+ KEY\_\-v \par
+ KEY\_\-w \par
+ KEY\_\-x \par
+ KEY\_\-y \par
+ KEY\_\-z \par
+\hypertarget{_reference_lists_EngineSettingsPage}{}\section{Engine Settings}\label{_reference_lists_EngineSettingsPage}
+This Section contains the complete list of engine settings. They are all variables. Most can be modified during run time. Ones which cannot are listed here.
+\begin{DoxyItemize}
+\item WT\_\-STARTING\_\-CAMERA\_\-SLOTS
+\begin{DoxyItemize}
+\item This is the number of \hyperlink{classc_camera}{cCamera} slots created in the \hyperlink{classc_camera_handler}{cCameraHandler} at start. The number of slots will be increased as required, but this involves some overhead.
+\end{DoxyItemize}
+\item WT\_\-STARTING\_\-VIEWPORT\_\-SLOTS
+\begin{DoxyItemize}
+\item This is the number of \hyperlink{classc_viewport}{cViewport} slots created in the cViewportHandler at start. The number of slots will be increased as required, but this involves some overhead.
+\end{DoxyItemize}
+\item WT\_\-TEXTURE\_\-NUMBER\_\-ALLOWED
+\begin{DoxyItemize}
+\item This is the number of textures that can be applied to a single object. This is limited by your graphics card. Keep this as low as possible for the shaders used.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item WT\_\-OPENGL\_\-LIGHTS
+\begin{DoxyItemize}
+\item This is the number of Lights that you wish OpenGL to use simultaneously to light an object.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item USE\_\-LIGHT\_\-HANDLER
+\begin{DoxyItemize}
+\item The light handler will determine the closest WT\_\-OPENGL\_\-LIGHTS to the object and render the object only using their influence. This allows the user to improve performance and / or use more lights than OpenGL can support. This should not be changed while running
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item WT\_\-COLLISION\_\-HANDLER\_\-TYPE WT\_\-COLLISION\_\-HANDLER\_\-TYPE\_\-TYPE
+\begin{DoxyItemize}
+\item This determines the Type of Collision handler used to sort Collisions. It can be set to either WT\_\-COLLISION\_\-HANDLER\_\-TYPE\_\-TYPE or WT\_\-COLLISION\_\-HANDLER\_\-TYPE\_\-BSP.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item WT\_\-RAY\_\-ANGLE\_\-RANGE
+\begin{DoxyItemize}
+\item This is the Angle Range for detecting whether a ray and polygon has collided. Should be smaller than 0.5 degrees. Large values will make the collisions more common.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item WT\_\-COLLISION\_\-HANDLER\_\-SIZE
+\begin{DoxyItemize}
+\item This will set the number of slots that the Collision Handler will use for filtering collisions. See relevant documentation.Should not be modified at runtime
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item WT\_\-COLLISION\_\-HANDLER\_\-DIMENSIONS
+\begin{DoxyItemize}
+\item This sets the number of dimensions the BSP Collision Handler should use (1,2 or 3) WT\_\-COLLISION\_\-HANDLER\_\-DIMENSIONS\_\-1D,WT\_\-COLLISION\_\-HANDLER\_\-DIMENSIONS\_\-2D, WT\_\-COLLISION\_\-HANDLER\_\-DIMENSIONS\_\-3D. This should not be modified at runtime
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item WT\_\-COLLISION\_\-SPACE\_\-SIZE
+\begin{DoxyItemize}
+\item This is the spatial size of each slot for the BSP. It should be at least (preferably more) than half the largest object size, that will be involved in collisions.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item WT\_\-DEFINE\_\-OS
+\begin{DoxyItemize}
+\item This is the OS that the engine is running under. So far OS\_\-LINUX or OS\_\-WINDOWS. This should be determined automatically when compiled.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \_\-GRAVITY\_\-X
+\begin{DoxyItemize}
+\item This is the X Axis value of gravity, to be used by particle objects.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \_\-GRAVITY\_\-Y
+\begin{DoxyItemize}
+\item This is the Y Axis value of gravity, to be used by particle objects.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \_\-GRAVITY\_\-Z
+\begin{DoxyItemize}
+\item This is the Z Axis value of gravity, to be used by particle objects.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \_\-WIND\_\-X
+\begin{DoxyItemize}
+\item This is the X Axis value of wind, to be used by particle objects.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \_\-WIND\_\-Y
+\begin{DoxyItemize}
+\item This is the Y Axis value of wind, to be used by particle objects.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \_\-WIND\_\-Z
+\begin{DoxyItemize}
+\item This is the Z Axis value of wind, to be used by particle objects.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item WT\_\-MAX\_\-PARTICLES
+\begin{DoxyItemize}
+\item This is the maximum particles that \hyperlink{classc_particle_handler}{cParticleHandler} should need to maintain at any one time. Should not be modifed at run time.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item WT\_\-PARTICLE\_\-HANDLER\_\-UPDATE\_\-PARTICLE\_\-POSITIONS
+\begin{DoxyItemize}
+\item When true, the Particle handler will automatically update the particles speed and position based on Wind and Gravity.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item WT\_\-VERTEX\_\-RANGE\_\-CHECK\_\-SIMILAR
+\begin{DoxyItemize}
+\item This is the maximum allowed distance between verteces in a collision object for them to be counted as a single vertex.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item WT\_\-USE\_\-PARENT\_\-STACK
+\begin{DoxyItemize}
+\item This will determine whether the system should automatically track each process' parent and children.Should not be used (At the moment)
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{_reference_lists_ObjectsUsingTheCreateMacro}{}\section{List of Objects using or not using the Create Macro.}\label{_reference_lists_ObjectsUsingTheCreateMacro}
+This section contains information of which objects which are handled by Bamboo. This means they should be created using the \_\-CREATE() macro and killed with signals. These objects should never be deleted, they should only be destroyed by being signaled with a \_\-KILL() signal or \hyperlink{classc_signal_a545074be1da41d00050bed3cd2fb2305}{cSignal::Signal()} function.
+\begin{DoxyItemize}
+\item \hyperlink{classc_process}{cProcess}
+\item \hyperlink{classc_render_object}{cRenderObject}
+\item \hyperlink{classc_camera}{cCamera}
+\item \hyperlink{classc_viewport}{cViewport}
+\begin{DoxyItemize}
+\item \hyperlink{classc_image}{cImage}
+\item \hyperlink{classc_model}{cModel}
+\item \hyperlink{classc_text_button}{cTextButton}
+\item \hyperlink{classc_button}{cButton}
+\item \hyperlink{classc_text}{cText}
+\item \hyperlink{classc_landscape}{cLandscape}
+\item \hyperlink{classc_render_node}{cRenderNode}
+\item \hyperlink{classc_node_list}{cNodeList}
+\item \hyperlink{classc_beam_mesh}{cBeamMesh}
+\item \hyperlink{classc_line}{cLine}
+\item \hyperlink{classc_point}{cPoint}
+\item cParticleGroup
+\item \hyperlink{classc_particle}{cParticle}
+\end{DoxyItemize}
+\item \hyperlink{classc_collision_object}{cCollisionObject}
+\item \hyperlink{classc_audio_object}{cAudioObject}
+\end{DoxyItemize}These objects can be used as instances and can be created and deleted as desired. The \hyperlink{classc_file}{cFile} objects are the types used when the \_\-GET\_\-FILE() macros are used. Otherwise you are unlikely to use them.
+\begin{DoxyItemize}
+\item \hyperlink{classc1_d_vf}{c1DVf}
+\item \hyperlink{classc2_d_vf}{c2DVf}
+\item \hyperlink{classc3_d_vf}{c3DVf}
+\item \hyperlink{classc4_d_vf}{c4DVf}
+\item \hyperlink{classc2_d_vi}{c2DVi}
+\item \hyperlink{classc3_d_vi}{c3DVi}
+\item \hyperlink{classc_matrix4}{cMatrix4}
+\item \hyperlink{classc_camera_matrix4}{cCameraMatrix4}
+\item cMatrixStack
+\item \hyperlink{classc_file}{cFile} (These are for loaded media files. You should not need to create objects of these types)
+\begin{DoxyItemize}
+\item cSoundObject
+\item \hyperlink{classc_mesh_file_collision}{cMeshFileCollision}
+\item cTexture
+\item \hyperlink{classc_font}{cFont}
+\item \hyperlink{classc_mesh}{cMesh}
+\item \hyperlink{classcm_landscape}{cmLandscape}
+\item cShader
+\item \hyperlink{classc_shader_program}{cShaderProgram}
+\end{DoxyItemize}
+\item \hyperlink{classc_r_g_b}{cRGB}
+\item \hyperlink{classc_r_g_b_a}{cRGBA}
+\item \hyperlink{classc_collision_list}{cCollisionList}
+\end{DoxyItemize}\hypertarget{_reference_lists_OptimisationTechniques}{}\section{Optimisation Techniques}\label{_reference_lists_OptimisationTechniques}
+Bamboo is written to be as optimised as possible while remaining very simple. There are many things that can be done to optimise your code. {\bfseries Reduce Collisions:} \par
+ It is very important to only check for collisions that matter. Collisions should only detected one way (I.E. either From the Tank to the Bullet OR from the Bullet to the Tank, not both). Use \hyperlink{classc_collision_object_a1490cdf75c8037049bfa7891aa8756b7}{cCollisionObject::CollisionFilter()} to minimise the collision checks that are made. \par
+ {\bfseries Turn off Lighting where not required:} \par
+ If an object will not use the lighting settings there is no point {\bfseries Reduce Matrix Multiplications:} \par
+ Where possible use the minimum of Matrix multiplications. Both in shaders and in programs. Don't use cRenderObject::CalculateGlobalMatrix() unless absolutely neccessay. try to use cRenderObject::GetCacheMatrix() instead. It will not include changes to the Global matrix this frame but it is very fast. Use the highest level of Matrices possible in a shader.\hypertarget{_reference_lists_CommonMistakes}{}\section{Common Mistakes}\label{_reference_lists_CommonMistakes}
+{\bfseries  My Textures aren't working: } \par
+ Has the Mesh got UV Co-\/ordinates? The entire model will have random colors or be faded to a very dark color without UV co-\/ordinates. \par
+ The object must have its shader assigned before it can receive any textures. {\bfseries  My Lighting isn't working: } \par
+ If the model is entirely black it may not have Normals. A Mesh without normals cannot use lighting. If the lighting is not using the correct lights it may be worth checking if lighting is enabled for the current object with \hyperlink{classc_render_object_a67191d0fe8aceaa10052a542b3c34650}{cRenderObject::Lighting(bool)}. \par
+ {\bfseries  My Transparent Textures and Images are not working:} \par
+ Check that the Texture has an alpha channel to enable transparency. Check that Transparency is enabled with cRenderObject::Transparent(bool) \par
+ {\bfseries When I change an Objects shader it goes funny:} \par
+ Each shader assigns its variables to a location specific to that \hyperlink{classc_shader_program}{cShaderProgram}. This is done by the graphics card. Variables should be reassigned when an objects shader is changed. 

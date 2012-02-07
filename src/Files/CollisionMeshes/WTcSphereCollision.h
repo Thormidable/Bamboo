@@ -26,6 +26,10 @@ public:
         virtual cCompoundCollision *Compound();
     #endif
     virtual void Update(cMatrix4 &New);
+
+    uint8 Type();
+
+    ///Will return the Objects Type
 };
 
 #endif

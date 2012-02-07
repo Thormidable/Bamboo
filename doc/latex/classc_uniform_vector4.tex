@@ -1,0 +1,37 @@
+\hypertarget{classc_uniform_vector4}{
+\section{cUniformVector4 Class Reference}
+\label{classc_uniform_vector4}\index{cUniformVector4@{cUniformVector4}}
+}
+
+
+This is a specific type of \hyperlink{classc_uniform_store}{cUniformStore} for Controlling Uniform variable from a \hyperlink{classc_shader_program}{cShaderProgram}. See \hyperlink{classc_uniform_store}{cUniformStore}.  
+
+
+
+
+Collaboration diagram for cUniformVector4:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classc_uniform_vector4__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_uniform_vector4_a784f7b6fc64f869a2dc0e00c7098bba8}{
+void \hyperlink{classc_uniform_vector4_a784f7b6fc64f869a2dc0e00c7098bba8}{Write} ()}
+\label{classc_uniform_vector4_a784f7b6fc64f869a2dc0e00c7098bba8}
+
+\begin{DoxyCompactList}\small\item\em This will Write the buffered value to the Graphics card. \end{DoxyCompactList}\item 
+\hypertarget{classc_uniform_vector4_a2ede3bce3179f3281d50a51dc2979bd6}{
+void \hyperlink{classc_uniform_vector4_a2ede3bce3179f3281d50a51dc2979bd6}{DataValue} (void $\ast$lpData)}
+\label{classc_uniform_vector4_a2ede3bce3179f3281d50a51dc2979bd6}
+
+\begin{DoxyCompactList}\small\item\em This will Set the Data a Uniform Variable will Use. This will copy the data. It will not automatically update, but the data can be deallocated at any time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a specific type of \hyperlink{classc_uniform_store}{cUniformStore} for Controlling Uniform variable from a \hyperlink{classc_shader_program}{cShaderProgram}. See \hyperlink{classc_uniform_store}{cUniformStore}. 
+
+This Object holds a four float vector to be used by \hyperlink{classc_shader_program}{cShaderProgram}. Data must be updated by the end of every frame if the data is changed. 

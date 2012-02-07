@@ -1,0 +1,125 @@
+\hypertarget{classc_audio_object}{
+\section{cAudioObject Class Reference}
+\label{classc_audio_object}\index{cAudioObject@{cAudioObject}}
+}
+
+
+This class will allow a sound to be played. This class will link an audio source and a buffer, This allows the sound data stored in the buffer to be played through the source. Each source is an audio channel and can only play one sound at a time.  
+
+
+
+
+Collaboration diagram for cAudioObject:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classc_audio_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_audio_object_a1a44ae87c2bf5e43aff66624a42771fe}{
+\hyperlink{classc_audio_object_a1a44ae87c2bf5e43aff66624a42771fe}{cAudioObject} ()}
+\label{classc_audio_object_a1a44ae87c2bf5e43aff66624a42771fe}
+
+\begin{DoxyCompactList}\small\item\em This will create an OpenAL source for this object, without linking any cAudioBuffers to it. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_a172d5d9e89376a0c505fa051e9d02919}{
+\hyperlink{classc_audio_object_a172d5d9e89376a0c505fa051e9d02919}{cAudioObject} (\hyperlink{classc_audio_buffer}{cAudioBuffer} $\ast$lpBuffer)}
+\label{classc_audio_object_a172d5d9e89376a0c505fa051e9d02919}
+
+\begin{DoxyCompactList}\small\item\em This will create an OpenAL source and link this object to a buffer. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_acac2ff64aad76d82631497e6367891b6}{
+void \hyperlink{classc_audio_object_acac2ff64aad76d82631497e6367891b6}{Buffer} (\hyperlink{classc_audio_buffer}{cAudioBuffer} $\ast$lpBuffer)}
+\label{classc_audio_object_acac2ff64aad76d82631497e6367891b6}
+
+\begin{DoxyCompactList}\small\item\em This will link the OpenAL buffer pointed to by lpBuffer to this Audio Object ready to be played. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_a0cca638434e74bb9e7de88c9a3ccf1af}{
+void \hyperlink{classc_audio_object_a0cca638434e74bb9e7de88c9a3ccf1af}{Buffer} (string lcBuffer)}
+\label{classc_audio_object_a0cca638434e74bb9e7de88c9a3ccf1af}
+
+\begin{DoxyCompactList}\small\item\em This will link the OpenAL buffer pointed to by lpBuffer to the Audio Object with the reference lcBuffer ready to be played. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_a2e7c8dc824eef10006f0f1c2824f10cd}{
+void \hyperlink{classc_audio_object_a2e7c8dc824eef10006f0f1c2824f10cd}{Play} ()}
+\label{classc_audio_object_a2e7c8dc824eef10006f0f1c2824f10cd}
+
+\begin{DoxyCompactList}\small\item\em This will play a sound through the OpenAL source from the buffer. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_a24febfe7f9dce25d0580ab1d7f0a31de}{
+bool \hyperlink{classc_audio_object_a24febfe7f9dce25d0580ab1d7f0a31de}{Playing} ()}
+\label{classc_audio_object_a24febfe7f9dce25d0580ab1d7f0a31de}
+
+\begin{DoxyCompactList}\small\item\em Returns true if the sound is playing. Returns false if it isn't. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_a9d4746cc93eec70bb92e897c3bd52bf0}{
+void \hyperlink{classc_audio_object_a9d4746cc93eec70bb92e897c3bd52bf0}{Stop} ()}
+\label{classc_audio_object_a9d4746cc93eec70bb92e897c3bd52bf0}
+
+\begin{DoxyCompactList}\small\item\em This will stop the currently playing sound and reset the play position to the start. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_a235be455b5cb947b3b680933fd46f144}{
+void \hyperlink{classc_audio_object_a235be455b5cb947b3b680933fd46f144}{Pause} ()}
+\label{classc_audio_object_a235be455b5cb947b3b680933fd46f144}
+
+\begin{DoxyCompactList}\small\item\em This will pause the currently playing sound but retain the current play position. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_adb134027851226f2f5a446a3d885f26e}{
+ALuint \hyperlink{classc_audio_object_adb134027851226f2f5a446a3d885f26e}{Source} ()}
+\label{classc_audio_object_adb134027851226f2f5a446a3d885f26e}
+
+\begin{DoxyCompactList}\small\item\em This will return the ID of the OpenAL ID. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_af4c4aca8962158ec17809409ca330188}{
+void \hyperlink{classc_audio_object_af4c4aca8962158ec17809409ca330188}{Signal} (SIGNAL lsSignal)}
+\label{classc_audio_object_af4c4aca8962158ec17809409ca330188}
+
+\begin{DoxyCompactList}\small\item\em This will allow you to send signals to this object. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_a51d6f6bd4d8edc94e6208c712fdafcab}{
+void \hyperlink{classc_audio_object_a51d6f6bd4d8edc94e6208c712fdafcab}{Position} (float lfX, float lfY, float lfZ)}
+\label{classc_audio_object_a51d6f6bd4d8edc94e6208c712fdafcab}
+
+\begin{DoxyCompactList}\small\item\em Will Set the AudioObjects Position in Global Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_aa2c055a6371660e1f8f55593a3631c4d}{
+void \hyperlink{classc_audio_object_aa2c055a6371660e1f8f55593a3631c4d}{Speed} (float lfX, float lfY, float lfZ)}
+\label{classc_audio_object_aa2c055a6371660e1f8f55593a3631c4d}
+
+\begin{DoxyCompactList}\small\item\em Will Set the AudioObjects Speed in Global Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_ae76c7e952f7eabc5fc7ce95eccbbb0b2}{
+void \hyperlink{classc_audio_object_ae76c7e952f7eabc5fc7ce95eccbbb0b2}{Loop} (bool lbLoop)}
+\label{classc_audio_object_ae76c7e952f7eabc5fc7ce95eccbbb0b2}
+
+\begin{DoxyCompactList}\small\item\em Will Set whether the AudioObject should loop playing the sound it has buffered. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_a55488d9c5d818637de6f09aeda27b6c1}{
+float $\ast$ \hyperlink{classc_audio_object_a55488d9c5d818637de6f09aeda27b6c1}{Position} ()}
+\label{classc_audio_object_a55488d9c5d818637de6f09aeda27b6c1}
+
+\begin{DoxyCompactList}\small\item\em Will return the AudioObjects Position in Global Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_acde57e13d2864cd8d2ae87899a13520d}{
+float $\ast$ \hyperlink{classc_audio_object_acde57e13d2864cd8d2ae87899a13520d}{Speed} ()}
+\label{classc_audio_object_acde57e13d2864cd8d2ae87899a13520d}
+
+\begin{DoxyCompactList}\small\item\em Will return the AudioObjects Speed in Global Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_a2917ae87b530830150d7a656386df6bf}{
+bool \hyperlink{classc_audio_object_a2917ae87b530830150d7a656386df6bf}{Loop} ()}
+\label{classc_audio_object_a2917ae87b530830150d7a656386df6bf}
+
+\begin{DoxyCompactList}\small\item\em Will return whether the AudioObject is set to loop. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_a89f8764ce51777e8a25df9d2d6c7f091}{
+void \hyperlink{classc_audio_object_a89f8764ce51777e8a25df9d2d6c7f091}{Gain} (float lfGain)}
+\label{classc_audio_object_a89f8764ce51777e8a25df9d2d6c7f091}
+
+\begin{DoxyCompactList}\small\item\em Will set the AudioObjects gain. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_aba4c49f2d57ed35ff90e53233e7b7902}{
+void \hyperlink{classc_audio_object_aba4c49f2d57ed35ff90e53233e7b7902}{Pitch} (float lfPitch)}
+\label{classc_audio_object_aba4c49f2d57ed35ff90e53233e7b7902}
+
+\begin{DoxyCompactList}\small\item\em Will set the AudioObjects pitch. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_a6ccea814b124d906c7e9e9fe63afe429}{
+float \hyperlink{classc_audio_object_a6ccea814b124d906c7e9e9fe63afe429}{Gain} ()}
+\label{classc_audio_object_a6ccea814b124d906c7e9e9fe63afe429}
+
+\begin{DoxyCompactList}\small\item\em Will return the AudioObjects gain. \end{DoxyCompactList}\item 
+\hypertarget{classc_audio_object_adb85eab7a36db5e5ad7236a4746f37ae}{
+float \hyperlink{classc_audio_object_adb85eab7a36db5e5ad7236a4746f37ae}{Pitch} ()}
+\label{classc_audio_object_adb85eab7a36db5e5ad7236a4746f37ae}
+
+\begin{DoxyCompactList}\small\item\em Will return the AudioObjects pitch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will allow a sound to be played. This class will link an audio source and a buffer, This allows the sound data stored in the buffer to be played through the source. Each source is an audio channel and can only play one sound at a time. 

@@ -824,6 +824,27 @@ uint32 cCameraMatrix4::Distance2D(float *lpOther)
  return (uint32)(lfX*lfX+lfY*lfY);
 }
 
+void cCameraMatrix4::Follow(cMatrix4* lpOther,float lfX,float lfY,float lfZ)
+{
+	cMatrix4 lpInv=lpOther->InvertRotationMatrix();
+
+	 memcpy(&mpData[0],&(lpInv.Matrix())[0],sizeof(float)*12);
+
+	 //InvSign();
+
+	mpPosition[0]=-lpOther->Matrix()[12];
+	mpPosition[1]=-lpOther->Matrix()[13];
+	mpPosition[2]=-lpOther->Matrix()[14];
+
+	Advance(lfX,lfY,lfZ);
+}
+
+
+void cCameraMatrix4::Follow(cMatrix4 &lpOther,float lfX,float lfY,float lfZ)
+{
+ 	Follow(&lpOther,lfX,lfY,lfZ);
+}
+
 void cCameraMatrix4::Follow(cMatrix4* lpOther,float lfDist)
 {
 	cMatrix4 lpInv=lpOther->InvertRotationMatrix();

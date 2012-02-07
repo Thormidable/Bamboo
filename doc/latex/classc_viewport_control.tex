@@ -1,0 +1,186 @@
+\hypertarget{classc_viewport_control}{
+\section{cViewportControl Class Reference}
+\label{classc_viewport_control}\index{cViewportControl@{cViewportControl}}
+}
+
+
+The \hyperlink{classc_viewport_control}{cViewportControl} allows the user to control the region of the screen a \hyperlink{classc_camera}{cCamera} or \hyperlink{classc_viewport}{cViewport} object will render to. This class allows the user to set a region of the screen for a \hyperlink{classc_camera}{cCamera} or \hyperlink{classc_viewport}{cViewport} to render to. It can be either Proportional to screens width and height or Fixed. If the region is proportional the co-\/ordinates and sizes of the region are in the range 0.0f to 1.0f representing 0 up to the entire screen size. If the region is fixed the co-\/ordinates and sizes of the region are measured in pixels. The X and Y Co-\/ordinates specify the Lower Left corner of the region. The width and height determine the size of the region.  
+
+
+
+
+Collaboration diagram for cViewportControl:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classc_viewport_control__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_viewport_control_aa6a247ab5ceba96ba5fb7e62f437bcab}{
+void \hyperlink{classc_viewport_control_aa6a247ab5ceba96ba5fb7e62f437bcab}{Viewport} (float lfX, float lfY, float lfWidth, float lfHeight)}
+\label{classc_viewport_control_aa6a247ab5ceba96ba5fb7e62f437bcab}
+
+\begin{DoxyCompactList}\small\item\em This will set the fixed size of a \hyperlink{classc_viewport}{cViewport} Control. Takes X,Y, Width and Height. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_abf9547c7d226676f365be5ca7e8902c6}{
+void \hyperlink{classc_viewport_control_abf9547c7d226676f365be5ca7e8902c6}{ViewportX} (float lfX)}
+\label{classc_viewport_control_abf9547c7d226676f365be5ca7e8902c6}
+
+\begin{DoxyCompactList}\small\item\em This will set the X Co-\/ordinate of the Viewport. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a1d04f9918c03552877be7d7c2ece62b8}{
+void \hyperlink{classc_viewport_control_a1d04f9918c03552877be7d7c2ece62b8}{ViewportY} (float lfY)}
+\label{classc_viewport_control_a1d04f9918c03552877be7d7c2ece62b8}
+
+\begin{DoxyCompactList}\small\item\em This will set the Y Co-\/ordinate of the Viewport. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a26c50c8441fcd1d1bc2c4649df7cf17b}{
+void \hyperlink{classc_viewport_control_a26c50c8441fcd1d1bc2c4649df7cf17b}{ViewportWidth} (float lfWidth)}
+\label{classc_viewport_control_a26c50c8441fcd1d1bc2c4649df7cf17b}
+
+\begin{DoxyCompactList}\small\item\em This will set the Width of the Viewport. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a7b5e508f96f8225a1a37e12b50b9c0d7}{
+void \hyperlink{classc_viewport_control_a7b5e508f96f8225a1a37e12b50b9c0d7}{ViewportHeight} (float lfHeight)}
+\label{classc_viewport_control_a7b5e508f96f8225a1a37e12b50b9c0d7}
+
+\begin{DoxyCompactList}\small\item\em This will set the Height of the Viewport. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a1ded5812151e520acd7a59ee54c2da18}{
+void \hyperlink{classc_viewport_control_a1ded5812151e520acd7a59ee54c2da18}{ViewportProportional} (float lfX, float lfY, float lfWidth, float lfHeight)}
+\label{classc_viewport_control_a1ded5812151e520acd7a59ee54c2da18}
+
+\begin{DoxyCompactList}\small\item\em This will set the proportional size of a \hyperlink{classc_viewport}{cViewport} Control. Takes X,Y, Width and Height. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a737b80cd951fb7788515246e73c6efcb}{
+void \hyperlink{classc_viewport_control_a737b80cd951fb7788515246e73c6efcb}{ViewportProportionalWidth} (float lfWidth)}
+\label{classc_viewport_control_a737b80cd951fb7788515246e73c6efcb}
+
+\begin{DoxyCompactList}\small\item\em This will set the proportional Width of the Viewport. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a127824d41e7d79d9ac9f29fdd5ff9191}{
+void \hyperlink{classc_viewport_control_a127824d41e7d79d9ac9f29fdd5ff9191}{ViewportProportionalHeight} (float lfHeight)}
+\label{classc_viewport_control_a127824d41e7d79d9ac9f29fdd5ff9191}
+
+\begin{DoxyCompactList}\small\item\em This will set the proportional Height of the Viewport. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_aebe75df4d8a302de7b74ec96021246bd}{
+void \hyperlink{classc_viewport_control_aebe75df4d8a302de7b74ec96021246bd}{ViewportProportionalX} (float lfX)}
+\label{classc_viewport_control_aebe75df4d8a302de7b74ec96021246bd}
+
+\begin{DoxyCompactList}\small\item\em This will set the proportional X Co-\/ordinate of the Viewport. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a6c375e235aaf3fb405311ec5871b8a36}{
+void \hyperlink{classc_viewport_control_a6c375e235aaf3fb405311ec5871b8a36}{ViewportProportionalY} (float lfY)}
+\label{classc_viewport_control_a6c375e235aaf3fb405311ec5871b8a36}
+
+\begin{DoxyCompactList}\small\item\em This will set the proportional Y Co-\/ordinate of the Viewport. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_ae13f217fcb42d5b9ece03d5d3bd63097}{
+float \hyperlink{classc_viewport_control_ae13f217fcb42d5b9ece03d5d3bd63097}{ViewportProportionalWidth} ()}
+\label{classc_viewport_control_ae13f217fcb42d5b9ece03d5d3bd63097}
+
+\begin{DoxyCompactList}\small\item\em This will return the Proportional Width of the Viewport region. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_abfe6b390bad6fdcbb971c5a4fc8edd62}{
+float \hyperlink{classc_viewport_control_abfe6b390bad6fdcbb971c5a4fc8edd62}{ViewportProportionalHeight} ()}
+\label{classc_viewport_control_abfe6b390bad6fdcbb971c5a4fc8edd62}
+
+\begin{DoxyCompactList}\small\item\em This will return the Proportional Height of the Viewport region. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a7ab015e6c7190e3793b5eaf0dd4404b9}{
+float \hyperlink{classc_viewport_control_a7ab015e6c7190e3793b5eaf0dd4404b9}{ViewportProportionalX} ()}
+\label{classc_viewport_control_a7ab015e6c7190e3793b5eaf0dd4404b9}
+
+\begin{DoxyCompactList}\small\item\em This will return the Proportional X Co-\/ordinate of the Viewport region. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_ae6a335d09694bb5821ba2ff6e0fce3ef}{
+float \hyperlink{classc_viewport_control_ae6a335d09694bb5821ba2ff6e0fce3ef}{ViewportProportionalY} ()}
+\label{classc_viewport_control_ae6a335d09694bb5821ba2ff6e0fce3ef}
+
+\begin{DoxyCompactList}\small\item\em This will return the Proportional Y Co-\/ordinate of the Viewport region. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a00ff003dc0465d09e5f829926b5c72bd}{
+float \hyperlink{classc_viewport_control_a00ff003dc0465d09e5f829926b5c72bd}{ViewportWidth} ()}
+\label{classc_viewport_control_a00ff003dc0465d09e5f829926b5c72bd}
+
+\begin{DoxyCompactList}\small\item\em This will return the Width of the Viewports region. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a9f06d752113dd2d8c0b10b109cbe4daf}{
+float \hyperlink{classc_viewport_control_a9f06d752113dd2d8c0b10b109cbe4daf}{ViewportHeight} ()}
+\label{classc_viewport_control_a9f06d752113dd2d8c0b10b109cbe4daf}
+
+\begin{DoxyCompactList}\small\item\em This will return the Height of the Viewports region. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_af151ca67dbf27868aec9b18c827548c8}{
+float \hyperlink{classc_viewport_control_af151ca67dbf27868aec9b18c827548c8}{ViewportX} ()}
+\label{classc_viewport_control_af151ca67dbf27868aec9b18c827548c8}
+
+\begin{DoxyCompactList}\small\item\em This will return the X Co-\/ordinate of the Viewports region. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_aad0486f38adb1f1ae5d415c62a9550fc}{
+float \hyperlink{classc_viewport_control_aad0486f38adb1f1ae5d415c62a9550fc}{ViewportY} ()}
+\label{classc_viewport_control_aad0486f38adb1f1ae5d415c62a9550fc}
+
+\begin{DoxyCompactList}\small\item\em This will return the Y Co-\/ordinate of the Viewports region. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a56d7ce89ad28c3c47efa12e2460bbe5c}{
+void \hyperlink{classc_viewport_control_a56d7ce89ad28c3c47efa12e2460bbe5c}{Proportional} (bool lbSet)}
+\label{classc_viewport_control_a56d7ce89ad28c3c47efa12e2460bbe5c}
+
+\begin{DoxyCompactList}\small\item\em This will turn on or off the use of Proportional co-\/ordinate systems. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_ac71e6a04b8ab00c68c527116f923e593}{
+bool \hyperlink{classc_viewport_control_ac71e6a04b8ab00c68c527116f923e593}{Proportional} ()}
+\label{classc_viewport_control_ac71e6a04b8ab00c68c527116f923e593}
+
+\begin{DoxyCompactList}\small\item\em This will return whether proportional co-\/ordinate systems are being used or not. \end{DoxyCompactList}\item 
+void \hyperlink{classc_viewport_control_ac3cee84c15d6b7bb35daf33a95a41f08}{ClearColor} (float lfRed=0.0f, float lfGreen=0.0f, float lfBlue=0.0f, float lfAlpha=1.0f)
+\begin{DoxyCompactList}\small\item\em This function will set the color the Viewport will clear the region to every frame. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a112989f88c6b4aa600df131df256e95a}{
+void \hyperlink{classc_viewport_control_a112989f88c6b4aa600df131df256e95a}{ClearColor} (float $\ast$lpColor)}
+\label{classc_viewport_control_a112989f88c6b4aa600df131df256e95a}
+
+\begin{DoxyCompactList}\small\item\em See \hyperlink{classc_viewport_control_ac3cee84c15d6b7bb35daf33a95a41f08}{cCamera::ClearColor(float,float,float,float)};. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_a069d58104acef910adada1ab30844171}{
+void \hyperlink{classc_viewport_control_a069d58104acef910adada1ab30844171}{ClearColor} (\hyperlink{classc_r_g_b_a}{cRGBA} \&lpColor)}
+\label{classc_viewport_control_a069d58104acef910adada1ab30844171}
+
+\begin{DoxyCompactList}\small\item\em See \hyperlink{classc_viewport_control_ac3cee84c15d6b7bb35daf33a95a41f08}{cCamera::ClearColor(float,float,float,float)};. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_aaac44c413f8cc01ff049fe1579d5c666}{
+void \hyperlink{classc_viewport_control_aaac44c413f8cc01ff049fe1579d5c666}{ClearColor} (\hyperlink{classc_r_g_b}{cRGB} \&lpColor)}
+\label{classc_viewport_control_aaac44c413f8cc01ff049fe1579d5c666}
+
+\begin{DoxyCompactList}\small\item\em See \hyperlink{classc_viewport_control_ac3cee84c15d6b7bb35daf33a95a41f08}{cCamera::ClearColor(float,float,float,float)};. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_aa107f9cf8534ef74ca3b01bcd9014489}{
+void \hyperlink{classc_viewport_control_aa107f9cf8534ef74ca3b01bcd9014489}{ClearColor} (\hyperlink{classc_r_g_b_a}{cRGBA} $\ast$lpColor)}
+\label{classc_viewport_control_aa107f9cf8534ef74ca3b01bcd9014489}
+
+\begin{DoxyCompactList}\small\item\em See \hyperlink{classc_viewport_control_ac3cee84c15d6b7bb35daf33a95a41f08}{cCamera::ClearColor(float,float,float,float)};. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_aa5ed9afba3be56e20088734376264c48}{
+void \hyperlink{classc_viewport_control_aa5ed9afba3be56e20088734376264c48}{ClearColor} (\hyperlink{classc_r_g_b}{cRGB} $\ast$lpColor)}
+\label{classc_viewport_control_aa5ed9afba3be56e20088734376264c48}
+
+\begin{DoxyCompactList}\small\item\em See \hyperlink{classc_viewport_control_ac3cee84c15d6b7bb35daf33a95a41f08}{cCamera::ClearColor(float,float,float,float)};. \end{DoxyCompactList}\item 
+\hypertarget{classc_viewport_control_ace2c8b3be8773b37cd4eee63f6e87a45}{
+\hyperlink{classc_r_g_b_a}{cRGBA} \hyperlink{classc_viewport_control_ace2c8b3be8773b37cd4eee63f6e87a45}{ClearColor} ()}
+\label{classc_viewport_control_ace2c8b3be8773b37cd4eee63f6e87a45}
+
+\begin{DoxyCompactList}\small\item\em See \hyperlink{classc_viewport_control_ac3cee84c15d6b7bb35daf33a95a41f08}{cCamera::ClearColor(float,float,float,float)};. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classc_viewport_control}{cViewportControl} allows the user to control the region of the screen a \hyperlink{classc_camera}{cCamera} or \hyperlink{classc_viewport}{cViewport} object will render to. This class allows the user to set a region of the screen for a \hyperlink{classc_camera}{cCamera} or \hyperlink{classc_viewport}{cViewport} to render to. It can be either Proportional to screens width and height or Fixed. If the region is proportional the co-\/ordinates and sizes of the region are in the range 0.0f to 1.0f representing 0 up to the entire screen size. If the region is fixed the co-\/ordinates and sizes of the region are measured in pixels. The X and Y Co-\/ordinates specify the Lower Left corner of the region. The width and height determine the size of the region. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_viewport_control_ac3cee84c15d6b7bb35daf33a95a41f08}{
+\index{cViewportControl@{cViewportControl}!ClearColor@{ClearColor}}
+\index{ClearColor@{ClearColor}!cViewportControl@{cViewportControl}}
+\subsubsection[{ClearColor}]{\setlength{\rightskip}{0pt plus 5cm}void cViewportControl::ClearColor (
+\begin{DoxyParamCaption}
+\item[{float}]{lfRed = {\ttfamily 0.0f}, }
+\item[{float}]{lfGreen = {\ttfamily 0.0f}, }
+\item[{float}]{lfBlue = {\ttfamily 0.0f}, }
+\item[{float}]{lfAlpha = {\ttfamily 1.0f}}
+\end{DoxyParamCaption}
+)}}
+\label{classc_viewport_control_ac3cee84c15d6b7bb35daf33a95a41f08}
+
+
+This function will set the color the Viewport will clear the region to every frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lfRed} & This is the red component of the color that a Viewport will clear the region to. \\
+\hline
+{\em lfGreen} & This is the green component of the color that a Viewport will clear the region to. \\
+\hline
+{\em lfBlue} & This is the blue component of the color that \hyperlink{classc_camera}{cCamera} will clear the region to. \\
+\hline
+{\em lfAlpha} & This is the alpha component of the color that \hyperlink{classc_camera}{cCamera} will clear the region to. This function sets the color that the camera will clear the screen to every frame. RGB defines the color. \\
+\hline
+\end{DoxyParams}

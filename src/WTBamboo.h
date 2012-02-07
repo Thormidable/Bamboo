@@ -105,6 +105,12 @@
  *  	.
  *  - _GET_LANDSCAPE_FILE(Reference)
  *  	- Function returning a pointer to the cmLandscape Object with the name Reference.
+ *      .
+ *  - _GET_COMPOUND_COLLISION_FILE(Reference)
+ * 	    - Function returning a pointer to the cCompoundCollisonFile Object with the name Reference.
+ *      .
+ *  - _GET_MODELLIST_FILE(Reference)
+ * 	    - Function returning a pointer to the cMeshTree Object with the name Reference.
  *  	.
  *  - _USE_FIXED_FUNCTION()
  *  	- Function telling the system to used the fixed function pipeline and not use shaders. This will slow the system and disable functionality. Disadvised.
@@ -579,17 +585,24 @@
  * .
  *
  *\section OptimisationTechniques Optimisation Techniques
- * Bamboo is written to be as optimised as possible while remaining very simple. There are many things that can be done to optimise your code.
+ * Bamboo is written to be as optimised as possible while remaining very simple. There are many things that can be done to optimise your code. \n
  * <b>Reduce Collisions:</b> \n
  * It is very important to only check for collisions that matter. Collisions should only detected one way (I.E. either From the Tank to the Bullet OR from the Bullet to the Tank, not both).
  * Use cCollisionObject::CollisionFilter() to minimise the collision checks that are made. \n
  * <b>Turn off Lighting where not required:</b> \n
- *  If an object will not use the lighting settings there is no point
+ *  If an object will not use the lighting settings there is no point in calculating the lighting values. Turn it off with the function cRenderObject::Lighting(bool).
  * <b>Reduce Matrix Multiplications:</b> \n
  * Where possible use the minimum of Matrix multiplications. Both in shaders and in programs. Don't use cRenderObject::CalculateGlobalMatrix() unless absolutely neccessay. try to use cRenderObject::GetCacheMatrix() instead.
- * It will not include changes to the Global matrix this frame but it is very fast. Use the highest level of Matrices possible in a shader.
- *
+ * It will not include changes to the Global matrix this frame but it is very fast. Use the highest level of Matrices possible in a shader. \n
+ * <b>Avoid searching with strings:</b> \n
+ * Pointers are much quicker for accessing Media objects loaded onto the harddrive. If a piece of media will be accessed many times get a pointer to it using the functions for getting files (_GET_AUDIO_FILE(),_GET_COLLISION_MESH_FILE(),_GET_FONT_FILE(),_GET_LANDSCAPE_FILE(),_GET_MESH_FILE(),_GET_SHADER_FILE(),_GET_TEXTURE_FILE()). Each takes a string and returns a pointer of the correct type to the media object. if it cannot be found it returns 0;
  * \section CommonMistakes Common Mistakes
+ * <b> Nothing is showing on screen: </b> \n
+ * Check your Render Objects have been given valid shader programs using cRenderObject::Shader(string) or cRenderObject::Shader(cShaderProgram*).
+ * Check the camera is facing the objects. Check the objects are between the cameras near and far distances cCamera::Near() cCamera::Far().
+ * Change the cameras clear color to be not black and not green using cViewportControl::ClearColor(float,float,float,float).
+ * (Objects are most likely to default to black or green depending on the shader program and OS).
+ * Finally check the version of OpenGL that is being used by Bamboo. This is displayed as the first piece of information in the debugging console. It should be at least 3.0.
  * <b> My Textures aren't working: </b> \n
  * Has the Mesh got UV Co-ordinates? The entire model will have random colors or be faded to a very dark color without UV co-ordinates. \n
  * The object must have its shader assigned before it can receive any textures.
@@ -1860,7 +1873,8 @@
  * _GET_AUDIO_FILE(Reference)
  * _GET_COLLISION_MESH_FILE(Reference)
  * _GET_LANDSCAPE_FILE(Reference)
- *
+ * _GET_COMPOUND_COLLISION_FILE(Reference)
+ * _GET_MODELLIST_FILE(Reference)
  * _GET_FILE(FileType,FileName) Will allow you to specify a type for the file and a text identifier reference. This should only be used for used defined File types.
  *
  * The default linking code is of the Form cFileHandler::Instance()->File<FileType>(FileName). The Macros above automatically select the appropriate Internal class.
@@ -2410,6 +2424,7 @@
  *
  *\code
  //Declare a new type of Process cCore.
+ //class cCore : public cProcess
  _PROCESS(cCore)
  {
  public:
@@ -2428,43 +2443,43 @@
 		 _LOAD_FILE( "Demonstration1.imf" );
 
 	//Create a Textured Model to put the ball on screen.
-	BallPointer =  _CREATE(cModel);
+		BallPointer =  _CREATE(cModel);
 
 	//Set the mesh it will use.
-	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
+		BallPointer -> Mesh( "BallModel" );
 
 	//Set the Texture it will use.
-	BallPointer -> Texture( _GET_MESH_FILE( "BallTexture" ) );
+		BallPointer -> Texture( "BallTexture" );
 
 	//Set the Shader it will use.
-	BallPointer -> Shader( _GET_SHADER_FILE( "TexturingProgram" ) );
+		BallPointer -> Shader( "TexturingProgram" );
 
 	//Set a start position.
 	//This is relative to the camera.
 	// The first value is left and right position of the object.
 	// The second value is up and down position of the object.
 	// The third value is forwards nd backwards.
-	BallPointer -> Position( 0.0 , 20.0 , 30.0 );
+		BallPointer -> Position( 0.0 , 20.0 , 30.0 );
 
 	//The ball has been placed 30 units in front of the camera.
 	//The ball has been placed 20 units up from the camera.
 
 	//Set the ball so it is not moving at the start.
-	BallSpeed = 0.0;
+		BallSpeed = 0.0;
 	};
 
 	//This function will update the balls position every process cycle.
 	void Run()
 	{
 		//Increase the balls speed downwards by a small amount.
-		BallSpeed = BallSpeed - 0.01;
+			BallSpeed = BallSpeed - 0.01;
 
 		//Advance the Ball by its speed.
 		//This uses the Global Y Axis as BallSpeed.
 		//BallSpeed stores the balls speed.
 		//A Local Advance would be affected by rotations.
 		//A Global Advance will not.
-		BallPointer -> GAdvanceY( BallSpeed );
+			BallPointer -> GAdvanceY( BallSpeed );
 
 		//If the ball is closer to the 'ground' than its radius
 		//then it has collided with the floor.
@@ -2479,22 +2494,22 @@
 			//abs() is a function which will return a positive value
 			//whether it was negative or not before.
 			//This will make the ball always bounce to the same height.
-			BallSpeed = abs(BallSpeed);
+				BallSpeed = abs( BallSpeed );
 
 			//Changing the above line of code
 			//to the following line of code will reduce
 			//the height the ball bounces with each bounce.
-			//BallSpeed = abs(BallSpeed) * 0.9 ;
+			//BallSpeed = abs( BallSpeed ) * 0.9 ;
 		}
 	};
 
 	void Stop()
 	{
 		//When this dies we want the ball to disappear.
-		_KILL(BallPointer);
+			_KILL( BallPointer );
 
 		//Stop BallPointer pointing at the model as it has been killed.
-		BallPointer = 0;
+			BallPointer = 0;
 	};
 };
 \endcode
@@ -2508,6 +2523,7 @@
  *
  *\code
  //Declare a new type of Process cCore.
+ //class cCore : public cProcess
  _PROCESS(cCore)
  {
  public:
@@ -2534,13 +2550,13 @@
 	BallPointer =  _CREATE(cModel);
 
 	//Set the mesh it will use.
-	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
+	BallPointer -> Mesh( "BallModel" );
 
 	//Set the Texture it will use.
-	BallPointer -> Texture( _GET_MESH_FILE( "BallTexture" ) );
+	BallPointer -> Texture( "BallTexture" );
 
 	//Set the Shader it will use.
-	BallPointer -> Shader( _GET_SHADER_FILE( "TexturingProgram" ) );
+	BallPointer -> Shader( "TexturingProgram" );
 
 	//Set a start position.
 	//This is relative to the camera.
@@ -2638,26 +2654,26 @@
 	//This contains a texture called BallTexture.
 	//This also contains a shader called TexturingProgram.
 	//This also contains a bounce sound called BounceSound.
-	 _LOAD_FILE( "Demonstration2.imf" );
+		 _LOAD_FILE( "Demonstration2.imf" );
 
 	//Create a Textured Model to put the ball on screen.
-	BallPointer =  _CREATE(cModel);
+		BallPointer =  _CREATE(cModel);
 
 	//Set the mesh it will use.
-	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
+		BallPointer -> Mesh( "BallModel" );
 
 	//Set the Texture it will use.
-	BallPointer -> Texture( _GET_MESH_FILE( "BallTexture" ) );
+		BallPointer -> Texture( "BallTexture" );
 
 	//Set the Shader it will use.
-	BallPointer -> Shader( _GET_SHADER_FILE( "TexturingProgram" ) );
+		BallPointer -> Shader( "TexturingProgram" );
 
 	//Set a start position.
 	//This is relative to the camera.
 	// The first value is left and right position of the object.
 	// The second value is up and down position of the object.
 	// The third value is forwards and backwards.
-	BallPointer -> Position( 0.0 , 0.0 , 0.0 );
+		BallPointer -> Position( 0.0 , 0.0 , 0.0 );
 
 	//Set the ball to move in a random direction at 0.1 units per frame
 	//RANDOM_NUMBER is a random float between 0.0 and 1.0.
@@ -2665,15 +2681,15 @@
 	//Because this is an instance
     //(not a Bamboo engine object)
     //it should be accessed using the dot operator.
-	BallSpeed.X( RANDOM_NUMBER * 0.1 );
-	BallSpeed.Y( RANDOM_NUMBER * 0.1 );
-	BallSpeed.Z( RANDOM_NUMBER * 0.1 );
+		BallSpeed.X( RANDOM_NUMBER * 0.1 );
+		BallSpeed.Y( RANDOM_NUMBER * 0.1 );
+		BallSpeed.Z( RANDOM_NUMBER * 0.1 );
 
 	//Create an audio file for playing the bounce sound.
-	BallBounce = _CREATE(cAudioObject);
+		BallBounce = _CREATE(cAudioObject);
 
 	//Create Buffer the sound we want to play into the cAudioObject.
-	BallBounce -> Buffer (_GET_AUDIO_FILE( "BallSound" );
+		BallBounce -> Buffer ( "BallSound" );
 
 	};
 
@@ -2681,10 +2697,10 @@
 	void Run()
 	{
 		//Increase the balls speed downwards by a small amount.
-		BallSpeedY = BallSpeedY - 0.01;
+			BallSpeedY = BallSpeedY - 0.01;
 
 		//Advance the Ball by its speed in all three Global axis.
-		BallPointer -> GAdvance( BallSpeed.X() , BallSpeed.Y() , BallSpeed.Z() );
+			BallPointer -> GAdvance( BallSpeed.X() , BallSpeed.Y() , BallSpeed.Z() );
 
 		//If the ball is outside any of the boundaries.
 		//There are much more concise ways of doing this but this is the clearest.
@@ -2711,12 +2727,12 @@
 	{
 
 		//When this dies we want the ball to disappear.
-		_KILL(BallPointer);
-		_KILL(BallSound);
+			_KILL(BallPointer);
+			_KILL(BallSound);
 
 		//Stop BallPointer pointing at the model as it is killed.
-		BallPointer = 0;
-		BallSound = 0;
+			BallPointer = 0;
+			BallSound = 0;
 	};
 };
 \endcode
@@ -2730,6 +2746,7 @@
 *\code
 
 //Declare and Define a process for controlling the ball.
+//class cBall : public cProcess
  _PROCESS(cBall)
  {
  public:
@@ -2750,16 +2767,16 @@
 		//Since cCore will create this process
 		//media will be loaded before we get to this point.
 		//Create a Textured Model to put the ball on screen.
-	BallPointer =  _CREATE(cModel);
+	BallPointer =  _CREATE( cModel );
 
 		//Set the mesh it will use.
-	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
+	BallPointer -> Mesh( "BallModel" );
 
 		//Set the Texture it will use.
-	BallPointer -> Texture( _GET_MESH_FILE( "BallTexture" ) );
+	BallPointer -> Texture( "BallTexture" );
 
 		//Set the Shader it will use.
-	BallPointer -> Shader( _GET_SHADER_FILE( "TexturingProgram" ) );
+	BallPointer -> Shader( "TexturingProgram" );
 
 		//Set a start position.
 		//This is relative to the camera.
@@ -2785,7 +2802,7 @@
 	BallBounce = _CREATE(cAudioObject);
 
 	//Create Buffer the sound we want to play into the cAudioObject.
-	BallBounce -> Buffer (_GET_AUDIO_FILE( "BallSound" );
+	BallBounce -> Buffer ( "BallSound" );
 
 	};
 
@@ -2831,6 +2848,7 @@
 };
 
 //Create a new process to be our bullets.
+//class cBullet : public cProcess
 _PROCESS(cBullet)
 {
  public:
@@ -2856,7 +2874,7 @@ _PROCESS(cBullet)
 		RenderPoint -> Copy( MatrixMatch );
 
 		//Give this point a shader to use.
-		RenderPoint -> Shader( _GET_SHADER_FILE( "BasicProgram" ) );
+		RenderPoint -> Shader( "BasicProgram" );
 
 		//Give this bullet a life span.
 		Life = 100.0;
@@ -2905,6 +2923,7 @@ _PROCESS(cBullet)
  //Declare a new type of Process cCore.
 //A Single instance of this process will be created
 // by the engine at the start of the program.
+//class cCore : public cProcess
  _PROCESS(cCore)
  {
   public:
@@ -2916,13 +2935,13 @@ _PROCESS(cBullet)
 	//This also contains a shader called TexturingProgram.
 	//This also contains a bounce sound called BounceSound.
 	//This also contains a second shader called BasicProgram.
-	 _LOAD_FILE( "Demonstration3.imf" );
+	 	_LOAD_FILE( "Demonstration3.imf" );
 
 	//Move the camera back 60 units so it is outside the box and looking at the ball.
-	_CAMERA -> Position (0.0 , 0.0 , -60);
+		_CAMERA -> Position (0.0 , 0.0 , -60);
 
 	//Create a cBall Object.
-	 _CREATE(cBall);
+	 	_CREATE(cBall);
 
 	};
 
@@ -2930,17 +2949,17 @@ _PROCESS(cBullet)
 	{
 		//Change the Yaw by the change in the mouse position.
 		//Multiply by a small value to slow it down.
-		_CAMERA -> RotateY( _MOUSE->XSpeed() * 0.01 );
+			_CAMERA -> RotateY( _MOUSE->XSpeed() * 0.01 );
 
 		//Change the Pitch by the change in the mouse position.
 		//Multiply by a small value to slow it down.
-		_CAMERA -> RotateZ( _MOUSE->YSpeed() * 0.01 );
+			_CAMERA -> RotateZ( _MOUSE->YSpeed() * 0.01 );
 
 		//If the left mouse button is clicked - Fire bullets
 		if( _MOUSE -> Left() )
 		{
 			//Create Our bullets
-			_CREATE( cBullet( _CAMERA ) );
+				_CREATE( cBullet( _CAMERA ) );
 		}
 	};
 
@@ -2958,6 +2977,7 @@ _PROCESS(cBullet)
 *\code
 
 //Declare and Define a process for controlling the ball.
+//class cBall : public cBall
  _PROCESS(cBall)
  {
  public:
@@ -2982,7 +3002,7 @@ _PROCESS(cBullet)
 		//Create a Textured Model to put the ball on screen.
 	BallPointer =  _CREATE(cModel);
 		//Set the mesh it will use.
-	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
+	BallPointer -> Mesh( "BallModel" ) );
 		//Set the Texture it will use.
 	BallPointer -> Texture( _GET_MESH_FILE( "BallTexture" ) );
 		//Set the Shader it will use.
@@ -3243,6 +3263,7 @@ public:
 *\code
 
 //Declare and Define a process for controlling the ball.
+//class cBall : public cProcess
  _PROCESS(cBall)
  {
  public:
@@ -3270,53 +3291,55 @@ public:
 	//Since cCore Creates this process
 	//Our media will be loaded before we get to this point.
 	//Create a Textured Model to put the ball on screen.
-	BallPointer =  _CREATE(cModel);
+		BallPointer =  _CREATE(cModel);
 
 	//Set the mesh it will use.
-	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
+		BallPointer -> Mesh( "BallModel" );
 
 	//Set the Texture it will use.
-	BallPointer -> Texture( _GET_MESH_FILE( "BallTexture" ) );
+		BallPointer -> Texture( "BallTexture" );
 
 	//Set the Shader it will use.
-	BallPointer -> Shader( _GET_SHADER_FILE( "TexturingProgram" ) );
+		BallPointer -> Shader( "TexturingProgram" );
 
 	//Set a start position.
 	//This is relative to the global position 0.0 , 0.0 , 0.0
 	// Position it randomly between -20 and +20 on each axis.
-	BallPointer -> Position( ZEROED_RANDOM_NUMBER * 20 , ZEROED_RANDOM_NUMBER * 20 , ZEROED_RANDOM_NUMBER * 20 );
+		BallPointer -> Position( ZEROED_RANDOM_NUMBER * 20 ,
+								 ZEROED_RANDOM_NUMBER * 20 ,
+								 ZEROED_RANDOM_NUMBER * 20 );
 
 	//Create a Collision Object to enable collisions for the Ball.
 	//Have it follow the position of the Ball.
 	//Have it linked to this process.
-	BallCollision = _CREATE( cCollisionObject( BallPointer , this ) );
+		BallCollision = _CREATE( cCollisionObject( BallPointer , this ) );
 
 	//Set Type will set the type of collision. By handing it values it will generate an object at run time.
 	//A Single float will make it a sphere of the specified radius.
-	BallCollision -> SetType( 1.0 );
+		BallCollision -> SetType( 1.0 );
 
 	//We also need to set the filter value for the collision. This is important to maintain the speed of collision detection.
 	//This means that this collision object will be checked under the value 1.
-	BallCollision -> CollisionFilter( 1 );
+		BallCollision -> CollisionFilter( 1 );
 
 	//Move the camera back 60 units so it is outside the box and looking at the ball.
-	_CAMERA -> Position (0.0 , 0.0 , -60);
+		_CAMERA -> Position (0.0 , 0.0 , -60);
 
 	//Set the ball to move in a random direction at 0.1 units per frame
 	//RANDOM_NUMBER is a random float between 0.0 and 1.0.
 	//Because this is an instance (not a Bamboo engine object) it should be accessed using the dot operator.
-	BallSpeed.X( RANDOM_NUMBER * 0.1 );
-	BallSpeed.Y( RANDOM_NUMBER * 0.1 );
-	BallSpeed.Z( RANDOM_NUMBER * 0.1 );
+		BallSpeed.X( RANDOM_NUMBER * 0.1 );
+		BallSpeed.Y( RANDOM_NUMBER * 0.1 );
+		BallSpeed.Z( RANDOM_NUMBER * 0.1 );
 
 	//Create an audio file for playing the bounce sound.
-	BallBounce = _CREATE(cAudioObject);
+		BallBounce = _CREATE( cAudioObject );
 
 	//Create Buffer the sound we want to play into the cAudioObject.
-	BallBounce -> Buffer (_GET_AUDIO_FILE( "BallSound" );
+		BallBounce -> Buffer ( "BallSound" );
 
 	//Set the health to 100 percent.
-	Health = 100.0 ;
+		Health = 100.0 ;
 
 	};
 
@@ -3324,11 +3347,11 @@ public:
 	void Run()
 	{
 		//Increase the balls speed downwards by a small amount.
-		BallSpeedY = BallSpeedY - 0.01;
+			BallSpeedY = BallSpeedY - 0.01;
 
 		//Advance the Ball by its speed in all three Global axis.
 		//If this was a Local axis you would not notice a change until you rotated the ball around.
-		BallPointer -> GAdvance( BallSpeed.X() , BallSpeed.Y() , BallSpeed.Z() );
+			BallPointer -> GAdvance( BallSpeed.X() , BallSpeed.Y() , BallSpeed.Z() );
 
 		//If the ball is outside any of the boundaries.
 		//There are much more concise ways of doing this but this is the clearest.
@@ -3354,12 +3377,12 @@ public:
 	void Stop()
 	{
 		//When this dies we want the ball to disappear.
-		_KILL(BallPointer);
-		_KILL(BallSound);
+			_KILL(BallPointer);
+			_KILL(BallSound);
 
 		//Stop BallPointer pointing at the model as it has been killed.
-		BallPointer = 0;
-		BallSound = 0;
+			BallPointer = 0;
+			BallSound = 0;
 	};
 
 	//This is a Userdefined signal. see cUserSignal.
@@ -3388,6 +3411,7 @@ public:
 
 //Create a new process type (class) cBullet.
 //This will control a single bullet
+//class cBullet : public cProcess
 _PROCESS(cBullet)
 {
  public:
@@ -3403,50 +3427,50 @@ _PROCESS(cBullet)
    cBullet(cCameraMatrix4 *MatrixMatch)
    {
 		//Create a point object for this object.
-		RenderPoint = _CREATE( cPoint );
+			RenderPoint = _CREATE( cPoint );
 
 		//Make this start with the same transalation as the camera.
-		RenderPoint -> Copy( MatrixMatch );
+			RenderPoint -> Copy( MatrixMatch );
 
 		//Give this point a shader to use.
-		RenderPoint -> Shader( _GET_SHADER_FILE( "BasicProgram" ) );
+			RenderPoint -> Shader( "BasicProgram" );
 
 		//Create a new collision object for bullet collisions.
 		//Have it follow the RenderPoint (Bullet object).
 		//Have it linked to this process.
-		PointCollision = _CREATE( cCollisionObject( RenderPoint , this ) );
+			PointCollision = _CREATE( cCollisionObject( RenderPoint , this ) );
 
 		//This will set the type of collision that this collision will use.
 		//This will make a sphere or radius 0.5 units.
-		PointCollision -> SetType ( 0.5 );
+			PointCollision -> SetType ( 0.5 );
 
 		//This Collision Filter value is different to the one used for the balls.
 		//This is so we can differentiate between the different collisions.
-		PointCollision -> CollisionFilter( 2 );
+			PointCollision -> CollisionFilter( 2 );
 
 		//Give this bullet a life span.
-		Life = 100.0;
+			Life = 100.0;
    };
 
    void Run()
    {
 		//Make the bullet move in the direction it is moving.
-		RenderPoint -> AdvanceZ( 0.01 );
+			RenderPoint -> AdvanceZ( 0.01 );
 
 		//Reduce the bullets remaining life. Eventually it will have run out of life.
-		Life = Life - 0.1;
+			Life = Life - 0.1;
 
 		//If the bullet has run out of life it should be killed
 		if( Life < 0.0 )
 		{
 			//Kill this bullet.
-			_KILL_THIS();
+				_KILL_THIS();
 
 			//As we know this bullet is dying we can kill the point.
-			_KILL( RenderPoint );
+				_KILL( RenderPoint );
 
 			//Since RenderPoint is being killed we should not point at it any more.
-			RenderPoint = 0;
+				RenderPoint = 0;
 		}
 
 		cProcess *CollidingProcess;
@@ -3455,7 +3479,7 @@ _PROCESS(cBullet)
 		//Generate a list of all collisions between this bullet and Collision Objects.
 		//Only cCollisionObject s with the filter value 1 will be checked.
 		//I.E. Generate collisions between this bullet and any Balls.
-		ListOfCollisions = PointCollision -> GenerateCollisionList( 1 );
+			ListOfCollisions = PointCollision -> GenerateCollisionList( 1 );
 
 			//This will perform this code on every collision with CollidingProcess
 			//In each loop CollidingProcess will point to the process linked to the colliding objects.
@@ -3501,6 +3525,7 @@ _PROCESS(cBullet)
 //Declare a new type of Process cCore.
 //A Single instance of this process will be created
 // by the engine at the start of the program.
+//class cCore : public cProcess
 _PROCESS(cCore)
 {
 public:
@@ -3516,18 +3541,18 @@ public:
 	//This also contains a shader called TexturingProgram.
 	//This also contains a bounce sound called BounceSound.
 	//This also contains a second shader for rendering Point Objects BasicProgram.
-	 _LOAD_FILE( "Demonstration3.imf" );
+	 	_LOAD_FILE( "Demonstration3.imf" );
 
 	//Move the camera back 60 units so it is outside the box.
 	// The box will now be in front of the camera.
-	_CAMERA -> Position (0.0 , 0.0 , -60);
+		_CAMERA -> Position (0.0 , 0.0 , -60);
 
 	//Here we create a ball.
-	 _CREATE(cBall);
+	 	_CREATE(cBall);
 
 	//Lets create 2 more so we have three targets
-	_CREATE(cBall);
-	_CREATE(cBall);
+		_CREATE(cBall);
+		_CREATE(cBall);
 
 	};
 
@@ -3535,14 +3560,14 @@ public:
 	{
 		//Change the Yaw by the change in the mouse position.
 		//Multiply by a small value to slow it down.
-		_CAMERA -> RotateY( _MOUSE->XSpeed() * 0.01 );
+			_CAMERA -> RotateY( _MOUSE->XSpeed() * 0.01 );
 
 		//Change the Pitch by the change in the mouse position.
 		//Multiply by a small value to slow it down.
-		_CAMERA -> RotateZ( _MOUSE->YSpeed() * 0.01 );
+			_CAMERA -> RotateZ( _MOUSE->YSpeed() * 0.01 );
 
 		//If the gun is not reloaded, do a bit more reloading.
-		if( Reload < 10.0 ) { Reload = Reload + 0.11; }
+			if( Reload < 10.0 ) { Reload = Reload + 0.11; }
 
 		//If the left mouse button is pressed.
 		//AND reloading is completed
@@ -3550,10 +3575,10 @@ public:
 		if( _MOUSE -> Left() && Reload >= 10.0)
 		{
 			//Fire a Bullet
-			_CREATE(cBullet);
+				_CREATE(cBullet);
 
 			//Tell the gun it is unloaded.
-			Reload = 0.0 ;
+				Reload = 0.0 ;
 		}
 	};
 
@@ -3582,10 +3607,12 @@ public:
  	cBall()
 	{
 	BallPointer =  _CREATE(cModel);
-	BallPointer -> Mesh( _GET_MESH_FILE( "BallModel" ) );
-	BallPointer -> Texture( _GET_MESH_FILE( "BallTexture" ) );
-	BallPointer -> Shader( _GET_SHADER_FILE( "TexturingProgram" ) );
-	BallPointer -> Position( ZEROED_RANDOM_NUMBER * 20 , ZEROED_RANDOM_NUMBER * 20 , ZEROED_RANDOM_NUMBER * 20 );
+	BallPointer -> Mesh( "BallModel" );
+	BallPointer -> Texture( "BallTexture" );
+	BallPointer -> Shader( "TexturingProgram" );
+	BallPointer -> Position( ZEROED_RANDOM_NUMBER * 20 ,
+							 ZEROED_RANDOM_NUMBER * 20 ,
+							 ZEROED_RANDOM_NUMBER * 20 );
 
 	BallCollision = _CREATE( cCollisionObject( BallPointer , this ) );
 	BallCollision -> SetType( 1.0 );
@@ -3596,7 +3623,7 @@ public:
 	BallSpeed.Z( RANDOM_NUMBER * 0.1 );
 
 	BallBounce = _CREATE(cAudioObject);
-	BallBounce -> Buffer (_GET_AUDIO_FILE( "BallSound" );
+	BallBounce -> Buffer ( "BallSound" );
 
 	Health = 100.0 ;
 	};
@@ -3662,7 +3689,7 @@ _PROCESS(cBullet)
    {
 		RenderPoint = _CREATE( cPoint );
 		RenderPoint -> Copy( MatrixMatch );
-		RenderPoint -> Shader( _GET_SHADER_FILE( "BasicProgram" ) );
+		RenderPoint -> Shader( "BasicProgram" );
 
 		PointCollision = _CREATE( cCollisionObject( RenderPoint , this ) );
 		PointCollision -> SetType ( 0.5 );
@@ -3797,7 +3824,6 @@ public:
 
 
 #include "./Global/WTSetDefinitions.h"
-#include "./Global/WTGameSettings.h"
 #include "./Global/IMFDefinitions.h"
 #include "./Global/WTcFlags.h"
 
@@ -3867,6 +3893,7 @@ public:
 #include "./Files/CollisionMeshes/WTcRayCollision.h"
 #include "./Files/CollisionMeshes/WTcMeshFileCollision.h"
 #include "./Files/CollisionMeshes/WTcCompoundCollision.h"
+#include "./Files/CollisionMeshes/WTcCompoundCollisionFile.h"
 
 #include "./Files/Textures/WTcTexture.h"
 #include "./Files/Fonts/WTcFont.h"
@@ -3918,6 +3945,7 @@ public:
 	 #include "./Camera/Renderable/WTcParticle.h"
 	 #include "./Camera/Renderable/WTcBeamMesh.h"
 	 #include "./Camera/Renderable/WTcButton.h"
+	 #include "./Camera/Renderable/WTcStarMap.h"
 
 #include "./Camera/WTcPainter.h"
 

@@ -1,0 +1,74 @@
+\hypertarget{classc_file}{
+\section{cFile Class Reference}
+\label{classc_file}\index{cFile@{cFile}}
+}
+
+
+This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inherit this class. It is best used for media files. This code will automatically add newly loaded files to \hyperlink{classc_file_handler}{cFileHandler}. The files can be loaded using the filename or if loaded from an IMF file using the reference for each file.  
+
+
+
+
+Collaboration diagram for cFile:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classc_file__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_file_a5bb81f36e954af61b581e3c1fd06e0de}{
+\hyperlink{classc_file_a5bb81f36e954af61b581e3c1fd06e0de}{cFile} ()}
+\label{classc_file_a5bb81f36e954af61b581e3c1fd06e0de}
+
+\begin{DoxyCompactList}\small\item\em This constructor will automatically load the file from memory and add it to the list in cFilehandler. \end{DoxyCompactList}\item 
+\hypertarget{classc_file_a7224559b2485e53608bd6ba9e21d1122}{
+char $\ast$ \hyperlink{classc_file_a7224559b2485e53608bd6ba9e21d1122}{FileName} ()}
+\label{classc_file_a7224559b2485e53608bd6ba9e21d1122}
+
+\begin{DoxyCompactList}\small\item\em This will return the files filename. \end{DoxyCompactList}\item 
+\hypertarget{classc_file_aa5891f6208183a26e7fde7d8dee62ffc}{
+void \hyperlink{classc_file_aa5891f6208183a26e7fde7d8dee62ffc}{Load} ()}
+\label{classc_file_aa5891f6208183a26e7fde7d8dee62ffc}
+
+\begin{DoxyCompactList}\small\item\em This is the function that will actually load the file from a hdd. \end{DoxyCompactList}\item 
+\hypertarget{classc_file_ab2e74ccc027ccb92ea577cd7bb9b5f5c}{
+void \hyperlink{classc_file_ab2e74ccc027ccb92ea577cd7bb9b5f5c}{Delete} ()}
+\label{classc_file_ab2e74ccc027ccb92ea577cd7bb9b5f5c}
+
+\begin{DoxyCompactList}\small\item\em This will delete the file from memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_file_aed51bea596b50e6c8a03dd1593298681}{
+\hyperlink{classc_linked_node}{cLinkedNode}$<$ \hyperlink{classv_file}{vFile} $>$ $\ast$ \hyperlink{classc_file_aed51bea596b50e6c8a03dd1593298681}{mpNode}}
+\label{classc_file_aed51bea596b50e6c8a03dd1593298681}
+
+\begin{DoxyCompactList}\small\item\em This is a pointer to the \hyperlink{classc_linked_node}{cLinkedNode} which owns this file. \end{DoxyCompactList}\item 
+\hypertarget{classc_file_a5e3add41cacddcc489ca9aa185e3b066}{
+char \hyperlink{classc_file_a5e3add41cacddcc489ca9aa185e3b066}{mpFileName} \mbox{[}64\mbox{]}}
+\label{classc_file_a5e3add41cacddcc489ca9aa185e3b066}
+
+\begin{DoxyCompactList}\small\item\em This will store the files filename. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_file_ae54eca20c29d2fcd5649aac33d1dba9a}{
+\hyperlink{classc_file_handler}{cFileHandler} $\ast$ \hyperlink{classc_file_ae54eca20c29d2fcd5649aac33d1dba9a}{mpFileHandler}}
+\label{classc_file_ae54eca20c29d2fcd5649aac33d1dba9a}
+
+\begin{DoxyCompactList}\small\item\em This is a pointer to the \hyperlink{classc_file_handler}{cFileHandler} which owns this file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_file_a70d0eacda2243b6345feb400aef70378}{
+class \hyperlink{classc_file_a70d0eacda2243b6345feb400aef70378}{cFileHandler}}
+\label{classc_file_a70d0eacda2243b6345feb400aef70378}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inherit this class. It is best used for media files. This code will automatically add newly loaded files to \hyperlink{classc_file_handler}{cFileHandler}. The files can be loaded using the filename or if loaded from an IMF file using the reference for each file. 

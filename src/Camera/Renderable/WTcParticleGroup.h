@@ -43,6 +43,7 @@ public:
 
 	~cParticleForGroup(){};
 	friend class cParticleGroup;
+	friend class cStarMap;
 
 	virtual void UpdatePos();
 	void UpdateFade();
@@ -69,6 +70,7 @@ public:
  */
 class cParticleGroup : public cRenderObject
 {
+protected:
 	cParticleSettings Data;
 	cParticleForGroup **mpParticles;
 	uint32 miParticles;
@@ -86,11 +88,11 @@ public:
 
 	void Initialise(uint32 liParticles);
 	void Settings(cParticleSettings &lpOther){Data=lpOther;}
-	void RespawnAll();
+	virtual void RespawnAll();
 	void RespawnOn(){mbRespawn=true;};
 	void Fade(){mbRespawn=false;};
 
-	void Refresh();
+	virtual void Refresh();
 	void UseGravity(){mbUseGravity=true;};
 	void NotUseGravity(){mbUseGravity=false;};
 	void RenderPainter();

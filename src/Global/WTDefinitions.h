@@ -5,6 +5,7 @@
 
 #define RANDOM_NUMBER static_cast<double>(rand())/static_cast<double>(RAND_MAX)
 #define ZEROED_RANDOM_NUMBER ((static_cast<double>(rand())/static_cast<double>(RAND_MAX)-0.5)*2)
+#define SEED_RANDOM_NUMBERS srand(time(NULL));
 
 #define SIGNAL unsigned char
 
@@ -119,6 +120,8 @@
 #define _GET_LANDSCAPE_FILE(Reference) _GET_FILE(cLandscapeMeshFile,Reference)
 ///Will return a pointer to a cModelList Mesh Tree object in memory with the text identifier Reference.
 #define _GET_MODELLIST_FILE(Reference) _GET_FILE(cMeshTree,Reference)
+///Will return a pointer to a cCompoundCollisionFileObject in memory with the text identifier Reference.
+#define _GET_COMPOUND_COLLISION_FILE(Reference) _GET_FILE(cCompoundCollisionFile,Reference)
 
 #define _MODEL_POINTER cTexturedModel*
 #define _LAND_POINTER cLandscape*
@@ -163,6 +166,11 @@
 ///This is a quick macro for Reseting the Collision Search
 #define _RESET_COLLISION cCollisionHandler::Instance()->ResetSearch()
 
+///Gets a pointer to the cWindow Object.
+#define _WINDOW gpWindow
+
+///Will Quit Bamboo at the end of the current Cycle.
+#define _QUIT _WINDOW->mbQuit=true
 
 ///This is a macro to create of new Process and Render objects.
 

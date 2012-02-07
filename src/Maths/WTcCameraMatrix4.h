@@ -124,6 +124,10 @@ void ResizeY(float lfScale);
 void Follow(cMatrix4* lpOther,float lfDist);
 ///This will make the camera position itself the distance lfDist behind the matrix lpOther facing in the same direction as the matrix lpOther.
 void Follow(cMatrix4& lpOther,float lfDist);
+///This will make the camera position itself with the same orientation as the Matrix lpOther at the point lfX,lfY,lfZ relative to its local Co-ordinates.
+void Follow(cMatrix4* lpOther,float lfX,float lfY,float lfZ);
+///This will make the camera position itself with the same orientation as the Matrix lpOther at the point lfX,lfY,lfZ relative to its local Co-ordinates.
+void Follow(cMatrix4& lpOther,float lfX,float lfY,float lfZ);
 ///This will make the camera point itself at the global point defined by the three float array lpPos.
 void PointAt(float *mpPos);
 ///This will make the camera point itself at the global point defined by the three float array lpPos.

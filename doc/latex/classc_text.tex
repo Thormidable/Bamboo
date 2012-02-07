@@ -1,0 +1,65 @@
+\hypertarget{classc_text}{
+\section{cText Class Reference}
+\label{classc_text}\index{cText@{cText}}
+}
+
+
+This class is a text renderable object.  
+
+
+
+
+Collaboration diagram for cText:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_text__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_text_a22c63dd27464b40ed6e30ce5e4244334}{
+\hyperlink{classc_text_a22c63dd27464b40ed6e30ce5e4244334}{cText} (const char $\ast$lsText)}
+\label{classc_text_a22c63dd27464b40ed6e30ce5e4244334}
+
+\begin{DoxyCompactList}\small\item\em Creates a text object and gives it a text string to use. \end{DoxyCompactList}\item 
+\hypertarget{classc_text_a9784e9fa562a9b942a24e1dbfda0f485}{
+\hyperlink{classc_text_a9784e9fa562a9b942a24e1dbfda0f485}{cText} ()}
+\label{classc_text_a9784e9fa562a9b942a24e1dbfda0f485}
+
+\begin{DoxyCompactList}\small\item\em Creates an empty text object with no text string. \end{DoxyCompactList}\item 
+\hypertarget{classc_text_a7c9689bdce14d24267277a2ebdb08fdf}{
+void \hyperlink{classc_text_a7c9689bdce14d24267277a2ebdb08fdf}{Text} (char $\ast$lsText)}
+\label{classc_text_a7c9689bdce14d24267277a2ebdb08fdf}
+
+\begin{DoxyCompactList}\small\item\em Will set the text string the \hyperlink{classc_text}{cText} object will render. \end{DoxyCompactList}\item 
+\hypertarget{classc_text_a7f0e0136d2461e2e3682b65eb6e125cf}{
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classc_text_a7f0e0136d2461e2e3682b65eb6e125cf}{Value} (T \&t)}
+\label{classc_text_a7f0e0136d2461e2e3682b65eb6e125cf}
+
+\begin{DoxyCompactList}\small\item\em Will accept a generic data type to render to the screen (will convert to a string). \end{DoxyCompactList}\item 
+\hypertarget{classc_text_ac44668d1b105b37f62e5386ce9c62969}{
+void \hyperlink{classc_text_ac44668d1b105b37f62e5386ce9c62969}{AddFont} (string lsFontSlot, \hyperlink{classc_font}{cFont} $\ast$lcFont)}
+\label{classc_text_ac44668d1b105b37f62e5386ce9c62969}
+
+\begin{DoxyCompactList}\small\item\em Will Add the Font lcFont to this object using the uniform variable labelled lsFontSlot. \end{DoxyCompactList}\item 
+\hypertarget{classc_text_a9fa922feeb34018a9756ca2ef6f06fff}{
+void \hyperlink{classc_text_a9fa922feeb34018a9756ca2ef6f06fff}{AddFont} (string lsFontSlot, string lcFont)}
+\label{classc_text_a9fa922feeb34018a9756ca2ef6f06fff}
+
+\begin{DoxyCompactList}\small\item\em Will Add the Font with reference lcFont to this object using the uniform variable labelled lsFontSlot. \end{DoxyCompactList}\item 
+\hypertarget{classc_text_ae144cad4649fe01e6164c073b14b37ac}{
+void \hyperlink{classc_text_ae144cad4649fe01e6164c073b14b37ac}{AddFont} (\hyperlink{classc_font}{cFont} $\ast$lcFont)}
+\label{classc_text_ae144cad4649fe01e6164c073b14b37ac}
+
+\begin{DoxyCompactList}\small\item\em Will Add the Font lcFont to the first free default Font slot (\char`\"{}Font0\char`\"{} \char`\"{}Font1\char`\"{} \char`\"{}Font2\char`\"{}). This is slower than \hyperlink{classc_text_ac44668d1b105b37f62e5386ce9c62969}{AddFont(string,cFont$\ast$)}. Also it allows for mistakes in the naming of samplers in the shader. \end{DoxyCompactList}\item 
+\hypertarget{classc_text_aa9e8247389d16ace03973ae34cca343f}{
+void \hyperlink{classc_text_aa9e8247389d16ace03973ae34cca343f}{AddFont} (string lcFont)}
+\label{classc_text_aa9e8247389d16ace03973ae34cca343f}
+
+\begin{DoxyCompactList}\small\item\em Will Add the Font with Reference lcFont to the first free default Font slot (\char`\"{}Font0\char`\"{} \char`\"{}Font1\char`\"{} \char`\"{}Font2\char`\"{}). This is slower than \hyperlink{classc_text_ac44668d1b105b37f62e5386ce9c62969}{AddFont(string,cFont$\ast$)}. Also it allows for mistakes in the naming of samplers in the shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is a text renderable object. 

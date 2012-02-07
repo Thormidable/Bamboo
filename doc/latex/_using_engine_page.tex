@@ -1,0 +1,728 @@
+In this Section are a few sub sections:
+\begin{DoxyEnumerate}
+\item \hyperlink{_using_engine_page_MainLoop}{Overview of Bamboo}
+\item \hyperlink{_using_engine_page_KernelPage}{The Kernel}
+\item \hyperlink{_using_engine_page_ProcessObjectsPage}{How to use Process Objects}
+\item \hyperlink{_using_engine_page_RenderObjectsPage}{How to use Render Objects}
+\item \hyperlink{_using_engine_page_FilesAccessPage}{Loading and Accessing Files}
+\item \hyperlink{_using_engine_page_InputsPage}{Accessing User Inputs}
+\item \hyperlink{_using_engine_page_AudioPage}{Using the Audio System}
+\item \hyperlink{_using_engine_page_SignalsPage}{Signals and Flags}
+\item \hyperlink{_using_engine_page_CollisionsPage}{Detecting Collisions}
+\item \hyperlink{_using_engine_page_RenderNodesPage}{Creating Local Co-\/ordinate systems}
+\item \hyperlink{_using_engine_page_MultipleCamerasViewports}{Multiple Cameras and Viewport Control}
+\item \hyperlink{_using_engine_page_IMFGenerationPage}{IMF File Generation and Usage}
+\end{DoxyEnumerate}\hypertarget{_using_engine_page_MainLoop}{}\section{Overview of Bamboo}\label{_using_engine_page_MainLoop}
+WTBamboo.h
+
+Bamboo is based on a Process / Renderable Object mentality. Process' are classes with behavioural code which tell them how to behave. They take inputs from the OS, signal other process' and tell Renderable objects how to display. Once a Process is written, the user should create a new instance. The system will record the information add it to the system and make the process enact it's behaviour, with no further input form the user (Fire and Forget). This way many similar objects can be created easily once the behavioural code is written. Render Objects should not have any behavioural code and are entirely directed by Process'. The Process' are controlled by \hyperlink{classc_kernel}{cKernel} which will track and update all the process'. Render Objects actually display on the screen. They are moved around in 3D space and \hyperlink{classc_camera}{cCamera} renders them to the screen. Collision Objects must be handed a Render Object at startup, which they will follow and determine collisions with other Collision Objects. Files are loaded by the FileHandler and can be asked to provide media data for Render Objects and Collision Objects. Lighting effects are controlled by the LightHandler. \par
+ In Bamboo programs the ESC key is automatically assigned to exit the program. Any Bamboo program can be quit by pressing ESC or clicking the close button in the top right of the window.
+
+The Main Loop: In the template there is the main loop. Create a new project and look at the file main.cpp. In the file you will see the following code: 
+\begin{DoxyCode}
+ //Using @EngineName in Windows
+ #include <WTBamboo.h>
+
+ //Windows Specific Main function. This will give access to inputs and windows si
+      gnals.
+ int WINAPI WinMain (HINSTANCE hInstance,
+                    HINSTANCE hPrevInstance,
+                    LPSTR lpCmdLine,
+                    int iCmdShow)
+ {
+ //This will Start @EngineName with cCore as the Core Process.
+ //cUserSettings is the class which will initialise the Engine Settings.
+ //hInstance is a Windows hook to allow creating a new window.
+ return _START_PROGRAM(cCore,cUserSettings,hInstance);
+};
+*
+\end{DoxyCode}
+ 
+\begin{DoxyCode}
+ //Using @EngineName in Linux
+ #include <WTBamboo.h>
+
+ //C++ standard main function.
+ int main ()
+ {
+ //This will Start @EngineName with cCore as the Core Process.
+ //cUserSettings is the class which will initialise the Engine Settings.
+  return _START_PROGRAM(cCore,cUserSettings);
+ };
+*
+\end{DoxyCode}
+
+
+Main Loop Explanation: This will call the main function which will initialise the various components of the system. First\_\-Process\_\-Type must be a class type which inherits \hyperlink{classc_process}{cProcess} and should be the process that initialises and creates all the other processes required for the game. User\_\-Settings\_\-Type must be a class type which inherits cSettings. The virtual function UserSettings() in the derived class should set all the variables the user wishes to define. If the User does not wish to define ANY settings, use cSettings here and the defaults will be used. hInstance is a Windows only variable which is passed from the operating system to the WinMain function. Use the first HINSTANCE Passed to the function.\par
+ First \_\-START\_\-PROGRAM will set the settings for the game to use.\par
+ Then it will initialise the various components of the engine.\par
+ It will create an instance of the class type First\_\-Process\_\-Type which should initilise the game and create other processes to start the game.\par
+ While there are processes alive (and the system has not received an exit signal) the system will continue to cycle.\par
+ As the system exit, it will clear data, close links to devices and hardware and return a suitable exit signal for the Operating system. This should be returned from the funciton main().\par
+\hypertarget{_using_engine_page_KernelPage}{}\section{The Kernel}\label{_using_engine_page_KernelPage}
+WTKernel.h
+
+Using the kernel system by William Thorley
+
+The Kernel does not need to be understood by the user, but is refered to later so a brief description will be given here. The Kernel owns and controls all the processes in the program. The kernel will create itself as soon as any Process is created. It will automatically grab any process as soon as it is created and can sort their run order. A Pointer to the \hyperlink{classc_kernel}{cKernel} can always be found by calling the macro \_\-KERNEL (\hyperlink{classc_kernel_a1d873e903cf2bccceee0a68bd9d4dd01}{cKernel::Instance()}). If this function is called and there is no \hyperlink{classc_kernel}{cKernel}, the function will create one. The Constructor is private, so there can be only one \hyperlink{classc_kernel}{cKernel}. The Kernel is entirely automatic and should require no inputs from the user. However it can supply useful information and functionality to the user. cKernel::KillAll(): Calling cKernel::KillAll() will kill every running process. This will cause Update() to exit, and traditionally end the program. However it is possible to cKernel::KillAll(), then create a new core process, and call Update() again, thereby ‘restarting’ the program.
+
+\_\-FIND\_\-PROCESS(TYPE) Calling \_\-FIND\_\-PROCESS() will automatically search the \hyperlink{classc_kernel}{cKernel} for any processes of class type TYPE. It will return a pointer to the next process of class type TYPE everytime it is called. When there are no more processes of class type TYPE it will return 0. \hypertarget{_using_engine_page_FirstProcessPage}{}\section{Your First Process}\label{_using_engine_page_FirstProcessPage}
+WTcProcess.h
+
+The First Process is exactly the same as every other process. i.e. it must inherit \hyperlink{classc_process}{cProcess}. What is special about the Process passed to the \_\-START\_\-PROGRAM() call is that it is the automatically called when the Kernel is initialized. This means that the constructor for the first process is the initialization code for the entire program. Usually the process’ which will form the program are started here as well as loading files for the system. For these examples I wil call the class cCore.
+
+This shows the declaration for cCore. Using \_\-PROCESS(Type) is the same as calling class Type : public \hyperlink{classc_process}{cProcess} to inherit \hyperlink{classc_process}{cProcess}. Declaration: 
+\begin{DoxyCode}
+ _PROCESS(cCore)
+ {
+  public:
+  cCore();
+
+  void Run();
+
+  void Stop();
+
+ };
+\end{DoxyCode}
+
+
+cCore(): This shows the constructor for cCore. As it is the first object it will load media for the rest of the program and kick off the other processes. 
+\begin{DoxyCode}
+ cCore::cCore()
+ {
+ //Load IMF Files into memory.
+  _LOAD_FILE("../src/User/Models/AShipModel.imf");
+  _LOAD_FILE("../src/User/Models/StartShip.imf");
+  _LOAD_FILE("../src/User/Textures/ATexture.imf");
+  _LOAD_FILE("../src/User/CollisionObjects/ACollision.imf");
+  _LOAD_FILE("../src/User/Objects/AIMFFileWithSeveralComponents.imf");
+
+ // Setup the camera.
+  _CAMERA->Far(1000.0f);
+  _CAMERA->Frustum();
+
+ //Create a new process and a renderable object.
+  mpProcessPointer=_CREATE(MyFirstProcess());
+  mpRenderObjectPointer=_CREATE(MyFirstRenderObject());
+
+ }
+\end{DoxyCode}
+
+
+Run(): Run() is run once every frame as long as cCore is alive and controls the entire program. The Run() function should is explicity designed to be re-\/written by the user to give each \hyperlink{classc_process}{cProcess} class their functionality. This Code can be seen as the behaviour that the process should follow. It should rotate and position the Process' Renderobjects, send signals, receive inputs, anything the Process may want to do as part of it's behaviour. The function cCore::Run() can be used like any other process, but is usually used to oversee the running of the program. 
+\begin{DoxyCode}
+ void cCore::Run()
+ {
+
+  if(_KEY(KEY_SPACE)) _CAMERA->Far(10.0f);
+   else _CAMERA->Far(1000.0f);
+  _CAMERA->Frustum();
+
+  _CREATE(AnotherProcess());
+  mpRenderObjectPointer->Advance(0.1f);
+
+ }
+\end{DoxyCode}
+
+
+Stop(): This is called whenever the cCore Process is Killed. This will only activate if the process was alive and is now dead. This should be used to kill or transfer control of Render Objects that are owned by this process, or unload files that are no longer used.
+
+
+\begin{DoxyCode}
+ void cCore::Stop()
+ {
+ _KILL(mpRenderObjectPointer);
+ mpProcessPointer_SIGNAL(_S_SLEEP);
+ }
+\end{DoxyCode}
+
+
+OnSleep(): This is called whenever the cCore Process is made to Sleep. This will only activate if the process was awake and is now asleep. This is generally used to sleep Render Objects that are owned by this process.
+
+
+\begin{DoxyCode}
+ void cCore::OnSleep()
+ {
+ mpRenderObjectPointer->Signal(_S_SLEEP);
+ }
+\end{DoxyCode}
+
+
+OnWake(): This is called whenever the cCore Process is made to Wake. This will only activate if the process was asleep and is now awake. This is generally used to wake Render Objects that were slept when cCore was sent to sleep.
+
+
+\begin{DoxyCode}
+ void cCore::OnWake()
+ {
+ mpRenderObjectPointer->Signal(_S_WAKE);
+ }
+\end{DoxyCode}
+\hypertarget{_using_engine_page_ProcessObjectsPage}{}\section{How to use Process Objects}\label{_using_engine_page_ProcessObjectsPage}
+WTcProcess.h
+
+Using William Thorley’s Process Handler System
+
+When properly implemented the process handler automatically links and runs all processes. A process must inherit \hyperlink{classc_process}{cProcess}. It must also define the virtual function Run() a process without a Run() function is useless, and will be deleted during the frame it is created.
+
+Declaring a new process class called player: 
+\begin{DoxyCode}
+ //This is the same as _PROCESS(player)
+ class player : public cProcess
+ {
+ public :
+ void Run();
+ };
+\end{DoxyCode}
+
+
+void \hyperlink{classc_process_a3e0fab4ccc0a8fb065d50eb88b6a0dd5}{cProcess::Run()}; The function Run() is a virtual function already defined. This function is called every time the process must run its code (usually once a frame). The code that defines how the process acts goes in Run().
+
+Creating a Process: Call the macro \_\-CREATE(Type); This will return a pointer to the new process of type Type. 
+\begin{DoxyCode}
+ player *mpNewProcessPointer;
+ NewProcessPointer=_CREATE(player());
+ _CREATE(AnotherProcess(Argument1,Argument2));
+\end{DoxyCode}
+
+
+Killing a Process: Process' must not be destroyed by deleting the process. Processes can be be deleted either by calling the macro \_\-KILL(); or by calling the Function Signal(SIGNAL lsFlags) with the flag \_\-S\_\-KILL. if \_\-KILL() is called without a pointer it will automatically use the pointer this. Process' will not be destroyed when the signal is sent, they will be deacticated, but the memory will remain allocated until \hyperlink{classc_kernel}{cKernel} reaches the correct stage to delete the object. Objects can remain allocated into the next frame, but not the frame after that. Both pieces of following code have the same effect. The Process pointed to by mpPointerToAnotherProcess is Killed and then this process is killed. 
+\begin{DoxyCode}
+ void player::Run()
+ {
+
+ if(_KEY(KEY_k))
+ {
+ mpPointerToAnotherProcess->Signal(_S_KILL);
+ _KILL(this);
+ }
+
+ }
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+ void player::Run()
+ {
+
+ if(_KEY(KEY_k))
+        {
+         _KILL(mpPointerToAnotherProcess);
+         _KILL();
+        }
+
+ }
+\end{DoxyCode}
+
+
+Sleeping a Process: A Process can be sent to sleep by calling the \hyperlink{classc_signal_a545074be1da41d00050bed3cd2fb2305}{cSignal::Signal(SIGNAL lsFlags)} function with the value \_\-S\_\-SLEEP. Sleeping a process leaves the process in the process list, but stops the Run() function being called every frame. This allows the Signal(SIGNAL lsFlags) function to be used to return it to ‘active duty’. The memory will remain allocated. Sending repeated Sleep calls to a process will not affect the process or the stability of the system, the Process will remain asleep.
+
+Waking a Process: A Process can be awakend by calling the \hyperlink{classc_signal_a545074be1da41d00050bed3cd2fb2305}{cSignal::Signal(SIGNAL lsFlags)} function with the value \_\-S\_\-WAKE. Sending repeated Waking calls to a process will not affect the process or the stability of the system, the Process will remain awake. 
+\begin{DoxyCode}
+ void player::Run()
+ {
+
+ if(_KEY(KEY_s)) mpPointerToAnotherProcess->Signal(_S_SLEEP);
+ if(_KEY(KEY_w)) mpPointerToAnotherProcess->Signal(_S_WAKE);
+
+ }
+\end{DoxyCode}
+
+
+Removing a Process: A Process can be killed by the \hyperlink{classc_kernel}{cKernel} object. Calling the cKernel::Remove() function will kill the process and free the memory. This must not be done to the currently running process or the system may crash. Use on the current process at your peril. The pointer is to the cLinkedNode$<$vProcess$>$ which owns this process. Each Process has a pointer (mpNode) to its cLinkedNode$<$vProcess$>$. 
+\begin{DoxyCode}
+ void player::Run()
+ {
+
+ if(_KEY(KEY_k)) _KERNEL->Remove(mpPointerToAProcessesNode);
+
+ }
+\end{DoxyCode}
+ \hypertarget{_using_engine_page_RenderObjectsPage}{}\section{How to use Render Objects}\label{_using_engine_page_RenderObjectsPage}
+WTcRenderObject.h
+
+All Render Objects are inherited from class vRenderObject, through class \hyperlink{classc_render_object}{cRenderObject}. The object also Inherits the class \hyperlink{classc_matrix4}{cMatrix4}. This is a 3D Translation class, and can handle 2D rotations (about X axis), 3D rotations, 3D Translations and 3D scaling. All \hyperlink{classc_matrix4}{cMatrix4} functions can be called from a pointer to any Render Object and will move the \hyperlink{classc_render_object}{cRenderObject} based on the \hyperlink{classc_matrix4}{cMatrix4} function called. Render Objects must be assigned a Shader to render to screen. Due to depreciation of OpenGL Functionality shaders are required to position an object in 3D space. All objects must be given a \hyperlink{classc_shader_program}{cShaderProgram} to render. Creating RenderObjects: cRenderObjects can be created using the \_\-CREATE macro as per a Process. This will return a pointer to the RenderObject. 
+\begin{DoxyCode}
+ void player::Run()
+ {
+        mpHull=_CREATE(cModel(mpShipNode));
+        mpHull->Mesh("Mesh");
+        mpHull->Texture("Texture");
+        mpHull->Shader("TexturingProgram");
+ }
+ *
+\end{DoxyCode}
+
+
+Currently there are lots of Render Objects:
+
+class \hyperlink{classc_model}{cModel}; \par
+ class \hyperlink{classc_landscape}{cLandscape}; \par
+ class \hyperlink{classc_beam_mesh}{cBeamMesh}; \par
+ class \hyperlink{classc_image}{cImage}; \par
+ class cTextureText; \par
+ class \hyperlink{classc_line}{cLine}; \par
+ class \hyperlink{classc_particle}{cParticle}; \par
+ class cParticleGroup; \par
+ class \hyperlink{classc_particle_handler}{cParticleHandler}; \par
+ class \hyperlink{classc_point}{cPoint}; \par
+ class \hyperlink{classc_button}{cButton}; \par
+ class \hyperlink{classc_text_button}{cTextButton}; \par
+ \par
+ There are also Render Nodes. These do not display on the screen bu manipulate the position of other objects. Essentially they create new co-\/ordinate systems. This allows objects to be positioned and rotated to other objects or points in space. This allows the 'gluing' or 'linking' of objects together. This allows the creating of models with limbs, or turrets etc. \par
+ class \hyperlink{classc_render_node}{cRenderNode}; \par
+ class \hyperlink{classc_node_list}{cNodeList}; \par
+ \par
+ See the relevant documentation for each for how to use them. \par
+ \par
+ The Renderable Object allows the user to develop their own Renderable Objects and links them to the renderer. A Renderable object must inherit \hyperlink{classc_render_object}{cRenderObject} and must also define the virtual function Render(), This will be called every time the renderable object needs to be rendered. It should also define all empty virtual functions in vRenderObject and \hyperlink{classc_render_object}{cRenderObject}.\hypertarget{_using_engine_page_MultiTexturing}{}\section{Texturing Objects}\label{_using_engine_page_MultiTexturing}
+In the latest release Multiple Textures have been implemented. This means that you can send, a texture, a bump map and a lighting map to a single model and produce much more complicated shader effects. \par
+ For those who don't want a detailed overview.
+\begin{DoxyItemize}
+\item Your shaders should call their uniform sampler2D variables \char`\"{}Texture0\char`\"{} \char`\"{}Texture1\char`\"{} \char`\"{}Texture2\char`\"{} etc.
+\item In the class cUserSettings set the variable WT\_\-TEXTURE\_\-NUMBER\_\-ALLOWED to the number of simultaneous textures required. This is 2 by default.
+\item An Object can only have textures applied to it once it has a shader. Use the function \hyperlink{classc_render_object_abd47a58de22adfe1e9a1970f66a2f4cd}{cRenderObject::Shader(cShaderProgram$\ast$)}.
+\item Use the function \hyperlink{classc_render_object_ad45b379f57731d803f7a52e58d91d3aa}{cRenderObject::AddTexture(cTexture$\ast$)} to add a texture to a \hyperlink{classc_render_object}{cRenderObject}. They will be added to the object and placed in slots in the order they are added. \par
+ Textures are applied to Renderable objects using the function AddTexture(string,cTexture$\ast$). This function will add the Texture pointer to the Texture slot with the name matching lsTextureSlot. Alternatively AddTexture(cTexture$\ast$) or AddTexture(string) can be used. This will add the texture to the next free texture slot in the shader named \char`\"{}Texture0\char`\"{} \char`\"{}Texture1\char`\"{} \char`\"{}Texture2\char`\"{} etc. \par
+ Declaring Textures in Fragment Shaders: Multitexturing in shaders is controlled using uniform sampler types: 
+\begin{DoxyCode}
+ uniform sampler2D Texture0;
+\end{DoxyCode}
+ This takes a 2D Texture and names it Texture0. By default Bamboo shaders use the names Texture0, Texture1 ,Texture2 etc. If you use different names for your texture samplers they will need to be linked to their textures using AddTexture(string,cTexture$\ast$). \par
+
+\end{DoxyItemize}\hypertarget{_using_engine_page_FilesAccessPage}{}\section{Loading and Accessing Files}\label{_using_engine_page_FilesAccessPage}
+WTcFile.h
+
+The Filehandler is an automatic system for controlling files loaded in Bamboo. All files should be of type IMF, though others can be loaded. When a file is loaded it is automatically linked into the system. This allows any process to access any loaded file. All Objects (blocks within IMF Files) are given a Reference (a character string) to allow them to be easily identified. And in the event of an OS clearing data (for instance Windows clearing Textures on Minimize) the file handler will automatically reload all the files. IMF Files can be created using the IMF Handler. This allows other files to be loaded and compiled into IMF Files. IMF Files are designed to not require any processing to speed loading times. It also allows the system to use object references which makes accessing components much much easier.
+
+To create a new File Class and make it use the file handler, have it inherit \hyperlink{classc_file}{cFile}, This will require \#include “WTcFile.h”. To load a new file use the macro \_\-LOAD\_\-FILE(FileName).
+
+IMF Files contain many types of data:
+
+Models Textures Fonts Model Trees Reference Lists Shaders Shader Programs Collision Objects Landscape Models
+
+Useful Macros:
+
+These will return a pointer to the file of the appropriate type with the Test Identifier 'Reference'. The files are checked for type, however giving files the same text identifier is bad practice. \_\-GET\_\-TEXTURE\_\-FILE(Reference) \_\-GET\_\-MESH\_\-FILE(Reference) \_\-GET\_\-FONT\_\-FILE(Reference) \_\-GET\_\-AUDIO\_\-FILE(Reference) \_\-GET\_\-COLLISION\_\-MESH\_\-FILE(Reference) \_\-GET\_\-LANDSCAPE\_\-FILE(Reference)
+
+\_\-GET\_\-FILE(FileType,FileName) Will allow you to specify a type for the file and a text identifier reference. This should only be used for used defined File types.
+
+The default linking code is of the Form \hyperlink{classc_file_handler_a03de3fbc79a44ef92ca36373743a92fd}{cFileHandler::Instance()}-\/$>$File$<$FileType$>$(FileName). The Macros above automatically select the appropriate Internal class. \hypertarget{_using_engine_page_InputsPage}{}\section{Accessing User Inputs}\label{_using_engine_page_InputsPage}
+There are two main types on input. Mouse inputs and Key inputs. Both are updated every frame and buffered until the next frame. This means that a key press or mouse position will be consistent throughout the entire frame. THe inputs re recieved as interupts so will be recieved in line with the OS. Key states are boolean and can be accessed using the macro \_\-KEY(Key Identifier). A list of Key Identifiers can be found on page \hyperlink{_reference_lists_KeyIdentifiersList}{Key Identifiers}. True is key pressed, false is key not pressed.\par
+ The Key Identifiers are unsigned integer values and can be handled as such, this means they can be passed to functions and processes as unsigned integer values. They can also be manipulated mathematically if the actual values they hold are know.\par
+ \par
+ The Mouse can be accessed using the macro \_\-MOUSE() which is a pointer to the \hyperlink{classc_mouse}{cMouse} Object. The mouse has three buttons (for now) left, right and middle, because that is enough for most people. Like keys these are boolean values, with true for pressed and false for not pressed. The mouse also has x,y and z which are the cursor position in pixels from the window position 0,0. Finally the mouse has xs and ys which is the amount the cursor has moved (in pixels) since the last frame.\par
+ \par
+ The macro \_\-MOUSE() is of the form \hyperlink{classc_event_handler_a8cf5519e1f3c5f6a6f79f9da75fb2750}{cEventHandler::Instance()}-\/$>$Mouse()\par
+ The macro \_\-KEY() is of the form \hyperlink{classc_event_handler_a8cf5519e1f3c5f6a6f79f9da75fb2750}{cEventHandler::Instance()}-\/$>$Key.GetKey(\_\-CHOSEN\_\-KEY)\par
+ \hypertarget{_using_engine_page_AudioPage}{}\section{Using the Audio System}\label{_using_engine_page_AudioPage}
+The class \hyperlink{classc_audio_object}{cAudioObject} are used to play sounds from the sound card. Audio files are included into IMF Files and loaded like any other IMF file. A Sound file is passed to the buffer and played with the Play() command. When the sound is played it will take up a channel on the sound card. A Audio Media File can be accessed using the \_\-GET\_\-AUDIO\_\-FILE() Macro like anyother type of media.
+
+
+\begin{DoxyCode}
+ //Create a new cAudioObject.
+ cAudioObject *mAO;
+
+ // Load an IMF file with some audio media.
+ _LOAD_FILE("./src/User/Audio/wave1.imf");
+
+ //Create the cAudioObject to buffer the sound file in.
+ mAO = new cAudioObject;
+
+ //Load the sound file into the buffer
+ mAO->SetBuffer( "SoundReference" );
+
+ //Play the sound
+ mAO->Play();
+\end{DoxyCode}
+\hypertarget{_using_engine_page_SignalsPage}{}\section{Signals and Flags}\label{_using_engine_page_SignalsPage}
+There are a range of Signal macros which allow you to send signals to other processes. 
+\begin{DoxyCode}
+ if(_KEY(KEY_SPACE)) _SLEEP_THIS();
+ cProcess *OtherProcess;
+ OtherProcess=_FIND_PROCESS(cChildProcess);
+ _KILL(OtherProcess);
+\end{DoxyCode}
+ \par
+ \par
+ List of macros: \_\-KILL(PROCESS) : Will kill the object pointed to by PROCESS. \_\-SLEEP(PROCESS) : Will sleep the object pointed to by PROCESS. \_\-WAKE(PROCESS) : Will wake the object pointed to by PROCESS. \_\-KILL\_\-THIS() : Will kill this object. Code after this will still be run, once this frame. The command return will allow the user to exit the object without running further code. \_\-SLEEP\_\-THIS() : Will sleep this object. Code after this will still be run, once this frame. The command return will allow the user to exit the object without running further code. \_\-WAKE\_\-THIS() : Will never have an effect. (As the code will not run if this object is asleep and there is no waking to be done if the process is awake).
+
+You can send your own signals between processes by defining the function \hyperlink{classc_user_signal_ab11af50af566f1df2a8cf41902e1ac9f}{cUserSignal::UserSignal(SIGNAL lsSignal,void $\ast$ lpData)} in your process class. This function is empty and virtual so This function is entirely user defined which means you can use your own flags to signal different actions for different processes. The void pointer allows you to send any additional information you may want. UserSignal() is a part of \hyperlink{classc_process}{cProcess} so any \hyperlink{classc_process}{cProcess} pointer can use it and will select the version of the function in the derived class. \par
+
+
+For Advanced Programmers: \par
+ The macros above actually link to the inherited function Signal(uint8) in \hyperlink{classc_signal}{cSignal}. This takes the following flags to have the desired effects. This will activate cSignal::AdditionalKillFunctionality(), cSignal::AdditionalSleepFunctionality(), cSignal::AdditionalWakeFunctionality() when Killed, slept of woken.
+\begin{DoxyItemize}
+\item \_\-S\_\-KILL
+\begin{DoxyItemize}
+\item Kill the process. It will be deactivated and no longer run. Once it is safe to do so, the Kernel will delete the object. This techincally Sleeps the object (so it won't run) then deletes the object once it is handled.
+\end{DoxyItemize}
+\item \_\-S\_\-SLEEP
+\begin{DoxyItemize}
+\item Sleep the process. It will be deactivated, but will not get deleted. The Process will continue to exist, but will not run. Objects this Process controls will remain and can be controlled from other processes.
+\end{DoxyItemize}
+\item \_\-S\_\-WAKE
+\begin{DoxyItemize}
+\item Wake the Process. A Sleeping process will be reawakened and will start to run again.
+\end{DoxyItemize}
+\item \_\-S\_\-KILL\_\-TREE
+\begin{DoxyItemize}
+\item If the Variable WT\_\-USE\_\-PARENT\_\-TREE is true, this will kill the signaled object and any child objects it created. This will act recursively until all children, grandchildren, great grandchildren etc. have been killed.
+\end{DoxyItemize}
+\item \_\-S\_\-SLEEP\_\-TREE
+\begin{DoxyItemize}
+\item If the Variable WT\_\-USE\_\-PARENT\_\-TREE is true, this will Sleep the signaled object and any child objects it created. This will act recursively until all children, grandchildren, great grandchildren etc. have been Slept.
+\end{DoxyItemize}
+\item \_\-S\_\-WAKE\_\-TREE
+\begin{DoxyItemize}
+\item If the Variable WT\_\-USE\_\-PARENT\_\-TREE is true, this will Wake the signaled object and any child objects it created. This will act recursively until all children, grandchildren, great grandchildren etc. have been Wakened.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{_using_engine_page_CollisionsPage}{}\section{Detecting Collisions}\label{_using_engine_page_CollisionsPage}
+Collision Objects will only collide with other collision objects, NOT Render Objects. When a Collision Object is created it must be passed a pointer to a Render Object which will define it's translation. This should be the first argument passed to a Collision Object.
+
+Collision Objects are created using the \_\-CREATE() Macro and killed using the \_\-KILL() Macro, as per a process. They can be slept and woken, like other objects. When Created a Collision Object needs to be linked to a process and a Renderable object. In the initialiser a pointer to a Render Object and a \hyperlink{classc_process}{cProcess} should be handed to the object. Collisions can be Filtered based on an unsigned integer value. When a Collision check is made, a filter can be specified (if not specified or specified as 0 then all collision objects will be checked for a collision) allowing the user only to check against objects the user is interested in. Collisions are very slow and the number of checks should always be minimised. Sphere Collisions are the fastest type, but do not allow any adjustment to fit the object. Objects should be given a filter value to allow them to be searched based on user defined properties. If the objects have no filter they will only be searched when a filter free search is performed. Collision Objects need a media type to define how and when they collide. Objects which are linked to a Renderable Object will be killed when their Renderable object is killed. As such Killing them is not required. This is defined using the Type Function which gives the Collision Object the data it needs and sets the type of collision Object it will be. There are many ways that Type can be set -\/ either handing a pointer to Collision Data object: \par
+ \par
+ Types of Collision Data: cCollisionSphere\par
+ \hyperlink{classc_mesh_collision}{cMeshCollision}\par
+ cCollisionRay\par
+ cCollisionBeam\par
+ cCollisionBox\par
+ cCollisionBoxFile\par
+ \par
+ or Handing it the data it needs to generate one:\par
+ Float : Sphere Collision.\par
+ Two Floats : Beam -\/ (Length, Radius) \par
+ Six Floats : Box Collision -\/ (+X, -\/X, +Y, -\/Y, +Z, -\/Z) \par
+ Float Pointer to Six Floats : Box Collision -\/ (+X, -\/X, +Y, -\/Y, +Z, -\/Z) \par
+ \hyperlink{classc_render_object}{cRenderObject} Pointer : Ray Object (will generate a beam encapsulating the space the object has moved through this frame -\/ suitable for fast moving objects which will be modelled as spheres). \par
+
+
+
+\begin{DoxyCode}
+ MyProcess::MyProcess()
+ {
+  mpRender=_CREATE(TexturedModel());
+  mpCollision=_CREATE(cCollisionObject(mpRender,this));
+
+  mpCollision->SetType(10.0f);
+  mpCollision->CollisionFilter(1);
+ }
+
+ void MyProcess::Run()
+ {
+ uint32 CollisionFilterValue;
+ CollisionFilterValue=2;
+  vProcess *lpProc;
+  cCollisionList* lpList;
+  lpList = mpCollision -> GenerateCollisionList( CollisionFilterValue );
+        _COLLISION_PROCESS_LIST(lpList,lpProc)
+        {
+                                _KILL(lpProc);
+        }
+        delete lpList;
+
+ }
+\end{DoxyCode}
+ \hypertarget{_using_engine_page_RenderNodesPage}{}\section{Creating Local Co-\/ordinate systems}\label{_using_engine_page_RenderNodesPage}
+WTcRenderNode.h WTcNodeList.h
+
+{\bfseries  \hyperlink{classc_render_node}{cRenderNode}: } RenderNodes are a special type of Render Object. Render Nodes have no visual rendering to screen. Instead they manipulate other Render Objects. Specifically, a Translation applied to a Render Node will affect any Render Objects Controlled by the RenderNode. This means the objects controlled by the Render Node will move as if the Render Nodes position was 0,0,0.
+
+
+\begin{DoxyCode}
+ mpNodePoint=_CREATE(cRenderNode());
+ mpNodePoint->Position(0.0f,0.0f,0.0f);
+ mpModel=_CREATE(cModel(mpNodePoint));
+ mpModel->Position(10.0f,0.0f,0.0f);
+
+ // mpModel is now at 10.0f,0.0f,0.0f.
+
+ mpNodePoint->Position(10.0f,0.0f,10.0f);
+
+ // mpModel is now at 20.0f,0.0f,10.0f.
+
+ mpNodePoint->RotateY(3.1416); //(rotate 90 degrees)
+
+ //Model is now at 0.0f,0.0f,-10.0f.
+\end{DoxyCode}
+
+
+To control a Render Object by a Render Node object pass a pointer to the Render Node as the first argument in the Render Objects Constructor. Render Node objects can control any Render Object, including Render Nodes. This means that there can be many levels of Render Nodes before reaching a Renderable Object, making positioning of complex positional relationships easy. \par
+ \par
+ {\bfseries  \hyperlink{classc_node_list}{cNodeList}:} There are also NodeLists. These are static objects. They are initialised to hold a certain number of objects and only support rotations around the local axis. These are good for predictable structure shapes which do not change often. Each object is given a level and will position and rotate itself around the last object with a lower depth value.
+
+
+\begin{DoxyCode}
+ //Create a Tree with 14 slots.
+ mpNodeList=_CREATE(cNodeList(14));
+
+ //Create 14 new cModels to fill the NodeList
+ uint32 liCount;
+ for(liCount=0;liCount<14;++liCount)
+ {
+        _CREATE(mpNodeList);
+ }
+
+ //Set Mesh and Level for each Item
+ //Make Object 0 use the Mesh "Torso"
+ mpNodeList->GetListItem(0)->Mesh("Torso"));
+ //The torso is the top of the tree. This is the object all other objects will ba
+      se their position on.
+ mpNodeList->SetLevel(0,0);
+
+ //Make Object 1 use the Mesh "Head"
+ mpNodeList->GetListItem(1)->Mesh("Head"));
+ //Make Object 1 linked to the Torso (last object with a Depth lower than this ob
+      jects)
+ mpNodeList->SetLevel(1,1);
+
+ //Make Object 2 use the Mesh "LeftUpperArm"
+ mpNodeList->GetListItem(2)->Mesh("LeftUpperArm"));
+ //Make Object 2 linked to the Torso.
+ mpNodeList->SetLevel(2,1);
+
+ //Make Object 3 use the Mesh "LeftForeArm"
+ mpNodeList->GetListItem(3)->Mesh("LeftForeArm"));
+ //Make Object 3 Linked to the LeftUpperArm
+ mpNodeList->SetLevel(3,2);
+
+ //Make Object 4 use the Mesh "LeftHand"
+ mpNodeList->GetListItem(4)->Mesh("LeftHand"));
+ //Make Object 4 Linked to the "LeftForeArm"
+ mpNodeList->SetLevel(4,3);
+
+ //You have now built a torso with a head and a left arm. repeat for the other li
+      mbs.
+ mpNodeList->GetListItem(5)->Mesh("RightUpperArm");
+ mpNodeList->SetLevel(5,1);
+
+ mpNodeList->GetListItem(6)->Mesh("RightForeArm");
+ mpNodeList->SetLevel(6,2);
+
+ mpNodeList->GetListItem(7)->Mesh("RightHand");
+ mpNodeList->SetLevel(7,3);
+
+ mpNodeList->GetListItem(8)->Mesh("LeftThigh");
+ mpNodeList->SetLevel(8,1);
+
+ mpNodeList->GetListItem(9)->Mesh("LeftShin");
+ mpNodeList->SetLevel(9,2);
+
+ mpNodeList->GetListItem(10)->Mesh("LeftFoot");
+ mpNodeList->SetLevel(10,3);
+
+ mpNodeList->GetListItem(11)->Mesh("RightThigh");
+ mpNodeList->SetLevel(11,1);
+
+ mpNodeList->GetListItem(12)->Mesh("RightShin");
+ mpNodeList->SetLevel(12,2);
+
+ mpNodeList->GetListItem(13)->Mesh("RightFoot");
+ mpNodeList->SetLevel(13,3);
+
+ //You now have a skeleton for a humanoid robot. Moving limbs requires moving any
+       one object and the rest of the objects linked will autoamtically move.
+ //This can be build into a MeshTree in the IMF Handler so it can be loaded from 
+      a file.
+\end{DoxyCode}
+ \hypertarget{_using_engine_page_MultipleCamerasViewports}{}\section{Multiple Cameras and Viewports}\label{_using_engine_page_MultipleCamerasViewports}
+Bamboo has full support for multiple \hyperlink{classc_camera}{cCamera} Objects, \hyperlink{classc_viewport}{cViewport} objects and rendering to specified regions. cCameras are seperate cameras. They store a scene graph (tree of vRenderObjects and vRenderNodes) and will render them to the specified region of the screen. cCameras are controlled by signals, so \_\-CREATE() should be used to create them and \_\-KILL() should be used to kill them. Once killed, all objects in their scene graph will be destroyed and so should not be accessed. Each \hyperlink{classc_camera}{cCamera} Object has it's own objects so creating a Render Object in one will not affect another. \par
+ cViewports are slightly different. They also render a scene graph to the screen in a specified region, but do not have a scene graph of their own. All cViewports are owned by a \hyperlink{classc_camera}{cCamera} object and will render the \hyperlink{classc_camera}{cCamera} objects scene graph. This is much more efficient than using a second \hyperlink{classc_camera}{cCamera} as only one scene graph is stored and updated. It allows the user to view the same scene as it's camera from a different position, rotation or perspective. All vRenderObjects can be passed a \hyperlink{classc_camera}{cCamera} as an argument in their constructor which will make them use the specified \hyperlink{classc_camera}{cCamera}. If they are passed a vRenderNode as a parameter, they will become a child of the \hyperlink{classc_camera}{cCamera} which owns the vRenderNode which owns the vRenderObject. the \_\-CAMERA pointer will always point to the first \hyperlink{classc_camera}{cCamera} object and will be used as a default when no \hyperlink{classc_camera}{cCamera} is specified. 
+\begin{DoxyCode}
+ //Create a Model on the default cCamera object and have the cCamera follow it at
+       a distance of 60.
+ cModel* lpModel=_CREATE(cModel);
+ lpModel->Mesh("MyMesh");
+ lpModel->Shader("TexturingProgram");
+ lpModel->Texture("MyTexture");
+ _CAMERA->Follow(lpModel,60.0f);
+
+ //Create a Viewport owned by the default cCamera object. and have the cCamera fo
+      llow it at a distance of 60.
+ cViewport *lpViewport=_CREATE(cViewport);
+ //Set the View port to render to the area X : 100 - 300 and Y : 100 - 400.
+ lpViewport->Viewport(100.0,100.0,200.0,300.0);
+ //Set the Viewport to follow the model at a distance of 20
+ lpViewport->Follow(lpModel,20.0);
+
+ //The model will appear twice on screen.
+ //Once across the entire screen at a distance of 60.
+ //Once in the area, X:100-300 Y:100-400 at a distance of 20.
+
+
+ //Create a new cCamera. Set it to use the region proportional to the screen size
+       of X:0.5-0.75 Y:0.5-0.6.
+ cCamera *lpCamera=_CREATE(cCamera);
+ lpCamera->Proportional(true);
+ lpCamera->Viewport(0.5,0.25,0.5,0.1);
+
+ //Create a Model and make the cCamera lpCamera its parent.
+ cModel* lpModel2=_CREATE(cModel(lpCamera));
+ lpModel2->Mesh("MySecondMesh");
+ lpModel2->Shader("TexturingProgram");
+ lpModel2->Texture("MySecondTexture");
+
+ //Make the second Camera Follow lpModel2.
+ lpCamera->Follow(lpModel2,30);
+
+ //lpModel will not appear in the screen region used by lpCamera as the object is
+       not owned by lpCamera.
+ //lpModel2 will not appear in either the screen region used by the default camer
+      a or its viewport.
+ //As the object is not owned by the default camera.
+\end{DoxyCode}
+ \hypertarget{_using_engine_page_IMFGenerationPage}{}\section{IMF File Generation and Usage}\label{_using_engine_page_IMFGenerationPage}
+IMF Files are generated by the IMF Compiler. The IMF Compiler is a seperate program to the Bamboo engine and has a text based interface. The Compiler should be run from the terminal, so the user can view and use the interface.
+
+Everytime the user runs the program will start with an empty IMF File. IMF Files contain media blocks. Each block begins with a type identifier to identify the type of media stored in the block. This is followed by a size specifier defining the amount of data in the remainder of the block. Finally the Block has a character string storing the reference.\par
+ The main task the user will perform is to add Media to the IMF File. Each Media file added will require a reference (a character string which allows the media to be identified in the Bamboo Engine) and often other data to fully define the object.\par
+ Media can often be converted into several different types of IMF Blocks. e.g. A image can be converted to a 2D Texture, a Landscape height map or if it is 64 times taller than it is wide into a font. Each of these require different information to generate the object.\par
+ An IMF File can contain many blocks all with different media types in. This allows the user to group media into sensible sets which are interdependant, eg a tank body model, a tank turret model, a tank shell model, a texture for the tank, and a model list representing the skeletal structure for the tank. This ensures that all inter dependant media can be loaded with a single call.\par
+ Each level of the menu defines the options available to the user, selecting 0 will always move the user back up to the previous level. Otherwise, the user should select the desired option, insert the number representing it and press enter.\par
+
+
+To add each item, select 1 from the main menu. Each file Name (including file type) which is entered will be added to the IMF File as a new block. The system will request all the information required to generate the object, then add it to the IMF File as a new block. Take care when selecting the references as they are the only way to access the media in the Bamboo Engine.\par
+ Once all the required media files are added to the IMF file, it can be written to the harddrive, by selecting option 7. The IMF file type should be included by the user.\par
+ IMF Files can be loaded and will add all their blocks to the end of all the blocks in the current IMF File. This allows the user to add new media to previous groupings.\par
+
+
+Media Types Supported:\par
+ Shader Code:\par
+ .shd (text files containing GLSL (GL Shader Language) shader code)\par
+ Model Files:\par
+ .x\par
+ .obj\par
+ .q3d\par
+ Model Files can be converted into:\par
+ Meshes (3D Models, including Normals and UV if available)\par
+ Collision Objects (Currently only supporting convex faces)\par
+ Box Collision Objects \par
+ Images:\par
+ .bmp\par
+ Image Files can be converted into:\par
+ 2D Textures\par
+ Fonts (are composed of 64 vertical characters, with equal width and height)\par
+ Landscape Height Maps (Produces a map with a polygon per pixel in the image, with RGB(0,0,0) being no height and RGB(1,1,1) being maximum terrain height)\par
+ Sound Files: \par
+ .wav\par
+ Sound Files can be converted into:\par
+ Audio Data files\par
+ \par
+ \hypertarget{_using_engine_page_IMFUse}{}\subsection{Using the IMF Handler :}\label{_using_engine_page_IMFUse}
+The IMF Handler has a graphical interface to ease control of it. The large list box on the left of the GUI lists all the references of objects in the file. Clicking on an item in the list will display the objects information in the middle section of the GUI. On the right are the settings and controls for the IMF Handler. \hypertarget{_using_engine_page_IMFControls}{}\subsection{Using the IMF Handler Controls :}\label{_using_engine_page_IMFControls}
+The \char`\"{}Add Media File\char`\"{} button :\par
+ Clicking the \char`\"{}Add Media File\char`\"{} button will open a file dialog. Selecting a file will load it into the current IMF. The IMF Handler will then ask for a string reference to identify the media file in the game engine. The files can be filtered based on types. Only types supported by the IMF Handler will be displayed. When the file is loaded it will use the current settings on the GUI. This means settings should be set before trying to add a new media file. These settings determine what type of internal format the file will be loaded into. The specifics of loading each file type will be listed in the section for the appropriate file types. \par
+ The \char`\"{}Add Shader Program\char`\"{} button :\par
+ Shader Programs are not loaded from a file, but generated in the IMF Handler itself. The \char`\"{}Add Shader Program\char`\"{} button will ask for a string reference to identify the shader program. It will then create a new Shader Program in the current Media file. This can be modified by following the instructions in the Shader Program section. \par
+ The \char`\"{}Add Render Tree\char`\"{} button :\par
+ This allows the user to generate \hyperlink{classc_node_list}{cNodeList} Objects and store them in an IMF file. \par
+ The \char`\"{}Save IMF As...\char`\"{} button :\par
+ Clicking the \char`\"{}Save IMF As...\char`\"{} button will save the current IMF. It will create a dialog to ask for the file name to use. This will write all the objects and references currently loaded into an IMF file. You do not need to add '.imf' to the end of the file name. The files can then be loaded by Bamboo. \par
+ The \char`\"{}Remove Media\char`\"{} button :\par
+ The \char`\"{}Remove media\char`\"{} button will remove a single selected media item from the list. Select the item from the Reference List and then click the \char`\"{}Remove Media\char`\"{} button. The \char`\"{}Clear File\char`\"{} button :\par
+ The \char`\"{}Clear File\char`\"{} button will remove all the items from the IMF File. Essentially this will clear the current IMF file and create a new empty file. \par
+ The \char`\"{}Quit\char`\"{} button :\par
+ The \char`\"{}Quit\char`\"{} button will quit the program. It will not save the IMF. All changes to the file will be lost. \hypertarget{_using_engine_page_IMFSettings}{}\subsection{IMF Handler Settings :}\label{_using_engine_page_IMFSettings}
+The Handler Settings section can be found in the top right of the GUI. \par
+ \char`\"{}Load Model Files As...\char`\"{} : \par
+ This section has two check boxes. If the \char`\"{}Renderable Object\char`\"{} check box is ticked any model file will be converted into a Renderable mesh. If the \char`\"{}Collision Objects\char`\"{} check box is ticked any model file will be converted into a collision mesh. In both cases, the IMF Handler will require a reference for the generated mesh. If both boxes are ticked both will be generated. The Renderable Mesh will be generated first and will require its reference first. \par
+ \char`\"{}Load Image Files As...\char`\"{} : \par
+ This section has two radio boxes. Only one can ticked at any time. While the \char`\"{}Textures\char`\"{} radio button is ticked, Image files will be converted into textures. Textures are images that can be glued onto 3D models to texture their surface. While the \char`\"{}Height Maps\char`\"{} radio button is ticked, Image files will be converted into a Landscape height map. The lightness of each pixel represents the height of the landscapes vertex. RGB = 0,0,0 is the lowest point on the height map, RGB = 255,255,255 being the highest point on the height map. \char`\"{}Load Shaders As...\char`\"{} : \par
+ The \char`\"{}Load Shaders As...\char`\"{} section has three radio buttons. Only one can be selected at any time. While the \char`\"{}Vertex Shaders\char`\"{} radio button is ticked any shader files will be loaded, and processed as Vertex shaders. This means they will operate on each vertex. They can receive Uniform or Attribute variables. They can produce varying values for passing to fragment shaders. While the \char`\"{}Fragment Shaders\char`\"{} radio button is ticked and shader files will be loaded, and processes as Fragment shaders. This means they will operate on each fragment. They can receive Uniform and varying variables. Attributes cannot be accessed by fragment shaders. Varying variables which have been produced by a vertex shader can be accessed by a Fragment shader. The varying values are interpolated from the varying values created by the verteces. Currently the \char`\"{}Geometric Shaders\char`\"{} radio button cannot be ticked. \char`\"{}Set Font Resolution...\char`\"{} : \par
+ The \char`\"{}Set Font Resolution...\char`\"{} value is the width and height of font characters that will be generated. When true type font files are loaded into Bamboo, they are rendered into character textures as OpenGL is optimised for rendering textures rather than true type fonts. For optimal performance these characters are restricted to multiples of 8. The larger the character size the clearer the characters will be, however the larger the files generated will be. \hypertarget{_using_engine_page_IMFTypes}{}\subsection{Specifics of media types :}\label{_using_engine_page_IMFTypes}
+General Media Information : \par
+ All media will require a reference to allow it to be identified in Bamboo. This is a string. The IMF Handler will automatically assign it a new reference string, but this should be set as a descriptive string by the user. This can be changed for all media types by selecting the media files reference from the Reference List on the left of the GUI and typing a new reference ino the box labelled \char`\"{}Reference:\char`\"{} in the middle section of the GUI. This will change the medias reference. \par
+ Selecting a file from the Reference List on the left will also configure the middle section of the GUI to display settings controls and data relating to the file selected.\par
+ Model Meshes : \par
+ When a Models reference is selected in the references list. It will configure the middle section of the GUI to display the models. It will show the list of Verteces, Normals, UV Co-\/ordinates and Vertex Indices requried to generate the triangulated faces. All faces are triangulated when compiled to optimise performance in OpenGL. \par
+ Collision Meshes : \par
+ A Collision Mesh cannot have any concave faces. Any concave faces (or holes in the surface) will lead to unexpected collision events. Concave faces will mean some collisions which should collide are missed. Conversely holes will catch collisions which do not exist. It also needs to have a minimal number of faces to define the boundaries of the object it is representing. Accuracy of collision meshes is less important than speed of calculations. The system will optimise out any polygon that will statistically have a minimal chance of affecting whether a collision is detected or not. Traditionally Collision Meshes have 10 -\/ 30 polygons, but obviously the number required depends on the complexity of the model being represented. \par
+ When a collision mesh is selected from the Reference List it will display the collision meshes critical data. A collision Mesh is actually compiled into two seperate data sets. A set of verteces and a set of polygons. A vertex has three positions representing the X,Y and Z co-\/ordiantes of the vertex. A Plane is composed of four values. Three values for multiplying with vertex co-\/ordinates to generate a distance from the origin perpendicular to the plane. The fourth value is the planes distance from the origin. This makes it quick to calculate if any point in the same co-\/ordinate system is above or beneath the plane. Texture Images : \par
+ Textures should have a width and height which is a power of 2 (2,4,8,16,32,64...). This will make UV mapping more accurate and avoid the texture being padded by the graphics card. The larger the texture the larger the file generated, but the resulting image will be clearer at large magnifications. OpenGL will automatically generate mip maps for rendering the image at lower magnifications, so only the largest texture resolution desired need be compiled. When selected from the reference list the IMF Handler will display the width, height and color depth of the texture loaded. Height Maps : \par
+ Landscapes are created from a square matrix of polygons. Each pixel in the image used to generate a height map will create a vertex. This means the landscape generated will have a number of verteces across equal to the width of the image in pixels. The landscape will have a number of verteces along equal to the height of the image in pixels. This means the number of polygons across and along are one less than the images width and height. The height of each vertex is determined by the lightness of its pixel. RGB = 0,0,0 is the lowest point on the height map, RGB = 255,255,255 being the highest point on the height map. When a Height Map is selected from the reference list the IMF Handler will display the dimensions of the height map generated. It will also update the GUI with some settings specific to the landscape selected. Changing the values will only update the selected landscape.
+\begin{DoxyItemize}
+\item The value labelled \char`\"{}Tile X Size\char`\"{} is the distance in the X dimension between each vertex in the landscape.
+\item The value labelled \char`\"{}Tile Z Size\char`\"{} is the distance in the Z dimension between each vertex in the landscape.
+\item The value labelled \char`\"{}Height Range\char`\"{} is the value that the Y dimension of a vertex will be for a pixel with RGB = 255,255,255. This sets the highest point that is possible in the landscape.
+\item The \char`\"{}Gradient Factor\char`\"{} is a 'skewing' effect. With verteces which are the same distance apart the gradient of any plane is determined solely by the height difference between the verteces used to generate them. This means that a vertical plane is impossible. The gradient factor determines how much verteces can move towards each other based on the height difference in the verteces. A gradient factor of one can produce a vertical plane from sufficiently spread verteces. Essentially this makes the landscape less rolling based on the range of 0 to 1. Every time the gradient effect is applied it is irreversable and stacks with any other gradient factor applied. To apply the gradient effect, click the \char`\"{}Apply Gradient\char`\"{} button.
+\item The \char`\"{}Apply Gradient\char`\"{} button will apply the currently selected gradient factor to the landscape.
+\end{DoxyItemize}Shader Files : \par
+ Shader Files are text files. Shaders are simply programs which are performed by the graphics card. Many shaders are available on the internet. The GLSL (GL Shading Language) is similar to C but with extra variable types, defined variables and values specific to rendering images. There are three types of Shader program. Vertex, Fragment and Geometric. Currently Geometic is not supported. Shaders are combined into Shader Programs. A shader program must have at least one vertex shader and one fragment shader. Geometry shaders are optional. Vertex Shaders control the vertices that make up a mesh. They can change the position of the verteces, values of different properties at the vertices (which are linearly interpolated across a polygons face). \par
+ Bamboo Offers a selction of useful 'positioning matrices' mmGlobal , mmCamera , mmProjection , mmCombined. \par
+ It will pass the objects Global Position Matrix in to a mat4 called mmGlobal. 
+\begin{DoxyCode}
+ uniform mat4 mmGlobal;
+\end{DoxyCode}
+ mmCamera is just the Camera Matrix. This is the Cameras Position and Rotation 
+\begin{DoxyCode}
+ uniform mat4 mmCamera;
+\end{DoxyCode}
+ mmProjection is just the Projection Matrix. This is the function to map 3D co-\/oridinates to the screen. Essentially it controls Perspective. 
+\begin{DoxyCode}
+ uniform mat4 mmProjection;
+\end{DoxyCode}
+ mmCombined is the Camera and Projection Matrices multiplied together. 
+\begin{DoxyCode}
+ uniform mat4 mmCombined;
+\end{DoxyCode}
+ These should be used to find the position of each vertex, there are several common ways to use the matrices (They should be used to find an objects position). The order of Matrix multiplications do matter. Using mmCombined is much more efficient but some shaders will want to use the camera and Projection matrices seperately. 
+\begin{DoxyCode}
+ gl_Position=mmCombined*mmGlobal*gl_Vertex;
+ gl_Position=mmProjection*mmCamera*mmGlobal*gl_Vertex;
+\end{DoxyCode}
+ For 2D Objects only the mmProjection and mmGlobal are passed. The mmCamera Matrix will always be an identity matrix for 2D objects. Fragment Shaders control the render color of individual pixels. The Vertex shader is run once for every vertex in the model. The Fragment shader is run once for every pixel on the screen where the model is visible. A Geometry Shader (GS) is a Shader program that governs the processing of primitives. It happens after primitive assembly, as an additional optional step in that part of the pipeline. A GS can create new primitives, unlike vertex shaders, which are limited to a 1:1 input to output ratio. A GS can also do layered rendering; this means that the GS can specifically say that a primitive is to be rendered to a particular layer of the framebuffer. GS will be enabled in a later version of Bamboo. \par
+ {\bfseries  One requirement is that attribute and uniform variables are declared individually on their own line. This is a requirement of the IMF Handler rather than GLSL. } \par
+ When a shader is selected from the Reference List it will modify the GUI to display the Shader File display. This gives the option to change the type of shader that the currently selected shader will be used as. Clicking the appropriate radio button in the middle section of the GUI will change the type of the shader. Geometry shaders cannot be selected. It will also display the detected variables and whether they are uniform or attribute. Finally it will also display the shaders code. \par
+ Shader Programs : \par
+ A Shader program is a collection of Shader files, which forms a Shader Program. It must have at least one Vertex Shader and one Fragment shader. You cannot include any shader in a Shader Program more than once. If you run out of spaces in a Shader Program you must increase the Shader Programs size as described later before you can add more shader files. All vertex shaders should be included first. Followed by all the Fragment Shaders. The \char`\"{}Add Shader Program\char`\"{} button will create a Shader Program. It will then ask for a reference for the Shader Program. It is important that Shader Files are loaded before loading a Shader Program which contains them. If in the same IMF it is important put the Shader Files before any Shader Program which uses them. Selecting the Shader Program from the Reference List will modify the GUI to display the Shader File display. \par
+ The value labelled \char`\"{}Number of Shaders\char`\"{} is the number of Shader files that the Shader Program will use. This can be changed by the user. \par
+ The box labelled \char`\"{}New Shader:\char`\"{} is used to add new Shader Files to the Shader Program. Type in the Reference of the Shader File in the box, press enter and it will be added to the current Shader Program. \par
+ The button labelled \char`\"{}Select Shader From File\char`\"{} will bring up a idalog listing all the references for Sahder Files in the current IMF File. Select the desired reference from the drop down menu and click 'OK' to add it to the currently selected Shader Program. This will only list vertex objects in the current file. \par
+ The \char`\"{}Remove Shader Reference\char`\"{} button will remove the Shader Reference in the Shader Program from the Shader Program. Sound Files : \par
+ Sound files are all compiled from .wav files. When a sound file is selected from the reference list on the left it will produce a list of information about the file.
+\begin{DoxyItemize}
+\item Format:
+\item BlockSize:
+\item Sample Rate:
+\item Byte Rate:
+\item Block Align:
+\item Data Volume:
+\item Compression:
+\item Channels:
+\item Bits Per Sample:
+\item Contains Extra Data
+\end{DoxyItemize}Font Files : \par
+ Font files are formed from ttf files. For speed the IMF Handler renders individual images for each character at the font size specified in the GUI controls section. Some fonts extend beyond the area that Bamboo uses. This can cause the IMF Handler to crash. The IMF Handler should detect this is the case and raise a warning asking if you wish to continue. Often the IMF Handler will be able to handle fonts which extend outside the acceptable range but not always. If a warning is raised it may crash the IMF Handler, so continue at your own risk. \par
+ Selecting a font file from the Reference List on the left of the GUI will modify the central section of the GUI to display the fonts character dimensions and color depth. Font files are compiled as 32 bit as they require an alpha channel and this allows effects to be applied to them in future versions. \par
+ Mesh Trees : \par
+ Mesh Trees are generated in the IMF Handler. They allow you to produce structures composed of seperate objects. These objects can be ordered into a tree with a hierachy of linking. This means an object can be linked to another object making its movements based off the movements of the object with a lower depth. Objects in a Mesh Tree must be \hyperlink{classc_model}{cModel} types and so can be given a Mesh, Texture and shader. The Mesh and Shader are compulsory for an object to be rendered. The Texture is optional. The objects are also given a depth. Each object will be linked to the previous object in the list with a lower depth value. 0 should be the base object. Objects which base their movement off of the base object should have a depth value of 1. Objects based off of an object with a depth of 1 should have a depth of 2 and be after the object they wish to follow and before the next object with a depth value of 1. \par
+ \par
+ \par
+ A0 \par
+ $|$-\/ B1 \par
+ $|$ $|$-\/ E2 \par
+ $|$ $|$ $|$-\/ K3 \par
+ $|$ $|$\par
+ $|$ $|$-\/ F2 \par
+ $|$\par
+ $|$-\/ C1 $|$ $|$ \par
+ $|$ $|$-\/ G2 \par
+ $|$ $|$-\/ H2 \par
+ $|$\par
+ $|$-\/ D1 \par
+ $|$ $|$-\/ I2 \par
+ $|$-\/ J2 \par
+ \par
+ would be listed (Showing order and depth value of each item): \par
+ A0 \par
+ B1 \par
+ E2 \par
+ K3 \par
+ F2 \par
+ C1 \par
+ G2 \par
+ H2 \par
+ D1 \par
+ I2 \par
+ J2 \par
+ 

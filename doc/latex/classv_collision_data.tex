@@ -1,0 +1,51 @@
+\hypertarget{classv_collision_data}{
+\section{vCollisionData Class Reference}
+\label{classv_collision_data}\index{vCollisionData@{vCollisionData}}
+}
+
+
+Virtual Class so \hyperlink{classc_collision_object}{cCollisionObject} can access the Collision data object it needs.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classv_collision_data_a00a42430617c673f7716e1b543020dd3}{
+virtual void \hyperlink{classv_collision_data_a00a42430617c673f7716e1b543020dd3}{SetSize} (float lfSize)=0}
+\label{classv_collision_data_a00a42430617c673f7716e1b543020dd3}
+
+\begin{DoxyCompactList}\small\item\em Will Set the Size of the Collision (For the Sphere aspect of collisions.) This should be the radius of the collison Sphere. \end{DoxyCompactList}\item 
+\hypertarget{classv_collision_data_a294ee887b1da0cfd16c0f3ce22f3e42d}{
+virtual float \hyperlink{classv_collision_data_a294ee887b1da0cfd16c0f3ce22f3e42d}{CollisionSize} ()=0}
+\label{classv_collision_data_a294ee887b1da0cfd16c0f3ce22f3e42d}
+
+\begin{DoxyCompactList}\small\item\em Will return the Collision Size Value, which is the radius of the Collision Sphere squared. \end{DoxyCompactList}\item 
+\hypertarget{classv_collision_data_abdd66f6f80f7af9925923add7069efb0}{
+virtual \hyperlink{classc_sphere_collision}{cSphereCollision} $\ast$ \hyperlink{classv_collision_data_abdd66f6f80f7af9925923add7069efb0}{Sphere} ()=0}
+\label{classv_collision_data_abdd66f6f80f7af9925923add7069efb0}
+
+\begin{DoxyCompactList}\small\item\em Will return a pointer if this object contains a sphere collision data object. Otherwise returns 0;. \end{DoxyCompactList}\item 
+\hypertarget{classv_collision_data_a8ecc16b27147cb9105b70c3e4eec80e9}{
+virtual \hyperlink{classc_beam_collision}{cBeamCollision} $\ast$ \hyperlink{classv_collision_data_a8ecc16b27147cb9105b70c3e4eec80e9}{Beam} ()=0}
+\label{classv_collision_data_a8ecc16b27147cb9105b70c3e4eec80e9}
+
+\begin{DoxyCompactList}\small\item\em Will return a pointer if this object contains a Beam collision data object. Otherwise returns 0;. \end{DoxyCompactList}\item 
+\hypertarget{classv_collision_data_aa43965b2b0039ca5cb3398af7ae6dfd9}{
+virtual \hyperlink{classc_mesh_collision}{cMeshCollision} $\ast$ \hyperlink{classv_collision_data_aa43965b2b0039ca5cb3398af7ae6dfd9}{Mesh} ()=0}
+\label{classv_collision_data_aa43965b2b0039ca5cb3398af7ae6dfd9}
+
+\begin{DoxyCompactList}\small\item\em Will return a pointer if this object contains a Mesh collision data object. Otherwise returns 0;. \end{DoxyCompactList}\item 
+\hypertarget{classv_collision_data_a8de6432172be4bd0af5bb19f74db0cd1}{
+virtual \hyperlink{classc_ray_collision}{cRayCollision} $\ast$ \hyperlink{classv_collision_data_a8de6432172be4bd0af5bb19f74db0cd1}{Ray} ()=0}
+\label{classv_collision_data_a8de6432172be4bd0af5bb19f74db0cd1}
+
+\begin{DoxyCompactList}\small\item\em Will return a pointer if this object contains a Ray collision data object. Otherwise returns 0;. \end{DoxyCompactList}\item 
+\hypertarget{classv_collision_data_a6b50c5d7c4ff75b04a1c0d99fbb6eb25}{
+virtual \hyperlink{classc_compound_collision}{cCompoundCollision} $\ast$ \hyperlink{classv_collision_data_a6b50c5d7c4ff75b04a1c0d99fbb6eb25}{Compound} ()=0}
+\label{classv_collision_data_a6b50c5d7c4ff75b04a1c0d99fbb6eb25}
+
+\begin{DoxyCompactList}\small\item\em Will return a pointer if this object contains a Compound collision data objecty. Otherwise returns 0;. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Virtual Class so \hyperlink{classc_collision_object}{cCollisionObject} can access the Collision data object it needs. 

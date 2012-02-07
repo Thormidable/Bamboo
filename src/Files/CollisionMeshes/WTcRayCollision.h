@@ -23,6 +23,9 @@ public:
  //A Ray object cannot collide on the frame it was created (as it has moved nowhere). This controls avoiding collisions until the 2nd frame.
  bool CreatedThisFrame();
 
+ ///Will return the Objects Type
+	uint8 Type();
+
 };
 #endif
 

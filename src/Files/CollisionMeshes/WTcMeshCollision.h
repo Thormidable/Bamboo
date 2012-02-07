@@ -48,7 +48,8 @@ public:
 	float *FacePlane(uint32 liPos);
 	//Will return the sum of angles between the point lpPos and every vertex of cPolygon number liPolygon. If this is 2*pi() (or very close) the point lpPos lies on the plane of the polygon inside the outer boundary.
 	double GetAngle(float *lpPos,uint32 liPolygon);
-
+///Will return the Objects Type
+	uint8 Type();
 };
 #endif
 

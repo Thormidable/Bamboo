@@ -2,6 +2,8 @@
 #define __WTCCOMPOUNDCOLLISION_H__
 
 #if WT_FULL_VERSION_BAMBOO
+
+class cCollisionObject;
 /**
 * \brief This is the storage class for cCompouncCollision objects.
 * You will not interact with it directly, but it should be mentioned to explain where
@@ -9,17 +11,24 @@
 **/
 class cCompoundCollisionNode : public cCollisionBase
 {
-protected:
-    vCollisionData *mpCollisionData;
-    cMatrix4 mmCollisionMatrix;
-
 public:
     ///Constructor.
     cCompoundCollisionNode();
     ///Destructor.
     ~cCompoundCollisionNode();
 
+    uint8 Type();
     friend class cCompoundCollision;
+};
+
+class cCompoundCollisionNodeMobile : public cCompoundCollisionNode
+{
+protected:
+    cMatrix4 mmCollisionMatrix;
+    cMatrix4 mmTotalMatrix;
+public:
+    cCompoundCollisionNodeMobile();
+    void UpdateMatrices(cMatrix4 &lcBase);
 };
 
 /**
@@ -50,19 +59,11 @@ public:
 
     /// [] operator to access the vCollisionData Objects within this cCompoundCollision Object.
     vCollisionData *operator[](uint32 liPos);
-    /// this will return the Matrix used by the vCollisionData Object at position liPos.
-    cMatrix4 &GetMatrix(uint32 liPos);
+    // this will return the Matrix used by the vCollisionData Object at position liPos.
+    //cMatrix4 &GetMatrix(uint32 liPos);
 
     ///For adding a created vCollisionData object. cSphereCollision, cMeshCollision, cBeamCollision etc.
     void AddType(vCollisionData *lpOther);
-    /*
-	///This will take a SphereCollision Object loaded from a file, and set this Collision Object to use it.
-	void AddType(cSphereCollision *lpSphere);
-	///This will take a MeshCollision Object loaded from a file, and set this Collision Object to use it.
-	void AddType(cMeshCollision *lpMesh);
-	///This will take a BeamCollision Object loaded from a file, and set this Collision Object to use it.
-	void AddType(cBeamCollision *lpBeam);
-    */
 	///This will procedurally generate a Sphere or radius 1.0f;
 	cSphereCollision *AddType(float lfSize);
 	///This will procedurally generate a Beam of Radius lfRadius and Length lfLength.
@@ -73,6 +74,14 @@ public:
 	cMeshCollision *AddType(float lfXP,float lfXN,float lfYP,float lfYN,float lfZP,float lfZN);
 	///This will make a Beam object to match a rendered Beam. (Nice and easy eh?)
 	cBeamCollision *AddType(cBeamMesh *lpBeam);
+
+	uint8 GetType(uint32 liPos);
+	vCollisionData *GetObject(uint32 liPos);
+
+
+
+	///Will return the Objects Type
+	uint8 Type();
 
 };
 

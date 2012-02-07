@@ -151,21 +151,21 @@ double cPolygon::GetAngleSum(float *lpPos)
 
 	double lfAngle=acos((lp1[0]*lp2[0]+lp1[1]*lp2[1]+lp1[2]*lp2[2])/(lp1[3]*lp2[3]));
 
-	for(liCount=1;liCount<Verteces.Items()-1;++liCount)
+	for(liCount=1;liCount<Verteces.Items();++liCount)
 	{
 		if(liCount & 0x1)
-		{
-			lp2[0]=Verteces[liCount].X()-lpPos[0];
-			lp2[1]=Verteces[liCount].Y()-lpPos[1];
-			lp2[2]=Verteces[liCount].Z()-lpPos[2];
-			lp2[3]=sqrt(lp2[0]*lp2[0]+lp2[1]*lp2[1]+lp2[2]*lp2[2]);
-		}
-		else
 		{
 			lp1[0]=Verteces[liCount].X()-lpPos[0];
 			lp1[1]=Verteces[liCount].Y()-lpPos[1];
 			lp1[2]=Verteces[liCount].Z()-lpPos[2];
 			lp1[3]=sqrt(lp1[0]*lp1[0]+lp1[1]*lp1[1]+lp1[2]*lp1[2]);
+		}
+		else
+		{
+			lp2[0]=Verteces[liCount].X()-lpPos[0];
+			lp2[1]=Verteces[liCount].Y()-lpPos[1];
+			lp2[2]=Verteces[liCount].Z()-lpPos[2];
+			lp2[3]=sqrt(lp2[0]*lp2[0]+lp2[1]*lp2[1]+lp2[2]*lp2[2]);
 		}
 		lfAngle+=acos((lp1[0]*lp2[0]+lp1[1]*lp2[1]+lp1[2]*lp2[2])/(lp1[3]*lp2[3]));
 	}

@@ -1,0 +1,74 @@
+\hypertarget{classc_linked_list}{
+\section{cLinkedList$<$ T $>$ Class Template Reference}
+\label{classc_linked_list}\index{cLinkedList@{cLinkedList}}
+}
+
+
+This is the control for a linked list. It controls a linked list of cLinkedNodes which each point to their item in the list. Each \hyperlink{classc_linked_node}{cLinkedNode} poitns to the \hyperlink{classc_linked_node}{cLinkedNode} s either side of themselves and the data they own. \hyperlink{classc_linked_list}{cLinkedList} is templated and so can be a linked list of any type.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_linked_list_adbdde7829ddb9dc0518126d8e0164e10}{
+\hyperlink{classc_linked_list_adbdde7829ddb9dc0518126d8e0164e10}{cLinkedList} (T $\ast$lpData)}
+\label{classc_linked_list_adbdde7829ddb9dc0518126d8e0164e10}
+
+\begin{DoxyCompactList}\small\item\em This holds a pointer of the relevant type for the list and will create the list by making the item lpData the first item in the list. \end{DoxyCompactList}\item 
+\hypertarget{classc_linked_list_a80aef75883bffae5da5ee7d8b9258502}{
+\hyperlink{classc_linked_list_a80aef75883bffae5da5ee7d8b9258502}{$\sim$cLinkedList} ()}
+\label{classc_linked_list_a80aef75883bffae5da5ee7d8b9258502}
+
+\begin{DoxyCompactList}\small\item\em This will delete the list and delete every item in the list. \end{DoxyCompactList}\item 
+\hyperlink{classc_linked_node}{cLinkedNode}$<$ T $>$ $\ast$ \hyperlink{classc_linked_list_a6014141bbd16b32e22b4b7deb873f1ae}{Find} (T $\ast$lpData)
+\begin{DoxyCompactList}\small\item\em This is the number of items in the list. \end{DoxyCompactList}\item 
+\hypertarget{classc_linked_list_ae9bedf047bccf0f63b10b662c809032c}{
+\hyperlink{classc_linked_node}{cLinkedNode}$<$ T $>$ $\ast$ \hyperlink{classc_linked_list_ae9bedf047bccf0f63b10b662c809032c}{Insert} (T $\ast$lpData)}
+\label{classc_linked_list_ae9bedf047bccf0f63b10b662c809032c}
+
+\begin{DoxyCompactList}\small\item\em This will create a \hyperlink{classc_linked_node}{cLinkedNode} give it lpData and add that node to the end of the list. \end{DoxyCompactList}\item 
+\hypertarget{classc_linked_list_ab4694aa48324f52b8b1c25eb43dc996c}{
+void \hyperlink{classc_linked_list_ab4694aa48324f52b8b1c25eb43dc996c}{Delete} (\hyperlink{classc_linked_node}{cLinkedNode}$<$ T $>$ $\ast$lpOld)}
+\label{classc_linked_list_ab4694aa48324f52b8b1c25eb43dc996c}
+
+\begin{DoxyCompactList}\small\item\em This will delete the \hyperlink{classc_linked_node}{cLinkedNode} pointed to by lpOld and remove it from the list including mpData. \end{DoxyCompactList}\item 
+\hypertarget{classc_linked_list_a4f6cff87d2c90874949757987f6b9748}{
+void \hyperlink{classc_linked_list_a4f6cff87d2c90874949757987f6b9748}{Move} (\hyperlink{classc_linked_node}{cLinkedNode}$<$ T $>$ $\ast$lpFrom, \hyperlink{classc_linked_node}{cLinkedNode}$<$ T $>$ $\ast$lpPosition)}
+\label{classc_linked_list_a4f6cff87d2c90874949757987f6b9748}
+
+\begin{DoxyCompactList}\small\item\em This will Move the node lpFrom to be before lpPosition. \end{DoxyCompactList}\item 
+\hypertarget{classc_linked_list_a676cd3bd124df98773c296ed6f67ba16}{
+void \hyperlink{classc_linked_list_a676cd3bd124df98773c296ed6f67ba16}{Remove} (\hyperlink{classc_linked_node}{cLinkedNode}$<$ T $>$ $\ast$lpNode)}
+\label{classc_linked_list_a676cd3bd124df98773c296ed6f67ba16}
+
+\begin{DoxyCompactList}\small\item\em This will delete the \hyperlink{classc_linked_node}{cLinkedNode} pointed to by lpOld and remove it from the list, but not delete mpData. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_linked_list_abc440dbcbff9bcfb6e538a0e008c27c1}{
+static \hyperlink{classc_linked_node}{cLinkedNode}$<$ T $>$ $\ast$ \hyperlink{classc_linked_list_abc440dbcbff9bcfb6e538a0e008c27c1}{mpTemp} = 0}
+\label{classc_linked_list_abc440dbcbff9bcfb6e538a0e008c27c1}
+
+\begin{DoxyCompactList}\small\item\em This is a pointer that can be used as a cursor by this linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class cLinkedList$<$ T $>$}
+
+This is the control for a linked list. It controls a linked list of cLinkedNodes which each point to their item in the list. Each \hyperlink{classc_linked_node}{cLinkedNode} poitns to the \hyperlink{classc_linked_node}{cLinkedNode} s either side of themselves and the data they own. \hyperlink{classc_linked_list}{cLinkedList} is templated and so can be a linked list of any type. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_linked_list_a6014141bbd16b32e22b4b7deb873f1ae}{
+\index{cLinkedList@{cLinkedList}!Find@{Find}}
+\index{Find@{Find}!cLinkedList@{cLinkedList}}
+\subsubsection[{Find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf cLinkedNode}$<$ T $>$ $\ast$ {\bf cLinkedList}$<$ T $>$::Find (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{lpData}
+\end{DoxyParamCaption}
+)}}
+\label{classc_linked_list_a6014141bbd16b32e22b4b7deb873f1ae}
+
+
+This is the number of items in the list. 
+
+This will return the \hyperlink{classc_linked_node}{cLinkedNode} which owns the item lpData in this list. 

@@ -1,0 +1,73 @@
+\hypertarget{classc_limited_pointer_list}{
+\section{cLimitedPointerList$<$ cX $>$ Class Template Reference}
+\label{classc_limited_pointer_list}\index{cLimitedPointerList@{cLimitedPointerList}}
+}
+
+
+This is similar to the \hyperlink{classc_limited_list}{cLimitedList} template class, but will uses pointers. The type cX is the base type. When a pointer is handed to the array, the list will store the pointer to the item and 'take ownership' of the object. This means that the item is NOT copied and when the list is deleted Items 'owned' to by the list will be deleted. This also makes array manipulation and size changing quicker. It will expand to accomodate new items added to the array.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_limited_pointer_list_a07bb790fa0cce46a4724f87445278a2a}{
+\hyperlink{classc_limited_pointer_list_a07bb790fa0cce46a4724f87445278a2a}{cLimitedPointerList} (uint32 liSpaces)}
+\label{classc_limited_pointer_list_a07bb790fa0cce46a4724f87445278a2a}
+
+\begin{DoxyCompactList}\small\item\em Constructor to create a new array of size liSpaces. \end{DoxyCompactList}\item 
+\hypertarget{classc_limited_pointer_list_ad423e1b82ff902578d76e1e8ba33407f}{
+\hyperlink{classc_limited_pointer_list_ad423e1b82ff902578d76e1e8ba33407f}{cLimitedPointerList} ()}
+\label{classc_limited_pointer_list_ad423e1b82ff902578d76e1e8ba33407f}
+
+\begin{DoxyCompactList}\small\item\em Constructor to create a 0 length array. \end{DoxyCompactList}\item 
+\hypertarget{classc_limited_pointer_list_ab72b03a5d82ee318bf21d3102bdfecda}{
+void \hyperlink{classc_limited_pointer_list_ab72b03a5d82ee318bf21d3102bdfecda}{Init} (uint32 liSpaces)}
+\label{classc_limited_pointer_list_ab72b03a5d82ee318bf21d3102bdfecda}
+
+\begin{DoxyCompactList}\small\item\em This will initialise the array to size liSpaces. \end{DoxyCompactList}\item 
+\hypertarget{classc_limited_pointer_list_a7d77c2291a85cb39f06776e8d8555030}{
+void \hyperlink{classc_limited_pointer_list_a7d77c2291a85cb39f06776e8d8555030}{ChangeSize} (uint32 liSize)}
+\label{classc_limited_pointer_list_a7d77c2291a85cb39f06776e8d8555030}
+
+\begin{DoxyCompactList}\small\item\em This will change the array size to liSize. Pointers will be copied across. If the new array is too short to store all the data. The excess objects will be deleted. \end{DoxyCompactList}\item 
+\hypertarget{classc_limited_pointer_list_a5cd2eaf04fa51a23e35bb78ba875501f}{
+void \hyperlink{classc_limited_pointer_list_a5cd2eaf04fa51a23e35bb78ba875501f}{DeleteAll} ()}
+\label{classc_limited_pointer_list_a5cd2eaf04fa51a23e35bb78ba875501f}
+
+\begin{DoxyCompactList}\small\item\em This will delete all items in the list. Clear the list to size 0. It will not delete this list object. \end{DoxyCompactList}\item 
+\hypertarget{classc_limited_pointer_list_a4aef178a850d901cefc169cd0f8b1e71}{
+\hyperlink{classc_limited_pointer_list_a4aef178a850d901cefc169cd0f8b1e71}{$\sim$cLimitedPointerList} ()}
+\label{classc_limited_pointer_list_a4aef178a850d901cefc169cd0f8b1e71}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor for this list object. This will calll \hyperlink{classc_limited_pointer_list_a5cd2eaf04fa51a23e35bb78ba875501f}{DeleteAll()} \end{DoxyCompactList}\item 
+\hypertarget{classc_limited_pointer_list_a118f2d5687c97cf122b163dbbdedb56d}{
+cX $\ast$ \hyperlink{classc_limited_pointer_list_a118f2d5687c97cf122b163dbbdedb56d}{operator\mbox{[}$\,$\mbox{]}} (uint32 liItem)}
+\label{classc_limited_pointer_list_a118f2d5687c97cf122b163dbbdedb56d}
+
+\begin{DoxyCompactList}\small\item\em \mbox{[}\mbox{]} operatr to allow this to be used like a pointer array. \end{DoxyCompactList}\item 
+\hypertarget{classc_limited_pointer_list_a00af27280f0a9d3f89fa8b9da36b7554}{
+cX $\ast$ \hyperlink{classc_limited_pointer_list_a00af27280f0a9d3f89fa8b9da36b7554}{Item} (uint32 liItem)}
+\label{classc_limited_pointer_list_a00af27280f0a9d3f89fa8b9da36b7554}
+
+\begin{DoxyCompactList}\small\item\em Will return the pointer at position liItem in the list. \end{DoxyCompactList}\item 
+\hypertarget{classc_limited_pointer_list_a0ba95ea83cbfee5957645c711ccab08c}{
+void \hyperlink{classc_limited_pointer_list_a0ba95ea83cbfee5957645c711ccab08c}{Add} (cX $\ast$lpValue)}
+\label{classc_limited_pointer_list_a0ba95ea83cbfee5957645c711ccab08c}
+
+\begin{DoxyCompactList}\small\item\em Will Add the pointer lpValue to the list. Once added the Array will control deleting the object pointed to by lpValue. It will also expand the array to acomodate the item as required. \end{DoxyCompactList}\item 
+\hypertarget{classc_limited_pointer_list_a61fdd759615a826b5f385ad0b9ddfb0d}{
+void \hyperlink{classc_limited_pointer_list_a61fdd759615a826b5f385ad0b9ddfb0d}{Remove} (uint32 liPos)}
+\label{classc_limited_pointer_list_a61fdd759615a826b5f385ad0b9ddfb0d}
+
+\begin{DoxyCompactList}\small\item\em This will remove the item liPos from the List. It will delete the item and shuffle all the other items in teh list to the front of the list. \end{DoxyCompactList}\item 
+\hypertarget{classc_limited_pointer_list_ad2981a22dcb5e79790b8644125cc7322}{
+void \hyperlink{classc_limited_pointer_list_ad2981a22dcb5e79790b8644125cc7322}{SwitchItems} (uint32 li1, uint32 li2)}
+\label{classc_limited_pointer_list_ad2981a22dcb5e79790b8644125cc7322}
+
+\begin{DoxyCompactList}\small\item\em This will switch the positions of the items at positions li1 and li2 in the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class cX$>$class cLimitedPointerList$<$ cX $>$}
+
+This is similar to the \hyperlink{classc_limited_list}{cLimitedList} template class, but will uses pointers. The type cX is the base type. When a pointer is handed to the array, the list will store the pointer to the item and 'take ownership' of the object. This means that the item is NOT copied and when the list is deleted Items 'owned' to by the list will be deleted. This also makes array manipulation and size changing quicker. It will expand to accomodate new items added to the array. 

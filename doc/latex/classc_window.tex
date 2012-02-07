@@ -1,0 +1,84 @@
+\hypertarget{classc_window}{
+\section{cWindow Class Reference}
+\label{classc_window}\index{cWindow@{cWindow}}
+}
+
+
+This class will create control and destroy desktop windows. This will create new windows, link the window with OpenGL and do basic event handling. This is the users access to interact with the OS. Note it is all very OS specific.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_window_ae87d783f8bc3e30f751764ac6b078c38}{
+\hyperlink{classc_window_ae87d783f8bc3e30f751764ac6b078c38}{cWindow} (HINSTANCE lphInstance)}
+\label{classc_window_ae87d783f8bc3e30f751764ac6b078c38}
+
+\begin{DoxyCompactList}\small\item\em This will create a new \hyperlink{classc_window}{cWindow} class. Create a desktop window and InitialiseOpenGL(). This is Windows OS only. \end{DoxyCompactList}\item 
+\hypertarget{classc_window_a240840abcf5c64260f5fb43474f70084}{
+\hyperlink{classc_window_a240840abcf5c64260f5fb43474f70084}{cWindow} ()}
+\label{classc_window_a240840abcf5c64260f5fb43474f70084}
+
+\begin{DoxyCompactList}\small\item\em This will create a new \hyperlink{classc_window}{cWindow} class. Create a desktop window and InitialiseOpenGL(). This is Linux OS only. \end{DoxyCompactList}\item 
+\hypertarget{classc_window_afa140a737ae105dc72a7e2e99af4b8f7}{
+void \hyperlink{classc_window_afa140a737ae105dc72a7e2e99af4b8f7}{MovePointer} (uint32 liX, uint32 liY)}
+\label{classc_window_afa140a737ae105dc72a7e2e99af4b8f7}
+
+\begin{DoxyCompactList}\small\item\em This will move the mouse cursor to the position liX,liY in the current window. see \hyperlink{classc_mouse}{cMouse}. This is Linux OS only. \end{DoxyCompactList}\item 
+\hypertarget{classc_window_a765dbf60e47e928d80f888b1150b10ce}{
+uint16 \hyperlink{classc_window_a765dbf60e47e928d80f888b1150b10ce}{X} ()}
+\label{classc_window_a765dbf60e47e928d80f888b1150b10ce}
+
+\begin{DoxyCompactList}\small\item\em This is the window current X position on the desktop in pixels. \end{DoxyCompactList}\item 
+\hypertarget{classc_window_a27e8cb14c7e0e034df92bd05d7bba60a}{
+uint16 \hyperlink{classc_window_a27e8cb14c7e0e034df92bd05d7bba60a}{Y} ()}
+\label{classc_window_a27e8cb14c7e0e034df92bd05d7bba60a}
+
+\begin{DoxyCompactList}\small\item\em This is the windows current Y position on the desktop in pixels. \end{DoxyCompactList}\item 
+\hypertarget{classc_window_a6537654031097136429654535d5a19af}{
+uint16 \hyperlink{classc_window_a6537654031097136429654535d5a19af}{Width} ()}
+\label{classc_window_a6537654031097136429654535d5a19af}
+
+\begin{DoxyCompactList}\small\item\em This is the windows current width in pixels. \end{DoxyCompactList}\item 
+\hypertarget{classc_window_a7f8a5fad4f3a5923b343cb212cbf2083}{
+uint16 \hyperlink{classc_window_a7f8a5fad4f3a5923b343cb212cbf2083}{Height} ()}
+\label{classc_window_a7f8a5fad4f3a5923b343cb212cbf2083}
+
+\begin{DoxyCompactList}\small\item\em This is the windows current height in pixels. \end{DoxyCompactList}\item 
+\hypertarget{classc_window_a0c98061c3bf2c3e8a900b559947f6a5e}{
+float32 \hyperlink{classc_window_a0c98061c3bf2c3e8a900b559947f6a5e}{InvWidth} ()}
+\label{classc_window_a0c98061c3bf2c3e8a900b559947f6a5e}
+
+\begin{DoxyCompactList}\small\item\em Inverse value for window width. \end{DoxyCompactList}\item 
+\hypertarget{classc_window_a090f203d24e0f188afcc05ad6fd78e6e}{
+float32 \hyperlink{classc_window_a090f203d24e0f188afcc05ad6fd78e6e}{InvHeight} ()}
+\label{classc_window_a090f203d24e0f188afcc05ad6fd78e6e}
+
+\begin{DoxyCompactList}\small\item\em Inverse value for window width. \end{DoxyCompactList}\item 
+\hypertarget{classc_window_a309e455488789cb3e28e22ce44cbeb03}{
+float \hyperlink{classc_window_a309e455488789cb3e28e22ce44cbeb03}{Ratio} ()}
+\label{classc_window_a309e455488789cb3e28e22ce44cbeb03}
+
+\begin{DoxyCompactList}\small\item\em This will return the Windows Width Height Ratio. \end{DoxyCompactList}\item 
+\hypertarget{classc_window_a11e2c0045091c6e6826361f8c68b2022}{
+void \hyperlink{classc_window_a11e2c0045091c6e6826361f8c68b2022}{Move} (short liX, short liY)}
+\label{classc_window_a11e2c0045091c6e6826361f8c68b2022}
+
+\begin{DoxyCompactList}\small\item\em This will Move the window to position liX,liY (in pixels) on the desktop. \end{DoxyCompactList}\item 
+\hypertarget{classc_window_a38129c91195b1e7f5711aecc1ffb4d77}{
+void \hyperlink{classc_window_a38129c91195b1e7f5711aecc1ffb4d77}{Resize} (short liX, short liY)}
+\label{classc_window_a38129c91195b1e7f5711aecc1ffb4d77}
+
+\begin{DoxyCompactList}\small\item\em This will resize the window to size liX,liY (in pixels). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_window_a930db2797d94f26b57e430e155ad81ba}{
+class \hyperlink{classc_window_a930db2797d94f26b57e430e155ad81ba}{cCamera}}
+\label{classc_window_a930db2797d94f26b57e430e155ad81ba}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will create control and destroy desktop windows. This will create new windows, link the window with OpenGL and do basic event handling. This is the users access to interact with the OS. Note it is all very OS specific. 

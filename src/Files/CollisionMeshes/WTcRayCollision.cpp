@@ -25,4 +25,5 @@ cRayCollision::~cRayCollision(){};
 cRayCollision *cRayCollision::Ray(){return this;};
 bool cRayCollision::CreatedThisFrame(){return lbCreated;}
 
+uint8 cRayCollision::Type(){return WT_COLLISION_RAY;};
 #endif

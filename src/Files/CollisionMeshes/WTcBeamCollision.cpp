@@ -30,4 +30,8 @@ float cBeamCollision::RayVector(uint8 liPos){return mfRaySize[liPos];};
 float *cBeamCollision::RayVector(){return mfRaySize;};
 float cBeamCollision::Length(){return mfLength;};
 
+uint8 cBeamCollision::Type(){return WT_COLLISION_BEAM;}
+
+float cBeamCollision::Radius(){return mfSize;}
+void cBeamCollision::Radius(float lfRadius){SetSize(lfRadius);}
 #endif

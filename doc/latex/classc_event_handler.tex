@@ -1,0 +1,43 @@
+\hypertarget{classc_event_handler}{
+\section{cEventHandler Class Reference}
+\label{classc_event_handler}\index{cEventHandler@{cEventHandler}}
+}
+
+
+This will handle events from the OS. Actually this will just store the Input data for the keyboard and mouse. It is easiest to access the input data using \_\-KEY and \_\-MOUSE. There can only be one \hyperlink{classc_event_handler}{cEventHandler}, created using \hyperlink{classc_event_handler_a8cf5519e1f3c5f6a6f79f9da75fb2750}{Instance()}.  
+
+
+
+
+Collaboration diagram for cEventHandler:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classc_event_handler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_event_handler_a8cf5519e1f3c5f6a6f79f9da75fb2750}{
+static \hyperlink{classc_event_handler}{cEventHandler} $\ast$ \hyperlink{classc_event_handler_a8cf5519e1f3c5f6a6f79f9da75fb2750}{Instance} ()}
+\label{classc_event_handler_a8cf5519e1f3c5f6a6f79f9da75fb2750}
+
+\begin{DoxyCompactList}\small\item\em This will return a pointer to the current cEventhandler instance. If there is no instance it will create one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_event_handler_a53ba15cada383fb64c9918d8ce923585}{
+\hyperlink{classc_key_store}{cKeyStore} \hyperlink{classc_event_handler_a53ba15cada383fb64c9918d8ce923585}{Key}}
+\label{classc_event_handler_a53ba15cada383fb64c9918d8ce923585}
+
+\begin{DoxyCompactList}\small\item\em This will store all the keyboard input data. see \_\-KEY. \end{DoxyCompactList}\item 
+\hypertarget{classc_event_handler_a5d871cf2ddea710db2b4daed30cd1866}{
+\hyperlink{classc_mouse}{cMouse} \hyperlink{classc_event_handler_a5d871cf2ddea710db2b4daed30cd1866}{MouseDevice}}
+\label{classc_event_handler_a5d871cf2ddea710db2b4daed30cd1866}
+
+\begin{DoxyCompactList}\small\item\em This will store the mouse input data. see \_\-MOUSE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This will handle events from the OS. Actually this will just store the Input data for the keyboard and mouse. It is easiest to access the input data using \_\-KEY and \_\-MOUSE. There can only be one \hyperlink{classc_event_handler}{cEventHandler}, created using \hyperlink{classc_event_handler_a8cf5519e1f3c5f6a6f79f9da75fb2750}{Instance()}. 

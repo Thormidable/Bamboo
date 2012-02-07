@@ -1,0 +1,85 @@
+\hypertarget{classc_mesh_tree_node}{
+\section{cMeshTreeNode Class Reference}
+\label{classc_mesh_tree_node}\index{cMeshTreeNode@{cMeshTreeNode}}
+}
+
+
+This object will store the data for a single item in a cMeshTree(). This stores the Position, Rotation, Mesh, Texture, Tree Level, for this object.  
+
+
+
+
+Collaboration diagram for cMeshTreeNode:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_mesh_tree_node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_mesh_tree_node_a043efc30a09c9a474d75b7c5e79abccc}{
+void \hyperlink{classc_mesh_tree_node_a043efc30a09c9a474d75b7c5e79abccc}{Initialise} ()}
+\label{classc_mesh_tree_node_a043efc30a09c9a474d75b7c5e79abccc}
+
+\begin{DoxyCompactList}\small\item\em This will Initialise the objects data. \end{DoxyCompactList}\item 
+\hypertarget{classc_mesh_tree_node_ac75b9a8974308873997ad6fcc5baa0da}{
+void \hyperlink{classc_mesh_tree_node_ac75b9a8974308873997ad6fcc5baa0da}{RemoveMesh} ()}
+\label{classc_mesh_tree_node_ac75b9a8974308873997ad6fcc5baa0da}
+
+\begin{DoxyCompactList}\small\item\em This will Remove and Delete the Mesh. \end{DoxyCompactList}\item 
+\hypertarget{classc_mesh_tree_node_ab3c5c436df69d8f6ef8a5348e76f5784}{
+void \hyperlink{classc_mesh_tree_node_ab3c5c436df69d8f6ef8a5348e76f5784}{RemoveTexture} ()}
+\label{classc_mesh_tree_node_ab3c5c436df69d8f6ef8a5348e76f5784}
+
+\begin{DoxyCompactList}\small\item\em This will Remove and Delete the Texture. \end{DoxyCompactList}\item 
+\hypertarget{classc_mesh_tree_node_a1cf77a1217e21896c7b96df67da9f10f}{
+void \hyperlink{classc_mesh_tree_node_a1cf77a1217e21896c7b96df67da9f10f}{RemoveShader} ()}
+\label{classc_mesh_tree_node_a1cf77a1217e21896c7b96df67da9f10f}
+
+\begin{DoxyCompactList}\small\item\em This will Remove and Delete the Texture. \end{DoxyCompactList}\item 
+\hypertarget{classc_mesh_tree_node_a289e7a882f0304a0e2738a7cca5db60d}{
+void \hyperlink{classc_mesh_tree_node_a289e7a882f0304a0e2738a7cca5db60d}{RemoveStackLevel} ()}
+\label{classc_mesh_tree_node_a289e7a882f0304a0e2738a7cca5db60d}
+
+\begin{DoxyCompactList}\small\item\em This will reset the Tree Level. \end{DoxyCompactList}\item 
+\hypertarget{classc_mesh_tree_node_ad9659fb0be5e1300bcda2265d651dd97}{
+void \hyperlink{classc_mesh_tree_node_ad9659fb0be5e1300bcda2265d651dd97}{RemovePosition} ()}
+\label{classc_mesh_tree_node_ad9659fb0be5e1300bcda2265d651dd97}
+
+\begin{DoxyCompactList}\small\item\em This will Reset the Position. \end{DoxyCompactList}\item 
+\hypertarget{classc_mesh_tree_node_a9ea8fa642a22c047b2e6d559976b615b}{
+void \hyperlink{classc_mesh_tree_node_a9ea8fa642a22c047b2e6d559976b615b}{RemoveRotation} ()}
+\label{classc_mesh_tree_node_a9ea8fa642a22c047b2e6d559976b615b}
+
+\begin{DoxyCompactList}\small\item\em This will Reset the Rotation. \end{DoxyCompactList}\item 
+\hypertarget{classc_mesh_tree_node_a1ca09fa05700321ca076d327fa99220b}{
+void \hyperlink{classc_mesh_tree_node_a1ca09fa05700321ca076d327fa99220b}{ReadIMF} (ifstream \&FileStream)}
+\label{classc_mesh_tree_node_a1ca09fa05700321ca076d327fa99220b}
+
+\begin{DoxyCompactList}\small\item\em This will Load a cMeshTreeNode() from an IMF File. FileStream should just have reached the start of the Mesh Tree Node. \end{DoxyCompactList}\item 
+\hypertarget{classc_mesh_tree_node_ae6da4f910c12301dc657dea2f093c27f}{
+\hyperlink{classc_mesh}{cMesh} $\ast$ \hyperlink{classc_mesh_tree_node_ae6da4f910c12301dc657dea2f093c27f}{Mesh} ()}
+\label{classc_mesh_tree_node_ae6da4f910c12301dc657dea2f093c27f}
+
+\begin{DoxyCompactList}\small\item\em This will return the Mesh for this object. \end{DoxyCompactList}\item 
+\hypertarget{classc_mesh_tree_node_ae680c7ded6800ef8b1b6f473b8ed89e0}{
+cTexture $\ast$ \hyperlink{classc_mesh_tree_node_ae680c7ded6800ef8b1b6f473b8ed89e0}{Texture} ()}
+\label{classc_mesh_tree_node_ae680c7ded6800ef8b1b6f473b8ed89e0}
+
+\begin{DoxyCompactList}\small\item\em This will return the Texture for this object. \end{DoxyCompactList}\item 
+\hypertarget{classc_mesh_tree_node_a34febea6514479d0a54a3101abbd7699}{
+\hyperlink{classc_shader_program}{cShaderProgram} $\ast$ \hyperlink{classc_mesh_tree_node_a34febea6514479d0a54a3101abbd7699}{ShaderProgram} ()}
+\label{classc_mesh_tree_node_a34febea6514479d0a54a3101abbd7699}
+
+\begin{DoxyCompactList}\small\item\em This will return the Texture for this object. \end{DoxyCompactList}\item 
+\hypertarget{classc_mesh_tree_node_a9e00261118c3ed9076abc38907a2e8d3}{
+float \hyperlink{classc_mesh_tree_node_a9e00261118c3ed9076abc38907a2e8d3}{GetSize} ()}
+\label{classc_mesh_tree_node_a9e00261118c3ed9076abc38907a2e8d3}
+
+\begin{DoxyCompactList}\small\item\em This will return the Spatial Size for this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This object will store the data for a single item in a cMeshTree(). This stores the Position, Rotation, Mesh, Texture, Tree Level, for this object. 

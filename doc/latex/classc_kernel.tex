@@ -1,0 +1,83 @@
+\hypertarget{classc_kernel}{
+\section{cKernel Class Reference}
+\label{classc_kernel}\index{cKernel@{cKernel}}
+}
+
+
+Kernel Object. Handles Processes. Tracks, runs and deletes current processes. Has complete control over every \hyperlink{classc_process}{cProcess} object. Will run all awake alive processes every process cycle, will delete dead processes. Also controls the activation of rendering frames and handling interactions with the operating system.  
+
+
+
+
+Collaboration diagram for cKernel:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classc_kernel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_kernel_a721f5ad665c512b511ff8d344010385e}{
+void \hyperlink{classc_kernel_a721f5ad665c512b511ff8d344010385e}{KillProgram} ()}
+\label{classc_kernel_a721f5ad665c512b511ff8d344010385e}
+
+\begin{DoxyCompactList}\small\item\em Will kill the entire program. Will delete every process and then exit. \end{DoxyCompactList}\item 
+\hypertarget{classc_kernel_af4c3e32a55fdef58236378eed46afdfe}{
+void \hyperlink{classc_kernel_af4c3e32a55fdef58236378eed46afdfe}{DeleteAll} ()}
+\label{classc_kernel_af4c3e32a55fdef58236378eed46afdfe}
+
+\begin{DoxyCompactList}\small\item\em Will Delete all the processes in the current process list. This will effectively end the program. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class tType $>$ }\\tType $\ast$ \hyperlink{classc_kernel_a56083c090177a8a2a9bb50ad58e712c3}{FindProcess} ()
+\begin{DoxyCompactList}\small\item\em This Function will search for a process of either tType OR a type which has uses the type tType as a base type. \end{DoxyCompactList}\item 
+\hypertarget{classc_kernel_a42d5d224af7acfe4aee27b7cee2b0a02}{
+void \hyperlink{classc_kernel_a42d5d224af7acfe4aee27b7cee2b0a02}{ResetFindProcess} ()}
+\label{classc_kernel_a42d5d224af7acfe4aee27b7cee2b0a02}
+
+\begin{DoxyCompactList}\small\item\em This Function will reset \hyperlink{classc_kernel_a56083c090177a8a2a9bb50ad58e712c3}{FindProcess()} to search from the start of the process List. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_kernel_a1d873e903cf2bccceee0a68bd9d4dd01}{
+static \hyperlink{classc_kernel}{cKernel} $\ast$ \hyperlink{classc_kernel_a1d873e903cf2bccceee0a68bd9d4dd01}{Instance} ()}
+\label{classc_kernel_a1d873e903cf2bccceee0a68bd9d4dd01}
+
+\begin{DoxyCompactList}\small\item\em Function which returns current Kernel Instance. Will Create a new instance if one does not already exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Kernel Object. Handles Processes. Tracks, runs and deletes current processes. Has complete control over every \hyperlink{classc_process}{cProcess} object. Will run all awake alive processes every process cycle, will delete dead processes. Also controls the activation of rendering frames and handling interactions with the operating system. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_kernel_a56083c090177a8a2a9bb50ad58e712c3}{
+\index{cKernel@{cKernel}!FindProcess@{FindProcess}}
+\index{FindProcess@{FindProcess}!cKernel@{cKernel}}
+\subsubsection[{FindProcess}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class tType $>$ tType $\ast$ cKernel::FindProcess (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classc_kernel_a56083c090177a8a2a9bb50ad58e712c3}
+
+
+This Function will search for a process of either tType OR a type which has uses the type tType as a base type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em tType} & is the type of the desired process. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Will return a pointer to a process currently in the process list of the correct type.
+\end{DoxyReturn}
+This Function will search for a process which is of type tType or inherits tType. Can be used to find processes of a certain type or genus. Each call of this function will continue searching from the position stored in mpSearch. Between searches for processes of different types use the function \hyperlink{classc_kernel_a42d5d224af7acfe4aee27b7cee2b0a02}{ResetFindProcess()}. 
+\begin{DoxyCode}
+        cGunShip *mpGunShip;
+        cBattleShip *mpBattleShip;
+
+        mpGunShip = FindProcess(mpGunShip);
+        ResetFindProcess();
+        mpBattleShip = FindProcess(mpBattleShip);
+\end{DoxyCode}
+ 

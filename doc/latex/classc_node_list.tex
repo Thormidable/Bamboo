@@ -1,0 +1,150 @@
+\hypertarget{classc_node_list}{
+\section{cNodeList Class Reference}
+\label{classc_node_list}\index{cNodeList@{cNodeList}}
+}
+
+
+Node list is a 'static' render tree holding data for a series of renderable objects. It counts as a single renderable object.  
+
+
+
+
+Collaboration diagram for cNodeList:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{classc_node_list__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc_node_list_a122ac5ad7d8e84968cd4865234c71daf}{cNodeList} (\hyperlink{classc_mesh_tree}{cMeshTree} $\ast$lpTree)
+\begin{DoxyCompactList}\small\item\em This is the constructor for \hyperlink{classc_node_list}{cNodeList}. It will create the list based on the \hyperlink{classc_mesh_tree}{cMeshTree} file lpTree. \end{DoxyCompactList}\item 
+\hyperlink{classc_node_list_a7cb4e2a08630fa3e255e8d2fa57c9814}{cNodeList} (\hyperlink{classc_mesh_tree}{cMeshTree} $\ast$lpTree, vRenderNode $\ast$lpRenderer)
+\begin{DoxyCompactList}\small\item\em This is the constructor for \hyperlink{classc_node_list}{cNodeList}. It will create the list based on the \hyperlink{classc_mesh_tree}{cMeshTree} file lpTree, and will be owned by lpRenderer. \end{DoxyCompactList}\item 
+\hypertarget{classc_node_list_a4ea48f3d3f89f9c13bc5819e78fd1a56}{
+void \hyperlink{classc_node_list_a4ea48f3d3f89f9c13bc5819e78fd1a56}{LoadTree} (\hyperlink{classc_mesh_tree}{cMeshTree} $\ast$lpTree)}
+\label{classc_node_list_a4ea48f3d3f89f9c13bc5819e78fd1a56}
+
+\begin{DoxyCompactList}\small\item\em Will re-\/initialise this \hyperlink{classc_node_list}{cNodeList} using the file lpTree. It will have the structure and models of the file. \end{DoxyCompactList}\item 
+\hypertarget{classc_node_list_a1ab2143b5e9ff2fcede3ac0d172dfdf9}{
+void \hyperlink{classc_node_list_a1ab2143b5e9ff2fcede3ac0d172dfdf9}{LoadTree} (string lcTree)}
+\label{classc_node_list_a1ab2143b5e9ff2fcede3ac0d172dfdf9}
+
+\begin{DoxyCompactList}\small\item\em Will re-\/initialise this \hyperlink{classc_node_list}{cNodeList} using the ModelList with reference lcTree. It will have the structure and models of the file. \end{DoxyCompactList}\item 
+\hypertarget{classc_node_list_a90916d3103e324040fe9c8995d067174}{
+\hyperlink{classc_node_list_a90916d3103e324040fe9c8995d067174}{cNodeList} (uint32 liLength)}
+\label{classc_node_list_a90916d3103e324040fe9c8995d067174}
+
+\begin{DoxyCompactList}\small\item\em Create an empty \hyperlink{classc_node_list}{cNodeList} of size liLength. \end{DoxyCompactList}\item 
+\hypertarget{classc_node_list_a8ecb433584d7a475b99a3c9cd60e5e04}{
+\hyperlink{classc_node_list_a8ecb433584d7a475b99a3c9cd60e5e04}{cNodeList} (uint32 liLength, vRenderNode $\ast$lpRenderer)}
+\label{classc_node_list_a8ecb433584d7a475b99a3c9cd60e5e04}
+
+\begin{DoxyCompactList}\small\item\em Create an empty \hyperlink{classc_node_list}{cNodeList} of size liLength. lpRenderer will own this ModelList. \end{DoxyCompactList}\item 
+\hypertarget{classc_node_list_a3faa29a71ceef380e6f20dba604699d2}{
+void \hyperlink{classc_node_list_a3faa29a71ceef380e6f20dba604699d2}{InitialiseList} (uint32 liLength)}
+\label{classc_node_list_a3faa29a71ceef380e6f20dba604699d2}
+
+\begin{DoxyCompactList}\small\item\em Will reset this object to be an empty \hyperlink{classc_node_list}{cNodeList} of size liLength. \end{DoxyCompactList}\item 
+\hypertarget{classc_node_list_ac65144d32e74e45f7b76904cb8f8f28a}{
+uint32 \hyperlink{classc_node_list_ac65144d32e74e45f7b76904cb8f8f28a}{ListLength} ()}
+\label{classc_node_list_ac65144d32e74e45f7b76904cb8f8f28a}
+
+\begin{DoxyCompactList}\small\item\em Will return the current size of the \hyperlink{classc_node_list}{cNodeList}. \end{DoxyCompactList}\item 
+\hypertarget{classc_node_list_a7e735bd25bac7a9c46956b4b93f025f8}{
+vRenderObject $\ast$ \hyperlink{classc_node_list_a7e735bd25bac7a9c46956b4b93f025f8}{GetListItem} (uint16 liPos)}
+\label{classc_node_list_a7e735bd25bac7a9c46956b4b93f025f8}
+
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the item in Position liPos;. \end{DoxyCompactList}\item 
+\hypertarget{classc_node_list_a8fa44ba24901aa9dd318d97e4202f7bb}{
+uint8 \hyperlink{classc_node_list_a8fa44ba24901aa9dd318d97e4202f7bb}{GetItemLevel} (uint16 liPos)}
+\label{classc_node_list_a8fa44ba24901aa9dd318d97e4202f7bb}
+
+\begin{DoxyCompactList}\small\item\em Will return the level value of the item in Position liPos;. \end{DoxyCompactList}\item 
+\hypertarget{classc_node_list_ab5325c93dfc452012453d9294b353ac0}{
+void \hyperlink{classc_node_list_ab5325c93dfc452012453d9294b353ac0}{DeleteAll} ()}
+\label{classc_node_list_ab5325c93dfc452012453d9294b353ac0}
+
+\begin{DoxyCompactList}\small\item\em Will delete all Render Obnjects inside this object. \end{DoxyCompactList}\item 
+void \hyperlink{classc_node_list_a774fe1fa393c33b598b985449525d97c}{SetLevel} (uint16 liPos, uint8 liCom)
+\begin{DoxyCompactList}\small\item\em This will set a command for a single model in the model list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Node list is a 'static' render tree holding data for a series of renderable objects. It counts as a single renderable object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lpTree} & a pointer to the \hyperlink{classc_mesh_tree}{cMeshTree} object loaded from \hyperlink{namespacec_i_m_f_a07eaddf0810b846a0190f18e9969f590}{cIMF::LoadIMF()} \\
+\hline
+{\em lpRenderer} & Places this object beneath lpRenderer in the scene graph. This is another type of Render Node. Similar to \hyperlink{classc_render_node}{cRenderNode}. \hyperlink{classc_render_node}{cRenderNode} is a dynamic Node designed for shallow trees with regularly changing sizes and shapes. \hyperlink{classc_node_list}{cNodeList} is a 'static' Node designed for deep trees which do not regularly change. These can be loaded from files (Mesh Trees). And are suitable for building structures with lots of components glued to other components. Each object is given a depth. The object will base its co-\/ordinate system off the last object with a lower depth value. \hyperlink{classc_node_list}{cNodeList} holds a static array of \hyperlink{classc_node_list_node}{cNodeListNode}. \hyperlink{classc_node_list_node}{cNodeListNode} holds all the relative data about each object in the render tree. \hyperlink{classc_node_list}{cNodeList} objects loaded from files are \hyperlink{classc_model}{cModel} objects. cNodeLists can have cRenderNodes or cNodeLists as parents. They can contain any Render Object which includes cRenderNodes or cNodeLists. Just Pass the pointer to the \hyperlink{classc_node_list}{cNodeList} which you want to parent a new object and it will add itself to the \hyperlink{classc_node_list}{cNodeList}. It is more efficient to build a single large \hyperlink{classc_node_list}{cNodeList} than to put one inside another. Global Rotations are mapped as Local Rotations inside \hyperlink{classc_node_list}{cNodeList} as the objects are deemed to be glued and so are limited to Local Rotations. \hyperlink{classc_render_node}{cRenderNode} s fully support Global Rotations. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classc_node_list_a122ac5ad7d8e84968cd4865234c71daf}{
+\index{cNodeList@{cNodeList}!cNodeList@{cNodeList}}
+\index{cNodeList@{cNodeList}!cNodeList@{cNodeList}}
+\subsubsection[{cNodeList}]{\setlength{\rightskip}{0pt plus 5cm}cNodeList::cNodeList (
+\begin{DoxyParamCaption}
+\item[{{\bf cMeshTree} $\ast$}]{lpTree}
+\end{DoxyParamCaption}
+)}}
+\label{classc_node_list_a122ac5ad7d8e84968cd4865234c71daf}
+
+
+This is the constructor for \hyperlink{classc_node_list}{cNodeList}. It will create the list based on the \hyperlink{classc_mesh_tree}{cMeshTree} file lpTree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lpTree} & This is the file containing the data for the structure (and models etc.) of the render tree. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classc_node_list_a7cb4e2a08630fa3e255e8d2fa57c9814}{
+\index{cNodeList@{cNodeList}!cNodeList@{cNodeList}}
+\index{cNodeList@{cNodeList}!cNodeList@{cNodeList}}
+\subsubsection[{cNodeList}]{\setlength{\rightskip}{0pt plus 5cm}cNodeList::cNodeList (
+\begin{DoxyParamCaption}
+\item[{{\bf cMeshTree} $\ast$}]{lpTree, }
+\item[{vRenderNode $\ast$}]{lpRenderer}
+\end{DoxyParamCaption}
+)}}
+\label{classc_node_list_a7cb4e2a08630fa3e255e8d2fa57c9814}
+
+
+This is the constructor for \hyperlink{classc_node_list}{cNodeList}. It will create the list based on the \hyperlink{classc_mesh_tree}{cMeshTree} file lpTree, and will be owned by lpRenderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lpTree} & This is the file containing the data for the structure (and models etc.) of the render tree. \\
+\hline
+{\em lpRenderer} & This is the vRenderNode which will own this renderable object. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classc_node_list_a774fe1fa393c33b598b985449525d97c}{
+\index{cNodeList@{cNodeList}!SetLevel@{SetLevel}}
+\index{SetLevel@{SetLevel}!cNodeList@{cNodeList}}
+\subsubsection[{SetLevel}]{\setlength{\rightskip}{0pt plus 5cm}void cNodeList::SetLevel (
+\begin{DoxyParamCaption}
+\item[{uint16}]{liPos, }
+\item[{uint8}]{liCom}
+\end{DoxyParamCaption}
+)}}
+\label{classc_node_list_a774fe1fa393c33b598b985449525d97c}
+
+
+This will set a command for a single model in the model list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em liPos} & the number of the object in mpList this function will affect. \\
+\hline
+{\em liCom} & The command to be called before rendering model number liPos. The commands determine how the matrix stack is modified before the object is rendered. WT\_\-MODELLIST\_\-NEW\_\-LEVEL will push the current matrix onto the matrix stack. Anything else is the number of matrices that will be popped off the matrix stack. \\
+\hline
+\end{DoxyParams}

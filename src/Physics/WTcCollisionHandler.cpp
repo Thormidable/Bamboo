@@ -20,7 +20,6 @@ uint32 cCollisionHandlerType::FindSlot(cCollisionObject *lpObj)
 cCollisionList *cCollisionHandlerBSP::GenerateCollisionList(cCollisionObject *lpCheck,uint32 lpCol)
 {
 
-	printf("cCollisionHandler::GenerateCollisionList Start\n");
 	cCollisionList *lpList=new cCollisionList;
 	ResetCursors();
 
@@ -42,17 +41,24 @@ if(lpType)
 
 			if(mpColCur->Data()!=lpObj)
 			{
-				if(mpColCur->Data()->Collision(lpObj)){lpList->AddCollision(mpColCur->Data());}
+				if(mpColCur->Data()->Collision(lpObj))
+				{
+					lpList->AddCollision(mpColCur->Data());
+
+				}
 			}
 		}
 }
 else
 	while(NextListItem())
 	{
-		printf("Next Item\n");
+
 	if(mpColCur->Data()!=lpObj)
-	{printf("Is not original object\n");
-		if(mpColCur->Data()->Collision(lpObj)) lpList->AddCollision(mpColCur->Data());
+	{
+		if(mpColCur->Data()->Collision(lpObj))
+		{
+			lpList->AddCollision(mpColCur->Data());
+		}
 
 	}
   }

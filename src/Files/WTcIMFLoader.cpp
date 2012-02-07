@@ -84,7 +84,6 @@ void cIMF::LoadIMF(const char *lpPath)
 #if WT_FULL_VERSION_BAMBOO
                 case IMF_TYPE_TREE :
 		{
-		//	trace("Type Tree")
 			cMeshTreeArray lpTree;
 
 			//Skip uint32 holding the Size of Block
@@ -165,10 +164,6 @@ void cIMF::LoadIMF(const char *lpPath)
 #if WT_FULL_VERSION_BAMBOO
                 case IMF_TYPE_COLLISION_OBJECT :
 		{
-		//    trace("Type Collision Mesh")
-		    //cCollisionArray lpArray;
-		    //lpArray.LoadIMF(FileStream);
-		    //new cCollisionMesh(&lpArray);
 		    cMeshFileCollision *lpTemp;
 		    lpTemp=new cMeshFileCollision();
 		    lpTemp->LoadIMF(FileStream);
@@ -180,6 +175,13 @@ void cIMF::LoadIMF(const char *lpPath)
                     cSoundObject *lpSound;
                     lpSound=new cSoundObject();
                     lpSound->LoadIMF(FileStream);
+                }break;
+
+                case IMF_TYPE_COMPOUND_COLLISION_OBJECT :
+                {
+                    cCompoundCollisionFile *lpColl=new cCompoundCollisionFile();
+                    lpColl=new cCompoundCollisionFile();
+                    lpColl->LoadIMF(FileStream);
                 }break;
 
                 default :

@@ -540,6 +540,30 @@ Camera/Renderable/WTcPoint.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.s
 .PHONY : Camera/Renderable/WTcPoint.cpp.s
 
+Camera/Renderable/WTcStarMap.o: Camera/Renderable/WTcStarMap.cpp.o
+.PHONY : Camera/Renderable/WTcStarMap.o
+
+# target to build an object file
+Camera/Renderable/WTcStarMap.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o
+.PHONY : Camera/Renderable/WTcStarMap.cpp.o
+
+Camera/Renderable/WTcStarMap.i: Camera/Renderable/WTcStarMap.cpp.i
+.PHONY : Camera/Renderable/WTcStarMap.i
+
+# target to preprocess a source file
+Camera/Renderable/WTcStarMap.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.i
+.PHONY : Camera/Renderable/WTcStarMap.cpp.i
+
+Camera/Renderable/WTcStarMap.s: Camera/Renderable/WTcStarMap.cpp.s
+.PHONY : Camera/Renderable/WTcStarMap.s
+
+# target to generate assembly for a file
+Camera/Renderable/WTcStarMap.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.s
+.PHONY : Camera/Renderable/WTcStarMap.cpp.s
+
 Camera/Renderable/WTcTextureText.o: Camera/Renderable/WTcTextureText.cpp.o
 .PHONY : Camera/Renderable/WTcTextureText.o
 
@@ -659,6 +683,30 @@ Camera/WTcPainter.s: Camera/WTcPainter.cpp.s
 Camera/WTcPainter.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.s
 .PHONY : Camera/WTcPainter.cpp.s
+
+Camera/WTcPerspectiveControl.o: Camera/WTcPerspectiveControl.cpp.o
+.PHONY : Camera/WTcPerspectiveControl.o
+
+# target to build an object file
+Camera/WTcPerspectiveControl.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o
+.PHONY : Camera/WTcPerspectiveControl.cpp.o
+
+Camera/WTcPerspectiveControl.i: Camera/WTcPerspectiveControl.cpp.i
+.PHONY : Camera/WTcPerspectiveControl.i
+
+# target to preprocess a source file
+Camera/WTcPerspectiveControl.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.i
+.PHONY : Camera/WTcPerspectiveControl.cpp.i
+
+Camera/WTcPerspectiveControl.s: Camera/WTcPerspectiveControl.cpp.s
+.PHONY : Camera/WTcPerspectiveControl.s
+
+# target to generate assembly for a file
+Camera/WTcPerspectiveControl.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.s
+.PHONY : Camera/WTcPerspectiveControl.cpp.s
 
 Camera/WTcRenderNodeObject.o: Camera/WTcRenderNodeObject.cpp.o
 .PHONY : Camera/WTcRenderNodeObject.o
@@ -971,6 +1019,30 @@ Files/CollisionMeshes/WTcCompoundCollision.s: Files/CollisionMeshes/WTcCompoundC
 Files/CollisionMeshes/WTcCompoundCollision.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.s
 .PHONY : Files/CollisionMeshes/WTcCompoundCollision.cpp.s
+
+Files/CollisionMeshes/WTcCompoundCollisionFile.o: Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o
+.PHONY : Files/CollisionMeshes/WTcCompoundCollisionFile.o
+
+# target to build an object file
+Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o
+.PHONY : Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o
+
+Files/CollisionMeshes/WTcCompoundCollisionFile.i: Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.i
+.PHONY : Files/CollisionMeshes/WTcCompoundCollisionFile.i
+
+# target to preprocess a source file
+Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.i
+.PHONY : Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.i
+
+Files/CollisionMeshes/WTcCompoundCollisionFile.s: Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.s
+.PHONY : Files/CollisionMeshes/WTcCompoundCollisionFile.s
+
+# target to generate assembly for a file
+Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.s
+.PHONY : Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.s
 
 Files/CollisionMeshes/WTcMeshCollision.o: Files/CollisionMeshes/WTcMeshCollision.cpp.o
 .PHONY : Files/CollisionMeshes/WTcMeshCollision.o
@@ -2115,6 +2187,9 @@ help:
 	@echo "... Camera/Renderable/WTcPoint.o"
 	@echo "... Camera/Renderable/WTcPoint.i"
 	@echo "... Camera/Renderable/WTcPoint.s"
+	@echo "... Camera/Renderable/WTcStarMap.o"
+	@echo "... Camera/Renderable/WTcStarMap.i"
+	@echo "... Camera/Renderable/WTcStarMap.s"
 	@echo "... Camera/Renderable/WTcTextureText.o"
 	@echo "... Camera/Renderable/WTcTextureText.i"
 	@echo "... Camera/Renderable/WTcTextureText.s"
@@ -2130,6 +2205,9 @@ help:
 	@echo "... Camera/WTcPainter.o"
 	@echo "... Camera/WTcPainter.i"
 	@echo "... Camera/WTcPainter.s"
+	@echo "... Camera/WTcPerspectiveControl.o"
+	@echo "... Camera/WTcPerspectiveControl.i"
+	@echo "... Camera/WTcPerspectiveControl.s"
 	@echo "... Camera/WTcRenderNodeObject.o"
 	@echo "... Camera/WTcRenderNodeObject.i"
 	@echo "... Camera/WTcRenderNodeObject.s"
@@ -2169,6 +2247,9 @@ help:
 	@echo "... Files/CollisionMeshes/WTcCompoundCollision.o"
 	@echo "... Files/CollisionMeshes/WTcCompoundCollision.i"
 	@echo "... Files/CollisionMeshes/WTcCompoundCollision.s"
+	@echo "... Files/CollisionMeshes/WTcCompoundCollisionFile.o"
+	@echo "... Files/CollisionMeshes/WTcCompoundCollisionFile.i"
+	@echo "... Files/CollisionMeshes/WTcCompoundCollisionFile.s"
 	@echo "... Files/CollisionMeshes/WTcMeshCollision.o"
 	@echo "... Files/CollisionMeshes/WTcMeshCollision.i"
 	@echo "... Files/CollisionMeshes/WTcMeshCollision.s"
