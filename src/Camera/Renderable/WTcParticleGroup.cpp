@@ -2,6 +2,17 @@
 
 #if WT_FULL_VERSION_BAMBOO
 
+
+cParticleForGroup::cParticleForGroup()
+{
+	FadeSpeed=0.0f;
+	Life=1.0f;
+};
+
+cParticleForGroup::~cParticleForGroup()
+{
+
+};
 	cParticleSettings &cParticleSettings::operator=(cParticleSettings &lpOther)
 	{
 		memcpy(RGB,lpOther.RGB,sizeof(float)*8);
@@ -26,6 +37,7 @@ void cParticleGroup::Refresh()
 		uint32 liCount;
 		for(liCount=0;liCount<miParticles;++liCount)
 		{
+		    mpParticles[liCount]->UpdateFade();
 			if(mpParticles[liCount]->Life<=0.0f)
 			{
 				mpParticles[liCount]->Spawn(Data);
@@ -33,6 +45,7 @@ void cParticleGroup::Refresh()
 			else
 			{
 				mpParticles[liCount]->UpdatePos();
+
 			}
 		}
 	}
@@ -42,7 +55,7 @@ void cParticleGroup::Refresh()
 		uint32 liCount;
 		for(liCount=0;liCount<miParticles;++liCount)
 		{
-
+            mpParticles[liCount]->UpdateFade();
 			if(mpParticles[liCount]->Life<=0.0f)
 			{
 				delete mpParticles[liCount];
@@ -52,6 +65,7 @@ void cParticleGroup::Refresh()
 			{
 				mpParticles[liCount]->UpdatePos();
 				mpParticles[liFound++]=mpParticles[liCount];
+
 			}
 		}
 
@@ -145,9 +159,9 @@ void cParticleGroup::RespawnAll()
 
 void cParticleForGroup::UpdatePos()
 {
-	Position[0]+=Speed[0]*WT_TIME_IND;
-	Position[1]+=Speed[1]*WT_TIME_IND;
-	Position[2]+=Speed[2]*WT_TIME_IND;
+	Position[0]+=Speed[0];
+	Position[1]+=Speed[1];
+	Position[2]+=Speed[2];
 }
 
 
@@ -196,6 +210,7 @@ void cParticleForGroup::SetColor(cRGBA &lpRGB){Color=lpRGB;};
 	void cParticleForGroup::SetFade(float lpFade){FadeSpeed=lpFade;};
 	void cParticleForGroup::SetSpeed(float *lpSpeed){memcpy(Speed,lpSpeed,sizeof(float)*3);};
 	void cParticleForGroup::SetPosition(float *lpPos){memcpy(Position,lpPos,sizeof(float)*3);};
-    void cParticleForGroup::UpdateFade(){Life-=FadeSpeed*WT_TIME_IND;};
+    void cParticleForGroup::UpdateFade(){Life-=FadeSpeed; };
+
 
 #endif

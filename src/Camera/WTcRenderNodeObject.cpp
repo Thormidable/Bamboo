@@ -1,6 +1,6 @@
 #include "../WTBamboo.h"
 
-vRenderNode* vRenderNode::Renderer(){return mpRenderer;};
+
 void vRenderNode::RenderPainter(){};
 void vRenderNode::UpdateCache()
 {
@@ -14,11 +14,6 @@ float* vRenderNode::GetCachedGlobalMatrix(){return mmCache.Matrix();}
 void vRenderNode::Stop()
 {
 
-}
-
-cCamera *vRenderNode::Camera()
-{
-    return mpCamera;
 }
 
 cVariableStore* vRenderNode::Variables(){return 0;}

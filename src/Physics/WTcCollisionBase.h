@@ -74,6 +74,8 @@ public:
 
 	///This will procedurally generate a Sphere or radius 1.0f;
 	virtual cSphereCollision *SetType(float lfSize);
+	///This will procedurally generate a cSphereCollision for this cCollisionObject.
+    cSphereCollision *SetTypeSphere(float lfRadius);
 
 	#if WT_FULL_VERSION_BAMBOO
 
@@ -88,8 +90,7 @@ public:
         ///This will make a Compound Collision Object.
         cCompoundCollision *SetType();
 
-		///This will procedurally generate a cSphereCollision for this cCollisionObject.
-		cSphereCollision *SetTypeSphere(float lfRadius);
+
 		///This will procedurally generate a cMeshCollision - Box Collision - for this cCollisionObject.
 		cMeshCollision *SetTypeBox(float *lfRadius);
 		///This will procedurally generate a cMeshCollision - Box Collision - for this cCollisionObject.

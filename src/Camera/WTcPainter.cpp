@@ -268,7 +268,7 @@ glEnable(GL_DEPTH_TEST);
             mpList[liCount]->mpObject->TextureItem(liTexSlot).TextureState(&(mpList[liCount-1]->mpObject->TextureItem(liTexSlot)),liTexSlot);
     }
     ShaderState(mpList[liCount]->ShaderPoint,mpList[liCount-1]->ShaderPoint);
-    DepthState(mpList[liCount]->mbAlpha,mpList[liCount-1]->mbAlpha);
+ //   DepthState(mpList[liCount]->mbAlpha,mpList[liCount-1]->mbAlpha);
   }
   else
   {
@@ -279,8 +279,8 @@ glEnable(GL_DEPTH_TEST);
 	  mpList[liCount]->mpObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
     }
     ShaderState(mpList[liCount]->ShaderPoint,0);
-  if(mpList[liCount]->mbAlpha) glDisable(GL_DEPTH_TEST);
-  else glEnable(GL_DEPTH_TEST);
+//  if(mpList[liCount]->mbAlpha) glDisable(GL_DEPTH_TEST);
+//  else glEnable(GL_DEPTH_TEST);
   }
 
   #if WT_FULL_VERSION_BAMBOO

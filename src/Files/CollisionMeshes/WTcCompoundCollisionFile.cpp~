@@ -7,18 +7,16 @@ vCollisionData *cCompoundCollisionFileNode::GetPointer()
 
 void cCompoundCollisionFileNode::GeneratePointer()
 {
-	printf("In GeneratePointer() : %u\n",Type());
+    #if WT_FULL_VERSION_BAMBOO
     if(Type()==IMF_CCN_REFERENCE)
 	{
 		mpPointer=_GET_COLLISION_MESH_FILE(mcReference.c_str());
-		printf("Pointer : %s\n",mcReference.c_str());
 	}
     if(Type()==IMF_CCN_RADIUS)
     {
             delete mpPointer;
             mpPointer=new cSphereCollision();
             mpPointer->SetSize(*mpData);
-			printf("Radius Pointer : %p\n",mpPointer);
     }
     if(Type()==IMF_CCN_BOX)
     {
@@ -26,13 +24,15 @@ void cCompoundCollisionFileNode::GeneratePointer()
         cMeshCollision *lpPointer=new cMeshCollision();
         lpPointer->BuildObject(mpData);
         mpPointer=lpPointer;
-		printf("Box Pointer : %p\n",mpPointer);
     }
     if(Type()==IMF_CCN_UNDEFINED)
     {
-		printf("Undefined Collision Mesh\n");
         mpPointer=0;
     }
+    #else
+        mpPointer=0;
+    #endif
+
 }
 
 bool cCompoundCollisionFileNode::Compare(cCompoundCollisionFileNode *lpOther)
@@ -151,16 +151,13 @@ void cCompoundCollisionFileNode::LoadIMF(ifstream &FileStream)
 {
     ClearData();
     FileStream.read((char*)&miType,sizeof(uint8));
-	printf("::LoadIMF Get Type : %u\n",miType);
     if(Type()==IMF_CCN_REFERENCE)
     {
         uint32 liSize;
         FileStream.read((char*)&liSize,sizeof(uint32));
-		printf(" Size : %u\n",liSize);
         char lpFileName[liSize+1];
         FileStream.read(lpFileName,sizeof(char)*liSize);
         lpFileName[liSize]=0;
-		printf("Reference : %s\n",lpFileName);
         mcReference=lpFileName;
     }
     if(Type()==IMF_CCN_RADIUS)

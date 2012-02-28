@@ -14,6 +14,7 @@ class cParticle : public cParticleForGroup,  public cSignal
 
 public:
 	cParticle();
+	cParticle(cParticleHandler *lpNode);
 	cParticle(cCamera *lpCamera);
 	~cParticle();
 
@@ -69,6 +70,7 @@ class cParticleHandler : public cRenderObject
 	bool lbRefresh;
 	cParticleHandler();
 	~cParticleHandler();
+
 public:
 	//This will resize the number of particles the cParticleHandler can process. The system is resized as required.
 	void Resize(uint32 liSize);
@@ -85,8 +87,6 @@ public:
 	void Refresh();
 	void ForceRefresh(){lbRefresh=true;};
 	void RenderPainter();
-
-
 
 
 };

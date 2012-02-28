@@ -80,6 +80,7 @@ cShader::cShader()
     mpLines=0;
     mpVariables=0;
     miVariables=0;
+
 }
 
 cShaderVariable::cShaderVariable()

@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bamboo&#160;<span id="projectnumber">v1.0</span></div>
+   <div id="projectname">Bamboo&#160;<span id="projectnumber">v1.1</span></div>
    <div id="projectbrief">Process Orientated Game Engine</div>
   </td>
  </tr>
@@ -157,6 +157,20 @@ List of Useful Macros</h2>
 <li>Function returning a pointer to the <a class="el" href="classcm_landscape.html" title="This will store the data for a landscape mesh. The data can be rendered through cLandscape.">cmLandscape</a> Object with the name Reference.</li>
 </ul>
 </li>
+</ul>
+<ul>
+<li>_GET_COMPOUND_COLLISION_FILE(Reference)<ul>
+<li>Function returning a pointer to the cCompoundCollisonFile Object with the name Reference.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>_GET_MODELLIST_FILE(Reference)<ul>
+<li>Function returning a pointer to the <a class="el" href="classc_mesh_tree.html" title="This will store the data for a cModelList()">cMeshTree</a> Object with the name Reference.</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li>_USE_FIXED_FUNCTION()<ul>
 <li>Function telling the system to used the fixed function pipeline and not use shaders. This will slow the system and disable functionality. Disadvised.</li>
 </ul>
@@ -246,7 +260,7 @@ Positioning, Rotating and Moving Objects.</h2>
  void <a class="el" href="classc_matrix4.html#a8a49976693c27e4fbb5fce427eb6bcf5" title="This will position the current object to the 3D Vector lpPosition. (X,Y,Z)">cMatrix4::Position(c3DVf *lpPosition)</a>; <br/>
  void <a class="el" href="classc_matrix4.html#ae404d9b94cb676d9896385fef1eda422" title="This will position the current object to lfX,lfY,lfX. (X,Y,Z)">cMatrix4::Position(float lfX,float lfY,float lfZ)</a>;<br/>
  <br/>
- void <a class="el" href="classc_matrix4.html#a91f9e8d79d7721ba35f59c754a5507d1" title="Will Advance the object along its local axis by teh distance of the floats in the array lfDistance...">cMatrix4::Advance(float *lfDistance)</a>; <br/>
+ void <a class="el" href="classc_matrix4.html#a91f9e8d79d7721ba35f59c754a5507d1" title="Will Advance the object along its local axis by the distance of the floats in the array lfDistance...">cMatrix4::Advance(float *lfDistance)</a>; <br/>
  void <a class="el" href="classc_matrix4.html#a6c53b28448e2d2531a19cd49955f5901" title="Will Advance the object along its local X and Y axis by the Vector lfDistances;.">cMatrix4::Advance(c2DVf *lfDistances)</a>; <br/>
  void <a class="el" href="classc_matrix4.html#a86aefa3a444eaabd4ad1a66e4857f40e" title="Will Advance the object along its local X, Y and Z axis by the Vector lfDistances;.">cMatrix4::Advance(c3DVf *lfDistances)</a>; <br/>
  void <a class="el" href="classc_matrix4.html#a07d410e6592dacf244ad118d70443181" title="Will Advance the object along its local X and Y axis by the Vector lfDistances;.">cMatrix4::Advance(c2DVf &amp;lfDistances)</a>; <br/>
@@ -699,14 +713,18 @@ List of Objects using or not using the Create Macro.</h2>
 </ul>
 <h2><a class="anchor" id="OptimisationTechniques"></a>
 Optimisation Techniques</h2>
-<p>Bamboo is written to be as optimised as possible while remaining very simple. There are many things that can be done to optimise your code. <b>Reduce Collisions:</b> <br/>
+<p>Bamboo is written to be as optimised as possible while remaining very simple. There are many things that can be done to optimise your code. <br/>
+ <b>Reduce Collisions:</b> <br/>
  It is very important to only check for collisions that matter. Collisions should only detected one way (I.E. either From the Tank to the Bullet OR from the Bullet to the Tank, not both). Use <a class="el" href="classc_collision_object.html#a1490cdf75c8037049bfa7891aa8756b7" title="This will return the current Collision Filter ID of this object.">cCollisionObject::CollisionFilter()</a> to minimise the collision checks that are made. <br/>
  <b>Turn off Lighting where not required:</b> <br/>
- If an object will not use the lighting settings there is no point <b>Reduce Matrix Multiplications:</b> <br/>
- Where possible use the minimum of Matrix multiplications. Both in shaders and in programs. Don't use cRenderObject::CalculateGlobalMatrix() unless absolutely neccessay. try to use cRenderObject::GetCacheMatrix() instead. It will not include changes to the Global matrix this frame but it is very fast. Use the highest level of Matrices possible in a shader.</p>
+ If an object will not use the lighting settings there is no point in calculating the lighting values. Turn it off with the function <a class="el" href="classc_render_object.html#a67191d0fe8aceaa10052a542b3c34650" title="This will set whether lighting is used for the object.">cRenderObject::Lighting(bool)</a>. <b>Reduce Matrix Multiplications:</b> <br/>
+ Where possible use the minimum of Matrix multiplications. Both in shaders and in programs. Don't use cRenderObject::CalculateGlobalMatrix() unless absolutely neccessay. try to use cRenderObject::GetCacheMatrix() instead. It will not include changes to the Global matrix this frame but it is very fast. Use the highest level of Matrices possible in a shader. <br/>
+ <b>Avoid searching with strings:</b> <br/>
+ Pointers are much quicker for accessing Media objects loaded onto the harddrive. If a piece of media will be accessed many times get a pointer to it using the functions for getting files (_GET_AUDIO_FILE(),_GET_COLLISION_MESH_FILE(),_GET_FONT_FILE(),_GET_LANDSCAPE_FILE(),_GET_MESH_FILE(),_GET_SHADER_FILE(),_GET_TEXTURE_FILE()). Each takes a string and returns a pointer of the correct type to the media object. if it cannot be found it returns 0; </p>
 <h2><a class="anchor" id="CommonMistakes"></a>
 Common Mistakes</h2>
-<p><b> My Textures aren't working: </b> <br/>
+<p><b> Nothing is showing on screen: </b> <br/>
+ Check your Render Objects have been given valid shader programs using <a class="el" href="classc_render_object.html#a75f92ce4ba7b36a07e24be0643e4f020" title="Will set the shader to use the Shader Program with the specified reference.">cRenderObject::Shader(string)</a> or <a class="el" href="classc_render_object.html#abd47a58de22adfe1e9a1970f66a2f4cd" title="Will set the shader this object will use.">cRenderObject::Shader(cShaderProgram*)</a>. Check the camera is facing the objects. Check the objects are between the cameras near and far distances <a class="el" href="classc_perspective_control.html#af4c9bf530c680788925079d1ed64f7db" title="This will return the closest distance cCamera will render polygons.">cCamera::Near()</a> <a class="el" href="classc_perspective_control.html#aa2a129ba8718923f805335bdb7661f40" title="This will return the Furthest distance cCamera will render polygons.">cCamera::Far()</a>. Change the cameras clear color to be not black and not green using <a class="el" href="classc_viewport_control.html#ac3cee84c15d6b7bb35daf33a95a41f08" title="This function will set the color the Viewport will clear the region to every frame.">cViewportControl::ClearColor(float,float,float,float)</a>. (Objects are most likely to default to black or green depending on the shader program and OS). Finally check the version of OpenGL that is being used by Bamboo. This is displayed as the first piece of information in the debugging console. It should be at least 3.0. <b> My Textures aren't working: </b> <br/>
  Has the Mesh got UV Co-ordinates? The entire model will have random colors or be faded to a very dark color without UV co-ordinates. <br/>
  The object must have its shader assigned before it can receive any textures. <b> My Lighting isn't working: </b> <br/>
  If the model is entirely black it may not have Normals. A Mesh without normals cannot use lighting. If the lighting is not using the correct lights it may be worth checking if lighting is enabled for the current object with <a class="el" href="classc_render_object.html#a67191d0fe8aceaa10052a542b3c34650" title="This will set whether lighting is used for the object.">cRenderObject::Lighting(bool)</a>. <br/>
@@ -729,7 +747,7 @@ Common Mistakes</h2>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Feb 6 2012 10:33:04 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:03 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

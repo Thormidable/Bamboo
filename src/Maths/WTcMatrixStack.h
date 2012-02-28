@@ -1,9 +1,13 @@
 #ifndef __WTCMATRIXSTACK_H__
 #define __WTCMATRIXSTACK_H__
 
-
+/**
+ * \brief This is a cMatrixStack object for storing a matrix stack.
+ * This supports the Matrix
+ */
 class cMatrixStack : public cLimitedList<cMatrix4>
 {
+	//Current Number of Matrix Stack Layers
 	static uint16 miDepth;
 	static cMatrixStack *mpInstance;
 	cMatrix4 *mmCurrent;

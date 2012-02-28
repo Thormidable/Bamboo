@@ -35,6 +35,7 @@ void cImage::SetUp()
  Set2D();
  InitialiseArrays();
  Transparency(true);
+ mfPriority=6.0f;
 }
 
 
@@ -66,18 +67,19 @@ void cImage::RenderPainter()
    glBegin(GL_QUADS);
 
     glNormal3f(0.0f,0.0f,1.0f);
-    glMultiTexCoord2f(GL_TEXTURE0,0.0f,0.0f);
-    glVertex3f(-lfWidth,-lfHeight,2.1f);
-
 
     glMultiTexCoord2f(GL_TEXTURE0,1.0f,0.0f);
-    glVertex3f(lfWidth,-lfHeight,2.1f);
+    glVertex3f(-lfWidth,lfHeight,mfPriority);
 
-    glMultiTexCoord2f(GL_TEXTURE0,1.0f,1.0f);
-    glVertex3f(lfWidth,lfHeight,2.1f);
+    glMultiTexCoord2f(GL_TEXTURE0,0.0f,0.0f);
+    glVertex3f(lfWidth,lfHeight,mfPriority);
 
     glMultiTexCoord2f(GL_TEXTURE0,0.0f,1.0f);
-    glVertex3f(-lfWidth,lfHeight,2.1f);
+    glVertex3f(lfWidth,-lfHeight,mfPriority);
+
+    glMultiTexCoord2f(GL_TEXTURE0,1.0f,1.0f);
+    glVertex3f(-lfWidth,-lfHeight,mfPriority);
+
 
    glEnd();
 
@@ -138,6 +140,16 @@ void cImage3D::SetUp()
 	    return mfHeight;
 	}
 
+float cImage::Priority()
+{
+    return mfPriority-1.0f;
+}
+
+void cImage::Priority(float lfPriority)
+{
+    mfPriority=lfPriority+1.0f;
+}
+
 cImage3D::cImage3D()
 {
 
@@ -150,6 +162,38 @@ cImage3D::cImage3D(vRenderNode *lpNode): cImage(lpNode)
 
 cImage3D::cImage3D(cCamera *lpCamera): cImage(lpCamera)
 {
+
+}
+
+
+void cImage3D::RenderPainter()
+{
+
+ if(Textures())
+ {
+     ResizeArrays();
+     SetShaderVariables();
+    float lfWidth=mfWidth*0.5f;
+    float lfHeight=mfHeight*0.5f;
+   glBegin(GL_QUADS);
+
+    glNormal3f(0.0f,0.0f,1.0f);
+
+    glMultiTexCoord2f(GL_TEXTURE0,0.0f,1.0f);
+    glVertex3f(-lfWidth,lfHeight,0.0f);
+
+    glMultiTexCoord2f(GL_TEXTURE0,1.0f,1.0f);
+    glVertex3f(lfWidth,lfHeight,0.0f);
+
+    glMultiTexCoord2f(GL_TEXTURE0,1.0f,0.0f);
+    glVertex3f(lfWidth,-lfHeight,0.0f);
+
+    glMultiTexCoord2f(GL_TEXTURE0,0.0f,0.0f);
+    glVertex3f(-lfWidth,-lfHeight,0.0f);
+
+   glEnd();
+
+ }
 
 }
 

@@ -1,0 +1,122 @@
+#ifndef __WTCRENDERVARIABLESET_H__
+#define __WTCRENDERVARIABLESET_H__
+
+class cVariableStore;
+
+class cShaderVariableSet
+{
+
+protected:
+cVariableStore *mpVariables;
+
+public:
+
+	cShaderVariableSet();
+	~cShaderVariableSet();
+  ///This function returns a pointer to the Buffering object for the Uniform Variable with ID liPos in the currently assigned cShaderProgram. See cUniformStore. cType should be a class which inherites from cUniformStore.
+  template <class cType> cType* AddUniform(uint32 liPos);
+  ///This function returns a pointer to the Buffering object for the Uniform Variable with ID liPos in the currently assigned cShaderProgram. See cAttributeStore.  cType should be a class which inherites from cAttributeStore.
+  template <class cType> cType* AddAttribute(uint32 liPos);
+  ///This function returns a pointer to the Buffering object for the Uniform Variable called 'name' in the currently assigned cShaderProgram. See cUniformStore.  cType should be a class which inherites from cUniformStore.
+  template <class cType> cType* AddUniform(string name);
+  ///This function returns a pointer to the Buffering object for the Attribute Variable called 'name' in the currently assigned cShaderProgram. See cAttributeStore.  cType should be a class which inherites from cAttributeStore.
+  template <class cType> cType* AddAttribute(string name);
+  ///This function returns a pointer to the
+  cUniformTexture* AddTexture(string lsString);
+  cUniformTexture* AddTexture(uint32 liPos);
+
+  cUniformFont* AddFont(string lsString);
+  cUniformFont* AddFont(uint32 liPos);
+
+  void SetShaderVariables();
+
+
+  //This is the internal control for recording and updating user defined variables in the assigned cShaderProgram.
+  cVariableStore *Variables();
+};
+
+
+
+
+
+
+template <class cType> cType* cShaderVariableSet::AddUniform(uint32 liPos)
+{
+ return Variables()->CreateUniform(liPos,new cType);
+};
+
+template <class cType> cType* cShaderVariableSet::AddAttribute(uint32 liPos)
+{
+ return Variables()->CreateAttribute(liPos,new cType);
+};
+
+template <class cType> cType* cShaderVariableSet::AddUniform(string name)
+{
+ return Variables()->CreateUniform(ShaderVariables()->GetUniformPosition(name),new cType);
+};
+
+template <class cType> cType* cShaderVariableSet::AddAttribute(string name)
+{
+ return Variables()->CreateAttribute(ShaderVariables()->GetAttributePosition(name),new cType);
+};
+
+
+
+class cRenderVariableSet
+{
+
+protected:
+cVariableStore *mpVariables;
+
+public:
+
+	cRenderVariableSet();
+	~cRenderVariableSet();
+  ///This function returns a pointer to the Buffering object for the Uniform Variable with ID liPos in the currently assigned cShaderProgram. See cUniformStore. cType should be a class which inherites from cUniformStore.
+  template <class cType> cType* AddUniform(uint32 liPos);
+  ///This function returns a pointer to the Buffering object for the Uniform Variable with ID liPos in the currently assigned cShaderProgram. See cAttributeStore.  cType should be a class which inherites from cAttributeStore.
+  template <class cType> cType* AddAttribute(uint32 liPos);
+  ///This function returns a pointer to the Buffering object for the Uniform Variable called 'name' in the currently assigned cShaderProgram. See cUniformStore.  cType should be a class which inherites from cUniformStore.
+  template <class cType> cType* AddUniform(string name);
+  ///This function returns a pointer to the Buffering object for the Attribute Variable called 'name' in the currently assigned cShaderProgram. See cAttributeStore.  cType should be a class which inherites from cAttributeStore.
+  template <class cType> cType* AddAttribute(string name);
+  ///This function returns a pointer to the
+  cUniformTexture* AddTexture(string lsString);
+  cUniformTexture* AddTexture(uint32 liPos);
+
+  cUniformFont* AddFont(string lsString);
+  cUniformFont* AddFont(uint32 liPos);
+
+  void SetShaderVariables();
+
+  //This is the internal control for recording and updating user defined variables in the assigned cShaderProgram.
+  cVariableStore *Variables();
+};
+
+
+
+
+
+
+template <class cType> cType* cRenderVariableSet::AddUniform(uint32 liPos)
+{
+ return Variables()->CreateUniform(liPos,new cType);
+};
+
+template <class cType> cType* cRenderVariableSet::AddAttribute(uint32 liPos)
+{
+ return Variables()->CreateAttribute(liPos,new cType);
+};
+
+template <class cType> cType* cRenderVariableSet::AddUniform(string name)
+{
+ return Variables()->CreateUniform(mpShader->ShaderVariables()->GetUniformPosition(name),new cType);
+};
+
+template <class cType> cType* cRenderVariableSet::AddAttribute(string name)
+{
+ return Variables()->CreateAttribute(mpShader->ShaderVariables()->GetAttributePosition(name),new cType);
+};
+
+
+#endif

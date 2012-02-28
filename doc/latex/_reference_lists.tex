@@ -97,6 +97,20 @@ This section contains a list of useful Macros for accessing various functions or
 \begin{DoxyItemize}
 \item Function returning a pointer to the \hyperlink{classcm_landscape}{cmLandscape} Object with the name Reference.
 \end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \_\-GET\_\-COMPOUND\_\-COLLISION\_\-FILE(Reference)
+\begin{DoxyItemize}
+\item Function returning a pointer to the cCompoundCollisonFile Object with the name Reference.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \_\-GET\_\-MODELLIST\_\-FILE(Reference)
+\begin{DoxyItemize}
+\item Function returning a pointer to the \hyperlink{classc_mesh_tree}{cMeshTree} Object with the name Reference.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
 \item \_\-USE\_\-FIXED\_\-FUNCTION()
 \begin{DoxyItemize}
 \item Function telling the system to used the fixed function pipeline and not use shaders. This will slow the system and disable functionality. Disadvised.
@@ -633,12 +647,16 @@ This section contains information of which objects which are handled by Bamboo. 
 \item \hyperlink{classc_r_g_b_a}{cRGBA}
 \item \hyperlink{classc_collision_list}{cCollisionList}
 \end{DoxyItemize}\hypertarget{_reference_lists_OptimisationTechniques}{}\section{Optimisation Techniques}\label{_reference_lists_OptimisationTechniques}
-Bamboo is written to be as optimised as possible while remaining very simple. There are many things that can be done to optimise your code. {\bfseries Reduce Collisions:} \par
+Bamboo is written to be as optimised as possible while remaining very simple. There are many things that can be done to optimise your code. \par
+ {\bfseries Reduce Collisions:} \par
  It is very important to only check for collisions that matter. Collisions should only detected one way (I.E. either From the Tank to the Bullet OR from the Bullet to the Tank, not both). Use \hyperlink{classc_collision_object_a1490cdf75c8037049bfa7891aa8756b7}{cCollisionObject::CollisionFilter()} to minimise the collision checks that are made. \par
  {\bfseries Turn off Lighting where not required:} \par
- If an object will not use the lighting settings there is no point {\bfseries Reduce Matrix Multiplications:} \par
- Where possible use the minimum of Matrix multiplications. Both in shaders and in programs. Don't use cRenderObject::CalculateGlobalMatrix() unless absolutely neccessay. try to use cRenderObject::GetCacheMatrix() instead. It will not include changes to the Global matrix this frame but it is very fast. Use the highest level of Matrices possible in a shader.\hypertarget{_reference_lists_CommonMistakes}{}\section{Common Mistakes}\label{_reference_lists_CommonMistakes}
-{\bfseries  My Textures aren't working: } \par
+ If an object will not use the lighting settings there is no point in calculating the lighting values. Turn it off with the function \hyperlink{classc_render_object_a67191d0fe8aceaa10052a542b3c34650}{cRenderObject::Lighting(bool)}. {\bfseries Reduce Matrix Multiplications:} \par
+ Where possible use the minimum of Matrix multiplications. Both in shaders and in programs. Don't use cRenderObject::CalculateGlobalMatrix() unless absolutely neccessay. try to use cRenderObject::GetCacheMatrix() instead. It will not include changes to the Global matrix this frame but it is very fast. Use the highest level of Matrices possible in a shader. \par
+ {\bfseries Avoid searching with strings:} \par
+ Pointers are much quicker for accessing Media objects loaded onto the harddrive. If a piece of media will be accessed many times get a pointer to it using the functions for getting files (\_\-GET\_\-AUDIO\_\-FILE(),\_\-GET\_\-COLLISION\_\-MESH\_\-FILE(),\_\-GET\_\-FONT\_\-FILE(),\_\-GET\_\-LANDSCAPE\_\-FILE(),\_\-GET\_\-MESH\_\-FILE(),\_\-GET\_\-SHADER\_\-FILE(),\_\-GET\_\-TEXTURE\_\-FILE()). Each takes a string and returns a pointer of the correct type to the media object. if it cannot be found it returns 0; \hypertarget{_reference_lists_CommonMistakes}{}\section{Common Mistakes}\label{_reference_lists_CommonMistakes}
+{\bfseries  Nothing is showing on screen: } \par
+ Check your Render Objects have been given valid shader programs using \hyperlink{classc_render_object_a75f92ce4ba7b36a07e24be0643e4f020}{cRenderObject::Shader(string)} or \hyperlink{classc_render_object_abd47a58de22adfe1e9a1970f66a2f4cd}{cRenderObject::Shader(cShaderProgram$\ast$)}. Check the camera is facing the objects. Check the objects are between the cameras near and far distances \hyperlink{classc_perspective_control_af4c9bf530c680788925079d1ed64f7db}{cCamera::Near()} \hyperlink{classc_perspective_control_aa2a129ba8718923f805335bdb7661f40}{cCamera::Far()}. Change the cameras clear color to be not black and not green using \hyperlink{classc_viewport_control_ac3cee84c15d6b7bb35daf33a95a41f08}{cViewportControl::ClearColor(float,float,float,float)}. (Objects are most likely to default to black or green depending on the shader program and OS). Finally check the version of OpenGL that is being used by Bamboo. This is displayed as the first piece of information in the debugging console. It should be at least 3.0. {\bfseries  My Textures aren't working: } \par
  Has the Mesh got UV Co-\/ordinates? The entire model will have random colors or be faded to a very dark color without UV co-\/ordinates. \par
  The object must have its shader assigned before it can receive any textures. {\bfseries  My Lighting isn't working: } \par
  If the model is entirely black it may not have Normals. A Mesh without normals cannot use lighting. If the lighting is not using the correct lights it may be worth checking if lighting is enabled for the current object with \hyperlink{classc_render_object_a67191d0fe8aceaa10052a542b3c34650}{cRenderObject::Lighting(bool)}. \par

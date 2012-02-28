@@ -177,8 +177,10 @@ float cmLandscape::GetHeightLocal(float lfX,float lfZ)
  liX=static_cast<int32>(lfX*mfXSizeI);
  liZ=static_cast<int32>(lfZ*mfZSizeI);
 
+printf("Check On Landscape\n");
  if(liX>=0 && liX<(int32)miXSteps && liZ>=0 && liZ<(int32)miZSteps)
  {
+     printf("Calculate Landscape\n");
 	lfX=(lfX-liX*mfXSize)*mfXSizeI;
 	lfZ=(lfZ-liZ*mfZSize)*mfZSizeI;
 
@@ -857,10 +859,16 @@ void cmLandscape::GenerateFaces()
 			++liSeq;
 			liBase+=liXVert;
 		}
-
-
 	}
-
+/*
+	for(liCount=0;liCount<miQuads/2;++liCount)
+	{
+	    uint16 liTemp;
+	    liTemp=mpQuads[liCount*2];
+	    mpQuads[liCount*2]=mpQuads[liCount*2+1];
+	    mpQuads[liCount*2+1]=liTemp;
+	}
+*/
 }
 
 cmLandscape *cmLandscape::Duplicate()

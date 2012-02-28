@@ -38,8 +38,20 @@ void cModel::RenderPainter()
  {
   PrepareMaterial();
   SetShaderVariables();
+/*
+    glBindBuffer(GL_ARRAY_BUFFER, mpMesh->mBuffer1);
+    glVertexAttribPointer(mpShader->VertexPositionID(), 3, GL_FLOAT, GL_FALSE, 0, 0);
+    glEnableVertexAttribArray(mpShader->VertexPositionID());
 
+    glVertexAttribPointer(mpShader->VertexNormalID(), 3, GL_FLOAT, GL_FALSE, 0, reinterpret_cast<const GLvoid*>(mpMesh->Vertex()*3*sizeof(float)));
+    glEnableVertexAttribArray(mpShader->VertexNormalID());
 
+    glVertexAttribPointer(mpShader->VertexUVID(), 3, GL_FLOAT, GL_FALSE, 0, reinterpret_cast<const GLvoid*>(mpMesh->Vertex()*6*sizeof(float)));
+    glEnableVertexAttribArray(mpShader->VertexUVID());
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mpMesh->mBuffer2);
+    glDrawElements(GL_TRIANGLES,mpMesh->Faces()*3,GL_UNSIGNED_SHORT,0);
+*/
   mpMesh->RenderMesh();
  }
 }

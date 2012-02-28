@@ -4,6 +4,7 @@
 
 cNodeListNode::~cNodeListNode()
 {
+delete mpObject;
 mpObject=0;
 }
 
@@ -119,6 +120,7 @@ cNodeList::cNodeList(uint32 liLength,vRenderNode *lpRenderer)
 
 cNodeList::cNodeList(bool lpTopLevel,uint32 liLength,cCamera *lpCamera)
 {
+	(void) lpTopLevel;
   mpRenderer=0;
   mcOwnerNode.Node=0;
   mpCamera=lpCamera;
@@ -260,8 +262,8 @@ void cNodeList::CalculateMatrices()
 				_MATRIX_STACK->Push();
 		}
 	}
-	mpList[liListPos]->mpObject->UpdateMatrix();
 	mpList[liListPos]->mpObject->CalculateMatrices();
+
   }
  }
  while(miLevel>0){ _MATRIX_STACK->Pop(); --miLevel;}
@@ -378,5 +380,33 @@ cRenderOwner cNodeList::Add(vRenderObject *lpNew){return Add(lpNew,0);};
   mpList[liPos]->miLevel=liCom;
  }
 
+
+ cMatrix4 *cNodeList::CalculateGlobalMatrix()
+ {
+
+
+	if(Renderer())
+	{
+		cMatrix4 *lpMat=Renderer()->CalculateGlobalMatrix();
+		if(lpMat)
+		{
+			mmCache=Renderer()->CalculateGlobalMatrix();
+			_MATRIX_STACK->Push();
+			_MATRIX_STACK->SetMatrix(mmCache.Matrix());
+			CalculateMatrices();
+			_MATRIX_STACK->Pop();
+     		return 0;
+		}
+		return 0;
+	}
+	else
+	{
+		_MATRIX_STACK->Push();
+		_MATRIX_STACK->SetMatrix(mmCache.Matrix());
+		CalculateMatrices();
+		_MATRIX_STACK->Pop();
+     	return 0;
+	}
+ }
 
 #endif

@@ -178,6 +178,18 @@ boost/shared_ptr.hpp
 
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
 
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
+
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
 
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
@@ -185,6 +197,8 @@ boost/shared_ptr.hpp
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
 
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrixStack.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
 
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
 
@@ -309,10 +323,18 @@ sstream
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 ./Maths/WTMath.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
+./Maths/WTc2DVt.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+./Maths/WTc3DVt.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+./Maths/WTc4DVt.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
 ./Maths/WTcColors.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
 ./Maths/WTcMatrix4.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
+./Maths/WTcMomentum.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
 ./Maths/WTcPerspectiveMatrix.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
 ./Maths/WTcMatrixStack.h
@@ -321,6 +343,12 @@ sstream
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
 ./Files/WTString.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/WTString.h
+./Maths/WTc2DVtCode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+./Maths/WTc3DVtCode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+./Maths/WTc4DVtCode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
 ./Engine/WTcSignal.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Engine/WTcSignal.h
 ./Engine/WTKernel.h
@@ -476,7 +504,7 @@ sstream
 ./Engine/WTcBase.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Engine/WTcBase.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/WTcStarMap.cpp
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/WTcParticle.cpp
 ../../WTBamboo.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../../WTBamboo.h
 

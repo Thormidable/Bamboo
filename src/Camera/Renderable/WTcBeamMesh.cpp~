@@ -137,8 +137,8 @@ void cBeamMesh::GenerateData(float Radius,float Length,uint16 Segments)
 
 		liCount3=Segments*3+liCount3;
 
-		VertexData[liCount3]=5*Radius*sin(Angle*(liCount));
-		VertexData[liCount3+1]=5*Radius*cos(Angle*(liCount));
+		VertexData[liCount3]=Radius*sin(Angle*(liCount));
+		VertexData[liCount3+1]=Radius*cos(Angle*(liCount));
 		VertexData[liCount3+2]=Length;
 	}
 

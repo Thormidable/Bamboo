@@ -19,9 +19,6 @@ class cRenderNode : public vRenderNode
  // Dynamic Linked List of renderable objects.
  cLinkedList<vRenderObject> *mpObjects;
 
- // cRenderNode which owns this renderable object.
- vRenderNode *mpRenderer;
-
 public:
 
 	// Current position in the render list mpObjects.

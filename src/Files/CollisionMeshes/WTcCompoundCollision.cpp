@@ -32,7 +32,7 @@ cMatrix4 &cCompoundCollisionMobile::GetMatrix(uint32 liPos)
 
 cCompoundCollisionNode::cCompoundCollisionNode()
 {
-    mpObject=0;
+    //mpObject=0;
 };
 
 cCompoundCollisionNodeMobile::cCompoundCollisionNodeMobile()
@@ -46,11 +46,14 @@ cCompoundCollisionNode::~cCompoundCollisionNode()
 };
 void cCompoundCollision::AddType(vCollisionData *lpOther)
 {
-   if(miItems>=miSpaces) ChangeSize(miSpaces*1.5);
+ if(lpOther)
+ {
+   if(miItems>=miSpaces-1) ChangeSize(miSpaces*1.5);
    mpList[miItems]=new cCompoundCollisionNode;
    mpList[miItems]->mpObject=lpOther;
    if(mfSize<mpList[miItems]->mpObject->CollisionSize()) mfSize=mpList[miItems]->mpObject->CollisionSize();
    ++miItems;
+ }
 };
 
 cSphereCollision *cCompoundCollision::AddType(float lfSize)
@@ -86,10 +89,14 @@ cMeshCollision *cCompoundCollision::AddType(float lfXP,float lfXN,float lfYP,flo
 };
 cBeamCollision *cCompoundCollision::AddType(cBeamMesh *lpBeam)
 {
+ if(lpBeam)
+ {
     cBeamCollision *lpTemp=new cBeamCollision;
     lpTemp->BuildObject(lpBeam->Length(),lpBeam->Radius());
     AddType(lpTemp);
     return lpTemp;
+ }
+ return 0;
 };
 
 uint8 cCompoundCollision::GetType(uint32 liPos)

@@ -201,7 +201,7 @@ bool cCollisionObject::CheckCollision(cCollisionObject *lpOther)
 
 	if(Type()==WT_COLLISION_COMPOUND)
 	{
-        return CompoundCollision(Compound(),mpFollowing->mmCache,lpOther->Compound(),lpOther->mpFollowing->mmCache);
+        return CompoundCollision(Compound(),mpFollowing->mmCache,lpOther->CollisionData(),lpOther->mpFollowing->mmCache);
     }
 
 	return 0;
@@ -240,20 +240,29 @@ cCollisionObject::cCollisionObject(cBeamMesh *lpFollow,cProcess *lpLinked,uint32
 
 cRayCollision *cCollisionObject::SetType(cRenderObject *lpObj)
 {
-
-	mpFollowing=lpObj;
-	OnProcedural();
-	mpObject=new cRayCollision;
-	Ray()->SetSize(1.0f);
-	return Ray();
-
+ return SetType(lpObj,1.0f);
 };
 
 
 cRayCollision *cCollisionObject::SetTypeRay(cRenderObject *lpObj)
 {
-	return SetType(lpObj);
+	return SetType(lpObj,1.0f);
 };
+
+cRayCollision *cCollisionObject::SetType(cRenderObject *lpObj,float lfRadius)
+{
+    mpFollowing=lpObj;
+	OnProcedural();
+	mpObject=new cRayCollision;
+	Ray()->SetSize(lfRadius);
+	return Ray();
+};
+
+cRayCollision *cCollisionObject::SetTypeRay(cRenderObject *lpObj,float lfRadius)
+{
+    return SetType(lpObj,lfRadius);
+};
+
 cCompoundCollision *cCollisionObject::SetTypeCompound(string lcReference)
 {
 	return SetType(_GET_COMPOUND_COLLISION_FILE(lcReference.c_str()));
@@ -309,7 +318,7 @@ cCompoundCollision *cCollisionObject::SetTypeCompound(cCompoundCollisionFile *lp
 
 bool cCollisionObject::CompoundCollision(cCompoundCollision* lpCompound,cMatrix4 &lcCompoundMatrix, vCollisionData *lpOther,cMatrix4 &lcOtherMatrix)
 {
- vCollisionData *lpNode;
+ vCollisionData *lpNode=0;
  switch(lpOther->Type())
  {
      case WT_COLLISION_RADIUS :
@@ -359,7 +368,8 @@ bool cCollisionObject::CompoundCollision(cCompoundCollision* lpCompound,cMatrix4
      }break;
      case WT_COLLISION_COMPOUND :
      {
-         if(CompoundCollision(lpNode->Compound(),lcCompoundMatrix,lpOther,lcOtherMatrix)) return 1;
+		// lpNode=
+        // if(CompoundCollision(lpNode->Compound(),lcCompoundMatrix,lpOther,lcOtherMatrix)) return 1;
      }break;
  };
  return 0;

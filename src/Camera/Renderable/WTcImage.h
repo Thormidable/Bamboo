@@ -32,6 +32,7 @@ protected:
  // This boolean determines whether the arrays need to be generated.
  static bool mbFirst;
 
+float mfPriority;
  	// Will fill the arrays for forming the polygon.
        void InitialiseArrays();
        	// Updates arrays to make the image of size mfSize.
@@ -64,6 +65,11 @@ public:
         ///Will return the Height of this image in pixels.
         float Height();
 
+        ///Will return the render priority (order of rendering) for this 2D object.
+        float Priority();
+        ///Will set the render priority (order of rendering) for this 2D object. By default the acceptable range is 0.0 - 10.0. 0.0 is the highest priority, 10.0 is the lowest priority. Objects start at a priority of 5.0f.
+        void Priority(float lfPriority);
+
 
 
 };
@@ -83,6 +89,8 @@ public:
 	cImage3D(vRenderNode *lpCamera);
 	cImage3D(cCamera *lpCamera);
     void SetUp();
+
+    void RenderPainter();
 };
 
 #endif

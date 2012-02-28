@@ -149,6 +149,8 @@ int16 HalfSegments=Segments>>1;
 	if(VertexList) delete []VertexList;
 	VertexList=new uint16[liCount3];
 
+	memset(VertexList,0,sizeof(uint16)*liCount3);
+
 	//Set Start and Ends
 	 VertexList[0]=0;
 	 VertexList[liCount3-1]=Segments*2-1;

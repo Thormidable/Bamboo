@@ -77,6 +77,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/WTcColors.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/WTcMatrix4.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/WTcMatrixStack.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o"
+  "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/WTcMomentum.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/WTcPerspectiveMatrix.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/WTRadix.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/WTcCollisionBase.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o"

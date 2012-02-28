@@ -202,16 +202,14 @@ void cMesh::BufferMesh()
 void cMesh::RenderMesh()
 {
 
-glBindBuffer(GL_ARRAY_BUFFER, mBuffer1);
+	glBindBuffer(GL_ARRAY_BUFFER, mBuffer1);
+
 	glVertexPointer(3,GL_FLOAT,0,0);
 	glNormalPointer(GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*3*sizeof(float)));
     glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*6*sizeof(float)));
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
-
-
 	glDrawElements(GL_TRIANGLES,miFaces*3,GL_UNSIGNED_SHORT,0);
-
 
 }
 

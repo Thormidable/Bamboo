@@ -46,6 +46,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o"
   "CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o"
   "CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o"
+  "CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o"
   "CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o"
   "CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o"
   "CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o"

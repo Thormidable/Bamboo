@@ -82,10 +82,17 @@ CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTLimitedList.h
@@ -188,10 +195,17 @@ CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTLimitedList.h
@@ -294,10 +308,17 @@ CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTLimitedList.h
@@ -400,10 +421,17 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLimitedList.h
@@ -506,10 +534,17 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLimitedList.h
@@ -612,10 +647,17 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLimitedList.h
@@ -718,10 +760,17 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLimitedList.h
@@ -824,10 +873,17 @@ CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTLimitedList.h
@@ -930,10 +986,17 @@ CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTLimitedList.h
@@ -1036,10 +1099,17 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
@@ -1142,10 +1212,17 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
@@ -1248,10 +1325,17 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
@@ -1354,10 +1438,17 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
@@ -1460,10 +1551,17 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
@@ -1566,10 +1664,17 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
@@ -1672,10 +1777,17 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
@@ -1778,10 +1890,17 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
@@ -1884,10 +2003,17 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
@@ -1990,10 +2116,17 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
@@ -2096,10 +2229,17 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
@@ -2202,10 +2342,17 @@ CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
@@ -2308,10 +2455,17 @@ CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
@@ -2414,10 +2568,17 @@ CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
@@ -2520,10 +2681,17 @@ CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
@@ -2626,10 +2794,17 @@ CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
@@ -2732,10 +2907,17 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
@@ -2838,10 +3020,17 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
@@ -2944,10 +3133,17 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
@@ -3050,10 +3246,17 @@ CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
@@ -3156,10 +3359,17 @@ CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTLimitedList.h
@@ -3262,10 +3472,17 @@ CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTLimitedList.h
@@ -3368,10 +3585,17 @@ CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLimitedList.h
@@ -3474,10 +3698,17 @@ CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLimitedList.h
@@ -3580,10 +3811,17 @@ CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLimitedList.h
@@ -3686,10 +3924,17 @@ CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTLimitedList.h
@@ -3792,10 +4037,17 @@ CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTLimitedList.h
@@ -3898,10 +4150,17 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
@@ -4004,10 +4263,17 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
@@ -4110,10 +4376,17 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
@@ -4216,10 +4489,17 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
@@ -4322,10 +4602,17 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
@@ -4428,10 +4715,17 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
@@ -4534,10 +4828,17 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
@@ -4640,10 +4941,17 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
@@ -4746,10 +5054,17 @@ CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Fonts/../.././PTL/WTLimitedList.h
@@ -4852,10 +5167,17 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLimitedList.h
@@ -4958,10 +5280,17 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLimitedList.h
@@ -5064,10 +5393,17 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLimitedList.h
@@ -5170,10 +5506,17 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLimitedList.h
@@ -5276,10 +5619,17 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLimitedList.h
@@ -5382,10 +5732,17 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLimitedList.h
@@ -5488,10 +5845,17 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLimitedList.h
@@ -5594,10 +5958,17 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLimitedList.h
@@ -5700,10 +6071,17 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLimitedList.h
@@ -5806,10 +6184,17 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLimitedList.h
@@ -5912,10 +6297,17 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLimitedList.h
@@ -6018,10 +6410,17 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLimitedList.h
@@ -6124,10 +6523,17 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLimitedList.h
@@ -6230,10 +6636,17 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLimitedList.h
@@ -6336,10 +6749,17 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLimitedList.h
@@ -6442,10 +6862,17 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLimitedList.h
@@ -6548,10 +6975,17 @@ CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTLimitedList.h
@@ -6654,10 +7088,17 @@ CMakeFiles/Bamboo.dir/Files/WTString.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLimitedList.h
@@ -6760,10 +7201,17 @@ CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLimitedList.h
@@ -6866,10 +7314,17 @@ CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLimitedList.h
@@ -6972,10 +7427,17 @@ CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLimitedList.h
@@ -7078,10 +7540,17 @@ CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././PTL/WTLimitedList.h
@@ -7184,10 +7653,17 @@ CMakeFiles/Bamboo.dir/Global/log.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/.././PTL/WTLimitedList.h
@@ -7290,10 +7766,17 @@ CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
@@ -7396,10 +7879,17 @@ CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
@@ -7502,10 +7992,17 @@ CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
@@ -7608,10 +8105,17 @@ CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
@@ -7714,10 +8218,17 @@ CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
@@ -7739,6 +8250,119 @@ CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Windows/WTcWindow.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/../WTBamboo.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/WTcMatrixStack.cpp
+CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Audio/WTcAudioBuffer.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Audio/WTcAudioDevice.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Audio/WTcAudioObject.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/FX/WTcFog.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/FX/WTcLight.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/FX/WTcMaterial.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/FX/WTcSpotLight.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/FX/WTvLight.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Nodes/WTcNodeList.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Nodes/WTcRenderNode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Renderable/WTcBeamMesh.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Renderable/WTcButton.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Renderable/WTcImage.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Renderable/WTcLandscape.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Renderable/WTcLine.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Renderable/WTcModel.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Renderable/WTcParticle.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Renderable/WTcParticleGroup.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Renderable/WTcPoint.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Renderable/WTcStarMap.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/Renderable/WTcTextureText.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/WTcCamera.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/WTcExtraViewport.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/WTcLightHandler.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/WTcPainter.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/WTcPerspectiveControl.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/WTcRenderObject.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/WTcRenderOwner.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/WTcRenderPointer.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/WTcTextureStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Camera/WTvRenderObject.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Engine/Process/WTcParentStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Engine/Process/WTcProcess.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Engine/WTKernel.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Engine/WTcBase.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Engine/WTcFrameRate.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Engine/WTcSignal.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Audio/WTcAudioData.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Audio/WTcSoundObject.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/CollisionMeshes/WTcBeamCollision.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/CollisionMeshes/WTcCompoundCollision.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/CollisionMeshes/WTcCompoundCollisionFile.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/CollisionMeshes/WTcMeshCollision.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/CollisionMeshes/WTcMeshFileCollision.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/CollisionMeshes/WTcRayCollision.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/CollisionMeshes/WTcSphereCollision.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/CollisionMeshes/WTvCollisionData.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Fonts/WTcFont.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/MeshClasses/WTcCluster.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/MeshClasses/WTcFace.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/MeshClasses/WTcFullFaceData.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/MeshClasses/WTcPlane.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/MeshClasses/WTcPolygon.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/MeshClasses/WTcVertex.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcMesh.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcmLandscape.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTv2DPolygon.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTree.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTreeNode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcReferenceList.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTvMeshTree.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Shaders/WTcShader.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Shaders/WTcShaderProgram.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Shaders/WTcShaderVariables.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Shaders/WTcUserDefinedShaderVariable.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/Textures/WTcTexture.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/WTString.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/WTcFile.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/WTcFileHandler.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/WTcIMFLoader.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Files/WTvFile.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/CException.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/GlobalPointers.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/IMFDefinitions.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/WTDefinitions.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/WTSetDefinitions.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/WTSettings.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/WTcFlags.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/log.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcCameraMatrix4.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcColors.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrix4.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMomentum.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcPerspectiveMatrix.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTMinLinkedList.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTRadix.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcPushPopStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcSingleton.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Physics/WTcCollisionBase.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Physics/WTcCollisionHandler.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Physics/WTcCollisionList.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Physics/WTcCollisionObject.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././WTOsBits.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Windows/EventHandler/WTcEventHandler.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Windows/EventHandler/WTcKeyStore.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Windows/EventHandler/WTcMouse.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Windows/WTWindowsKeyCodes.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Windows/WTXWindowsKeyCodes.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Windows/WTcSync.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Windows/WTcWindow.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/../WTBamboo.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/WTcMomentum.cpp
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Audio/WTcAudioBuffer.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Audio/WTcAudioDevice.h
@@ -7820,10 +8444,17 @@ CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
@@ -7926,10 +8557,17 @@ CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/PTL/.././PTL/WTLimitedList.h
@@ -8032,10 +8670,17 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLimitedList.h
@@ -8138,10 +8783,17 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLimitedList.h
@@ -8244,10 +8896,17 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLimitedList.h
@@ -8350,10 +9009,17 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLimitedList.h
@@ -8456,10 +9122,17 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLimitedList.h
@@ -8562,10 +9235,17 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLimitedList.h
@@ -8668,10 +9348,17 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLimitedList.h
@@ -8774,10 +9461,17 @@ CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTLimitedList.h
@@ -8880,10 +9574,17 @@ CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/WTcFlags.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/log.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTMath.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc2DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc2DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc3DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc3DVtCode.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc4DVt.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc4DVtCode.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcCameraMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcColors.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcMatrix4.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcMatrixStack.h
+ /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcMomentum.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcPerspectiveMatrix.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTLLTemplate.h
  /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTLimitedList.h

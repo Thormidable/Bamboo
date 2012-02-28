@@ -2,11 +2,13 @@
 
 vCollisionData *cCompoundCollisionFileNode::GetPointer()
 {
+ if(!mpPointer) GeneratePointer();
  return mpPointer;
 };
 
 void cCompoundCollisionFileNode::GeneratePointer()
 {
+    #if WT_FULL_VERSION_BAMBOO
     if(Type()==IMF_CCN_REFERENCE)
 	{
 		mpPointer=_GET_COLLISION_MESH_FILE(mcReference.c_str());
@@ -28,6 +30,10 @@ void cCompoundCollisionFileNode::GeneratePointer()
     {
         mpPointer=0;
     }
+    #else
+        mpPointer=0;
+    #endif
+
 }
 
 bool cCompoundCollisionFileNode::Compare(cCompoundCollisionFileNode *lpOther)

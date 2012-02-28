@@ -54,6 +54,8 @@ protected:
    cShaderVariable *mpVariables;
    GLuint miShaderID;
 
+
+
 public:
         cShader();
 

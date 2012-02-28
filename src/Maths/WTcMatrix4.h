@@ -107,7 +107,7 @@ void PositionY(float lfY);
  /// This will position the current object to lfX,lfY,lfX. (X,Y,Z)
  void Position(float lfX,float lfY,float lfZ);
 
- /// Will Advance the object along its local axis by teh distance of the floats in the array lfDistance
+ /// Will Advance the object along its local axis by the distance of the floats in the array lfDistance
  void Advance(float *lfDistance);
  /// Will Advance the object along its local X and Y axis by the Vector lfDistances;
  void Advance(c2DVf *lfDistances);
@@ -130,6 +130,8 @@ void AdvanceY(float lfDistance);
  /// This will advance the object along its local X, Y and Z axis by lfX, lfY and lfZ.
  void Advance(float lfX,float lfY, float lfZ);
 
+ /// Will Advance the object along its global axis by the distance of the floats in the array lfDistance
+ void GAdvance(float *lfDistance);
 /// This will advance the object along the global X axis by lfX.
 void GAdvanceX(float lfX);
 /// This will advance the object along the global Y axis by lfX.
@@ -185,8 +187,88 @@ void Rotation(cMatrix4 &lpOther);
 /// This will rotate the object around the global Z axis at point 0,0,0 by lfAngle radians.
  void GRotateOriginZ(float lfAngle);
 
+///This will make the current object look at the point lfPoint in Local Co-ordinates.
+ void LookAt(float *lfPoint);
+ ///This will make the current object look at the point lfPoint in Local Co-ordinates.
+ void LookAt(cMatrix4 *lfPoint);
+ ///This will make the current object look at the point lfPoint in Local Co-ordinates.
+ void LookAt(cMatrix4 &lfPoint);
+ ///This will make the current object look at the point lfPoint in Local Co-ordinates.
+ void LookAt(float lfX,float lfY,float lfZ);
+///This will make the current object look at the point lfVect in Local Co-ordinates.
+ void LookAt(c3DVf lfVect);
 
- ///Makes this matrix Equal the cMatrix4 pointed to by lpOther
+///This will make the current object look in the direction lfVect in Local Co-ordinates.
+ void LookVector(float *lfVect);
+ ///This will make the current object look in the direction lfX,lfY,lfZ in Local Co-ordinates.
+ void LookVector(float lfX,float lfY,float lfZ);
+ ///This will make the current object look in the direction lfVect in Local Co-ordinates.
+ void LookVector(c3DVf lfVect);
+
+
+ ///This will give the angle this object must roll (about X Axis) to have the point on its ZY Plane.
+ float RollToPointPitch(float *lfPoint);
+ ///This will give the angle this object must roll (about X Axis) to have the point on its ZX Plane.
+ float RollToPointYaw(float *lfPoint);
+ ///This will give the angle this object must Yaw (about Y Axis) to be 'facing' the Local point lfPoint.
+ float YawToPoint(float *lfPoint);
+ ///This will give the angle this object must pitch (about Z Axis) to be 'facing' the Local point lfPoint.
+ float PitchToPoint(float *lfPoint);
+
+///This will give the angle between this matrices z axis and the vector from this matrix to the point lfPoint.
+float AngleToPoint(float *lfPoint);
+///This will return true if the angle between this matrices z axis and the vector from this matrix to the point lfPoint is less than lfAngle.
+bool AngleToPointCheck(float *lfPoint,float lfAngle);
+
+
+ ///This will give the angle this object must roll (about X Axis) to have the Vector lfVector on its ZY Plane.
+ float RollToVectorPitch(float *lfVector);
+ ///This will give the angle this object must roll (about X Axis) to have the Vector lfVector on its ZX Plane.
+ float RollToVectorYaw(float *lfVector);
+ ///This will give the angle this object must Yaw (about Y Axis) to be inline with the Local Vector lfVector.
+ float YawToVector(float *lfVector);
+ ///This will give the angle this object must pitch (about Z Axis) to be inline with the Local Vector lfVector.
+ float PitchToVector(float *lfVector);
+
+///This will give the angle between this matrices z axis and the vector lfVector.
+float AngleToVector(float *lfVector);
+///This will return true if the angle between this matrices z axis and the vector lfVector is less than lfAngle. Otherwise will return false.
+bool AngleToVectorCheck(float *lfVector,float lfAngle);
+
+
+ ///This will give the angle this object must roll (about X Axis) to have the point on its ZY Plane.
+ float RollToPointPitch(c3DVf lfPoint);
+ ///This will give the angle this object must roll (about X Axis) to have the point on its ZX Plane.
+ float RollToPointYaw(c3DVf lfPoint);
+ ///This will give the angle this object must Yaw (about Y Axis) to be 'facing' the Local point lfPoint.
+ float YawToPoint(c3DVf lfPoint);
+ ///This will give the angle this object must pitch (about Z Axis) to be 'facing' the Local point lfPoint.
+ float PitchToPoint(c3DVf lfPoint);
+
+///This will give the angle between this matrices z axis and the vector from this matrix to the point lfPoint.
+float AngleToPoint(c3DVf lfPoint);
+///This will return true if the angle between this matrices z axis and the vector from this matrix to the point lfPoint is less than lfAngle.
+bool AngleToPointCheck(c3DVf lfPoint,float lfAngle);
+
+
+ ///This will give the angle this object must roll (about X Axis) to have the Vector lfVector on its ZY Plane.
+ float RollToVectorPitch(c3DVf lfVector);
+ ///This will give the angle this object must roll (about X Axis) to have the Vector lfVector on its ZX Plane.
+ float RollToVectorYaw(c3DVf lfVector);
+ ///This will give the angle this object must Yaw (about Y Axis) to be inline with the Local Vector lfVector.
+ float YawToVector(c3DVf lfVector);
+ ///This will give the angle this object must pitch (about Z Axis) to be inline with the Local Vector lfVector.
+ float PitchToVector(c3DVf lfVector);
+
+///This will give the angle between this matrices z axis and the vector lfVector.
+float AngleToVector(c3DVf lfVector);
+///This will return true if the angle between this matrices z axis and the vector lfVector is less than lfAngle. Otherwise will return false.
+bool AngleToVectorCheck(c3DVf lfVector,float lfAngle);
+
+
+
+
+  ///Makes this matrix Equal the cMatrix4 pointed to by lpOther
   void Equals(cMatrix4 *lpOther);
   ///Makes this matrix Equal the cMatrix4 lpOther
   void Equals(cMatrix4 &lpOther);
@@ -346,6 +428,10 @@ float *operator=(float *lVal);
  void Identity();
  /// This will set every float in this objects matrix to be equal to zero.
  void Zero();
+ /// This will reset the objects Local Rotations.
+ void ResetRotations();
+ ///This will reset the objects Local Position.
+ void ResetPosition();
  ///This will multiply this matrix by the cMatrix4 Other.
  void Multiply(cMatrix4 &Other);
  ///This will multiply this matrix by the cMatrix4 Other.
@@ -357,6 +443,26 @@ float *operator=(float *lVal);
 
  ///This will multiply this matrix by the 4x4 float Matrix pointed to by Other.
  void Multiply(float *Other);
+
+ /// This will multiply this matrix by the 4 dimensional Vector lfVector.
+ c4DVf MultiplyVector(float *lfVector);
+ /// This will multiply this matrix by the 4 dimensional Vector lfVector.
+ c4DVf MultiplyVector(c4DVf lfVector);
+ /// This will multiply this matrix by the 4 dimensional Vector lfVector.
+ c4DVf Multiply(c4DVf lfVector);
+
+ /// This will multiply this matrices angles by the 3 dimensional Vector lfVector.
+ c3DVf RotateVectorByAngles(float *lfVector);
+ /// This will multiply this matrices angles by the 3 dimensional Vector lfVector.
+ c3DVf RotateVectorByAngles(c3DVf lfVector);
+ /// This will multiply this matrices angles by the 3 dimensional Vector lfVector.
+ c3DVf Multiply(c3DVf lfVector);
+
+ /// This will multiply this matrices position by the 3 dimensional Vector lfVector.
+ c3DVf MultiplyVectorPosition(float *lfVector);
+ /// This will multiply this matrices position by the 3 dimensional Vector lfVector.
+ c3DVf MultiplyVectorPosition(c3DVf lfVector);
+
 
   /// This will return this cMatrix4 in the format of a cCameraMatrix4. This is because they have different formats.
   cCameraMatrix4 &ConvertToCameraMatrix();

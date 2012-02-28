@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bamboo&#160;<span id="projectnumber">v1.0</span></div>
+   <div id="projectname">Bamboo&#160;<span id="projectnumber">v1.1</span></div>
    <div id="projectbrief">Process Orientated Game Engine</div>
   </td>
  </tr>
@@ -287,8 +287,7 @@ Loading and Accessing Files</h2>
 <p>IMF Files contain many types of data:</p>
 <p>Models Textures Fonts Model Trees Reference Lists Shaders Shader Programs Collision Objects Landscape Models</p>
 <p>Useful Macros:</p>
-<p>These will return a pointer to the file of the appropriate type with the Test Identifier 'Reference'. The files are checked for type, however giving files the same text identifier is bad practice. _GET_TEXTURE_FILE(Reference) _GET_MESH_FILE(Reference) _GET_FONT_FILE(Reference) _GET_AUDIO_FILE(Reference) _GET_COLLISION_MESH_FILE(Reference) _GET_LANDSCAPE_FILE(Reference)</p>
-<p>_GET_FILE(FileType,FileName) Will allow you to specify a type for the file and a text identifier reference. This should only be used for used defined File types.</p>
+<p>These will return a pointer to the file of the appropriate type with the Test Identifier 'Reference'. The files are checked for type, however giving files the same text identifier is bad practice. _GET_TEXTURE_FILE(Reference) _GET_MESH_FILE(Reference) _GET_FONT_FILE(Reference) _GET_AUDIO_FILE(Reference) _GET_COLLISION_MESH_FILE(Reference) _GET_LANDSCAPE_FILE(Reference) _GET_COMPOUND_COLLISION_FILE(Reference) _GET_MODELLIST_FILE(Reference) _GET_FILE(FileType,FileName) Will allow you to specify a type for the file and a text identifier reference. This should only be used for used defined File types.</p>
 <p>The default linking code is of the Form <a class="el" href="classc_file_handler.html#a03de3fbc79a44ef92ca36373743a92fd" title="This will return a pointer to the current cFileHandler. If there is no current instance it will creat...">cFileHandler::Instance()</a>-&gt;File&lt;FileType&gt;(FileName). The Macros above automatically select the appropriate Internal class. </p>
 <h2><a class="anchor" id="InputsPage"></a>
 Accessing User Inputs</h2>
@@ -694,7 +693,7 @@ Specifics of media types :</h3>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Feb 6 2012 10:33:04 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:03 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

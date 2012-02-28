@@ -58,7 +58,6 @@ return false;
 
 bool cCollisionObject::Collision(cCollisionObject *lpOther,uint32 lpCol)
 {
-	printf("Entering cCollisionObject::Collision(cCollisionObject *lpOther,uint32 lpCol)\n");
 	uint32 THIS_SHOULD_NOT_BE_NECCESSARY;
 	if(!lpCol || CollisionFilter()==lpCol)
 	{
@@ -70,7 +69,6 @@ bool cCollisionObject::Collision(cCollisionObject *lpOther,uint32 lpCol)
 
 bool cCollisionObject::Collision(cCollisionObject *lpOther)
 {
-	printf("Entering cCollisionObject::Collision(cCollisionObject *lpOther)\n");
 	return CheckCollision(lpOther);
 }
 
@@ -179,7 +177,6 @@ void cCollisionObject::Signal(SIGNAL liFlags)
 
 bool cCollisionObject::CheckCollision(cCollisionObject *lpOther)
 {
-printf("Entering cCollisionObject::CheckCollision(cCollisionObject *lpOther)\n");
 	if(Asleep() || lpOther->Asleep() || CreatedThisFrame() || lpOther->CreatedThisFrame()) return 0;
 	if(!TouchCollision(lpOther)) return 0;
 	if((Type()==WT_COLLISION_RADIUS || Type()==WT_COLLISION_BEAM) && (lpOther->Type()==WT_COLLISION_RADIUS || lpOther->Type()==WT_COLLISION_BEAM)) return 1;
@@ -204,7 +201,7 @@ printf("Entering cCollisionObject::CheckCollision(cCollisionObject *lpOther)\n")
 
 	if(Type()==WT_COLLISION_COMPOUND)
 	{
-        return CompoundCollision(Compound(),mpFollowing->mmCache,lpOther->Compound(),lpOther->mpFollowing->mmCache);
+        return CompoundCollision(Compound(),mpFollowing->mmCache,lpOther->Sphere(),lpOther->mpFollowing->mmCache);
     }
 
 	return 0;
@@ -243,20 +240,29 @@ cCollisionObject::cCollisionObject(cBeamMesh *lpFollow,cProcess *lpLinked,uint32
 
 cRayCollision *cCollisionObject::SetType(cRenderObject *lpObj)
 {
-
-	mpFollowing=lpObj;
-	OnProcedural();
-	mpObject=new cRayCollision;
-	Ray()->SetSize(1.0f);
-	return Ray();
-
+ return SetType(lpObj,1.0f);
 };
 
 
 cRayCollision *cCollisionObject::SetTypeRay(cRenderObject *lpObj)
 {
-	return SetType(lpObj);
+	return SetType(lpObj,1.0f);
 };
+
+cRayCollision *cCollisionObject::SetType(cRenderObject *lpObj,float lfRadius)
+{
+    mpFollowing=lpObj;
+	OnProcedural();
+	mpObject=new cRayCollision;
+	Ray()->SetSize(lfRadius);
+	return Ray();
+};
+
+cRayCollision *cCollisionObject::SetTypeRay(cRenderObject *lpObj,float lfRadius)
+{
+    return SetType(lpObj,lfRadius);
+};
+
 cCompoundCollision *cCollisionObject::SetTypeCompound(string lcReference)
 {
 	return SetType(_GET_COMPOUND_COLLISION_FILE(lcReference.c_str()));
@@ -312,7 +318,7 @@ cCompoundCollision *cCollisionObject::SetTypeCompound(cCompoundCollisionFile *lp
 
 bool cCollisionObject::CompoundCollision(cCompoundCollision* lpCompound,cMatrix4 &lcCompoundMatrix, vCollisionData *lpOther,cMatrix4 &lcOtherMatrix)
 {
- vCollisionData *lpNode;
+ vCollisionData *lpNode=0;
  switch(lpOther->Type())
  {
      case WT_COLLISION_RADIUS :
@@ -362,7 +368,8 @@ bool cCollisionObject::CompoundCollision(cCompoundCollision* lpCompound,cMatrix4
      }break;
      case WT_COLLISION_COMPOUND :
      {
-         if(CompoundCollision(lpNode->Compound(),lcCompoundMatrix,lpOther,lcOtherMatrix)) return 1;
+		// lpNode=
+        // if(CompoundCollision(lpNode->Compound(),lcCompoundMatrix,lpOther,lcOtherMatrix)) return 1;
      }break;
  };
  return 0;

@@ -45,6 +45,10 @@ public:
 
  cShaderVariableSet *ShaderVariableSet();
 
+    GLuint miVertexID;
+   GLuint miNormalID;
+   GLuint miUVID;
+
  protected:
 cVariableStore *mpStoredVariables;
 
@@ -78,7 +82,9 @@ cVariableStore *StoredVariables();
   ///This will return a pointer to the Variable of Type cType in position liPos of the Variable List.
   template<class cType> cType *GetVariable(uint32 liPos);
 
-
+    GLuint VertexPositionID();
+    GLuint VertexNormalID();
+    GLuint VertexUVID();
 };
 
 

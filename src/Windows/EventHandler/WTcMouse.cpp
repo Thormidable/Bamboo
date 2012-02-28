@@ -17,10 +17,11 @@ if(locked)
 {
 
 #if WT_OS_TYPE==OS_WIN32
-	xs=x;
-	ys=y;
-	x=y=0;
-	SetCursorPos(cx,cy);
+	xs=x-cx;
+	ys=y-cy;
+	x=cx;
+	y=cy;
+	SetCursorPos(cx+gpWindow->X(),cy+gpWindow->Y());
 #endif
 #if WT_OS_TYPE==OS_LINUX
 	xs=cx-x;
@@ -45,7 +46,7 @@ void cMouse::Lock()
  cx=gpWindow->Width()>>1;
  cy=gpWindow->Height()>>1;
  #if WT_OS_TYPE==OS_WIN32
-	SetCursorPos(cx,cy);
+	SetCursorPos(cx+gpWindow->X(),cy+gpWindow->Y());
 #endif
 #if WT_OS_TYPE==OS_LINUX
 	gpWindow->MovePointer(cx,cy);

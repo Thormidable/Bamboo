@@ -1,6 +1,11 @@
 #include "../WTBamboo.h"
 
 
+float cPerspectiveControl::Near2D(){return mmPerspective2D.Near();};
+float cPerspectiveControl::Far2D(){return mmPerspective2D.Far();};
+void cPerspectiveControl::Near2D(float lfN){mmPerspective2D.Near(lfN);};
+void cPerspectiveControl::Far2D(float lfF){mmPerspective2D.Far(lfF);};
+
 cMatrix4 cPerspectiveControl::mmCombined;
 cMatrix4 cPerspectiveControl::mmCamera;
 cMatrix4 cPerspectiveControl::mmProjection;
@@ -9,6 +14,8 @@ cMatrix4 cPerspectiveControl::mm2DProjection;
 cPerspectiveControl::cPerspectiveControl()
 {
 	mmPerspective.Setup(1.0f,gpWindow->Ratio(),1.0f,100.0f);
+	mmPerspective2D.Near(1.0f);
+	mmPerspective2D.Far(10.0f);
 	Identity();
 	UpdateProjectionMatrix();
 }
@@ -22,7 +29,7 @@ float *cPerspectiveControl::Projection2DMatrix(){return mm2DProjection.Matrix();
 void cPerspectiveControl::UpdateProjectionMatrix()
 {
   mmPerspective.Frustum();
-  mmPerspective2D.Orthographic(mfViewportWidth,0.0f,mfViewportHeight,0.0f,1.0f,10.0f);
+  mmPerspective2D.Orthographic(mfViewportWidth,0.0f,mfViewportHeight,0.0f,mmPerspective2D.Near(),mmPerspective2D.Far());
 }
 
 float cPerspectiveControl::Near()
@@ -91,9 +98,17 @@ void cPerspectiveControl::Ratio(float lfRatio)
 
 void cViewportControl::ClearViewport()
 {
- SetClearColor();
- glScissor(mfViewportX,mfViewportY,mfViewportWidth,mfViewportHeight);
- glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+ if(mbClear)
+ {
+ 	SetClearColor();
+ 	glScissor(mfViewportX,mfViewportY,mfViewportWidth,mfViewportHeight);
+ 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+ }
+ else
+ {
+    glScissor(mfViewportX,mfViewportY,mfViewportWidth,mfViewportHeight);
+	glClear(GL_DEPTH_BUFFER_BIT);
+ }
 }
 
 void cViewportControl::Proportional(bool lbSet)
@@ -151,8 +166,15 @@ void cViewportControl::ClearColor(float lfRed,float lfGreen,float lfBlue,float l
 	void cViewportControl::ClearColor(cRGB *lpColor){ mcClearColor=lpColor;}
 	cRGBA cViewportControl::ClearColor(){ return mcClearColor;}
 
+	void cViewportControl::Clear(bool lbClear)
+	{
+		mbClear=lbClear;
+	};
 
-
+	bool cViewportControl::Clear()
+	{
+		return mbClear;
+	};
 
 
 	void cViewportControl::Viewport(float lfX,float lfY,float lfWidth,float lfHeight)
@@ -188,18 +210,23 @@ void cViewportControl::ClearColor(float lfRed,float lfGreen,float lfBlue,float l
 
 	cViewportControl::cViewportControl()
 	{
+		mbClear=true;
 		Proportional(false);
 		ViewportProportional(200.0f,200.0f,200.0f,200.0f);
 	};
 
 	cViewportControl::cViewportControl(float lfX,float lfY,float lfWidth,float lfHeight)
 	{
+		mbClear=true;
 		Viewport(lfX,lfY,lfWidth,lfHeight);
 	};
 
 	cViewportControl::cViewportControl(float lfX,float lfY,float lfWidth,float lfHeight, bool lbProportional)
 	{
+		mbClear=true;
 		Proportional(lbProportional);
 		if(Proportional()) Viewport(lfX,lfY,lfWidth,lfHeight);
 		else ViewportProportional(lfX,lfY,lfWidth,lfHeight);
 	};
+
+

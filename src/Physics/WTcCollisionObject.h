@@ -159,6 +159,10 @@ public:
 	cRayCollision *SetType(cRenderObject *lpObj);
 	///This will make a ray object. See cRayCollision::BuildObject(float *lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement.
 	cRayCollision *SetTypeRay(cRenderObject *lpObj);
+		///This will make a ray object. See cRayCollision::BuildObject(float *lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement.
+	cRayCollision *SetType(cRenderObject *lpObj,float lfRadius);
+	///This will make a ray object. See cRayCollision::BuildObject(float *lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement.
+	cRayCollision *SetTypeRay(cRenderObject *lpObj,float lfRadius);
 	///This will use the cCompoundCollisionFile with reference lcReference.
 	cCompoundCollision *SetTypeCompound(string lcReference);
 	///This will use the cCompoundCollisionFile pointed to by lpData.

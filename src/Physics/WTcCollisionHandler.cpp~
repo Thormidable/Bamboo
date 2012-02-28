@@ -32,11 +32,13 @@ cCollisionList *cCollisionHandlerBSP::GenerateCollisionList(cCollisionObject *lp
 
 cCollisionList *cCollisionHandlerType::GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType)
 {
-printf("Entering cCollisionHandlerType::GenerateCollisionList\n");
-cCollisionList *lpList=new cCollisionList;
-ResetCursors();
-if(lpType)
+	cCollisionList *lpList=new cCollisionList;
+	ResetCursors();
+	printf("lpType : %u, %u\n",lpType,WT_COLLISION_HANDLER_ARRAY_SIZE);
+if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE)
 {
+	if(lpType)
+	{
 	while(NextListItem(lpType))
 		{
 
@@ -44,27 +46,28 @@ if(lpType)
 			{
 				if(mpColCur->Data()->Collision(lpObj))
 				{
-					printf("Add THe Go D**m Collision()\n");
 					lpList->AddCollision(mpColCur->Data());
 
 				}
 			}
 		}
-}
-else
+	}
+	else
+	{
 	while(NextListItem())
 	{
 
-	if(mpColCur->Data()!=lpObj)
-	{
-		if(mpColCur->Data()->Collision(lpObj))
+		if(mpColCur->Data()!=lpObj)
 		{
-			printf("Add THe Go D**m Collision()\n");
-			lpList->AddCollision(mpColCur->Data());
-		}
+			if(mpColCur->Data()->Collision(lpObj))
+			{
+				lpList->AddCollision(mpColCur->Data());
+			}
 
+		}
+  	}
 	}
-  }
+}
   return lpList;
 }
 

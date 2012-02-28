@@ -1,80 +1,111 @@
 #include "../../WTBamboo.h"
 
-#if WT_FULL_VERSION_BAMBOO
-
-
 void cStarMap::RenderPainter()
 {
-
+	StarMapMatrices();
 	SetShaderVariables();
 	 uint32 liCount;
 
+	 glPointSize(1.0f);
 	 glBegin(GL_POINTS);
 	 for(liCount=0;liCount<miParticles;++liCount)
 	 {
-			glColor4fv(mpParticles[liCount]->Color.Color());
-			glVertex3f(mpParticles[liCount]->Position[0]-_CAMERA->X(),mpParticles[liCount]->Position[1]-_CAMERA->Y(),mpParticles[liCount]->Position[2]-_CAMERA->Z());
-			//glVertex3f(mpParticles[liCount]->Position[0],mpParticles[liCount]->Position[1],mpParticles[liCount]->Position[2]);
+			glColor4fv(mpParticles[liCount].Color);
+			glVertex3f(mpParticles[liCount].Position[0],mpParticles[liCount].Position[1],mpParticles[liCount].Position[2]);
 	 }
 	 glEnd();
 
 }
 
-cStarMap::cStarMap(uint32 liParticles) : cParticleGroup(liParticles)
+
+void cStarMap::Buffer()
 {
-	RespawnAll();
+	glGenBuffers(1,&mBuffer1);
+	glGenBuffers(1,&mBuffer2);
+
+
 };
 
-cStarMap::cStarMap(uint32 liParticles,cCamera *lpCamera) : cParticleGroup(liParticles,lpCamera)
+cStarMap::cStarMap(uint32 liParticles)
 {
-	RespawnAll();
+	mpParticles=0;
+	Initialise(liParticles);
+};
+
+cStarMap::cStarMap(uint32 liParticles,cCamera *lpCamera) : cRenderObject(lpCamera)
+{
+	mpParticles=0;
+	Initialise(liParticles);
 }
 
-cStarMap::cStarMap(uint32 liParticles,vRenderNode* lpNode) : cParticleGroup(liParticles,lpNode)
+cStarMap::cStarMap(uint32 liParticles,vRenderNode* lpNode) : cRenderObject(lpNode)
 {
-	RespawnAll();
+	mpParticles=0;
+	Initialise(liParticles);
 };
 
-void cStarMap::RespawnAll()
+cStarMap::~cStarMap()
 {
-	uint32 liCount;
-	for(liCount=0;liCount<miSpaces;++liCount)
-	{
-		float lfValue[4];
-		if(!mpParticles[liCount]) mpParticles[liCount]=new cParticleForGroup;
+ delete []mpParticles;
+ mpParticles=0;
+ miParticles=0;
+}
 
+void cStarMap::StarMapMatrices()
+{
+ mmTotalCache[12]=0.0f;
+ mmTotalCache[13]=0.0f;
+ mmTotalCache[14]=0.0f;
+
+ mmCache[12]=-_CAMERA->X();
+ mmCache[13]=-_CAMERA->Y();
+ mmCache[14]=-_CAMERA->Z();
+
+}
+
+void cStarMap::Initialise(uint32 liParticles)
+{
+
+	miParticles=liParticles;
+	delete []mpParticles;
+	mpParticles=new cStar[miParticles];
+	uint32 liCount;
+	for(liCount=0;liCount<miParticles;++liCount)
+	{
 		float lfAngle[4];
 		lfAngle[0]=RANDOM_NUMBER*2*3.1416;
 		lfAngle[1]=RANDOM_NUMBER*2*3.1416;
 		lfAngle[2]=sin(lfAngle[0]);
 		lfAngle[3]=cos(lfAngle[1]);
 
+		float lfValue[4];
 		lfValue[0]=sin(lfAngle[0])*100.0f+sin(lfAngle[1])*100.0f;
 		lfValue[1]=ZEROED_RANDOM_NUMBER*2*cos(lfAngle[1])*100.0f;
 		lfValue[2]=cos(lfAngle[0])*100.0f+sin(lfAngle[1])*100.0f;
 
-		mpParticles[liCount]->SetPosition(lfValue);
-		mpParticles[liCount]->SetFade(0.0f);
-		memset(lfValue,0,sizeof(float)*4);
-		mpParticles[liCount]->SetSpeed(lfValue);
-		mpParticles[liCount]->SetSize(RANDOM_NUMBER*20.0f);
+		mpParticles[liCount].SetPosition(lfValue);
+		mpParticles[liCount].SetSize(RANDOM_NUMBER*10.0f);
 		lfValue[0]=0.85+RANDOM_NUMBER*0.15;
 		lfValue[1]=0.85+RANDOM_NUMBER*0.15;
 		lfValue[2]=0.85+RANDOM_NUMBER*0.15;
 		lfValue[3]=0.3+RANDOM_NUMBER*0.5;
-		mpParticles[liCount]->SetColor(lfValue);
+		mpParticles[liCount].SetColor(lfValue);
 	}
-	miParticles=miSpaces;
-};
+}
+
+	void cStar::SetSize(float lpSize)
+	{
+		Size=lpSize;
+	};
+
+	void cStar::SetPosition(float *lpPos)
+	{
+		memcpy(Position,lpPos,sizeof(float)*3);
+	};
+	void cStar::SetColor(float *lpRGB)
+	{
+		memcpy(Color,lpRGB,sizeof(float)*4);
+	};
 
 
-void cStarMap::Refresh()
-{
 
-};
-
-
-
-
-
-#endif

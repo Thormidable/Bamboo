@@ -60,11 +60,10 @@ void cText::RenderPainter()
 		 liRange=IMF_FONT_SCALE*(cFont::Character(mpString[liCount])); //(or /64)
           glBegin(GL_QUADS);
           glNormal3f(0.0f,0.0f,1.0f);
-          glTexCoord2f(1,liRange+IMF_FONT_SCALE);   glVertex3f(-mfWidth*(liCount+0.5f),lfHeight,3.1f);
-          glTexCoord2f(1,liRange);            glVertex3f(-mfWidth*(liCount+0.5f),-lfHeight,3.1f);
-          glTexCoord2f(0,liRange);            glVertex3f(-mfWidth*(liCount-0.5f),-lfHeight,3.1f);
-          glTexCoord2f(0,liRange+IMF_FONT_SCALE);   glVertex3f(-mfWidth*(liCount-0.5f),lfHeight,3.1f);
-
+          glTexCoord2f(0,liRange+IMF_FONT_SCALE);   glVertex3f(-mfWidth*(liCount-0.5f),lfHeight,mfPriority);
+          glTexCoord2f(0,liRange);            glVertex3f(-mfWidth*(liCount-0.5f),-lfHeight,mfPriority);
+          glTexCoord2f(1,liRange);            glVertex3f(-mfWidth*(liCount+0.5f),-lfHeight,mfPriority);
+          glTexCoord2f(1,liRange+IMF_FONT_SCALE);   glVertex3f(-mfWidth*(liCount+0.5f),lfHeight,mfPriority);
           glEnd();
 
     }

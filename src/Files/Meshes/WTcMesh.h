@@ -69,9 +69,11 @@ float miModelCentre[3];
 //This is the minimum radius required to forma sphere containing this object.
 float mfSize;
 
+public:
+
 GLuint mBuffer1;
 GLuint mBuffer2;
-public:
+
 	/// This will create an empty mesh. No verteces, no faces, nothing.
 	cMesh();
 	/// This will load the data in lpMesh to be used by this object.

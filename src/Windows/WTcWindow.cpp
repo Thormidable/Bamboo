@@ -22,8 +22,13 @@ void cWindow::InitialiseOpenGL()
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_BLEND);
+	glEnable(GL_POINT_SPRITE);
+	glEnable(GL_POINT_SMOOTH);
 	//glEnable(GL_MODULATE);
+	glEnable(GL_VERTEX_PROGRAM_POINT_SIZE);
     glBlendFunc (GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+
+    glFrontFace(GL_CW);
 
 	glShadeModel(GL_SMOOTH);
 
@@ -42,8 +47,6 @@ void cWindow::FindRenderArea()
     miRenderWidth=Result.right;
     miRenderHeight=Result.bottom;
 
-//    miBorderThickness=GetSystemMetrics(SM_CXSIZEFRAME);
-//    miTitleBarHeight=gpWindow->Height()-miRenderHeight-miBorderThickness;
 }
 
 void cWindow::HandleChanges()
@@ -128,21 +131,13 @@ void cWindow::StartWindow()
 		WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE | WS_SIZEBOX,
 		//WS_OVERLAPPED | WS_CAPTION | WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX,
 		//WS_OVERLAPPEDWINDOW| WS_VISIBLE,
-		0, 0, 800, 600,
+		10, 10, 800, 600,
 		NULL, NULL, wcex.hInstance, NULL);
 
-
-
-
-		miX=miY=0;
-		miWidth=800;
-		miHeight=600;
-		miInvWidth=1.0f/miWidth;
-		miInvHeight=1.0f/miHeight;
 		Hidden=false;
 		//Changed=false;
 		Resized=false;
-		Moved=false;
+		//Moved=false;
 
 }
 
@@ -235,48 +230,58 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
          return 0;
 
     case WM_MOVE:
-         gpWindow->miX=(uint16)LOWORD(lParam);
-         gpWindow->miY=(uint16)HIWORD(lParam);
-         gpWindow->Moved=true;
+         gpWindow->miX=(int16)LOWORD(lParam);
+         gpWindow->miY=(int16)HIWORD(lParam);
+         //gpWindow->Moved=true;
          return 0;
 
 
     case WM_MOUSEMOVE:
          if (!_MOUSE->locked)
          {
-            _MOUSE->cx=(uint16)LOWORD(lParam);
-            _MOUSE->cy=(uint16)HIWORD(lParam);
+            _MOUSE->cx=(int16)LOWORD(lParam);
+            _MOUSE->cy=(int16)HIWORD(lParam);
          }
          else
          {
-            _MOUSE->cx=(uint16)LOWORD(lParam);
-            _MOUSE->cy=(uint16)HIWORD(lParam);
+            _MOUSE->x=(int16)LOWORD(lParam);
+            _MOUSE->y=(int16)HIWORD(lParam);
          }
          return 0;
 
     case WM_LBUTTONDOWN:
          _MOUSE->left=true;
+  //       _MOUSE->x = (int16)LOWORD(lParam);
+   //      _MOUSE->y = (int16)HIWORD(lParam);
          return 0;
 
     case WM_LBUTTONUP:
          _MOUSE->left=false;
+ //        _MOUSE->x = (int16)LOWORD(lParam);
+ //        _MOUSE->y = (int16)HIWORD(lParam);
          return 0;
 
     case WM_RBUTTONDOWN:
          _MOUSE->right=true;
+ //        _MOUSE->x = (int16)LOWORD(lParam);
+ //        _MOUSE->y = (int16)HIWORD(lParam);
          return 0;
 
     case WM_RBUTTONUP:
          _MOUSE->right=false;
+ //        _MOUSE->x = (int16)LOWORD(lParam);
+ //        _MOUSE->y = (int16)HIWORD(lParam);
          return 0;
 
     case WM_KEYDOWN:
         _KEYBOARD->SetKeyState(true,wParam);
        return 0;
 
+
     case WM_KEYUP:
          _KEYBOARD->SetKeyState(false,wParam);
          return 0;
+
 
     default:
         return DefWindowProc (hWnd, message, wParam, lParam);
@@ -301,7 +306,7 @@ miHeight=600;
 miInvWidth=1.0f/miWidth;
 miInvHeight=1.0f/miHeight;
 Resized=false;
-Moved=false;
+//Moved=false;
 Hidden=true;
 Repaint=false;
 mfRatio=((float)miHeight)/miWidth;;
@@ -406,8 +411,17 @@ void cWindow::HandleMessages()
 		}
 		if(Event.type == MotionNotify)
 		{
-				_MOUSE->cx=Event.xmotion.x;
-				_MOUSE->cy=Event.xmotion.y;
+		 if (!_MOUSE->locked)
+         {
+			_MOUSE->cx=Event.xmotion.x;
+			_MOUSE->cy=Event.xmotion.y;
+         }
+         else
+         {
+			_MOUSE->x=Event.xmotion.x;
+			_MOUSE->y=Event.xmotion.y;
+         }
+
 			break;
 		}
 		if(Event.type == ConfigureNotify)
@@ -418,7 +432,7 @@ void cWindow::HandleMessages()
 			gpWindow->miHeight=Event.xconfigure.height;
 			gpWindow->miInvWidth=1.0f/miWidth;
             gpWindow->miInvHeight=1.0f/miHeight;
-			gpWindow->Moved=true;
+			//gpWindow->Moved=true;
 			gpWindow->Resized=true;
 			gpWindow->mfRatio=((float)gpWindow->miHeight)/gpWindow->miWidth;
 			cCameraHandler::Instance()->UpdateWindowSize();
@@ -435,12 +449,10 @@ void cWindow::HandleMessages()
 
 void cWindow::HandleChanges()
 {
- if(Resized)
-{
-	//cCamera::Instance()->Frustum();
-	//_CAMERA->UpdateProjectionMatrix();
+ //if(Resized)
+//{
 
-}
+//}
 }
 
 void cWindow::MovePointer(uint32 liX,uint32 liY)

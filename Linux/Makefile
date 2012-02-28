@@ -1860,6 +1860,30 @@ Maths/WTcMatrixStack.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.s
 .PHONY : Maths/WTcMatrixStack.cpp.s
 
+Maths/WTcMomentum.o: Maths/WTcMomentum.cpp.o
+.PHONY : Maths/WTcMomentum.o
+
+# target to build an object file
+Maths/WTcMomentum.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o
+.PHONY : Maths/WTcMomentum.cpp.o
+
+Maths/WTcMomentum.i: Maths/WTcMomentum.cpp.i
+.PHONY : Maths/WTcMomentum.i
+
+# target to preprocess a source file
+Maths/WTcMomentum.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.i
+.PHONY : Maths/WTcMomentum.cpp.i
+
+Maths/WTcMomentum.s: Maths/WTcMomentum.cpp.s
+.PHONY : Maths/WTcMomentum.s
+
+# target to generate assembly for a file
+Maths/WTcMomentum.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.s
+.PHONY : Maths/WTcMomentum.cpp.s
+
 Maths/WTcPerspectiveMatrix.o: Maths/WTcPerspectiveMatrix.cpp.o
 .PHONY : Maths/WTcPerspectiveMatrix.o
 
@@ -2352,6 +2376,9 @@ help:
 	@echo "... Maths/WTcMatrixStack.o"
 	@echo "... Maths/WTcMatrixStack.i"
 	@echo "... Maths/WTcMatrixStack.s"
+	@echo "... Maths/WTcMomentum.o"
+	@echo "... Maths/WTcMomentum.i"
+	@echo "... Maths/WTcMomentum.s"
 	@echo "... Maths/WTcPerspectiveMatrix.o"
 	@echo "... Maths/WTcPerspectiveMatrix.i"
 	@echo "... Maths/WTcPerspectiveMatrix.s"

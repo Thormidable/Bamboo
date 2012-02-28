@@ -3,6 +3,7 @@
 
 class cRGB;
 class cRGBA;
+/*
 ///This is a 1 Dimensional float vector object
 class c1DVf
 {
@@ -29,6 +30,11 @@ public:
 
 	float Magnatude();
 
+	c1DVf(float *lfVect);
+	c1DVf(float lfVect=0.0f);
+	c1DVf(c1DVf &lfVect);
+	c1DVf(c1DVf *lfVect);
+
 
 };
 
@@ -53,6 +59,11 @@ public:
        void operator=(c2DVf *lpValue);
 	///Allows the user to access the components as an array of values.
        float &operator[](uint32 liPos){return v[liPos];};
+
+    c2DVf(float *lfVect);
+	c2DVf(float lfX=0.0f,float lfY=0.0f);
+	c2DVf(c2DVf &lfVect);
+	c2DVf(c2DVf *lfVect);
 };
 
 /// This is a 3 dimensional float vector object
@@ -85,20 +96,42 @@ public:
 		///Constructor to initialise the object from an array of three floats.
         c3DVf(float *lf0);
 
-       c3DVf *operator=(c3DVf *lpValue);
-       c3DVf operator=(c3DVf lpValue);
+       c3DVf operator=(c3DVf *lpValue);
+       c3DVf operator=(cRGB *lpValue);
+       c3DVf operator=(cRGB &lpValue);
        float *operator=(float *lpValue);
-       c3DVf operator+=(c3DVf lpValue);
-       c3DVf *operator+=(c3DVf *lpValue);
-       c3DVf *operator=(cRGB *lpValue);
-       c3DVf &operator=(cRGB &lpValue);
-	   ///Will Findthe Dot Product of this vector and the vector lpValue.
-       float Dot(c3DVf lpValue);
 
-	   ///Will Find the cross Product of this vector and the vector lpValue.
-       c3DVf operator*(c3DVf lvOther);
+       c3DVf operator+=(c3DVf &lpValue);
+       c3DVf operator+=(c3DVf *lpValue);
+       float *operator+=(float *lpValue);
+
+       c3DVf operator-=(c3DVf &lpValue);
+       c3DVf operator-=(c3DVf *lpValue);
+       float *operator-=(float *lpValue);
+
+       c3DVf operator-(c3DVf &lpValue);
+       c3DVf operator-(c3DVf *lpValue);
+       float *operator-(float *lpValue);
+
+       c3DVf operator+(c3DVf &lpValue);
+       c3DVf operator+(c3DVf *lpValue);
+       float *operator+(float *lpValue);
+
+       ///Will Find the cross Product of this vector and the vector lpValue.
+       c3DVf operator*(c3DVf &lpValue);
+       float *operator*(float *lpValue);
+       float *operator*(float *lpValue);
+
+	   ///Will Findthe Dot Product of this vector and the vector lpValue.
+       float Dot(c3DVf &lpValue);
+       float Dot(float *lpValue);
+       float Dot(c3DVf *lpValue);
+
+
 	   ///Allows the User to access the components as if an array of values.
        float &operator[](uint32 liPos){return v[liPos];};
+        c3DVf(const c3DVf &lfVect);
+        c3DVf(c3DVf *lfVect);
 };
 /// This is a 4 dimensional float vector object
 class c4DVf
@@ -116,7 +149,7 @@ public:
 	///Return this Vectors W Value
 	float W();
 
-	//Set this Vectors X Value
+	//Set thcf2DVis Vectors X Value
 	void X(float lfX);
 	//Set this Vectors Y Value
 	void Y(float lfY);
@@ -143,6 +176,8 @@ public:
 ///Allows the User to access the components as if an array of values.
        float &operator[](uint32 liPos);
 
+        c4DVf(c4DVf &lfVect);
+        c4DVf(c4DVf *lfVect);
 
 };
 
@@ -163,6 +198,11 @@ public:
        c2DVi *operator=(c2DVi *lpValue);
 	   ///Allows the User to access the components as if an array of values.
        int &operator[](uint32 liPos){return v[liPos];};
+
+        c2DVi(int *lfVect);
+        c2DVi(int lfX=0,int lfY=0);
+        c2DVi(c2DVi &lfVect);
+        c2DVi(c2DVi *lfVect);
 };
 
 /// This is a 3 Dimensional integer vector.
@@ -180,18 +220,45 @@ public:
 	/// This will return the absolute size of the vector.
        int Magnitude();
        c3DVi operator*(c3DVi lvOther);
-       c3DVi *operator=(c3DVi *lpValue);
+       c3DVi operator=(c3DVi *lpValue);
        c3DVi operator=(c3DVi lpValue);
 	   	   ///Will Findthe Dot Product of this vector and the vector lpValue.
        float Dot(c3DVi lpValue);
 	   ///Allows the User to access the components as if an array of values.
        int &operator[](uint32 liPos){return v[liPos];};
-};
 
+       c3DVi(int *lfVect);
+       c3DVi(int lfX=0,int lfY=0,int lfZ=0);
+       c3DVi(c3DVi &lfVect);
+       c3DVi(c3DVi *lfVect);
+};
+*/
 /// This function takes an angle in Degrees and will return it in radians.
 float DegreestoRadians(float lfAngle);
 /// This function takes an angle in radians and will return it in Degrees.
 float RadianstoDegrees(float lfAngle);
+
+template<class tType> tType ClampValue(tType lfValue,tType lfClamp)
+{
+    if(lfValue>lfClamp) return lfClamp;
+    if(lfValue<-lfClamp) return -lfClamp;
+    return lfValue;
+};
+
+template<class tType> tType ClampValueRange(tType lfValue,tType lfLow, tType lfHigh)
+{
+    if(lfValue>lfHigh) return lfHigh;
+    if(lfValue<lfLow) return lfLow;
+    return lfValue;
+};
+
+template<class tType> tType ClampValueOut(tType lfValue,tType lfClamp)
+{
+    if(lfValue<lfClamp) return lfClamp;
+    if(lfValue>-lfClamp) return -lfClamp;
+    return lfValue;
+};
+
 
 
 #endif

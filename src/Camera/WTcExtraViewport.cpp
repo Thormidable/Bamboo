@@ -1,6 +1,6 @@
 #include "../WTBamboo.h"
 
-
+#if WT_FULL_VERSION_BAMBOO
 cViewport::cViewport()
 {
  mpHandler=_CAMERA->mpViewportHandler;
@@ -96,3 +96,4 @@ void cViewportHandler::UpdateWindowSize()
 
 };
 
+#endif

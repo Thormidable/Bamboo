@@ -1,0 +1,66 @@
+#include "../WTDivWin.h"
+
+#if WT_OS_TYPE==OS_WIN32
+	uint32 cMainThread::Start(HINSTANCE hInstance)
+	{
+		cS *mpSettings =new cS;
+		cSettings *mpCast;
+		mpCast=dynamic_cast<cSettings*>(mpSettings);
+		mpCast->cSettings::Settings();
+		mpSettings->Settings();
+		if(mpCast) cSettings::SetupVariables();
+		gpWindow=new cWindow(hInstance);
+
+
+
+		cMainThread::GetGLVersion();
+
+		gpTimer=new cSync();
+
+		cEventHandler::Instance();
+
+        glewInit();
+
+		new cX;
+
+		printf("Whatever it was you were talking about...\n");
+		cCollisionHandler::Instance();
+		trace("Start Updating");
+		cKernel::Instance()->Update();
+
+		delete mpSettings;
+		delete cKernel::Instance();
+		return gpWindow->msg.wParam;
+	};
+
+	void cMainThread::GetGLVersion()
+	{
+  //  int major,minor;
+	// for all versions
+      char* verGL = (char*)glGetString(GL_VERSION); // ver = "3.2.0"
+
+/*      major = verGL[0] - '0';
+      if( major >= 3)
+      {
+       // for GL 3.x
+       glGetIntegerv(GL_MAJOR_VERSION, &major); // major = 3
+       glGetIntegerv(GL_MINOR_VERSION, &minor); // minor = 2
+      }
+      else
+      {
+            minor = verGL[2] - '0';
+      }
+*/
+      // GLSL
+      char *verSHDR = (char*)glGetString(GL_SHADING_LANGUAGE_VERSION);
+
+    trace("***************************************************************************");
+	trace("Renderer: " << glGetString(GL_RENDERER));
+	trace("GL Version : " << verGL);
+	trace("Shading Language : " << verSHDR);
+	trace("***************************************************************************");
+
+
+	};
+
+#endif

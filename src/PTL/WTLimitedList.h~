@@ -139,21 +139,21 @@ public:
     ///Constructor to create a new array of size liSpaces
 	cLimitedPointerList(uint32 liSpaces)
 	{
-		miSpaces=liSpaces;
+		mpList=0;
 		miItems=0;
-		mpList=new cX*[miSpaces];
+		Init(liSpaces);
 	};
 	///Constructor to create a 0 length array
-	cLimitedPointerList(){mpList=0;miItems=0;miSpaces=0;};
+	cLimitedPointerList(){mpList=0;Init(5);};
 
     ///This will initialise the array to size liSpaces
 	void Init(uint32 liSpaces)
 	{
-        if(!miSpaces) miSpaces=5;
 		DeleteAll();
 		miSpaces=liSpaces;
 		mpList=new cX*[miSpaces];
 
+		//for(uint32 liCount=0;liCount<miSpaces;++liCount) mpList[liCount]=0;
 		memset(mpList,0,sizeof(cX*)*miSpaces);
 
 		miItems=0;
@@ -170,6 +170,7 @@ public:
             cX **lpTemp;
             lpTemp=new cX*[liSize];
 
+			for(uint32 liCount=miItems;liCount<liSize;++liCount) lpTemp[liCount]=0;
             while(miItems>liSize)
             {
                 delete mpList[miItems];
@@ -192,7 +193,7 @@ public:
 		if(mpList)
 		{
 			uint32 liCount;
-			for(liCount=0;liCount<miItems;++liCount); delete mpList[liCount];
+			for(liCount=0;liCount<miItems;++liCount) delete mpList[liCount];
         	delete []mpList;
 			mpList=0;
 		}

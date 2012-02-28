@@ -1,6 +1,7 @@
 #ifndef __WTCEXTRAVIEWPORT_H__
 #define __WTCEXTRAVIEWPORT_H__
 
+#if WT_FULL_VERSION_BAMBOO
 class cViewportHandler;
 
 /**
@@ -15,6 +16,8 @@ class cViewportHandler;
 class cViewport: public cPerspectiveControl, public cSignal
 {
 	cViewportHandler *mpHandler;
+
+
 public:
     ///Constructor. This will default to the camera _CAMERA
 	cViewport();
@@ -49,6 +52,6 @@ public:
 	friend class cCamera;
 
 };
-
+#endif
 
 #endif

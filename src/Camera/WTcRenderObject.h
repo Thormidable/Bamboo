@@ -23,8 +23,7 @@ class cRenderNode;
 class cRenderObject : public vRenderObject, public cTextureStack
 {
 
- //This pointer points to the cRenderNode which owns this cRenderObject.
- vRenderNode *mpRenderer;
+
  //This pointer points to the cLinkedNode which owns this cRenderObject. (cLinkedNode fors a linked list owned by mpRenderer.
  cRenderOwner mcOwnerNode;
 

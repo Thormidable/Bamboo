@@ -40,7 +40,28 @@ trace("Loaded and Processed ShaderProgram : " << mpFileName);
     SetVariablePointer("mmProjection",_PROJECTION_MATRIX);
     SetVariablePointer("mmCamera",_CAMERA_MATRIX);
    	SetVariablePointer("mmCombined",_COMBINED_MATRIX);
+/*
+    miVertexID=glGetAttribLocation(miProgramID, "VertexPosition");
+   	miNormalID=glGetAttribLocation(miProgramID, "VertexNormal");
+   	miUVID=glGetAttribLocation(miProgramID, "VertexUV");
+   	miFragID=glGetFragDataLocation(miProgramID,"FragColor");*/
+
 }
+
+GLuint cShaderProgram::VertexPositionID()
+{
+ return miVertexID;
+};
+
+GLuint cShaderProgram::VertexNormalID()
+{
+ return miNormalID;
+};
+
+GLuint cShaderProgram::VertexUVID()
+{
+  return miUVID;
+};
 
 
 cVariableStore *cShaderProgram::StoredVariables()
@@ -56,6 +77,8 @@ printf("Shader Program ID: %u\n",miProgramID);
 mpShader=0;
 mpVariableSet=0;
 mpStoredVariables=0;
+    miVertexID=0;
+    miNormalID=0;
 }
 
 cShaderProgram::~cShaderProgram()

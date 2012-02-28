@@ -25,6 +25,8 @@ protected:
 
  void SetClearColor();
 
+ bool mbClear;
+
 public:
     //Constructor to create a new cViewportControl
 	cViewportControl();
@@ -98,6 +100,12 @@ float ViewportY();
 	/// See cCamera::ClearColor(float,float,float,float);
 	cRGBA ClearColor();
 
+	///Will set whether the camera will clear its viewport area or not.
+	void Clear(bool lbClear);
+	///Will return whether the camera clears its viewport area or not.
+	bool Clear();
+
+
 	void UpdateViewport();
 	virtual void UpdateWindowSize()=0;
 };
@@ -110,6 +118,7 @@ float ViewportY();
 class cPerspectiveControl : public cCameraMatrix4, public cViewportControl
 {
 protected:
+public:
 	/// This object builds and controls the Perspective Matrix for the system.
 cPerspectiveMatrix mmPerspective;
 ///This controls the projection matrix for 2D objects. Best not to play with.
@@ -134,6 +143,16 @@ public:
 	virtual void Near(float lfN);
 	/// This will set the Furthest distance cCamera will render polygons.
 	virtual void Far(float lfF);
+
+	/// This will return the closest distance cCamera will render polygons in Orthographic space.
+	virtual float Near2D();
+	/// This will return the Furthest distance cCamera will render polygons in Orthographic space.
+	virtual float Far2D();
+
+	/// This will set the closest distance cCamera will render polygons in Orthographic space.
+	virtual void Near2D(float lfN);
+	/// This will set the Furthest distance cCamera will render polygons in Orthographic space.
+	virtual void Far2D(float lfF);
 
 	///This will set the width of the closest viewing space.
 	virtual void Width(float lfZoom);

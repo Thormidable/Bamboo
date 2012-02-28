@@ -1,0 +1,120 @@
+\hypertarget{classc_momentum}{
+\section{cMomentum Class Reference}
+\label{classc_momentum}\index{cMomentum@{cMomentum}}
+}
+
+
+This Class will store an objects momentum (assumed mass of 1.0) and automatically update its matrix when the function \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update()} is called. This gives the user the options of global and local thrusts and will update the objects linear and angular momentum by the thrusts applied to it. An instance of \hyperlink{classc_momentum}{cMomentum} must be linked to a matrix. It will only update whne the function \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update()} is called.  
+
+
+
+
+Collaboration diagram for cMomentum:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classc_momentum__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_momentum_a816c2fe90c305565b30f890a24b034ff}{
+\hyperlink{classc_momentum_a816c2fe90c305565b30f890a24b034ff}{cMomentum} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lpMatrix)}
+\label{classc_momentum_a816c2fe90c305565b30f890a24b034ff}
+
+\begin{DoxyCompactList}\small\item\em Constructor passing this object a \hyperlink{classc_matrix4}{cMatrix4}. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a4c8e14d57f23820fd66f4f90b0b0cf0c}{
+void \hyperlink{classc_momentum_a4c8e14d57f23820fd66f4f90b0b0cf0c}{ThrustX} (float lfThrust)}
+\label{classc_momentum_a4c8e14d57f23820fd66f4f90b0b0cf0c}
+
+\begin{DoxyCompactList}\small\item\em Applies a linear thrust equal to lfThrust along the objects Local X Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a75f2ef092c9833a7ddef951e0a851519}{
+void \hyperlink{classc_momentum_a75f2ef092c9833a7ddef951e0a851519}{ThrustY} (float lfThrust)}
+\label{classc_momentum_a75f2ef092c9833a7ddef951e0a851519}
+
+\begin{DoxyCompactList}\small\item\em Applies a linear thrust equal to lfThrust along the objects Local Y Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a391c5ecfd1f3bc59b77dc1f3846a3abc}{
+void \hyperlink{classc_momentum_a391c5ecfd1f3bc59b77dc1f3846a3abc}{ThrustZ} (float lfThrust)}
+\label{classc_momentum_a391c5ecfd1f3bc59b77dc1f3846a3abc}
+
+\begin{DoxyCompactList}\small\item\em Applies a linear thrust equal to lfThrust along the objects Local Z Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_accf174f3d17297f2b13b32c69465459f}{
+void \hyperlink{classc_momentum_accf174f3d17297f2b13b32c69465459f}{GThrustX} (float lfThrust)}
+\label{classc_momentum_accf174f3d17297f2b13b32c69465459f}
+
+\begin{DoxyCompactList}\small\item\em Applies a linear thrust equal to lfThrust along the objects Global X Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a0c0c8b1a60ecd2f25f75cad13e09d57f}{
+void \hyperlink{classc_momentum_a0c0c8b1a60ecd2f25f75cad13e09d57f}{GThrustY} (float lfThrust)}
+\label{classc_momentum_a0c0c8b1a60ecd2f25f75cad13e09d57f}
+
+\begin{DoxyCompactList}\small\item\em Applies a linear thrust equal to lfThrust along the objects Global Y Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a3d140c25bb390b1b37a93bc917fb27c6}{
+void \hyperlink{classc_momentum_a3d140c25bb390b1b37a93bc917fb27c6}{GThrustZ} (float lfThrust)}
+\label{classc_momentum_a3d140c25bb390b1b37a93bc917fb27c6}
+
+\begin{DoxyCompactList}\small\item\em Applies a linear thrust equal to lfThrust along the objects Global Z Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_afb154e00f9bc7a8c38a2c52dfb899a21}{
+void \hyperlink{classc_momentum_afb154e00f9bc7a8c38a2c52dfb899a21}{ThrustAngleX} (float lfThrust)}
+\label{classc_momentum_afb154e00f9bc7a8c38a2c52dfb899a21}
+
+\begin{DoxyCompactList}\small\item\em Applies an angular thrust equal to lfThrust around the objects Local X Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_aa1356ba99d9cd0150b2ad52858a1f827}{
+void \hyperlink{classc_momentum_aa1356ba99d9cd0150b2ad52858a1f827}{ThrustAngleY} (float lfThrust)}
+\label{classc_momentum_aa1356ba99d9cd0150b2ad52858a1f827}
+
+\begin{DoxyCompactList}\small\item\em Applies an angular thrust equal to lfThrust around the objects Local Y Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_abaf5e48af42bb5a865145297af403eaa}{
+void \hyperlink{classc_momentum_abaf5e48af42bb5a865145297af403eaa}{ThrustAngleZ} (float lfThrust)}
+\label{classc_momentum_abaf5e48af42bb5a865145297af403eaa}
+
+\begin{DoxyCompactList}\small\item\em Applies an angular thrust equal to lfThrust around the objects Local Z Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a0ef0aa6ac876af22bee53e282afefb08}{
+void \hyperlink{classc_momentum_a0ef0aa6ac876af22bee53e282afefb08}{GThrustAngleX} (float lfThrust)}
+\label{classc_momentum_a0ef0aa6ac876af22bee53e282afefb08}
+
+\begin{DoxyCompactList}\small\item\em Applies an angular thrust equal to lfThrust around the objects Global X Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a827f3bb427dd88bac9f6c80979d07b45}{
+void \hyperlink{classc_momentum_a827f3bb427dd88bac9f6c80979d07b45}{GThrustAngleY} (float lfThrust)}
+\label{classc_momentum_a827f3bb427dd88bac9f6c80979d07b45}
+
+\begin{DoxyCompactList}\small\item\em Applies an angular thrust equal to lfThrust around the objects Global Y Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_aac5e91e4596061bdd1a21acf7feee224}{
+void \hyperlink{classc_momentum_aac5e91e4596061bdd1a21acf7feee224}{GThrustAngleZ} (float lfThrust)}
+\label{classc_momentum_aac5e91e4596061bdd1a21acf7feee224}
+
+\begin{DoxyCompactList}\small\item\em Applies an angular thrust equal to lfThrust around the objects Global Z Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a7568fcd711837d2e0b1b90d19fa5069a}{
+void \hyperlink{classc_momentum_a7568fcd711837d2e0b1b90d19fa5069a}{DampenMomentum} (float lfValue)}
+\label{classc_momentum_a7568fcd711837d2e0b1b90d19fa5069a}
+
+\begin{DoxyCompactList}\small\item\em This will dampen the momentum by the factor lfValue. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_abf82f78ae14d7953be37fc13f066babc}{
+void \hyperlink{classc_momentum_abf82f78ae14d7953be37fc13f066babc}{DampenLinear} (float lfValue)}
+\label{classc_momentum_abf82f78ae14d7953be37fc13f066babc}
+
+\begin{DoxyCompactList}\small\item\em This will dampen the linear momentum by the factor lfValue. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a761435c725896ef0f60452a68fdddaf4}{
+void \hyperlink{classc_momentum_a761435c725896ef0f60452a68fdddaf4}{DampenAngular} (float lfValue)}
+\label{classc_momentum_a761435c725896ef0f60452a68fdddaf4}
+
+\begin{DoxyCompactList}\small\item\em This will dampen the angular momentum by the factor lfValue. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a9f6e219b6b7de80f9ed48f8424a54db5}{
+void \hyperlink{classc_momentum_a9f6e219b6b7de80f9ed48f8424a54db5}{Straighten} (float lfThrust)}
+\label{classc_momentum_a9f6e219b6b7de80f9ed48f8424a54db5}
+
+\begin{DoxyCompactList}\small\item\em This Will apply thrust to reduce non-\/forward motion. Not Yet Implemented. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a1f20db0caa8b8e903193287988b3f27e}{
+void \hyperlink{classc_momentum_a1f20db0caa8b8e903193287988b3f27e}{Stabilise} (float lfThrust)}
+\label{classc_momentum_a1f20db0caa8b8e903193287988b3f27e}
+
+\begin{DoxyCompactList}\small\item\em This will apply thrust to reduce rotations. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{
+void \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update} ()}
+\label{classc_momentum_ae860280e817e7afef71222afd0b12ec8}
+
+\begin{DoxyCompactList}\small\item\em Will update the Matrix with the effects of the objects momentum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This Class will store an objects momentum (assumed mass of 1.0) and automatically update its matrix when the function \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update()} is called. This gives the user the options of global and local thrusts and will update the objects linear and angular momentum by the thrusts applied to it. An instance of \hyperlink{classc_momentum}{cMomentum} must be linked to a matrix. It will only update whne the function \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update()} is called. 

@@ -8,9 +8,9 @@
 \contentsline {section}{\numberline {2.3}Positioning, Rotating and Moving The Camera}{9}{section.2.3}
 \contentsline {section}{\numberline {2.4}List of Key Identifiers}{11}{section.2.4}
 \contentsline {section}{\numberline {2.5}Engine Settings}{14}{section.2.5}
-\contentsline {section}{\numberline {2.6}List of Objects using or not using the Create Macro.}{16}{section.2.6}
+\contentsline {section}{\numberline {2.6}List of Objects using or not using the Create Macro.}{17}{section.2.6}
 \contentsline {section}{\numberline {2.7}Optimisation Techniques}{18}{section.2.7}
-\contentsline {section}{\numberline {2.8}Common Mistakes}{18}{section.2.8}
+\contentsline {section}{\numberline {2.8}Common Mistakes}{19}{section.2.8}
 \contentsline {chapter}{\numberline {3}Basic Programming Concepts}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Glossary of Jargon}{21}{section.3.1}
 \contentsline {section}{\numberline {3.2}Overview C++}{23}{section.3.2}
@@ -230,127 +230,129 @@
 \contentsline {subsection}{\numberline {10.76.1}Detailed Description}{207}{subsection.10.76.1}
 \contentsline {section}{\numberline {10.77}cModel Class Reference}{207}{section.10.77}
 \contentsline {subsection}{\numberline {10.77.1}Detailed Description}{208}{subsection.10.77.1}
-\contentsline {section}{\numberline {10.78}cMouse Class Reference}{208}{section.10.78}
+\contentsline {section}{\numberline {10.78}cMomentum Class Reference}{208}{section.10.78}
 \contentsline {subsection}{\numberline {10.78.1}Detailed Description}{210}{subsection.10.78.1}
-\contentsline {section}{\numberline {10.79}cNodeList Class Reference}{210}{section.10.79}
-\contentsline {subsection}{\numberline {10.79.1}Detailed Description}{212}{subsection.10.79.1}
-\contentsline {subsection}{\numberline {10.79.2}Constructor \& Destructor Documentation}{213}{subsection.10.79.2}
-\contentsline {subsubsection}{\numberline {10.79.2.1}cNodeList}{213}{subsubsection.10.79.2.1}
-\contentsline {subsubsection}{\numberline {10.79.2.2}cNodeList}{213}{subsubsection.10.79.2.2}
-\contentsline {subsection}{\numberline {10.79.3}Member Function Documentation}{213}{subsection.10.79.3}
-\contentsline {subsubsection}{\numberline {10.79.3.1}SetLevel}{214}{subsubsection.10.79.3.1}
-\contentsline {section}{\numberline {10.80}cNodeListNode Class Reference}{214}{section.10.80}
-\contentsline {subsection}{\numberline {10.80.1}Detailed Description}{214}{subsection.10.80.1}
-\contentsline {section}{\numberline {10.81}cParentStack Class Reference}{214}{section.10.81}
+\contentsline {section}{\numberline {10.79}cMouse Class Reference}{210}{section.10.79}
+\contentsline {subsection}{\numberline {10.79.1}Detailed Description}{211}{subsection.10.79.1}
+\contentsline {section}{\numberline {10.80}cNodeList Class Reference}{211}{section.10.80}
+\contentsline {subsection}{\numberline {10.80.1}Detailed Description}{213}{subsection.10.80.1}
+\contentsline {subsection}{\numberline {10.80.2}Constructor \& Destructor Documentation}{214}{subsection.10.80.2}
+\contentsline {subsubsection}{\numberline {10.80.2.1}cNodeList}{214}{subsubsection.10.80.2.1}
+\contentsline {subsubsection}{\numberline {10.80.2.2}cNodeList}{214}{subsubsection.10.80.2.2}
+\contentsline {subsection}{\numberline {10.80.3}Member Function Documentation}{214}{subsection.10.80.3}
+\contentsline {subsubsection}{\numberline {10.80.3.1}SetLevel}{215}{subsubsection.10.80.3.1}
+\contentsline {section}{\numberline {10.81}cNodeListNode Class Reference}{215}{section.10.81}
 \contentsline {subsection}{\numberline {10.81.1}Detailed Description}{215}{subsection.10.81.1}
-\contentsline {section}{\numberline {10.82}cParticle Class Reference}{216}{section.10.82}
-\contentsline {subsection}{\numberline {10.82.1}Detailed Description}{217}{subsection.10.82.1}
-\contentsline {section}{\numberline {10.83}cParticleForGroup Class Reference}{217}{section.10.83}
-\contentsline {subsection}{\numberline {10.83.1}Detailed Description}{217}{subsection.10.83.1}
-\contentsline {section}{\numberline {10.84}cParticleHandler Class Reference}{218}{section.10.84}
+\contentsline {section}{\numberline {10.82}cParentStack Class Reference}{215}{section.10.82}
+\contentsline {subsection}{\numberline {10.82.1}Detailed Description}{216}{subsection.10.82.1}
+\contentsline {section}{\numberline {10.83}cParticle Class Reference}{217}{section.10.83}
+\contentsline {subsection}{\numberline {10.83.1}Detailed Description}{218}{subsection.10.83.1}
+\contentsline {section}{\numberline {10.84}cParticleForGroup Class Reference}{218}{section.10.84}
 \contentsline {subsection}{\numberline {10.84.1}Detailed Description}{218}{subsection.10.84.1}
-\contentsline {section}{\numberline {10.85}cPerspectiveControl Class Reference}{218}{section.10.85}
-\contentsline {subsection}{\numberline {10.85.1}Detailed Description}{220}{subsection.10.85.1}
-\contentsline {section}{\numberline {10.86}cPlane Class Reference}{220}{section.10.86}
+\contentsline {section}{\numberline {10.85}cParticleHandler Class Reference}{219}{section.10.85}
+\contentsline {subsection}{\numberline {10.85.1}Detailed Description}{219}{subsection.10.85.1}
+\contentsline {section}{\numberline {10.86}cPerspectiveControl Class Reference}{219}{section.10.86}
 \contentsline {subsection}{\numberline {10.86.1}Detailed Description}{221}{subsection.10.86.1}
-\contentsline {section}{\numberline {10.87}cPlaneList Class Reference}{221}{section.10.87}
+\contentsline {section}{\numberline {10.87}cPlane Class Reference}{221}{section.10.87}
 \contentsline {subsection}{\numberline {10.87.1}Detailed Description}{222}{subsection.10.87.1}
-\contentsline {section}{\numberline {10.88}cPoint Class Reference}{222}{section.10.88}
+\contentsline {section}{\numberline {10.88}cPlaneList Class Reference}{222}{section.10.88}
 \contentsline {subsection}{\numberline {10.88.1}Detailed Description}{223}{subsection.10.88.1}
-\contentsline {section}{\numberline {10.89}cPolygon Class Reference}{223}{section.10.89}
-\contentsline {subsection}{\numberline {10.89.1}Detailed Description}{225}{subsection.10.89.1}
-\contentsline {section}{\numberline {10.90}cPolygonList Class Reference}{225}{section.10.90}
-\contentsline {subsection}{\numberline {10.90.1}Detailed Description}{227}{subsection.10.90.1}
-\contentsline {section}{\numberline {10.91}cProcess Class Reference}{227}{section.10.91}
-\contentsline {subsection}{\numberline {10.91.1}Detailed Description}{229}{subsection.10.91.1}
-\contentsline {subsection}{\numberline {10.91.2}Constructor \& Destructor Documentation}{229}{subsection.10.91.2}
-\contentsline {subsubsection}{\numberline {10.91.2.1}cProcess}{229}{subsubsection.10.91.2.1}
-\contentsline {subsection}{\numberline {10.91.3}Member Function Documentation}{230}{subsection.10.91.3}
-\contentsline {subsubsection}{\numberline {10.91.3.1}Signal}{230}{subsubsection.10.91.3.1}
-\contentsline {subsubsection}{\numberline {10.91.3.2}UserSignal}{230}{subsubsection.10.91.3.2}
-\contentsline {section}{\numberline {10.92}cRayCollision Class Reference}{231}{section.10.92}
-\contentsline {subsection}{\numberline {10.92.1}Detailed Description}{231}{subsection.10.92.1}
-\contentsline {section}{\numberline {10.93}cReferenceList Class Reference}{232}{section.10.93}
+\contentsline {section}{\numberline {10.89}cPoint Class Reference}{223}{section.10.89}
+\contentsline {subsection}{\numberline {10.89.1}Detailed Description}{224}{subsection.10.89.1}
+\contentsline {section}{\numberline {10.90}cPolygon Class Reference}{224}{section.10.90}
+\contentsline {subsection}{\numberline {10.90.1}Detailed Description}{226}{subsection.10.90.1}
+\contentsline {section}{\numberline {10.91}cPolygonList Class Reference}{226}{section.10.91}
+\contentsline {subsection}{\numberline {10.91.1}Detailed Description}{228}{subsection.10.91.1}
+\contentsline {section}{\numberline {10.92}cProcess Class Reference}{228}{section.10.92}
+\contentsline {subsection}{\numberline {10.92.1}Detailed Description}{230}{subsection.10.92.1}
+\contentsline {subsection}{\numberline {10.92.2}Constructor \& Destructor Documentation}{230}{subsection.10.92.2}
+\contentsline {subsubsection}{\numberline {10.92.2.1}cProcess}{230}{subsubsection.10.92.2.1}
+\contentsline {subsection}{\numberline {10.92.3}Member Function Documentation}{231}{subsection.10.92.3}
+\contentsline {subsubsection}{\numberline {10.92.3.1}Signal}{231}{subsubsection.10.92.3.1}
+\contentsline {subsubsection}{\numberline {10.92.3.2}UserSignal}{231}{subsubsection.10.92.3.2}
+\contentsline {section}{\numberline {10.93}cRayCollision Class Reference}{232}{section.10.93}
 \contentsline {subsection}{\numberline {10.93.1}Detailed Description}{232}{subsection.10.93.1}
-\contentsline {section}{\numberline {10.94}cRenderNode Class Reference}{232}{section.10.94}
+\contentsline {section}{\numberline {10.94}cReferenceList Class Reference}{233}{section.10.94}
 \contentsline {subsection}{\numberline {10.94.1}Detailed Description}{233}{subsection.10.94.1}
-\contentsline {section}{\numberline {10.95}cRenderObject Class Reference}{234}{section.10.95}
-\contentsline {subsection}{\numberline {10.95.1}Detailed Description}{236}{subsection.10.95.1}
-\contentsline {subsection}{\numberline {10.95.2}Member Function Documentation}{237}{subsection.10.95.2}
-\contentsline {subsubsection}{\numberline {10.95.2.1}AddTexture}{237}{subsubsection.10.95.2.1}
-\contentsline {subsubsection}{\numberline {10.95.2.2}AddTexture}{237}{subsubsection.10.95.2.2}
-\contentsline {subsubsection}{\numberline {10.95.2.3}SetRenderNode}{237}{subsubsection.10.95.2.3}
-\contentsline {section}{\numberline {10.96}cRenderPointer Class Reference}{238}{section.10.96}
-\contentsline {subsection}{\numberline {10.96.1}Detailed Description}{238}{subsection.10.96.1}
-\contentsline {section}{\numberline {10.97}cRGB Class Reference}{238}{section.10.97}
+\contentsline {section}{\numberline {10.95}cRenderNode Class Reference}{233}{section.10.95}
+\contentsline {subsection}{\numberline {10.95.1}Detailed Description}{234}{subsection.10.95.1}
+\contentsline {section}{\numberline {10.96}cRenderObject Class Reference}{235}{section.10.96}
+\contentsline {subsection}{\numberline {10.96.1}Detailed Description}{237}{subsection.10.96.1}
+\contentsline {subsection}{\numberline {10.96.2}Member Function Documentation}{238}{subsection.10.96.2}
+\contentsline {subsubsection}{\numberline {10.96.2.1}AddTexture}{238}{subsubsection.10.96.2.1}
+\contentsline {subsubsection}{\numberline {10.96.2.2}AddTexture}{238}{subsubsection.10.96.2.2}
+\contentsline {subsubsection}{\numberline {10.96.2.3}SetRenderNode}{238}{subsubsection.10.96.2.3}
+\contentsline {section}{\numberline {10.97}cRenderPointer Class Reference}{239}{section.10.97}
 \contentsline {subsection}{\numberline {10.97.1}Detailed Description}{239}{subsection.10.97.1}
-\contentsline {section}{\numberline {10.98}cRGBA Class Reference}{239}{section.10.98}
+\contentsline {section}{\numberline {10.98}cRGB Class Reference}{239}{section.10.98}
 \contentsline {subsection}{\numberline {10.98.1}Detailed Description}{240}{subsection.10.98.1}
-\contentsline {section}{\numberline {10.99}cShaderProgram Class Reference}{240}{section.10.99}
-\contentsline {subsection}{\numberline {10.99.1}Detailed Description}{243}{subsection.10.99.1}
-\contentsline {section}{\numberline {10.100}cSignal Class Reference}{243}{section.10.100}
+\contentsline {section}{\numberline {10.99}cRGBA Class Reference}{240}{section.10.99}
+\contentsline {subsection}{\numberline {10.99.1}Detailed Description}{241}{subsection.10.99.1}
+\contentsline {section}{\numberline {10.100}cShaderProgram Class Reference}{241}{section.10.100}
 \contentsline {subsection}{\numberline {10.100.1}Detailed Description}{244}{subsection.10.100.1}
-\contentsline {section}{\numberline {10.101}cSphereCollision Class Reference}{244}{section.10.101}
+\contentsline {section}{\numberline {10.101}cSignal Class Reference}{244}{section.10.101}
 \contentsline {subsection}{\numberline {10.101.1}Detailed Description}{245}{subsection.10.101.1}
-\contentsline {section}{\numberline {10.102}cSync Class Reference}{245}{section.10.102}
+\contentsline {section}{\numberline {10.102}cSphereCollision Class Reference}{245}{section.10.102}
 \contentsline {subsection}{\numberline {10.102.1}Detailed Description}{246}{subsection.10.102.1}
-\contentsline {section}{\numberline {10.103}cText Class Reference}{246}{section.10.103}
+\contentsline {section}{\numberline {10.103}cSync Class Reference}{246}{section.10.103}
 \contentsline {subsection}{\numberline {10.103.1}Detailed Description}{247}{subsection.10.103.1}
-\contentsline {section}{\numberline {10.104}cTextButton Class Reference}{247}{section.10.104}
+\contentsline {section}{\numberline {10.104}cText Class Reference}{247}{section.10.104}
 \contentsline {subsection}{\numberline {10.104.1}Detailed Description}{248}{subsection.10.104.1}
-\contentsline {section}{\numberline {10.105}cUniformBooleanVector1 Class Reference}{248}{section.10.105}
+\contentsline {section}{\numberline {10.105}cTextButton Class Reference}{248}{section.10.105}
 \contentsline {subsection}{\numberline {10.105.1}Detailed Description}{249}{subsection.10.105.1}
-\contentsline {section}{\numberline {10.106}cUniformBooleanVector2 Class Reference}{249}{section.10.106}
+\contentsline {section}{\numberline {10.106}cUniformBooleanVector1 Class Reference}{249}{section.10.106}
 \contentsline {subsection}{\numberline {10.106.1}Detailed Description}{250}{subsection.10.106.1}
-\contentsline {section}{\numberline {10.107}cUniformBooleanVector3 Class Reference}{250}{section.10.107}
+\contentsline {section}{\numberline {10.107}cUniformBooleanVector2 Class Reference}{250}{section.10.107}
 \contentsline {subsection}{\numberline {10.107.1}Detailed Description}{251}{subsection.10.107.1}
-\contentsline {section}{\numberline {10.108}cUniformBooleanVector4 Class Reference}{251}{section.10.108}
+\contentsline {section}{\numberline {10.108}cUniformBooleanVector3 Class Reference}{251}{section.10.108}
 \contentsline {subsection}{\numberline {10.108.1}Detailed Description}{252}{subsection.10.108.1}
-\contentsline {section}{\numberline {10.109}cUniformIntVector1 Class Reference}{252}{section.10.109}
+\contentsline {section}{\numberline {10.109}cUniformBooleanVector4 Class Reference}{252}{section.10.109}
 \contentsline {subsection}{\numberline {10.109.1}Detailed Description}{253}{subsection.10.109.1}
-\contentsline {section}{\numberline {10.110}cUniformIntVector2 Class Reference}{253}{section.10.110}
+\contentsline {section}{\numberline {10.110}cUniformIntVector1 Class Reference}{253}{section.10.110}
 \contentsline {subsection}{\numberline {10.110.1}Detailed Description}{254}{subsection.10.110.1}
-\contentsline {section}{\numberline {10.111}cUniformIntVector3 Class Reference}{254}{section.10.111}
+\contentsline {section}{\numberline {10.111}cUniformIntVector2 Class Reference}{254}{section.10.111}
 \contentsline {subsection}{\numberline {10.111.1}Detailed Description}{255}{subsection.10.111.1}
-\contentsline {section}{\numberline {10.112}cUniformIntVector4 Class Reference}{255}{section.10.112}
+\contentsline {section}{\numberline {10.112}cUniformIntVector3 Class Reference}{255}{section.10.112}
 \contentsline {subsection}{\numberline {10.112.1}Detailed Description}{256}{subsection.10.112.1}
-\contentsline {section}{\numberline {10.113}cUniformMatrix2 Class Reference}{256}{section.10.113}
+\contentsline {section}{\numberline {10.113}cUniformIntVector4 Class Reference}{256}{section.10.113}
 \contentsline {subsection}{\numberline {10.113.1}Detailed Description}{257}{subsection.10.113.1}
-\contentsline {section}{\numberline {10.114}cUniformMatrix3 Class Reference}{258}{section.10.114}
+\contentsline {section}{\numberline {10.114}cUniformMatrix2 Class Reference}{257}{section.10.114}
 \contentsline {subsection}{\numberline {10.114.1}Detailed Description}{258}{subsection.10.114.1}
-\contentsline {section}{\numberline {10.115}cUniformMatrix4 Class Reference}{259}{section.10.115}
+\contentsline {section}{\numberline {10.115}cUniformMatrix3 Class Reference}{259}{section.10.115}
 \contentsline {subsection}{\numberline {10.115.1}Detailed Description}{259}{subsection.10.115.1}
-\contentsline {section}{\numberline {10.116}cUniformStore Class Reference}{260}{section.10.116}
-\contentsline {subsection}{\numberline {10.116.1}Detailed Description}{261}{subsection.10.116.1}
-\contentsline {section}{\numberline {10.117}cUniformVector1 Class Reference}{261}{section.10.117}
+\contentsline {section}{\numberline {10.116}cUniformMatrix4 Class Reference}{260}{section.10.116}
+\contentsline {subsection}{\numberline {10.116.1}Detailed Description}{260}{subsection.10.116.1}
+\contentsline {section}{\numberline {10.117}cUniformStore Class Reference}{261}{section.10.117}
 \contentsline {subsection}{\numberline {10.117.1}Detailed Description}{262}{subsection.10.117.1}
-\contentsline {section}{\numberline {10.118}cUniformVector2 Class Reference}{262}{section.10.118}
+\contentsline {section}{\numberline {10.118}cUniformVector1 Class Reference}{262}{section.10.118}
 \contentsline {subsection}{\numberline {10.118.1}Detailed Description}{263}{subsection.10.118.1}
-\contentsline {section}{\numberline {10.119}cUniformVector3 Class Reference}{263}{section.10.119}
+\contentsline {section}{\numberline {10.119}cUniformVector2 Class Reference}{263}{section.10.119}
 \contentsline {subsection}{\numberline {10.119.1}Detailed Description}{264}{subsection.10.119.1}
-\contentsline {section}{\numberline {10.120}cUniformVector4 Class Reference}{264}{section.10.120}
+\contentsline {section}{\numberline {10.120}cUniformVector3 Class Reference}{264}{section.10.120}
 \contentsline {subsection}{\numberline {10.120.1}Detailed Description}{265}{subsection.10.120.1}
-\contentsline {section}{\numberline {10.121}cUserSignal Class Reference}{265}{section.10.121}
-\contentsline {subsection}{\numberline {10.121.1}Detailed Description}{265}{subsection.10.121.1}
-\contentsline {section}{\numberline {10.122}cUserVariable Class Reference}{265}{section.10.122}
+\contentsline {section}{\numberline {10.121}cUniformVector4 Class Reference}{265}{section.10.121}
+\contentsline {subsection}{\numberline {10.121.1}Detailed Description}{266}{subsection.10.121.1}
+\contentsline {section}{\numberline {10.122}cUserSignal Class Reference}{266}{section.10.122}
 \contentsline {subsection}{\numberline {10.122.1}Detailed Description}{266}{subsection.10.122.1}
-\contentsline {section}{\numberline {10.123}cVariableStore Class Reference}{266}{section.10.123}
+\contentsline {section}{\numberline {10.123}cUserVariable Class Reference}{266}{section.10.123}
 \contentsline {subsection}{\numberline {10.123.1}Detailed Description}{267}{subsection.10.123.1}
-\contentsline {section}{\numberline {10.124}cViewport Class Reference}{267}{section.10.124}
+\contentsline {section}{\numberline {10.124}cVariableStore Class Reference}{267}{section.10.124}
 \contentsline {subsection}{\numberline {10.124.1}Detailed Description}{268}{subsection.10.124.1}
-\contentsline {section}{\numberline {10.125}cViewportControl Class Reference}{269}{section.10.125}
-\contentsline {subsection}{\numberline {10.125.1}Detailed Description}{271}{subsection.10.125.1}
-\contentsline {subsection}{\numberline {10.125.2}Member Function Documentation}{271}{subsection.10.125.2}
-\contentsline {subsubsection}{\numberline {10.125.2.1}ClearColor}{271}{subsubsection.10.125.2.1}
-\contentsline {section}{\numberline {10.126}cVoidVariable Class Reference}{271}{section.10.126}
+\contentsline {section}{\numberline {10.125}cViewport Class Reference}{268}{section.10.125}
+\contentsline {subsection}{\numberline {10.125.1}Detailed Description}{269}{subsection.10.125.1}
+\contentsline {section}{\numberline {10.126}cViewportControl Class Reference}{270}{section.10.126}
 \contentsline {subsection}{\numberline {10.126.1}Detailed Description}{272}{subsection.10.126.1}
-\contentsline {section}{\numberline {10.127}cWindAndGravityParticle Class Reference}{272}{section.10.127}
+\contentsline {subsection}{\numberline {10.126.2}Member Function Documentation}{272}{subsection.10.126.2}
+\contentsline {subsubsection}{\numberline {10.126.2.1}ClearColor}{272}{subsubsection.10.126.2.1}
+\contentsline {section}{\numberline {10.127}cVoidVariable Class Reference}{272}{section.10.127}
 \contentsline {subsection}{\numberline {10.127.1}Detailed Description}{273}{subsection.10.127.1}
-\contentsline {section}{\numberline {10.128}cWindow Class Reference}{273}{section.10.128}
+\contentsline {section}{\numberline {10.128}cWindAndGravityParticle Class Reference}{273}{section.10.128}
 \contentsline {subsection}{\numberline {10.128.1}Detailed Description}{274}{subsection.10.128.1}
-\contentsline {section}{\numberline {10.129}v2DPolygon Class Reference}{274}{section.10.129}
+\contentsline {section}{\numberline {10.129}cWindow Class Reference}{274}{section.10.129}
 \contentsline {subsection}{\numberline {10.129.1}Detailed Description}{275}{subsection.10.129.1}
-\contentsline {section}{\numberline {10.130}vCollisionData Class Reference}{275}{section.10.130}
+\contentsline {section}{\numberline {10.130}v2DPolygon Class Reference}{275}{section.10.130}
 \contentsline {subsection}{\numberline {10.130.1}Detailed Description}{276}{subsection.10.130.1}
-\contentsline {section}{\numberline {10.131}vFile Class Reference}{276}{section.10.131}
-\contentsline {subsection}{\numberline {10.131.1}Detailed Description}{276}{subsection.10.131.1}
+\contentsline {section}{\numberline {10.131}vCollisionData Class Reference}{276}{section.10.131}
+\contentsline {subsection}{\numberline {10.131.1}Detailed Description}{277}{subsection.10.131.1}
+\contentsline {section}{\numberline {10.132}vFile Class Reference}{277}{section.10.132}
+\contentsline {subsection}{\numberline {10.132.1}Detailed Description}{277}{subsection.10.132.1}

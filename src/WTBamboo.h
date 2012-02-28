@@ -3857,12 +3857,20 @@ public:
 
 
 #include "./Maths/WTMath.h"
+#include "./Maths/WTc2DVt.h"
+#include "./Maths/WTc3DVt.h"
+#include "./Maths/WTc4DVt.h"
 #include "./Maths/WTcColors.h"
 #include "./Maths/WTcMatrix4.h"
+#include "./Maths/WTcMomentum.h"
 #include "./Maths/WTcPerspectiveMatrix.h"
 #include "./Maths/WTcMatrixStack.h"
 #include "./Maths/WTcCameraMatrix4.h"
 #include "./Files/WTString.h"
+
+#include "./Maths/WTc2DVtCode.h"
+#include "./Maths/WTc3DVtCode.h"
+#include "./Maths/WTc4DVtCode.h"
 
 #include "./Engine/WTcSignal.h"
 #include "./Engine/WTKernel.h"

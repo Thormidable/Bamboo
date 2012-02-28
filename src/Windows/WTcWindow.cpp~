@@ -27,6 +27,8 @@ void cWindow::InitialiseOpenGL()
 
 	glShadeModel(GL_SMOOTH);
 
+	FindRenderArea();
+
 }
 
 #if WT_OS_TYPE==OS_WIN32
@@ -404,8 +406,17 @@ void cWindow::HandleMessages()
 		}
 		if(Event.type == MotionNotify)
 		{
-				_MOUSE->cx=Event.xmotion.x;
-				_MOUSE->cy=Event.xmotion.y;
+		 if (!_MOUSE->locked)
+         {
+			_MOUSE->cx=Event.xmotion.x;
+			_MOUSE->cy=Event.xmotion.y;
+         }
+         else
+         {
+			_MOUSE->x=Event.xmotion.x;
+			_MOUSE->y=Event.xmotion.y;
+         }
+
 			break;
 		}
 		if(Event.type == ConfigureNotify)

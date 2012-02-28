@@ -43,6 +43,7 @@ public:
 
 	~cParticleForGroup(){};
 	friend class cParticleGroup;
+	friend class cStarMap;
 
 	virtual void UpdatePos();
 	void UpdateFade();

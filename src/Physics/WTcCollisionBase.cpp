@@ -33,35 +33,7 @@ cSphereCollision *cCollisionBase::SetTypeSphere(float lfRadius)
 {
 	return SetType(lfRadius);
 };
-cMeshCollision *cCollisionBase::SetTypeBox(float *lfRadius)
-{
-	return SetType(lfRadius);
-};
-cMeshCollision *cCollisionBase::SetTypeBox(float lfmX,float lfpX,float lfmY, float lfpY,float lfmZ,float lfpZ)
-{
-	float lpTemp[6];
-	lpTemp[0]=lfmX;
-	lpTemp[1]=lfpX;
-	lpTemp[2]=lfmY;
-	lpTemp[3]=lfpY;
-	lpTemp[4]=lfmZ;
-	lpTemp[5]=lfpZ;
 
-	return SetType(lpTemp);
-};
-void cCollisionBase::SetTypeMesh(string lcReference)
-{
-	SetType(_GET_COLLISION_MESH_FILE(lcReference.c_str()));
-};
-void cCollisionBase::SetTypeMesh(cMeshCollision *lpMesh)
-{
-	SetType(lpMesh);
-};
-
-void cCollisionBase::SetTypeCompound(cCompoundCollision *lpData)
-{
-	SetType(lpData);
-};
 
 vCollisionData *cCollisionBase::CollisionData(){return mpObject;};
 
@@ -120,8 +92,45 @@ bool cCollisionBase::SphereSphere(cSphereCollision* lpFirst, cMatrix4 &lmFirstMa
   return 0;
 }
 
+uint8 cCollisionBase::Type()
+{
+	if(mpObject) return mpObject->Type();
+    return WT_COLLISION_NO_TYPE;
+}
+
 
 #if WT_FULL_VERSION_BAMBOO
+
+
+cMeshCollision *cCollisionBase::SetTypeBox(float *lfRadius)
+{
+	return SetType(lfRadius);
+};
+cMeshCollision *cCollisionBase::SetTypeBox(float lfmX,float lfpX,float lfmY, float lfpY,float lfmZ,float lfpZ)
+{
+	float lpTemp[6];
+	lpTemp[0]=lfmX;
+	lpTemp[1]=lfpX;
+	lpTemp[2]=lfmY;
+	lpTemp[3]=lfpY;
+	lpTemp[4]=lfmZ;
+	lpTemp[5]=lfpZ;
+
+	return SetType(lpTemp);
+};
+void cCollisionBase::SetTypeMesh(string lcReference)
+{
+	SetType(_GET_COLLISION_MESH_FILE(lcReference.c_str()));
+};
+void cCollisionBase::SetTypeMesh(cMeshCollision *lpMesh)
+{
+	SetType(lpMesh);
+};
+
+void cCollisionBase::SetTypeCompound(cCompoundCollision *lpData)
+{
+	SetType(lpData);
+};
 
 cBeamCollision *cCollisionBase::SetType(cBeamMesh *lpBeam)
 {
@@ -178,11 +187,6 @@ cMeshCollision *cCollisionBase::SetType(float lfXP,float lfXN,float lfYP,float l
     return SetType(lpTemp);
 }
 
-uint8 cCollisionBase::Type()
-{
-	if(mpObject) return mpObject->Type();
-    return WT_COLLISION_NO_TYPE;
-}
 
 cMeshCollision *cCollisionBase::Mesh(){return mpObject->Mesh();};
 

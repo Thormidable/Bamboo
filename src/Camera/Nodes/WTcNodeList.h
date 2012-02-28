@@ -116,7 +116,7 @@ public:
  void StartKillAll();
  void KillAll();
 
-
+	cMatrix4 *CalculateGlobalMatrix();
 };
 
 #endif

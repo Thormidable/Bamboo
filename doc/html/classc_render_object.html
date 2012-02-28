@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bamboo&#160;<span id="projectnumber">v1.0</span></div>
+   <div id="projectname">Bamboo&#160;<span id="projectnumber">v1.1</span></div>
    <div id="projectbrief">Process Orientated Game Engine</div>
   </td>
  </tr>
@@ -197,8 +197,8 @@ template&lt;class cType &gt; </td></tr>
   <table class="params">
     <tr><td class="paramname">lpNode</td><td>lpNode is not required, but will add the renderable object to the <a class="el" href="classc_render_node.html" title="This is a dynamic render tree branch. This class stores a dynamic list of cRenderObjects called mpObj...">cRenderNode</a> pointed to by lpNode. This class should be inherited by any renderable object. If it is handed no parameters then it will add itself to cCamera::mpRenderList, which is owned by <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a>. If you wish to produce a scene graph, the new renderable object can be handed a pointer to a <a class="el" href="classc_render_node.html" title="This is a dynamic render tree branch. This class stores a dynamic list of cRenderObjects called mpObj...">cRenderNode</a>. Any translations applied to lpNode will change the co-ordinate system for this renderable object. <div class="fragment"><pre class="fragment">        <a class="code" href="classc_render_node.html" title="This is a dynamic render tree branch. This class stores a dynamic list of cRenderObjects called mpObj...">cRenderNode</a> mpNode=<span class="keyword">new</span> <a class="code" href="classc_render_node.html" title="This is a dynamic render tree branch. This class stores a dynamic list of cRenderObjects called mpObj...">cRenderNode</a>;
         <a class="code" href="classc_model.html" title="A standard Textured Model renderable object.">cModel</a> mpObject=<span class="keyword">new</span> <a class="code" href="classc_model.html" title="A standard Textured Model renderable object.">cModel</a>(mpNode);
-        mpNode.<a class="code" href="classc_matrix4.html#a91f9e8d79d7721ba35f59c754a5507d1" title="Will Advance the object along its local axis by teh distance of the floats in the array lfDistance...">Advance</a>(1.0f,0.0f,0.0f);
-        mpObject.<a class="code" href="classc_matrix4.html#a91f9e8d79d7721ba35f59c754a5507d1" title="Will Advance the object along its local axis by teh distance of the floats in the array lfDistance...">Advance</a>(1.0f,0.0f,0.0f);
+        mpNode.<a class="code" href="classc_matrix4.html#a91f9e8d79d7721ba35f59c754a5507d1" title="Will Advance the object along its local axis by the distance of the floats in the array lfDistance...">Advance</a>(1.0f,0.0f,0.0f);
+        mpObject.<a class="code" href="classc_matrix4.html#a91f9e8d79d7721ba35f59c754a5507d1" title="Will Advance the object along its local axis by the distance of the floats in the array lfDistance...">Advance</a>(1.0f,0.0f,0.0f);
 </pre></div> After this code mpObject will be at 2.0f,0.0f,0.0. This Function should only be used for Creating New Renderable Object Types. It should be virtual. </td></tr>
   </table>
   </dd>
@@ -295,7 +295,7 @@ template&lt;class cType &gt; </td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Feb 6 2012 10:33:06 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:04 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

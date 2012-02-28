@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bamboo&#160;<span id="projectnumber">v1.0</span></div>
+   <div id="projectname">Bamboo&#160;<span id="projectnumber">v1.1</span></div>
    <div id="projectbrief">Process Orientated Game Engine</div>
   </td>
  </tr>
@@ -161,6 +161,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace2c8b3be8773b37cd4eee63f6e87a45"></a><!-- doxytag: member="cViewportControl::ClearColor" ref="ace2c8b3be8773b37cd4eee63f6e87a45" args="()" -->
 <a class="el" href="classc_r_g_b_a.html">cRGBA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_viewport_control.html#ace2c8b3be8773b37cd4eee63f6e87a45">ClearColor</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">See <a class="el" href="classc_viewport_control.html#ac3cee84c15d6b7bb35daf33a95a41f08" title="This function will set the color the Viewport will clear the region to every frame.">cCamera::ClearColor(float,float,float,float)</a>;. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01218f579fdb23ad42c9ba5a76a9fea8"></a><!-- doxytag: member="cViewportControl::Clear" ref="a01218f579fdb23ad42c9ba5a76a9fea8" args="(bool lbClear)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_viewport_control.html#a01218f579fdb23ad42c9ba5a76a9fea8">Clear</a> (bool lbClear)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Will set whether the camera will clear its viewport area or not. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f4ee4f091f15b472bd651e4a4ef6c88"></a><!-- doxytag: member="cViewportControl::Clear" ref="a6f4ee4f091f15b472bd651e4a4ef6c88" args="()" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_viewport_control.html#a6f4ee4f091f15b472bd651e4a4ef6c88">Clear</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Will return whether the camera clears its viewport area or not. <br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classc_viewport_control.html" title="The cViewportControl allows the user to control the region of the screen a cCamera or cViewport objec...">cViewportControl</a> allows the user to control the region of the screen a <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> or <a class="el" href="classc_viewport.html" title="cViewport allows a cCameras Render List to be rendered again from another position and rotation...">cViewport</a> object will render to. This class allows the user to set a region of the screen for a <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> or <a class="el" href="classc_viewport.html" title="cViewport allows a cCameras Render List to be rendered again from another position and rotation...">cViewport</a> to render to. It can be either Proportional to screens width and height or Fixed. If the region is proportional the co-ordinates and sizes of the region are in the range 0.0f to 1.0f representing 0 up to the entire screen size. If the region is fixed the co-ordinates and sizes of the region are measured in pixels. The X and Y Co-ordinates specify the Lower Left corner of the region. The width and height determine the size of the region. </p>
@@ -230,7 +236,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Feb 6 2012 10:33:07 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:04 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

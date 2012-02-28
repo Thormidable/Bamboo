@@ -1,0 +1,49 @@
+#include "../WTBamboo.h"
+
+
+cUniformTexture* cRenderVariableSet::AddTexture(string lsString)
+{
+ return Variables()->CreateUniform(mpShader->ShaderVariables()->GetUniformPosition(lsString),new cUniformTexture(miTextures++));
+}
+cUniformTexture* cRenderVariableSet::AddTexture(uint32 liPos)
+{
+ return Variables()->CreateUniform(liPos,new cUniformTexture(miTextures++));
+}
+
+cUniformFont* cRenderVariableSet::AddFont(string lsString)
+{
+ return Variables()->CreateUniform(mpShader->ShaderVariables()->GetUniformPosition(lsString),new cUniformFont(miTextures++));
+}
+cUniformFont* cRenderVariableSet::AddFont(uint32 liPos)
+{
+ return Variables()->CreateUniform(liPos,new cUniformFont(miTextures++));
+}
+
+
+
+cVariableStore *cRenderVariableSet::Variables()
+{
+ if(!mpVariables) mpVariables=new cVariableStore(mpShader);
+ return mpVariables;
+}
+
+void cRenderVariableSet::SetShaderVariables()
+{
+ if(mpVariables)
+ {
+  mpShader->Use();
+  mpVariables->WriteUniforms();
+  mpVariables->WriteAttributes();
+ }
+
+}
+
+cRenderVariableSet::cRenderVariableSet()
+{
+	mpVariables=0;
+};
+
+cRenderVariableSet::~cRenderVariableSet()
+{
+ 	delete mpVariables;
+};

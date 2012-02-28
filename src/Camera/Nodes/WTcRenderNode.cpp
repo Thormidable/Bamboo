@@ -163,7 +163,6 @@ void cRenderNode::CalculateMatrices()
 
 	if(mpCursor->Data()->Awake())
 	{
-		mpCursor->Data()->UpdateMatrix();
 		mpCursor->Data()->CalculateMatrices();
 		mpCursor=mpCursor->Next();
 	}

@@ -58,6 +58,13 @@
 	#define pbits (sizeof(uint32*)*8)
 #endif
 
+#define c2DVf c2DVt<float>
+#define c2DVi c2DVt<int32>
+#define c3DVf c3DVt<float>
+#define c3DVi c3DVt<int32>
+#define c4DVf c4DVt<float>
+#define c4DVi c4DVt<int32>
+
 #define _PROCESS(TYPE) class TYPE : public cProcess
 
 #define WT_EXIT_SUCCESS 0
@@ -100,7 +107,6 @@
 #define _LOAD_FILE(FileName) cIMF::LoadIMF(FileName)
 ///This is a quick macro for returning the pointer to a file. (cFileHandler::File()).
 #define _GET_FILE(FileType,FileName) (cFileHandler::Instance()->File<FileType>(FileName))
-
 ///Will activate the shader with the reference. This is a slow and inefficient way to call shaders. Get a pointer and call ->Use().
 #define _USE_SHADER(FileName) _GET_FILE(cShaderProgram,FileName)->Use()
 
@@ -291,8 +297,12 @@
 	#define _START_PROGRAM(TYPE,SETTINGS) cMainThread<TYPE,SETTINGS>::Start()
 
 #endif
+
+/// Function for accession cKernel::FindProcess(tType *lpStart). Will search for any Process of class type TYPE following the item START.
+#define _FIND_PROCESS_START(TYPE,START) _KERNEL->FindProcess<TYPE>(START)
 /// Function for accessing cKernel::FindProcess(). Will search for any Process of class type TYPE.
 #define _FIND_PROCESS(TYPE) _KERNEL->FindProcess<TYPE>()
+
 
 ///Pointer to the Matrix Stack.
 #define _MATRIX_STACK cMatrixStack::Instance()

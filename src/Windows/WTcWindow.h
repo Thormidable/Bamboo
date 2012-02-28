@@ -29,7 +29,7 @@ class cWindow
 		// This is a flag telling the system if the window has been resized and so if the context needs updating.
           bool Resized;
 	// This is a flag telling the system if the window has been moved.
-          bool Moved;
+          //bool Moved;
 	// This is a flag telling the system if the window is hidden or not.
           bool Hidden;
 

@@ -82,6 +82,10 @@ public:
 * \endcode
 */
 template<class tType> tType *FindProcess();
+
+/// Like FindProcess() This function will search the Process List to find the next process of type tType. This will start the search from the item lpStart.
+template<class tType> tType *FindProcess(tType *lpStart);
+
 /// This Function will reset FindProcess() to search from the start of the process List.
  void ResetFindProcess();
 
@@ -94,7 +98,21 @@ template<class tType> tType *cKernel::FindProcess()
  if (!mpSearch){mpSearch=mpProcess->Start();}
  while(mpSearch)
  {
-  mpType=dynamic_cast<tType*>(mpSearch->mpData);
+  mpType=dynamic_cast<tType*>(mpSearch->Data());
+  if (mpType) return mpType;
+  mpSearch=mpSearch->Next();
+ }
+ return 0;
+};
+
+template<class tType> tType *cKernel::FindProcess(tType *lpStart)
+{
+ if(!lpStart) mpSearch=mpProcess->Start();
+ else mpSearch=lpStart->mpNode->Next();
+ tType *mpType;
+ while(mpSearch)
+ {
+  mpType=dynamic_cast<tType*>(mpSearch->Data());
   if (mpType) return mpType;
   mpSearch=mpSearch->Next();
  }

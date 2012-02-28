@@ -1,5 +1,7 @@
 #ifndef __WTCCAMERAMATRIX4_H__
 #define __WTCCAMERAMATRIX4_H__
+
+class vRenderObject;
 /**
 * \brief This is a translation matrix for a camera object
 * A Special Matric for Cameras. All the translations are inverted. Distances are 'reversed', Local rotations are 'globalised'
@@ -59,6 +61,8 @@ void PositionY(float lfY);
 void PositionZ(float lfZ);
 
 
+/// This will advance the position of this objects X,Y and Z positions by lfX,lfY and lfZ along local axis.
+void Advance(float lfDist);
 /// This will advance the position of this objects X position by lfDistance along local axis.
 void AdvanceX(float lfDistance);
 /// This will advance the position of this objects Y position by lfDistance along local axis.
@@ -128,6 +132,10 @@ void Follow(cMatrix4& lpOther,float lfDist);
 void Follow(cMatrix4* lpOther,float lfX,float lfY,float lfZ);
 ///This will make the camera position itself with the same orientation as the Matrix lpOther at the point lfX,lfY,lfZ relative to its local Co-ordinates.
 void Follow(cMatrix4& lpOther,float lfX,float lfY,float lfZ);
+///This will make the camera position itself with the same orientation as the Render Object lpOther at the point lfDist behind its local Co-ordinates. This uses the objects mmCache Matrix.
+void Follow(vRenderObject *lpObj,float lfDist);
+///This will make the camera position itself with the same orientation as the Render Object lpOther at the point lfX,lfY,lfZ relative to its local Co-ordinates. This uses the objects mmCache Matrix.
+void Follow(vRenderObject *lpObj,float lfX,float lfY,float lfZ);
 ///This will make the camera point itself at the global point defined by the three float array lpPos.
 void PointAt(float *mpPos);
 ///This will make the camera point itself at the global point defined by the three float array lpPos.
@@ -138,6 +146,10 @@ void PointAt(cMatrix4 &mpPos);
 void PointAt(c3DVf &mpPos);
 ///This will make the camera point itself at the global point defined by the three float array lpPos.
 void PointAt(c3DVf *mpPos);
+///This will make the camera point itself at the global point of the Render Object lpObjs cache matrix mmCache.
+void PointAt(vRenderObject *lpObj);
+
+
 
 
 ///Will Make this equal the 4x4 cCameraMatrix4 lpOther

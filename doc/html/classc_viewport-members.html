@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bamboo&#160;<span id="projectnumber">v1.0</span></div>
+   <div id="projectname">Bamboo&#160;<span id="projectnumber">v1.1</span></div>
    <div id="projectbrief">Process Orientated Game Engine</div>
   </td>
  </tr>
@@ -75,6 +75,8 @@ This is the complete list of members for <a class="el" href="classc_viewport.htm
   <tr class="memlist"><td><a class="el" href="classc_signal.html#a64e6fb4aee9b3a6bee5b56c7b86294cd">Awake</a>()</td><td><a class="el" href="classc_signal.html">cSignal</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_perspective_control.html#a1a7781d158a255d67d95924345f2230e">CameraMatrix</a>()</td><td><a class="el" href="classc_perspective_control.html">cPerspectiveControl</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_camera_matrix4.html#a99df6d312702e5474c5fedad42c95026">cCameraMatrix4</a>()</td><td><a class="el" href="classc_camera_matrix4.html">cCameraMatrix4</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classc_viewport_control.html#a01218f579fdb23ad42c9ba5a76a9fea8">Clear</a>(bool lbClear)</td><td><a class="el" href="classc_viewport_control.html">cViewportControl</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classc_viewport_control.html#a6f4ee4f091f15b472bd651e4a4ef6c88">Clear</a>()</td><td><a class="el" href="classc_viewport_control.html">cViewportControl</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_viewport_control.html#ac3cee84c15d6b7bb35daf33a95a41f08">ClearColor</a>(float lfRed=0.0f, float lfGreen=0.0f, float lfBlue=0.0f, float lfAlpha=1.0f)</td><td><a class="el" href="classc_viewport_control.html">cViewportControl</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_viewport_control.html#a112989f88c6b4aa600df131df256e95a">ClearColor</a>(float *lpColor)</td><td><a class="el" href="classc_viewport_control.html">cViewportControl</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_viewport_control.html#a069d58104acef910adada1ab30844171">ClearColor</a>(cRGBA &amp;lpColor)</td><td><a class="el" href="classc_viewport_control.html">cViewportControl</a></td><td></td></tr>
@@ -96,6 +98,8 @@ This is the complete list of members for <a class="el" href="classc_viewport.htm
   <tr class="memlist"><td><a class="el" href="classc_perspective_control.html#a5aa44c5690ac0db66157d8c08ecf0a9b">Far</a>(float lfF)</td><td><a class="el" href="classc_perspective_control.html">cPerspectiveControl</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_camera_matrix4.html#aeee787e0f5895a613e8be9efbade408f">Follow</a>(cMatrix4 *lpOther, float lfDist)</td><td><a class="el" href="classc_camera_matrix4.html">cCameraMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_camera_matrix4.html#a0bb6a232830c5e5571677b048cc1c45d">Follow</a>(cMatrix4 &amp;lpOther, float lfDist)</td><td><a class="el" href="classc_camera_matrix4.html">cCameraMatrix4</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classc_camera_matrix4.html#ad511368c294014edf99ebbe9dbf53bc2">Follow</a>(cMatrix4 *lpOther, float lfX, float lfY, float lfZ)</td><td><a class="el" href="classc_camera_matrix4.html">cCameraMatrix4</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classc_camera_matrix4.html#a1f0549e1ae97a959863a8fe27bec1169">Follow</a>(cMatrix4 &amp;lpOther, float lfX, float lfY, float lfZ)</td><td><a class="el" href="classc_camera_matrix4.html">cCameraMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_camera_matrix4.html#a342b888f43a65b6c4a14b818c2519157">GAdvance</a>(float lfX, float lfY, float lfZ)</td><td><a class="el" href="classc_camera_matrix4.html">cCameraMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_camera_matrix4.html#a69ef5c53bd239d2f1041ac9330c2cc08">GAdvanceX</a>(float lfDistance)</td><td><a class="el" href="classc_camera_matrix4.html">cCameraMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_camera_matrix4.html#a7cb5d64085acdcc74dcad1e965a52b3b">GAdvanceY</a>(float lfDistance)</td><td><a class="el" href="classc_camera_matrix4.html">cCameraMatrix4</a></td><td></td></tr>
@@ -195,7 +199,7 @@ This is the complete list of members for <a class="el" href="classc_viewport.htm
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Feb 6 2012 10:33:07 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:04 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

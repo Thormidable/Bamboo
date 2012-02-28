@@ -157,6 +157,8 @@
 			<Option target="64 Debug" />
 			<Option target="64 Release" />
 		</Unit>
+		<Unit filename="src\Camera\Renderable\WTcStarMap.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcStarMap.h" />
 		<Unit filename="src\Camera\Renderable\WTcTextureText.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcTextureText.h">
 			<Option target="64 Debug" />
@@ -311,7 +313,9 @@
 			<Option target="64 Debug" />
 			<Option target="64 Release" />
 		</Unit>
-		<Unit filename="src\Files\Meshes\MeshClasses\WTcPlane.cpp" />
+		<Unit filename="src\Files\Meshes\MeshClasses\WTcPlane.cpp">
+			<Option weight="0" />
+		</Unit>
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcPlane.h">
 			<Option target="64 Debug" />
 			<Option target="64 Release" />
@@ -447,11 +451,23 @@
 			<Option target="64 Debug" />
 			<Option target="64 Release" />
 		</Unit>
-		<Unit filename="src\Maths\WTMath.cpp" />
+		<Unit filename="src\Maths\WTMath.cpp">
+			<Option weight="0" />
+		</Unit>
 		<Unit filename="src\Maths\WTMath.h">
 			<Option target="64 Debug" />
 			<Option target="64 Release" />
 		</Unit>
+		<Unit filename="src\Maths\WTc2DVt.h" />
+		<Unit filename="src\Maths\WTc2DVtCode.h" />
+		<Unit filename="src\Maths\WTc3DVt.h">
+			<Option target="Release" />
+			<Option target="64 Debug" />
+			<Option target="64 Release" />
+		</Unit>
+		<Unit filename="src\Maths\WTc3DVtCode.h" />
+		<Unit filename="src\Maths\WTc4DVt.h" />
+		<Unit filename="src\Maths\WTc4DVtCode.h" />
 		<Unit filename="src\Maths\WTcCameraMatrix4.cpp" />
 		<Unit filename="src\Maths\WTcCameraMatrix4.h">
 			<Option target="64 Debug" />
@@ -472,6 +488,8 @@
 			<Option target="64 Debug" />
 			<Option target="64 Release" />
 		</Unit>
+		<Unit filename="src\Maths\WTcMomentum.cpp" />
+		<Unit filename="src\Maths\WTcMomentum.h" />
 		<Unit filename="src\Maths\WTcPerspectiveMatrix.cpp" />
 		<Unit filename="src\Maths\WTcPerspectiveMatrix.h">
 			<Option target="64 Debug" />

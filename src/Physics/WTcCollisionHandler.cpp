@@ -32,10 +32,12 @@ cCollisionList *cCollisionHandlerBSP::GenerateCollisionList(cCollisionObject *lp
 
 cCollisionList *cCollisionHandlerType::GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType)
 {
-cCollisionList *lpList=new cCollisionList;
-ResetCursors();
-if(lpType)
+	cCollisionList *lpList=new cCollisionList;
+	ResetCursors();
+if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE)
 {
+	if(lpType)
+	{
 	while(NextListItem(lpType))
 		{
 
@@ -48,20 +50,23 @@ if(lpType)
 				}
 			}
 		}
-}
-else
+	}
+	else
+	{
 	while(NextListItem())
 	{
 
-	if(mpColCur->Data()!=lpObj)
-	{
-		if(mpColCur->Data()->Collision(lpObj))
+		if(mpColCur->Data()!=lpObj)
 		{
-			lpList->AddCollision(mpColCur->Data());
-		}
+			if(mpColCur->Data()->Collision(lpObj))
+			{
+				lpList->AddCollision(mpColCur->Data());
+			}
 
+		}
+  	}
 	}
-  }
+}
   return lpList;
 }
 
