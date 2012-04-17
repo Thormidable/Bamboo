@@ -20,6 +20,7 @@ cViewport::~cViewport()
 
 void cViewport::UpdateRenderSettings()
 {
+
 	UpdateViewport();
 	ResetGLMatrix();
 }
@@ -38,6 +39,7 @@ void cViewport::Stop()
 
 void cViewport::PrepareForRender()
 {
+    _CAMERA_ZOOM=Near()/(Width()+Height());
 		UpdateProjectionMatrix();
 		UpdateViewport();
 		ResetGLMatrix();
@@ -74,7 +76,7 @@ void cViewportHandler::Add(cViewport *lpNew)
 }
 void cViewportHandler::Remove(cViewport *lpOld)
 {
-	mcList.Remove(lpOld);
+	mcList.Delete(lpOld);
 }
 
 void cViewport::UpdateProjectionMatrix()

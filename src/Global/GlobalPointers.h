@@ -16,6 +16,10 @@ extern cSync *gpTimer;
 class cProcess;
 extern cProcess *gpParent;
 
+#if WT_FULL_VERSION_BAMBOO
+	class cElementArray;
+	extern cElementArray *gpElementArray;
+#endif
 
 #endif
 

@@ -7,7 +7,7 @@
 class cPoint :public cRenderObject
 {
  cRGBA mfColor;
- float mfPointSize;
+ //float mfPointSize;
 
 public:
  /// cPoint constructor
@@ -32,9 +32,9 @@ public:
       void Color(cRGB &lpOther);
       void Color(cRGBA &lpOther);
       ///Will return the size of this point in pixels (Distance does not affect size without using an appropriate cShaderProgram).
-      float PointSize(){return mfPointSize;};
+  //    float PointSize(){return mfPointSize;};
       ///Will set the size of this point in pixels.
-      void PointSize(float lfPointSize);
+  //    void PointSize(float lfPointSize);
 
 };
 

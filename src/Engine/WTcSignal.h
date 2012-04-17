@@ -44,7 +44,7 @@ class cUserSignal
 
 public:
 	///Function to handle user specified signals. SIGNAL is an unsigned integer and lpData allows additional data to be passed to the function.
-	virtual void UserSignal(SIGNAL liSignal,void *lpData){(void) liSignal;(void)lpData;};
+	virtual bool UserSignal(SIGNAL liSignal,void *lpData){(void) liSignal;(void)lpData; return 0;};
 
 
 };

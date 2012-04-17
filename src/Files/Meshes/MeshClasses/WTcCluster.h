@@ -18,24 +18,24 @@ public:
 	void Optimise();
 
 	uint32 FileSize();
-	
+
 	void Order();
 	void Strip();
 	void Switch(uint32 li1,uint32 li2);
 	void Add(cFullFaceData &lpData);
-	void Remove(uint32 li1);
+	void Delete(uint32 li1);
 	uint32 Items();
 	cFace Face(uint32 li1);
 	void Resize();
 	void OutputIMFClusters(ofstream &FileStream);
-	
+
 	void LoadIMFClusters(ifstream &FileStream);
-	
+
 };
 
 class cClusterList : public cLimitedList<cCluster>
 {
-	
+
 public:
 	cClusterList(){};
 	~cClusterList(){};
@@ -53,7 +53,7 @@ public:
 		 mpList[liCount].OutputIMFClusters(FileStream);
 		}
 	};
-	
+
 	void LoadIMFClusters(ifstream &FileStream)
 	{
 		uint32 liCount;

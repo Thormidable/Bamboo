@@ -59,6 +59,8 @@ template<class T> class cLinkedList
 	/// This is a pointer to the last cLinkedNode in the list.
        cLinkedNode<T> *mpEnd;
 
+	   cLinkedNode<T> *mpCursor;
+
 public:
 
 	void StitchOut(cLinkedNode<T> *lpNode);
@@ -107,6 +109,9 @@ public:
 	void Display();
 	/// This will delete the cLinkedNode pointed to by lpOld and remove it from the list, but not delete mpData.
 	void Remove(cLinkedNode<T> *lpNode);
+
+	T *FindStart(){mpCursor=Start(); if(mpCursor) return mpCursor->Data(); return 0; };
+	T *FindNext(){mpCursor=mpCursor->Next(); if(mpCursor) return mpCursor->Data(); else return 0;};
 };
 
 template<class T> void cLinkedList<T>::Initialise()

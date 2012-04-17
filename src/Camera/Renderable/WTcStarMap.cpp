@@ -11,7 +11,7 @@ void cStarMap::RenderPainter()
 	 for(liCount=0;liCount<miParticles;++liCount)
 	 {
 			glColor4fv(mpParticles[liCount].Color);
-			glVertex3f(mpParticles[liCount].Position[0],mpParticles[liCount].Position[1],mpParticles[liCount].Position[2]);
+			glVertex3fv(mpParticles[liCount].Position);
 	 }
 	 glEnd();
 
@@ -20,9 +20,8 @@ void cStarMap::RenderPainter()
 
 void cStarMap::Buffer()
 {
-	glGenBuffers(1,&mBuffer1);
-	glGenBuffers(1,&mBuffer2);
-
+//	glGenBuffers(1,&mBuffer1);
+//	glGenBuffers(1,&mBuffer2);
 
 };
 
@@ -63,9 +62,10 @@ void cStarMap::StarMapMatrices()
 
 }
 
-void cStarMap::Initialise(uint32 liParticles)
+void cStarMap::Initialise(uint32 liParticles,float lfDist)
 {
-
+    //if(!lfDist) lfDist=mpRenderer->Camera()->Far()-mpRenderer->Camera()->Near()*3;
+    if(!lfDist) lfDist=mpRenderer->Camera()->Far()*0.9;
 	miParticles=liParticles;
 	delete []mpParticles;
 	mpParticles=new cStar[miParticles];
@@ -79,9 +79,9 @@ void cStarMap::Initialise(uint32 liParticles)
 		lfAngle[3]=cos(lfAngle[1]);
 
 		float lfValue[4];
-		lfValue[0]=sin(lfAngle[0])*100.0f+sin(lfAngle[1])*100.0f;
-		lfValue[1]=ZEROED_RANDOM_NUMBER*2*cos(lfAngle[1])*100.0f;
-		lfValue[2]=cos(lfAngle[0])*100.0f+sin(lfAngle[1])*100.0f;
+		lfValue[0]=sin(lfAngle[0])*lfDist+sin(lfAngle[1])*lfDist;
+		lfValue[1]=ZEROED_RANDOM_NUMBER*2*cos(lfAngle[1])*lfDist;
+		lfValue[2]=cos(lfAngle[0])*lfDist+sin(lfAngle[1])*lfDist;
 
 		mpParticles[liCount].SetPosition(lfValue);
 		mpParticles[liCount].SetSize(RANDOM_NUMBER*10.0f);

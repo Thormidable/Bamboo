@@ -1,5 +1,7 @@
 #include "../WTBamboo.h"
 
+float cCameraHandler::sfCamera_Zoom=0.0f;
+
 cCamera::cCamera()
 {
  trace("Creating cCamera::cCamera()");
@@ -60,6 +62,7 @@ void cCamera::UpdateRenderSettings()
 
 void cCamera::UpdateRenderState()
 {
+    _CAMERA_ZOOM=Near()/(Width()+Height());
 	#if WT_FULL_VERSION_BAMBOO
         _LIGHT->SetLightStates();
     #endif
@@ -147,7 +150,7 @@ void cCameraHandler::Add(cCamera *lpCamera)
 
 void cCameraHandler::Remove(cCamera *lpCamera)
 {
-	mcList.Remove(lpCamera);
+	mcList.Delete(lpCamera);
 };
 #if WT_FULL_VERSION_BAMBOO
 cParticleHandler *cCamera::ParticleHandler()

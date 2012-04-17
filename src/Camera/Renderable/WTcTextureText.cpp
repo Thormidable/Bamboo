@@ -64,6 +64,7 @@ void cText::RenderPainter()
           glTexCoord2f(0,liRange);            glVertex3f(-mfWidth*(liCount-0.5f),-lfHeight,mfPriority);
           glTexCoord2f(1,liRange);            glVertex3f(-mfWidth*(liCount+0.5f),-lfHeight,mfPriority);
           glTexCoord2f(1,liRange+IMF_FONT_SCALE);   glVertex3f(-mfWidth*(liCount+0.5f),lfHeight,mfPriority);
+
           glEnd();
 
     }

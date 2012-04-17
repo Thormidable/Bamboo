@@ -156,10 +156,11 @@ void cCompoundCollisionFileNode::LoadIMF(ifstream &FileStream)
     {
         uint32 liSize;
         FileStream.read((char*)&liSize,sizeof(uint32));
-        char lpFileName[liSize+1];
+        char *lpFileName=new char[liSize+1];
         FileStream.read(lpFileName,sizeof(char)*liSize);
         lpFileName[liSize]=0;
         mcReference=lpFileName;
+		delete []lpFileName;
     }
     if(Type()==IMF_CCN_RADIUS)
     {

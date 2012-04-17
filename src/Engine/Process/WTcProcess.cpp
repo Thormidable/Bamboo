@@ -36,11 +36,11 @@ void cProcess::Signal(SIGNAL liFlags)
 }
 
 
-void cProcess::UserSignal(SIGNAL lsSignal,void *lpData)
+bool cProcess::UserSignal(SIGNAL lsSignal,void *lpData)
 {
   (void)lsSignal;
   (void) lpData;
-
+ return 0;
 };
 
 cParentStack *cProcess::ParentStack(){return mpParent;};

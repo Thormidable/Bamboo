@@ -8,11 +8,21 @@
  * */
 class cCollisionListObject
 {
+
+public:
 	cCollisionObject *mpObj;
 	float mfDistance;
-public:
-	cCollisionListObject(cCollisionObject *lpObj){mpObj=lpObj;};
-	float GetDistance(){return mfDistance;};
+	float mfBeamLength;
+	c3DVf mvCentre;
+
+	cCollisionListObject(cCollisionObject *lpObj);
+	cCollisionListObject();
+	float Distance();
+	float BeamLength();
+	///This will Recalculate the Distances from the base object as this cannot be determined when the collision is detected.
+	void RecalculateDistance(cCollisionObject *lpThis);
+	///This will return the centre of the Collision.
+	c3DVf Centre();
 };
 
 /**
@@ -22,34 +32,61 @@ public:
  *
  * */
 
-class cCollisionList
+class cCollisionList : public  cLimitedPointerList<cCollisionListObject>
 {
+ friend class cCollisionListObject;
+int32 miCurPos;
 
-
-cLinkedNode<cCollisionObject> *mpCurPos;
-cLinkedList<cCollisionObject> *mpCollisionList;
 
 public:
+    cCollisionObject *mpThisColl;
+    static cCollisionObject *mpOther;
+    static cCollisionList *mpStaticList;
+
 	///The Constructor for cCollisionList
-cCollisionList();
+cCollisionList(cCollisionObject *lpThisColl);
 ///This will Add the object lpObject to the list of objects colliding with the current searching object.
 void AddCollision(cCollisionObject *lpObject);
+
+///This will Add the cCollisionListObject to the list.
+void AddCollision(cCollisionListObject *lpObj);
+
+///This will Create a new cCollisionListObject and add it to the list, using mpOther as the Object.
+void AddCollision();
+
+///This will return the next cCollisionListObject from this list with details of the collision.
+cCollisionListObject *NextCollisionDetail();
+
+cCollisionListObject *CurrentCollisionDetail();
+
 ///This will return the next item from the list mpCollisionList that has been stocked by GenerateCollisionList() as a CollisionObject pointer.
 cCollisionObject *NextCollisionItem();
+
+cCollisionObject *CurrentCollisionItem();
 
 ///This will return the process owning renderable object creating the next detected collision.
 cProcess *NextCollisionP();
 
+cProcess *CurrentCollisionP();
+
 ///This will return the renderable object involved in the next detected collision.
 vRenderObject *NextCollisionR();
 
-/// This will reset the collision search to the start of mpList.
-void ResetList();
+vRenderObject *CurrentCollisionR();
 
 ///This is the destructor for cCollisionList
 ~cCollisionList();
-///This will sort the list of collisionobjects into distance from the colliding object order. This allows the user to resolve the collisions in 'Chronological' order.
+///This will sort the list of collisionobjects by distance from the colliding object order. This allows the user to resolve the collisions in 'Chronological' order.
 void SortByDistance();
+
+///This will sort the list of collisionobjects by Beam Lengths. If the object used for the search is used, it is Beam length alopng this object, otherwise it is the Beam length of the other object (if it is a beam) This allows the user to resolve the collisions in 'Chronological' order.
+void SortByBeamLength();
+
+void RecalculateDistances();
+
+static bool CompareDistances(cCollisionListObject *lp1,cCollisionListObject *lp2);
+static bool CompareBeamLengths(cCollisionListObject *lp1,cCollisionListObject *lp2);
+
 
 };
 

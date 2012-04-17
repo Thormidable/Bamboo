@@ -45,7 +45,7 @@ public:
     ///Will initialise the array to the size of liSpaces.This will destroy any data in the array.
 	void Init(uint32 liSpaces)
 	{
-        if(!miSpaces) miSpaces=5;
+        if(!liSpaces) liSpaces=5;
 		delete []mpList;
 		miSpaces=liSpaces;
 		mpList=new cX[miSpaces];
@@ -100,8 +100,8 @@ public:
     ///Will copy the item pointed to by lpTemp to the array. Note this copies the item. It does not take the item into the array. Add will expand the array if required to add the item.
 	void Add(cX *lpTemp){if(miItems>=miSpaces) ChangeSize(miSpaces*1.5); memcpy(&mpList[miItems++],lpTemp,sizeof(cX));};
 
-    ///Will Remove the item in position liPos from the array. All items after the removed item will be shuffled down the array, so all data is continuously at the start of the array.
-	void Remove(uint32 liPos)
+    ///Will Delete the item in position liPos from the array. All items after the removed item will be shuffled down the array, so all data is continuously at the start of the array.
+	void Delete(uint32 liPos)
 	{
 		--miItems;
 		if(liPos<miItems)
@@ -199,7 +199,7 @@ public:
 		}
 		miItems=0;
 		miSpaces=0;
-    }
+    };
     ///Deconstructor for this list object. This will calll DeleteAll()
 	~cLimitedPointerList()
 	{
@@ -218,11 +218,21 @@ public:
 	/// Will Add the pointer lpValue to the list. Once added the Array will control deleting the object pointed to by lpValue. It will also expand the array to acomodate the item as required.
 	void Add(cX *lpValue){if(miItems>=miSpaces) ChangeSize(miSpaces*1.5); mpList[miItems++]=lpValue;};
 	/// This will remove the item liPos from the List. It will delete the item and shuffle all the other items in teh list to the front of the list.
-	void Remove(uint32 liPos)
+	void Delete(uint32 liPos)
 	{
 		if (mpList[liPos] && liPos<miItems)
 		{
 			delete mpList[liPos]; mpList[liPos]=0;
+			--miItems;
+			if(miItems-liPos) memmove(mpList[liPos],mpList[liPos+2],sizeof(cX*)*miItems-liPos);
+		}
+	};
+	///This will remove the Item from the list without deleting it.
+	void StripItem(uint32 liPos)
+	{
+		if (mpList[liPos] && liPos<miItems)
+		{
+			mpList[liPos]=0;
 			--miItems;
 			if(miItems-liPos) memmove(mpList[liPos],mpList[liPos+2],sizeof(cX*)*miItems-liPos);
 		}
@@ -239,10 +249,15 @@ public:
 		}
 	};
 
-    void Remove(cX* lpItem)
+    void Delete(cX* lpItem)
     {
         int32 liCheck=GetItemPos(lpItem);
-        if(liCheck>=0) Remove(liCheck);
+        if(liCheck>=0) Delete(liCheck);
+    };
+	void StripItem(cX* lpItem)
+    {
+        int32 liCheck=GetItemPos(lpItem);
+        if(liCheck>=0) StripItem(liCheck);
     };
 
 	int32 GetItemPos(cX* lpItem)

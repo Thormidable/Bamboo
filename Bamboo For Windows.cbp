@@ -29,29 +29,6 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
-			<Target title="64 Debug">
-				<Option output="Windows\Debug\libBambooWin64_d" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="" />
-				<Option object_output="obj\Debug\" />
-				<Option type="2" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-				</Compiler>
-			</Target>
-			<Target title="64 Release">
-				<Option output="Windows\libBambooWin64" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="" />
-				<Option object_output="obj\Release\" />
-				<Option type="2" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-O2" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
@@ -65,525 +42,423 @@
 		</Linker>
 		<Unit filename="src\Audio\WTcAudioBuffer.cpp" />
 		<Unit filename="src\Audio\WTcAudioBuffer.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Audio\WTcAudioDevice.cpp" />
 		<Unit filename="src\Audio\WTcAudioDevice.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Audio\WTcAudioObject.cpp" />
 		<Unit filename="src\Audio\WTcAudioObject.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\FX\WTcFog.cpp" />
 		<Unit filename="src\Camera\FX\WTcFog.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\FX\WTcLight.cpp" />
 		<Unit filename="src\Camera\FX\WTcLight.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\FX\WTcMaterial.cpp" />
 		<Unit filename="src\Camera\FX\WTcMaterial.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\FX\WTcSpotLight.cpp" />
 		<Unit filename="src\Camera\FX\WTcSpotLight.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\FX\WTvLight.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\Nodes\WTcNodeList.cpp" />
 		<Unit filename="src\Camera\Nodes\WTcNodeList.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\Nodes\WTcRenderNode.cpp" />
 		<Unit filename="src\Camera\Nodes\WTcRenderNode.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="src\Camera\Renderable\WTcAttributeData.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcAttributeData.h" />
 		<Unit filename="src\Camera\Renderable\WTcBeamMesh.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcBeamMesh.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\Renderable\WTcButton.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcButton.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\Renderable\WTcImage.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcImage.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\Renderable\WTcLandscape.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcLandscape.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\Renderable\WTcLine.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcLine.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\Renderable\WTcModel.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcModel.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\Renderable\WTcParticle.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcParticle.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\Renderable\WTcParticleGroup.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcParticleGroup.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="src\Camera\Renderable\WTcParticleSettings.cpp" />
+		<Unit filename="src\Camera\Renderable\WTcParticleSettings.h" />
 		<Unit filename="src\Camera\Renderable\WTcPoint.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcPoint.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\Renderable\WTcStarMap.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcStarMap.h" />
 		<Unit filename="src\Camera\Renderable\WTcTextureText.cpp" />
 		<Unit filename="src\Camera\Renderable\WTcTextureText.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\WTcCamera.cpp" />
 		<Unit filename="src\Camera\WTcCamera.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\WTcExtraViewport.cpp" />
 		<Unit filename="src\Camera\WTcExtraViewport.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\WTcLightHandler.cpp" />
 		<Unit filename="src\Camera\WTcLightHandler.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\WTcPainter.cpp" />
 		<Unit filename="src\Camera\WTcPainter.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\WTcPerspectiveControl.cpp" />
 		<Unit filename="src\Camera\WTcPerspectiveControl.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\WTcRenderNodeObject.cpp" />
 		<Unit filename="src\Camera\WTcRenderObject.cpp" />
 		<Unit filename="src\Camera\WTcRenderObject.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\WTcRenderOwner.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\WTcRenderPointer.cpp" />
 		<Unit filename="src\Camera\WTcRenderPointer.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\WTcTextureStack.cpp" />
 		<Unit filename="src\Camera\WTcTextureStack.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Camera\WTvRenderObject.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Engine\Process\WTcParentStack.cpp" />
 		<Unit filename="src\Engine\Process\WTcParentStack.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Engine\Process\WTcProcess.cpp" />
 		<Unit filename="src\Engine\Process\WTcProcess.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Engine\WTKernel.cpp" />
 		<Unit filename="src\Engine\WTKernel.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Engine\WTcBase.cpp" />
 		<Unit filename="src\Engine\WTcBase.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Engine\WTcFrameRate.cpp" />
 		<Unit filename="src\Engine\WTcFrameRate.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Engine\WTcSignal.cpp" />
 		<Unit filename="src\Engine\WTcSignal.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Audio\WTcAudioData.cpp" />
 		<Unit filename="src\Files\Audio\WTcAudioData.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Audio\WTcSoundObject.cpp" />
 		<Unit filename="src\Files\Audio\WTcSoundObject.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\CollisionMeshes\WTcBeamCollision.cpp" />
 		<Unit filename="src\Files\CollisionMeshes\WTcBeamCollision.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\CollisionMeshes\WTcCompoundCollision.cpp" />
 		<Unit filename="src\Files\CollisionMeshes\WTcCompoundCollision.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\CollisionMeshes\WTcCompoundCollisionFile.cpp" />
 		<Unit filename="src\Files\CollisionMeshes\WTcCompoundCollisionFile.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\CollisionMeshes\WTcMeshCollision.cpp" />
 		<Unit filename="src\Files\CollisionMeshes\WTcMeshCollision.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\CollisionMeshes\WTcMeshFileCollision.cpp" />
 		<Unit filename="src\Files\CollisionMeshes\WTcMeshFileCollision.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\CollisionMeshes\WTcRayCollision.cpp" />
 		<Unit filename="src\Files\CollisionMeshes\WTcRayCollision.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\CollisionMeshes\WTcSphereCollision.cpp" />
 		<Unit filename="src\Files\CollisionMeshes\WTcSphereCollision.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\CollisionMeshes\WTvCollisionData.cpp" />
 		<Unit filename="src\Files\CollisionMeshes\WTvCollisionData.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Fonts\WTcFont.cpp" />
 		<Unit filename="src\Files\Fonts\WTcFont.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcCluster.cpp" />
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcCluster.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcFace.cpp" />
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcFace.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcFullFaceData.cpp" />
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcFullFaceData.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcPlane.cpp">
 			<Option weight="0" />
 		</Unit>
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcPlane.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcPolygon.cpp" />
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcPolygon.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcVertex.cpp" />
 		<Unit filename="src\Files\Meshes\MeshClasses\WTcVertex.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="src\Files\Meshes\WTcAsteroid.cpp" />
+		<Unit filename="src\Files\Meshes\WTcAsteroid.h" />
 		<Unit filename="src\Files\Meshes\WTcMesh.cpp" />
 		<Unit filename="src\Files\Meshes\WTcMesh.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Meshes\WTcmLandscape.cpp" />
 		<Unit filename="src\Files\Meshes\WTcmLandscape.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Meshes\WTv2DPolygon.cpp" />
 		<Unit filename="src\Files\Meshes\WTv2DPolygon.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Misc\WTcMeshTree.cpp" />
 		<Unit filename="src\Files\Misc\WTcMeshTree.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Misc\WTcMeshTreeNode.cpp" />
 		<Unit filename="src\Files\Misc\WTcMeshTreeNode.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Misc\WTcReferenceList.cpp" />
 		<Unit filename="src\Files\Misc\WTcReferenceList.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Misc\WTvMeshTree.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Shaders\WTcShader.cpp" />
 		<Unit filename="src\Files\Shaders\WTcShader.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Shaders\WTcShaderProgram.cpp" />
 		<Unit filename="src\Files\Shaders\WTcShaderProgram.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Shaders\WTcShaderVariables.cpp" />
 		<Unit filename="src\Files\Shaders\WTcShaderVariables.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Shaders\WTcUserDefinedShaderVariable.cpp" />
 		<Unit filename="src\Files\Shaders\WTcUserDefinedShaderVariable.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\Textures\WTcTexture.cpp" />
 		<Unit filename="src\Files\Textures\WTcTexture.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\WTString.cpp" />
 		<Unit filename="src\Files\WTString.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\WTcFile.cpp" />
 		<Unit filename="src\Files\WTcFile.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\WTcFileHandler.cpp" />
 		<Unit filename="src\Files\WTcFileHandler.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\WTcIMFLoader.cpp" />
 		<Unit filename="src\Files\WTcIMFLoader.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Files\WTvFile.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Global\CException.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Global\GlobalPointers.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Global\IMFDefinitions.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Global\WTDefinitions.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
-		</Unit>
-		<Unit filename="src\Global\WTGameSettings.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Global\WTSetDefinitions.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Global\WTSettings.cpp" />
 		<Unit filename="src\Global\WTSettings.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Global\WTcFlags.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Global\log.cpp" />
 		<Unit filename="src\Global\log.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Maths\WTMath.cpp">
 			<Option weight="0" />
 		</Unit>
 		<Unit filename="src\Maths\WTMath.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Maths\WTc2DVt.h" />
 		<Unit filename="src\Maths\WTc2DVtCode.h" />
 		<Unit filename="src\Maths\WTc3DVt.h">
 			<Option target="Release" />
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
 		</Unit>
 		<Unit filename="src\Maths\WTc3DVtCode.h" />
 		<Unit filename="src\Maths\WTc4DVt.h" />
 		<Unit filename="src\Maths\WTc4DVtCode.h" />
 		<Unit filename="src\Maths\WTcCameraMatrix4.cpp" />
 		<Unit filename="src\Maths\WTcCameraMatrix4.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Maths\WTcColors.cpp" />
 		<Unit filename="src\Maths\WTcColors.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Maths\WTcMatrix4.cpp" />
 		<Unit filename="src\Maths\WTcMatrix4.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Maths\WTcMatrixStack.cpp" />
 		<Unit filename="src\Maths\WTcMatrixStack.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Maths\WTcMomentum.cpp" />
 		<Unit filename="src\Maths\WTcMomentum.h" />
 		<Unit filename="src\Maths\WTcPerspectiveMatrix.cpp" />
 		<Unit filename="src\Maths\WTcPerspectiveMatrix.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="src\Maths\WTcPredictiveTracking.cpp" />
+		<Unit filename="src\Maths\WTcPredictiveTracking.h" />
 		<Unit filename="src\PTL\WTLLTemplate.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\PTL\WTLimitedList.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\PTL\WTMatrixTemplate.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\PTL\WTMinLinkedList.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\PTL\WTRadix.cpp" />
 		<Unit filename="src\PTL\WTRadix.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\PTL\WTcPushPopStack.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\PTL\WTcSingleton.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Physics\WTcCollisionBase.cpp" />
 		<Unit filename="src\Physics\WTcCollisionBase.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Physics\WTcCollisionHandler.cpp" />
 		<Unit filename="src\Physics\WTcCollisionHandler.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="src\Physics\WTcCollisionList.cpp" />
-		<Unit filename="src\Physics\WTcCollisionList.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+		<Unit filename="src\Physics\WTcCollisionList.cpp">
+			<Option weight="0" />
 		</Unit>
+		<Unit filename="src\Physics\WTcCollisionList.h" />
 		<Unit filename="src\Physics\WTcCollisionObject.cpp" />
 		<Unit filename="src\Physics\WTcCollisionObject.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\WTBamboo.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\WTOsBits.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Windows\EventHandler\WTcEventHandler.cpp" />
 		<Unit filename="src\Windows\EventHandler\WTcEventHandler.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Windows\EventHandler\WTcKeyStore.cpp" />
 		<Unit filename="src\Windows\EventHandler\WTcKeyStore.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Windows\EventHandler\WTcMouse.cpp" />
 		<Unit filename="src\Windows\EventHandler\WTcMouse.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Windows\WTWindowsKeyCodes.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Windows\WTXWindowsKeyCodes.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Windows\WTcSync.cpp" />
 		<Unit filename="src\Windows\WTcSync.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src\Windows\WTcWindow.cpp" />
 		<Unit filename="src\Windows\WTcWindow.h">
-			<Option target="64 Debug" />
-			<Option target="64 Release" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Extensions>
 			<code_completion />

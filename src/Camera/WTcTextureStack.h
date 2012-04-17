@@ -16,15 +16,19 @@ public:
 	uint32 miUniform;
 	void FirstTextureState(uint8 liTexSlot);
 	void TextureState(cTextureSlot *lpPrevious,uint8 liTexSlot);
+
+    void NewTexture(uint8 liTexSlot);
+   void ClearTexture(uint8 liTexSlot);
 };
 
 class cTextureStack
 {
-	cTextureSlot *mpTextures;
+
 	static cTextureSlot *mpNoTexture;
 protected:
 	uint8 miTextures;
 public:
+	cTextureSlot *mpTextures;
 	//Set bool to 1 if this is an object not requiring textures
 	cTextureStack(bool lbNoTextures);
 	cTextureStack();
@@ -40,6 +44,8 @@ public:
    void RemoveTextureBySlot(uint8 liTexSlot);
 
    void ClearTextureStack();
+
+
 };
 
 

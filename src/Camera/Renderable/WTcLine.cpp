@@ -119,3 +119,13 @@ void cLine::Color(cRGBA &lpColor){mfColor=lpColor;}
 void cLine::Color(cRGBA *lpColor){mfColor=lpColor;}
 void cLine::Color(cRGB &lpColor){mfColor=lpColor;}
 void cLine::Color(cRGB *lpColor){mfColor=lpColor;}
+
+float cLine::GetSize()
+{
+    return sqrt(mfVector[0]*mfVector[0]+mfVector[1]*mfVector[1]+mfVector[2]*mfVector[2]);
+}
+
+double cLine::GetSizeSq()
+{
+  return mfVector[0]*mfVector[0]+mfVector[1]*mfVector[1]+mfVector[2]*mfVector[2];
+}

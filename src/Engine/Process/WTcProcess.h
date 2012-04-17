@@ -83,7 +83,7 @@ public:
   * Process evaluation is unimportant
   *
   */
- virtual void UserSignal(SIGNAL lsSignal,void *lpData);
+ virtual bool UserSignal(SIGNAL lsSignal,void *lpData);
  /**
  * \brief Virtual function called when a Process is _KILL().
  * This is called when a process receives the _S_KILL SIGNAL. This allows you to make your renderable objects disappear, spawn new processes such as shrapnel or explosions.

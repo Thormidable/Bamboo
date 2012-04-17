@@ -56,8 +56,8 @@ void cTextButton::RenderPainter()
     {
 	SetShaderVariables();
         float lfTextLeft;
-        lfTextLeft=mfWidth*mpString.length()*0.5;
-         short liCount;
+        lfTextLeft=mfWidth*mpString.length()*0.5f;
+         uint16 liCount;
          float lfHeight=mfHeight*0.5f;
         for(liCount=0;liCount<mpString.length();++liCount)
         {
@@ -95,18 +95,18 @@ void cButton::Position(float lfX,float lfY)
 
 void cButton::Width(float lfWidth)
 {
-    XRange=lfWidth*0.5;
+    XRange=lfWidth*0.5f;
     mfWidth=lfWidth;
 }
 void cButton::Height(float lfHeight)
 {
-    YRange=lfHeight*0.5;
+    YRange=lfHeight*0.5f;
     mfHeight=lfHeight;
 }
 
 void cButton::Size(float lfSize)
 {
-  XRange=lfSize*0.5;
+  XRange=lfSize*0.5f;
   YRange=XRange*gpWindow->Ratio();
   mfWidth=lfSize;
   mfHeight=mfWidth*gpWindow->Ratio();
@@ -114,19 +114,19 @@ void cButton::Size(float lfSize)
 
 void cTextButton::Width(float lfWidth)
 {
-	XRange=lfWidth*0.5*Text().length();
+	XRange=lfWidth*0.5f*Text().length();
     mfWidth=lfWidth;
 }
 
 void cTextButton::Height(float lfHeight)
 {
-	YRange=lfHeight*0.5;
+	YRange=lfHeight*0.5f;
     mfHeight=lfHeight;
 }
 
 void cTextButton::Size(float lfSize)
 {
-  XRange=lfSize*0.5*Text().length();
+  XRange=lfSize*0.5f*Text().length();
   mfWidth=lfSize;
   YRange=mfHeight=mfWidth*gpWindow->Ratio();
 }

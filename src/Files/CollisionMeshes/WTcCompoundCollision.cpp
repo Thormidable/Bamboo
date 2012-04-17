@@ -7,9 +7,18 @@ cCompoundCollision::cCompoundCollision(uint32 liSize) : cLimitedPointerList<cCom
 cCompoundCollision::~cCompoundCollision(){DeleteAll();};
 cCompoundCollision *cCompoundCollision::Compound(){return this;};
 
+bool cCompoundCollision::Owns(vCollisionData *lpData)
+{
+ for(uint16 liCount=0;liCount<miItems;++liCount)
+ {
+  if(mpList[liCount]->mpObject==lpData || (mpList[liCount]->Compound() && mpList[liCount]->Compound()->Owns(lpData))) return 1;
+ }
+ return 0;
+};
+
 void cCompoundCollision::Update(cMatrix4 &New)
 {
- #warning comment This should recalculate the size of the object.
+ #pragma warning (This should recalculate the size of the object.)
 
 };
 

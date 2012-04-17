@@ -29,7 +29,7 @@ void cClusterList::GenerateConvex(cFullFaceList &ClusterData)
 			if(!ClusterData[liCount].IsConcave(ClusterData))
 			{
 				mpList[0].Add(ClusterData[liCount]);
-				ClusterData.Remove(liCount);
+				ClusterData.Delete(liCount);
 				--liCount;
 			}
 
@@ -48,7 +48,7 @@ void cClusterList::GenerateConcaves(cFullFaceList &ClusterData)
 	while(ClusterData.Items())
 	{
 		mpList[++miItems].Add(ClusterData[0]);
-		ClusterData.Remove(0);
+		ClusterData.Delete(0);
 		bool lbFinished=false;
 		while(!lbFinished)
 		{
@@ -60,7 +60,7 @@ void cClusterList::GenerateConcaves(cFullFaceList &ClusterData)
 					if(ClusterData[liLoop].IsConcave(mpList[miItems].Face(liCount)))
 					{
 						mpList[miItems].Add(ClusterData[liLoop]);
-						ClusterData.Remove(liLoop);
+						ClusterData.Delete(liLoop);
 						lbFinished=false;
 						--liLoop;
 					}
@@ -132,7 +132,7 @@ void cCluster::Order()
 	}
 };
 
-void cCluster::Remove(uint32 li1)
+void cCluster::Delete(uint32 li1)
 {
 	if(li1<miItems)
 	{
@@ -149,7 +149,7 @@ void cCluster::Strip()
 	{
 		for(liLoop=liCount+1;liLoop<miItems;++liLoop)
 		{
-			if(Faces[liCount].Plane==Faces[liLoop].Plane) {Remove(liLoop); liLoop=liCount;}
+			if(Faces[liCount].Plane==Faces[liLoop].Plane) {Delete(liLoop); liLoop=liCount;}
 		}
 	}
 };

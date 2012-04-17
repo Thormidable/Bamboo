@@ -12,15 +12,6 @@ cPerspectiveMatrix::cPerspectiveMatrix()
  mfNear=1.0f;
  mfFar=100.0f;
 
- //glDepthRangef(mfNear,mfFar);
-
-  /*glEnable(GL_CLIP_PLANE0);
-  glEnable(GL_CLIP_PLANE1);
-  glEnable(GL_CLIP_PLANE2);
-  glEnable(GL_CLIP_PLANE3);
-  glEnable(GL_CLIP_PLANE4);
-  glEnable(GL_CLIP_PLANE5);
-  */
 
 
 

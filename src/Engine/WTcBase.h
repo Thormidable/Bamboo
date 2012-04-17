@@ -46,6 +46,7 @@ public:
 
 		delete mpSettings;
 		delete cKernel::Instance();
+		trace("Finished Bamboo V 1.2");
 		return gpWindow->msg.wParam;
 	};
 	///This will detect the Version of OpenGL the system is using as well as the GLSL compiler and print the data to the screen.

@@ -6,7 +6,7 @@ cRenderPointer::cRenderPointer()
  mpObject=0;
  miDist=0;
  mpTexture=0;
- mbAlpha=false;
+ miAlpha=0;
  mpShader=0;
  ShaderPoint=0;
 }
@@ -15,7 +15,7 @@ cRenderPointer cRenderPointer::operator=(cRenderPointer lcOther)
 {
 mpObject=lcOther.mpObject;
 mpTexture=lcOther.mpTexture;
-mbAlpha=lcOther.mbAlpha;
+miAlpha=lcOther.miAlpha;
 mpShader=lcOther.mpShader;
 miDist=lcOther.miDist;
 return *this;
@@ -28,15 +28,15 @@ void cRenderPointer::SetObject(cRenderObject *lpObject)
 }
 
 void cRenderPointer::SetShader(cShaderProgram *lpShader){mpShader=reinterpret_cast<psize>(lpShader);ShaderPoint=lpShader;}
-void cRenderPointer::SetAlpha(bool lbAlpha){mbAlpha=lbAlpha;}
+void cRenderPointer::SetAlpha(uint8 lbAlpha){miAlpha=lbAlpha;}
 
-inline void cRenderPointer::SetAll(cRenderObject *lpObject,cShaderProgram *lpShader,bool lbAlpha)
+inline void cRenderPointer::SetAll(cRenderObject *lpObject,cShaderProgram *lpShader,uint8 lbAlpha)
 {
 mpObject=lpObject;
 UpdateTexture(0);
 mpShader=reinterpret_cast<psize>(lpShader);
 ShaderPoint=lpShader;
-mbAlpha=lbAlpha;
+miAlpha=lbAlpha;
 }
 
 void cRenderPointer::UpdateTexture(uint8 liTexSlot)

@@ -101,6 +101,7 @@ class cCameraHandler
 	cLimitedPointerList<cCamera> mcList;
 	cCameraHandler();
 public:
+    static float sfCamera_Zoom;
 	static cCameraHandler *Instance();
 	void Add(cCamera *lpCamera);
 	void Remove(cCamera *lpCamera);

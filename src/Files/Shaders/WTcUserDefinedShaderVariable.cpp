@@ -44,7 +44,7 @@ void cBooleanUniformStore::DataPointer(void *lpData)
 cUserVariable::cUserVariable()
 {
  mbGenerated=0;
- miID=0;
+ miID=-1;
 }
 
 void cUserVariable::SetID(int32 liID)
@@ -56,6 +56,12 @@ void cUserVariable::SetID(int32 liID)
 cAttributeStore::cAttributeStore()
 {
  glGenBuffers(1, &miBuffer);
+}
+
+cAttributeStore::~cAttributeStore()
+{
+ glDeleteBuffers(1,&miBuffer);
+ miBuffer=-1;
 }
 
 cFloatAttributeStore::cFloatAttributeStore()
@@ -70,12 +76,19 @@ void cFloatAttributeStore::DataPointer(void *lpData,uint32 liElements)
  mbGenerated=true;
 }
 
+void *cFloatAttributeStore::Data(){return mpData;};
+
 void cIntAttributeStore::DataPointer(void *lpData,uint32 liElements)
 {
  mpData=(GLint*)lpData;
  miElements=liElements;
  mbGenerated=true;
 }
+
+void *cIntAttributeStore::Data()
+{
+    return mpData;
+};
 
 void cBooleanAttributeStore::DataPointer(void *lpData,uint32 liElements)
 {
@@ -84,6 +97,10 @@ void cBooleanAttributeStore::DataPointer(void *lpData,uint32 liElements)
  mbGenerated=true;
 }
 
+void *cBooleanAttributeStore::Data()
+{
+    return mpData;
+};
 
 void cFloatAttributeStore::DataValue(void *lpData,uint32 liElements)
 {
@@ -160,7 +177,7 @@ void cVariableStore::WriteVariables()
   uint32 liCount;
   for(liCount=0;liCount<miVariables;++liCount)
   {
-#warning comment Check this is safe.
+	#pragma warning (Check this is safe)
 	 //if(mpVariables[liCount])
 		 mpVariables[liCount]->Write();
   }
@@ -329,15 +346,27 @@ cFloatUniformStore::cFloatUniformStore()
 {
     mpData=0;
 }
+
+void *cFloatUniformStore::Data()
+{
+    return mpData;
+};
 cIntUniformStore::cIntUniformStore()
 {
     mpData=0;
 }
+void *cIntUniformStore::Data()
+{
+return mpData;
+};
 cBooleanUniformStore::cBooleanUniformStore()
 {
     mpData=0;
 }
-
+void *cBooleanUniformStore::Data()
+{
+    return mpData;
+};
 cFloatUniformStore::~cFloatUniformStore()
 {
     ClearData();
@@ -558,9 +587,12 @@ void cUniformMatrix2::DataValue(void *lpData)
 
 void cAttributeStore::Write()
 {
-#warning comment Have removed if(miID) before glEnableVertexAttribArray
+ if(Data() && miID>-1)
+ {
 	if(mbGenerated) Buffer();
+	else Bind();
 	glEnableVertexAttribArray(miID);
+ }
 }
 
 
@@ -568,7 +600,8 @@ void cAttributeArray1::Buffer()
 {
 	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * miElements , mpData, GL_STATIC_DRAW);
-	glVertexAttribPointer(miID,1,GL_FLOAT,0,0,0);
+    glVertexAttribPointer(miID,1,GL_FLOAT,0,0,0);
+    mbGenerated=false;
 }
 
 void cAttributeArray2::Buffer()
@@ -576,13 +609,15 @@ void cAttributeArray2::Buffer()
 	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) *2* miElements , mpData, GL_STATIC_DRAW);
 	glVertexAttribPointer(miID,2,GL_FLOAT,0,0,0);
+	mbGenerated=false;
 }
 
 void cAttributeArray3::Buffer()
 {
 		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) *miElements *3, mpData, GL_STATIC_DRAW);
-		glVertexAttribPointer(miID,3,GL_FLOAT,0,0,0);
+        glVertexAttribPointer(miID,3,GL_FLOAT,0,0,0);
+        mbGenerated=false;
 }
 
 void cAttributeArray4::Buffer()
@@ -590,6 +625,7 @@ void cAttributeArray4::Buffer()
 		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * miElements *4, mpData, GL_STATIC_DRAW);
 		glVertexAttribPointer(miID,4,GL_FLOAT,0,0,0);
+		mbGenerated=false;
 }
 
 void cAttributeIntArray1::Buffer()
@@ -597,6 +633,7 @@ void cAttributeIntArray1::Buffer()
 	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(GLint) * miElements , mpData, GL_STATIC_DRAW);
 	glVertexAttribPointer(miID,1,GL_INT,0,0,0);
+	mbGenerated=false;
 }
 
 void cAttributeIntArray2::Buffer()
@@ -604,6 +641,7 @@ void cAttributeIntArray2::Buffer()
 	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(GLint) *2* miElements , mpData, GL_STATIC_DRAW);
 	glVertexAttribPointer(miID,2,GL_INT,0,0,0);
+	mbGenerated=false;
 }
 
 void cAttributeIntArray3::Buffer()
@@ -611,6 +649,7 @@ void cAttributeIntArray3::Buffer()
 		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(GLint) *miElements *3, mpData, GL_STATIC_DRAW);
 		glVertexAttribPointer(miID,3,GL_INT,0,0,0);
+		mbGenerated=false;
 }
 
 void cAttributeIntArray4::Buffer()
@@ -618,6 +657,7 @@ void cAttributeIntArray4::Buffer()
 		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(GLint) * miElements *4, mpData, GL_STATIC_DRAW);
 		glVertexAttribPointer(miID,4,GL_INT,0,0,0);
+		mbGenerated=false;
 }
 
 void cAttributeBooleanArray1::Buffer()
@@ -625,6 +665,7 @@ void cAttributeBooleanArray1::Buffer()
 	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(bool) * miElements , mpData, GL_STATIC_DRAW);
 	glVertexAttribPointer(miID,1,GL_BOOL,0,0,0);
+	mbGenerated=false;
 }
 
 void cAttributeBooleanArray2::Buffer()
@@ -632,6 +673,7 @@ void cAttributeBooleanArray2::Buffer()
 	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(bool) *2* miElements , mpData, GL_STATIC_DRAW);
 	glVertexAttribPointer(miID,2,GL_BOOL,0,0,0);
+	mbGenerated=false;
 }
 
 void cAttributeBooleanArray3::Buffer()
@@ -639,6 +681,7 @@ void cAttributeBooleanArray3::Buffer()
 		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(bool) *miElements *3, mpData, GL_STATIC_DRAW);
 		glVertexAttribPointer(miID,3,GL_BOOL,0,0,0);
+		mbGenerated=false;
 }
 
 void cAttributeBooleanArray4::Buffer()
@@ -646,4 +689,119 @@ void cAttributeBooleanArray4::Buffer()
 		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(bool) * miElements *4, mpData, GL_STATIC_DRAW);
 		glVertexAttribPointer(miID,4,GL_BOOL,0,0,0);
+		mbGenerated=false;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void cAttributeArray1::Bind()
+{
+	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+    glVertexAttribPointer(miID,1,GL_FLOAT,0,0,0);
+}
+
+void cAttributeArray2::Bind()
+{
+	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+	glVertexAttribPointer(miID,2,GL_FLOAT,0,0,0);
+}
+
+void cAttributeArray3::Bind()
+{
+		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+        glVertexAttribPointer(miID,3,GL_FLOAT,0,0,0);
+}
+
+void cAttributeArray4::Bind()
+{
+		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+		glVertexAttribPointer(miID,4,GL_FLOAT,0,0,0);
+}
+
+void cAttributeIntArray1::Bind()
+{
+	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+	glVertexAttribPointer(miID,1,GL_INT,0,0,0);
+}
+
+void cAttributeIntArray2::Bind()
+{
+	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+	glVertexAttribPointer(miID,2,GL_INT,0,0,0);
+}
+
+void cAttributeIntArray3::Bind()
+{
+		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+		glVertexAttribPointer(miID,3,GL_INT,0,0,0);
+}
+
+void cAttributeIntArray4::Bind()
+{
+		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+		glVertexAttribPointer(miID,4,GL_INT,0,0,0);
+}
+
+void cAttributeBooleanArray1::Bind()
+{
+	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+	glVertexAttribPointer(miID,1,GL_BOOL,0,0,0);
+}
+
+void cAttributeBooleanArray2::Bind()
+{
+	glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+	glVertexAttribPointer(miID,2,GL_BOOL,0,0,0);
+}
+
+void cAttributeBooleanArray3::Bind()
+{
+		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+		glVertexAttribPointer(miID,3,GL_BOOL,0,0,0);
+}
+
+void cAttributeBooleanArray4::Bind()
+{
+		glBindBuffer(GL_ARRAY_BUFFER, miBuffer);
+		glVertexAttribPointer(miID,4,GL_BOOL,0,0,0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ void cVoidVariable::Write(){};
+ void cVoidVariable::DataValue(void *lpData){(void) lpData;};
+ void cVoidVariable::DataPointer(void *lpData){(void) lpData;};
+ void cVoidVariable::DataValue(void *lpData,uint32 liElements){(void) lpData; (void) liElements;};
+ void cVoidVariable::DataPointer(void *lpData,uint32 liElements){(void) lpData; (void) liElements;};
+ void *cVoidVariable::Data(){return 0;};

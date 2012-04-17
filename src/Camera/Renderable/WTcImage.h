@@ -70,6 +70,8 @@ public:
         ///Will set the render priority (order of rendering) for this 2D object. By default the acceptable range is 0.0 - 10.0. 0.0 is the highest priority, 10.0 is the lowest priority. Objects start at a priority of 5.0f.
         void Priority(float lfPriority);
 
+        float GetSize(){return 0.0f;};
+        double GetSizeSq(){return 0.0f;};
 
 
 };

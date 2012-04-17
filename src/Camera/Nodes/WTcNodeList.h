@@ -48,6 +48,8 @@ class cNodeList : public vRenderNode
 static float lsPosition[16];
 
 float mfSize;
+
+uint32 miCursor;
 public:
  /**
  * \brief This is the constructor for cNodeList. It will create the list based on the cMeshTree file lpTree.
@@ -63,6 +65,10 @@ cNodeList(cMeshTree *lpTree,vRenderNode *lpRenderer);
 cNodeList(cMeshTree *lpTree,cCamera *lpCamera);
 cNodeList(uint32 liLength,cCamera *lpCamera);
 cNodeList(bool lpTopLevel,uint32 liLength,cCamera *lpCamera);
+cNodeList(const char *lsTree);
+cNodeList(const char *lpTree,vRenderNode *lpRenderer);
+cNodeList(const char *lpTree,cCamera *lpCamera);
+
 /// Will re-initialise this cNodeList using the file lpTree. It will have the structure and models of the file.
 void LoadTree(cMeshTree *lpTree);
 ///Will re-initialise this cNodeList using the ModelList with reference lcTree. It will have the structure and models of the file.
@@ -92,7 +98,7 @@ void LoadTree(string lcTree);
 
 cRenderOwner Add(vRenderObject*);
 cRenderOwner Add(vRenderObject *lpNew,uint8 miLevel);
-void Remove(cRenderOwner Owner);
+void Delete(cRenderOwner Owner);
 
 void RecalculateTotalMatrix();
 void CalculateMatrices();
@@ -117,6 +123,21 @@ public:
  void KillAll();
 
 	cMatrix4 *CalculateGlobalMatrix();
+
+	cRenderOwner MoveItem(vRenderObject *lpObj,vRenderNode *lpRenderer);
+
+	void MoveAll(vRenderNode *lpRender);
+
+	vRenderObject *FindStart();
+	vRenderObject *FindNext();
+
+	bool ContainsItems();
+
+	float GetSize();
+	double GetSizeSq();
+
+	void TreeProcessUserSignal(SIGNAL lsSignal,void *lpData);
+	void TreeProcessSignal(SIGNAL lsSignal);
 };
 
 #endif

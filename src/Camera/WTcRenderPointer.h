@@ -13,7 +13,7 @@ protected:
   cRenderObject  *mpObject;
   uint32         miDist;
   psize mpTexture;
-  bool           mbAlpha;
+  uint8          miAlpha;
   psize mpShader;
   cShaderProgram *ShaderPoint;
 
@@ -26,9 +26,9 @@ void SetObject(cRenderObject *lpObject);
 ///This will set the shader to be used by the object.
 void SetShader(cShaderProgram *lpShader);
 ///This will set the Alpha of the object.
-void SetAlpha(bool lbAlpha);
+void SetAlpha(uint8 lbAlpha);
 ///This will all the user to set some / all of the parameters for this object.
-void SetAll(cRenderObject *lpObject,cShaderProgram *lpShader=0,bool lbAlpha=0);
+void SetAll(cRenderObject *lpObject,cShaderProgram *lpShader=0,uint8 lbAlpha=0);
 
 void UpdateTexture(uint8 liTexSlot);
  friend class cPainter;

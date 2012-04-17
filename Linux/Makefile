@@ -324,6 +324,30 @@ Camera/Nodes/WTcRenderNode.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.s
 .PHONY : Camera/Nodes/WTcRenderNode.cpp.s
 
+Camera/Renderable/WTcAttributeData.o: Camera/Renderable/WTcAttributeData.cpp.o
+.PHONY : Camera/Renderable/WTcAttributeData.o
+
+# target to build an object file
+Camera/Renderable/WTcAttributeData.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o
+.PHONY : Camera/Renderable/WTcAttributeData.cpp.o
+
+Camera/Renderable/WTcAttributeData.i: Camera/Renderable/WTcAttributeData.cpp.i
+.PHONY : Camera/Renderable/WTcAttributeData.i
+
+# target to preprocess a source file
+Camera/Renderable/WTcAttributeData.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.i
+.PHONY : Camera/Renderable/WTcAttributeData.cpp.i
+
+Camera/Renderable/WTcAttributeData.s: Camera/Renderable/WTcAttributeData.cpp.s
+.PHONY : Camera/Renderable/WTcAttributeData.s
+
+# target to generate assembly for a file
+Camera/Renderable/WTcAttributeData.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.s
+.PHONY : Camera/Renderable/WTcAttributeData.cpp.s
+
 Camera/Renderable/WTcBeamMesh.o: Camera/Renderable/WTcBeamMesh.cpp.o
 .PHONY : Camera/Renderable/WTcBeamMesh.o
 
@@ -515,6 +539,30 @@ Camera/Renderable/WTcParticleGroup.s: Camera/Renderable/WTcParticleGroup.cpp.s
 Camera/Renderable/WTcParticleGroup.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.s
 .PHONY : Camera/Renderable/WTcParticleGroup.cpp.s
+
+Camera/Renderable/WTcParticleSettings.o: Camera/Renderable/WTcParticleSettings.cpp.o
+.PHONY : Camera/Renderable/WTcParticleSettings.o
+
+# target to build an object file
+Camera/Renderable/WTcParticleSettings.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o
+.PHONY : Camera/Renderable/WTcParticleSettings.cpp.o
+
+Camera/Renderable/WTcParticleSettings.i: Camera/Renderable/WTcParticleSettings.cpp.i
+.PHONY : Camera/Renderable/WTcParticleSettings.i
+
+# target to preprocess a source file
+Camera/Renderable/WTcParticleSettings.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.i
+.PHONY : Camera/Renderable/WTcParticleSettings.cpp.i
+
+Camera/Renderable/WTcParticleSettings.s: Camera/Renderable/WTcParticleSettings.cpp.s
+.PHONY : Camera/Renderable/WTcParticleSettings.s
+
+# target to generate assembly for a file
+Camera/Renderable/WTcParticleSettings.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.s
+.PHONY : Camera/Renderable/WTcParticleSettings.cpp.s
 
 Camera/Renderable/WTcPoint.o: Camera/Renderable/WTcPoint.cpp.o
 .PHONY : Camera/Renderable/WTcPoint.o
@@ -1908,6 +1956,30 @@ Maths/WTcPerspectiveMatrix.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.s
 .PHONY : Maths/WTcPerspectiveMatrix.cpp.s
 
+Maths/WTcPredictiveTracking.o: Maths/WTcPredictiveTracking.cpp.o
+.PHONY : Maths/WTcPredictiveTracking.o
+
+# target to build an object file
+Maths/WTcPredictiveTracking.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o
+.PHONY : Maths/WTcPredictiveTracking.cpp.o
+
+Maths/WTcPredictiveTracking.i: Maths/WTcPredictiveTracking.cpp.i
+.PHONY : Maths/WTcPredictiveTracking.i
+
+# target to preprocess a source file
+Maths/WTcPredictiveTracking.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.i
+.PHONY : Maths/WTcPredictiveTracking.cpp.i
+
+Maths/WTcPredictiveTracking.s: Maths/WTcPredictiveTracking.cpp.s
+.PHONY : Maths/WTcPredictiveTracking.s
+
+# target to generate assembly for a file
+Maths/WTcPredictiveTracking.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.s
+.PHONY : Maths/WTcPredictiveTracking.cpp.s
+
 PTL/WTRadix.o: PTL/WTRadix.cpp.o
 .PHONY : PTL/WTRadix.o
 
@@ -2184,6 +2256,9 @@ help:
 	@echo "... Camera/Nodes/WTcRenderNode.o"
 	@echo "... Camera/Nodes/WTcRenderNode.i"
 	@echo "... Camera/Nodes/WTcRenderNode.s"
+	@echo "... Camera/Renderable/WTcAttributeData.o"
+	@echo "... Camera/Renderable/WTcAttributeData.i"
+	@echo "... Camera/Renderable/WTcAttributeData.s"
 	@echo "... Camera/Renderable/WTcBeamMesh.o"
 	@echo "... Camera/Renderable/WTcBeamMesh.i"
 	@echo "... Camera/Renderable/WTcBeamMesh.s"
@@ -2208,6 +2283,9 @@ help:
 	@echo "... Camera/Renderable/WTcParticleGroup.o"
 	@echo "... Camera/Renderable/WTcParticleGroup.i"
 	@echo "... Camera/Renderable/WTcParticleGroup.s"
+	@echo "... Camera/Renderable/WTcParticleSettings.o"
+	@echo "... Camera/Renderable/WTcParticleSettings.i"
+	@echo "... Camera/Renderable/WTcParticleSettings.s"
 	@echo "... Camera/Renderable/WTcPoint.o"
 	@echo "... Camera/Renderable/WTcPoint.i"
 	@echo "... Camera/Renderable/WTcPoint.s"
@@ -2382,6 +2460,9 @@ help:
 	@echo "... Maths/WTcPerspectiveMatrix.o"
 	@echo "... Maths/WTcPerspectiveMatrix.i"
 	@echo "... Maths/WTcPerspectiveMatrix.s"
+	@echo "... Maths/WTcPredictiveTracking.o"
+	@echo "... Maths/WTcPredictiveTracking.i"
+	@echo "... Maths/WTcPredictiveTracking.s"
 	@echo "... PTL/WTRadix.o"
 	@echo "... PTL/WTRadix.i"
 	@echo "... PTL/WTRadix.s"

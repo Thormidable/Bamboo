@@ -31,6 +31,8 @@ public:
 
 	/// This will return the absolute size of this vector.
        Type Magnitude();
+    /// This will return the squared absolute size of this vector.
+       Type MagnitudeSq();
 	/// This will make the magnitude of this vector 1 while maintaining its direction.
        void Normalise();
 

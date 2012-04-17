@@ -37,6 +37,9 @@ public:
 	/// Will return the height of the vertex at liX,liZ. (position is based on number of segments NOT distance)
 	float GetVertexHeight(int liX,int liZ);
 
+    float GetSize();
+    double GetSizeSq();
+
 };
 
 #endif

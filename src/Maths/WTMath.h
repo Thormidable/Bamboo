@@ -3,236 +3,7 @@
 
 class cRGB;
 class cRGBA;
-/*
-///This is a 1 Dimensional float vector object
-class c1DVf
-{
-public:
-	float v;
-	float operator=(float lfFloat);
-	float *operator=(float *lfFloat);
-	c1DVf operator=(c1DVf Other);
-	c1DVf *operator=(c1DVf *Other);
 
-	float operator+(float lfFloat);
-	float operator+(c1DVf Other);
-
-	float operator-(float lfFloat);
-	float operator-(c1DVf Other);
-
-	float operator*(float lfFloat);
-	float operator*(c1DVf Other);
-
-	float operator/(float lfFloat);
-	float operator/(c1DVf Other);
-
-	void Normalise();
-
-	float Magnatude();
-
-	c1DVf(float *lfVect);
-	c1DVf(float lfVect=0.0f);
-	c1DVf(c1DVf &lfVect);
-	c1DVf(c1DVf *lfVect);
-
-
-};
-
-///This is a 2 Dimensional float vector object.
-class c2DVf
-{
-public:
-	float v[2];
-	///Return this Vectors X Value
-	float X();
-	///Return this Vectors Y Value
-	float Y();
-	//Set this Vectors X Value
-	void X(float lfX);
-	//Set this Vectors Y Value
-	void Y(float lfY);
-	/// This will return the angle of the vector in radians.
-       double Angle();
-	/// This will return the absolute size of the vector.
-       float Magnitude();
-	/// This will equate this vector to the c2DVf pointed to by lpValue.
-       void operator=(c2DVf *lpValue);
-	///Allows the user to access the components as an array of values.
-       float &operator[](uint32 liPos){return v[liPos];};
-
-    c2DVf(float *lfVect);
-	c2DVf(float lfX=0.0f,float lfY=0.0f);
-	c2DVf(c2DVf &lfVect);
-	c2DVf(c2DVf *lfVect);
-};
-
-/// This is a 3 dimensional float vector object
-class c3DVf
-{
-public:
-	float v[3];
-	///Return this Vectors X Value
-	float X();
-	///Return this Vectors Y Value
-	float Y();
-	///Return this Vectors Z Value
-	float Z();
-
-	///Set this Vectors X Value
-	void X(float lfX);
-	///Set this Vectors Y Value
-	void Y(float lfY);
-	///Set this Vectors Z Value
-	void Z(float lfZ);
-
-
-	/// This will return the absolute size of this vector.
-       float Magnitude();
-	/// This will make the magnitude of this vector 1 while maintaining its direction.
-       void Normalise();
-
-		///Constructor to allow the User to initialise 0-3 components
-        c3DVf(float lf0=0.0f,float lf1=0.0f,float lf2=0.0f);
-		///Constructor to initialise the object from an array of three floats.
-        c3DVf(float *lf0);
-
-       c3DVf operator=(c3DVf *lpValue);
-       c3DVf operator=(cRGB *lpValue);
-       c3DVf operator=(cRGB &lpValue);
-       float *operator=(float *lpValue);
-
-       c3DVf operator+=(c3DVf &lpValue);
-       c3DVf operator+=(c3DVf *lpValue);
-       float *operator+=(float *lpValue);
-
-       c3DVf operator-=(c3DVf &lpValue);
-       c3DVf operator-=(c3DVf *lpValue);
-       float *operator-=(float *lpValue);
-
-       c3DVf operator-(c3DVf &lpValue);
-       c3DVf operator-(c3DVf *lpValue);
-       float *operator-(float *lpValue);
-
-       c3DVf operator+(c3DVf &lpValue);
-       c3DVf operator+(c3DVf *lpValue);
-       float *operator+(float *lpValue);
-
-       ///Will Find the cross Product of this vector and the vector lpValue.
-       c3DVf operator*(c3DVf &lpValue);
-       float *operator*(float *lpValue);
-       float *operator*(float *lpValue);
-
-	   ///Will Findthe Dot Product of this vector and the vector lpValue.
-       float Dot(c3DVf &lpValue);
-       float Dot(float *lpValue);
-       float Dot(c3DVf *lpValue);
-
-
-	   ///Allows the User to access the components as if an array of values.
-       float &operator[](uint32 liPos){return v[liPos];};
-        c3DVf(const c3DVf &lfVect);
-        c3DVf(c3DVf *lfVect);
-};
-/// This is a 4 dimensional float vector object
-class c4DVf
-{
-
-public:
-
-	float v[4];
-	///Return this Vectors X Value
-	float X();
-	///Return this Vectors Y Value
-	float Y();
-	///Return this Vectors Z Value
-	float Z();
-	///Return this Vectors W Value
-	float W();
-
-	//Set thcf2DVis Vectors X Value
-	void X(float lfX);
-	//Set this Vectors Y Value
-	void Y(float lfY);
-	//Set this Vectors Z Value
-	void Z(float lfZ);
-	//Set this Vectors W Value
-	void W(float lfW);
-
-			///Constructor to allow the User to initialise 0-4 components
-        c4DVf(float lf0=0.0f,float lf1=0.0f,float lf2=0.0f,float lf3=0.0f);
-				///Constructor to initialise the object from an array of four floats.
-        c4DVf(float *lf0);
-
-       c4DVf *operator=(c4DVf *lpValue);
-       c4DVf &operator=(c4DVf &lpValue);
-       float *operator=(float *lpValue);
-       c4DVf &operator+=(c4DVf &lpValue);
-       c4DVf *operator+=(c4DVf *lpValue);
-       c4DVf *operator=(cRGBA *lpValue);
-       c4DVf &operator=(cRGBA &lpValue);
-       c4DVf *operator=(cRGB *lpValue);
-       c4DVf &operator=(cRGB &lpValue);
-
-///Allows the User to access the components as if an array of values.
-       float &operator[](uint32 liPos);
-
-        c4DVf(c4DVf &lfVect);
-        c4DVf(c4DVf *lfVect);
-
-};
-
-/// This is a 2 Dimensional integer vector.
-class c2DVi
-{
-public:
-	int v[2];
-
-		///Return this Vectors X Value
-	int X();
-	///Return this Vectors Y Value
-	int Y();
-	/// This will return the angle of the vector in radians.
-       long Angle();
-	/// This will return the absolute size of the vector.
-       int Magnitude();
-       c2DVi *operator=(c2DVi *lpValue);
-	   ///Allows the User to access the components as if an array of values.
-       int &operator[](uint32 liPos){return v[liPos];};
-
-        c2DVi(int *lfVect);
-        c2DVi(int lfX=0,int lfY=0);
-        c2DVi(c2DVi &lfVect);
-        c2DVi(c2DVi *lfVect);
-};
-
-/// This is a 3 Dimensional integer vector.
-class c3DVi
-{
-public:
-	int v[3];
-
-		///Return this Vectors X Value
-	int X();
-	///Return this Vectors Y Value
-	int Y();
-	///Return this Vectors Z Value
-	int Z();
-	/// This will return the absolute size of the vector.
-       int Magnitude();
-       c3DVi operator*(c3DVi lvOther);
-       c3DVi operator=(c3DVi *lpValue);
-       c3DVi operator=(c3DVi lpValue);
-	   	   ///Will Findthe Dot Product of this vector and the vector lpValue.
-       float Dot(c3DVi lpValue);
-	   ///Allows the User to access the components as if an array of values.
-       int &operator[](uint32 liPos){return v[liPos];};
-
-       c3DVi(int *lfVect);
-       c3DVi(int lfX=0,int lfY=0,int lfZ=0);
-       c3DVi(c3DVi &lfVect);
-       c3DVi(c3DVi *lfVect);
-};
-*/
 /// This function takes an angle in Degrees and will return it in radians.
 float DegreestoRadians(float lfAngle);
 /// This function takes an angle in radians and will return it in Degrees.
@@ -259,6 +30,186 @@ template<class tType> tType ClampValueOut(tType lfValue,tType lfClamp)
     return lfValue;
 };
 
+template<class tType> tType CyclicValue(tType lfValue,tType lfCycle)
+{
+  while(lfValue>lfCycle){lfValue-=lfCycle;}
+  while(lfValue<0.0f){lfValue+=lfCycle;}
+  return lfValue;
+};
 
+template<class tType> tType LoopingValue(tType lfValue,tType lfCycle)
+{
+  while(lfValue>lfCycle){lfValue-=2*lfCycle;}
+  while(lfValue<-lfCycle){lfValue+=2*lfCycle;}
+  return lfValue;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+// BUBBLE SORT
+template<class tType> void BubbleSort(tType *arr, uint32 max)
+{
+tType tmp;
+for(uint32 i=0;i<max;i++)
+{
+ for(uint32 x=0; x<max-1-i; x++)
+ {
+  if(arr[x] > arr[x+1])
+    {
+    //r.push_back(rnd);
+   tmp = arr[x];
+   arr[x] = arr[x+1];
+   arr[x+1] = tmp;
+  }
+ }
+
+}
+
+}
+// SELECTION SORT
+template<class tType> void SelectionSort(tType *arr, uint32 max)
+{
+tType tmp;
+uint32 min;
+for(long i=0;i<max;i++)
+{
+min = i;
+   for(uint32 x=i; x<max; x++)
+   {
+    if(arr[x] < arr[min])
+     {
+  min = x;
+    }
+   }
+  tmp = arr[i];
+  arr[i] = arr[min];
+  arr[min] = tmp;
+ }
+}
+
+// INSERTION SORT
+template<class tType> void InsertionSort(tType *arr, uint32 max)
+{
+uint32 i, j;
+tType index;
+for(i=1; i < max;i++)
+{
+    index  = arr[i];
+    j = i;
+    while((j > 0) && (arr[j-1] > index))
+       {
+        arr[j] = arr[j-1];
+        j = j-1;
+       }
+   arr[j] = index;
+}
+
+}
+template<class tType> void ShellSort(tType *arr, long max)
+{
+
+uint32 i, j;
+tType index;
+for(i=1; i < max;i++)
+{
+    index  = arr[i];
+    j = i;
+    while((j > 0) && (arr[j-1] > index))
+       {
+        arr[j] = arr[j-1];
+        j = j-1;
+
+      }
+   arr[j] = index;
+}
+}
+
+
+
+
+
+template<class tType> void BubbleSort(tType **arr, long max,bool (*Comparison)(tType*,tType*))
+{
+tType *tmp;
+for(uint32 i=0;i<max;i++)
+{
+ for(uint32 x=0; x<max-1-i; x++)
+ {
+  if(Comparison(arr[x],arr[x+1]))
+    {
+    //r.push_back(rnd);
+   tmp = arr[x];
+   arr[x] = arr[x+1];
+   arr[x+1] = tmp;
+  }
+ }
+
+}
+
+}
+// SELECTION SORT
+template<class tType> void SelectionSort(tType **arr, long max,bool (*Comparison)(tType*,tType*))
+{
+tType *tmp;
+int min;
+for(int32 i=0;i<max;i++)
+{
+min = i;
+   for(uint32 x=i; x<max; x++)
+   {
+    if(Comparison(arr[x],arr[min]))
+     {
+  min = x;
+    }
+   }
+  tmp = arr[i];
+  arr[i] = arr[min];
+  arr[min] = tmp;
+ }
+}
+// INSERTION SORT
+template<class tType> void InsertionSort(tType **arr, long max,bool(*Comparison)(tType*,tType*))
+{
+int i, j;
+tType *index;
+for(i=1; i < max;i++)
+{
+    index  = arr[i];
+    j = i;
+    while((j > 0) && (Comparison(arr[j-1],index)))
+       {
+        arr[j] = arr[j-1];
+        j = j-1;
+       }
+   arr[j] = index;
+}
+}
+// SHELL SORT
+template<class tType> void ShellSort(tType **arr, long max,bool(*Comparison)(tType*,tType*))
+{
+int i, j;
+tType *index;
+for(i=1; i < max;i++)
+{
+    index  = arr[i];
+    j = i;
+    while((j > 0) && (Comparison(arr[j-1],index)))
+       {
+        arr[j] = arr[j-1];
+        j = j-1;
+      }
+   arr[j] = index;
+}
+}
 
 #endif

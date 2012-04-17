@@ -79,75 +79,57 @@ void cNodeList::DeleteAll()
 }
 
 
+cNodeList::cNodeList(const char *lsTree)
+{
+ mpMeshTree=_GET_MODELLIST_FILE(lsTree);
+ LoadTree(mpMeshTree);
+};
+cNodeList::cNodeList(const char *lpTree,vRenderNode *lpRenderer) : vRenderNode(lpRenderer)
+{
+	mpMeshTree=_GET_MODELLIST_FILE(lpTree);
+	LoadTree(mpMeshTree);
+};
+
+cNodeList::cNodeList(const char *lpTree,cCamera *lpCamera) : vRenderNode(lpCamera)
+{
+	mpMeshTree=_GET_MODELLIST_FILE(lpTree);
+	LoadTree(mpMeshTree);
+};
 
 cNodeList::cNodeList(uint32 liLength)
 {
- mpCamera=cCamera::Instance();
- mpRenderer=cCamera::Instance()->RenderList();
- mcOwnerNode=mpRenderer->Add(this);
-
-	InitialiseList(liLength);
+ InitialiseList(liLength);
 }
 
-cNodeList::cNodeList(cMeshTree *lpTree,cCamera *lpCamera)
+cNodeList::cNodeList(cMeshTree *lpTree,cCamera *lpCamera) : vRenderNode(lpCamera)
 {
-  mpCamera=lpCamera;
-  mpRenderer=lpCamera->RenderList();
-  mcOwnerNode=mpRenderer->Add(this);
-
-	mpMeshTree=lpTree;
+ 	mpMeshTree=lpTree;
 	LoadTree(lpTree);
 };
-cNodeList::cNodeList(uint32 liLength,cCamera *lpCamera)
+cNodeList::cNodeList(uint32 liLength,cCamera *lpCamera) : vRenderNode(lpCamera)
 {
-  mpCamera=lpCamera;
-  mpRenderer=lpCamera->RenderList();
-  mcOwnerNode=mpRenderer->Add(this);
-
- Identity();
  InitialiseList(liLength);
 };
 
-cNodeList::cNodeList(uint32 liLength,vRenderNode *lpRenderer)
+cNodeList::cNodeList(uint32 liLength,vRenderNode *lpRenderer) : vRenderNode(lpRenderer)
 {
-  mpRenderer=lpRenderer;
-  mpCamera=mpRenderer->Camera();
-  mcOwnerNode=lpRenderer->Add(this);
-
- Identity();
  InitialiseList(liLength);
 }
 
-cNodeList::cNodeList(bool lpTopLevel,uint32 liLength,cCamera *lpCamera)
+cNodeList::cNodeList(bool lpTopLevel,uint32 liLength,cCamera *lpCamera) : vRenderNode(lpTopLevel,lpCamera)
 {
-	(void) lpTopLevel;
-  mpRenderer=0;
-  mcOwnerNode.Node=0;
-  mpCamera=lpCamera;
-
-   Identity();
  InitialiseList(liLength);
-
 };
 
 cNodeList::cNodeList(cMeshTree *lpTree)
 {
-    mpCamera=cCamera::Instance();
-	 mpRenderer=mpCamera->RenderList();
-
- 	mcOwnerNode=mpRenderer->Add(this);
 	mpMeshTree=lpTree;
 	LoadTree(lpTree);
 	Identity();
 }
 
-cNodeList::cNodeList(cMeshTree *lpTree,vRenderNode *lpRenderer)
+cNodeList::cNodeList(cMeshTree *lpTree,vRenderNode *lpRenderer)  : vRenderNode(lpRenderer)
 {
-
-  mpRenderer=lpRenderer;
-  mcOwnerNode=lpRenderer->Add(this);
-  mpCamera=mpRenderer->Camera();
-
 	mpMeshTree=lpTree;
 	LoadTree(lpTree);
 	Identity();
@@ -175,19 +157,20 @@ cRenderOwner cNodeList::Add(vRenderObject *lpNew,uint8 miLevel)
 {
 	cRenderOwner mcOwner;
 	mcOwner.List=new cNodeListNode(lpNew,miLevel);
+	mcOwner.Node=0;
     mpList.Add(mcOwner.List);
 	return mcOwner;
 }
 
-void cNodeList::Remove(cRenderOwner lpCurrent)
+void cNodeList::Delete(cRenderOwner lpCurrent)
 {
-    mpList.Remove(lpCurrent.List);
+    mpList.Delete(lpCurrent.List);
 }
 
 void cNodeList::StartKillAll()
 {
     KillAll();
-    if(mpRenderer) mpRenderer->Remove(mcOwnerNode);
+    if(mpRenderer) mpRenderer->Delete(mcOwnerNode);
     else trace("This is the Camera cNodeList. Cannot Delete.");
 }
 
@@ -208,6 +191,8 @@ void cNodeList::KillAll()
 
 void cNodeList::RecalculateTotalMatrix()
 {
+	mmTotalCache=_COMBINED_MATRIX;
+	mmTotalCache.Multiply(mmCache);
 uint32 liListPos;
  for(liListPos=0;liListPos<mpList.Items();++liListPos)
  {
@@ -349,28 +334,6 @@ uint32 cNodeList::ListLength()
 
 }
 
-/*
-void cNodeList::UpdateSize()
-{
-  float lfPos[miLength][4];
- uint32 liListPos;
- uint32 miLevel=0;
-for(liListPos=0;liListPos<miLength;++liListPos)
- {
-	  miLevel=mpList[liListPos].miLevel;
-	  lfPos[miLevel][0]=lfPos[miLevel-1][0]+mpList[liListPos].mmMatrix.Position()[0];
-	  lfPos[miLevel][1]=lfPos[miLevel-1][1]+mpList[liListPos].mmMatrix.Position()[1];
-	  lfPos[miLevel][2]=lfPos[miLevel-1][2]+mpList[liListPos].mmMatrix.Position()[2];
-	  lfPos[miLevel][3]=lfPos[miLevel][0]*lfPos[miLevel][0]+lfPos[miLevel][1]*lfPos[miLevel][1]+lfPos[miLevel][2]*lfPos[miLevel][2];
-	    if(mpList[liListPos].mpMesh)
-	    {
-	      if(lfPos[miLevel][3]+mpList[liListPos].Mesh()->GetSize()>mfSize) mfSize=lfPos[miLevel][3]+mpList[liListPos].Mesh()->GetSize();
-	    }
- }
-
-}
-*/
-
 
 cRenderOwner cNodeList::Add(vRenderObject *lpNew){return Add(lpNew,0);};
 
@@ -409,4 +372,101 @@ cRenderOwner cNodeList::Add(vRenderObject *lpNew){return Add(lpNew,0);};
 	}
  }
 
+cRenderOwner cNodeList::MoveItem(vRenderObject *lpObj, vRenderNode *lpRenderer)
+{
+ mpList.StripItem(lpObj->RenderOwner().List);
+ return lpRenderer->Add(lpObj);
+};
+
+
+void cNodeList::MoveAll(vRenderNode *lpRender)
+{
+ for(uint32 liListPos=0;liListPos<mpList.Items();++liListPos)
+ {
+	vRenderObject *lpObj=mpList[liListPos]->mpObject;
+	lpObj->RenderOwner(lpRender->Add(lpObj));
+	mpList.ZeroItem(liListPos);
+ }
+ mpList.SetItems(0);
+};
+
+vRenderObject *cNodeList::FindStart()
+{
+ miCursor=0;
+ if(mpList.Items())
+ {
+  return mpList[0]->mpObject;
+ }
+ return 0;
+};
+
+vRenderObject *cNodeList::FindNext()
+{
+ ++miCursor;
+ if(miCursor<mpList.Items())
+ {
+  return mpList[miCursor]->mpObject;
+ }
+ return 0;
+};
+
+bool cNodeList::ContainsItems()
+{
+ return mpList.Items();
+};
+
+float cNodeList::GetSize()
+{
+ float lfSize=0.0f;
+ if(mpList.Items())
+ {
+  for(uint32 liCount=0;liCount<mpList.Items();++liCount)
+  {
+      float lfTemp=mpList[liCount]->mpObject->GetSize()+mpList[liCount]->mpObject->Distance();
+      if(lfTemp>lfSize) lfSize=lfTemp;
+  }
+ }
+    return lfSize;
+};
+
+double cNodeList::GetSizeSq()
+{
+ double lfSize=0.0f;
+ if(mpList.Items())
+ {
+  for(uint32 liCount=0;liCount<mpList.Items();++liCount)
+  {
+      double lfTemp=mpList[liCount]->mpObject->GetSize()+mpList[liCount]->mpObject->DistanceSq();
+      if(lfTemp>lfSize) lfSize=lfTemp;
+  }
+ }
+ return lfSize;
+};
+
+void cNodeList::TreeProcessUserSignal(SIGNAL lsSignal,void *lpData)
+{
+ if(mpProcess) mpProcess->UserSignal(lsSignal,lpData);
+ if(mpList.Items())
+ {
+  for(uint32 liCount=0;liCount<mpList.Items();++liCount)
+  {
+      mpList[liCount]->mpObject->TreeProcessUserSignal(lsSignal,lpData);
+  }
+ }
+};
+
+void cNodeList::TreeProcessSignal(SIGNAL lsSignal)
+{
+ if(mpProcess) mpProcess->Signal(lsSignal);
+ if(mpList.Items())
+ {
+  for(uint32 liCount=0;liCount<mpList.Items();++liCount)
+  {
+       mpList[liCount]->mpObject->TreeProcessSignal(lsSignal);
+  }
+ }
+}
+
+
 #endif
+

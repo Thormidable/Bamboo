@@ -16,7 +16,7 @@ protected:
 	 * An Object can be enabled by calling
 	 *
 	 */
-	bool mbCreatedThisFrame;
+	uint8 miDelay;
 	//This is the user assigned type of collision for the purposes of filtering, undesired collisions.
 	uint32 miID;
 	//This is a pointer to the Renderable Object this Collision Object is following.
@@ -37,9 +37,9 @@ public:
 	~cCollisionObject();
 
 	///This will return whether the CollisionObject was created this frame (and so unable to track locations as Global position is unknown)
-	bool CreatedThisFrame();
-	///This will return whether the CollisionObject was NOT created this frame (and so unable to track locations as Global position is unknown)
-	void NotCreatedThisFrame();
+	bool IsDelayed();
+	void Delay(uint8 liDelay);
+	uint8 Delay();
 
 
 	///The Signal Function to allow cCollisionObject to receive Signals.
@@ -60,14 +60,27 @@ public:
 	bool CheckCollision(cCollisionObject *lpOther);
 
 	/**
+	 * * \brief This will check for a collision between this object and the object lpOther.
+	 * \param lpOther is a pointer to the other collision object to check against.
+	 * It will check both objects have collisions on.
+	 * Then it will do an initial quick check to see if a collision is a possibility.
+	 * Finally if required it will do a much more detailed collision check.
+	 **/
+	cCollisionList *CheckCollisionDetail(cCollisionObject *lpOther,cCollisionList *lpList=0);
+
+	/**
 	 * It is used for quickly detecting if two objects MAY be colliding.
 	 * This function is will assume all objects are either Spheres or Beams.
 	 * This is a highly inaccurate way of colliding objects, but should filter the majority of collisions from the much slower more accurate collision detection performed elsewhere.
 	 **/
 	bool TouchCollision(cCollisionObject *lpOther);
 
+	bool CheckCollision();
+	void CheckCollisionDetail();
+	bool TouchCollision();
 
 
+	vRenderObject *Following();
 
 
 
@@ -89,17 +102,6 @@ public:
 	uint32 CollisionFilter();
 	///This will set the Collision Filter ID of this object.
 	void CollisionFilter(uint32 liID);
-
-	/** This Function will control the collision detection between this object and lpOther.
-	 * It will check the filter lpCol to cehck that the other object is of a suitable type.
-	 * Then will call CheckCollision(cCollisionObject *lpOther)
-	 **/
-	bool Collision(cCollisionObject *lpOther,uint32 lpCol);
-	/** This Function will control the collision detection between this object and lpOther.
-	 * This has no filtering checks for type. It will check for errors and then call CheckCollision(cCollisionObject *lpOther)
-	 **/
-	bool Collision(cCollisionObject *lpOther);
-
 
 
 	/// This will do a sphere collision between two points. lf1 and lf2 are x*x+y*y+z*z. lfR is (Sum of Radii)*(Sum of Radii).
@@ -177,6 +179,7 @@ public:
     void Stop();
 
     bool CompoundCollision(cCompoundCollision* lpCompound,cMatrix4 &lcCompoundCollision, vCollisionData *lpOther,cMatrix4 &lpOtherMatrix);
+    void CompoundCollisionDetail(cCompoundCollision* lpCompound,cMatrix4 &lcCompoundCollision, vCollisionData *lpOther,cMatrix4 &lpOtherMatrix);
 
 };
 

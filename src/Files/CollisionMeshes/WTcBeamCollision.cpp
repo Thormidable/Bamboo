@@ -4,19 +4,11 @@
 
 void cBeamCollision::Update(cMatrix4 &New)
 {
-/*
-	 mfRaySize[0]=New[8]*mfLength;
-	 mfRaySize[1]=New[9]*mfLength;
-	 mfRaySize[2]=New[10]*mfLength;
-*/
-mfRaySize[0]=New[8];
+ memcpy(mfRaySize,&New[8],sizeof(float)*3);
+/*mfRaySize[0]=New[8];
 mfRaySize[1]=New[9];
-mfRaySize[2]=New[10];
+mfRaySize[2]=New[10];*/
 
-/*
-	mfRaySize[0]=0.0f;
-	mfRaySize[1]=0.0f;
-	mfRaySize[2]=mfLength;*/
 };
 
 

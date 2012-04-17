@@ -70,17 +70,69 @@ bool cMouse::Showing()
 {return miShown;}
 
 int cMouse::X(){return x;};
- ///Will return the current Y Position of the mouse cursor in pixels from the bottom edge of the screen.
 int cMouse::Y(){return y;};
- ///Will return the current Z Position of the mouse cursor.
 int cMouse::Z(){return z;};
- ///Will return the number of horizontal pixels the cursor moved last frame. Moving Right is positive.
 int cMouse::XSpeed(){return xs;};
- ///Will return the number of vertical pixels the cursor moved last frame. Moving Up is positive.
 int cMouse::YSpeed(){return ys;};
- ///Will return the pressed state of the mouses left button.
 bool cMouse::Left(){return left;};
- ///Will return the pressed state of the mouses right button.
 bool cMouse::Right(){return right;};
-///Will return the pressed state of the mouses middle button.
 bool cMouse::Middle(){return middle;};
+
+cCollisionList *cMouse::Selection(cPerspectiveControl *lpCamera,float lfRadius)
+{
+    lpCamera->ViewportWidth();
+    lpCamera->ViewportHeight();
+    lpCamera->ViewportX();
+    lpCamera->ViewportY();
+
+       c3DVf MouseVector(X());
+
+    if((X()>lpCamera->ViewportX() && X()<lpCamera->ViewportX()+lpCamera->ViewportWidth())&&(Y()>lpCamera->ViewportY() && Y()<lpCamera->ViewportY()+lpCamera->ViewportHeight()))
+    {
+        float lfWidthMod=(((X()-lpCamera->ViewportX())/lpCamera->ViewportWidth())-0.5f)*lpCamera->Width();
+        float lfHeightMod=(((Y()-lpCamera->ViewportY())/lpCamera->ViewportHeight())-0.5f)*lpCamera->Height();
+        float lfDepthMod=(lpCamera->Near());
+        float* lpMatrix=lpCamera->Matrix();
+
+        c3DVf MouseVector(lpMatrix[0]*lfWidthMod+lpMatrix[4]*lfHeightMod+lpMatrix[8]*lfDepthMod,
+                          lpMatrix[1]*lfWidthMod+lpMatrix[5]*lfHeightMod+lpMatrix[9]*lfDepthMod,
+                          lpMatrix[2]*lfWidthMod+lpMatrix[6]*lfHeightMod+lpMatrix[10]*lfDepthMod);
+
+        c3DVf MouseStart(lpCamera->Position());
+        MouseStart.Invert();
+
+        return cCollisionHandler::Instance()->GenerateMouseSelection(MouseVector,MouseStart,lfRadius);
+    }
+
+ return new cCollisionList(0);
+};
+
+/*
+cCollisionList *cMouse::Selection(cViewport *lpViewport,float lfRadius)
+{
+    lpViewport->ViewportWidth();
+    lpViewport->ViewportHeight();
+    lpViewport->ViewportX();
+    lpViewport->ViewportY();
+
+       c3DVf MouseVector(X());
+
+    if((X()>lpViewport->ViewportX() && X()<lpViewport->ViewportX()+lpViewport->ViewportWidth())&&(Y()>lpViewport->ViewportY() && Y()<lpViewport->ViewportY()+lpViewport->ViewportHeight()))
+    {
+        float lfWidthMod=(((X()-lpViewport->ViewportX())/lpViewport->ViewportWidth())-0.5f)*Width();
+        float lfHeightMod=(((Y()-lpViewport->ViewportY())/lpViewport->ViewportHeight())-0.5f)*Height();
+        float lfDepthMod=(lpViewport->Near());
+        float* lpMatrix=lpViewport->Matrix();
+
+        c3DVf MouseVector(lpMatrix[0]*lfWidthMod+lpMatrix[4]*lfHeightMod+lpMatrix[8]*lfDepthMod,
+                          lpMatrix[1]*lfWidthMod+lpMatrix[5]*lfHeightMod+lpMatrix[9]*lfDepthMod,
+                          lpMatrix[2]*lfWidthMod+lpMatrix[6]*lfHeightMod+lpMatrix[10]*lfDepthMod);
+
+        c3DVf &MouseStart(lpViewport->Position());
+        MouseStart.Invert();
+
+        return cCollisionHandler::GenerateMouseSelection(MouseVector,MouseStart,lfRadius);
+    }
+
+
+};*/

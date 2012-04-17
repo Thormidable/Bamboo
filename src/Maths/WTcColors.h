@@ -17,6 +17,8 @@ public:
 	///Constructor taking a pointer to an array of four floats
     cRGBA(float *lfRGB);
 
+    cRGBA(c3DVf lfOther);
+    cRGBA(c4DVf lfOther);
     ///Returns the Red component of the color.
     float R();
 	///Returns the Blue component of the color.
@@ -35,19 +37,92 @@ public:
 	void A(float lfA);
 	///Returns a float pointer to the array of components
     float *Color();
-    float *operator=(float *lpOther);
-    cRGBA &operator=(cRGB &lpOther);
-    cRGBA *operator=(cRGB *lpOther);
-    cRGBA &operator=(cRGBA &lpOther);
-    cRGBA *operator=(cRGBA *lpOther);
-    cRGBA &operator=(c3DVf &lpOther);
-    cRGBA *operator=(c3DVf *lpOther);
-    cRGBA &operator=(c4DVf &lpOther);
-    cRGBA *operator=(c4DVf *lpOther);
+
 	///Array operator to allow the user to access components by position. R=0, G=1, B=2, A=3.
     float &operator[](uint32);
     ///Set the values with floats
     void Set(float lfR=0.0f,float lfG=0.0f,float lfB=0.0f,float lfA=1.0f);
+
+    cRGBA operator=(float *lpOther);
+    cRGBA operator=(cRGB lpOther);
+    cRGBA operator=(cRGB *lpOther);
+    cRGBA operator=(cRGBA lpOther);
+    cRGBA operator=(cRGBA *lpOther);
+
+    cRGBA operator+(float lfOther);
+    cRGBA operator+(float *lpOther);
+    cRGBA operator+(cRGB lpOther);
+    cRGBA operator+(cRGB *lpOther);
+    cRGBA operator+(cRGBA lpOther);
+    cRGBA operator+(cRGBA *lpOther);
+    cRGBA operator+(c3DVf lpOther);
+    cRGBA operator+(c3DVf *lpOther);
+
+    cRGBA operator-(float lfOther);
+    cRGBA operator-(float *lpOther);
+    cRGBA operator-(cRGB lpOther);
+    cRGBA operator-(cRGB *lpOther);
+    cRGBA operator-(cRGBA lpOther);
+    cRGBA operator-(cRGBA *lpOther);
+    cRGBA operator-(c3DVf lpOther);
+    cRGBA operator-(c3DVf *lpOther);
+
+    cRGBA operator*(float lfOther);
+    cRGBA operator*(float *lpOther);
+    cRGBA operator*(cRGB lpOther);
+    cRGBA operator*(cRGB *lpOther);
+    cRGBA operator*(cRGBA lpOther);
+    cRGBA operator*(cRGBA *lpOther);
+    cRGBA operator*(c3DVf lpOther);
+    cRGBA operator*(c3DVf *lpOther);
+
+    cRGBA operator/(float lfOther);
+    cRGBA operator/(float *lpOther);
+    cRGBA operator/(cRGB lpOther);
+    cRGBA operator/(cRGB *lpOther);
+    cRGBA operator/(cRGBA lpOther);
+    cRGBA operator/(cRGBA *lpOther);
+    cRGBA operator/(c3DVf lpOther);
+    cRGBA operator/(c3DVf *lpOther);
+
+
+      cRGBA operator+=(float lfOther);
+    cRGBA operator+=(float *lpOther);
+    cRGBA operator+=(cRGB lpOther);
+    cRGBA operator+=(cRGB *lpOther);
+    cRGBA operator+=(cRGBA lpOther);
+    cRGBA operator+=(cRGBA *lpOther);
+    cRGBA operator+=(c3DVf lpOther);
+    cRGBA operator+=(c3DVf *lpOther);
+
+    cRGBA operator-=(float lfOther);
+    cRGBA operator-=(float *lpOther);
+    cRGBA operator-=(cRGB lpOther);
+    cRGBA operator-=(cRGB *lpOther);
+    cRGBA operator-=(cRGBA lpOther);
+    cRGBA operator-=(cRGBA *lpOther);
+    cRGBA operator-=(c3DVf lpOther);
+    cRGBA operator-=(c3DVf *lpOther);
+
+    cRGBA operator*=(float lfOther);
+    cRGBA operator*=(float *lpOther);
+    cRGBA operator*=(cRGB lpOther);
+    cRGBA operator*=(cRGB *lpOther);
+    cRGBA operator*=(cRGBA lpOther);
+    cRGBA operator*=(cRGBA *lpOther);
+    cRGBA operator*=(c3DVf lpOther);
+    cRGBA operator*=(c3DVf *lpOther);
+
+    cRGBA operator/=(float lfOther);
+    cRGBA operator/=(float *lpOther);
+    cRGBA operator/=(cRGB lpOther);
+    cRGBA operator/=(cRGB *lpOther);
+    cRGBA operator/=(cRGBA lpOther);
+    cRGBA operator/=(cRGBA *lpOther);
+    cRGBA operator/=(c3DVf lpOther);
+    cRGBA operator/=(c3DVf *lpOther);
+
+
 };
 
 /**
@@ -63,6 +138,9 @@ public:
     cRGB(float lfR=0.0f,float lfG=0.0f,float lfB=0.0f);
 	///Constructor taking a pointer to an array of three floats
     cRGB(float *lfRGB);
+
+    cRGB(c3DVf lfOther);
+    cRGB(c4DVf lfOther);
     ///Returns the Red component of the color.
     float R();
 	///Returns the Blue component of the color.
@@ -77,13 +155,79 @@ public:
 	void B(float lfB);
 	///Returns a float pointer to the array of components
     float *Color();
-    float *operator=(float *lpOther);
-    cRGB &operator=(cRGB &lpOther);
-    cRGB *operator=(cRGB *lpOther);
-    cRGB &operator=(cRGBA &lpOther);
-    cRGB *operator=(cRGBA *lpOther);
-    cRGB &operator=(c3DVf &lpOther);
-    cRGB *operator=(c3DVf *lpOther);
+
+    cRGB operator=(float *lpOther);
+    cRGB operator=(cRGB lpOther);
+    cRGB operator=(cRGB *lpOther);
+    cRGB operator=(cRGBA lpOther);
+    cRGB operator=(cRGBA *lpOther);
+
+    cRGB operator+(float lfOther);
+    cRGB operator+(float *lpOther);
+    cRGB operator+(cRGB lpOther);
+    cRGB operator+(cRGB *lpOther);
+    cRGB operator+(cRGBA lpOther);
+    cRGB operator+(cRGBA *lpOther);
+
+    cRGB operator-(float lfOther);
+    cRGB operator-(float *lpOther);
+    cRGB operator-(cRGB lpOther);
+    cRGB operator-(cRGB *lpOther);
+    cRGB operator-(cRGBA lpOther);
+    cRGB operator-(cRGBA *lpOther);
+
+    cRGB operator*(float lfOther);
+    cRGB operator*(float *lpOther);
+    cRGB operator*(cRGB lpOther);
+    cRGB operator*(cRGB *lpOther);
+    cRGB operator*(cRGBA lpOther);
+    cRGB operator*(cRGBA *lpOther);
+    cRGB operator*(c3DVf lpOther);
+    cRGB operator*(c3DVf *lpOther);
+
+    cRGB operator/(float lfOther);
+    cRGB operator/(float *lpOther);
+    cRGB operator/(cRGB lpOther);
+    cRGB operator/(cRGB *lpOther);
+    cRGB operator/(cRGBA lpOther);
+    cRGB operator/(cRGBA *lpOther);
+    cRGB operator/(c3DVf lpOther);
+    cRGB operator/(c3DVf *lpOther);
+
+
+    cRGB operator+=(float lfOther);
+    cRGB operator+=(float *lpOther);
+    cRGB operator+=(cRGB lpOther);
+    cRGB operator+=(cRGB *lpOther);
+    cRGB operator+=(cRGBA lpOther);
+    cRGB operator+=(cRGBA *lpOther);
+
+    cRGB operator-=(float lfOther);
+    cRGB operator-=(float *lpOther);
+    cRGB operator-=(cRGB lpOther);
+    cRGB operator-=(cRGB *lpOther);
+    cRGB operator-=(cRGBA lpOther);
+    cRGB operator-=(cRGBA *lpOther);
+
+    cRGB operator*=(float lfOther);
+    cRGB operator*=(float *lpOther);
+    cRGB operator*=(cRGB lpOther);
+    cRGB operator*=(cRGB *lpOther);
+    cRGB operator*=(cRGBA lpOther);
+    cRGB operator*=(cRGBA *lpOther);
+    cRGB operator*=(c3DVf lpOther);
+    cRGB operator*=(c3DVf *lpOther);
+
+    cRGB operator/=(float lfOther);
+    cRGB operator/=(float *lpOther);
+    cRGB operator/=(cRGB lpOther);
+    cRGB operator/=(cRGB *lpOther);
+    cRGB operator/=(cRGBA lpOther);
+    cRGB operator/=(cRGBA *lpOther);
+    cRGB operator/=(c3DVf lpOther);
+    cRGB operator/=(c3DVf *lpOther);
+
+
 		///Array operator to allow the user to access components by position. R=0, G=1, B=2;
     float &operator[](uint32);
     ///Set the values with floats

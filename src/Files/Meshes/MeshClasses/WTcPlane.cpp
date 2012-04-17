@@ -174,7 +174,12 @@ cFullFaceData &cPlane::operator=(cFullFaceData &lpOther)
 		return this[0];
 	};
 
-	cFullFaceData &cPlane::operator=(cFullFaceData &lpOther);
+	/*
+	cFullFaceData &cPlane::operator=(cFullFaceData &lpOther)
+	{
+	 operator=(lpOther.Plane);
+	 return lpOther;
+	};*/
 
 
 	double cPlane::DotProduct(cVertex &lpOther)
@@ -221,7 +226,7 @@ void cPlaneList::Strip()
 		{
 			if(mpList[liLoop].Similar(mpList[liCount],0.1f))
 			{
-				Remove(liLoop);
+				Delete(liLoop);
 				liLoop--;
 			}
 		}
@@ -231,7 +236,7 @@ void cPlaneList::Strip()
 void cPlaneList::Order()
 {
 	uint32 liFurthest=0;
-	float FurthestDistance=0.0f;
+	double FurthestDistance=0.0f;
 
 	uint32 liCount;
 	for(liCount=0;liCount<Items();++liCount)

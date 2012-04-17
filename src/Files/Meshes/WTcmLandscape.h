@@ -170,6 +170,10 @@ virtual void RenderMesh();
 	cmLandscape *Duplicate();
 	friend class cLandscapeMeshFile;
 
+	 float GetSize();
+    double GetSizeSq();
+
+
 };
 
 

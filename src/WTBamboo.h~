@@ -46,8 +46,8 @@
  *  - SIGNAL()
  *  	- A Class Type for passing Signals between Process', Render Objects and Collision Objects.
  *  	.
- *  - _KEY(KEY_ID)
- *  	- Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List.
+ *  - _KEY(KEY_CODE_ID)
+ *  	- Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List and start 'KEY_CODE_' .
  *  	.
  *  - _MOUSE
  *  	- Reference giving access the systems mouse states.
@@ -355,12 +355,7 @@
  *
  * \section KeyIdentifiersList List of Key Identifiers
  *
- * These correspond to the Key codes for the Macro _KEY()
- * \code
- * if(_KEY(KEY_SPACE)) _CREATE(Bulltets());
- * if(_KEY(KEY_TAB)) _KERNEL->KillAll();
- *
- * \endcode
+ * These correspond to the states of keys:
  *
  * KEY_BACKSPACE \n
  * KEY_TAB \n
@@ -467,6 +462,120 @@
  * KEY_x \n
  * KEY_y \n
  * KEY_z \n
+ *
+ *  There are also accessor codes for the Macro _KEY(). These are actually unsigned integers and so can be passed as parameters.
+ *
+ * \code
+ * if(_KEY(KEY_CODE_SPACE)) _CREATE(Bulltets());
+ * if(_KEY(KEY_CODE_TAB)) _KERNEL->KillAll();
+ *
+ * \endcode
+ *
+ * KEY_CODE_BACKSPACE \n
+ * KEY_CODE_TAB \n
+ * KEY_CODE_ENTER \n
+ * KEY_CODE_RETURN \n
+ * KEY_CODE_SHIFT \n
+ * KEY_CODE_CONTROL \n
+ * KEY_CODE_CTRL \n
+ * KEY_CODE_ALTERNATE \n
+ * KEY_CODE_ALT \n
+ * KEY_CODE_PAUSE \n
+ * KEY_CODE_CAPSLOCK \n
+ * KEY_CODE_CAPITALLOCK \n
+ * KEY_CODE_ESCAPE \n
+ * KEY_CODE_ESC \n
+ * KEY_CODE_SPACE \n
+ * KEY_CODE_PGUP \n
+ * KEY_CODE_PAGEUP \n
+ * KEY_CODE_PGDN \n
+ * KEY_CODE_PAGEDOWN \n
+ * KEY_CODE_END \n
+ * KEY_CODE_HOME \n
+ * KEY_CODE_LEFT \n
+ * KEY_CODE_LEFTARROW \n
+ * KEY_CODE_RIGHT \n
+ * KEY_CODE_RIGHTARROW \n
+ * KEY_CODE_UP \n
+ * KEY_CODE_UPARROW \n
+ * KEY_CODE_DOWN \n
+ * KEY_CODE_DOWNARROW \n
+ * KEY_CODE_SELECT \n
+ * KEY_CODE_EARLYPRINT \n
+ * KEY_CODE_EARLYPRINTSCREEN \n
+ * KEY_CODE_EXECUTE \n
+ * KEY_CODE_PRINT \n
+ * KEY_CODE_PRINTSCREEN \n
+ * KEY_CODE_INS \n
+ * KEY_CODE_INSERT \n
+ * KEY_CODE_DEL \n
+ * KEY_CODE_DELETE \n
+ * KEY_CODE_HELP \n
+ * \n
+ * KEY_CODE_0 \n
+ * KEY_CODE_1 \n
+ * KEY_CODE_2 \n
+ * KEY_CODE_3 \n
+ * KEY_CODE_4 \n
+ * KEY_CODE_5 \n
+ * KEY_CODE_6 \n
+ * KEY_CODE_7 \n
+ * KEY_CODE_8 \n
+ * KEY_CODE_9 \n
+ *  \n
+ * KEY_CODE_A \n
+ * KEY_CODE_B \n
+ * KEY_CODE_C \n
+ * KEY_CODE_D \n
+ * KEY_CODE_E \n
+ * KEY_CODE_F \n
+ * KEY_CODE_G \n
+ * KEY_CODE_H \n
+ * KEY_CODE_I \n
+ * KEY_CODE_J \n
+ * KEY_CODE_K \n
+ * KEY_CODE_L \n
+ * KEY_CODE_M \n
+ * KEY_CODE_N \n
+ * KEY_CODE_O \n
+ * KEY_CODE_P \n
+ * KEY_CODE_Q \n
+ * KEY_CODE_R \n
+ * KEY_CODE_S \n
+ * KEY_CODE_T \n
+ * KEY_CODE_U \n
+ * KEY_CODE_V \n
+ * KEY_CODE_W \n
+ * KEY_CODE_X \n
+ * KEY_CODE_Y \n
+ * KEY_CODE_Z \n
+ *
+ * KEY_CODE_a \n
+ * KEY_CODE_b \n
+ * KEY_CODE_c \n
+ * KEY_CODE_d \n
+ * KEY_CODE_e \n
+ * KEY_CODE_f \n
+ * KEY_CODE_g \n
+ * KEY_CODE_h \n
+ * KEY_CODE_i \n
+ * KEY_CODE_j \n
+ * KEY_CODE_k \n
+ * KEY_CODE_l \n
+ * KEY_CODE_m \n
+ * KEY_CODE_n \n
+ * KEY_CODE_o \n
+ * KEY_CODE_p \n
+ * KEY_CODE_q \n
+ * KEY_CODE_r \n
+ * KEY_CODE_s \n
+ * KEY_CODE_t \n
+ * KEY_CODE_u \n
+ * KEY_CODE_v \n
+ * KEY_CODE_w \n
+ * KEY_CODE_x \n
+ * KEY_CODE_y \n
+ * KEY_CODE_z \n
  *
  * \section EngineSettingsPage Engine Settings
  *
@@ -1647,7 +1756,7 @@
 * void cCore::Run()
 * {
 *
-*  if(_KEY(KEY_SPACE)) _CAMERA->Far(10.0f);
+*  if(KEY_SPACE) _CAMERA->Far(10.0f);
 *   else _CAMERA->Far(1000.0f);
 *  _CAMERA->Frustum();
 *
@@ -1727,7 +1836,7 @@
  * void player::Run()
  * {
  *
- * if(_KEY(KEY_k))
+ * if(KEY_k)
  * {
  * mpPointerToAnotherProcess->Signal(_S_KILL);
  * _KILL(this);
@@ -1740,7 +1849,7 @@
  * void player::Run()
  * {
  *
- * if(_KEY(KEY_k))
+ * if(KEY_k)
  *	{
  *	 _KILL(mpPointerToAnotherProcess);
  *	 _KILL();
@@ -1759,8 +1868,8 @@
  * void player::Run()
  * {
  *
- * if(_KEY(KEY_s)) mpPointerToAnotherProcess->Signal(_S_SLEEP);
- * if(_KEY(KEY_w)) mpPointerToAnotherProcess->Signal(_S_WAKE);
+ * if(KEY_s) mpPointerToAnotherProcess->Signal(_S_SLEEP);
+ * if(KEY_w) mpPointerToAnotherProcess->Signal(_S_WAKE);
  *
  * }
  * \endcode
@@ -1772,7 +1881,7 @@
  * void player::Run()
  * {
  *
- * if(_KEY(KEY_k)) _KERNEL->Remove(mpPointerToAProcessesNode);
+ * if(KEY_k) _KERNEL->Remove(mpPointerToAProcessesNode);
  *
  * }
  * \endcode
@@ -1915,7 +2024,7 @@
  *
  * There are a range of Signal macros which allow you to send signals to other processes.
  * \code
- * if(_KEY(KEY_SPACE)) _SLEEP_THIS();
+ * if(KEY_SPACE) _SLEEP_THIS();
  * cProcess *OtherProcess;
  * OtherProcess=_FIND_PROCESS(cChildProcess);
  * _KILL(OtherProcess);
@@ -3781,10 +3890,18 @@ public:
 * Probably less than 150 lines of code to make a simple game!
 */
 
+#ifdef _MSC_VER
+	typedef __int32 int32_t;
+	typedef unsigned __int32 uint32_t;
+	typedef __int64 int64_t;
+	typedef unsigned __int64 uint64_t;
+
+#else
+	#include <stdint.h>
+	#include <unistd.h>
+#endif
 
 
-#include <stdint.h>
-#include <unistd.h>
 
 #include "./WTOsBits.h"
 
@@ -3866,11 +3983,14 @@ public:
 #include "./Maths/WTcPerspectiveMatrix.h"
 #include "./Maths/WTcMatrixStack.h"
 #include "./Maths/WTcCameraMatrix4.h"
+#include "./Maths/WTcPredictiveTracking.h"
 #include "./Files/WTString.h"
+
+
 
 #include "./Maths/WTc2DVtCode.h"
 #include "./Maths/WTc3DVtCode.h"
-#include "./Maths/WTC4DVtCode.h"
+#include "./Maths/WTc4DVtCode.h"
 
 #include "./Engine/WTcSignal.h"
 #include "./Engine/WTKernel.h"
@@ -3934,6 +4054,8 @@ public:
 #include "./Camera/Nodes/WTcRenderNode.h"
 #include "./Camera/Nodes/WTcNodeList.h"
 
+#include "./Camera/Renderable/WTcAttributeData.h"
+
 #include "./Files/Meshes/WTcmLandscape.h"
 
 
@@ -3949,8 +4071,9 @@ public:
 	 #include "./Camera/Renderable/WTcLandscape.h"
 	 #include "./Camera/Renderable/WTcPoint.h"
 	 #include "./Camera/Renderable/WTcLine.h"
-	 #include "./Camera/Renderable/WTcParticleGroup.h"
+	 #include "./Camera/Renderable/WTcParticleSettings.h"
 	 #include "./Camera/Renderable/WTcParticle.h"
+	 #include "./Camera/Renderable/WTcParticleGroup.h"
 	 #include "./Camera/Renderable/WTcBeamMesh.h"
 	 #include "./Camera/Renderable/WTcButton.h"
 	 #include "./Camera/Renderable/WTcStarMap.h"
@@ -3971,5 +4094,7 @@ public:
 #include "./Physics/WTcCollisionHandler.h"
 
 #include "./Engine/WTcBase.h"
+
+
 
 #endif

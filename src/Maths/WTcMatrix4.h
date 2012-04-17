@@ -265,13 +265,18 @@ float AngleToVector(c3DVf lfVector);
 ///This will return true if the angle between this matrices z axis and the vector lfVector is less than lfAngle. Otherwise will return false.
 bool AngleToVectorCheck(c3DVf lfVector,float lfAngle);
 
-
+///This will return the objects Roll angle (angle between the Y Axis and the Local objects Identity YZ Plane)
+float Roll();
+///This will return the objects Yaw angle (angle between the Z Axis and the Local objects Identity YZ Plane)
+float Yaw();
+///This will return the objects Pitch angle (angle between the Z Axis and the Local objects Identity XZ Plane)
+float Pitch();
 
 
   ///Makes this matrix Equal the cMatrix4 pointed to by lpOther
   void Equals(cMatrix4 *lpOther);
   ///Makes this matrix Equal the cMatrix4 lpOther
-  void Equals(cMatrix4 &lpOther);
+  void Equals(cMatrix4 lpOther);
   ///Makes this matrix Equal the cCameraMatrix4 lpOther
   void Equals(cCameraMatrix4 &lpOther);
   ///Makes this matrix Equal the cCameraMatrix lpOther
@@ -325,17 +330,28 @@ bool AngleToVectorCheck(c3DVf lfVector,float lfAngle);
  float GScaleZ();
 
 
+/// This will return the distance between this matrix and the cMatrix4 pointed to by lpOther.
+ float Distance(cMatrix4 &lpOther);
   /// This will return the distance between this matrix and the cMatrix4 pointed to by lpOther.
  float Distance(cMatrix4 *lpOther);
- /// This will return the distance between this matrix and the cMatrix4 pointed to by lpOther.
+ /// This will return the distance between this matrix and the Global Position lpOther.
  float Distance(float *lpOther);
+ /// This will return the distance between this matrix and the Global Position lpOther.
+ float Distance(c3DVf lpOther);
 
 /// This will return the square of the distance between this matrix and the cMatrix4 pointed to by lpOther.
 double DistanceSq(cMatrix4 *lpOther);
 /// This will return the square of the distance between this matrix and the cMatrix4 pointed to by lpOther.
 double DistanceSq(cMatrix4 lpOther);
-/// This will return the square of the distance between this matrix and the cMatrix4 pointed to by lpOther.
+/// This will return the square of the distance between this matrix and the Global Position lpOther.
 double DistanceSq(float *lpOther);
+/// This will return the square of the distance between this matrix and the Global Position lpOther.
+double DistanceSq(c3DVf lpOther);
+
+///This will return the distance between this matrix and the origin
+float Distance();
+///This will return the square of the distance between this matrix and the origin
+double DistanceSq();
 
  /// This will return the float in position liPos in mpData.
  float &operator[](uint16 liPos);
@@ -419,8 +435,8 @@ float *operator=(float *lVal);
  ///Returns a pointer to this matrix
  cMatrix4 *ThisMatrixPointer();
 
- /// This will find the inverse of the matrix if it is a standard rotation / translation matrix. (0,1,2,4,5,6,8,9,10 are orthogonal. 3,7,11 are zero. 12,13,14 are position and 15 is one.)
- cMatrix4 InvertRotationMatrix();
+ ///This will calculate the inversion matrix for this matrix.
+ cMatrix4 InversionMatrix();
  /// This will return the transpose of this objects matrix.
  cMatrix4 Transpose();
 
@@ -466,6 +482,8 @@ float *operator=(float *lVal);
 
   /// This will return this cMatrix4 in the format of a cCameraMatrix4. This is because they have different formats.
   cCameraMatrix4 &ConvertToCameraMatrix();
+
+  void InvSign();
 
 };
 

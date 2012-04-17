@@ -843,17 +843,15 @@ void cCameraMatrix4::PointAt(vRenderObject *lpObj)
 
 void cCameraMatrix4::Follow(cMatrix4* lpOther,float lfX,float lfY,float lfZ)
 {
-	cMatrix4 lpInv=lpOther->InvertRotationMatrix();
-
-	 memcpy(&mpData[0],lpInv.Matrix(),sizeof(float)*12);
-	 InvSign();
-
-	mpPosition[0]=-lpOther->Matrix()[12];
-	mpPosition[1]=-lpOther->Matrix()[13];
-	mpPosition[2]=-lpOther->Matrix()[14];
+    cMatrix4 lpInv=lpOther->InversionMatrix();
+    memcpy(mpData,lpInv.Matrix(),sizeof(float)*12);
 
     RotateY(3.14159265);
-	Advance(lfX,lfY,lfZ);
+
+	mpPosition[0]=-lpOther->X();
+	mpPosition[1]=-lpOther->Y();
+	mpPosition[2]=-lpOther->Z();
+    Advance(lfX,lfY,lfZ);
 }
 
 
@@ -864,19 +862,16 @@ void cCameraMatrix4::Follow(cMatrix4 &lpOther,float lfX,float lfY,float lfZ)
 
 void cCameraMatrix4::Follow(cMatrix4* lpOther,float lfDist)
 {
-	cMatrix4 lpInv=lpOther->InvertRotationMatrix();
 
-	 memcpy(&mpData[0],lpInv.Matrix(),sizeof(float)*12);
-
-	 InvSign();
-
-	mpPosition[0]=-lpOther->Matrix()[12];
-	mpPosition[1]=-lpOther->Matrix()[13];
-	mpPosition[2]=-lpOther->Matrix()[14];
+    cMatrix4 lpInv=lpOther->InversionMatrix();
+    memcpy(mpData,lpInv.Matrix(),sizeof(float)*12);
 
     RotateY(3.14159265);
 
-	AdvanceZ(-lfDist);
+	mpPosition[0]=-lpOther->X();
+	mpPosition[1]=-lpOther->Y();
+	mpPosition[2]=-lpOther->Z();
+    Advance(lfDist);
 }
 
 
@@ -1045,6 +1040,6 @@ float *cCameraMatrix4::ConstructCameraMatrix()
 
 float *cCameraMatrix4::CameraMatrix()
 {
-    #warning comment Make so mpCameraMatrix is unneccessary.
+    #pragma warning (Make so mpCameraMatrix is unneccessary)
  return mpCameraMatrix;
 };

@@ -38,7 +38,7 @@ public:
 	cStarMap(uint32 liParticles,vRenderNode *lpNode);
 	cStarMap(uint32 liParticles,cCamera *lpCamera);
 	~cStarMap();
-	void Initialise(uint32 liParticles);
+	void Initialise(uint32 liParticles,float lfDist=0);
 
 	void RenderPainter();
 

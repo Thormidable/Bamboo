@@ -30,7 +30,10 @@ public:
 	// Will render this object to the cPainter render list.
 	void RenderPainter();
 
+    float GetSize();
+    double GetSizeSq();
 
+    c2DVf GetUVCoords(c3DVf GlobalPos);
 };
 
 #endif

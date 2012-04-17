@@ -85,16 +85,41 @@ cTextureSlot &cTextureStack::TextureItem(uint8 liPos)
 	return TextureList()[liPos];
 }
 
+void cTextureSlot::NewTexture(uint8 liTexSlot)
+{
+    	glActiveTexture(GL_TEXTURE0+liTexSlot);
+		if(!liTexSlot)
+		{
+		    glClientActiveTexture(GL_TEXTURE0+liTexSlot);
+		    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+		}
+		glEnable(GL_TEXTURE_2D);
+		mpTexture->BindTexture();
+		glUniform1i(miUniform,liTexSlot);
+}
+
+void cTextureSlot::ClearTexture(uint8 liTexSlot)
+{
+        glActiveTexture(GL_TEXTURE0+liTexSlot);
+		if(!liTexSlot)
+		{
+		    glClientActiveTexture(GL_TEXTURE0+liTexSlot);
+		    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+		}
+
+        glDisableClientState(GL_TEXTURE_2D);
+        glDisable(GL_TEXTURE_2D);
+}
+
 void cTextureSlot::FirstTextureState(uint8 liTexSlot)
 {
     if(mpTexture)
     {
-		glEnable(GL_TEXTURE_2D);
-		glActiveTexture(GL_TEXTURE0+liTexSlot);
-		glClientActiveTexture(GL_TEXTURE0+liTexSlot);
-		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-		mpTexture->BindTexture();
-		glUniform1i(miUniform,liTexSlot);
+        NewTexture(liTexSlot);
+    }
+    else
+    {
+        ClearTexture(liTexSlot);
     }
 }
 
@@ -106,27 +131,16 @@ void cTextureSlot::TextureState(cTextureSlot *lpPrevious,uint8 liTexSlot)
   {
 	  if(!lpPrevious->mpTexture)
 	  {
-		glEnable(GL_TEXTURE_2D);
-		glActiveTexture(GL_TEXTURE0+liTexSlot);
-		glClientActiveTexture(GL_TEXTURE0+liTexSlot);
-		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-		mpTexture->BindTexture();
-		glUniform1i(miUniform,liTexSlot);
+		NewTexture(liTexSlot);
 	  }
 	  else
 	  {
-		glActiveTexture(GL_TEXTURE0+liTexSlot);
-		mpTexture->BindTexture();
-		glUniform1i(miUniform,liTexSlot);
+		NewTexture(liTexSlot);
 	  }
   }
   else
   {
-      //glActiveTexture(GL_TEXTURE0+liTexSlot);
-       //glClientActiveTexture(GL_TEXTURE+liTexSlot);
-       //if(!liTexSlot) glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-      //    glClientActiveTexture(GL_TEXTURE+liTexSlot);
-        // glDisable(GL_TEXTURE_2D);
+      ClearTexture(liTexSlot);
   }
  }
 }

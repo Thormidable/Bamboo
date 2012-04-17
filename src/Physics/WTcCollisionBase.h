@@ -1,9 +1,9 @@
 #ifndef __WTCCOLLISIONBASE_H__
 #define __WTCCOLLISIONBASE_H__
 
-/*
- * This is the generic class for controlling collisions.
- * The specific data for the collisions is stored in vCollisionData and it's inheriting classes (mpObject).
+/**
+ * \brief Base class for Collision Objects. Inherited by cCollisionObject and cCompoundCollisionNode.
+ * This holds functionality and Data for base Collision Objects.
  *
  */
 
@@ -81,12 +81,16 @@ public:
 
         ///This will procedurally generate a Beam of Radius lfRadius and Length lfLength.
         cBeamCollision *SetType(float lfLength,float lfRadius);
+        ///This will procedurally generate a Beam of Radius lfRadius and Length lfLength.
+        cBeamCollision *SetTypeBeam(float lfLength,float lfRadius);
         ///This will procedureally generate a Box collision object from the array of 6 floats lpBounds. see cGeneratedBoxCollision::BuildObject(float *lpBounds) for more information.
         cMeshCollision *SetType(float *lpBounds);
         ///This will procedurally generate a Box Collision object. This is the same as handing it a float pointer.
         cMeshCollision *SetType(float lfXP,float lfXN,float lfYP,float lfYN,float lfZP,float lfZN);
         ///This will make a Beam object to match a rendered Beam. (Nice and easy eh?)
         cBeamCollision *SetType(cBeamMesh *lpBeam);
+        ///This will make a Beam object to match a rendered Beam. (Nice and easy eh?)
+        cBeamCollision *SetTypeBeam(cBeamMesh *lpBeam);
         ///This will make a Compound Collision Object.
         cCompoundCollision *SetType();
 
@@ -106,6 +110,7 @@ public:
 
     #endif
 
+	bool Owns(vCollisionData *lpData);
 
 	///This will return a generic pointer to the cCollisionData for this object
 	cSphereCollision *GetCollisionData();
@@ -124,11 +129,15 @@ public:
 
 	///Internal function for checking for Sphere / Sphere collision between this object and the object lpOther;
 	static bool SphereSphere(cSphereCollision* lpFirst, cMatrix4 &lmFirstMatrix,cSphereCollision* lpSecond, cMatrix4 &lmSecondMatrix);
+	///Internal function for checking for Sphere / Sphere collision between this object and the object lpOther;
+	static void SphereSphereDetail(cSphereCollision* lpFirst, cMatrix4 &lmFirstMatrix,cSphereCollision* lpSecond, cMatrix4 &lmSecondMatrix);
+
 
 	#if WT_FULL_VERSION_BAMBOO
 
         ///Internal function for checking for Model / Model collision between this object and the object lpOther;
         static bool ModelModel(cMeshCollision* lpFirst, cMatrix4 &lmFirstMatrix,cMeshCollision* lpSecond, cMatrix4 &lmSecondMatrix);
+        static bool ModelModelProcess(cMeshCollision* lpVerteces, cMatrix4 &lmVertexMatrix,cMeshCollision* lpPlanes, cMatrix4 &lmPlaneMatrix);
         ///Internal function for checking for Ray / Ray collision between this object and the object lpOther;
         static bool RayRay(cBeamCollision* lpFirst, cMatrix4 &lmFirstMatrix,cBeamCollision* lpSecond, cMatrix4 &lmSecondMatrix);
         ///Internal function for checking for Sphere / Model collision between this object and the object lpOther;
@@ -137,6 +146,17 @@ public:
         static bool SphereRay(cSphereCollision* lpFirst, cMatrix4 &lmFirstMatrix,cBeamCollision* lpSecond, cMatrix4 &lmSecondMatrix);
         ///Internal function for checking for Ray / Model collision between this object and the object lpOther;
         static bool RayModel(cBeamCollision* lpFirst, cMatrix4 &lmFirstMatrix,cMeshCollision* lpSecond, cMatrix4 &lmSecondMatrix);
+        ///Internal function for checking for Model / Model collision between this object and the object lpOther;
+        static void ModelModelDetail(cMeshCollision* lpFirst, cMatrix4 &lmFirstMatrix,cMeshCollision* lpSecond, cMatrix4 &lmSecondMatrix);
+        static bool ModelModelDetailProcess(cMeshCollision* lpVerteces, cMatrix4 &lmVertexMatrix,cMeshCollision* lpPlanes, cMatrix4 &lmPlaneMatrix);
+        ///Internal function for checking for Ray / Ray collision between this object and the object lpOther;
+        static void RayRayDetail(cBeamCollision* lpFirst, cMatrix4 &lmFirstMatrix,cBeamCollision* lpSecond, cMatrix4 &lmSecondMatrix);
+        ///Internal function for checking for Sphere / Model collision between this object and the object lpOther;
+        static void SphereModelDetail(cSphereCollision* lpFirst, cMatrix4 &lmFirstMatrix,cMeshCollision* lpSecond, cMatrix4 &lmSecondMatrix);
+        ///Internal function for checking for Sphere / Ray collision between this object and the object lpOther;
+        static void SphereRayDetail(cSphereCollision* lpFirst, cMatrix4 &lmFirstMatrix,cBeamCollision* lpSecond, cMatrix4 &lmSecondMatrix);
+        ///Internal function for checking for Ray / Model collision between this object and the object lpOther;
+        static void RayModelDetail(cBeamCollision* lpFirst, cMatrix4 &lmFirstMatrix,cMeshCollision* lpSecond, cMatrix4 &lmSecondMatrix);
 
 		#endif
 

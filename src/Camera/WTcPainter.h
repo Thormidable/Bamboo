@@ -51,7 +51,7 @@ void Remove(cRenderPointer *lfSlot);
  // This will comapre the ShaderProgram of the next object with the previous object and will set the correct shader or fixed function to use.
  void ShaderState(cShaderProgram *mpCurrent,cShaderProgram *mpLast);
  //This will control Depth Testing for transparent and other objects.
- void DepthState(bool mpCurrent,bool mpLast);
+ void DepthState(uint8 mpCurrent,uint8 mpLast);
  // This will actually render an object from mpList to the screen.
  void Render();
 

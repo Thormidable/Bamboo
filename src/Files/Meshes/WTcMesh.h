@@ -10,6 +10,7 @@
 /// This indicates that the model has eh? WTF? Why did i put this here?
 #define WT_MESH_FORMAT_POSITIVE 0x8
 
+
 /// This is a temporary storage class to ease transformation of data from the hdd to the cMesh class.
 class cMeshArray : public cIMFLoader
 {
@@ -57,7 +58,7 @@ uint8 miFormat;
 // This is a pointer to the array holding texture co-ordinates for the mesh.
   float *mpUV;
  // This is an array holding the face data (list of verteces used to form each polygon. see cMesh::mpFaces.
-  uint16 *mpFaces;
+  FACE_TYPE *mpFaces;
  // This stores the number of verteces in this mesh.
   uint32 miVertex;
  // This stores the number of faces in this mesh.
@@ -89,6 +90,8 @@ GLuint mBuffer2;
 	* normal vectors for all the verteces.
 	*/
        void CreateNormalArray();
+       void CreateNormalArrayFlat();
+       void CreateUVSphereMap();
 
  /// This will return the number of verteces in the vertex position array mpVertex.
  uint32 Vertex();
@@ -97,7 +100,7 @@ GLuint mBuffer2;
  /// This will return a pointer to the vertex position array.
  float *VertexData();
 /// This will return a pointer to the face array..
-uint16 *FaceData();
+FACE_TYPE *FaceData();
  /// This will return a pointer to the array of vertex normals.
  float *NormalData();
  /// This will return a pointer to the array of texture co-ordinates.
@@ -122,8 +125,40 @@ void RenderMesh();
 
 /// This will return the size of the Mesh. Size being the radius of the sphere required to contain the cMesh object.
 float GetSize();
+/// This will return the size of the Mesh squared. Size being the radius of the sphere required to contain the cMesh object.
+double GetSizeSq();
 ///This will calculate the size of the Mesh. Size being the radius of the sphere required to contain the cMesh object.
 void FindSize();
+
+float *Vertex(uint32 liVertex);
+float *Normal(uint32 liVertex);
+float *UV(uint32 liVertex);
+FACE_TYPE *Face(uint32 liFace);
+FACE_TYPE Face(uint32 liFace,uint8 liVertex);
+
+float GetAngleSum(uint32 liFace,float *lpPos);
+c2DVf FindUVCoordinates(c3DVf ModelPos,float *lpTangent,float *lpBinormal,float *NormalData);
+
+///This will duplicate this mesh and return the pointer to the new instance. It can be named with lsFileName, if not it will be named "GeneratedMesh".
+cMesh *Duplicate(string lsFileName="");
+///This will make this cMesh duplicate lpMesh. It can be named with lsFileName, if not it will be named "GeneratedMesh".
+void Equals(cMesh *lpMesh,string lsFileName="");
+
+uint8 VertexSize();
+
+void RemoveDuplicateVerteces(float lfMergeRange);
+bool VertexMatch(uint32 liOne, uint32 liTwo,float lfRange);
+bool NormalMatch(uint32 liOne, uint32 liTwo,float lfRange);
+bool UVMatch(uint32 liOne, uint32 liTwo,float lfRange);
+
+void UpdateFaces(uint32 liBase,uint32 liCopy);
+
+void ForceNormalDirectionStart(uint32 liFurthest,uint32 liFace);
+void ForceNormalDirection(uint32 liFurthest,uint32 liFace,bool *lbDone);
+bool ContainsVertex(c3DVf lcVert,uint32 liFace);
+
+uint8 FaceCompare(float *lpFurthest,float *lpFurthestNormal,uint16 *lpFaceCorrect,uint16 *lpFaceUnknown);
+int8 FacesShareEdge(uint16 *lpFace1,uint16 *lpFace2);
 
 };
 #endif

@@ -166,3 +166,8 @@ template<class Type> c2DVt<Type> c2DVt<Type>::operator-=(c2DVt<Type> *lpValue)
  v[1]-=lpValue->v[1];
  return *this;
 }
+
+template<class Type> Type c2DVt<Type>::MagnitudeSq()
+{
+    return v[0]*v[0]+v[1]*v[1];
+};

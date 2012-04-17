@@ -57,7 +57,6 @@ void cImage::Size(float lfSize)
 
 void cImage::RenderPainter()
 {
-
  if(Textures())
  {
      ResizeArrays();

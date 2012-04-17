@@ -15,11 +15,14 @@ protected:
 	int32 miID;
 	bool mbGenerated;
 public:
+
 	cUserVariable();
 	///Function to write the buffered value to the graphics card.
 	virtual void Write()=0;
 	///This will set the Variable ID that this variable should use.
 	void SetID(int32 liID);
+	///This will return the Variable ID that this Variable is using.
+	int32 ID();
 	///This will Set the Data a Uniform Variable will Use. This will copy the data. It will not automatically update, but the data can be deallocated at any time.
 	virtual void DataValue(void *lpData)=0;
 	///This will Set the Data a Uniform Variable will Use. This will not copy the data, but will store a pointer to the data. It will automatically update, but the data passed to it should not be deallocated while the shader is in use.
@@ -28,6 +31,10 @@ public:
 	virtual void DataValue(void *lpData,uint32 liElements)=0;
 	///This will Set the Array of Data an Attribute Variable will Use. This will not copy the data, but will store a pointer to the data. It will automatically update, but the data passed to it should not be deallocated while the shader is in use.
 	virtual void DataPointer(void *lpData,uint32 liElements)=0;
+	///This will return the data the Function is pointing at.
+	virtual void *Data()=0;
+
+	virtual void Buffer()=0;
 
 };
 /**
@@ -36,11 +43,14 @@ public:
  */
 class cVoidVariable : public cUserVariable
 {
- void Write(){};
- void DataValue(void *lpData){(void) lpData;};
- void DataPointer(void *lpData){(void) lpData;};
- void DataValue(void *lpData,uint32 liElements){(void) lpData; (void) liElements;};
- void DataPointer(void *lpData,uint32 liElements){(void) lpData; (void) liElements;};
+ void Write();
+ void DataValue(void *lpData);
+ void DataPointer(void *lpData);
+ void DataValue(void *lpData,uint32 liElements);
+ void DataPointer(void *lpData,uint32 liElements);
+ void *Data();
+
+ void Buffer(){};
 
 };
 /**
@@ -57,6 +67,7 @@ protected:
 public:
 	//Constructor.
 	cAttributeStore();
+	~cAttributeStore();
 	//This will write the data to the cShaderProgram for use by the grpahics card.
 	void Write();
 	//This will buffer the number of elements liElements stored in lpData into the graphics card.
@@ -67,7 +78,7 @@ public:
 	void DataPointer(void *lpData){(void) lpData;};
 	void DataPointer(void *lpData,uint32 liElements)=0;
 
-	virtual void Buffer()=0;
+	virtual void Bind()=0;
 
 };
 /**
@@ -82,6 +93,7 @@ public:
     cFloatAttributeStore();
     void DataValue(void *lpData,uint32 liElements);
 	void DataPointer(void *lpData,uint32 liElements);
+	void *Data();
 };
 
 /**
@@ -96,6 +108,7 @@ public:
     cIntAttributeStore();
     void DataValue(void *lpData,uint32 liElements);
 	void DataPointer(void *lpData,uint32 liElements);
+	void *Data();
 };
 
 /**
@@ -110,6 +123,7 @@ public:
     cBooleanAttributeStore();
     void DataValue(void *lpData,uint32 liElements);
 	void DataPointer(void *lpData,uint32 liElements);
+	void *Data();
 };
 
 /**
@@ -134,6 +148,7 @@ public:
 	virtual void ClearData()=0;
 	virtual void DataPointer(void *lpData)=0;
 
+    void Buffer(){};
 };
 /**
  * \brief More Specific Base class for Uniform Handling classes. Suitable for float Variables.
@@ -147,7 +162,7 @@ public:
 
 	void ClearData();
 	void DataPointer(void *lpData);
-
+    void *Data();
     cFloatUniformStore();
     ~cFloatUniformStore();
 };
@@ -162,6 +177,7 @@ protected:
 public:
 	void ClearData();
 	void DataPointer(void *lpData);
+	void *Data();
     cIntUniformStore();
     ~cIntUniformStore();
 };
@@ -177,6 +193,7 @@ protected:
 public:
 	void ClearData();
 	void DataPointer(void *lpData);
+	void *Data();
     cBooleanUniformStore();
     ~cBooleanUniformStore();
 };
@@ -392,6 +409,7 @@ class cAttributeArray1 : public cFloatAttributeStore
 public:
 	///This will Buffer the Data to the graphics card.
 	void Buffer();
+	void Bind();
 };
 /**
  *\brief This is a specific type of cUserVariable for Controlling an array of Attribute with two values per vertex.
@@ -404,6 +422,7 @@ class cAttributeArray2 : public cFloatAttributeStore
 public:
 	///This will Buffer the Data to the graphics card.
 	void Buffer();
+	void Bind();
 
 };
 /**
@@ -417,6 +436,7 @@ class cAttributeArray3 : public cFloatAttributeStore
 public:
 	///This will Buffer the Data to the graphics card.
 	void Buffer();
+	void Bind();
 };
 /**
  *\brief This is a specific type of cUserVariable for Controlling an array of Attribute with four values per vertex.
@@ -429,6 +449,7 @@ class cAttributeArray4 : public cFloatAttributeStore
 public:
 	///This will Buffer the Data to the graphics card.
 	void Buffer();
+	void Bind();
 };
 
 /**
@@ -442,6 +463,7 @@ class cAttributeIntArray1 : public cIntAttributeStore
 public:
 	///This will Buffer the Data to the graphics card.
 	void Buffer();
+	void Bind();
 };
 /**
  *\brief This is a specific type of cUserVariable for Controlling an array of Attribute with two values per vertex.
@@ -454,6 +476,7 @@ class cAttributeIntArray2 : public cIntAttributeStore
 public:
 	///This will Buffer the Data to the graphics card.
 	void Buffer();
+	void Bind();
 };
 /**
  *\brief This is a specific type of cUserVariable for Controlling an array of Attribute with three values per vertex.
@@ -466,6 +489,7 @@ class cAttributeIntArray3 : public cIntAttributeStore
 public:
 	///This will Buffer the Data to the graphics card.
 	void Buffer();
+	void Bind();
 };
 /**
  *\brief This is a specific type of cUserVariable for Controlling an array of Attribute with four values per vertex.
@@ -478,6 +502,7 @@ class cAttributeIntArray4 : public cIntAttributeStore
 public:
 	///This will Buffer the Data to the graphics card.
 	void Buffer();
+	void Bind();
 };
 /**
  *\brief This is a specific type of cUserVariable for Controlling an array of Attribute with a single value per vertex.
@@ -490,6 +515,7 @@ class cAttributeBooleanArray1 : public cBooleanAttributeStore
 public:
 	///This will Buffer the Data to the graphics card.
 	void Buffer();
+	void Bind();
 };
 /**
  *\brief This is a specific type of cUserVariable for Controlling an array of Attribute with two values per vertex.
@@ -502,6 +528,7 @@ class cAttributeBooleanArray2 : public cBooleanAttributeStore
 public:
 	///This will Buffer the Data to the graphics card.
 	void Buffer();
+	void Bind();
 };
 /**
  *\brief This is a specific type of cUserVariable for Controlling an array of Attribute with three values per vertex.
@@ -514,6 +541,7 @@ class cAttributeBooleanArray3 : public cBooleanAttributeStore
 public:
 	///This will Buffer the Data to the graphics card.
 	void Buffer();
+	void Bind();
 };
 /**
  *\brief This is a specific type of cUserVariable for Controlling an array of Attribute with four values per vertex.
@@ -526,6 +554,7 @@ class cAttributeBooleanArray4 : public cBooleanAttributeStore
 public:
 	///This will Buffer the Data to the graphics card.
 	void Buffer();
+	void Bind();
 };
 
 

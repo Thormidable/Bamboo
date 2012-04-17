@@ -63,6 +63,8 @@ public:
       ///Will set the vector of this object to the values specified (XYZ).
       void Vector(float lfX,float lfY,float lfZ);
 
+    float GetSize();
+    double GetSizeSq();
 };
 
 #endif

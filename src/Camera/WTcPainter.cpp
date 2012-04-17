@@ -13,9 +13,12 @@ cPainter *cPainter::Instance()
 cPainter::cPainter()//uint32 liSize)
 {
 
- mpList=0;
- mpBucket=0;
- miSize=0;
+ mpList=new cRenderPointer*[WT_PAINTER_STARTING_SIZE];
+ mpBucket=new cRenderPointer*[WT_PAINTER_STARTING_SIZE];
+ memset(mpList,0,sizeof(cRenderPointer*)*5);
+ memset(mpBucket,0,sizeof(cRenderPointer*)*5);
+ miSize=5;
+
  miPos=0;
 
   glEnableClientState(GL_VERTEX_ARRAY);
@@ -31,7 +34,8 @@ if(mpBucket) {delete []mpBucket; mpBucket=0;}
 
 void cPainter::Resize(uint32 liSize)
 {
-cRenderPointer **lpTemp;
+
+  cRenderPointer **lpTemp;
 
   lpTemp=new cRenderPointer*[liSize];
   memcpy(lpTemp,mpList,sizeof(cRenderPointer*)*miSize);
@@ -53,7 +57,6 @@ void cPainter::Add(cRenderPointer *lfData)
 if(miPos>=miSize) {Resize(miSize*2);}
  mpList[miPos]=lfData;
  ++miPos;
-//return &mpList[miPos-1];
 }
 
 
@@ -208,7 +211,7 @@ cRenderPointer **lpSwitch;
 liEnd=miPos-1;
 liPos=liStart=0;
 for(liPos=0;liPos<miPos;++liPos)
-{if(mpList[liPos]->mbAlpha){mpBucket[liEnd--]=mpList[liPos];}
+{if(mpList[liPos]->miAlpha){mpBucket[liEnd--]=mpList[liPos];}
  else{mpBucket[liStart++]=mpList[liPos];}
 }
 lpSwitch=mpBucket;
@@ -228,7 +231,7 @@ void cPainter::ShaderState(cShaderProgram *mpCurrent,cShaderProgram *mpLast)
 }
 
 
-void cPainter::DepthState(bool mpCurrent,bool mpLast)
+void cPainter::DepthState(uint8 mpCurrent,uint8 mpLast)
 {
   if(mpCurrent != mpLast)
   {
@@ -240,7 +243,6 @@ void cPainter::DepthState(bool mpCurrent,bool mpLast)
 void cPainter::Render()
 {
 
-
  uint32 liCount;
 
  SortByDistance();
@@ -250,47 +252,58 @@ for(liCount=0;liCount<WT_TEXTURE_NUMBER_ALLOWED;++liCount)
 }
 
  SortByShader();
-
-
  SortByAlpha();
 
 glEnableClientState(GL_VERTEX_ARRAY);
 glEnableClientState(GL_NORMAL_ARRAY);
 glEnable(GL_DEPTH_TEST);
- for(liCount=0;liCount<miPos;liCount++)
- {
 
-  if(liCount)
-  {
+   ShaderState(mpList[0]->ShaderPoint,0);
+      uint8 liTexSlot;
+    for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
+    {
+	  mpList[0]->mpObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
+    }
+
+  if(mpList[0]->miAlpha) glDisable(GL_DEPTH_TEST);
+  else glEnable(GL_DEPTH_TEST);
+
+  #if WT_FULL_VERSION_BAMBOO
+    if(_LIGHT->AnyLights() && mpList[0]->mpObject->Lighting()) _LIGHT->PrepareLight(&(mpList[0]->mpObject->mmCache));
+  #endif
+
+	mpList[0]->mpObject->RenderPainter();
+
+ for(liCount=1;liCount<miPos;liCount++)
+ {
+      ShaderState(mpList[liCount]->ShaderPoint,mpList[liCount-1]->ShaderPoint);
    uint8 liTexSlot;
+
+if(mpList[liCount]->ShaderPoint!=mpList[liCount-1]->ShaderPoint)
+{
+    for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
+    {
+            mpList[liCount]->mpObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
+    }
+}
+else
+{
     for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
     {
             mpList[liCount]->mpObject->TextureItem(liTexSlot).TextureState(&(mpList[liCount-1]->mpObject->TextureItem(liTexSlot)),liTexSlot);
     }
-    ShaderState(mpList[liCount]->ShaderPoint,mpList[liCount-1]->ShaderPoint);
- //   DepthState(mpList[liCount]->mbAlpha,mpList[liCount-1]->mbAlpha);
-  }
-  else
-  {
+}
+    DepthState(mpList[liCount]->miAlpha,mpList[liCount-1]->miAlpha);
 
-      uint8 liTexSlot;
-    for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
-    {
-	  mpList[liCount]->mpObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
-    }
-    ShaderState(mpList[liCount]->ShaderPoint,0);
-//  if(mpList[liCount]->mbAlpha) glDisable(GL_DEPTH_TEST);
-//  else glEnable(GL_DEPTH_TEST);
-  }
 
   #if WT_FULL_VERSION_BAMBOO
     if(_LIGHT->AnyLights() && mpList[liCount]->mpObject->Lighting()) _LIGHT->PrepareLight(&(mpList[liCount]->mpObject->mmCache));
   #endif
 
-
 	mpList[liCount]->mpObject->RenderPainter();
 
  }
+
 }
 
 void cPainter::Remove(cRenderPointer *lfSlot)
@@ -300,9 +313,11 @@ uint32 liCount;
   {
 	if(mpList[liCount]==lfSlot)
 	{
-		  if(miPos-liCount) memmove(&mpList[liCount],&mpList[liCount+1],sizeof(cRenderPointer**)*(miPos-liCount)-1);
+		  if(miPos-1>liCount) memmove(&mpList[liCount],&mpList[liCount+1],sizeof(cRenderPointer*)*(miPos-liCount-1));
+		  else mpList[liCount]=0;
 		  --miPos;
 		  return;
+
 	}
   }
 

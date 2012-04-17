@@ -2,11 +2,11 @@
 
 
 
-uint16 cWindow::RenderAreaWidth()
+uint32 cWindow::RenderAreaWidth()
 {
     return miRenderWidth;
 }
-uint16 cWindow::RenderAreaHeight()
+uint32 cWindow::RenderAreaHeight()
 {
     return miRenderHeight;
 }
@@ -24,6 +24,7 @@ void cWindow::InitialiseOpenGL()
 	glEnable(GL_BLEND);
 	glEnable(GL_POINT_SPRITE);
 	glEnable(GL_POINT_SMOOTH);
+	glEnable(GL_COLOR_MATERIAL);
 	//glEnable(GL_MODULATE);
 	glEnable(GL_VERTEX_PROGRAM_POINT_SIZE);
     glBlendFunc (GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);

@@ -3,7 +3,9 @@
 
 #if WT_FULL_VERSION_BAMBOO
 
-class cParticle : public cParticleForGroup,  public cSignal
+
+
+class cParticle
 /**
 	* This Class is fire and Forget Particles. Find Position based on Global matrix as they will not be parented
 	* to a RenderNode. Once position is set they will not be affected by changes to the local matrices.
@@ -11,45 +13,45 @@ class cParticle : public cParticleForGroup,  public cSignal
 	* Their position can be automatically updated by cParticleGroup if the flag is set
 **/
 {
-
+protected:
+	c3DVf Position;
+	cRGBA Color;
+	float Size;
+	c3DVf Speed;
+	float Life;
 public:
-	cParticle();
-	cParticle(cParticleHandler *lpNode);
-	cParticle(cCamera *lpCamera);
-	~cParticle();
+    cParticle();
 
 	///This will set a cParticles Speed.
 	void UpdateSpeed(float *lpTemp);
 	///This is the function that will update a cParticles Position. if WT_PARTICLE_HANDLER_UPDATE_PARTICLE_POSITIONS is true then cParticleHandler will do this automatically.
-	virtual void UpdatePos();
-
-	void Stop();
-	void OnSleep();
-	void OnWake();
-};
-
-class cGravityParticle : public cParticleForGroup
-/** \brief cParticles which are affected by Gravity.
- * These Particles have the code to be affected by the variables _GRAVITY_X,_GRAVITY_Y and _GRAVITY_Z. UpdatePos() will account use the current Gravity settings to calculate the speed and position.
- */
-{
-
-public:
 	void UpdatePos();
+
+	void UpdateGravity();
+	void UpdateGravityAndWind();
+	void UpdateWind();
+
 	friend class cParticleHandler;
+	friend class cParticleGroup;
+	friend class cStarMap;
+
+	void Spawn(cParticleSettings &lpData);
+
+	void SetSize(float lpSize);
+	void SetLife(float lpLife);
+	void SetSpeed(float *lpSpeed);
+	void SetPosition(float *lpPos);
+
+	void SetColor(float *lpRGB);
+	void SetColor(cRGB *lpRGB);
+	void SetColor(cRGBA *lpRGB);
+	void SetColor(cRGB &lpRGB);
+	void SetColor(cRGBA &lpRGB);
+
+	cParticle operator=(cParticle *lpOther);
+	cParticle operator=(cParticle lpOther);
 };
 
-
-class cWindAndGravityParticle : public cParticleForGroup
-/** \brief cGravityParticles which are also affected by Wind.
- * These Particles have the code to be affected by the variables _WIND_X,_WIND_Y and _WIND_Z. UpdatePos() will account use the current Wind and Gravity settings to calculate the speed and position of each particle.
-*/
-{
-
-public:
-	void UpdatePos();
-	friend class cParticleHandler;
-};
 /**
 * This call will take all cParticleFree inheriting Particles (Inc cGravityParticle and cWindAndGravityParticle) and will deal with them as a block for efficiency and so the user does not need to track them.
 * All coordinates must be converted to global co-ordinates when they are created.
@@ -59,38 +61,58 @@ public:
 * May be issues with time dependancy.
 * Essentially this class will work in teh background and handle objects of types cParticle,cGravityParticle,cWindAndGravityParticle.
 **/
-class cParticleHandler : public cRenderObject
+class cParticleHandler : public cLimitedList<cParticle>, public cRenderObject
 {
 	friend class cCamera;
-	uint32 FINISH_THIS;
-	uint32 miParticles;
-	cParticle **mpParticles;
-	uint32 miMaxParticles;
-	//static cParticleHandler *spthis;
+
+protected:
 	bool lbRefresh;
-	cParticleHandler();
+
+	cManualInterleavedAttributeArray *mpAttributes;
+	cAttributeLinker *mpAttributeLinker;
+
 	~cParticleHandler();
 
+
 public:
-	//This will resize the number of particles the cParticleHandler can process. The system is resized as required.
-	void Resize(uint32 liSize);
+	cParticleHandler();
+	cParticleHandler(uint32 liParticles);
+    cParticleHandler(uint32 liParticles,vRenderNode *lpNode);
+	cParticleHandler(uint32 liParticles,cCamera *lpCamera);
+	cParticleHandler(vRenderNode *lpNode);
+	cParticleHandler(cCamera *lpCamera);
+
+
 	//This will add the specified Particle to this HAndler.
-	void Add(cParticle *lpPart);
-	//Will remove the specified Particle from this Handler, but not delete.
-	void Remove(cParticle *lpPart);
+	cParticle *NewParticle();
+
 	//Will remove the specified Particle from this Handler, but not delete.
 	void Remove(uint32 liParticle);
 	//Will delete the specified Particle from this Handler.
-	void Delete(cParticle *lpPart);
+	void Delete(uint32 liParticle);
 	//Will delete All Particles from this Handler.
 	void DeleteAll();
-	void Refresh();
+	virtual void Refresh();
 	void ForceRefresh(){lbRefresh=true;};
 	void RenderPainter();
 
+	uint32 LivingParticles();
+
+	void InitialiseParticleHandler(uint32 liParticles);
 
 };
 
 #endif
+
+c3DVf ParticleArcSpeeds(c3DVf Vector,float lfSpeedRange, float lfAngleRange);
+c3DVf ParticleBallSpeeds(float lfSpeed,float lfSpeedRange);
+
+c3DVf ParticleArcSpeeds(float *lpSpeedData);
+c3DVf ParticleBallSpeeds(float *lpSpeedData);
+
+c3DVf ParticleSideVelocity(float *lpSpeedInfo);
+c3DVf ParticleSideVelocity(c3DVf lpSpeedInfo,float lfSpeedRange, float lfSideSpeed);
+
+c3DVf GenerateUniformRandomVector();
 
 #endif

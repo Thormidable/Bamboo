@@ -14,6 +14,17 @@
     #define WT_OS_TYPE OS_LINUX
 #endif
 
+
+#ifdef _MSC_VER
+    #define WT_OS_TYPE OS_WIN32
+    #ifdef __WIN64
+        #define WT_OS_BITS OS_64_BIT
+    #else
+        #define WT_OS_BITS OS_32_BIT
+    #endif
+#endif
+
+
 #ifdef __WIN32
     #define WT_OS_TYPE OS_WIN32
     #ifdef __WIN64
@@ -28,18 +39,19 @@
 #elif defined(__x86_64__)
    #define WT_OS_BITS OS_64_BIT
 #else
-	#warning comment Base Pointer size undetectable for your archetecture. Needs to be set manually in WTBamboo.h . Library may need recompiling.
+// #pragma warning comment Base Pointer size undetectable for your archetecture. Needs to be set manually in WTBamboo.h . Library may need recompiling.
 #endif
 
 //Manual def of OS Type.
 #ifndef WT_OS_TYPE
-    #warning comment OS Not Detected.
-    #define WT_OS_TYPE OS_LINUX
+    #pragma warning (OS Not Detected).
+    //#define WT_OS_TYPE OS_LINUX
+	#define WT_OS_TYPE OS_WIN32
 #endif
 
 //Manual definition of pointer size for Architecture base.
 #ifndef WT_OS_BITS
-    #warning comment OS Bit Base Not Detected.
+    #pragma warning (OS Bit Base Not Detected).
     #define WT_OS_BITS OS_32_BIT
 #endif
 

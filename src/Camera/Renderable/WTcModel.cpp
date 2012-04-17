@@ -38,22 +38,50 @@ void cModel::RenderPainter()
  {
   PrepareMaterial();
   SetShaderVariables();
-/*
-    glBindBuffer(GL_ARRAY_BUFFER, mpMesh->mBuffer1);
-    glVertexAttribPointer(mpShader->VertexPositionID(), 3, GL_FLOAT, GL_FALSE, 0, 0);
-    glEnableVertexAttribArray(mpShader->VertexPositionID());
-
-    glVertexAttribPointer(mpShader->VertexNormalID(), 3, GL_FLOAT, GL_FALSE, 0, reinterpret_cast<const GLvoid*>(mpMesh->Vertex()*3*sizeof(float)));
-    glEnableVertexAttribArray(mpShader->VertexNormalID());
-
-    glVertexAttribPointer(mpShader->VertexUVID(), 3, GL_FLOAT, GL_FALSE, 0, reinterpret_cast<const GLvoid*>(mpMesh->Vertex()*6*sizeof(float)));
-    glEnableVertexAttribArray(mpShader->VertexUVID());
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mpMesh->mBuffer2);
-    glDrawElements(GL_TRIANGLES,mpMesh->Faces()*3,GL_UNSIGNED_SHORT,0);
-*/
   mpMesh->RenderMesh();
  }
 }
 
+float cModel::GetSize()
+{
+    if(mpMesh) return mpMesh->GetSize();
+    return 0.0f;
+}
+
+double cModel::GetSizeSq()
+{
+    if(mpMesh) return mpMesh->GetSizeSq();
+    return 0.0f;
+}
+
+
+c2DVf cModel::GetUVCoords(c3DVf GlobalPos)
+{
+ if(mpMesh)
+ {
+
+     GlobalPos-=mmCache.Position();
+
+ float *lpTangent=0;
+ uint32 liTemp=mpShader->ShaderVariableSet()->GetAttributePosition("Bb_Tangent");
+ if(liTemp)lpTangent=reinterpret_cast<float*>(mpVariables->GetVariable(liTemp-1)->Data());
+
+ float *lpBinormal=0;
+ liTemp=mpShader->ShaderVariableSet()->GetAttributePosition("Bb_Binormal");
+ if(liTemp)lpBinormal=reinterpret_cast<float*>(mpVariables->GetVariable(liTemp-1)->Data());
+
+
+ float *lpNormal=0;
+ liTemp=mpShader->ShaderVariableSet()->GetAttributePosition("Bb_Normal");
+ if(liTemp)lpNormal=reinterpret_cast<float*>(mpVariables->GetVariable(liTemp-1)->Data());
+
+ return mpMesh->FindUVCoordinates(c3DVf(GlobalPos[0]*mmCache.Xx()+GlobalPos[1]*mmCache.Xy()+GlobalPos[2]*mmCache.Xz(),
+                                            GlobalPos[0]*mmCache.Yx()+GlobalPos[1]*mmCache.Yy()+GlobalPos[2]*mmCache.Yz(),
+                                            GlobalPos[0]*mmCache.Zx()+GlobalPos[1]*mmCache.Zy()+GlobalPos[2]*mmCache.Zz()),
+											lpTangent,
+											lpBinormal,
+											lpNormal);
+ }
+ return c2DVf(0.0f,0.0f);
+};
 

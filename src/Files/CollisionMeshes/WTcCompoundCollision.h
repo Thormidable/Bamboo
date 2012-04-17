@@ -78,7 +78,7 @@ public:
 	uint8 GetType(uint32 liPos);
 	vCollisionData *GetObject(uint32 liPos);
 
-
+	bool Owns(vCollisionData *lpData);
 
 	///Will return the Objects Type
 	uint8 Type();

@@ -64,12 +64,14 @@ protected:
  virtual float *Position(){return 0;};
 public:
 
+ void MouseCollisionCheck(c3DVf lpRV,c3DVf lpStart,float lfRadius,cMatrix4 &lmOtherMatrix);
 
  /// This will return a pointer to the classes current instance and if there is none it will create one.
  static cCollisionHandler *Instance();
 
- virtual cCollisionList *GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType=0)=0;
-
+ virtual cCollisionList *GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType=0,cCollisionList *lpList=0)=0;
+ virtual cCollisionList *GenerateDetailedCollisionList(cCollisionObject *lpObj,uint32 lpType=0,cCollisionList *lpList=0)=0;
+ virtual cCollisionList *GenerateMouseSelection(c3DVf MouseVector,c3DVf MouseStart,float lfRadius,uint32 lpType=0,cCollisionList *lpList=0)=0;
  /// This will deconstruct the class.
  virtual ~cCollisionHandler();
 
@@ -123,8 +125,14 @@ protected:
 
 public:
 
-	/// This will Actually search the Collision Lists and create a mpCollisionList with all the detected collisions with objects of type lpType.
-	virtual cCollisionList *GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType=0);
+	/// This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType.
+	cCollisionList *GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
+
+	/// This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType, with extra collision detail.
+	cCollisionList *GenerateDetailedCollisionList(cCollisionObject *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
+
+    /// This will perform a Mouse Selection collision Check. Only checks if the centre point of an object is within the radius of the Vector starting at MouseStart in the direction MouseVector.
+    cCollisionList *GenerateMouseSelection(c3DVf MouseVector,c3DVf MouseStart,float lfRadius,uint32 lpType=0,cCollisionList *lpList=0);
 
 	/// This will reset both the cursors used to track position through the collision object lists.
 	void ResetCursors();
@@ -148,7 +156,13 @@ protected:
 	cCollisionHandlerBSP();
 public:
 
-	cCollisionList *GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType=0);
+    /// This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType.
+	cCollisionList *GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
+	///This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType, with extra collision detail.
+	cCollisionList *GenerateDetailedCollisionList(cCollisionObject *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
+    /// This will perform a Mouse Selection collision Check. Only checks if the centre point of an object is within the radius of the Vector starting at MouseStart in the direction MouseVector.
+    cCollisionList *GenerateMouseSelection(c3DVf MouseVector,c3DVf MouseStart,float lfRadius,uint32 lpType=0,cCollisionList *lpList=0);
+
 	///This will set the current Position of the Spatial Array.
 	void Position(float *lpTemp){memcpy(mfCentre,lpTemp,sizeof(float)*3);};
 	///This will return the current Position of the Spatial Array.

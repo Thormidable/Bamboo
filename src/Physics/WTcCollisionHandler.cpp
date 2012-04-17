@@ -1,5 +1,41 @@
 #include "../WTBamboo.h"
 
+void cCollisionHandler::MouseCollisionCheck(c3DVf lpRV,c3DVf lpStart,float lfRadius,cMatrix4 &lmOtherMatrix)
+{
+ if(cCollisionList::mpOther->Asleep() || cCollisionList::mpOther->IsDelayed()) return;
+double lfEq[2];
+
+lpStart-=lmOtherMatrix.Position();
+
+//Find the number of Ray vectors to reach the sphere.
+lfEq[0]=(lpStart[0]*lpRV[0]+
+		lpStart[1]*lpRV[1]+
+		lpStart[2]*lpRV[2]);
+
+		lpRV[0]=lpRV[0]*lfEq[0];
+		lpRV[1]=lpRV[1]*lfEq[0];
+		lpRV[2]=lpRV[2]*lfEq[0];
+
+		lfEq[1]=0.0f;
+		lfEq[1]+=(lpStart[0]-lpRV[0])*(lpStart[0]-lpRV[0]);
+		lfEq[1]+=(lpStart[1]-lpRV[1])*(lpStart[1]-lpRV[1]);
+		lfEq[1]+=(lpStart[2]-lpRV[2])*(lpStart[2]-lpRV[2]);
+
+    lfRadius+=cCollisionList::mpOther->Sphere()->CollisionSize();
+
+	if(lfEq[1]<lfRadius*lfRadius)
+	{
+        lfEq[1]=sqrt(lfEq[1]);
+        cCollisionListObject *lpTemp=new cCollisionListObject;
+        lpTemp->mpObj=cCollisionList::mpOther;
+        lpTemp->mvCentre=lmOtherMatrix.Position();
+        lpTemp->mfBeamLength=lfEq[0];
+        lpTemp->mfDistance=c3DVf(lpStart+lpRV-lpTemp->mvCentre).Magnitude();
+        cCollisionList::mpStaticList->AddCollision(lpTemp);
+	}
+
+}
+
 cCollisionHandler *cCollisionHandler::spInstance=0;
 
 cCollisionHandler *cCollisionHandler::Instance()
@@ -17,57 +53,175 @@ uint32 cCollisionHandlerType::FindSlot(cCollisionObject *lpObj)
  return lpObj->CollisionFilter();
 }
 
-cCollisionList *cCollisionHandlerBSP::GenerateCollisionList(cCollisionObject *lpCheck,uint32 lpCol)
+cCollisionList *cCollisionHandlerBSP::GenerateDetailedCollisionList(cCollisionObject *lpCheck,uint32 lpCol,cCollisionList *lpList)
 {
+    if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpCheck);
+	else cCollisionList::mpStaticList=lpList;
+	if(lpCheck->Awake() && !lpCheck->IsDelayed())
+	{
+        ResetCursors();
 
-	cCollisionList *lpList=new cCollisionList;
-	ResetCursors();
+        uint32 liSlot=FindSlot(lpCheck);
 
-	uint32 liSlot=FindSlot(lpCheck);
+        while(NextListItem(liSlot))
+        {
+            if(mpColCur->Data()->CollisionFilter()==lpCol || !lpCol)
+            {
+                cCollisionList::mpOther=mpColCur->Data();
+                if(mpColCur->Data()!=lpCheck) lpCheck->CheckCollisionDetail();
+            }
+        }
+	}
 
-	while(NextListItem(liSlot)) {if(mpColCur->Data()->Collision(lpCheck,lpCol))lpList->AddCollision(mpColCur->Data());}
-
-	return lpList;
+	return cCollisionList::mpStaticList;
 }
 
-cCollisionList *cCollisionHandlerType::GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType)
+cCollisionList *cCollisionHandlerBSP::GenerateCollisionList(cCollisionObject *lpCheck,uint32 lpCol,cCollisionList *lpList)
 {
-	cCollisionList *lpList=new cCollisionList;
-	ResetCursors();
-if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE)
-{
-	if(lpType)
+	if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpCheck);
+	else cCollisionList::mpStaticList=lpList;
+
+	if(lpCheck->Awake() && !lpCheck->IsDelayed())
 	{
-	while(NextListItem(lpType))
-		{
+        ResetCursors();
 
-			if(mpColCur->Data()!=lpObj)
-			{
-				if(mpColCur->Data()->Collision(lpObj))
-				{
-					lpList->AddCollision(mpColCur->Data());
+        uint32 liSlot=FindSlot(lpCheck);
 
-				}
-			}
-		}
+        while(NextListItem(liSlot))
+        {
+            if(mpColCur->Data()->CollisionFilter()==lpCol || !lpCol)
+            {
+                cCollisionList::mpOther=mpColCur->Data();
+                if(lpCheck->CheckCollision()) cCollisionList::mpStaticList->AddCollision();
+            }
+        }
 	}
-	else
-	{
-	while(NextListItem())
-	{
-
-		if(mpColCur->Data()!=lpObj)
-		{
-			if(mpColCur->Data()->Collision(lpObj))
-			{
-				lpList->AddCollision(mpColCur->Data());
-			}
-
-		}
-  	}
-	}
+	return cCollisionList::mpStaticList;
 }
-  return lpList;
+
+
+cCollisionList *cCollisionHandlerBSP::GenerateMouseSelection(c3DVf MouseVector,c3DVf MouseStart,float lfRadius,uint32 lpCol,cCollisionList *lpList)
+{
+if(!lpList) cCollisionList::mpStaticList=new cCollisionList(0);
+else cCollisionList::mpStaticList=lpList;
+
+        ResetCursors();
+
+        uint32 liTopPos;
+        if(WT_COLLISION_HANDLER_DIMENSIONS==WT_COLLISION_HANDLER_DIMENSIONS_1D) liTopPos=WT_COLLISION_HANDLER_SIZE;
+        if(WT_COLLISION_HANDLER_DIMENSIONS==WT_COLLISION_HANDLER_DIMENSIONS_2D) liTopPos=WT_COLLISION_HANDLER_SIZE+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        if(WT_COLLISION_HANDLER_DIMENSIONS==WT_COLLISION_HANDLER_DIMENSIONS_3D) liTopPos=WT_COLLISION_HANDLER_SIZE+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        for(uint32 liSlot=0;liSlot<liTopPos;++liSlot)
+        {
+            ResetCursors();
+            while(NextListItem(liSlot))
+            {
+                if(mpColCur->Data()->CollisionFilter()==lpCol || !lpCol)
+                {
+                    cCollisionList::mpOther=mpColCur->Data();
+                    MouseCollisionCheck(MouseVector,MouseStart,lfRadius,cCollisionList::mpOther->CacheMatrix());
+                }
+            }
+        }
+	return cCollisionList::mpStaticList;
+};
+
+cCollisionList *cCollisionHandlerType::GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType,cCollisionList *lpList)
+{
+	if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpObj);
+	else cCollisionList::mpStaticList=lpList;
+
+  if(lpObj->Awake() && !lpObj->IsDelayed())
+  {
+            ResetCursors();
+        if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE)
+        {
+            if(lpType)
+            {
+            while(NextListItem(lpType))
+                {
+
+                    if(mpColCur->Data()!=lpObj)
+                    {
+                        cCollisionList::mpOther=mpColCur->Data();
+                        if(lpObj->CheckCollision()) cCollisionList::mpStaticList->AddCollision();
+                    }
+                }
+            }
+            else
+            {
+            while(NextListItem())
+            {
+
+                if(mpColCur->Data()!=lpObj)
+                {
+                    cCollisionList::mpOther=mpColCur->Data();
+                    if(lpObj->CheckCollision()) cCollisionList::mpStaticList->AddCollision();
+                }
+            }
+            }
+        }
+  }
+  return cCollisionList::mpStaticList;
+}
+
+cCollisionList *cCollisionHandlerType::GenerateMouseSelection(c3DVf MouseVector,c3DVf MouseStart,float lfRadius,uint32 lpType,cCollisionList *lpList)
+{
+	if(!lpList) cCollisionList::mpStaticList=new cCollisionList(0);
+	else cCollisionList::mpStaticList=lpList;
+
+    ResetCursors();
+        if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE && lpType)
+        {
+            while(NextListItem(lpType))
+                {
+                        cCollisionList::mpOther=mpColCur->Data();
+                        MouseCollisionCheck(MouseVector,MouseStart,lfRadius,cCollisionList::mpOther->CacheMatrix());
+                }
+        }
+        else
+        {
+            while(NextListItem())
+            {
+                    cCollisionList::mpOther=mpColCur->Data();
+                    MouseCollisionCheck(MouseVector,MouseStart,lfRadius,cCollisionList::mpOther->CacheMatrix());
+            }
+        }
+  return cCollisionList::mpStaticList;
+};
+
+
+cCollisionList *cCollisionHandlerType::GenerateDetailedCollisionList(cCollisionObject *lpObj,uint32 lpType,cCollisionList *lpList)
+{
+	if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpObj);
+	else cCollisionList::mpStaticList=lpList;
+    if(lpObj->Awake() && !lpObj->IsDelayed())
+	{
+            ResetCursors();
+        if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE && lpType)
+        {
+            while(NextListItem(lpType))
+                {
+                    if(mpColCur->Data()!=lpObj)
+                    {
+                        cCollisionList::mpOther=mpColCur->Data();
+                        lpObj->CheckCollisionDetail();
+                    }
+                }
+        }
+        else
+        {
+            while(NextListItem())
+            {
+                if(mpColCur->Data()!=lpObj)
+                {
+                    cCollisionList::mpOther=mpColCur->Data();
+                    lpObj->CheckCollisionDetail();
+                }
+            }
+        }
+	}
+  return cCollisionList::mpStaticList;
 }
 
 cCollisionHandler::~cCollisionHandler()

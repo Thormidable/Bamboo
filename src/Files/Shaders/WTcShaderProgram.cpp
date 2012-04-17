@@ -40,6 +40,7 @@ trace("Loaded and Processed ShaderProgram : " << mpFileName);
     SetVariablePointer("mmProjection",_PROJECTION_MATRIX);
     SetVariablePointer("mmCamera",_CAMERA_MATRIX);
    	SetVariablePointer("mmCombined",_COMBINED_MATRIX);
+   	SetVariablePointer("Bb_Camera_Zoom",&_CAMERA_ZOOM);
 /*
     miVertexID=glGetAttribLocation(miProgramID, "VertexPosition");
    	miNormalID=glGetAttribLocation(miProgramID, "VertexNormal");

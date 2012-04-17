@@ -4,11 +4,11 @@
     float cRGB::G(){return color[1];};
     float cRGB::B(){return color[2];};
     float *cRGB::Color(){return color;};
-    float *cRGB::operator=(float*lpOther){memcpy(color,lpOther,sizeof(float)*3); return lpOther;};
-    cRGB &cRGB::operator=(cRGB &lpOther){ memcpy(color,lpOther.Color(),sizeof(float)*3); return *this;};
-    cRGB *cRGB::operator=(cRGB *lpOther){ memcpy(color,lpOther->Color(),sizeof(float)*3); return this;};
-    cRGB &cRGB::operator=(cRGBA &lpOther){ memcpy(color,lpOther.Color(),sizeof(float)*3); return *this;};
-    cRGB *cRGB::operator=(cRGBA *lpOther){ memcpy(color,lpOther->Color(),sizeof(float)*3); return this;};
+    cRGB cRGB::operator=(float*lpOther){memcpy(color,lpOther,sizeof(float)*3); return lpOther;};
+    cRGB cRGB::operator=(cRGB lpOther){ memcpy(color,lpOther.Color(),sizeof(float)*3); return *this;};
+    cRGB cRGB::operator=(cRGB *lpOther){ memcpy(color,lpOther->Color(),sizeof(float)*3); return *this;};
+    cRGB cRGB::operator=(cRGBA lpOther){ memcpy(color,lpOther.Color(),sizeof(float)*3); return *this;};
+    cRGB cRGB::operator=(cRGBA *lpOther){ memcpy(color,lpOther->Color(),sizeof(float)*3); return *this;};
     float &cRGB::operator[](uint32 liPos){return color[liPos];};
 
     float cRGBA::R(){return color[0];};
@@ -16,11 +16,11 @@
     float cRGBA::B(){return color[2];};
     float cRGBA::A(){return color[3];};
     float *cRGBA::Color(){return color;};
-    float *cRGBA::operator=(float*lpOther){memcpy(color,lpOther,sizeof(float)*4); return lpOther;};
-    cRGBA &cRGBA::operator=(cRGB &lpOther){ memcpy(color,lpOther.Color(),sizeof(float)*3); color[3]=1.0f; return *this;};
-    cRGBA *cRGBA::operator=(cRGB *lpOther){ memcpy(color,lpOther->Color(),sizeof(float)*3); color[3]=1.0f; return this;};
-    cRGBA &cRGBA::operator=(cRGBA &lpOther){ memcpy(color,lpOther.Color(),sizeof(float)*4); return *this;};
-    cRGBA *cRGBA::operator=(cRGBA *lpOther){ memcpy(color,lpOther->Color(),sizeof(float)*4); return this;};
+    cRGBA cRGBA::operator=(float*lpOther){memcpy(color,lpOther,sizeof(float)*4); return lpOther;};
+    cRGBA cRGBA::operator=(cRGB lpOther){ memcpy(color,lpOther.Color(),sizeof(float)*3); color[3]=1.0f; return *this;};
+    cRGBA cRGBA::operator=(cRGB *lpOther){ memcpy(color,lpOther->Color(),sizeof(float)*3); color[3]=1.0f; return *this;};
+    cRGBA cRGBA::operator=(cRGBA lpOther){ memcpy(color,lpOther.Color(),sizeof(float)*4); return *this;};
+    cRGBA cRGBA::operator=(cRGBA *lpOther){ memcpy(color,lpOther->Color(),sizeof(float)*4); return *this;};
     float &cRGBA::operator[](uint32 liPos){return color[liPos];};
 
 void cRGBA::Set(float lfR,float lfG,float lfB,float lfA)
@@ -62,38 +62,6 @@ cRGBA::cRGBA(float *lfRGB)
     memcpy(color,lfRGB,sizeof(float)*4);
 }
 
-cRGBA &cRGBA::operator=(c3DVf &lpOther)
-{
-memcpy(color,lpOther.v,sizeof(float)*3);
-return *this;
-};
-cRGBA *cRGBA::operator=(c3DVf *lpOther)
-{
-    memcpy(color,lpOther->v,sizeof(float)*3);
-    return this;
-};
-cRGBA &cRGBA::operator=(c4DVf &lpOther)
-{
-    memcpy(color,lpOther.v,sizeof(float)*4);
-    return *this;
-};
-cRGBA *cRGBA::operator=(c4DVf *lpOther)
-{
-    memcpy(color,lpOther->v,sizeof(float)*4);
-    return this;
-};
-
-cRGB &cRGB::operator=(c3DVf &lpOther)
-{
-    memcpy(color,lpOther.v,sizeof(float)*3);
-    return *this;
-
-}
-cRGB *cRGB::operator=(c3DVf *lpOther)
-{
-    memcpy(color,lpOther->v,sizeof(float)*3);
-    return this;
-}
 
 void cRGB::R(float lfR){color[0]=lfR;};
 void cRGB::G(float lfG){color[1]=lfG;};
@@ -102,3 +70,882 @@ void cRGBA::R(float lfR){color[0]=lfR;};
 void cRGBA::G(float lfG){color[1]=lfG;};
 void cRGBA::B(float lfB){color[2]=lfB;};
 void cRGBA::A(float lfA){color[3]=lfA;};
+
+cRGB::cRGB(c3DVf lfOther)
+{
+    memcpy(color,lfOther.v,sizeof(float)*3);
+};
+
+cRGBA::cRGBA(c4DVf lfOther)
+{
+    memcpy(color,lfOther.v,sizeof(float)*4);
+};
+cRGB::cRGB(c4DVf lfOther)
+{
+    memcpy(color,lfOther.v,sizeof(float)*3);
+};
+
+cRGBA::cRGBA(c3DVf lfOther)
+{
+    memcpy(color,lfOther.v,sizeof(float)*3);
+    color[3]=1.0f;
+};
+
+    cRGBA cRGBA::operator+(float lpOther)
+    {
+        cRGBA lfReturn;
+        lfReturn[0]=R()+lpOther;
+        lfReturn[1]=G()+lpOther;
+        lfReturn[2]=B()+lpOther;
+        lfReturn[3]=A()+lpOther;
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator+(float *lpOther)
+        {
+        cRGBA lfReturn;
+        lfReturn[0]=R()+lpOther[0];
+        lfReturn[1]=G()+lpOther[1];
+        lfReturn[2]=B()+lpOther[2];
+        lfReturn[3]=A()+lpOther[3];
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator+(cRGB lpOther)
+        {
+        cRGBA lfReturn;
+        lfReturn[0]=R()+lpOther[0];
+        lfReturn[1]=G()+lpOther[1];
+        lfReturn[2]=B()+lpOther[2];
+        lfReturn[3]=A();
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator+(cRGB *lpOther)
+        {
+        cRGBA lfReturn;
+        lfReturn[0]=R()+lpOther->R();
+        lfReturn[1]=G()+lpOther->G();
+        lfReturn[2]=B()+lpOther->B();
+        lfReturn[3]=A();
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator+(cRGBA lpOther)
+            {
+        cRGBA lfReturn;
+        lfReturn[0]=R()+lpOther[0];
+        lfReturn[1]=G()+lpOther[1];
+        lfReturn[2]=B()+lpOther[2];
+        lfReturn[3]=A()+lpOther[3];
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator+(cRGBA *lpOther)
+            {
+        cRGBA lfReturn;
+        lfReturn[0]=R()+lpOther->R();
+        lfReturn[1]=G()+lpOther->G();
+        lfReturn[2]=B()+lpOther->B();
+        lfReturn[3]=A()+lpOther->A();
+        return lfReturn;
+    };
+
+
+
+
+
+
+
+
+    cRGBA cRGBA::operator-(float lpOther)
+    {
+        cRGBA lfReturn;
+        lfReturn[0]=R()-lpOther;
+        lfReturn[1]=G()-lpOther;
+        lfReturn[2]=B()-lpOther;
+        lfReturn[3]=A()-lpOther;
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator-(float *lpOther)
+        {
+        cRGBA lfReturn;
+        lfReturn[0]=R()-lpOther[0];
+        lfReturn[1]=G()-lpOther[1];
+        lfReturn[2]=B()-lpOther[2];
+        lfReturn[3]=A()-lpOther[3];
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator-(cRGB lpOther)
+        {
+        cRGBA lfReturn;
+        lfReturn[0]=R()-lpOther[0];
+        lfReturn[1]=G()-lpOther[1];
+        lfReturn[2]=B()-lpOther[2];
+        lfReturn[3]=A();
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator-(cRGB *lpOther)
+        {
+        cRGBA lfReturn;
+        lfReturn[0]=R()-lpOther->R();
+        lfReturn[1]=G()-lpOther->G();
+        lfReturn[2]=B()-lpOther->B();
+        lfReturn[3]=A();
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator-(cRGBA lpOther)
+            {
+        cRGBA lfReturn;
+        lfReturn[0]=R()-lpOther[0];
+        lfReturn[1]=G()-lpOther[1];
+        lfReturn[2]=B()-lpOther[2];
+        lfReturn[3]=A()-lpOther[3];
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator-(cRGBA *lpOther)
+            {
+        cRGBA lfReturn;
+        lfReturn[0]=R()-lpOther->R();
+        lfReturn[1]=G()-lpOther->G();
+        lfReturn[2]=B()-lpOther->B();
+        lfReturn[3]=A()-lpOther->A();
+        return lfReturn;
+    };
+
+
+
+    cRGBA cRGBA::operator*(float lpOther)
+    {
+        cRGBA lfReturn;
+        lfReturn[0]=R()*lpOther;
+        lfReturn[1]=G()*lpOther;
+        lfReturn[2]=B()*lpOther;
+        lfReturn[3]=A()*lpOther;
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator*(float *lpOther)
+        {
+        cRGBA lfReturn;
+        lfReturn[0]=R()*lpOther[0];
+        lfReturn[1]=G()*lpOther[1];
+        lfReturn[2]=B()*lpOther[2];
+        lfReturn[3]=A()*lpOther[3];
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator*(cRGB lpOther)
+        {
+        cRGBA lfReturn;
+        lfReturn[0]=R()*lpOther[0];
+        lfReturn[1]=G()*lpOther[1];
+        lfReturn[2]=B()*lpOther[2];
+        lfReturn[3]=A();
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator*(cRGB *lpOther)
+        {
+        cRGBA lfReturn;
+        lfReturn[0]=R()*lpOther->R();
+        lfReturn[1]=G()*lpOther->G();
+        lfReturn[2]=B()*lpOther->B();
+        lfReturn[3]=A();
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator*(cRGBA lpOther)
+            {
+        cRGBA lfReturn;
+        lfReturn[0]=R()*lpOther[0];
+        lfReturn[1]=G()*lpOther[1];
+        lfReturn[2]=B()*lpOther[2];
+        lfReturn[3]=A()*lpOther[3];
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator*(cRGBA *lpOther)
+            {
+        cRGBA lfReturn;
+        lfReturn[0]=R()*lpOther->R();
+        lfReturn[1]=G()*lpOther->G();
+        lfReturn[2]=B()*lpOther->B();
+        lfReturn[3]=A()*lpOther->A();
+        return lfReturn;
+    };
+
+    cRGBA cRGBA::operator/(float lpOther)
+    {
+        cRGBA lfReturn;
+        lfReturn[0]=R()/lpOther;
+        lfReturn[1]=G()/lpOther;
+        lfReturn[2]=B()/lpOther;
+        lfReturn[3]=A()/lpOther;
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator/(float *lpOther)
+        {
+        cRGBA lfReturn;
+        lfReturn[0]=R()/lpOther[0];
+        lfReturn[1]=G()/lpOther[1];
+        lfReturn[2]=B()/lpOther[2];
+        lfReturn[3]=A()/lpOther[3];
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator/(cRGB lpOther)
+        {
+        cRGBA lfReturn;
+        lfReturn[0]=R()/lpOther[0];
+        lfReturn[1]=G()/lpOther[1];
+        lfReturn[2]=B()/lpOther[2];
+        lfReturn[3]=A();
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator/(cRGB *lpOther)
+        {
+        cRGBA lfReturn;
+        lfReturn[0]=R()/lpOther->R();
+        lfReturn[1]=G()/lpOther->G();
+        lfReturn[2]=B()/lpOther->B();
+        lfReturn[3]=A();
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator/(cRGBA lpOther)
+            {
+        cRGBA lfReturn;
+        lfReturn[0]=R()/lpOther[0];
+        lfReturn[1]=G()/lpOther[1];
+        lfReturn[2]=B()/lpOther[2];
+        lfReturn[3]=A()/lpOther[3];
+        return lfReturn;
+    };
+    cRGBA cRGBA::operator/(cRGBA *lpOther)
+            {
+        cRGBA lfReturn;
+        lfReturn[0]=R()/lpOther->R();
+        lfReturn[1]=G()/lpOther->G();
+        lfReturn[2]=B()/lpOther->B();
+        lfReturn[3]=A()/lpOther->A();
+        return lfReturn;
+    };
+
+
+
+
+
+
+
+
+
+    cRGB cRGB::operator+(float lpOther)
+    {
+        cRGB lfReturn;
+        lfReturn[0]=R()+lpOther;
+        lfReturn[1]=G()+lpOther;
+        lfReturn[2]=B()+lpOther;
+        return lfReturn;
+    };
+    cRGB cRGB::operator+(float *lpOther)
+        {
+        cRGB lfReturn;
+        lfReturn[0]=R()+lpOther[0];
+        lfReturn[1]=G()+lpOther[1];
+        lfReturn[2]=B()+lpOther[2];
+        return lfReturn;
+    };
+    cRGB cRGB::operator+(cRGB lpOther)
+        {
+        cRGB lfReturn;
+        lfReturn[0]=R()+lpOther[0];
+        lfReturn[1]=G()+lpOther[1];
+        lfReturn[2]=B()+lpOther[2];
+        return lfReturn;
+    };
+    cRGB cRGB::operator+(cRGB *lpOther)
+        {
+        cRGB lfReturn;
+        lfReturn[0]=R()+lpOther->R();
+        lfReturn[1]=G()+lpOther->G();
+        lfReturn[2]=B()+lpOther->B();
+        return lfReturn;
+    };
+    cRGB cRGB::operator+(cRGBA lpOther)
+            {
+        cRGB lfReturn;
+        lfReturn[0]=R()+lpOther[0];
+        lfReturn[1]=G()+lpOther[1];
+        lfReturn[2]=B()+lpOther[2];
+        return lfReturn;
+    };
+    cRGB cRGB::operator+(cRGBA *lpOther)
+            {
+        cRGB lfReturn;
+        lfReturn[0]=R()+lpOther->R();
+        lfReturn[1]=G()+lpOther->G();
+        lfReturn[2]=B()+lpOther->B();
+        return lfReturn;
+    };
+
+
+
+
+
+
+    cRGB cRGB::operator-(float lpOther)
+    {
+        cRGB lfReturn;
+        lfReturn[0]=R()-lpOther;
+        lfReturn[1]=G()-lpOther;
+        lfReturn[2]=B()-lpOther;
+        return lfReturn;
+    };
+    cRGB cRGB::operator-(float *lpOther)
+        {
+        cRGB lfReturn;
+        lfReturn[0]=R()-lpOther[0];
+        lfReturn[1]=G()-lpOther[1];
+        lfReturn[2]=B()-lpOther[2];
+        return lfReturn;
+    };
+    cRGB cRGB::operator-(cRGB lpOther)
+        {
+        cRGB lfReturn;
+        lfReturn[0]=R()-lpOther[0];
+        lfReturn[1]=G()-lpOther[1];
+        lfReturn[2]=B()-lpOther[2];
+        return lfReturn;
+    };
+    cRGB cRGB::operator-(cRGB *lpOther)
+        {
+        cRGB lfReturn;
+        lfReturn[0]=R()-lpOther->R();
+        lfReturn[1]=G()-lpOther->G();
+        lfReturn[2]=B()-lpOther->B();
+        return lfReturn;
+    };
+    cRGB cRGB::operator-(cRGBA lpOther)
+            {
+        cRGB lfReturn;
+        lfReturn[0]=R()-lpOther[0];
+        lfReturn[1]=G()-lpOther[1];
+        lfReturn[2]=B()-lpOther[2];
+        return lfReturn;
+    };
+    cRGB cRGB::operator-(cRGBA *lpOther)
+            {
+        cRGB lfReturn;
+        lfReturn[0]=R()-lpOther->R();
+        lfReturn[1]=G()-lpOther->G();
+        lfReturn[2]=B()-lpOther->B();
+        return lfReturn;
+    };
+
+
+    cRGB cRGB::operator*(float lpOther)
+    {
+        cRGB lfReturn;
+        lfReturn[0]=R()*lpOther;
+        lfReturn[1]=G()*lpOther;
+        lfReturn[2]=B()*lpOther;
+        return lfReturn;
+    };
+    cRGB cRGB::operator*(float *lpOther)
+        {
+        cRGB lfReturn;
+        lfReturn[0]=R()*lpOther[0];
+        lfReturn[1]=G()*lpOther[1];
+        lfReturn[2]=B()*lpOther[2];
+        return lfReturn;
+    };
+    cRGB cRGB::operator*(cRGB lpOther)
+        {
+        cRGB lfReturn;
+        lfReturn[0]=R()*lpOther[0];
+        lfReturn[1]=G()*lpOther[1];
+        lfReturn[2]=B()*lpOther[2];
+        return lfReturn;
+    };
+    cRGB cRGB::operator*(cRGB *lpOther)
+        {
+        cRGB lfReturn;
+        lfReturn[0]=R()*lpOther->R();
+        lfReturn[1]=G()*lpOther->G();
+        lfReturn[2]=B()*lpOther->B();
+        return lfReturn;
+    };
+    cRGB cRGB::operator*(cRGBA lpOther)
+            {
+        cRGB lfReturn;
+        lfReturn[0]=R()*lpOther[0];
+        lfReturn[1]=G()*lpOther[1];
+        lfReturn[2]=B()*lpOther[2];
+        return lfReturn;
+    };
+    cRGB cRGB::operator*(cRGBA *lpOther)
+            {
+        cRGB lfReturn;
+        lfReturn[0]=R()*lpOther->R();
+        lfReturn[1]=G()*lpOther->G();
+        lfReturn[2]=B()*lpOther->B();
+        return lfReturn;
+    };
+
+
+
+    cRGB cRGB::operator/(float lpOther)
+    {
+        cRGB lfReturn;
+        lfReturn[0]=R()/lpOther;
+        lfReturn[1]=G()/lpOther;
+        lfReturn[2]=B()/lpOther;
+        return lfReturn;
+    };
+    cRGB cRGB::operator/(float *lpOther)
+        {
+        cRGB lfReturn;
+        lfReturn[0]=R()/lpOther[0];
+        lfReturn[1]=G()/lpOther[1];
+        lfReturn[2]=B()/lpOther[2];
+        return lfReturn;
+    };
+    cRGB cRGB::operator/(cRGB lpOther)
+        {
+        cRGB lfReturn;
+        lfReturn[0]=R()/lpOther[0];
+        lfReturn[1]=G()/lpOther[1];
+        lfReturn[2]=B()/lpOther[2];
+        return lfReturn;
+    };
+    cRGB cRGB::operator/(cRGB *lpOther)
+        {
+        cRGB lfReturn;
+        lfReturn[0]=R()/lpOther->R();
+        lfReturn[1]=G()/lpOther->G();
+        lfReturn[2]=B()/lpOther->B();
+        return lfReturn;
+    };
+    cRGB cRGB::operator/(cRGBA lpOther)
+            {
+        cRGB lfReturn;
+        lfReturn[0]=R()/lpOther[0];
+        lfReturn[1]=G()/lpOther[1];
+        lfReturn[2]=B()/lpOther[2];
+        return lfReturn;
+    };
+    cRGB cRGB::operator/(cRGBA *lpOther)
+            {
+        cRGB lfReturn;
+        lfReturn[0]=R()/lpOther->R();
+        lfReturn[1]=G()/lpOther->G();
+        lfReturn[2]=B()/lpOther->B();
+        return lfReturn;
+    };
+
+
+
+
+
+
+    cRGB cRGB::operator+=(float lpOther)
+    {
+        color[0]+=lpOther;
+        color[1]+=lpOther;
+        color[2]+=lpOther;
+        return *this;
+    };
+    cRGB cRGB::operator+=(float *lpOther)
+        {
+
+        color[0]+=lpOther[0];
+        color[1]+=lpOther[1];
+        color[2]+=lpOther[2];
+        return *this;
+    };
+    cRGB cRGB::operator+=(cRGB lpOther)
+        {
+
+        color[0]+=lpOther[0];
+        color[1]+=lpOther[1];
+        color[2]+=lpOther[2];
+        return *this;
+    };
+    cRGB cRGB::operator+=(cRGB *lpOther)
+    {
+        color[0]+=lpOther->R();
+        color[1]+=lpOther->G();
+        color[2]+=lpOther->B();
+        return *this;
+    };
+    cRGB cRGB::operator+=(cRGBA lpOther)
+            {
+
+        color[0]+=lpOther[0];
+        color[1]+=lpOther[1];
+        color[2]+=lpOther[2];
+        return *this;
+    };
+    cRGB cRGB::operator+=(cRGBA *lpOther)
+            {
+
+        color[0]+=lpOther->R();
+        color[1]+=lpOther->G();
+        color[2]+=lpOther->B();
+        return *this;
+    };
+
+
+
+      cRGB cRGB::operator-=(float lpOther)
+    {
+        color[0]-=lpOther;
+        color[1]-=lpOther;
+        color[2]-=lpOther;
+        return *this;
+    };
+    cRGB cRGB::operator-=(float *lpOther)
+        {
+
+        color[0]-=lpOther[0];
+        color[1]-=lpOther[1];
+        color[2]-=lpOther[2];
+        return *this;
+    };
+    cRGB cRGB::operator-=(cRGB lpOther)
+        {
+
+        color[0]-=lpOther[0];
+        color[1]-=lpOther[1];
+        color[2]-=lpOther[2];
+        return *this;
+    };
+    cRGB cRGB::operator-=(cRGB *lpOther)
+    {
+        color[0]-=lpOther->R();
+        color[1]-=lpOther->G();
+        color[2]-=lpOther->B();
+        return *this;
+    };
+    cRGB cRGB::operator-=(cRGBA lpOther)
+            {
+
+        color[0]-=lpOther[0];
+        color[1]-=lpOther[1];
+        color[2]-=lpOther[2];
+        return *this;
+    };
+    cRGB cRGB::operator-=(cRGBA *lpOther)
+            {
+
+        color[0]-=lpOther->R();
+        color[1]-=lpOther->G();
+        color[2]-=lpOther->B();
+        return *this;
+    };
+
+      cRGB cRGB::operator*=(float lpOther)
+    {
+        color[0]*=lpOther;
+        color[1]*=lpOther;
+        color[2]*=lpOther;
+        return *this;
+    };
+    cRGB cRGB::operator*=(float *lpOther)
+        {
+
+        color[0]*=lpOther[0];
+        color[1]*=lpOther[1];
+        color[2]*=lpOther[2];
+        return *this;
+    };
+    cRGB cRGB::operator*=(cRGB lpOther)
+        {
+
+        color[0]*=lpOther[0];
+        color[1]*=lpOther[1];
+        color[2]*=lpOther[2];
+        return *this;
+    };
+    cRGB cRGB::operator*=(cRGB *lpOther)
+    {
+        color[0]*=lpOther->R();
+        color[1]*=lpOther->G();
+        color[2]*=lpOther->B();
+        return *this;
+    };
+    cRGB cRGB::operator*=(cRGBA lpOther)
+            {
+
+        color[0]*=lpOther[0];
+        color[1]*=lpOther[1];
+        color[2]*=lpOther[2];
+        return *this;
+    };
+    cRGB cRGB::operator*=(cRGBA *lpOther)
+            {
+
+        color[0]*=lpOther->R();
+        color[1]*=lpOther->G();
+        color[2]*=lpOther->B();
+        return *this;
+    };
+
+      cRGB cRGB::operator/=(float lpOther)
+    {
+        color[0]/=lpOther;
+        color[1]/=lpOther;
+        color[2]/=lpOther;
+        return *this;
+    };
+    cRGB cRGB::operator/=(float *lpOther)
+        {
+
+        color[0]/=lpOther[0];
+        color[1]/=lpOther[1];
+        color[2]/=lpOther[2];
+        return *this;
+    };
+    cRGB cRGB::operator/=(cRGB lpOther)
+        {
+
+        color[0]/=lpOther[0];
+        color[1]/=lpOther[1];
+        color[2]/=lpOther[2];
+        return *this;
+    };
+    cRGB cRGB::operator/=(cRGB *lpOther)
+    {
+        color[0]/=lpOther->R();
+        color[1]/=lpOther->G();
+        color[2]/=lpOther->B();
+        return *this;
+    };
+    cRGB cRGB::operator/=(cRGBA lpOther)
+            {
+
+        color[0]/=lpOther[0];
+        color[1]/=lpOther[1];
+        color[2]/=lpOther[2];
+        return *this;
+    };
+    cRGB cRGB::operator/=(cRGBA *lpOther)
+            {
+
+        color[0]/=lpOther->R();
+        color[1]/=lpOther->G();
+        color[2]/=lpOther->B();
+        return *this;
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    cRGBA cRGBA::operator+=(float lpOther)
+    {
+        color[0]+=lpOther;
+        color[1]+=lpOther;
+        color[2]+=lpOther;
+        color[3]+=lpOther;
+        return *this;
+    };
+    cRGBA cRGBA::operator+=(float *lpOther)
+        {
+
+        color[0]+=lpOther[0];
+        color[1]+=lpOther[1];
+        color[2]+=lpOther[2];
+        color[3]+=lpOther[3];
+        return *this;
+    };
+    cRGBA cRGBA::operator+=(cRGB lpOther)
+        {
+
+        color[0]+=lpOther[0];
+        color[1]+=lpOther[1];
+        color[2]+=lpOther[2];
+        return *this;
+    };
+    cRGBA cRGBA::operator+=(cRGB *lpOther)
+    {
+        color[0]+=lpOther->R();
+        color[1]+=lpOther->G();
+        color[2]+=lpOther->B();
+        return *this;
+    };
+    cRGBA cRGBA::operator+=(cRGBA lpOther)
+            {
+
+        color[0]+=lpOther[0];
+        color[1]+=lpOther[1];
+        color[2]+=lpOther[2];
+        color[3]+=lpOther[3];
+        return *this;
+    };
+    cRGBA cRGBA::operator+=(cRGBA *lpOther)
+            {
+
+        color[0]+=lpOther->R();
+        color[1]+=lpOther->G();
+        color[2]+=lpOther->B();
+        color[3]+=lpOther->A();
+        return *this;
+    };
+
+
+
+      cRGBA cRGBA::operator-=(float lpOther)
+    {
+        color[0]-=lpOther;
+        color[1]-=lpOther;
+        color[2]-=lpOther;
+        color[3]-=lpOther;
+        return *this;
+    };
+    cRGBA cRGBA::operator-=(float *lpOther)
+        {
+
+        color[0]-=lpOther[0];
+        color[1]-=lpOther[1];
+        color[2]-=lpOther[2];
+        color[3]-=lpOther[3];
+        return *this;
+    };
+    cRGBA cRGBA::operator-=(cRGB lpOther)
+        {
+
+        color[0]-=lpOther[0];
+        color[1]-=lpOther[1];
+        color[2]-=lpOther[2];
+        return *this;
+    };
+    cRGBA cRGBA::operator-=(cRGB *lpOther)
+    {
+        color[0]-=lpOther->R();
+        color[1]-=lpOther->G();
+        color[2]-=lpOther->B();
+        return *this;
+    };
+    cRGBA cRGBA::operator-=(cRGBA lpOther)
+            {
+
+        color[0]-=lpOther[0];
+        color[1]-=lpOther[1];
+        color[2]-=lpOther[2];
+        color[3]-=lpOther[3];
+        return *this;
+    };
+    cRGBA cRGBA::operator-=(cRGBA *lpOther)
+            {
+
+        color[0]-=lpOther->R();
+        color[1]-=lpOther->G();
+        color[2]-=lpOther->B();
+        color[3]-=lpOther->A();
+        return *this;
+    };
+
+      cRGBA cRGBA::operator*=(float lpOther)
+    {
+        color[0]*=lpOther;
+        color[1]*=lpOther;
+        color[2]*=lpOther;
+        color[3]*=lpOther;
+        return *this;
+    };
+    cRGBA cRGBA::operator*=(float *lpOther)
+        {
+
+        color[0]*=lpOther[0];
+        color[1]*=lpOther[1];
+        color[2]*=lpOther[2];
+        color[3]*=lpOther[3];
+        return *this;
+    };
+    cRGBA cRGBA::operator*=(cRGB lpOther)
+        {
+
+        color[0]*=lpOther[0];
+        color[1]*=lpOther[1];
+        color[2]*=lpOther[2];
+        return *this;
+    };
+    cRGBA cRGBA::operator*=(cRGB *lpOther)
+    {
+        color[0]*=lpOther->R();
+        color[1]*=lpOther->G();
+        color[2]*=lpOther->B();
+        return *this;
+    };
+    cRGBA cRGBA::operator*=(cRGBA lpOther)
+            {
+
+        color[0]*=lpOther[0];
+        color[1]*=lpOther[1];
+        color[2]*=lpOther[2];
+        color[3]*=lpOther[3];
+        return *this;
+    };
+    cRGBA cRGBA::operator*=(cRGBA *lpOther)
+            {
+
+        color[0]*=lpOther->R();
+        color[1]*=lpOther->G();
+        color[2]*=lpOther->B();
+        color[3]*=lpOther->A();
+        return *this;
+    };
+
+      cRGBA cRGBA::operator/=(float lpOther)
+    {
+        color[0]/=lpOther;
+        color[1]/=lpOther;
+        color[2]/=lpOther;
+        color[3]/=lpOther;
+        return *this;
+    };
+    cRGBA cRGBA::operator/=(float *lpOther)
+        {
+
+        color[0]/=lpOther[0];
+        color[1]/=lpOther[1];
+        color[2]/=lpOther[2];
+        color[3]/=lpOther[3];
+        return *this;
+    };
+    cRGBA cRGBA::operator/=(cRGB lpOther)
+        {
+
+        color[0]/=lpOther[0];
+        color[1]/=lpOther[1];
+        color[2]/=lpOther[2];
+        return *this;
+    };
+    cRGBA cRGBA::operator/=(cRGB *lpOther)
+    {
+        color[0]/=lpOther->R();
+        color[1]/=lpOther->G();
+        color[2]/=lpOther->B();
+        return *this;
+    };
+    cRGBA cRGBA::operator/=(cRGBA lpOther)
+            {
+
+        color[0]/=lpOther[0];
+        color[1]/=lpOther[1];
+        color[2]/=lpOther[2];
+        color[3]/=lpOther[3];
+        return *this;
+    };
+    cRGBA cRGBA::operator/=(cRGBA *lpOther)
+            {
+
+        color[0]/=lpOther->R();
+        color[1]/=lpOther->G();
+        color[2]/=lpOther->B();
+        color[3]/=lpOther->A();
+        return *this;
+    };

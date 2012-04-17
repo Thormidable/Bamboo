@@ -78,6 +78,17 @@ public:
 /// This will unlock the mouse cursor from the centre of the window.
  void Unlock();
 
+/**
+* \brief This will Generate a detailed Mouse Selection Collision List.
+* This list will do a sphere collision check with a beam of radius lfRadius.
+* The Vector of the mouses collision is determined from the cCamera and it's main viewport.
+* The list produced will fill mfBeamlengths with the length along the beam to reach the colliding item.
+* The mfDistance in the list is automatically generated and is the distance from the closest point on the Mosue vector.
+* The vector is from the cameras position through the mouse co-ordinates in the viewport.
+*/
+cCollisionList *Selection(cPerspectiveControl *lpCamera=_CAMERA,float lfRadius=0.0f);
+//cCollisionList *Selection(cViewport *lpCamera,float lfRadius=0.0f);
+
 };
 
 

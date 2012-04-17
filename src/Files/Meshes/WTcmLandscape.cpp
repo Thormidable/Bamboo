@@ -97,7 +97,7 @@ cmLandscape::cmLandscape(uint32 liXSteps,uint32 liZSteps,float lfXSize,float lfZ
 {
 mpBufferIDs=0;
 
-uint32 MAKE_THIS_CONCATENATE_MICUSTOMLANDSCAPES_ONTO_THE_END_OF_STRING;
+#pragma warning MAKE_THIS_CONCATENATE_MICUSTOMLANDSCAPES_ONTO_THE_END_OF_STRING;
 //strcpy(mpFileName,"CustomLandscapeModel");
 ++miCustomLandscapes;
 mpVertex=0;
@@ -225,7 +225,7 @@ void cmLandscape::Randomize(float liHeight,uint8 liSize)
  }
 
 
- float BlendYs[miXSteps*miZSteps];
+ float *BlendYs=new float[miXSteps*miZSteps];
  for(liX1=0;liX1<miXSteps*miZSteps;++liX1)
  {
   liSum=0.0f;
@@ -248,6 +248,7 @@ void cmLandscape::Randomize(float liHeight,uint8 liSize)
 	 }
  }
  BufferMesh();
+delete []BlendYs;
 }
 
 void cmLandscape::Randomize(uint32 liLines,float lfHeightRange=0.001)
@@ -428,7 +429,6 @@ void cmLandscape::RenderMesh()
 
 void cmLandscape::SetHeightRange(float lfRange)
 {
-  printf("mfHeightRange : %f\n",mfHeightRange);
 	float lfPropor=lfRange/mfHeightRange;
 
 	uint32 liLoop,liArrayPos=1;
@@ -875,6 +875,15 @@ cmLandscape *cmLandscape::Duplicate()
 {
  return new cmLandscape(this);
 }
+
+float cmLandscape::GetSize()
+{
+    return sqrt(miXSteps*mfXSize+miZSteps*mfZSize);
+};
+double cmLandscape::GetSizeSq()
+{
+    return miXSteps*mfXSize+miZSteps*mfZSize;
+};
 
 cmLandscape::cmLandscape(){};
 

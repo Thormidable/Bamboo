@@ -12,8 +12,8 @@ class cWindow
 {
     uint8 miBorderThickness;
     uint8 miTitleBarHeight;
-    uint16 miRenderWidth;
-    uint16 miRenderHeight;
+    uint32 miRenderWidth;
+    uint32 miRenderHeight;
 	// This is the window current X position on the desktop in pixels.
 	uint16 miX;
 	// This is the windows current Y position on the desktop in pixels.
@@ -118,9 +118,9 @@ public:
 
     void FindRenderArea();
 	///This will return the render Areas width supplied by the OS (May be different to Window Width)
-    uint16 RenderAreaWidth();
+    uint32 RenderAreaWidth();
 	///This will return the render Areas height supplied by the OS (May be different to Window Height)
-    uint16 RenderAreaHeight();
+    uint32 RenderAreaHeight();
     friend class cCamera;
     friend class cCameraPainter;
 

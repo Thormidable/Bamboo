@@ -20,6 +20,7 @@ cReferenceList mcList;
 cShader **mpShader;
 
 cShaderVariableSet *mpVariableSet;
+
 public:
   ///Public Constructor.
   cShaderProgram();
@@ -106,8 +107,6 @@ template <class cType> cType* cShaderProgram::GetVariable(string lcString)
  }
  return 0;
 };
-
-
 
 
 #endif

@@ -46,6 +46,17 @@ void cLandscape::RenderPainter()
 
 	float cLandscape::GetVertexHeight(int liX,int liZ){if(mpLandscape) return mpLandscape->GetVertexHeight(liX,liZ); else return 0.0f;};
 
+float cLandscape::GetSize()
+{
+    if(mpLandscape) return mpLandscape->GetSize();
+    return 0.0f;
+}
+
+double cLandscape::GetSizeSq()
+{
+    if(mpLandscape) return mpLandscape->GetSizeSq();
+    return 0.0f;
+}
 
 #endif
 

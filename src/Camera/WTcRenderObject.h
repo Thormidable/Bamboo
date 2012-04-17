@@ -24,16 +24,14 @@ class cRenderObject : public vRenderObject, public cTextureStack
 {
 
 
- //This pointer points to the cLinkedNode which owns this cRenderObject. (cLinkedNode fors a linked list owned by mpRenderer.
- cRenderOwner mcOwnerNode;
 
- //A Pointer to the cCollisionObject linked to this program.
- cCollisionObject *mpCollisionObject;
+
+
 
 
  virtual void Initialise();
 
- bool mbAlpha;
+ uint8 miAlpha;
  bool mbLighting;
 
 
@@ -74,11 +72,9 @@ public:
  // Destructor for cRenderObject.
  ~cRenderObject();
 
- ///This will set the Collision Object that is linked to this renderable object. This should be called automatically when a cCollisionObject is created.
- void LinkCollisionObject(cCollisionObject *lpObj);
+    //void LinkCollisionObject(cCollisionObject *lpObj);
 
- /// Returns the vRenderNode which owns this renderable process.
- vRenderNode *Renderer();
+
 
 
   // virtual functions to allow polymorphism. see cCamera::RenderPainter();
@@ -87,12 +83,7 @@ public:
   void RenderToPainter();
  /// Will remove this object from the render list owned by mpRenderer.
   void Delete();/// Will return a pointer to the Shader Program that is currently bound to this model.
- /**
- * \brief Will move the current renderable object from the current cRenderNode to lpNode.
- * \param lpNode The cRenderNode which will now own this renderable object.
- * \return This function returns the new cLinkedNode which now owns this renderable object.
- */
- cRenderOwner &SetRenderNode(vRenderNode *lpNode);
+
 
 
   //This will contain additional functions to perform when an object renders.
@@ -104,8 +95,8 @@ public:
   virtual void OnSleep();
   //This contains any Code to be run when the object is woken up.
   virtual void OnWake();
-  ///This function will update the object cache. For consistency all Renderable Objects must update the cache as they are rendered. This will be the global position of the object and is used to get consistent positions throughout a frame for collision detection.
-  void UpdateCache();
+  //This function will update the object cache. For consistency all Renderable Objects must update the cache as they are rendered. This will be the global position of the object and is used to get consistent positions throughout a frame for collision detection.
+ // void UpdateCache();
 
   using cTextureStack::AddTexture;
 	/**
@@ -135,22 +126,11 @@ public:
    ///Will remove the texture in Textureslot number liTexSlot. (Texture0 Texture1 Texture2 etc.)
    void RemoveTexture(uint8 liTexSlot);
 
-  /// This will return the Local position of the selected object.
-  float *GetPos();
-  /**
-  * \brief This will return the global position of the object as rendered at the end of last frame.
-  * This will return the cached Global position matrix as it was at the end of the last frame.
-  * This will only be updated when rendering occurs. For a 'current' global matrix the function cCameraMatrix4::CalculateGlobalMatrix() will actually calculate the current matrix. However it is very slow.
-  **/
-  float *GetCachedGlobalMatrix();
-
-
-
 
   ///This will set whether this object uses transparency (Transparent objects are rendered after all other objects and in reverse distance order).
-   void Transparency(bool lbTrans);
+   void Transparency(uint8 lbTrans);
    ///This will return whether this object is using transparency.
-   bool Transparency();
+   uint8 Transparency();
 
 	///This will set whether lighting is used for the object.
    void Lighting(bool lbLighting);
@@ -159,8 +139,8 @@ public:
 
    void KillAll();
 
-   void RecalculateTotalMatrix();
    void CalculateMatrices();
+   void RecalculateTotalMatrix();
 
 
    protected:

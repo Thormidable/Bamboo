@@ -3,11 +3,12 @@
 
 #define WT_FULL_VERSION_BAMBOO 1
 
+///Function to return a random number in the range 0.0f-1.0f. Can be seeded by SEED_RANDOM_NUMBER.
 #define RANDOM_NUMBER static_cast<double>(rand())/static_cast<double>(RAND_MAX)
 #define ZEROED_RANDOM_NUMBER ((static_cast<double>(rand())/static_cast<double>(RAND_MAX)-0.5)*2)
-#define SEED_RANDOM_NUMBERS srand(time(NULL));
 
 #define SIGNAL unsigned char
+#define FACE_TYPE uint16
 
 #if WT_OS_BITS==OS_32_BIT
 
@@ -64,6 +65,8 @@
 #define c3DVi c3DVt<int32>
 #define c4DVf c4DVt<float>
 #define c4DVi c4DVt<int32>
+
+#define cAttributeNormalMap cAttributeData<cRGBA>
 
 #define _PROCESS(TYPE) class TYPE : public cProcess
 
@@ -280,10 +283,16 @@
 ///Returns a float specifying the amount of time for each process in seconds.
 #define _PROCESS_TIME _FRAME_RATE->ProcessTime()
 
+
+
+
 #if WT_OS_TYPE==OS_WIN32
 	///Function which will start the engine running. See \ref BambooExplanation.
 	#define _START_PROGRAM(TYPE,SETTINGS,INSTANCE) cMainThread<TYPE,SETTINGS>::Start(INSTANCE)
 
+#ifdef _MSC_VER
+
+#else
 	#if WT_OS_BITS==OS_32_BIT
 		#define UINT_MAX 0xFFFFFFFF
 	#endif
@@ -291,11 +300,18 @@
 		#define UINT_MAX 0xFFFFFFFFFFFFFFFF
 	#endif
 #endif
+	#define OS_TIME_SCALING 1
+
+	#define SEED_RANDOM_NUMBERS srand(GetTickCount());
+#endif
 
 #if WT_OS_TYPE==OS_LINUX
 	///Function which will start the engine running. See \ref BambooExplanation.
 	#define _START_PROGRAM(TYPE,SETTINGS) cMainThread<TYPE,SETTINGS>::Start()
+	///Function to seed the random number generator off the system time
+    #define SEED_RANDOM_NUMBERS srand(time(NULL));
 
+    #define OS_TIME_SCALING 1000
 #endif
 
 /// Function for accession cKernel::FindProcess(tType *lpStart). Will search for any Process of class type TYPE following the item START.
@@ -313,5 +329,10 @@
 #define _2DPROJECTION_MATRIX cPerspectiveControl::Projection2DMatrix()
 #define _CAMERA_MATRIX cPerspectiveControl::CameraMatrix()
 #define _COMBINED_MATRIX cPerspectiveControl::CombinedMatrix()
+#define _CAMERA_ZOOM cCameraHandler::sfCamera_Zoom
 
+#define DEGREES_TO_RADIANS(Value) (2*3.1415*Value/360.0f)
+#define RADIANS_TO_DEGREES(Value) (Value*360.0f/(2*3.1415))
+
+//#define WT_WITHIN_PLANE_RANGE 0.01
 #endif

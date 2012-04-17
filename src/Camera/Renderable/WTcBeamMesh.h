@@ -42,6 +42,8 @@ public:
 	//Functions CAlled by cPainter or cRenerNode to Render this object.
 	void RenderPainter();
 
+    float GetSize();
+	double GetSizeSq();
 };
 
 

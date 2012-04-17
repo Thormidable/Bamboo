@@ -24,6 +24,8 @@ public:
 
 	/// This will return the absolute size of this vector.
        Type Magnitude();
+    /// This will return the squared absolute size of this vector.
+       Type MagnitudeSq();
 	/// This will make the magnitude of this vector 1 while maintaining its direction.
        void Normalise();
 
@@ -31,6 +33,9 @@ public:
         c2DVt(Type lf0=0,Type lf1=0);
 		///Constructor to initialise the object from an array of three Types.
         c2DVt(Type *lf0);
+
+		c2DVt(c2DVt *lfVect);
+        c2DVt(const c2DVt &lfVect);
 
        c2DVt<Type> operator=(c2DVt *lpValue);
        c2DVt<Type> operator=(c2DVt &lpValue);
@@ -62,8 +67,7 @@ public:
 
 	   ///Allows the User to access the components as if an array of values.
        Type &operator[](uint32 liPos);
-        c2DVt(c2DVt *lfVect);
-        c2DVt(const c2DVt &lfVect);
+
 };
 
 

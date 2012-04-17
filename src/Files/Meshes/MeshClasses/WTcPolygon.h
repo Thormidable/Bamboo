@@ -7,17 +7,17 @@
  */
 class cPolygon
 {
-	
+
 public:
 	cPlane Plane;
 	cVertexList Verteces;
 	cVertex mlCenter;
-	
+
 	cPolygon();
 
 	///Constructor, creates a cPolygon with enough spaces for liSpaces cVertexes.
 	cPolygon(uint32 liSpaces);
-	
+
 	~cPolygon();
 	//Determines the Size this objet will occupy in IMF format.
 	uint32 FileSize();
@@ -41,8 +41,8 @@ public:
 
 	//Will add the cVertex lpOther to this object
 	void AddVertex(cVertex *lpOther);
-	//Will Remove Vertex number liPos.
-	void RemoveVertex(uint32 liPos);
+	//Will Delete Vertex number liPos.
+	void DeleteVertex(uint32 liPos);
 
 	///Returns the number of Verteces that are shared with the cFullFaceData object lpOther.
 	uint8 SharesVertex(cFullFaceData &lpOther);
@@ -76,7 +76,7 @@ public:
 	void LoadIMFPolygon(ifstream &FileStream);
 	///Will Display this object top the screen.
 	void Display();
-  
+
 };
 
 
@@ -87,11 +87,11 @@ public:
 
 class cPolygonList : public cLimitedList<cPolygon>
 {
-	
+
 public:
 	cPolygonList();
 	~cPolygonList();
-	
+
 	//Will Generate a List of Polygons from the cFullFaceList lpFaces.
 	void GeneratePolygonList(cFullFaceList &lpFaces);
 	void GeneratePolygonList(float *lpVerteces,uint16 *lpFaces,uint32 liFaces);

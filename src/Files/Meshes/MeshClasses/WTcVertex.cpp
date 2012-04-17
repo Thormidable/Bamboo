@@ -145,8 +145,8 @@ void cVertexList::Strip()
 		{
 			if(mpList[liLoop].Similar(mpList[liCount]))
 			{
-				if(mpList[liLoop].Distance()>mpList[liCount].SqrDistance()) Remove(liCount);
-				else Remove(liLoop);
+				if(mpList[liLoop].Distance()>mpList[liCount].SqrDistance()) Delete(liCount);
+				else Delete(liLoop);
 				liLoop--;
 			}
 		}

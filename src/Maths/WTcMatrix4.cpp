@@ -335,7 +335,7 @@ float cMatrix4::Determinant()
  +mpData[8]*(mpData[1]*(mpData[6]*mpData[10]-mpData[14]*mpData[7])-mpData[5]*(mpData[2]*mpData[15]-mpData[3]*mpData[14])+mpData[13]*(mpData[2]*mpData[7]-mpData[6]*mpData[3]))
  -mpData[12]*(mpData[1]*(mpData[6]*mpData[11]-mpData[10]*mpData[7])-mpData[5]*(mpData[2]*mpData[11]-mpData[10]*mpData[3])+mpData[9]*(mpData[2]*mpData[7]-mpData[6]*mpData[3]));
 }
-
+/*
 cMatrix4 cMatrix4::InvertRotationMatrix()
 {
 uint32 CHECK_IF_THIS_SHOULD_INVERT_THE_SIGN_OF_THE_OUTPUTED_VALUES;
@@ -429,7 +429,38 @@ float Tmp[12];
 	return mpTemp;
 
 }
+*/
 
+cMatrix4 cMatrix4::InversionMatrix()
+{
+    mpTemp.mpData[0]=mpData[0];
+    mpTemp.mpData[1]=mpData[4];
+    mpTemp.mpData[2]=mpData[8];
+    mpTemp.mpData[3]=0.0f;
+
+    mpTemp.mpData[4]=mpData[1];
+    mpTemp.mpData[5]=mpData[5];
+    mpTemp.mpData[6]=mpData[9];
+    mpTemp.mpData[7]=0.0f;
+
+    mpTemp.mpData[8]=mpData[2];
+    mpTemp.mpData[9]=mpData[6];
+    mpTemp.mpData[10]=mpData[10];
+    mpTemp.mpData[11]=0.0f;
+
+    mpTemp.mpData[12]=-mpData[12];
+    mpTemp.mpData[13]=-mpData[13];
+    mpTemp.mpData[14]=-mpData[14];
+    mpTemp.mpData[15]=1.0f;
+/*
+    mpTemp.mpData[12]=-(mpTemp.mpData[0]*mpData[12]+mpTemp.mpData[1]*mpData[13]+mpTemp.mpData[2]*mpData[14]);
+    mpTemp.mpData[13]=-(mpTemp.mpData[4]*mpData[12]+mpTemp.mpData[5]*mpData[13]+mpTemp.mpData[6]*mpData[14]);
+    mpTemp.mpData[14]=-(mpTemp.mpData[8]*mpData[12]+mpTemp.mpData[9]*mpData[13]+mpTemp.mpData[10]*mpData[14]);
+    mpTemp.mpData[15]=1.0f;
+*/
+	return mpTemp;
+
+}
 cMatrix4 cMatrix4::Transpose()
 {
 mpTemp.mpData[0]=mpData[3];
@@ -1088,25 +1119,22 @@ double cMatrix4::DistanceSq(cMatrix4 *lpOther)
  return (lfX*lfX+lfY*lfY+lfZ*lfZ);
 }
 
-double cMatrix4::DistanceSq(float *lpOther)
+double cMatrix4::DistanceSq(c3DVf lpOther)
 {
- float lfX,lfY,lfZ;
+ lpOther[0]=lpOther[0]-mpData[12];
+ lpOther[1]=lpOther[1]-mpData[13];
+ lpOther[2]=lpOther[2]-mpData[14];
 
- lfX=lpOther[0]-mpData[12];
- lfY=lpOther[1]-mpData[13];
- lfZ=lpOther[2]-mpData[14];
-
- return (lfX*lfX+lfY*lfY+lfZ*lfZ);
+ return lpOther[0]*lpOther[0]+lpOther[1]*lpOther[1]+lpOther[2]*lpOther[2];
 }
 
-float cMatrix4::Distance(float *lpOther)
+float cMatrix4::Distance(c3DVf lpOther)
 {
-float lfX,lfY,lfZ;
- lfX=lpOther[0]-mpData[12];
- lfY=lpOther[1]-mpData[13];
- lfZ=lpOther[2]-mpData[14];
+ lpOther[0]=lpOther[0]-mpData[12];
+ lpOther[1]=lpOther[1]-mpData[13];
+ lpOther[2]=lpOther[2]-mpData[14];
 
- return sqrt(lfX*lfX+lfY*lfY+lfZ*lfZ);
+ return sqrt(lpOther[0]*lpOther[0]+lpOther[1]*lpOther[1]+lpOther[2]*lpOther[2]);
 }
 
 
@@ -1278,37 +1306,45 @@ void cMatrix4::Rotation(cMatrix4 &lpOther){Rotation(&lpOther);}
  float *cMatrix4::ZVect(){return &mpData[8];};
 
 
-void cMatrix4::Advance(float *lfDistance)
+void cMatrix4::Advance(float *lfDistances)
 {
- mpData[12]+=lfDistance[0];
- mpData[13]+=lfDistance[1];
- if(mb3D) mpData[14]+=lfDistance[2];
+ if(mb3D)
+ {
+     mpData[12]+=lfDistances[0]*mpData[0]+lfDistances[1]*mpData[4]+lfDistances[2]*mpData[8];
+     mpData[13]+=lfDistances[0]*mpData[1]+lfDistances[1]*mpData[5]+lfDistances[2]*mpData[9];
+     mpData[14]+=lfDistances[0]*mpData[2]+lfDistances[1]*mpData[6]+lfDistances[2]*mpData[10];
+ }
+ else
+ {
+     mpData[12]+=lfDistances[0]*mpData[0]+lfDistances[1]*mpData[4];
+     mpData[13]+=lfDistances[0]*mpData[1]+lfDistances[1]*mpData[5];
+ }
 }
  void cMatrix4::Advance(c2DVf *lfDistances)
  {
-	 mpData[12]+=lfDistances->X();
-	 mpData[13]+=lfDistances->Y();
+	 mpData[12]+=lfDistances->X()*mpData[0]+lfDistances->Y()*mpData[4];
+	 mpData[13]+=lfDistances->X()*mpData[1]+lfDistances->Y()*mpData[5];
  }
  void cMatrix4::Advance(c3DVf *lfDistances)
   {
-	 mpData[12]+=lfDistances->X();
-	 mpData[13]+=lfDistances->Y();
-	 if(mb3D) mpData[14]+=lfDistances->Z();
+	 mpData[12]+=lfDistances->X()*mpData[0]+lfDistances->Y()*mpData[4]+lfDistances->Z()*mpData[8];
+	 mpData[13]+=lfDistances->X()*mpData[1]+lfDistances->Y()*mpData[5]+lfDistances->Z()*mpData[9];
+	if(mb3D) mpData[14]+=lfDistances->X()*mpData[2]+lfDistances->Y()*mpData[6]+lfDistances->Z()*mpData[10];
  }
  void cMatrix4::Advance(c2DVf &lfDistances)
   {
-	 mpData[12]+=lfDistances.X();
-	 mpData[13]+=lfDistances.Y();
+	 mpData[12]+=lfDistances.X()*mpData[0]+lfDistances.Y()*mpData[4];
+	 mpData[13]+=lfDistances.X()*mpData[1]+lfDistances.Y()*mpData[5];
  }
  void cMatrix4::Advance(c3DVf &lfDistances)
   {
-	 mpData[12]+=lfDistances.X();
-	 mpData[13]+=lfDistances.Y();
-	if(mb3D) mpData[14]+=lfDistances.Z();
+	 mpData[12]+=lfDistances.X()*mpData[0]+lfDistances.Y()*mpData[4]+lfDistances.Z()*mpData[8];
+	 mpData[13]+=lfDistances.X()*mpData[1]+lfDistances.Y()*mpData[5]+lfDistances.Z()*mpData[9];
+	if(mb3D) mpData[14]+=lfDistances.X()*mpData[2]+lfDistances.Y()*mpData[6]+lfDistances.Z()*mpData[10];
  }
 
  void cMatrix4::Equals(cMatrix4 *lpOther){memcpy(mpData,lpOther->Matrix(),sizeof(float)*16);};
- void cMatrix4::Equals(cMatrix4 &lpOther){memcpy(mpData,lpOther.Matrix(),sizeof(float)*16);};
+ void cMatrix4::Equals(cMatrix4 lpOther){memcpy(mpData,lpOther.Matrix(),sizeof(float)*16);};
 
 
 
@@ -1366,10 +1402,7 @@ bool cMatrix4::AngleToPointCheck(float *lfPoint,float lfAngle)
 	lfVector[1]=lfPoint[1]-mpData[13];
 	lfVector[2]=lfPoint[2]-mpData[14];
 
-	float ZDist = mpData[8]*lfVector[0]+mpData[9]*lfVector[1]+mpData[10]*lfVector[2];
-	lfAngle=1.0f-lfAngle;
-    if((ZDist*ZDist)>=lfAngle*(lfVector[0]*lfVector[0]+lfVector[1]*lfVector[1]+lfVector[2]*lfVector[2])) return 1;
-    return 0;
+    return AngleToVectorCheck(lfVector,lfAngle);
 }
 
 float cMatrix4::AngleToPoint(float *lfPoint)
@@ -1392,9 +1425,7 @@ float cMatrix4::AngleToPoint(float *lfPoint)
 	lfVector[0]=lfPoint[0]-mpData[12];
 	lfVector[1]=lfPoint[1]-mpData[13];
 	lfVector[2]=lfPoint[2]-mpData[14];
-	float ZDist = mpData[8]*lfVector[0]+mpData[9]*lfVector[1]+mpData[10]*lfVector[2];
-	//return (ZDist*ZDist)/(lfVector[0]*lfVector[0]+lfVector[1]*lfVector[1]+lfVector[2]*lfVector[2]);
-    return acos((ZDist*ZDist)/(lfVector[0]*lfVector[0]+lfVector[1]*lfVector[1]+lfVector[2]*lfVector[2]));
+	return AngleToVector(lfVector);
 }
 
 float cMatrix4::RollToPointPitch(float *lfPoint)
@@ -1418,14 +1449,7 @@ float cMatrix4::RollToPointPitch(float *lfPoint)
 	lfVector[1]=lfPoint[1]-mpData[13];
 	lfVector[2]=lfPoint[2]-mpData[14];
 
-
-
-    float XDist = mpData[0]*lfVector[0]+mpData[1]*lfVector[1]+mpData[2]*lfVector[2];
-	float YDist = mpData[4]*lfVector[0]+mpData[5]*lfVector[1]+mpData[6]*lfVector[2];
-//	float ZDist = mpData[8]*lfVector[0]+mpData[9]*lfVector[1]+mpData[10]*lfVector[2];
-
-	if(YDist>0.0f) return atan2(-XDist,YDist);
-	return atan2(XDist,YDist);
+    return RollToVectorPitch(lfVector);
 }
 
 
@@ -1450,11 +1474,7 @@ float cMatrix4::RollToPointYaw(float *lfPoint)
 	lfVector[1]=lfPoint[1]-mpData[13];
 	lfVector[2]=lfPoint[2]-mpData[14];
 
-    float XDist = mpData[0]*lfVector[0]+mpData[1]*lfVector[1]+mpData[2]*lfVector[2];
-	float YDist = mpData[4]*lfVector[0]+mpData[5]*lfVector[1]+mpData[6]*lfVector[2];
-//	float ZDist = mpData[8]*lfVector[0]+mpData[9]*lfVector[1]+mpData[10]*lfVector[2];
-
-	return atan2(YDist,-XDist);
+    return RollToVectorYaw(lfVector);
 }
 
 float cMatrix4::YawToPoint(float *lfPoint)
@@ -1471,17 +1491,13 @@ float cMatrix4::YawToPoint(float *lfPoint)
 	//Z Point Value = Zx()*PoingpPlayer->mpHull->Position()tX+Zy()*PointY+Zz()*PointZ;
 	//ZDistance = Z Point Value - Z Plane Value
 
-	double lfVector[3];
+	float lfVector[3];
 
 	lfVector[0]=lfPoint[0]-mpData[12];
 	lfVector[1]=lfPoint[1]-mpData[13];
 	lfVector[2]=lfPoint[2]-mpData[14];
 
-    float XDist = mpData[0]*lfVector[0]+mpData[1]*lfVector[1]+mpData[2]*lfVector[2];
-	//float YDist = mpData[4]*lfVector[0]+mpData[5]*lfVector[1]+mpData[6]*lfVector[2];
-	float ZDist = mpData[8]*lfVector[0]+mpData[9]*lfVector[1]+mpData[10]*lfVector[2];
-
-	return atan2(XDist,ZDist);
+    return YawToVector(lfVector);
 
 
 }
@@ -1502,18 +1518,13 @@ float cMatrix4::PitchToPoint(float *lfPoint)
 	//Y Point Value = Yx()*PointX+Yy()*PointY+Yz()*PointZ;
 	//YDistance = Y Point Value - Y Plane Value
 
-	double lfVector[3];
+	float lfVector[3];
 
 	lfVector[0]=lfPoint[0]-mpData[12];
 	lfVector[1]=lfPoint[1]-mpData[13];
 	lfVector[2]=lfPoint[2]-mpData[14];
 
-    //float XDist = mpData[0]*lfVector[0]+mpData[1]*lfVector[1]+mpData[2]*lfVector[2];
-	float YDist = mpData[4]*lfVector[0]+mpData[5]*lfVector[1]+mpData[6]*lfVector[2];
-	float ZDist = mpData[8]*lfVector[0]+mpData[9]*lfVector[1]+mpData[10]*lfVector[2];
-
-	return atan2(-YDist,ZDist);
-
+    return PitchToVector(lfVector);
 
 }
 
@@ -1555,7 +1566,9 @@ float cMatrix4::RollToVectorPitch(float *lfVector)
     float XDist = mpData[0]*lfVector[0]+mpData[1]*lfVector[1]+mpData[2]*lfVector[2];
 	float YDist = mpData[4]*lfVector[0]+mpData[5]*lfVector[1]+mpData[6]*lfVector[2];
 
-	return atan2(-XDist,YDist);
+	if(YDist>0.0f) return atan2(-XDist,YDist);
+	return atan2(XDist,-YDist);
+
 }
 
 
@@ -1565,7 +1578,8 @@ float cMatrix4::RollToVectorYaw(float *lfVector)
     float XDist = mpData[0]*lfVector[0]+mpData[1]*lfVector[1]+mpData[2]*lfVector[2];
 	float YDist = mpData[4]*lfVector[0]+mpData[5]*lfVector[1]+mpData[6]*lfVector[2];
 
-	return atan2(YDist,-XDist);
+	if(XDist<0.0f) return atan2(YDist,-XDist);
+	return atan2(-YDist,XDist);
 }
 
 float cMatrix4::YawToVector(float *lfVector)
@@ -1840,3 +1854,66 @@ cCameraMatrix4 &cMatrix4::ConvertToCameraMatrix()
      lfVector[2]=lfVector[2]*mpData[14];
      return lfVector;
  };
+
+void cMatrix4::InvSign()
+{
+  mpData[0]=-mpData[0];
+  mpData[1]=-mpData[1];
+  mpData[2]=-mpData[2];
+  mpData[3]=-mpData[3];
+  mpData[4]=-mpData[4];
+  mpData[5]=-mpData[5];
+  mpData[6]=-mpData[6];
+  mpData[7]=-mpData[7];
+  mpData[8]=-mpData[8];
+  mpData[9]=-mpData[9];
+  mpData[10]=-mpData[10];
+  mpData[11]=-mpData[11];
+  mpData[12]=-mpData[12];
+  mpData[13]=-mpData[13];
+  mpData[14]=-mpData[14];
+  mpData[15]=-mpData[15];
+
+};
+
+float cMatrix4::Distance(cMatrix4 &lpOther)
+{
+    return Distance(&lpOther);
+}
+
+float cMatrix4::Distance(float *lpOther)
+{
+    return Distance(c3DVf(lpOther));
+}
+
+double cMatrix4::DistanceSq(float *lpOther)
+{
+    return DistanceSq(c3DVf(lpOther));
+}
+
+float cMatrix4::Distance()
+{
+ return sqrt(mpData[12]*mpData[12]+mpData[13]*mpData[13]+mpData[14]*mpData[14]);
+};
+
+double cMatrix4::DistanceSq()
+{
+ return mpData[12]*mpData[12]+mpData[13]*mpData[13]+mpData[14]*mpData[14];
+};
+
+
+float cMatrix4::Roll()
+{
+	return atan2(-mpData[4],mpData[5]);
+};
+
+float cMatrix4::Yaw()
+{
+	return atan2(mpData[8],mpData[10]);
+};
+
+float cMatrix4::Pitch()
+{
+    return atan2(mpData[9],mpData[10]);
+};
+

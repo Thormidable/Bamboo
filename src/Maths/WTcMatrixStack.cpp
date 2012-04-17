@@ -14,7 +14,7 @@ cMatrixStack::cMatrixStack(uint16 liDepth) : cLimitedList<cMatrix4>(liDepth)
 
 cMatrixStack *cMatrixStack::Instance()
 {
-	if(!mpInstance) mpInstance=new cMatrixStack(8);
+	if(!mpInstance) mpInstance=new cMatrixStack(_MATRIX_STACK_DEPTH);
 	return mpInstance;
 }
 

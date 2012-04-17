@@ -93,6 +93,7 @@ void cPolygon::OutputIMFPolygon(ofstream &FileStream)
 {
 	Plane.OutputIMFPlane(FileStream);
 	Verteces.OutputIMFVerteces(FileStream);
+	mlCenter.OutputIMFVertex(FileStream);
 };
 
 uint32 cPolygon::GetSmallestAngle(uint32 liStart)
@@ -148,7 +149,6 @@ double cPolygon::GetAngleSum(float *lpPos)
 	lp2[2]=Verteces[0].Z()-lpPos[2];
 	lp2[3]=sqrt(lp2[0]*lp2[0]+lp2[1]*lp2[1]+lp2[2]*lp2[2]);
 
-
 	double lfAngle=acos((lp1[0]*lp2[0]+lp1[1]*lp2[1]+lp1[2]*lp2[2])/(lp1[3]*lp2[3]));
 
 	for(liCount=1;liCount<Verteces.Items();++liCount)
@@ -167,6 +167,7 @@ double cPolygon::GetAngleSum(float *lpPos)
 			lp2[2]=Verteces[liCount].Z()-lpPos[2];
 			lp2[3]=sqrt(lp2[0]*lp2[0]+lp2[1]*lp2[1]+lp2[2]*lp2[2]);
 		}
+
 		lfAngle+=acos((lp1[0]*lp2[0]+lp1[1]*lp2[1]+lp1[2]*lp2[2])/(lp1[3]*lp2[3]));
 	}
 
@@ -282,7 +283,6 @@ void cPolygon::CalculateCenter()
 	mlCenter.Y(mlCenter.Y()*lfInv);
 	mlCenter.Z(mlCenter.Z()*lfInv);
 
-	mlCenter.Display();
 };
 
 void cPolygonList::Combine()
@@ -310,7 +310,7 @@ void cPolygonList::Combine()
 					if(!mpList[li1].SharesVertex(mpList[li2].Verteces[liVert2]))	 {mpList[li1].AddVertex(&(mpList[li2].Verteces[liVert2])); lbContinue=true;}
 				}
 
-				Remove(li2);
+				Delete(li2);
 				--li2;
 			}
 
@@ -444,6 +444,7 @@ void cPolygon::LoadIMFPolygon(ifstream &FileStream)
 {
 	Plane.LoadIMFPlane(FileStream);
 	Verteces.LoadIMFVerteces(FileStream);
+	mlCenter.LoadIMFVertex(FileStream);
 };
 
 void cPolygon::Display()
@@ -453,7 +454,7 @@ void cPolygon::Display()
 }
 
 	void cPolygon::AddVertex(cVertex *lpOther){Verteces.Add(lpOther);};
-void cPolygon::RemoveVertex(uint32 liPos){Verteces.Remove(liPos);};
+void cPolygon::DeleteVertex(uint32 liPos){Verteces.Delete(liPos);};
 cPlane &cPolygon::PlaneData(){return Plane;};
 	cVertex &cPolygon::operator[](uint8 liPos){return Verteces[liPos];};
 		cPolygon::cPolygon(){};

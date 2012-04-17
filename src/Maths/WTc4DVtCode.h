@@ -241,3 +241,8 @@ template<class Type> c4DVt<Type> c4DVt<Type>::operator-=(c4DVt<Type> *lpValue)
  v[3]-=lpValue->v[3];
  return *this;
 }
+
+template<class Type> Type c4DVt<Type>::MagnitudeSq()
+{
+    return v[0]*v[0]+v[1]*v[1]+v[2]*v[2]+v[3]*v[3];
+};
