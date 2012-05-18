@@ -175,19 +175,20 @@ cRenderOwner cNodeList::Add(vRenderObject *lpNew,uint8 miLevel)
 {
 	cRenderOwner mcOwner;
 	mcOwner.List=new cNodeListNode(lpNew,miLevel);
+	mcOwner.Node=0;
     mpList.Add(mcOwner.List);
 	return mcOwner;
 }
 
-void cNodeList::Remove(cRenderOwner lpCurrent)
+void cNodeList::Delete(cRenderOwner lpCurrent)
 {
-    mpList.Remove(lpCurrent.List);
+    mpList.Delete(lpCurrent.List);
 }
 
 void cNodeList::StartKillAll()
 {
     KillAll();
-    if(mpRenderer) mpRenderer->Remove(mcOwnerNode);
+    if(mpRenderer) mpRenderer->Delete(mcOwnerNode);
     else trace("This is the Camera cNodeList. Cannot Delete.");
 }
 
@@ -208,6 +209,8 @@ void cNodeList::KillAll()
 
 void cNodeList::RecalculateTotalMatrix()
 {
+	mmTotalCache=_COMBINED_MATRIX;
+	mmTotalCache.Multiply(mmCache);
 uint32 liListPos;
  for(liListPos=0;liListPos<mpList.Items();++liListPos)
  {
@@ -349,28 +352,6 @@ uint32 cNodeList::ListLength()
 
 }
 
-/*
-void cNodeList::UpdateSize()
-{
-  float lfPos[miLength][4];
- uint32 liListPos;
- uint32 miLevel=0;
-for(liListPos=0;liListPos<miLength;++liListPos)
- {
-	  miLevel=mpList[liListPos].miLevel;
-	  lfPos[miLevel][0]=lfPos[miLevel-1][0]+mpList[liListPos].mmMatrix.Position()[0];
-	  lfPos[miLevel][1]=lfPos[miLevel-1][1]+mpList[liListPos].mmMatrix.Position()[1];
-	  lfPos[miLevel][2]=lfPos[miLevel-1][2]+mpList[liListPos].mmMatrix.Position()[2];
-	  lfPos[miLevel][3]=lfPos[miLevel][0]*lfPos[miLevel][0]+lfPos[miLevel][1]*lfPos[miLevel][1]+lfPos[miLevel][2]*lfPos[miLevel][2];
-	    if(mpList[liListPos].mpMesh)
-	    {
-	      if(lfPos[miLevel][3]+mpList[liListPos].Mesh()->GetSize()>mfSize) mfSize=lfPos[miLevel][3]+mpList[liListPos].Mesh()->GetSize();
-	    }
- }
-
-}
-*/
-
 
 cRenderOwner cNodeList::Add(vRenderObject *lpNew){return Add(lpNew,0);};
 
@@ -392,7 +373,7 @@ cRenderOwner cNodeList::Add(vRenderObject *lpNew){return Add(lpNew,0);};
 		{
 			mmCache=Renderer()->CalculateGlobalMatrix();
 			_MATRIX_STACK->Push();
-			_MATRIX_STACK->SetMatrix(mmCache->Matrix());
+			_MATRIX_STACK->SetMatrix(mmCache.Matrix());
 			CalculateMatrices();
 			_MATRIX_STACK->Pop();
      		return 0;
@@ -402,11 +383,55 @@ cRenderOwner cNodeList::Add(vRenderObject *lpNew){return Add(lpNew,0);};
 	else
 	{
 		_MATRIX_STACK->Push();
-		_MATRIX_STACK->SetMatrix(mmCache->Matrix());
+		_MATRIX_STACK->SetMatrix(mmCache.Matrix());
 		CalculateMatrices();
 		_MATRIX_STACK->Pop();
      	return 0;
 	}
  }
 
+cRenderOwner cNodeList::MoveItem(vRenderObject *lpObj, vRenderNode *lpRenderer)
+{
+ mpList.StripItem(lpObj->RenderOwner().List);
+ return lpRenderer->Add(lpObj);
+};
+
+
+void cNodeList::MoveAll(vRenderNode *lpRender)
+{
+ for(uint32 liListPos=0;liListPos<mpList.Items();++liListPos)
+ {
+	vRenderObject *lpObj=mpList[liListPos]->mpObject;
+	lpObj->RenderOwner(lpRender->Add(lpObj));
+	mpList.ZeroItem(liListPos);
+ }
+ mpList.SetItems(0);
+};
+
+vRenderObject *cNodeList::FindStart()
+{
+ miCursor=0;
+ if(mpList.Items())
+ {
+  return mpList[0]->mpObject;
+ }
+ return 0;
+};
+
+vRenderObject *cNodeList::FindNext()
+{
+ ++miCursor;
+ if(miCursor<mpList.Items())
+ {
+  return mpList[miCursor]->mpObject;
+ }
+ return 0;
+};
+
+uint32 cNodeList::Items()
+{
+ return mpList.Items();
+};
+
 #endif
+

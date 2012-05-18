@@ -86,7 +86,8 @@ public:
 * The mfDistance in the list is automatically generated and is the distance from the closest point on the Mosue vector.
 * The vector is from the cameras position through the mouse co-ordinates in the viewport.
 */
-cCollisionList *Selection(cPerspectiveControl *lpCamera=_CAMERA,float lfRadius=0.0f);
+cCollisionList *Selection(cMouseCollisionObject *lpMouse,uint32 liFilter=0,cCollisionList *lpList=0);
+cCollisionList *SelectionDetailed(cMouseCollisionObject *lpMouse,uint32 liFilter=0,cCollisionList *lpList=0);
 //cCollisionList *Selection(cViewport *lpCamera,float lfRadius=0.0f);
 
 };

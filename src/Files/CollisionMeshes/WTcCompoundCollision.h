@@ -19,6 +19,8 @@ public:
 
     uint8 Type();
     friend class cCompoundCollision;
+
+    cMatrix4 &CacheMatrix();
 };
 
 class cCompoundCollisionNodeMobile : public cCompoundCollisionNode
@@ -29,6 +31,8 @@ protected:
 public:
     cCompoundCollisionNodeMobile();
     void UpdateMatrices(cMatrix4 &lcBase);
+
+    cMatrix4 &CacheMatrix();
 };
 
 /**
@@ -73,7 +77,7 @@ public:
 	///This will procedurally generate a Box Collision object. This is the same as handing it a float pointer.
 	cMeshCollision *AddType(float lfXP,float lfXN,float lfYP,float lfYN,float lfZP,float lfZN);
 	///This will make a Beam object to match a rendered Beam. (Nice and easy eh?)
-	cBeamCollision *AddType(cBeamMesh *lpBeam);
+	cBeamCollision *AddType(cBeam *lpBeam);
 
 	uint8 GetType(uint32 liPos);
 	vCollisionData *GetObject(uint32 liPos);

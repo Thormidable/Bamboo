@@ -3,24 +3,24 @@
 
 /**
  * \brief This will form a single object in the List owned by a cCollisionList. It will store all the important data about a single collision.
- * Currently all the important data is the other cCollisionObject involved in the collision and the relative distance between teh two objects.
+ * Currently all the important data is the other cCollisionBase involved in the collision and the relative distance between teh two objects.
  * This means that the list can be generated (very slow) and then is cached to allow sorting or other user controls on filtering, Without having to test collisions again.
  * */
 class cCollisionListObject
 {
 
 public:
-	cCollisionObject *mpObj;
+	cCollisionBase *mpObj;
 	float mfDistance;
 	float mfBeamLength;
 	c3DVf mvCentre;
 
-	cCollisionListObject(cCollisionObject *lpObj);
+	cCollisionListObject(cCollisionBase *lpObj);
 	cCollisionListObject();
 	float Distance();
 	float BeamLength();
 	///This will Recalculate the Distances from the base object as this cannot be determined when the collision is detected.
-	void RecalculateDistance(cCollisionObject *lpThis);
+	void RecalculateDistance(cCollisionBase *lpThis);
 	///This will return the centre of the Collision.
 	c3DVf Centre();
 };
@@ -39,14 +39,14 @@ int32 miCurPos;
 
 
 public:
-    cCollisionObject *mpThisColl;
-    static cCollisionObject *mpOther;
+    cCollisionBase *mpThisColl;
+    static cCollisionBase *mpOther;
     static cCollisionList *mpStaticList;
 
 	///The Constructor for cCollisionList
-cCollisionList(cCollisionObject *lpThisColl);
+cCollisionList(cCollisionBase *lpThisColl);
 ///This will Add the object lpObject to the list of objects colliding with the current searching object.
-void AddCollision(cCollisionObject *lpObject);
+void AddCollision(cCollisionBase *lpObject);
 
 ///This will Add the cCollisionListObject to the list.
 void AddCollision(cCollisionListObject *lpObj);
@@ -60,9 +60,9 @@ cCollisionListObject *NextCollisionDetail();
 cCollisionListObject *CurrentCollisionDetail();
 
 ///This will return the next item from the list mpCollisionList that has been stocked by GenerateCollisionList() as a CollisionObject pointer.
-cCollisionObject *NextCollisionItem();
+cCollisionBase *NextCollisionItem();
 
-cCollisionObject *CurrentCollisionItem();
+cCollisionBase *CurrentCollisionItem();
 
 ///This will return the process owning renderable object creating the next detected collision.
 cProcess *NextCollisionP();

@@ -222,6 +222,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
           gpWindow->miInvWidth=1.0f/gpWindow->miWidth;
           gpWindow->miInvHeight=1.0f/gpWindow->miHeight;
           gpWindow->mfRatio=((float)gpWindow->miHeight)/gpWindow->miWidth;
+          gpWindow->FindRenderArea();
           cCameraHandler::Instance()->UpdateWindowSize();
           return 0;
          }
@@ -436,8 +437,9 @@ void cWindow::HandleMessages()
 			//gpWindow->Moved=true;
 			gpWindow->Resized=true;
 			gpWindow->mfRatio=((float)gpWindow->miHeight)/gpWindow->miWidth;
-			cCameraHandler::Instance()->UpdateWindowSize();
 			FindRenderArea();
+			cCameraHandler::Instance()->UpdateWindowSize();
+
 			break;
 		}
 		if(Event.type == DestroyNotify)

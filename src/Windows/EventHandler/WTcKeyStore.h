@@ -17,7 +17,6 @@ void UpdateKeyboard();
 bool GetKey(uint16 liKey);
  bool *SetArray(uint16 liKey);
 void SetKeyState(bool lbState,uint16 liKey);
-
 };
 
 #endif

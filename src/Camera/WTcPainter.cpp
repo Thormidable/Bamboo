@@ -206,6 +206,7 @@ for(liPass=0;liPass<25;liPass+=8)
 
 void cPainter::SortByAlpha()
 {
+    /*
 unsigned int liStart,liEnd,liPos;
 cRenderPointer **lpSwitch;
 liEnd=miPos-1;
@@ -216,7 +217,40 @@ for(liPos=0;liPos<miPos;++liPos)
 }
 lpSwitch=mpBucket;
 mpBucket=mpList;
-mpList=lpSwitch;
+mpList=lpSwitch;*/
+
+
+  unsigned int liFindPos;
+ unsigned int liSum,liOld;
+ cRenderPointer **lpSwitch;
+ uint32 lpStarts[0x100];
+
+  //Reset the bucket sizes
+  memset(lpStarts,0,1024);
+ //Find the size of each bucket;
+  for(liFindPos=0;liFindPos<miPos;++liFindPos)
+  {
+	  ++lpStarts[(mpList[liFindPos]->miAlpha)&0xff];
+  }
+  //Convert bucket sizes to bucket starts.
+  liSum=liOld=0;
+  for(liFindPos=0;liFindPos<0x100;++liFindPos)
+  {
+   liSum+=lpStarts[liFindPos];
+   lpStarts[liFindPos]=liOld;
+   liOld=liSum;
+  }
+
+  //Fill the Buckets.
+  for(liFindPos=0;liFindPos<miPos;++liFindPos)
+  {
+	  mpBucket[(lpStarts[(mpList[liFindPos]->miAlpha)&0xff])++]=mpList[liFindPos];
+}
+
+  lpSwitch=mpBucket;
+  mpBucket=mpList;
+  mpList=lpSwitch;
+
 }
 
 void cPainter::ShaderState(cShaderProgram *mpCurrent,cShaderProgram *mpLast)
@@ -242,68 +276,69 @@ void cPainter::DepthState(uint8 mpCurrent,uint8 mpLast)
 
 void cPainter::Render()
 {
-
- uint32 liCount;
-
- SortByDistance();
-for(liCount=0;liCount<WT_TEXTURE_NUMBER_ALLOWED;++liCount)
+if(miPos)
 {
- SortByTexture(liCount);
-}
+     uint32 liCount;
 
- SortByShader();
- SortByAlpha();
-
-glEnableClientState(GL_VERTEX_ARRAY);
-glEnableClientState(GL_NORMAL_ARRAY);
-glEnable(GL_DEPTH_TEST);
-
-   ShaderState(mpList[0]->ShaderPoint,0);
-      uint8 liTexSlot;
-    for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
+     SortByDistance();
+    for(liCount=0;liCount<WT_TEXTURE_NUMBER_ALLOWED;++liCount)
     {
-	  mpList[0]->mpObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
+     SortByTexture(liCount);
     }
 
-  if(mpList[0]->miAlpha) glDisable(GL_DEPTH_TEST);
-  else glEnable(GL_DEPTH_TEST);
+     SortByShader();
+     SortByAlpha();
 
-  #if WT_FULL_VERSION_BAMBOO
-    if(_LIGHT->AnyLights() && mpList[0]->mpObject->Lighting()) _LIGHT->PrepareLight(&(mpList[0]->mpObject->mmCache));
-  #endif
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_NORMAL_ARRAY);
+    glEnable(GL_DEPTH_TEST);
 
-	mpList[0]->mpObject->RenderPainter();
+       ShaderState(mpList[0]->ShaderPoint,0);
+          uint8 liTexSlot;
+        for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
+        {
+          mpList[0]->mpObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
+        }
 
- for(liCount=1;liCount<miPos;liCount++)
- {
-      ShaderState(mpList[liCount]->ShaderPoint,mpList[liCount-1]->ShaderPoint);
-   uint8 liTexSlot;
+      /*if(mpList[0]->miAlpha) glDisable(GL_DEPTH_TEST);
+      else glEnable(GL_DEPTH_TEST);*/
 
-if(mpList[liCount]->ShaderPoint!=mpList[liCount-1]->ShaderPoint)
-{
-    for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
+      #if WT_FULL_VERSION_BAMBOO
+        if(_LIGHT->AnyLights() && mpList[0]->mpObject->Lighting()) _LIGHT->PrepareLight(&(mpList[0]->mpObject->mmCache));
+      #endif
+
+        if(mpList[0]->mpShader) mpList[0]->mpObject->RenderPainter();
+
+     for(liCount=1;liCount<miPos;liCount++)
+     {
+          ShaderState(mpList[liCount]->ShaderPoint,mpList[liCount-1]->ShaderPoint);
+       uint8 liTexSlot;
+
+    if(mpList[liCount]->ShaderPoint!=mpList[liCount-1]->ShaderPoint)
     {
-            mpList[liCount]->mpObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
+        for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
+        {
+                mpList[liCount]->mpObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
+        }
     }
-}
-else
-{
-    for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
+    else
     {
-            mpList[liCount]->mpObject->TextureItem(liTexSlot).TextureState(&(mpList[liCount-1]->mpObject->TextureItem(liTexSlot)),liTexSlot);
+        for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
+        {
+                mpList[liCount]->mpObject->TextureItem(liTexSlot).TextureState(&(mpList[liCount-1]->mpObject->TextureItem(liTexSlot)),liTexSlot);
+        }
     }
+     //   DepthState(mpList[liCount]->miAlpha,mpList[liCount-1]->miAlpha);
+
+
+      #if WT_FULL_VERSION_BAMBOO
+        if(_LIGHT->AnyLights() && mpList[liCount]->mpObject->Lighting()) _LIGHT->PrepareLight(&(mpList[liCount]->mpObject->mmCache));
+      #endif
+
+        if(mpList[liCount]->mpShader) mpList[liCount]->mpObject->RenderPainter();
+
+     }
 }
-    DepthState(mpList[liCount]->miAlpha,mpList[liCount-1]->miAlpha);
-
-
-  #if WT_FULL_VERSION_BAMBOO
-    if(_LIGHT->AnyLights() && mpList[liCount]->mpObject->Lighting()) _LIGHT->PrepareLight(&(mpList[liCount]->mpObject->mmCache));
-  #endif
-
-	mpList[liCount]->mpObject->RenderPainter();
-
- }
-
 }
 
 void cPainter::Remove(cRenderPointer *lfSlot)

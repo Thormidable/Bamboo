@@ -2,11 +2,20 @@
 
 #if WT_FULL_VERSION_BAMBOO
 
+void cParticleGroup::Settings(cParticleSettings &lpOther){Data=lpOther;}
+	void cParticleGroup::RespawnOn(){mbRespawn=true;};
+	void cParticleGroup::Fade(float lfFadeTime){mbRespawn=false; mfFadeTime=lfFadeTime;};
+
+	void cParticleGroup::UseGravity(){mbUseGravity=true;};
+	void cParticleGroup::NotUseGravity(){mbUseGravity=false;};
+
+
 void cParticleGroup::Refresh()
 {
 
-	if(mbRespawn)
+	if(mbRespawn || mfFadeTime>0.0f)
 	{
+	    if(mfFadeTime>0.0f) mfFadeTime-=0.04f;
 		uint32 liCount;
 		for(liCount=0;liCount<Items();++liCount)
 		{
@@ -43,7 +52,7 @@ void cParticleGroup::Refresh()
 
 
 
-cParticleGroup::cParticleGroup(uint32 liParticles)
+cParticleGroup::cParticleGroup(uint32 liParticles) : cParticleHandler(liParticles)
 {
 	mbRespawn=0;
 	mbUseGravity=0;
@@ -86,4 +95,59 @@ cParticleGroup::~cParticleGroup()
 
 
 
+
+cParticleSource::cParticleSource(float lfDuration,float lfRate,cParticleSettings& lpSettings,cParticleHandler *lpHandler,vRenderNode *lpNode,c3DVf lfOffSet)
+{
+    mfDuration=lfDuration;
+    mfRate=1.0f/lfRate;
+    mpHandler=lpHandler;
+    Data=lpSettings;
+    mpNode=lpNode;
+    mfOffset=lfOffSet;
+};
+
+cParticleSettings &cParticleSource::Settings(){return Data;};
+void cParticleSource::RenderNode(vRenderNode *lpNode)
+{
+ mpNode=lpNode;
+};
+cParticleSource::~cParticleSource()
+{
+
+};
+
+void cParticleSource::Settings(cParticleSettings &lpOther){Data=lpOther;};
+void cParticleSource::Duration(float lfDuration){mfDuration=lfDuration;};
+void cParticleSource::Rate(float lfRate){mfRate=1.0f/lfRate;};
+void cParticleSource::FrameUpdate()
+{
+ mfProduction+=0.04f;
+ while(mfProduction>mfRate)
+ {
+     mfProduction-=mfRate;
+     cParticle *lpPart=mpHandler->NewParticle();
+     if(mpNode)
+     {
+         memcpy(Data.Position,mpNode->mmCache.Position(),sizeof(float)*3);
+         Data.Position[0]+=mfOffset[0];
+         Data.Position[1]+=mfOffset[1];
+         Data.Position[2]+=mfOffset[2];
+     }
+
+     lpPart->Spawn(Data);
+ }
+ mfDuration-=0.04f;
+ if(mfDuration<0.0f) delete this;
+};
+
+float cParticleSource::Duration(){return mfDuration;};
+float cParticleSource::Rate(){return 1.0f/mfRate;};
+
+void cParticleSource::OffSet(float *lpOffSet)
+{
+    mfOffset=lpOffSet;
+};
+
 #endif
+
+

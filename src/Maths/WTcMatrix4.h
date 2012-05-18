@@ -3,6 +3,7 @@
 
 
 class cCameraMatrix4;
+class cDoubleMatrix4;
 /**
 * \brief this is a standard 4x4 translation matrix for objects.
 * This is a standard 4x4 translation matrix for objects. It can be used for
@@ -23,10 +24,19 @@ protected:
  // This is a pointer to a static array to allow this objects matrix to be quickly restored to an identity matrix.
  static float mpIdentity[];
 
- /// This is a boolean flag to define whether the object is 3D or 2D. True is 3D. False is 2D. See cMatrix4::Set3D() and cMatrix4::Set2D().
- bool mb3D;
 
 public:
+
+/// This is a boolean flag to define whether the object is 3D or 2D. True is 3D. False is 2D. See cMatrix4::Set3D() and cMatrix4::Set2D().
+ bool mb3D;
+
+    cMatrix4(const cDoubleMatrix4 &lpOther);
+    cMatrix4(cDoubleMatrix4 *lpOther);
+    cMatrix4(float *lpOther);
+    cMatrix4(double *lpOther);
+    cMatrix4(float lfX,float lfY,float lfZ);
+	cMatrix4(float lfX,float lfY,float lfZ,float lfXA,float lfYA,float lfZA);
+
  // This will update the OpenGL matrix on the top of matrix stack to be identical to this matrix.
  void UpdateMatrix();
  // This appears to multiply this matrix by the matrix lpMatrix and equate this matrix to the result.
@@ -277,6 +287,10 @@ float Pitch();
   void Equals(cMatrix4 *lpOther);
   ///Makes this matrix Equal the cMatrix4 lpOther
   void Equals(cMatrix4 lpOther);
+    ///Makes this matrix Equal the cDoubleMatrix4 pointed to by lpOther
+  void Equals(cDoubleMatrix4 *lpOther);
+  ///Makes this matrix Equal the cDoubleMatrix4 lpOther
+  void Equals(cDoubleMatrix4 lpOther);
   ///Makes this matrix Equal the cCameraMatrix4 lpOther
   void Equals(cCameraMatrix4 &lpOther);
   ///Makes this matrix Equal the cCameraMatrix lpOther
@@ -401,11 +415,14 @@ float operator=(const float lVal);
 // This will equate the data in mpData to the data in lVal.mpData.
 // cMatrix4 &operator=(cMatrix4 &lVal);
 // This will equate the data in mpData to the data in lVal->mpData.
-cMatrix4 *operator=(cMatrix4 *lVal);
+cMatrix4 operator=(cMatrix4 *lVal);
 // This will equate the data in mpData to the data in lVal.mpData.
 cMatrix4 operator=(cMatrix4 lVal);
+cMatrix4 operator=(cDoubleMatrix4 *lVal);
+// This will equate the data in mpData to the data in lVal.mpData.
+cMatrix4 operator=(cDoubleMatrix4 lVal);
 
-float *operator=(float *lVal);
+cMatrix4 operator=(float *lVal);
 
 
 
@@ -485,6 +502,28 @@ float *operator=(float *lVal);
 
   void InvSign();
 
+  bool Is3D();
+
+  ///This will transpose the point to be relative to this matrix, where the point SameSpace starts in the same space (Global / Camaera / Local)
+  c3DVf FindPointRelative(c3DVf SameSpace);
+
 };
+
+class cIdentityMatrix : public cMatrix4
+{
+    cIdentityMatrix();
+    static cIdentityMatrix *spInstance;
+public:
+    static cIdentityMatrix Instance();
+};
+
+class cZeroMatrix : public cMatrix4
+{
+    static cZeroMatrix *spInstance;
+    cZeroMatrix();
+public:
+    static cZeroMatrix Instance();
+};
+
 
 #endif

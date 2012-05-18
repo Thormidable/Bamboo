@@ -1,7 +1,7 @@
 #include "../../WTBamboo.h"
 
 
-cPoint::cPoint() : cRenderObject(1)
+cPoint::cPoint() : cRenderObject(true)
 {
  Identity();
 mfColor[0]=0.0f;
@@ -10,17 +10,20 @@ mfColor[2]=0.0f;
 mfColor[3]=0.0f;
 }
 
-cPoint::cPoint(vRenderNode *lpRenderer) : cRenderObject(lpRenderer)
+cPoint::cPoint(vRenderNode *lpRenderer) : cRenderObject(lpRenderer,true)
 {
  Identity();
 }
 
+cPoint::cPoint(cCamera *lpCamera) : cRenderObject(lpCamera,true)
+{
+ Identity();
+}
 
 void cPoint::RenderPainter()
 {
-
     SetShaderVariables();
-  glPointSize(mfPointSize);
+  //glPointSize(mfPointSize);
   glBegin(GL_POINTS);
     glColor4fv(mfColor.Color());
     glVertex3f(0.0f,0.0f,0.0f);

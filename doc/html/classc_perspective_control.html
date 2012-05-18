@@ -63,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a>  </div>
+<a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">cPerspectiveControl Class Reference</div>  </div>
 </div>
@@ -95,6 +95,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5aa44c5690ac0db66157d8c08ecf0a9b"></a><!-- doxytag: member="cPerspectiveControl::Far" ref="a5aa44c5690ac0db66157d8c08ecf0a9b" args="(float lfF)" -->
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_perspective_control.html#a5aa44c5690ac0db66157d8c08ecf0a9b">Far</a> (float lfF)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will set the Furthest distance <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> will render polygons. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7fffa87f50863a388a5b5b7cc914ce9"></a><!-- doxytag: member="cPerspectiveControl::Near2D" ref="af7fffa87f50863a388a5b5b7cc914ce9" args="()" -->
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_perspective_control.html#af7fffa87f50863a388a5b5b7cc914ce9">Near2D</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will return the closest distance <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> will render polygons in Orthographic space. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0acd5b79c090814ee300e68a39d742ee"></a><!-- doxytag: member="cPerspectiveControl::Far2D" ref="a0acd5b79c090814ee300e68a39d742ee" args="()" -->
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_perspective_control.html#a0acd5b79c090814ee300e68a39d742ee">Far2D</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will return the Furthest distance <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> will render polygons in Orthographic space. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2beedc86ad1003705ae54f0127ca049"></a><!-- doxytag: member="cPerspectiveControl::Near2D" ref="ae2beedc86ad1003705ae54f0127ca049" args="(float lfN)" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_perspective_control.html#ae2beedc86ad1003705ae54f0127ca049">Near2D</a> (float lfN)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will set the closest distance <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> will render polygons in Orthographic space. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cf6d8072de5e8c5b4e54a79ad1f0e25"></a><!-- doxytag: member="cPerspectiveControl::Far2D" ref="a6cf6d8072de5e8c5b4e54a79ad1f0e25" args="(float lfF)" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_perspective_control.html#a6cf6d8072de5e8c5b4e54a79ad1f0e25">Far2D</a> (float lfF)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will set the Furthest distance <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> will render polygons in Orthographic space. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add5f74b61fe689841d0de7cfcaad56f9"></a><!-- doxytag: member="cPerspectiveControl::Width" ref="add5f74b61fe689841d0de7cfcaad56f9" args="(float lfZoom)" -->
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_perspective_control.html#add5f74b61fe689841d0de7cfcaad56f9">Width</a> (float lfZoom)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will set the width of the closest viewing space. <br/></td></tr>
@@ -121,8 +133,8 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a7781d158a255d67d95924345f2230e"></a><!-- doxytag: member="cPerspectiveControl::CameraMatrix" ref="a1a7781d158a255d67d95924345f2230e" args="()" -->
 static float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_perspective_control.html#a1a7781d158a255d67d95924345f2230e">CameraMatrix</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will return the pointer to the Corrected Camera Matrix. <br/></td></tr>
-<tr><td colspan="2"><h2><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6386c5032f9471f652f1444070a09e03"></a><!-- doxytag: member="cPerspectiveControl::mmPerspective" ref="a6386c5032f9471f652f1444070a09e03" args="" -->
 cPerspectiveMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_perspective_control.html#a6386c5032f9471f652f1444070a09e03">mmPerspective</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This object builds and controls the Perspective Matrix for the system. <br/></td></tr>
@@ -147,7 +159,7 @@ cPerspectiveMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:04 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:08 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -2,167 +2,32 @@
 
 #if WT_FULL_VERSION_BAMBOO
 
-cParticle::cParticle()
-{
-	 _CAMERA->ParticleHandler()->Add(this);
+cElementArray *gpElementArray=0;
 
-};
-
-cParticle::cParticle(cCamera *lpCamera)
+void cParticle::UpdateSpeed(float *lpTemp)
 {
-	 lpCamera->ParticleHandler()->Add(this);
-};
-
-cParticle::cParticle(cParticleHandler *lpNode)
-{
-	 lpNode->Add(this);
+    Speed=lpTemp;
 };
 
 
-
-
-cParticle::~cParticle()
+void cParticle::UpdatePos()
 {
-
-};
-
-void cParticle::Stop()
-{
-Life=0.0f;
+    Position+=Speed;
 }
 
-void cParticle::OnSleep()
+void cParticle::UpdateGravity()
 {
- //cParticleHandler::Instance()->Remove(this);
-}
-
-void cParticle::OnWake()
-{
- //cParticleHandler::Instance()->Add(this);
-}
-
-
-cParticleHandler::cParticleHandler() : cRenderObject(true)
-{
-	lbRefresh=false;
-	miParticles=0;
-	miMaxParticles=WT_MAX_PARTICLES;
-	mpParticles=new cParticle*[WT_MAX_PARTICLES];
-	Transparency(1);
-}
-
-void cParticleHandler::Resize(uint32 liSize)
-{
-	miMaxParticles=liSize;
-	cParticle **lpTemp=new cParticle*[liSize];
-	memcpy(lpTemp,mpParticles,sizeof(cParticle*)*miParticles);
-	delete []mpParticles; mpParticles=lpTemp;
-};
-
-void cParticleHandler::DeleteAll()
-{
-	uint32 liCount;
-	for(liCount=0;liCount<miParticles;++liCount)
-	{
-		delete mpParticles[liCount];
-	}
-	miParticles=0;
-	delete []mpParticles;
-	mpParticles=0;
-}
-
-void cParticleHandler::Add(cParticle *lpPart)
-{
-	if(miParticles>=miMaxParticles){Resize(miMaxParticles*2);}
-	mpParticles[miParticles++]=lpPart;
-};
-
-
-void cParticleHandler::Delete(cParticle *lpPart)
-{
-	delete lpPart;
-}
-
-void cParticleHandler::Remove(uint32 liParticle)
-{
---miParticles;
-if(liParticle<miParticles)
-{
-	memcpy(&mpParticles[liParticle],&mpParticles[liParticle+1],sizeof(cParticle*)*miParticles-liParticle);
-}
-}
-
-void cParticleHandler::Remove(cParticle *lpPart)
-{
- uint32 liCount;
- for(liCount=0;liCount<miParticles;++liCount)
- {
-  if(mpParticles[liCount]==lpPart) Remove(liCount);
- }
-
-}
-
-void cParticleHandler::Refresh()
-{
-		uint32 liCount;
-		uint32 liFound=0;
-		for(liCount=0;liCount<miParticles;++liCount)
-		{
-			if(mpParticles[liCount])
-			{
-			    mpParticles[liCount]->UpdateFade();
-				if(mpParticles[liCount]->Life<=0.0f){delete mpParticles[liCount];}
-				else
-				{
-					mpParticles[liFound++]=mpParticles[liCount];
-				}
-			}
-		}
-		miParticles=liFound;
-};
-
-
-void cParticleHandler::RenderPainter()
-{
-	Refresh();
-	SetShaderVariables();
-
-	uint32 liCount;
-	for(liCount=0;liCount<miParticles;++liCount)
-	{
-		if(mpParticles[liCount]->Awake())
-		{
-			if(WT_PARTICLE_HANDLER_UPDATE_PARTICLE_POSITIONS) mpParticles[liCount]->UpdatePos();
-			//glPointSize(mpParticles[liCount]->Size);
-        	glBegin(GL_POINTS);
-            	glColor4fv(mpParticles[liCount]->Color.Color());
-            	glVertex3fv(mpParticles[liCount]->Position);
-        	glEnd();
-		}
-	}
-
-	float lpTemp[4]={1.0f,1.0f,1.0f,1.0f};
-	glColor4fv(lpTemp);
-
-}
-
-
-void cGravityParticle::UpdatePos()
-{
-	Speed[0]+=_PARTICLE_GRAV_X;
+    Speed[0]+=_PARTICLE_GRAV_X;
 	Speed[1]+=_PARTICLE_GRAV_Y;
 	Speed[2]+=_PARTICLE_GRAV_Z;
 
-	Position[0]+=Speed[0];
-	Position[1]+=Speed[1];
-	Position[2]+=Speed[2];
-}
+	Position+=Speed;
+};
 
-void cWindAndGravityParticle::UpdatePos()
+void cParticle::UpdateGravityAndWind()
 {
-    float lfTemp[3];
-
-	lfTemp[0]=Speed[0]-_WIND_X;
+    c3DVf lfTemp;
+    lfTemp[0]=Speed[0]-_WIND_X;
 	lfTemp[0]=lfTemp[0]*fabs(lfTemp[0]);
 	lfTemp[1]=Speed[1]-_WIND_Y;
 	lfTemp[0]=lfTemp[1]*fabs(lfTemp[1]);
@@ -173,30 +38,299 @@ void cWindAndGravityParticle::UpdatePos()
 	Speed[1]+=_PARTICLE_GRAV_Y;
 	Speed[2]+=_PARTICLE_GRAV_Z;
 
-	Position[0]+=Speed[0]+lfTemp[0]*_WIND_FACTOR;
-	Position[1]+=Speed[1]+lfTemp[1]*_WIND_FACTOR;
-	Position[2]+=Speed[2]+lfTemp[2]*_WIND_FACTOR;
-}
+	Position+=(Speed+lfTemp*_WIND_FACTOR);
 
-void cParticle::UpdateSpeed(float *lpTemp)
+};
+
+void cParticle::UpdateWind()
 {
-	Speed[0]=lpTemp[0];
-	Speed[1]=lpTemp[1];
-	Speed[2]=lpTemp[2];
+    c3DVf lfTemp;
+    lfTemp[0]=Speed[0]-_WIND_X;
+	lfTemp[0]=lfTemp[0]*fabs(lfTemp[0]);
+	lfTemp[1]=Speed[1]-_WIND_Y;
+	lfTemp[0]=lfTemp[1]*fabs(lfTemp[1]);
+	lfTemp[2]=Speed[2]-_WIND_Z;
+	lfTemp[0]=lfTemp[2]*fabs(lfTemp[2]);
+
+	Position+=(Speed+lfTemp*_WIND_FACTOR);
 };
 
 
-void cParticle::UpdatePos()
+
+void cParticle::Spawn(cParticleSettings &lpData)
 {
-	Position[0]+=Speed[0];
-	Position[1]+=Speed[1];
-	Position[2]+=Speed[2];
+	uint32 liCount;
+
+	for(liCount=0;liCount<3;++liCount)
+	{
+		Color[liCount]=lpData.RGB[liCount]+RANDOM_NUMBER*lpData.RGB[4+liCount];
+		Position[liCount]=lpData.Position[liCount]+RANDOM_NUMBER*lpData.Position[3+liCount];
+	};
+	if(lpData.Speed[4]) memcpy(Speed.v,ParticleArcSpeeds(lpData.Speed).v,sizeof(float)*3);
+	else memcpy(Speed.v,ParticleBallSpeeds(lpData.Speed).v,sizeof(float)*3);
+
+	Color[liCount]=lpData.RGB[3]+RANDOM_NUMBER*lpData.RGB[7];
+	Life=lpData.Life[0]+RANDOM_NUMBER*lpData.Life[1];
+	Size=lpData.Size[0]+RANDOM_NUMBER*lpData.Size[1];
+};
+
+
+void cParticle::SetColor(float *lpRGB){Color=lpRGB;};
+void cParticle::SetColor(cRGB *lpRGB){Color=lpRGB;};
+void cParticle::SetColor(cRGBA *lpRGB){Color=lpRGB;};
+void cParticle::SetColor(cRGB &lpRGB){Color=lpRGB;};
+void cParticle::SetColor(cRGBA &lpRGB){Color=lpRGB;};
+
+
+	void cParticle::SetSize(float lpSize){Size=lpSize;};
+	void cParticle::SetLife(float lpLife){Life=lpLife;};
+	void cParticle::SetSpeed(float *lpSpeed){Speed=lpSpeed;};
+	void cParticle::SetPosition(float *lpPos){Position=lpPos;};
+
+
+cParticle cParticle::operator=(cParticle *lpOther)
+{
+    memcpy(this,lpOther,sizeof(cParticle));
+    return *this;
+};
+cParticle cParticle::operator=(cParticle lpOther)
+{
+    memcpy(this,&lpOther,sizeof(cParticle));
+    return *this;
+};
+
+cParticle::cParticle()
+{
+    Life=0.0f;
 }
 
-cParticleHandler::~cParticleHandler()
-{
-  DeleteAll();
 
+cParticleHandler::cParticleHandler() : cRenderObject(true)
+{
+	InitialiseParticleHandler(WT_MAX_PARTICLES);
+}
+
+cParticleHandler::cParticleHandler(uint32 liParticles) : cRenderObject(true)
+{
+	InitialiseParticleHandler(liParticles);
+}
+
+cParticleHandler::cParticleHandler(uint32 liParticles,cCamera *lpCamera) : cRenderObject(lpCamera,true)
+{
+	InitialiseParticleHandler(liParticles);
+}
+
+cParticleHandler::cParticleHandler(uint32 liParticles,vRenderNode *lpNode) : cRenderObject(lpNode,true)
+{
+	InitialiseParticleHandler(liParticles);
+}
+
+cParticleHandler::cParticleHandler(vRenderNode *lpNode) : cRenderObject(lpNode,true)
+{
+    InitialiseParticleHandler(WT_MAX_PARTICLES);
+};
+
+cParticleHandler::cParticleHandler(cCamera *lpCamera) : cRenderObject(lpCamera,true)
+{
+
+	InitialiseParticleHandler(WT_MAX_PARTICLES);
+
+};
+
+void cParticleHandler::InitialiseParticleHandler(uint32 liParticles)
+{
+	lbRefresh=false;
+	Init(liParticles);
+	Transparency(1);
+
+	mpAttributes=new cManualInterleavedAttributeArray(5);
+
+	mpAttributes->AddComponent(new cInterleavedFloatArray(3,"Bb_Position"));
+	mpAttributes->AddComponent(new cInterleavedFloatArray(4,"Bb_Color"));
+	mpAttributes->AddComponent(new cInterleavedFloatArray(1,"Bb_Size"));
+	mpAttributes->AddComponent(new cInterleavedFloatArray(3,"Bb_Speed"));
+	mpAttributes->AddComponent(new cInterleavedFloatArray(1,"Bb_Life"));
+
+	mpAttributes->Elements(0);
+	mpAttributes->PointData((char*)mpList);
+
+	mpAttributeLinker=new cAttributeLinker(mpAttributes);
+
+};
+
+uint32 cParticleHandler::LivingParticles()
+{
+ return Items();
+};
+
+cParticle *cParticleHandler::NewParticle()
+{
+ if(miSpaces<=1+miItems) ChangeSize(miSpaces*1.5);
+ {
+     ++miItems;
+     return &mpList[miItems-1];
+ }
+};
+
+void cParticleHandler::Refresh()
+{
+		uint32 liCount;
+		uint32 liFound=0;
+		for(liCount=0;liCount<Items();++liCount)
+		{
+            mpList[liCount].Life-=WT_FRAME_TIME;
+            if(mpList[liCount].Life>0.0f)
+            {
+                if(liFound!=liCount) mpList[liFound]=mpList[liCount];
+                ++liFound;
+            }
+		}
+		miItems=liFound;
+};
+
+
+void cParticleHandler::RenderPainter()
+{
+	Refresh();
+	SetShaderVariables();
+/*
+	if(mpAttributeLinker->ProgramID()!=mpShader->ID())
+	{
+		mpAttributeLinker->Shader(mpShader);
+	}
+
+	mpAttributes->Elements(Items());
+	mpAttributes->Buffer();
+	mpAttributeLinker->Write();
+
+	if(miSpaces>gpElementArray->Elements())
+	{
+		gpElementArray->PointData(ExpandCountingArray(gpElementArray->Data(),gpElementArray->Elements(),miSpaces));
+		gpElementArray->Elements(miSpaces);
+ 		gpElementArray->Buffer();
+	}
+*/
+	//gpElementArray->Render(miSpaces);
+
+    glBegin(GL_POINTS);
+	uint32 liCount;
+	for(liCount=0;liCount<Items();++liCount)
+	{
+        mpList[liCount].UpdatePos();
+
+        glColor4fv(mpList[liCount].Color.Color());
+        glVertex3fv(mpList[liCount].Position.v);
+
+	}
+		glEnd();
+
+	float lpTemp[4]={1.0f,1.0f,1.0f,1.0f};
+	glColor4fv(lpTemp);
+
+}
+
+
+c3DVf ParticleArcSpeeds(c3DVf Vector,float lfSpeedRange, float lfAngleRange)
+{
+    memcpy(cParticleSettings::sfStore,Vector.v,sizeof(float)*3);
+    cParticleSettings::sfStore[3]=lfSpeedRange;
+    cParticleSettings::sfStore[4]=lfAngleRange;
+
+    return c3DVf(ParticleArcSpeeds(cParticleSettings::sfStore));
+};
+
+c3DVf ParticleBallSpeeds(float lfSpeed,float lfSpeedRange)
+{
+  cParticleSettings::sfStore[0]=lfSpeed;
+  cParticleSettings::sfStore[1]=lfSpeedRange;
+
+  return c3DVf(ParticleBallSpeeds(cParticleSettings::sfStore));
+
+};
+
+c3DVf ParticleArcSpeeds(float *lpSpeedInfo)
+{
+   c3DVf Normal;
+   c3DVf lpSpeedData(lpSpeedInfo);
+   lpSpeedData*=1.0f+ZEROED_RANDOM_NUMBER*lpSpeedInfo[3];
+
+    Normal[1]=ZEROED_RANDOM_NUMBER;
+    Normal[0]=ZEROED_RANDOM_NUMBER;
+    Normal[2]=ZEROED_RANDOM_NUMBER;
+
+    c3DVf cross_vector = Normal*lpSpeedData;
+    Normal=cross_vector*lpSpeedData;
+
+
+float h = cos( RANDOM_NUMBER*lpSpeedInfo[4]);
+float phi = 2 * 3.14159f * RANDOM_NUMBER;
+float z = h + ( 1 - h ) * RANDOM_NUMBER;
+float sinT = sqrt( 1 - z * z );
+float x = cos( phi ) * sinT;
+float y = sin( phi ) * sinT;
+
+c3DVf perturbed = Normal * x + cross_vector * y + lpSpeedData * z;
+perturbed*=sqrt(lpSpeedInfo[0]*lpSpeedInfo[0]+lpSpeedInfo[1]*lpSpeedInfo[1]+lpSpeedInfo[2]*lpSpeedInfo[2]);
+return perturbed;
+
+};
+
+
+c3DVf ParticleSideVelocity(float *lpSpeedInfo)
+{
+    c3DVf Normal;
+   c3DVf lpSpeedData(lpSpeedInfo);
+   lpSpeedData*=(1.0f+ZEROED_RANDOM_NUMBER*lpSpeedInfo[3]);
+
+    Normal[1]=ZEROED_RANDOM_NUMBER;
+    Normal[0]=ZEROED_RANDOM_NUMBER;
+    Normal[2]=ZEROED_RANDOM_NUMBER;
+
+    c3DVf cross_vector = Normal*lpSpeedData;
+    Normal=cross_vector*lpSpeedData;
+
+float h = cos(0.5*3.14159*ZEROED_RANDOM_NUMBER);
+float phi = 2 * 3.14159f * RANDOM_NUMBER;
+float z = h + ( 1 - h ) * RANDOM_NUMBER;
+float x = cos( phi );
+float y = sin( phi );
+
+c3DVf perturbed = Normal * x * lpSpeedInfo[4] + cross_vector * y * lpSpeedInfo[4] + lpSpeedData * z;
+perturbed*=sqrt(lpSpeedInfo[0]*lpSpeedInfo[0]+lpSpeedInfo[1]*lpSpeedInfo[1]+lpSpeedInfo[2]*lpSpeedInfo[2]);
+return perturbed;
+
+};
+
+c3DVf ParticleSideVelocity(c3DVf lpSpeedInfo,float lfSpeedRange, float lfSideSpeed)
+{
+    float lfTemp[6];
+    memcpy(lfTemp,lpSpeedInfo.v,sizeof(float)*3);
+    lfTemp[3]=lfSpeedRange;
+    lfTemp[4]=lfSideSpeed;
+
+    return (ParticleSideVelocity(lfTemp));
+}
+
+
+c3DVf ParticleBallSpeeds(float *lpSpeedData)
+{
+    lpSpeedData[0]=lpSpeedData[0]*(1.0f+ZEROED_RANDOM_NUMBER*lpSpeedData[1]);
+
+    float lfRandomYaw=RANDOM_NUMBER*3.14159*2;
+    float lfRandomPitch=RANDOM_NUMBER*3.14159*2;
+    float lfCosPitch=cos(lfRandomPitch);
+    c3DVf Vector(cos(lfRandomYaw)*lfCosPitch*lpSpeedData[0],sin(lfRandomPitch)*lpSpeedData[0],sin(lfRandomYaw)*lfCosPitch*lpSpeedData[0]);
+
+    return Vector;
+};
+
+c3DVf GenerateUniformRandomVector()
+{
+    float lfRandomYaw=RANDOM_NUMBER*3.14159*2;
+    float lfRandomPitch=RANDOM_NUMBER*3.14159*2;
+    float lfCosPitch=cos(lfRandomPitch);
+    c3DVf Vector(cos(lfRandomYaw)*lfCosPitch,sin(lfRandomPitch),sin(lfRandomYaw)*lfCosPitch);
+    return Vector;
 };
 
 #endif

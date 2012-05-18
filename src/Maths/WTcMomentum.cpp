@@ -533,4 +533,7 @@ void cMomentum::Equals(cMomentum *lpOther)
     memcpy(mfMomentum,lpOther->mfMomentum,sizeof(float)*6);
 };
 
+float *cMomentum::GSpeeds(){return mfMomentum;};
+float *cMomentum::AngularSpeeds(){return &mfMomentum[3];};
+
 #endif

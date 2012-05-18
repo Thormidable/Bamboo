@@ -19,44 +19,38 @@
 * Tree searches are performed by traversing the render tree. Each objects size is based on the size of the
 * objects beneath it so if a Node does not collide all objects beneath that node can be ignored.
 *
-* Type searches are filtered by type. cCollisionObject's are given a cCollisionObject::CollisionFilter(uint32 liID) using which
+* Type searches are filtered by type. cCollisionBase's are given a cCollisionBase::CollisionFilter(uint32 liID) using which
 * they are sorted into seperate lists of Collision objects. If a search is performed with a defined ID term, only the list containing
 * objects with the desired filter value are searched.
 *
-*Binary Spatial Position Collision Handlers sort cCollisionObjects into the spatial boxes they contact with. This means it is only neccessary
+*Binary Spatial Position Collision Handlers sort cCollisionBases into the spatial boxes they contact with. This means it is only neccessary
 *to check other objects within the boxes the current object resides within.
 
 */
 class cCollisionHandler
 {
-protected:
+public:
 
 
 	cCollisionHandler(){};
  /// This is a pointer to the classes current instance. There can only be one...
  static cCollisionHandler *spInstance;
 
- ///This is an array for storing all Collision Objects, that are currently on. The size of the array is set by WT_COLLISION_HANDLER_ARRAY_SIZE.
- cLinkedList<cCollisionObject> *mpList;
-
- ///This will add the cCollisionObject pointed to by lpObject to the list mpList.
- virtual cLinkedNode<cCollisionObject> *Add(cCollisionObject *lpTemp)=0;
+  ///This will add the cCollisionBase pointed to by lpObject to the list mpList.
+ virtual cLinkedNode<cCollisionBase> *Add(cCollisionBase *lpTemp)=0;
 
  ///This will turn off Collisions for the cLinkedNode lpOld. This should in turn call RemoveFromList().
- virtual void Remove(cLinkedNode<cCollisionObject> *lpOld){(void) lpOld;};
+ virtual void Remove(cLinkedNode<cCollisionBase> *lpOld){(void) lpOld;};
  ///This will acutally remove the clinkedNode from the relevant list.
- virtual void RemoveFromList(cLinkedNode<cCollisionObject> *lpOld){(void) lpOld;};
+ virtual void RemoveFromList(cLinkedNode<cCollisionBase> *lpOld){(void) lpOld;};
 
  /// This will return the Next item in the lists in order. (The item is pointed to by mpColCur). If an item is found will return true, else will return false.
  virtual bool NextListItem(){return 0;};
  /// This will return the Next item in the list storing lpType in order. (the item is pointed to by mpColCur).If an item is found will return true, else will return false.
  virtual bool NextListItem(uint32 lpType){(void) lpType; return 0;};
- /// This will find the appropriate array slot for the cCollisionObject lpObj. It will return the array position of the slot.
- virtual uint32 FindSlot(cCollisionObject *lpObj){(void) lpObj; return 0;};
 
- virtual uint32 FindSlot(float *lpPos){(void) lpPos;return 0;};
  ///This will return the list for the spatial slot lpPos[0],lpPos[1],lpPos[2]. (Array slots not spatial co-ordinates).
- virtual cLinkedList<cCollisionObject> *FindSlot(uint32 *lpPos){(void) lpPos; return 0;};
+ virtual cLinkedList<cCollisionBase> *FindSlot(uint32 *lpPos){(void) lpPos; return 0;};
 
  ///This will set the current Position of the Spatial Array.
  virtual void Position(float *lpTemp){(void) lpTemp;};
@@ -64,21 +58,25 @@ protected:
  virtual float *Position(){return 0;};
 public:
 
- void MouseCollisionCheck(c3DVf lpRV,c3DVf lpStart,float lfRadius,cMatrix4 &lmOtherMatrix);
+ /// This will find the appropriate array slot for the cCollisionBase lpObj. It will return the array position of the slot.
+ virtual uint32 FindSlot(cCollisionBase *lpObj){(void) lpObj; return 0;};
+
+ virtual uint32 FindSlot(float *lpPos){(void) lpPos;return 0;};
+///This is an array for storing all Collision Objects, that are currently on. The size of the array is set by WT_COLLISION_HANDLER_ARRAY_SIZE.
+ cLinkedList<cCollisionBase> *mpList;
 
  /// This will return a pointer to the classes current instance and if there is none it will create one.
  static cCollisionHandler *Instance();
 
- virtual cCollisionList *GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType=0,cCollisionList *lpList=0)=0;
- virtual cCollisionList *GenerateDetailedCollisionList(cCollisionObject *lpObj,uint32 lpType=0,cCollisionList *lpList=0)=0;
- virtual cCollisionList *GenerateMouseSelection(c3DVf MouseVector,c3DVf MouseStart,float lfRadius,uint32 lpType=0,cCollisionList *lpList=0)=0;
+ virtual cCollisionList *GenerateCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0)=0;
+ virtual cCollisionList *GenerateDetailedCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0)=0;
  /// This will deconstruct the class.
  virtual ~cCollisionHandler();
 
  /// This will reset both the cursors used to track position through the collision object lists.
  virtual void ResetCursors()=0;
 
- friend class cCollisionObject;
+ friend class cCollisionBase;
 
 };
 
@@ -91,26 +89,26 @@ protected:
 	///This is the current cursor position in the array mpList.
 	uint32 miCurPos;
 	///This is the current cursor position (the current cLinkedNode) in the List mpList[miTypeCur].
-	cLinkedNode<cCollisionObject> *mpColCur;
+	cLinkedNode<cCollisionBase> *mpColCur;
 
 
 	///Private Constructor
 	cCollisionHandlerType();
 
-	///This will add the cCollisionObject pointed to by lpObject to the list mpList.
- 	cLinkedNode<cCollisionObject> *Add(cCollisionObject *lpTemp);
+	///This will add the cCollisionBase pointed to by lpObject to the list mpList.
+ 	cLinkedNode<cCollisionBase> *Add(cCollisionBase *lpTemp);
 
 	///This will turn off Collisions for the cLinkedNode lpOld. This should in turn call RemoveFromList().
-	void Remove(cLinkedNode<cCollisionObject> *lpOld);
+	void Remove(cLinkedNode<cCollisionBase> *lpOld);
 	///This will acutally remove the clinkedNode from the relevant list.
-	void RemoveFromList(cLinkedNode<cCollisionObject> *lpOld);
+	void RemoveFromList(cLinkedNode<cCollisionBase> *lpOld);
 
 	/// This will return the Next item in the lists in order. (The item is pointed to by mpColCur). If an item is found will return true, else will return false.
 	bool NextListItem();
 	/// This will return the Next item in the list storing lpType in order. (the item is pointed to by mpColCur).If an item is found will return true, else will return false.
 	bool NextListItem(uint32 lpType);
-	/// This will find the appropriate array slot for the cCollisionObject lpObj. It will return the array position of the slot.
-	virtual uint32 FindSlot(cCollisionObject *lpObj);
+	/// This will find the appropriate array slot for the cCollisionBase lpObj. It will return the array position of the slot.
+	virtual uint32 FindSlot(cCollisionBase *lpObj);
 
 
 	///This will set the current Position of the Spatial Array.
@@ -121,18 +119,15 @@ protected:
 	///This will Find the Spatial Slot for the position lpPos.
 	virtual uint32 FindSlot(float *lpPos){(void) lpPos; return 0;};
 	///This will return the list for the spatial slot lpPos[0],lpPos[1],lpPos[2]. (Array slots not spatial co-ordinates).
-	virtual cLinkedList<cCollisionObject> *FindSlot(uint32 *lpPos){(void) lpPos; return 0;};
+	virtual cLinkedList<cCollisionBase> *FindSlot(uint32 *lpPos){(void) lpPos; return 0;};
 
 public:
 
 	/// This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType.
-	cCollisionList *GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
+	cCollisionList *GenerateCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
 
 	/// This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType, with extra collision detail.
-	cCollisionList *GenerateDetailedCollisionList(cCollisionObject *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
-
-    /// This will perform a Mouse Selection collision Check. Only checks if the centre point of an object is within the radius of the Vector starting at MouseStart in the direction MouseVector.
-    cCollisionList *GenerateMouseSelection(c3DVf MouseVector,c3DVf MouseStart,float lfRadius,uint32 lpType=0,cCollisionList *lpList=0);
+	cCollisionList *GenerateDetailedCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
 
 	/// This will reset both the cursors used to track position through the collision object lists.
 	void ResetCursors();
@@ -157,22 +152,20 @@ protected:
 public:
 
     /// This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType.
-	cCollisionList *GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
+	cCollisionList *GenerateCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
 	///This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType, with extra collision detail.
-	cCollisionList *GenerateDetailedCollisionList(cCollisionObject *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
-    /// This will perform a Mouse Selection collision Check. Only checks if the centre point of an object is within the radius of the Vector starting at MouseStart in the direction MouseVector.
-    cCollisionList *GenerateMouseSelection(c3DVf MouseVector,c3DVf MouseStart,float lfRadius,uint32 lpType=0,cCollisionList *lpList=0);
+	cCollisionList *GenerateDetailedCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
 
 	///This will set the current Position of the Spatial Array.
 	void Position(float *lpTemp){memcpy(mfCentre,lpTemp,sizeof(float)*3);};
 	///This will return the current Position of the Spatial Array.
 	float *Position(){return mfCentre;};
-	/// This will find the appropriate array slot for the cCollisionObject lpObj. It will return the array position of the slot.
-	uint32 FindSlot(cCollisionObject *lpObj);
+	/// This will find the appropriate array slot for the cCollisionBase lpObj. It will return the array position of the slot.
+	uint32 FindSlot(cCollisionBase *lpObj);
 	///This will Find the Spatial Slot for the position lpPos.
 	uint32 FindSlot(float *lpPos);
 	///This will return the list for the spatial slot lpPos[0],lpPos[1],lpPos[2]. (Array slots not spatial co-ordinates).
-	cLinkedList<cCollisionObject> *FindSlot(uint32 *lpPos);
+	cLinkedList<cCollisionBase> *FindSlot(uint32 *lpPos);
 
 	virtual ~cCollisionHandlerBSP();
 

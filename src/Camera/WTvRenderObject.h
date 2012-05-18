@@ -30,9 +30,9 @@ public:
   ///Matrix which Stores the final global position matrix of the object from the last frame. This is used to make collisions consistent and for finding object Global Positions. Note the Camera Matrix will be included in this.
 	cMatrix4 mmCache;
 	cMatrix4 mmTotalCache;
- // Destructor. Does Nothing but be virtual.
-  ~vRenderObject(){};
   vRenderObject();
+
+  virtual ~vRenderObject(){};
 
  /// Returns the cRenderNode which owns this object.
  virtual vRenderNode *Renderer();
@@ -121,6 +121,10 @@ cCamera *Camera();
 		///This will signal all objects with processes above this Node in the tree, with the function Signal()
 		virtual void TreeProcessSignal(SIGNAL lsSignal){(void) lsSignal; };
 
+
+		virtual void TreeSignal(SIGNAL lsSignal){Signal(lsSignal);};
+
+        c3DVf FindRelativeCoord(c3DVf GlobalPos);
  };
 
  class vRenderNode : public vRenderObject
@@ -167,7 +171,6 @@ public:
 		vRenderNode(vRenderNode *lpRenderer);
 		vRenderNode(bool lbToplevel);
 		vRenderNode(bool lbTopLevel,cCamera *lpCamera);
-
 
 
 };

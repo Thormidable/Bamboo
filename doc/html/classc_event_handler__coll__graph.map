@@ -1,4 +1,11 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$classc_mouse.html" title="This will store all the input data for a single mouse. It also controls the interpretation of the inp..." alt="" coords="5,5,72,35"/>
-<area shape="rect" id="node4" href="$classc_key_store.html" title="This class stores all the input data for a single keyboard." alt="" coords="109,5,192,35"/>
+<area shape="rect" id="node2" href="$classc_mouse.html" title="This will store all the input data for a single mouse. It also controls the interpretation of the inp..." alt="" coords="44,637,111,667"/>
+<area shape="rect" id="node4" href="$classc_texture.html" title="This class stores the data for rendering a 2D texture. This stores and processes the data for a 2D te..." alt="" coords="41,541,113,571"/>
+<area shape="rect" id="node6" href="$classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh..." alt="" coords="52,461,103,491"/>
+<area shape="rect" id="node8" href="$classv_file.html" title="This is the virtual file for cFile. It is a virtual representation of the base code for files loaded ..." alt="" coords="5,8,56,37"/>
+<area shape="rect" id="node15" href="$classc_linked_node.html" title="cLinkedNode\&lt; vFile \&gt;" alt="" coords="68,123,217,152"/>
+<area shape="rect" id="node10" href="$classc_file_handler.html" title="This is the handler for the file system. This handles all files loaded from a hdd. It will give allow processes to use files loaded else where, using either the filenames or if loaded from an IMF a file reference. The files are stored in the list mpFiles." alt="" coords="137,365,231,395"/>
+<area shape="rect" id="node13" href="$classc_linked_list.html" title="cLinkedList\&lt; vFile \&gt;" alt="" coords="115,269,253,299"/>
+<area shape="rect" id="node19" href="$classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="83,8,213,37"/>
+<area shape="rect" id="node24" href="$classc_key_store.html" title="This class stores all the input data for a single keyboard." alt="" coords="148,637,231,667"/>
 </map>

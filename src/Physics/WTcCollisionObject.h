@@ -25,7 +25,7 @@ protected:
 	cProcess *mpLinked;
 
 	//This is a pointer to the list that owns this CollisionObject.
-	cLinkedNode<cCollisionObject> *mpOwner;
+	cLinkedNode<cCollisionBase> *mpOwner;
 
 
 public:
@@ -57,35 +57,28 @@ public:
 	 * Then it will do an initial quick check to see if a collision is a possibility.
 	 * Finally if required it will do a much more detailed collision check.
 	 **/
-	bool CheckCollision(cCollisionObject *lpOther);
+	bool CheckCollision(cCollisionBase *lpOther);
 
 	/**
 	 * * \brief This will check for a collision between this object and the object lpOther.
 	 * \param lpOther is a pointer to the other collision object to check against.
+	 * \param lpList is a pointer to an existing cCollisionList object. If specified this will add all Collisions to the existing list.
 	 * It will check both objects have collisions on.
 	 * Then it will do an initial quick check to see if a collision is a possibility.
 	 * Finally if required it will do a much more detailed collision check.
 	 **/
-	cCollisionList *CheckCollisionDetail(cCollisionObject *lpOther,cCollisionList *lpList=0);
+	cCollisionList *CheckCollisionDetail(cCollisionBase *lpOther,cCollisionList *lpList=0);
 
 	/**
 	 * It is used for quickly detecting if two objects MAY be colliding.
 	 * This function is will assume all objects are either Spheres or Beams.
 	 * This is a highly inaccurate way of colliding objects, but should filter the majority of collisions from the much slower more accurate collision detection performed elsewhere.
 	 **/
-	bool TouchCollision(cCollisionObject *lpOther);
+	bool TouchCollision(cCollisionBase *lpOther);
 
 	bool CheckCollision();
 	void CheckCollisionDetail();
 	bool TouchCollision();
-
-
-	vRenderObject *Following();
-
-
-
-
-
 
 
 
@@ -130,31 +123,31 @@ public:
 
     using cCollisionBase::SphereSphere;
 	///Internal function for checking for Sphere / Sphere collision between this object and the object lpOther;
-	bool SphereSphere(cCollisionObject *lpOther);
+	bool SphereSphere(cCollisionBase *lpOther);
 
 	#if WT_FULL_VERSION_BAMBOO
 
-        cCollisionObject(cBeamMesh *lpFollow,cProcess *lpLinked=0,uint32 liFilterType=0);
+        cCollisionObject(cBeam *lpFollow,cProcess *lpLinked=0,uint32 liFilterType=0);
 
         using cCollisionBase::ModelModel;
         ///Internal function for checking for Model / Model collision between this object and the object lpOther;
-        bool ModelModel(cCollisionObject *lpOther);
+        bool ModelModel(cCollisionBase *lpOther);
 
         using cCollisionBase::RayRay;
         ///Internal function for checking for Ray / Ray collision between this object and the object lpOther;
-        bool RayRay(cCollisionObject *lpOther);
+        bool RayRay(cCollisionBase *lpOther);
 
         using cCollisionBase::SphereModel;
         ///Internal function for checking for Sphere / Model collision between this object and the object lpOther;
-        bool SphereModel(cCollisionObject *lpOther);
+        bool SphereModel(cCollisionBase *lpOther);
 
         using cCollisionBase::SphereRay;
         ///Internal function for checking for Sphere / Ray collision between this object and the object lpOther;
-        bool SphereRay(cCollisionObject *lpOther);
+        bool SphereRay(cCollisionBase *lpOther);
 
         using cCollisionBase::RayModel;
         ///Internal function for checking for Ray / Model collision between this object and the object lpOther;
-        bool RayModel(cCollisionObject *lpOther);
+        bool RayModel(cCollisionBase *lpOther);
 
 	using cCollisionBase::SetTypeCompound;
 	///This will make a ray object. See cRayCollision::BuildObject(float *lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement.
@@ -177,9 +170,6 @@ public:
     #endif
 
     void Stop();
-
-    bool CompoundCollision(cCompoundCollision* lpCompound,cMatrix4 &lcCompoundCollision, vCollisionData *lpOther,cMatrix4 &lpOtherMatrix);
-    void CompoundCollisionDetail(cCompoundCollision* lpCompound,cMatrix4 &lcCompoundCollision, vCollisionData *lpOther,cMatrix4 &lpOtherMatrix);
 
 };
 

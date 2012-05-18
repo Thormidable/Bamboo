@@ -72,6 +72,9 @@ while(mpProcess)
 	if(liPTF<_PPF) cCameraHandler::Instance()->UpdateNotRenderCameras(); //cCamera::Instance()->UpdateNotRender();
 	}
 	liPTF=0;
+
+	if(cFrameUpdateHandler::Pointer()) cFrameUpdateHandler::Pointer()->FrameUpdate();
+
 cCameraHandler::Instance()->RenderCameras();
 
 
@@ -178,3 +181,40 @@ void cKernel::KillProgram()
 {
  mbKillProgram=true;
 };
+
+
+
+  cFrameUpdateHandler *cFrameUpdateHandler::mpInstance=0;
+  cFrameUpdateHandler::cFrameUpdateHandler()
+  {
+    Init(5);
+  };
+
+
+  cFrameUpdateHandler *cFrameUpdateHandler::Instance()
+  {
+      if(!mpInstance){ mpInstance=new cFrameUpdateHandler; }
+      return mpInstance;
+  };
+  cFrameUpdateHandler *cFrameUpdateHandler::Pointer()
+  {
+      return mpInstance;
+  };
+
+  void cFrameUpdateHandler::FrameUpdate()
+  {
+      for(uint32 liCount=0;liCount<miItems;++liCount)
+      {
+          mpList[liCount]->FrameUpdate();
+      }
+  };
+
+
+cFrameUpdateType::cFrameUpdateType()
+{
+    cFrameUpdateHandler::Instance()->Add(this);
+}
+cFrameUpdateType::~cFrameUpdateType()
+{
+    cFrameUpdateHandler::Instance()->StripItem(this);
+}

@@ -77,8 +77,8 @@ List of Useful Macros</h2>
 <li>A Class Type for passing Signals between Process', Render Objects and Collision Objects.</li>
 </ul>
 </li>
-<li>_KEY(KEY_ID)<ul>
-<li>Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List.</li>
+<li>_KEY(KEY_CODE_ID)<ul>
+<li>Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List and start 'KEY_CODE_' .</li>
 </ul>
 </li>
 <li>_MOUSE<ul>
@@ -235,7 +235,7 @@ Positioning, Rotating and Moving Objects.</h2>
  3D Object Translation Functions: <br/>
  void <a class="el" href="classc_matrix4.html#a746ce09337cbf6a3292cbe15991efd79" title="This will set the current matrix to operate as if it is a 3D object.">cMatrix4::Set3D()</a> <br/>
  float <a class="el" href="classc_matrix4.html#a39cf7cefa0672684e69eb4af89366270" title="This will return the determinant of this objects matrix.">cMatrix4::Determinant()</a>; <br/>
- <a class="el" href="classc_matrix4.html" title="this is a standard 4x4 translation matrix for objects. This is a standard 4x4 translation matrix for ...">cMatrix4</a> <a class="el" href="classc_matrix4.html#a7473299a57ffcfe284e6fd9005b98592" title="This will find the inverse of the matrix if it is a standard rotation / translation matrix...">cMatrix4::InvertRotationMatrix()</a>; <br/>
+ <a class="el" href="classc_matrix4.html" title="this is a standard 4x4 translation matrix for objects. This is a standard 4x4 translation matrix for ...">cMatrix4</a> cMatrix4::InvertRotationMatrix(); <br/>
  <a class="el" href="classc_matrix4.html" title="this is a standard 4x4 translation matrix for objects. This is a standard 4x4 translation matrix for ...">cMatrix4</a> <a class="el" href="classc_matrix4.html#ac8b6f1a9352943cd86ef4c088c438307" title="This will return the transpose of this objects matrix.">cMatrix4::Transpose()</a>; <br/>
  void <a class="el" href="classc_matrix4.html#af728db2d340a48de20d9f9e143e3a19b" title="This will move the Object along the local axis the distance of lfX, lfY and lfZ.">cMatrix4::Translate(float lfX,float lfY,float lfZ)</a>; <br/>
  <br/>
@@ -305,7 +305,7 @@ Positioning, Rotating and Moving Objects.</h2>
  <br/>
  void <a class="el" href="classc_matrix4.html#adb76264fa82ef10ebb24b64d6293bc9d" title="Makes this matrix Equal the 4x4 float matrix pointed to by lpOther.">cMatrix4::Equals(float *lpOther)</a>; <br/>
  void <a class="el" href="classc_matrix4.html#a943edd1e04048bd2bcb93987a6c47819" title="Makes this matrix Equal the cMatrix4 pointed to by lpOther.">cMatrix4::Equals(cMatrix4 *lpOther)</a>; <br/>
- void <a class="el" href="classc_matrix4.html#a2b04c467006fe476d6f2e5efc61b3ead" title="Makes this matrix Equal the cMatrix4 lpOther.">cMatrix4::Equals(cMatrix4 &amp;lpOther)</a>; <br/>
+ void cMatrix4::Equals(cMatrix4 &amp;lpOther); <br/>
  void <a class="el" href="classc_matrix4.html#a0af5e0b1dbbe6d7f4c512a5f07f1e273" title="Makes this matrix Equal the cCameraMatrix4 lpOther.">cMatrix4::Equals(cCameraMatrix4 &amp;lpOther)</a>; <br/>
  void <a class="el" href="classc_matrix4.html#a12b028ad76a776c5a01d695ea620962b" title="Makes this matrix Equal the cCameraMatrix lpOther.">cMatrix4::Equals(cCameraMatrix4 *lpOther)</a>; <br/>
  <br/>
@@ -320,10 +320,10 @@ Positioning, Rotating and Moving Objects.</h2>
  void <a class="el" href="classc_matrix4.html#a74217e4c12e8f5623a572535ba443bc4" title="This will scale the object along its global Z axis by a factor of lfScale.">cMatrix4::GResizeZ(float lfScale)</a>; <br/>
  <br/>
  float <a class="el" href="classc_matrix4.html#acd04bb06d1d12807b203b0aaf9e9b608" title="This will return the distance between this matrix and the cMatrix4 pointed to by lpOther.">cMatrix4::Distance(cMatrix4 *lpOther)</a>; <br/>
- float <a class="el" href="classc_matrix4.html#a83fd4655f67a81cb42f3c50262ec593e" title="This will return the distance between this matrix and the cMatrix4 pointed to by lpOther.">cMatrix4::Distance(float *lpOther)</a>; <br/>
+ float <a class="el" href="classc_matrix4.html#a83fd4655f67a81cb42f3c50262ec593e" title="This will return the distance between this matrix and the Global Position lpOther.">cMatrix4::Distance(float *lpOther)</a>; <br/>
  double <a class="el" href="classc_matrix4.html#afb4a1edc36d2de9330e48bd182fe2a9b" title="This will return the square of the distance between this matrix and the cMatrix4 pointed to by lpOthe...">cMatrix4::DistanceSq(cMatrix4 *lpOther)</a>; <br/>
  double <a class="el" href="classc_matrix4.html#ad225d8db157a99b593f774e08c266722" title="This will return the square of the distance between this matrix and the cMatrix4 pointed to by lpOthe...">cMatrix4::DistanceSq(cMatrix4 lpOther)</a>; <br/>
- double <a class="el" href="classc_matrix4.html#ac524fac9525c6ff780e95c648b229e41" title="This will return the square of the distance between this matrix and the cMatrix4 pointed to by lpOthe...">cMatrix4::DistanceSq(float *lpOther)</a>; <br/>
+ double <a class="el" href="classc_matrix4.html#ac524fac9525c6ff780e95c648b229e41" title="This will return the square of the distance between this matrix and the Global Position lpOther...">cMatrix4::DistanceSq(float *lpOther)</a>; <br/>
  <br/>
  float &amp;<a class="el" href="classc_matrix4.html#a4b91a4d790f5a0decc76d41e54b80049" title="This will return the float in position liPos in mpData.">cMatrix4::operator[](uint16 liPos)</a>; <br/>
  float &amp;<a class="el" href="classc_matrix4.html#a1e17bf69091f804aec716524dbdec375" title="This will return the float in position [liColumn,liRow] in mpData.">cMatrix4::operator()(uint16 liColumn,uint16 liRow)</a>; <br/>
@@ -343,8 +343,8 @@ Positioning, Rotating and Moving The Camera</h2>
 <p>cCameraMatrix4.h <br/>
  The <a class="el" href="classc_camera_matrix4.html" title="This is a translation matrix for a camera object A Special Matric for Cameras. All the translations a...">cCameraMatrix4</a> is the matrix used for the camera. The format is different to the <a class="el" href="classc_matrix4.html" title="this is a standard 4x4 translation matrix for objects. This is a standard 4x4 translation matrix for ...">cMatrix4</a> class as it is used in a different manner. Many of the functions are called the same thing and have the same function. It also has a few additional functions which are useful for Camera manipulation. <br/>
  <br/>
- float *cCameraMatrix4::Matrix() <br/>
- float *cCameraMatrix4::Position() <br/>
+ float* <a class="el" href="classc_camera_matrix4.html#ad8aad043cd8c21d5323b56cbcc90ef78" title="This will return a pointer to this objects matrix.">cCameraMatrix4::Matrix()</a> <br/>
+ float* <a class="el" href="classc_camera_matrix4.html#a89fba901320f6dda9a6b92bac09db915" title="This will return the position vector of this objects matrix.">cCameraMatrix4::Position()</a> <br/>
  <br/>
  float <a class="el" href="classc_camera_matrix4.html#a0133c16b734fa93e767ea89964799fb5" title="This will return the X position of this objects matrix.">cCameraMatrix4::X()</a> <br/>
  float <a class="el" href="classc_camera_matrix4.html#aec72cb78c62b2e0970824262b0b4aa1f" title="This will return the Y position of this objects matrix.">cCameraMatrix4::Y()</a> <br/>
@@ -425,10 +425,8 @@ Positioning, Rotating and Moving The Camera</h2>
 </p>
 <h2><a class="anchor" id="KeyIdentifiersList"></a>
 List of Key Identifiers</h2>
-<p>These correspond to the Key codes for the Macro _KEY() </p>
-<div class="fragment"><pre class="fragment"> <span class="keywordflow">if</span>(_KEY(KEY_SPACE)) _CREATE(Bulltets());
- <span class="keywordflow">if</span>(_KEY(KEY_TAB)) _KERNEL-&gt;KillAll();
-</pre></div><p>KEY_BACKSPACE <br/>
+<p>These correspond to the states of keys:</p>
+<p>KEY_BACKSPACE <br/>
  KEY_TAB <br/>
  KEY_ENTER <br/>
  KEY_RETURN <br/>
@@ -533,6 +531,115 @@ List of Key Identifiers</h2>
  KEY_x <br/>
  KEY_y <br/>
  KEY_z <br/>
+</p>
+<p>There are also accessor codes for the Macro _KEY(). These are actually unsigned integers and so can be passed as parameters.</p>
+<div class="fragment"><pre class="fragment"> <span class="keywordflow">if</span>(_KEY(KEY_CODE_SPACE)) _CREATE(Bulltets());
+ <span class="keywordflow">if</span>(_KEY(KEY_CODE_TAB)) _KERNEL-&gt;KillAll();
+</pre></div><p>KEY_CODE_BACKSPACE <br/>
+ KEY_CODE_TAB <br/>
+ KEY_CODE_ENTER <br/>
+ KEY_CODE_RETURN <br/>
+ KEY_CODE_SHIFT <br/>
+ KEY_CODE_CONTROL <br/>
+ KEY_CODE_CTRL <br/>
+ KEY_CODE_ALTERNATE <br/>
+ KEY_CODE_ALT <br/>
+ KEY_CODE_PAUSE <br/>
+ KEY_CODE_CAPSLOCK <br/>
+ KEY_CODE_CAPITALLOCK <br/>
+ KEY_CODE_ESCAPE <br/>
+ KEY_CODE_ESC <br/>
+ KEY_CODE_SPACE <br/>
+ KEY_CODE_PGUP <br/>
+ KEY_CODE_PAGEUP <br/>
+ KEY_CODE_PGDN <br/>
+ KEY_CODE_PAGEDOWN <br/>
+ KEY_CODE_END <br/>
+ KEY_CODE_HOME <br/>
+ KEY_CODE_LEFT <br/>
+ KEY_CODE_LEFTARROW <br/>
+ KEY_CODE_RIGHT <br/>
+ KEY_CODE_RIGHTARROW <br/>
+ KEY_CODE_UP <br/>
+ KEY_CODE_UPARROW <br/>
+ KEY_CODE_DOWN <br/>
+ KEY_CODE_DOWNARROW <br/>
+ KEY_CODE_SELECT <br/>
+ KEY_CODE_EARLYPRINT <br/>
+ KEY_CODE_EARLYPRINTSCREEN <br/>
+ KEY_CODE_EXECUTE <br/>
+ KEY_CODE_PRINT <br/>
+ KEY_CODE_PRINTSCREEN <br/>
+ KEY_CODE_INS <br/>
+ KEY_CODE_INSERT <br/>
+ KEY_CODE_DEL <br/>
+ KEY_CODE_DELETE <br/>
+ KEY_CODE_HELP <br/>
+ <br/>
+ KEY_CODE_0 <br/>
+ KEY_CODE_1 <br/>
+ KEY_CODE_2 <br/>
+ KEY_CODE_3 <br/>
+ KEY_CODE_4 <br/>
+ KEY_CODE_5 <br/>
+ KEY_CODE_6 <br/>
+ KEY_CODE_7 <br/>
+ KEY_CODE_8 <br/>
+ KEY_CODE_9 <br/>
+ <br/>
+ KEY_CODE_A <br/>
+ KEY_CODE_B <br/>
+ KEY_CODE_C <br/>
+ KEY_CODE_D <br/>
+ KEY_CODE_E <br/>
+ KEY_CODE_F <br/>
+ KEY_CODE_G <br/>
+ KEY_CODE_H <br/>
+ KEY_CODE_I <br/>
+ KEY_CODE_J <br/>
+ KEY_CODE_K <br/>
+ KEY_CODE_L <br/>
+ KEY_CODE_M <br/>
+ KEY_CODE_N <br/>
+ KEY_CODE_O <br/>
+ KEY_CODE_P <br/>
+ KEY_CODE_Q <br/>
+ KEY_CODE_R <br/>
+ KEY_CODE_S <br/>
+ KEY_CODE_T <br/>
+ KEY_CODE_U <br/>
+ KEY_CODE_V <br/>
+ KEY_CODE_W <br/>
+ KEY_CODE_X <br/>
+ KEY_CODE_Y <br/>
+ KEY_CODE_Z <br/>
+</p>
+<p>KEY_CODE_a <br/>
+ KEY_CODE_b <br/>
+ KEY_CODE_c <br/>
+ KEY_CODE_d <br/>
+ KEY_CODE_e <br/>
+ KEY_CODE_f <br/>
+ KEY_CODE_g <br/>
+ KEY_CODE_h <br/>
+ KEY_CODE_i <br/>
+ KEY_CODE_j <br/>
+ KEY_CODE_k <br/>
+ KEY_CODE_l <br/>
+ KEY_CODE_m <br/>
+ KEY_CODE_n <br/>
+ KEY_CODE_o <br/>
+ KEY_CODE_p <br/>
+ KEY_CODE_q <br/>
+ KEY_CODE_r <br/>
+ KEY_CODE_s <br/>
+ KEY_CODE_t <br/>
+ KEY_CODE_u <br/>
+ KEY_CODE_v <br/>
+ KEY_CODE_w <br/>
+ KEY_CODE_x <br/>
+ KEY_CODE_y <br/>
+ KEY_CODE_z <br/>
 </p>
 <h2><a class="anchor" id="EngineSettingsPage"></a>
 Engine Settings</h2>
@@ -687,19 +794,19 @@ List of Objects using or not using the Create Macro.</h2>
 </ul>
 <p>These objects can be used as instances and can be created and deleted as desired. The <a class="el" href="classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh...">cFile</a> objects are the types used when the _GET_FILE() macros are used. Otherwise you are unlikely to use them.</p>
 <ul>
-<li><a class="el" href="classc1_d_vf.html" title="This is a 1 Dimensional float vector object.">c1DVf</a></li>
-<li><a class="el" href="classc2_d_vf.html" title="This is a 2 Dimensional float vector object.">c2DVf</a></li>
-<li><a class="el" href="classc3_d_vf.html" title="This is a 3 dimensional float vector object.">c3DVf</a></li>
-<li><a class="el" href="classc4_d_vf.html" title="This is a 4 dimensional float vector object.">c4DVf</a></li>
-<li><a class="el" href="classc2_d_vi.html" title="This is a 2 Dimensional integer vector.">c2DVi</a></li>
-<li><a class="el" href="classc3_d_vi.html" title="This is a 3 Dimensional integer vector.">c3DVi</a></li>
+<li>c1DVf</li>
+<li>c2DVf</li>
+<li>c3DVf</li>
+<li>c4DVf</li>
+<li>c2DVi</li>
+<li>c3DVi</li>
 <li><a class="el" href="classc_matrix4.html" title="this is a standard 4x4 translation matrix for objects. This is a standard 4x4 translation matrix for ...">cMatrix4</a></li>
 <li><a class="el" href="classc_camera_matrix4.html" title="This is a translation matrix for a camera object A Special Matric for Cameras. All the translations a...">cCameraMatrix4</a></li>
-<li>cMatrixStack</li>
+<li><a class="el" href="classc_matrix_stack.html" title="This is a cMatrixStack object for storing a matrix stack. This supports the Matrix.">cMatrixStack</a></li>
 <li><a class="el" href="classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh...">cFile</a> (These are for loaded media files. You should not need to create objects of these types)<ul>
 <li>cSoundObject</li>
 <li><a class="el" href="classc_mesh_file_collision.html" title="Mesh Collision Object with functionality to load a Collision Mesh from a file. This inherits cMeshCol...">cMeshFileCollision</a></li>
-<li>cTexture</li>
+<li><a class="el" href="classc_texture.html" title="This class stores the data for rendering a 2D texture. This stores and processes the data for a 2D te...">cTexture</a></li>
 <li><a class="el" href="classc_font.html" title="This class will store the data for a Font ready to be used for rendering cText. This should come from...">cFont</a></li>
 <li><a class="el" href="classc_mesh.html" title="This class stores the data for a 3D model.">cMesh</a></li>
 <li><a class="el" href="classcm_landscape.html" title="This will store the data for a landscape mesh. The data can be rendered through cLandscape.">cmLandscape</a></li>
@@ -747,7 +854,7 @@ Common Mistakes</h2>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:03 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:07 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

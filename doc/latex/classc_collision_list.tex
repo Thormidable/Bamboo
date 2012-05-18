@@ -19,9 +19,9 @@ Collaboration diagram for cCollisionList:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classc_collision_list_a1b84b682ec105262682532b0a90754c2}{
-\hyperlink{classc_collision_list_a1b84b682ec105262682532b0a90754c2}{cCollisionList} ()}
-\label{classc_collision_list_a1b84b682ec105262682532b0a90754c2}
+\hypertarget{classc_collision_list_a4adf1dbacad75c4cb5effee1fecd66c7}{
+\hyperlink{classc_collision_list_a4adf1dbacad75c4cb5effee1fecd66c7}{cCollisionList} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpThisColl)}
+\label{classc_collision_list_a4adf1dbacad75c4cb5effee1fecd66c7}
 
 \begin{DoxyCompactList}\small\item\em The Constructor for \hyperlink{classc_collision_list}{cCollisionList}. \end{DoxyCompactList}\item 
 \hypertarget{classc_collision_list_ace525d10fc1a38477cee11e14714b476}{
@@ -29,6 +29,21 @@ void \hyperlink{classc_collision_list_ace525d10fc1a38477cee11e14714b476}{AddColl
 \label{classc_collision_list_ace525d10fc1a38477cee11e14714b476}
 
 \begin{DoxyCompactList}\small\item\em This will Add the object lpObject to the list of objects colliding with the current searching object. \end{DoxyCompactList}\item 
+\hypertarget{classc_collision_list_a6d9e443db874b3c4f8c4e6609be5bad5}{
+void \hyperlink{classc_collision_list_a6d9e443db874b3c4f8c4e6609be5bad5}{AddCollision} (\hyperlink{classc_collision_list_object}{cCollisionListObject} $\ast$lpObj)}
+\label{classc_collision_list_a6d9e443db874b3c4f8c4e6609be5bad5}
+
+\begin{DoxyCompactList}\small\item\em This will Add the \hyperlink{classc_collision_list_object}{cCollisionListObject} to the list. \end{DoxyCompactList}\item 
+\hypertarget{classc_collision_list_a9dc048e75aaaa2e92aa4af743345d8fd}{
+void \hyperlink{classc_collision_list_a9dc048e75aaaa2e92aa4af743345d8fd}{AddCollision} ()}
+\label{classc_collision_list_a9dc048e75aaaa2e92aa4af743345d8fd}
+
+\begin{DoxyCompactList}\small\item\em This will Create a new \hyperlink{classc_collision_list_object}{cCollisionListObject} and add it to the list, using mpOther as the Object. \end{DoxyCompactList}\item 
+\hypertarget{classc_collision_list_a88c7b96567c9fca6bcbf018e9439c641}{
+\hyperlink{classc_collision_list_object}{cCollisionListObject} $\ast$ \hyperlink{classc_collision_list_a88c7b96567c9fca6bcbf018e9439c641}{NextCollisionDetail} ()}
+\label{classc_collision_list_a88c7b96567c9fca6bcbf018e9439c641}
+
+\begin{DoxyCompactList}\small\item\em This will return the next \hyperlink{classc_collision_list_object}{cCollisionListObject} from this list with details of the collision. \end{DoxyCompactList}\item 
 \hypertarget{classc_collision_list_adeef80e9e181e81dc073ebcfa1d8bec4}{
 \hyperlink{classc_collision_object}{cCollisionObject} $\ast$ \hyperlink{classc_collision_list_adeef80e9e181e81dc073ebcfa1d8bec4}{NextCollisionItem} ()}
 \label{classc_collision_list_adeef80e9e181e81dc073ebcfa1d8bec4}
@@ -44,11 +59,6 @@ vRenderObject $\ast$ \hyperlink{classc_collision_list_a87c8ee3baa85ff002030c83bd
 \label{classc_collision_list_a87c8ee3baa85ff002030c83bd1784192}
 
 \begin{DoxyCompactList}\small\item\em This will return the renderable object involved in the next detected collision. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_list_ac04316a4e8d0e3c5c3213c20bd7897cc}{
-void \hyperlink{classc_collision_list_ac04316a4e8d0e3c5c3213c20bd7897cc}{ResetList} ()}
-\label{classc_collision_list_ac04316a4e8d0e3c5c3213c20bd7897cc}
-
-\begin{DoxyCompactList}\small\item\em This will reset the collision search to the start of mpList. \end{DoxyCompactList}\item 
 \hypertarget{classc_collision_list_a628ed6510cd89c192a402be0a64ea111}{
 \hyperlink{classc_collision_list_a628ed6510cd89c192a402be0a64ea111}{$\sim$cCollisionList} ()}
 \label{classc_collision_list_a628ed6510cd89c192a402be0a64ea111}
@@ -58,7 +68,20 @@ void \hyperlink{classc_collision_list_ac04316a4e8d0e3c5c3213c20bd7897cc}{ResetLi
 void \hyperlink{classc_collision_list_ae279c0239ead11e2d6c3647495347cc4}{SortByDistance} ()}
 \label{classc_collision_list_ae279c0239ead11e2d6c3647495347cc4}
 
-\begin{DoxyCompactList}\small\item\em This will sort the list of collisionobjects into distance from the colliding object order. This allows the user to resolve the collisions in 'Chronological' order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This will sort the list of collisionobjects by distance from the colliding object order. This allows the user to resolve the collisions in 'Chronological' order. \end{DoxyCompactList}\item 
+\hypertarget{classc_collision_list_a9577be82cb58bf0989b69aeb7f46483f}{
+void \hyperlink{classc_collision_list_a9577be82cb58bf0989b69aeb7f46483f}{SortByBeamLength} ()}
+\label{classc_collision_list_a9577be82cb58bf0989b69aeb7f46483f}
+
+\begin{DoxyCompactList}\small\item\em This will sort the list of collisionobjects by Beam Lengths. If the object used for the search is used, it is Beam length alopng this object, otherwise it is the Beam length of the other object (if it is a beam) This allows the user to resolve the collisions in 'Chronological' order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_collision_list_aabeec129e7ddb55cebb137e0150d99c3}{
+class \hyperlink{classc_collision_list_aabeec129e7ddb55cebb137e0150d99c3}{cCollisionListObject}}
+\label{classc_collision_list_aabeec129e7ddb55cebb137e0150d99c3}
+
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

@@ -1,0 +1,60 @@
+\hypertarget{classc_dynamic_texture}{
+\section{cDynamicTexture Class Reference}
+\label{classc_dynamic_texture}\index{cDynamicTexture@{cDynamicTexture}}
+}
+
+
+Specialised class derived from \hyperlink{classc_texture}{cTexture} for quick broad run time updates. Class for quickly updating large portions of the image. Otherwise acts exactly like \hyperlink{classc_texture}{cTexture}, This requires more graphics card memory, so should be saved for textures which require regular updating. \hyperlink{classc_dynamic_texture}{cDynamicTexture} objects can be created by specifying Dynamic Textures in the IMF Handler. See \hyperlink{classc_texture}{cTexture} for details of the user available functions.  
+
+
+
+
+Collaboration diagram for cDynamicTexture:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classc_dynamic_texture__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_dynamic_texture_a16f6fc244df71bce33a7d0c9a84a75c1}{
+void \hyperlink{classc_dynamic_texture_a16f6fc244df71bce33a7d0c9a84a75c1}{Write} (\hyperlink{classc_texture}{cTexture} $\ast$lpTexture, c2DVi lvXY)}
+\label{classc_dynamic_texture_a16f6fc244df71bce33a7d0c9a84a75c1}
+
+\begin{DoxyCompactList}\small\item\em This will write the \hyperlink{classc_texture}{cTexture} lpTexture to this texture at the point lvXY. See \hyperlink{classc_model}{cModel} for Finding UV co-\/ordinates from global Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_dynamic_texture_a2bb785bf53b569b367b713439dcd47ee}{
+void \hyperlink{classc_dynamic_texture_a2bb785bf53b569b367b713439dcd47ee}{Write} (\hyperlink{classc_r_g_b_a}{cRGBA} Color, c2DVi lvUV)}
+\label{classc_dynamic_texture_a2bb785bf53b569b367b713439dcd47ee}
+
+\begin{DoxyCompactList}\small\item\em This will write the \hyperlink{classc_r_g_b_a}{cRGBA} Color to the pixel at lvXY. See \hyperlink{classc_model}{cModel} for Finding UV co-\/ordinates from global Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_dynamic_texture_a02b95de0bf55a4d07dff79e6e13e4844}{
+void \hyperlink{classc_dynamic_texture_a02b95de0bf55a4d07dff79e6e13e4844}{Write} (\hyperlink{classc_r_g_b}{cRGB} Color, c2DVi lvUV)}
+\label{classc_dynamic_texture_a02b95de0bf55a4d07dff79e6e13e4844}
+
+\begin{DoxyCompactList}\small\item\em This will write the \hyperlink{classc_r_g_b}{cRGB} Color to the pixel at lvXY. See \hyperlink{classc_model}{cModel} for Finding UV co-\/ordinates from global Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_dynamic_texture_a2fecb4e2bdb90bbc0bad8827b2db022b}{
+void \hyperlink{classc_dynamic_texture_a2fecb4e2bdb90bbc0bad8827b2db022b}{Blend} (\hyperlink{classc_r_g_b_a}{cRGBA} Color, c2DVi lvXY)}
+\label{classc_dynamic_texture_a2fecb4e2bdb90bbc0bad8827b2db022b}
+
+\begin{DoxyCompactList}\small\item\em This will blend the \hyperlink{classc_r_g_b_a}{cRGBA} Color over the pixel at lvXY. See \hyperlink{classc_model}{cModel} for Finding UV co-\/ordinates from global Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_dynamic_texture_a7f247ca09bc5b1bafe1b33d8dafce7af}{
+void \hyperlink{classc_dynamic_texture_a7f247ca09bc5b1bafe1b33d8dafce7af}{Blend} (\hyperlink{classc_texture}{cTexture} $\ast$lpTexture, c2DVi lvXY)}
+\label{classc_dynamic_texture_a7f247ca09bc5b1bafe1b33d8dafce7af}
+
+\begin{DoxyCompactList}\small\item\em This will Blend the \hyperlink{classc_texture}{cTexture} lpTexture over this texture at the point lvXY. See \hyperlink{classc_model}{cModel} for Finding UV co-\/ordinates from global Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_dynamic_texture_a53699d1535ff7d32514e2e763c3d6032}{
+void \hyperlink{classc_dynamic_texture_a53699d1535ff7d32514e2e763c3d6032}{ColorTexture} (\hyperlink{classc_r_g_b_a}{cRGBA} lcColor)}
+\label{classc_dynamic_texture_a53699d1535ff7d32514e2e763c3d6032}
+
+\begin{DoxyCompactList}\small\item\em This will set the entire \hyperlink{classc_texture}{cTexture} to the \hyperlink{classc_r_g_b_a}{cRGBA} lcColor. \end{DoxyCompactList}\item 
+\hypertarget{classc_dynamic_texture_a88de652fe044c258a45b78bab57d1250}{
+void \hyperlink{classc_dynamic_texture_a88de652fe044c258a45b78bab57d1250}{ColorTexture} (\hyperlink{classc_r_g_b}{cRGB} lcColor)}
+\label{classc_dynamic_texture_a88de652fe044c258a45b78bab57d1250}
+
+\begin{DoxyCompactList}\small\item\em This will set the entire \hyperlink{classc_texture}{cTexture} to the \hyperlink{classc_r_g_b}{cRGB} lcColor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Specialised class derived from \hyperlink{classc_texture}{cTexture} for quick broad run time updates. Class for quickly updating large portions of the image. Otherwise acts exactly like \hyperlink{classc_texture}{cTexture}, This requires more graphics card memory, so should be saved for textures which require regular updating. \hyperlink{classc_dynamic_texture}{cDynamicTexture} objects can be created by specifying Dynamic Textures in the IMF Handler. See \hyperlink{classc_texture}{cTexture} for details of the user available functions. 

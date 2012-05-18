@@ -48,6 +48,8 @@ class cNodeList : public vRenderNode
 static float lsPosition[16];
 
 float mfSize;
+
+uint32 miCursor;
 public:
  /**
  * \brief This is the constructor for cNodeList. It will create the list based on the cMeshTree file lpTree.
@@ -92,7 +94,7 @@ void LoadTree(string lcTree);
 
 cRenderOwner Add(vRenderObject*);
 cRenderOwner Add(vRenderObject *lpNew,uint8 miLevel);
-void Remove(cRenderOwner Owner);
+void Delete(cRenderOwner Owner);
 
 void RecalculateTotalMatrix();
 void CalculateMatrices();
@@ -116,7 +118,16 @@ public:
  void StartKillAll();
  void KillAll();
 
-	cMatrix4 CalculateGlobalMatrix();
+	cMatrix4 *CalculateGlobalMatrix();
+
+	cRenderOwner MoveItem(vRenderObject *lpObj,vRenderNode *lpRenderer);
+
+	void MoveAll(vRenderNode *lpRender);
+
+	vRenderObject *FindStart();
+	vRenderObject *FindNext();
+
+	uint32 Items();
 };
 
 #endif

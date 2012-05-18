@@ -48,6 +48,7 @@ public:
 	void SetColor(cRGB &lpRGB);
 	void SetColor(cRGBA &lpRGB);
 
+
 	cParticle operator=(cParticle *lpOther);
 	cParticle operator=(cParticle lpOther);
 };
@@ -67,15 +68,14 @@ class cParticleHandler : public cLimitedList<cParticle>, public cRenderObject
 
 protected:
 	bool lbRefresh;
-
+    bool mbDepthTest;
 	cManualInterleavedAttributeArray *mpAttributes;
 	cAttributeLinker *mpAttributeLinker;
-
-	~cParticleHandler();
-
-
+	cShaderProgram *mpLastShader;
+    ~cParticleHandler();
 public:
 	cParticleHandler();
+
 	cParticleHandler(uint32 liParticles);
     cParticleHandler(uint32 liParticles,vRenderNode *lpNode);
 	cParticleHandler(uint32 liParticles,cCamera *lpCamera);
@@ -100,19 +100,24 @@ public:
 
 	void InitialiseParticleHandler(uint32 liParticles);
 
+
 };
 
 #endif
-
+///This is a global function for Creating Random Speeds in a cone based around the c3DVf Vector. A speeds lie within +/- lfSpeedRange % of the Vectors length and lfAngleRange Radians of the core vector.
 c3DVf ParticleArcSpeeds(c3DVf Vector,float lfSpeedRange, float lfAngleRange);
+///This is a global function for generating Random speeds in a random direction within +/- lfSpeedRange % of lfSpeed.
 c3DVf ParticleBallSpeeds(float lfSpeed,float lfSpeedRange);
-
+///This is a global function for Creating Random Speeds in a cone based around the Vector (lpSpeedData[0],lpSpeedData[1],lpSpeedData[2]). A speeds lie within +/- lpSpeedData[3] % of the Vectors length and lpSpeedData[4] Radians of the core vector.
 c3DVf ParticleArcSpeeds(float *lpSpeedData);
+///This is a global function for generating Random speeds in a random direction within +/- lpSpeedData[1] % of lpSpeedData[0].
 c3DVf ParticleBallSpeeds(float *lpSpeedData);
-
-c3DVf ParticleSideVelocity(float *lpSpeedInfo);
+///This is a global function for generating Random speeds with a random speed along the Vector lpSpeedInfo within the range +/- lfSpeedRange %. and with a random component up to lfSideSpeed perpendicular to the main vector.
 c3DVf ParticleSideVelocity(c3DVf lpSpeedInfo,float lfSpeedRange, float lfSideSpeed);
+///This is a global function for generating Random speeds with a random speed along the Vector (lpSpeedInfo[0],lpSpeedInfo[1],lpSpeedInfo[2]) within the range +/- lpSpeedInfo[3] %. and with a random perpendicular component up to magnitude lpSpeedInfo[4].
+c3DVf ParticleSideVelocity(float *lpSpeedInfo);
 
+///This will efficiently generate a random uniform vector in 3 dimensions.
 c3DVf GenerateUniformRandomVector();
 
 #endif

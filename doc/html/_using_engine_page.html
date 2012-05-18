@@ -154,7 +154,7 @@ Your First Process</h2>
 <div class="fragment"><pre class="fragment"> <span class="keywordtype">void</span> cCore::Run()
  {
 
-  <span class="keywordflow">if</span>(_KEY(KEY_SPACE)) _CAMERA-&gt;Far(10.0f);
+  <span class="keywordflow">if</span>(KEY_SPACE) _CAMERA-&gt;Far(10.0f);
    <span class="keywordflow">else</span> _CAMERA-&gt;Far(1000.0f);
   _CAMERA-&gt;Frustum();
 
@@ -199,7 +199,7 @@ How to use Process Objects</h2>
 <div class="fragment"><pre class="fragment"> <span class="keywordtype">void</span> <a class="code" href="classc_process.html#a3e0fab4ccc0a8fb065d50eb88b6a0dd5" title="This Function stores the code which will update this process by a single frame. This user defined fun...">player::Run</a>()
  {
 
- <span class="keywordflow">if</span>(_KEY(KEY_k))
+ <span class="keywordflow">if</span>(KEY_k)
  {
  mpPointerToAnotherProcess-&gt;Signal(_S_KILL);
  _KILL(<span class="keyword">this</span>);
@@ -209,7 +209,7 @@ How to use Process Objects</h2>
 </pre></div><div class="fragment"><pre class="fragment"> <span class="keywordtype">void</span> <a class="code" href="classc_process.html#a3e0fab4ccc0a8fb065d50eb88b6a0dd5" title="This Function stores the code which will update this process by a single frame. This user defined fun...">player::Run</a>()
  {
 
- <span class="keywordflow">if</span>(_KEY(KEY_k))
+ <span class="keywordflow">if</span>(KEY_k)
         {
          _KILL(mpPointerToAnotherProcess);
          _KILL();
@@ -221,15 +221,15 @@ How to use Process Objects</h2>
 <div class="fragment"><pre class="fragment"> <span class="keywordtype">void</span> <a class="code" href="classc_process.html#a3e0fab4ccc0a8fb065d50eb88b6a0dd5" title="This Function stores the code which will update this process by a single frame. This user defined fun...">player::Run</a>()
  {
 
- <span class="keywordflow">if</span>(_KEY(KEY_s)) mpPointerToAnotherProcess-&gt;Signal(_S_SLEEP);
- <span class="keywordflow">if</span>(_KEY(KEY_w)) mpPointerToAnotherProcess-&gt;Signal(_S_WAKE);
+ <span class="keywordflow">if</span>(KEY_s) mpPointerToAnotherProcess-&gt;Signal(_S_SLEEP);
+ <span class="keywordflow">if</span>(KEY_w) mpPointerToAnotherProcess-&gt;Signal(_S_WAKE);
 
  }
 </pre></div><p>Removing a Process: A Process can be killed by the <a class="el" href="classc_kernel.html" title="Kernel Object. Handles Processes. Tracks, runs and deletes current processes. Has complete control ov...">cKernel</a> object. Calling the cKernel::Remove() function will kill the process and free the memory. This must not be done to the currently running process or the system may crash. Use on the current process at your peril. The pointer is to the cLinkedNode&lt;vProcess&gt; which owns this process. Each Process has a pointer (mpNode) to its cLinkedNode&lt;vProcess&gt;. </p>
 <div class="fragment"><pre class="fragment"> <span class="keywordtype">void</span> <a class="code" href="classc_process.html#a3e0fab4ccc0a8fb065d50eb88b6a0dd5" title="This Function stores the code which will update this process by a single frame. This user defined fun...">player::Run</a>()
  {
 
- <span class="keywordflow">if</span>(_KEY(KEY_k)) _KERNEL-&gt;Remove(mpPointerToAProcessesNode);
+ <span class="keywordflow">if</span>(KEY_k) _KERNEL-&gt;Remove(mpPointerToAProcessesNode);
 
  }
 </pre></div> <h2><a class="anchor" id="RenderObjectsPage"></a>
@@ -319,14 +319,14 @@ Using the Audio System</h2>
 </pre></div><h2><a class="anchor" id="SignalsPage"></a>
 Signals and Flags</h2>
 <p>There are a range of Signal macros which allow you to send signals to other processes. </p>
-<div class="fragment"><pre class="fragment"> <span class="keywordflow">if</span>(_KEY(KEY_SPACE)) _SLEEP_THIS();
+<div class="fragment"><pre class="fragment"> <span class="keywordflow">if</span>(KEY_SPACE) _SLEEP_THIS();
  <a class="code" href="classc_process.html" title="This is the base code for a process. This will automatically create a new process. It will hand itself to cKernel to be processed every frame. Any Processes created by the user should inherit this type to be handled by cKernel automatically. Initialisation code should go in the constructor of the user type. Linking to cKernel is performed automatically by cProcess. Update code should go in the function Run(). Coed performed when a process is killed should go in the function Stop(). NOT the destructor. Code to handle Sleeping and Waking signals should go in OnSleep() and OnWake(). Code to handle interaction of two processes should go in either processes UserSignal() function.">cProcess</a> *OtherProcess;
  OtherProcess=_FIND_PROCESS(cChildProcess);
  _KILL(OtherProcess);
 </pre></div><p> <br/>
  <br/>
  List of macros: _KILL(PROCESS) : Will kill the object pointed to by PROCESS. _SLEEP(PROCESS) : Will sleep the object pointed to by PROCESS. _WAKE(PROCESS) : Will wake the object pointed to by PROCESS. _KILL_THIS() : Will kill this object. Code after this will still be run, once this frame. The command return will allow the user to exit the object without running further code. _SLEEP_THIS() : Will sleep this object. Code after this will still be run, once this frame. The command return will allow the user to exit the object without running further code. _WAKE_THIS() : Will never have an effect. (As the code will not run if this object is asleep and there is no waking to be done if the process is awake).</p>
-<p>You can send your own signals between processes by defining the function <a class="el" href="classc_user_signal.html#ab11af50af566f1df2a8cf41902e1ac9f" title="Function to handle user specified signals. SIGNAL is an unsigned integer and lpData allows additional...">cUserSignal::UserSignal(SIGNAL lsSignal,void * lpData)</a> in your process class. This function is empty and virtual so This function is entirely user defined which means you can use your own flags to signal different actions for different processes. The void pointer allows you to send any additional information you may want. UserSignal() is a part of <a class="el" href="classc_process.html" title="This is the base code for a process. This will automatically create a new process. It will hand itself to cKernel to be processed every frame. Any Processes created by the user should inherit this type to be handled by cKernel automatically. Initialisation code should go in the constructor of the user type. Linking to cKernel is performed automatically by cProcess. Update code should go in the function Run(). Coed performed when a process is killed should go in the function Stop(). NOT the destructor. Code to handle Sleeping and Waking signals should go in OnSleep() and OnWake(). Code to handle interaction of two processes should go in either processes UserSignal() function.">cProcess</a> so any <a class="el" href="classc_process.html" title="This is the base code for a process. This will automatically create a new process. It will hand itself to cKernel to be processed every frame. Any Processes created by the user should inherit this type to be handled by cKernel automatically. Initialisation code should go in the constructor of the user type. Linking to cKernel is performed automatically by cProcess. Update code should go in the function Run(). Coed performed when a process is killed should go in the function Stop(). NOT the destructor. Code to handle Sleeping and Waking signals should go in OnSleep() and OnWake(). Code to handle interaction of two processes should go in either processes UserSignal() function.">cProcess</a> pointer can use it and will select the version of the function in the derived class. <br/>
+<p>You can send your own signals between processes by defining the function <a class="el" href="classc_user_signal.html#a2f7ada3ca4ee80e2082e12a97b450221" title="Function to handle user specified signals. SIGNAL is an unsigned integer and lpData allows additional...">cUserSignal::UserSignal(SIGNAL lsSignal,void * lpData)</a> in your process class. This function is empty and virtual so This function is entirely user defined which means you can use your own flags to signal different actions for different processes. The void pointer allows you to send any additional information you may want. UserSignal() is a part of <a class="el" href="classc_process.html" title="This is the base code for a process. This will automatically create a new process. It will hand itself to cKernel to be processed every frame. Any Processes created by the user should inherit this type to be handled by cKernel automatically. Initialisation code should go in the constructor of the user type. Linking to cKernel is performed automatically by cProcess. Update code should go in the function Run(). Coed performed when a process is killed should go in the function Stop(). NOT the destructor. Code to handle Sleeping and Waking signals should go in OnSleep() and OnWake(). Code to handle interaction of two processes should go in either processes UserSignal() function.">cProcess</a> so any <a class="el" href="classc_process.html" title="This is the base code for a process. This will automatically create a new process. It will hand itself to cKernel to be processed every frame. Any Processes created by the user should inherit this type to be handled by cKernel automatically. Initialisation code should go in the constructor of the user type. Linking to cKernel is performed automatically by cProcess. Update code should go in the function Run(). Coed performed when a process is killed should go in the function Stop(). NOT the destructor. Code to handle Sleeping and Waking signals should go in OnSleep() and OnWake(). Code to handle interaction of two processes should go in either processes UserSignal() function.">cProcess</a> pointer can use it and will select the version of the function in the derived class. <br/>
 </p>
 <p>For Advanced Programmers: <br/>
  The macros above actually link to the inherited function Signal(uint8) in <a class="el" href="classc_signal.html" title="Class for handling Signals sent between objects (cProcess, cRenderObject, cCollisionObject). Allows the user to wake, sleep and kill objects. For cProcess (while cParentStack is enabled) also allows signals to be sent to a process that will recursively affect all the children of that process. Possible signals to be passed in are _S_SLEEP,_S_WAKE,_S_KILL,_S_SLEEP_TREE, _S_WAKE_TREE,_S_KILL_TREE User Specified Signals are controlled by the class cUserSignal.">cSignal</a>. This takes the following flags to have the desired effects. This will activate cSignal::AdditionalKillFunctionality(), cSignal::AdditionalSleepFunctionality(), cSignal::AdditionalWakeFunctionality() when Killed, slept of woken.</p>
@@ -693,7 +693,7 @@ Specifics of media types :</h3>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:03 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:07 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

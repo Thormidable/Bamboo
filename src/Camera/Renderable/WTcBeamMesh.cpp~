@@ -11,13 +11,13 @@ cBeamMesh::~cBeamMesh()
 
 }
 
-cBeamMesh::cBeamMesh(float Radius,float Length,uint16 Segments,vRenderNode *lpNode): cRenderObject(lpNode)
+cBeamMesh::cBeamMesh(float Radius,float Length,uint16 Segments,vRenderNode *lpNode): cRenderObject(lpNode,true)
 {
 	VertexData=0; VertexList=0; GenerateData(Radius,Length,Segments);
 	mpShader=0;
 };
 
-cBeamMesh::cBeamMesh(float Radius,float Length,uint16 Segments,cCamera *lpNode) : cRenderObject(lpNode)
+cBeamMesh::cBeamMesh(float Radius,float Length,uint16 Segments,cCamera *lpNode) : cRenderObject(lpNode,true)
 {
 	VertexData=0; VertexList=0; GenerateData(Radius,Length,Segments);
 	mpShader=0;
@@ -50,7 +50,7 @@ void cBeamMesh::BufferBeam()
 	glBufferData(GL_ARRAY_BUFFER, sizeof(float)*(miSegments*6), VertexData, GL_STATIC_DRAW);
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint16)*(miSegments*4), VertexList, GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint16)*(miSegments*4-3), VertexList, GL_STATIC_DRAW);
 
 }
 
@@ -72,7 +72,7 @@ void cBeamMesh::Radius(float Radius)
 
 	uint32 liCount;
 	uint32 liCount3;
-	float Angle=2*3.141592/miSegments;
+	float Angle=2.0f*3.141592f/miSegments;
 	for(liCount=0;liCount<miSegments;++liCount)
 	{
 		liCount3=liCount*12;
@@ -126,7 +126,7 @@ void cBeamMesh::GenerateData(float Radius,float Length,uint16 Segments)
 
 	int32 liCount;
 	uint32 liCount3;
-	float Angle=2*3.141592/Segments;
+	float Angle=2.0f*3.141592f/Segments;
 	for(liCount=0;liCount<Segments;++liCount)
 	{
 		liCount3=liCount*3;
@@ -148,6 +148,8 @@ int16 HalfSegments=Segments>>1;
  liCount3=(Segments*4-3);
 	if(VertexList) delete []VertexList;
 	VertexList=new uint16[liCount3];
+
+	memset(VertexList,0,sizeof(uint16)*liCount3);
 
 	//Set Start and Ends
 	 VertexList[0]=0;
@@ -196,49 +198,8 @@ int16 HalfSegments=Segments>>1;
 	BufferBeam();
 
 }
-/*
- * float cBeamMesh::Verteces[78]=
- * {
- * 0.0f,0.0f,0.0f,
- * 0.0f,Radius,0.0f,
- *
- * Radius*sin(60),Radius*cos(60),0.0f,
- * Radius*sin(0),Radius*cos(0),WT_BEAM_LENGTH,
- * Radius*sin(60),Radius*cos(60),WT_BEAM_LENGTH,
- *
- * 0.0f,0.0f,WT_BEAM_LENGTH,
- * Radius*sin(120),Radius*cos(120),WT_BEAM_LENGTH,
- * Radius*sin(60),Radius*cos(60),0.0f,
- * Radius*sin(120),Radius*cos(120),0.0f,
- *
- * 0.0f,0.0f,0.0f,
- * Radius*sin(180),Radius*cos(180),0.0f,
- * Radius*sin(120),Radius*cos(120),WT_BEAM_LENGTH,
- * Radius*sin(180),Radius*cos(180),WT_BEAM_LENGTH,
- *
- * 0.0f,0.0f,WT_BEAM_LENGTH,
- * Radius*sin(240),Radius*cos(240),WT_BEAM_LENGTH,
- * Radius*sin(180),Radius*cos(180),0.0f,
- * Radius*sin(240),Radius*cos(240),0.0f,
- *
- * 0.0f,0.0f,0.0f,
- * Radius*sin(300),Radius*cos(300),0.0f,
- * Radius*sin(240),Radius*cos(240),WT_BEAM_LENGTH,
- * Radius*sin(300),Radius*cos(300),WT_BEAM_LENGTH,
- *
- * 0.0f,0.0f,WT_BEAM_LENGTH,
- * Radius*sin(360),Radius*cos(360),WT_BEAM_LENGTH,
- * Radius*sin(300),Radius*cos(300),0.0f,
- * Radius*sin(3600),Radius*cos(360),0.0f
- *
- * 0.0f,0.0f,0.0f
- };
 
- float cBeamMesh::VertexList[26]=
- {
-	 0,1,2,3,4,5,6,7,8,9,10,
-	 11,12,13,14,15,16,17,
-	 18,19,20,21,22,23,24,25
- };
- */
+float cBeamMesh::GetSize(){if(mfLength*2>mfRadius) return mfLength*2; return mfRadius;};
+double cBeamMesh::GetSizeSq(){if(mfLength*2>mfRadius) return mfLength*mfLength*4; return mfRadius*mfRadius;};;
+
 #endif

@@ -3984,6 +3984,7 @@ public:
 #include "./Maths/WTcMatrixStack.h"
 #include "./Maths/WTcCameraMatrix4.h"
 #include "./Maths/WTcPredictiveTracking.h"
+#include "./Maths/WTcSimplexNoise.h"
 #include "./Files/WTString.h"
 
 
@@ -4024,6 +4025,8 @@ public:
 #include "./Files/CollisionMeshes/WTcCompoundCollisionFile.h"
 
 #include "./Files/Textures/WTcTexture.h"
+#include "./Files/Textures/WTcSeamlessTextureClasses.h"
+#include "./Files/Textures/WTcTextureGenerator.h"
 #include "./Files/Fonts/WTcFont.h"
 
 #include "./Files/Shaders/WTcShader.h"
@@ -4035,6 +4038,7 @@ public:
 #include "./Camera/WTcRenderOwner.h"
 #include "./Camera/WTvRenderObject.h"
 #include "./Files/Meshes/WTcMesh.h"
+#include "./Files/Meshes/WTcAsteroid.h"
 
 #include "./Files/Misc/WTcMeshTreeNode.h"
 #include "./Files/Misc/WTvMeshTree.h"

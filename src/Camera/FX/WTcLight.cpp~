@@ -23,6 +23,8 @@ cLight::cLight()
  Specular(1.0f,1.0f,1.0f,0.0f);
  Attenuation(2.0f);
  AttenuationType(0);
+ mbAwake=true;
+ mbAlive=true;
  mpLightHandler->MoreAwake();
 }
 
@@ -56,6 +58,7 @@ void cLight::Specular(cRGB *lcColor){mpSpecular=lcColor;};
 
 void cLight::PrepareLight(uint32 liLight)
 {
+	printf("Prepare this Light %u: %f %f %f\n",liLight,mpPosition[0],mpPosition[1],mpPosition[2]);
  glLightfv(GL_LIGHT0+liLight, GL_POSITION, mpPosition);
  glLightfv(GL_LIGHT0+liLight, GL_AMBIENT, mpAmbient.Color());
  glLightfv(GL_LIGHT0+liLight, GL_DIFFUSE, mpDiffuse.Color());
@@ -82,20 +85,20 @@ void cLight::Signal(SIGNAL lsSignal)
 	{
 	    mpLightHandler->MoreAwake();
 	    mbAwake=true;
-	    AdditionalWakeFunctionality();
+	    OnWake();
     }
 	if(lsSignal&WT_SIGNAL_VALUE_SLEEP && mbAwake)
 	{
 	    mpLightHandler->MoreAsleep();
 	    mbAwake=false;
-	    AdditionalSleepFunctionality();
+	    OnSleep();
 	}
 	if(lsSignal&WT_SIGNAL_VALUE_KILL && mbAlive)
 	{
 	    if(mbAwake) mpLightHandler->MoreAsleep();
 	    mbAlive=false;
 	    mbAwake=false;
-	    AdditionalKillFunctionality();
+	    Stop();
 	    mpLightHandler->Remove(mpNode);
     }
 }

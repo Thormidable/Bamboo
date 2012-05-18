@@ -4,19 +4,11 @@
 
 void cBeamCollision::Update(cMatrix4 &New)
 {
-/*
-	 mfRaySize[0]=New[8]*mfLength;
-	 mfRaySize[1]=New[9]*mfLength;
-	 mfRaySize[2]=New[10]*mfLength;
-*/
+
 mfRaySize[0]=New[8];
 mfRaySize[1]=New[9];
 mfRaySize[2]=New[10];
 
-/*
-	mfRaySize[0]=0.0f;
-	mfRaySize[1]=0.0f;
-	mfRaySize[2]=mfLength;*/
 };
 
 
@@ -31,4 +23,7 @@ float *cBeamCollision::RayVector(){return mfRaySize;};
 float cBeamCollision::Length(){return mfLength;};
 
 uint8 cBeamCollision::Type(){return WT_COLLISION_BEAM;}
+
+float cBeamCollision::Radius(){return mfSize;}
+void cBeamCollision::Radius(float lfRadius){SetSize(lfRadius);}
 #endif

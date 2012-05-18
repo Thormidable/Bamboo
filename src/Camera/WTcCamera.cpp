@@ -203,6 +203,7 @@ void cCameraHandler::UpdateWindowSize()
  {
   if(mcList[liPos]->Awake()) mcList[liPos]->UpdateWindowSize();
  }
+ gpSettings->UserWindowSizeUpdate();
 }
 
 void cCameraHandler::UpdateScreen()

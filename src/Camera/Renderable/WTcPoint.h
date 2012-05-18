@@ -31,9 +31,9 @@ public:
       void Color(cRGBA *lpOther);
       void Color(cRGB &lpOther);
       void Color(cRGBA &lpOther);
-      ///Will return the size of this point in pixels (Distance does not affect size without using an appropriate cShaderProgram).
+      //Will return the size of this point in pixels (Distance does not affect size without using an appropriate cShaderProgram).
   //    float PointSize(){return mfPointSize;};
-      ///Will set the size of this point in pixels.
+      //Will set the size of this point in pixels.
   //    void PointSize(float lfPointSize);
 
 };

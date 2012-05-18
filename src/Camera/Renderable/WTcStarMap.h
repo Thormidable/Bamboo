@@ -31,14 +31,16 @@ GLuint mBuffer2;
 	cStar *mpParticles;
 	uint32 miParticles;
 
-
+    cAttributeLinker *mpAttributeLinker;
+    cManualInterleavedAttributeArray *mpAttributes;
+    cShaderProgram *mpLastShader;
 public:
 
 	cStarMap(uint32 liParticles);
 	cStarMap(uint32 liParticles,vRenderNode *lpNode);
 	cStarMap(uint32 liParticles,cCamera *lpCamera);
 	~cStarMap();
-	void Initialise(uint32 liParticles,float lfDist=0);
+	void Initialise(uint32 liParticles,float lfDist=0.0);
 
 	void RenderPainter();
 

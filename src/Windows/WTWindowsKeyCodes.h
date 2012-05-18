@@ -4,7 +4,7 @@
 
 /* These are the key codes converted from Windows virtual keys. All keys begin
     with KEY_ and end with either the long or short version of the key name  */
-#define KEY_CODE_BACKSPACE (VK_BACK)
+//#define KEY_CODE_BACKSPACE (VK_BACK)
 #define KEY_CODE_TAB (VK_TAB)
 
 #define KEY_CODE_ENTER (VK_RETURN)
@@ -137,139 +137,86 @@
 
 
 
-/* These are the key codes converted from Windows virtual keys. All keys begin
-    with KEY_ and end with either the long or short version of the key name  */
-#define KEY_BACKSPACE _KEY(VK_BACK)
-#define KEY_TAB _KEY(VK_TAB)
+#define KEY_CODE_NUMPAD0 VK_NUMPAD0
+#define KEY_CODE_NP0 VK_NUMPAD0
+#define KEY_CODE_NUMPAD1 VK_NUMPAD1
+#define KEY_CODE_NP1 VK_NUMPAD1
+#define KEY_CODE_NUMPAD2 VK_NUMPAD2
+#define KEY_CODE_NP2 VK_NUMPAD2
+#define KEY_CODE_NUMPAD3  VK_NUMPAD3
+#define KEY_CODE_NP3  VK_NUMPAD3
+#define KEY_CODE_NUMPAD4 VK_NUMPAD4
+#define KEY_CODE_NP4 VK_NUMPAD4
+#define KEY_CODE_NUMPAD5 VK_NUMPAD5
+#define KEY_CODE_NP5 VK_NUMPAD5
+#define KEY_CODE_NUMPAD6 VK_NUMPAD6
+#define KEY_CODE_NP6 VK_NUMPAD6
+#define KEY_CODE_NUMPAD7 VK_NUMPAD7
+#define KEY_CODE_NP7 VK_NUMPAD7
+#define KEY_CODE_NUMPAD8 VK_NUMPAD8
+#define KEY_CODE_NP8 VK_NUMPAD8
+#define KEY_CODE_NUMPAD9 VK_NUMPAD9
+#define KEY_CODE_NP9 VK_NUMPAD9
 
-#define KEY_ENTER _KEY(VK_RETURN)
-#define KEY_RETURN _KEY(VK_RETURN)
+#define KEY_CODE_NUMBERPAD_SUBTRACT VK_SUBTRACT
+#define KEY_CODE_NP_SUBTRACT VK_SUBTRACT
+#define KEY_CODE_NUMBERPAD_MULTIPLY VK_MULTIPLY
+#define KEY_CODE_NP_MULTIPLY VK_MULTIPLY
+#define KEY_CODE_NUMBERPAD_PLUS VK_ADD
+#define KEY_CODE_NP_PLUS VK_ADD
+#define KEY_CODE_NUMBERPAD_DIVIDE VK_DIVIDE
+#define KEY_CODE_NP_DIVIDE VK_DIVIDE
+#define KEY_CODE_NUMBERPAD_DECIMAL VK_DECIMAL
+#define KEY_CODE_NP_DECIMAL VK_DECIMAL
+#define KEY_CODE_NUMBERPAD_PERIOD VK_DECIMAL
+#define KEY_CODE_NP_PERIOD VK_DECIMAL
+#define KEY_CODE_NUMBERPAD_ENTER VK_SEPARATOR
+#define KEY_CODE_NP_ENTER VK_SEPARATOR
+#define KEY_CODE_NUMBERPAD_RETURN VK_SEPARATOR
+#define KEY_CODE_NP_RETURN VK_SEPARATOR
 
-#define KEY_SHIFT _KEY(VK_SHIFT)
+#define KEY_CODE_TILDE 196
+#define KEY_CODE_SEPARATOR VK_SEPARATOR
+#define KEY_CODE_SEMICOLON VK_OEM_1
+#define KEY_CODE_COMMA VK_OEM_COMMA
+#define KEY_CODE_SQUARE_BRACKET_OPEN VK_OEM_4
+#define KEY_CODE_SBO VK_OEM_4
+#define KEY_CODE_SQUARE_BRACKET_CLOSE VK_OEM_6
+#define KEY_CODE_SBC VK_OEM_6
+#define KEY_CODE_BACKSLASH VK_OEM_5
+#define KEY_CODE_BACKSPACE VK_BACK_SPACE
+#define KEY_CODE_APOSTROPHE VK_OEM_3
+#define KEY_CODE_PERIOD VK_OEM_PERIOD
+#define KEY_CODE_DECIMAL VK_OEM_PERIOD
+#define KEY_CODE_QUOTE VK_OEM_7
+#define KEY_CODE_SLASH VK_OEM_2
+#define KEY_CODE_EQUALS VK_OEM_PLUS
+#define KEY_CODE_DASH VK_OEM_MINUS
 
-#define KEY_CONTROL _KEY(VK_CONTROL)
-#define KEY_CTRL _KEY(VK_CONTROL)
-
-#define KEY_ALTERNATE _KEY(VK_MENU)
-#define KEY_ALT _KEY(VK_MENU)
-
-#define KEY_PAUSE _KEY(VK_PAUSE)
-
-#define KEY_CAPSLOCK _KEY(VK_CAPITAL)
-#define KEY_CAPITALlOCK _KEY(VK_CAPITAL)
-
-#define KEY_ESCAPE _KEY(VK_ESCAPE)
-#define KEY_ESC _KEY(VK_ESCAPE)
-
-#define KEY_SPACE _KEY(VK_SPACE)
-
-#define KEY_PGUP _KEY(VK_PRIOR)
-#define KEY_PAGEUP _KEY(VK_PRIOR)
-
-#define KEY_PGDN _KEY(VK_NEXT)
-#define KEY_PAGEDOWN _KEY(VK_NEXT)
-
-#define KEY_END _KEY(VK_END)
-#define KEY_HOME _KEY(VK_HOME)
-
-#define KEY_LEFT _KEY(VK_LEFT)
-#define KEY_LEFTARROW _KEY(VK_LEFT)
-
-#define KEY_RIGHT _KEY(VK_RIGHT)
-#define KEY_RIGHTARROW _KEY(VK_RIGHT)
-
-#define KEY_UP _KEY(VK_UP)
-#define KEY_UPARROW _KEY(VK_UP)
-
-#define KEY_DOWN _KEY(VK_DOWN)
-#define KEY_DOWNARROW _KEY(VK_DOWN)
-
-#define KEY_SELECT _KEY(VK_SELECT)
-
-#define KEY_EARLYPRINT _KEY(VK_PRINT)
-#define KEY_EARLYPRINTSCREEN _KEY(VK_PRINT)
-
-#define KEY_EXECTUE _KEY(VK_EXECUTE)
-
-#define KEY_PRINT _KEY(VK_SNAPSHOT)
-#define KEY_PRINTSCREEN _KEY(VK_SNAPSHOT)
-
-#define KEY_INS _KEY(VK_INSERT)
-#define KEY_INSERT _KEY(VK_INSERT)
-
-#define KEY_DEL _KEY(VK_DELETE)
-#define KEY_DELETE _KEY(VK_DELETE)
-
-#define KEY_HELP _KEY(VK_HELP)
-
-
-#define KEY_0 _KEY(0x30)
-#define KEY_1 _KEY(0x31)
-#define KEY_2 _KEY(0x32)
-#define KEY_3 _KEY(0x33)
-#define KEY_4 _KEY(0x34)
-#define KEY_5 _KEY(0x35)
-#define KEY_6 _KEY(0x36)
-#define KEY_7 _KEY(0x37)
-#define KEY_8 _KEY(0x38)
-#define KEY_9 _KEY(0x39)
-
-#define KEY_A _KEY(0x41)
-#define KEY_B _KEY(0x42)
-#define KEY_C _KEY(0x43)
-#define KEY_D _KEY(0x44)
-#define KEY_E _KEY(0x45)
-#define KEY_F _KEY(0x46)
-#define KEY_G _KEY(0x47)
-#define KEY_H _KEY(0x48)
-#define KEY_I _KEY(0x49)
-#define KEY_J _KEY(0x4A)
-#define KEY_K _KEY(0x4B)
-#define KEY_L _KEY(0x4C)
-#define KEY_M _KEY(0x4D)
-#define KEY_N _KEY(0x4E)
-#define KEY_O _KEY(0x4F)
-#define KEY_P _KEY(0x50)
-#define KEY_Q _KEY(0x51)
-#define KEY_R _KEY(0x52)
-#define KEY_S _KEY(0x53)
-#define KEY_T _KEY(0x54)
-#define KEY_U _KEY(0x55)
-#define KEY_V _KEY(0x56)
-#define KEY_W _KEY(0x57)
-#define KEY_X _KEY(0x58)
-#define KEY_Y _KEY(0x59)
-#define KEY_Z _KEY(0x5A)
-
-#define KEY_a _KEY(0x41)
-#define KEY_b _KEY(0x42)
-#define KEY_c _KEY(0x43)
-#define KEY_d _KEY(0x44)
-#define KEY_e _KEY(0x45)
-#define KEY_f _KEY(0x46)
-#define KEY_g _KEY(0x47)
-#define KEY_h _KEY(0x48)
-#define KEY_i _KEY(0x49)
-#define KEY_j _KEY(0x4A)
-#define KEY_k _KEY(0x4B)
-#define KEY_l _KEY(0x4C)
-#define KEY_m _KEY(0x4D)
-#define KEY_n _KEY(0x4E)
-#define KEY_o _KEY(0x4F)
-#define KEY_p _KEY(0x50)
-#define KEY_q _KEY(0x51)
-#define KEY_r _KEY(0x52)
-#define KEY_s _KEY(0x53)
-#define KEY_t _KEY(0x54)
-#define KEY_u _KEY(0x55)
-#define KEY_v _KEY(0x56)
-#define KEY_w _KEY(0x57)
-#define KEY_x _KEY(0x58)
-#define KEY_y _KEY(0x59)
-#define KEY_z _KEY(0x5A)
+#define KEY_CODE_F1 VK_F1
+#define KEY_CODE_F2 VK_F2
+#define KEY_CODE_F3 VK_F3
+#define KEY_CODE_F4 VK_F4
+#define KEY_CODE_F5 VK_F5
+#define KEY_CODE_F6 VK_F6
+#define KEY_CODE_F7 VK_F7
+#define KEY_CODE_F8 VK_F8
+#define KEY_CODE_F9 VK_F9
+#define KEY_CODE_F10 VK_F10
+#define KEY_CODE_F11 VK_F11
+#define KEY_CODE_F12 VK_F12
+#define KEY_CODE_F13 VK_F13
+#define KEY_CODE_F14 VK_F14
+#define KEY_CODE_F15 VK_F15
+#define KEY_CODE_F16 VK_F16
+#define KEY_CODE_F17 VK_F17
+#define KEY_CODE_F18 VK_F18
+#define KEY_CODE_F19 VK_F19
+#define KEY_CODE_F20 VK_F20
+#define KEY_CODE_F21 VK_F21
+#define KEY_CODE_F22 VK_F22
+#define KEY_CODE_F23 VK_F23
+#define KEY_CODE_F24 VK_F24
 
 
-
-/* have completed to end of the alphabet (would you believe it) so some keys
-   still don't work, however keystore is large enough to take them all */
 #endif

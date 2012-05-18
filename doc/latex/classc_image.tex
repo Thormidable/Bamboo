@@ -13,7 +13,7 @@ Collaboration diagram for cImage:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=400pt]{classc_image__coll__graph}
+\includegraphics[height=600pt]{classc_image__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -48,7 +48,17 @@ float \hyperlink{classc_image_aacc1a4884b4fc04b936a1695a393d26a}{Width} ()}
 float \hyperlink{classc_image_adfccfa4a2893b805bf231d5039c27f05}{Height} ()}
 \label{classc_image_adfccfa4a2893b805bf231d5039c27f05}
 
-\begin{DoxyCompactList}\small\item\em Will return the Height of this image in pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Will return the Height of this image in pixels. \end{DoxyCompactList}\item 
+\hypertarget{classc_image_a180170d55759e2e832a8e2eb059052e1}{
+float \hyperlink{classc_image_a180170d55759e2e832a8e2eb059052e1}{Priority} ()}
+\label{classc_image_a180170d55759e2e832a8e2eb059052e1}
+
+\begin{DoxyCompactList}\small\item\em Will return the render priority (order of rendering) for this 2D object. \end{DoxyCompactList}\item 
+\hypertarget{classc_image_aa806d16e1ace073a52a40175ba9d52ff}{
+void \hyperlink{classc_image_aa806d16e1ace073a52a40175ba9d52ff}{Priority} (float lfPriority)}
+\label{classc_image_aa806d16e1ace073a52a40175ba9d52ff}
+
+\begin{DoxyCompactList}\small\item\em Will set the render priority (order of rendering) for this 2D object. By default the acceptable range is 0.0 -\/ 10.0. 0.0 is the highest priority, 10.0 is the lowest priority. Objects start at a priority of 5.0f. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 

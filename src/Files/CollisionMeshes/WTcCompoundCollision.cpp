@@ -96,7 +96,7 @@ cMeshCollision *cCompoundCollision::AddType(float lfXP,float lfXN,float lfYP,flo
     AddType(lpTemp);
     return lpTemp;
 };
-cBeamCollision *cCompoundCollision::AddType(cBeamMesh *lpBeam)
+cBeamCollision *cCompoundCollision::AddType(cBeam *lpBeam)
 {
  if(lpBeam)
  {
@@ -124,5 +124,13 @@ uint8 cCompoundCollisionNode::Type()
     return mpObject->Type();
 }
 
+cMatrix4 &cCompoundCollisionNode::CacheMatrix()
+{
+    return cMatrix4::mpTemp;
+};
 
+cMatrix4 &cCompoundCollisionNodeMobile::CacheMatrix()
+{
+    return mmTotalMatrix;
+};
 #endif

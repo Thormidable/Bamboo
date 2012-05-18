@@ -16,6 +16,7 @@ cCollisionList * cCollisionObject::GenerateCollisionList(uint32 liType)
 }
 
 
+vRenderObject *cCollisionObject::Following(){return mpFollowing;};
 
 
 void cCollisionObject::CollisionFilter(uint32 liID)
@@ -58,6 +59,7 @@ return false;
 
 bool cCollisionObject::Collision(cCollisionObject *lpOther,uint32 lpCol)
 {
+
 	uint32 THIS_SHOULD_NOT_BE_NECCESSARY;
 	if(!lpCol || CollisionFilter()==lpCol)
 	{
@@ -127,7 +129,7 @@ void cCollisionObject::Initialise(vRenderObject *lpFollow,cProcess *lpLinked,uin
 
 			mpOwner=cCollisionHandler::Instance()->Add(this);
 
-    mbCreatedThisFrame=true;
+    miDelay=1;
 
 }
 
@@ -136,9 +138,9 @@ void cCollisionObject::Initialise(vRenderObject *lpFollow,cProcess *lpLinked,uin
 	uint32 cCollisionObject::CollisionFilter(){return miID;};
 
 
-	bool cCollisionObject::CreatedThisFrame(){return mbCreatedThisFrame;};
-
-	void cCollisionObject::NotCreatedThisFrame(){mbCreatedThisFrame=false;};
+	bool cCollisionObject::IsDelayed(){return miDelay;};
+	void cCollisionObject::Delay(uint8 liDelay){miDelay=liDelay;};
+	uint8 cCollisionObject::Delay(){return miDelay;};
 
 
 
@@ -177,17 +179,23 @@ void cCollisionObject::Signal(SIGNAL liFlags)
 
 bool cCollisionObject::CheckCollision(cCollisionObject *lpOther)
 {
-	if(Asleep() || lpOther->Asleep() || CreatedThisFrame() || lpOther->CreatedThisFrame()) return 0;
+ 	if(Asleep() || lpOther->Asleep() || IsDelayed() || lpOther->IsDelayed()) return 0;
+
 	if(!TouchCollision(lpOther)) return 0;
-	if((Type()==WT_COLLISION_RADIUS || Type()==WT_COLLISION_BEAM) && (lpOther->Type()==WT_COLLISION_RADIUS || lpOther->Type()==WT_COLLISION_BEAM)) return 1;
+
+	if((Type()==WT_COLLISION_RADIUS || Type()==WT_COLLISION_BEAM || Type()==WT_COLLISION_RAY) && (lpOther->Type()==WT_COLLISION_RADIUS || lpOther->Type()==WT_COLLISION_BEAM || lpOther->Type()==WT_COLLISION_RAY)) return 1;
 	if(Type()==WT_COLLISION_MODEL)
 	{
 		if(lpOther->Type()==WT_COLLISION_RADIUS) return SphereModel(lpOther->Sphere(),lpOther->CacheMatrix(),Mesh(),CacheMatrix());
-		if(lpOther->Type()==WT_COLLISION_MODEL){return ModelModel(Mesh(),CacheMatrix(),lpOther->Mesh(),lpOther->CacheMatrix());}
-		if(lpOther->Type()==WT_COLLISION_BEAM) return RayModel(lpOther->Beam(),lpOther->CacheMatrix(),Mesh(),CacheMatrix());
+		if(lpOther->Type()==WT_COLLISION_MODEL)
+		{
+		    if(ModelModel(Mesh(),CacheMatrix(),lpOther->Mesh(),lpOther->CacheMatrix())) return true;
+		    else return ModelModel(lpOther->Mesh(),lpOther->CacheMatrix(),Mesh(),CacheMatrix());
+        }
+		if(lpOther->Type()==WT_COLLISION_BEAM || lpOther->Type()==WT_COLLISION_RAY) return RayModel(lpOther->Beam(),lpOther->CacheMatrix(),Mesh(),CacheMatrix());
 		if(lpOther->Type()==WT_COLLISION_COMPOUND) return CompoundCollision(lpOther->Compound(),lpOther->mpFollowing->mmCache,mpObject,mpFollowing->mmCache);
 	}
-	if(Type()==WT_COLLISION_BEAM)
+	if(Type()==WT_COLLISION_BEAM || Type()==WT_COLLISION_RAY)
 	{
 		if(lpOther->Type()==WT_COLLISION_MODEL) return RayModel(Beam(),CacheMatrix(),lpOther->Mesh(),lpOther->CacheMatrix());
 		if(lpOther->Type()==WT_COLLISION_COMPOUND) return CompoundCollision(lpOther->Compound(),lpOther->mpFollowing->mmCache,mpObject,mpFollowing->mmCache);
@@ -201,7 +209,7 @@ bool cCollisionObject::CheckCollision(cCollisionObject *lpOther)
 
 	if(Type()==WT_COLLISION_COMPOUND)
 	{
-        return CompoundCollision(Compound(),mpFollowing->mmCache,lpOther->Sphere(),lpOther->mpFollowing->mmCache);
+        return CompoundCollision(Compound(),mpFollowing->mmCache,lpOther->CollisionData(),lpOther->mpFollowing->mmCache);
     }
 
 	return 0;
@@ -290,7 +298,8 @@ cCompoundCollision *cCollisionObject::SetTypeCompound(cCompoundCollisionFile *lp
 
 	bool cCollisionObject::ModelModel(cCollisionObject *lpOther)
 	{
-	    return ModelModel(Mesh(),(mpFollowing->mmCache),lpOther->Mesh(),(lpOther->mpFollowing->mmCache));
+	    if (ModelModel(Mesh(),(mpFollowing->mmCache),lpOther->Mesh(),(lpOther->mpFollowing->mmCache))) return 1;
+	    else return ModelModel(lpOther->Mesh(),(lpOther->mpFollowing->mmCache),Mesh(),(mpFollowing->mmCache));
 	};
 
 	bool cCollisionObject::RayRay(cCollisionObject *lpOther)
@@ -330,12 +339,14 @@ bool cCollisionObject::CompoundCollision(cCompoundCollision* lpCompound,cMatrix4
                 switch(lpNode->Type())
                 {
                     case WT_COLLISION_RADIUS: {if(SphereSphere(lpNode->Sphere(),lcCompoundMatrix,lpOther->Sphere(),lcOtherMatrix)) return 1;} break;
+                    case WT_COLLISION_RAY:
                     case WT_COLLISION_BEAM: {if(SphereRay(lpOther->Sphere(),lcOtherMatrix,lpNode->Beam(),lcCompoundMatrix)) return 1;} break;
                     case WT_COLLISION_MODEL: {if(SphereModel(lpOther->Sphere(),lcOtherMatrix,lpNode->Mesh(),lcCompoundMatrix)) return 1;} break;
                     case WT_COLLISION_COMPOUND: {if(CompoundCollision(lpNode->Compound(),lcCompoundMatrix,lpOther,lcOtherMatrix)) return 1;} break;
                 };
          }
      }break;
+     case WT_COLLISION_RAY :
      case WT_COLLISION_BEAM :
      {
          uint32 liPos;
@@ -345,6 +356,7 @@ bool cCollisionObject::CompoundCollision(cCompoundCollision* lpCompound,cMatrix4
                 switch(lpNode->Type())
                 {
                     case WT_COLLISION_RADIUS: {if(SphereRay(lpNode->Sphere(),lcCompoundMatrix,lpOther->Beam(),lcOtherMatrix)) return 1;} break;
+                    case WT_COLLISION_RAY:
                     case WT_COLLISION_BEAM: {if(RayRay(lpOther->Beam(),lcOtherMatrix,lpNode->Beam(),lcCompoundMatrix)) return 1;} break;
                     case WT_COLLISION_MODEL: {if(RayModel(lpOther->Beam(),lcOtherMatrix,lpNode->Mesh(),lcCompoundMatrix)) return 1;} break;
                     case WT_COLLISION_COMPOUND: {if(CompoundCollision(lpNode->Compound(),lcCompoundMatrix,lpOther,lcOtherMatrix)) return 1;} break;
@@ -360,8 +372,12 @@ bool cCollisionObject::CompoundCollision(cCompoundCollision* lpCompound,cMatrix4
                 switch(lpNode->Type())
                 {
                     case WT_COLLISION_RADIUS: {if(SphereModel(lpNode->Sphere(),lcCompoundMatrix,lpOther->Mesh(),lcOtherMatrix)) return 1;} break;
+                    case WT_COLLISION_RAY:
                     case WT_COLLISION_BEAM: {if(RayModel(lpOther->Beam(),lcOtherMatrix,lpNode->Mesh(),lcCompoundMatrix)) return 1;} break;
-                    case WT_COLLISION_MODEL: {if(ModelModel(lpOther->Mesh(),lcOtherMatrix,lpNode->Mesh(),lcCompoundMatrix)) return 1;} break;
+                    case WT_COLLISION_MODEL: {
+                        if(ModelModel(lpOther->Mesh(),lcOtherMatrix,lpNode->Mesh(),lcCompoundMatrix)) return 1;
+                        else if(ModelModel(lpNode->Mesh(),lcCompoundMatrix,lpOther->Mesh(),lcOtherMatrix)) return 1;
+                    } break;
                     case WT_COLLISION_COMPOUND: {if(CompoundCollision(lpNode->Compound(),lcCompoundMatrix,lpOther,lcOtherMatrix)) return 1;} break;
                 };
          }
@@ -381,7 +397,7 @@ bool cCollisionObject::CompoundCollision(cCompoundCollision* lpCompound,cMatrix4
 bool cCollisionObject::CheckCollision(cCollisionObject *lpOther)
 {
 
-	if(Asleep() || lpOther->Asleep() || CreatedThisFrame() || lpOther->CreatedThisFrame()) return 0;
+	if(Asleep() || lpOther->Asleep() || IsDelayed() || lpOther->IsDelayed()) return 0;
 	return TouchCollision(lpOther);
 
 }

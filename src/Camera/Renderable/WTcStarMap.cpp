@@ -2,18 +2,22 @@
 
 void cStarMap::RenderPainter()
 {
-	StarMapMatrices();
+    //StarMapMatrices();
 	SetShaderVariables();
-	 uint32 liCount;
 
-	 glPointSize(1.0f);
-	 glBegin(GL_POINTS);
-	 for(liCount=0;liCount<miParticles;++liCount)
-	 {
-			glColor4fv(mpParticles[liCount].Color);
-			glVertex3fv(mpParticles[liCount].Position);
-	 }
-	 glEnd();
+    if(mpLastShader!=mpShader && mpShader)
+    {
+        mpLastShader=mpShader;
+        mpAttributeLinker->ShaderAndAttributeArray(mpShader,mpAttributes);
+
+        mpAttributes->Elements(miParticles);
+        mpAttributes->PointData((char*)mpParticles);
+
+        mpAttributes->Buffer();
+    }
+
+    mpAttributeLinker->Write();
+    glDrawArrays(GL_POINTS,0,miParticles);
 
 }
 
@@ -64,7 +68,7 @@ void cStarMap::StarMapMatrices()
 
 void cStarMap::Initialise(uint32 liParticles,float lfDist)
 {
-    //if(!lfDist) lfDist=mpRenderer->Camera()->Far()-mpRenderer->Camera()->Near()*3;
+    mpLastShader=0;
     if(!lfDist) lfDist=mpRenderer->Camera()->Far()*0.9;
 	miParticles=liParticles;
 	delete []mpParticles;
@@ -79,18 +83,39 @@ void cStarMap::Initialise(uint32 liParticles,float lfDist)
 		lfAngle[3]=cos(lfAngle[1]);
 
 		float lfValue[4];
-		lfValue[0]=sin(lfAngle[0])*lfDist+sin(lfAngle[1])*lfDist;
-		lfValue[1]=ZEROED_RANDOM_NUMBER*2*cos(lfAngle[1])*lfDist;
-		lfValue[2]=cos(lfAngle[0])*lfDist+sin(lfAngle[1])*lfDist;
+		lfValue[0]=sin(lfAngle[0])*sin(lfAngle[1])*lfDist;
+		lfValue[1]=cos(lfAngle[1])*lfDist;
+		lfValue[2]=cos(lfAngle[0])*sin(lfAngle[1])*lfDist;
 
 		mpParticles[liCount].SetPosition(lfValue);
-		mpParticles[liCount].SetSize(RANDOM_NUMBER*10.0f);
-		lfValue[0]=0.85+RANDOM_NUMBER*0.15;
-		lfValue[1]=0.85+RANDOM_NUMBER*0.15;
-		lfValue[2]=0.85+RANDOM_NUMBER*0.15;
-		lfValue[3]=0.3+RANDOM_NUMBER*0.5;
+		if(RANDOM_NUMBER>0.99)
+		{
+            mpParticles[liCount].SetSize(RANDOM_NUMBER*150.0f+5.0f);
+		}
+		else
+		{
+		    mpParticles[liCount].SetSize(RANDOM_NUMBER*3.0f+3.0f);
+		}
+
+		lfValue[0]=0.7+RANDOM_NUMBER*0.3;
+		lfValue[1]=0.7+RANDOM_NUMBER*0.3;
+		lfValue[2]=0.7+RANDOM_NUMBER*0.3;
+		lfValue[3]=1.0;
 		mpParticles[liCount].SetColor(lfValue);
+
 	}
+
+
+	mpAttributes=new cManualInterleavedAttributeArray(3);
+
+	mpAttributes->AddComponent(new cInterleavedVertexArray(3));
+	mpAttributes->AddComponent(new cInterleavedFloatArray(4,"Bb_Color"));
+	mpAttributes->AddComponent(new cInterleavedFloatArray(1,"Bb_Size"));
+
+	mpAttributes->Elements(0);
+	mpAttributes->PointData((char*)mpParticles);
+
+	mpAttributeLinker=new cAttributeLinker(mpAttributes);
 }
 
 	void cStar::SetSize(float lpSize)

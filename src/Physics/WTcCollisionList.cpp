@@ -1,18 +1,18 @@
 #include "../WTBamboo.h"
 
 
-cCollisionObject *cCollisionList::mpOther=0;
+cCollisionBase *cCollisionList::mpOther=0;
 cCollisionList *cCollisionList::mpStaticList=0;
 
 
 
-cCollisionListObject::cCollisionListObject(cCollisionObject *lpObj){mpObj=lpObj;mfBeamLength=10000.0f;};
+cCollisionListObject::cCollisionListObject(cCollisionBase *lpObj){mpObj=lpObj;mfBeamLength=10000.0f;};
 	cCollisionListObject::cCollisionListObject(){mfBeamLength=10000.0f;};
 	float cCollisionListObject::Distance(){return mfDistance;};
  	float cCollisionListObject::BeamLength(){return mfBeamLength;};
 
 
-void cCollisionList::AddCollision(cCollisionObject *lpObject)
+void cCollisionList::AddCollision(cCollisionBase *lpObject)
 {
 	Add(new cCollisionListObject(lpObject));
 }
@@ -29,16 +29,16 @@ void cCollisionList::AddCollision(cCollisionListObject *lpObj)
 
 
 
-cCollisionObject *cCollisionList::NextCollisionItem()
+cCollisionBase *cCollisionList::NextCollisionItem()
 {
 ++miCurPos;
- if(miCurPos==Items()){miCurPos=-1; return 0;}
+ if(miCurPos>=Items()){miCurPos=-1; return 0;}
  return mpList[miCurPos]->mpObj;
 }
 
 cProcess *cCollisionList::NextCollisionP()
 {
-cCollisionObject *lpTemp=NextCollisionItem();
+cCollisionBase *lpTemp=NextCollisionItem();
 while(lpTemp)
 {
 	if(lpTemp->GetLink()) return lpTemp->GetLink();
@@ -49,7 +49,7 @@ while(lpTemp)
 
 vRenderObject *cCollisionList::NextCollisionR()
 {
-	cCollisionObject *lpTemp=NextCollisionItem();
+	cCollisionBase *lpTemp=NextCollisionItem();
 	do
 	{
 		if(lpTemp && lpTemp->RenderObject()) return lpTemp->RenderObject();
@@ -64,13 +64,13 @@ cCollisionList::~cCollisionList()
 
 }
 
-cCollisionList::cCollisionList(cCollisionObject *lpThis)
+cCollisionList::cCollisionList(cCollisionBase *lpThis)
 {
     mpThisColl=lpThis;
 	miCurPos=-1;
 };
 
-cCollisionObject *cCollisionList::CurrentCollisionItem()
+cCollisionBase *cCollisionList::CurrentCollisionItem()
 {
     if(miCurPos>-1) return mpList[miCurPos]->mpObj;
     return 0;
@@ -131,9 +131,9 @@ void cCollisionList::RecalculateDistances()
  }
 }
 
-void cCollisionListObject::RecalculateDistance(cCollisionObject *lpThis)
+void cCollisionListObject::RecalculateDistance(cCollisionBase *lpThis)
 {
-    mfDistance=lpThis->Following()->mmCache.Distance(mvCentre);
+    mfDistance=lpThis->RenderObject()->mmCache.Distance(mvCentre);
 };
 
 c3DVf cCollisionListObject::Centre(){return mvCentre;};

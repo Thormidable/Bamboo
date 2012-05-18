@@ -54,11 +54,10 @@ void cAsteroid::Generate(float lfRandomRange, uint8 liSubdivisions)
   mpNormals=&mpVertex[miVertex*3];
   mpUV=&mpVertex[miVertex*6];
 
+  ZeroCentre();
+
   CreateNormalArray();
-  //CreateNormalArrayFlat();
   CreateUVSphereMap();
-
-
 
 };
 

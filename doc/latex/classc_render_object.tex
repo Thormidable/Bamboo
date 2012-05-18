@@ -13,7 +13,7 @@ Collaboration diagram for cRenderObject:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=400pt]{classc_render_object__coll__graph}
+\includegraphics[height=600pt]{classc_render_object__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -64,22 +64,15 @@ void \hyperlink{classc_render_object_a75f92ce4ba7b36a07e24be0643e4f020}{Shader} 
 \label{classc_render_object_a1a654b5029882db9175593b1f717c798}
 
 \begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classc_render_object}{cRenderObject}. Creates a new render object and adds itself to the \hyperlink{classc_render_node}{cRenderNode} of the \hyperlink{classc_camera}{cCamera} lpCamera. \end{DoxyCompactList}\item 
-\hypertarget{classc_render_object_a9cd352514159783b312cf9d3a6168e8e}{
-void \hyperlink{classc_render_object_a9cd352514159783b312cf9d3a6168e8e}{LinkCollisionObject} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpObj)}
-\label{classc_render_object_a9cd352514159783b312cf9d3a6168e8e}
-
-\begin{DoxyCompactList}\small\item\em This will set the Collision Object that is linked to this renderable object. This should be called automatically when a \hyperlink{classc_collision_object}{cCollisionObject} is created. \end{DoxyCompactList}\item 
-\hypertarget{classc_render_object_a532344b60df3ebd0cf893fa550df318e}{
-vRenderNode $\ast$ \hyperlink{classc_render_object_a532344b60df3ebd0cf893fa550df318e}{Renderer} ()}
-\label{classc_render_object_a532344b60df3ebd0cf893fa550df318e}
-
-\begin{DoxyCompactList}\small\item\em Returns the vRenderNode which owns this renderable process. \end{DoxyCompactList}\item 
 \hypertarget{classc_render_object_a7f1424d2badbe9e09bc6fd4af6616fa0}{
 void \hyperlink{classc_render_object_a7f1424d2badbe9e09bc6fd4af6616fa0}{Delete} ()}
 \label{classc_render_object_a7f1424d2badbe9e09bc6fd4af6616fa0}
 
 \begin{DoxyCompactList}\small\item\em Will remove this object from the render list owned by mpRenderer. \end{DoxyCompactList}\item 
-cRenderOwner \& \hyperlink{classc_render_object_a247947b8d810bf556af4677dd5165983}{SetRenderNode} (vRenderNode $\ast$lpNode)
+\hypertarget{classc_render_object_a1a023520677b50e63fc2334717a2761d}{
+void \hyperlink{classc_render_object_a1a023520677b50e63fc2334717a2761d}{AdditionalRenderFunctions} ()}
+\label{classc_render_object_a1a023520677b50e63fc2334717a2761d}
+
 \begin{DoxyCompactList}\small\item\em Will return a pointer to the Shader Program that is currently bound to this model. \end{DoxyCompactList}\item 
 \hypertarget{classc_render_object_a4e4d06cfc220b466c5057105c10d658c}{
 virtual void \hyperlink{classc_render_object_a4e4d06cfc220b466c5057105c10d658c}{Stop} ()}
@@ -96,14 +89,9 @@ virtual void \hyperlink{classc_render_object_ae64dcff609168192347a8fd833325bcb}{
 \label{classc_render_object_ae64dcff609168192347a8fd833325bcb}
 
 \begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a wake signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \end{DoxyCompactList}\item 
-\hypertarget{classc_render_object_aeeb8da742f1a844179a74a99e9aa4433}{
-void \hyperlink{classc_render_object_aeeb8da742f1a844179a74a99e9aa4433}{UpdateCache} ()}
-\label{classc_render_object_aeeb8da742f1a844179a74a99e9aa4433}
-
-\begin{DoxyCompactList}\small\item\em This function will update the object cache. For consistency all Renderable Objects must update the cache as they are rendered. This will be the global position of the object and is used to get consistent positions throughout a frame for collision detection. \end{DoxyCompactList}\item 
-void \hyperlink{classc_render_object_ae6383e70912480e39209e5ed6297380c}{AddTexture} (string lsTextureSlot, cTexture $\ast$lpTexture)
+void \hyperlink{classc_render_object_ae6383e70912480e39209e5ed6297380c}{AddTexture} (string lsTextureSlot, \hyperlink{classc_texture}{cTexture} $\ast$lpTexture)
 \begin{DoxyCompactList}\small\item\em Will Add the Texture lpTexture to the Texture slot with the name matching lsTextureSlot. Multitexturing in shaders is controlled using uniform sampler types: \end{DoxyCompactList}\item 
-void \hyperlink{classc_render_object_ad45b379f57731d803f7a52e58d91d3aa}{AddTexture} (cTexture $\ast$lpTexture)
+void \hyperlink{classc_render_object_ad45b379f57731d803f7a52e58d91d3aa}{AddTexture} (\hyperlink{classc_texture}{cTexture} $\ast$lpTexture)
 \item 
 \hypertarget{classc_render_object_a6e353a1713c4c6c46922a42e950f0d5a}{
 void \hyperlink{classc_render_object_a6e353a1713c4c6c46922a42e950f0d5a}{RemoveTexture} (string lsTextureSlot)}
@@ -115,24 +103,14 @@ void \hyperlink{classc_render_object_afd3f36d943e2438f52afb11133a526ca}{RemoveTe
 \label{classc_render_object_afd3f36d943e2438f52afb11133a526ca}
 
 \begin{DoxyCompactList}\small\item\em Will remove the texture in Textureslot number liTexSlot. (Texture0 Texture1 Texture2 etc.) \end{DoxyCompactList}\item 
-\hypertarget{classc_render_object_aed36706b1114b4ed11f2e5d8e8dd3ace}{
-float $\ast$ \hyperlink{classc_render_object_aed36706b1114b4ed11f2e5d8e8dd3ace}{GetPos} ()}
-\label{classc_render_object_aed36706b1114b4ed11f2e5d8e8dd3ace}
-
-\begin{DoxyCompactList}\small\item\em This will return the Local position of the selected object. \end{DoxyCompactList}\item 
-\hypertarget{classc_render_object_a7b3312f28505306fa8610d9e097f7b0e}{
-float $\ast$ \hyperlink{classc_render_object_a7b3312f28505306fa8610d9e097f7b0e}{GetCachedGlobalMatrix} ()}
-\label{classc_render_object_a7b3312f28505306fa8610d9e097f7b0e}
-
-\begin{DoxyCompactList}\small\item\em This will return the global position of the object as rendered at the end of last frame. This will return the cached Global position matrix as it was at the end of the last frame. This will only be updated when rendering occurs. For a 'current' global matrix the function cCameraMatrix4::CalculateGlobalMatrix() will actually calculate the current matrix. However it is very slow. \end{DoxyCompactList}\item 
-\hypertarget{classc_render_object_a2c8ef4ef4f7a005caae010b3e287a588}{
-void \hyperlink{classc_render_object_a2c8ef4ef4f7a005caae010b3e287a588}{Transparency} (bool lbTrans)}
-\label{classc_render_object_a2c8ef4ef4f7a005caae010b3e287a588}
+\hypertarget{classc_render_object_a67aaf98566003f0c60863aab06b874d4}{
+void \hyperlink{classc_render_object_a67aaf98566003f0c60863aab06b874d4}{Transparency} (uint8 lbTrans)}
+\label{classc_render_object_a67aaf98566003f0c60863aab06b874d4}
 
 \begin{DoxyCompactList}\small\item\em This will set whether this object uses transparency (Transparent objects are rendered after all other objects and in reverse distance order). \end{DoxyCompactList}\item 
-\hypertarget{classc_render_object_a740268aff52c1fa6cc5fde5122da35fa}{
-bool \hyperlink{classc_render_object_a740268aff52c1fa6cc5fde5122da35fa}{Transparency} ()}
-\label{classc_render_object_a740268aff52c1fa6cc5fde5122da35fa}
+\hypertarget{classc_render_object_adaf6cbdf9992883335faa1c906436221}{
+uint8 \hyperlink{classc_render_object_adaf6cbdf9992883335faa1c906436221}{Transparency} ()}
+\label{classc_render_object_adaf6cbdf9992883335faa1c906436221}
 
 \begin{DoxyCompactList}\small\item\em This will return whether this object is using transparency. \end{DoxyCompactList}\item 
 \hypertarget{classc_render_object_a67191d0fe8aceaa10052a542b3c34650}{
@@ -221,7 +199,7 @@ This class contains the base code for all renderable objects. Any renderable obj
 \subsubsection[{AddTexture}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderObject::AddTexture (
 \begin{DoxyParamCaption}
 \item[{string}]{lsTextureSlot, }
-\item[{cTexture $\ast$}]{lpTexture}
+\item[{{\bf cTexture} $\ast$}]{lpTexture}
 \end{DoxyParamCaption}
 )}}
 \label{classc_render_object_ae6383e70912480e39209e5ed6297380c}
@@ -238,28 +216,8 @@ Will Add the Texture lpTexture to the Texture slot with the name matching lsText
 \index{AddTexture@{AddTexture}!cRenderObject@{cRenderObject}}
 \subsubsection[{AddTexture}]{\setlength{\rightskip}{0pt plus 5cm}void cRenderObject::AddTexture (
 \begin{DoxyParamCaption}
-\item[{cTexture $\ast$}]{lpTexture}
+\item[{{\bf cTexture} $\ast$}]{lpTexture}
 \end{DoxyParamCaption}
 )}}
 \label{classc_render_object_ad45b379f57731d803f7a52e58d91d3aa}
-This will Add the Texture to the next free Texture sampler following the default rules (default is \char`\"{}Texture0\char`\"{} \char`\"{}Texture1\char`\"{} \char`\"{}Texture2\char`\"{}) This is a slow compared to \hyperlink{classc_render_object_ae6383e70912480e39209e5ed6297380c}{AddTexture(string,cTexture$\ast$)} It also allows for mistakes in naming of samplers in the shader if the samplers are not named \char`\"{}Texture0\char`\"{} \char`\"{}Texture1\char`\"{} \char`\"{}Texture2\char`\"{} etc. \hypertarget{classc_render_object_a247947b8d810bf556af4677dd5165983}{
-\index{cRenderObject@{cRenderObject}!SetRenderNode@{SetRenderNode}}
-\index{SetRenderNode@{SetRenderNode}!cRenderObject@{cRenderObject}}
-\subsubsection[{SetRenderNode}]{\setlength{\rightskip}{0pt plus 5cm}cRenderOwner\& cRenderObject::SetRenderNode (
-\begin{DoxyParamCaption}
-\item[{vRenderNode $\ast$}]{lpNode}
-\end{DoxyParamCaption}
-)}}
-\label{classc_render_object_a247947b8d810bf556af4677dd5165983}
-
-
-Will return a pointer to the Shader Program that is currently bound to this model. 
-
-Will move the current renderable object from the current \hyperlink{classc_render_node}{cRenderNode} to lpNode. 
-\begin{DoxyParams}{Parameters}
-{\em lpNode} & The \hyperlink{classc_render_node}{cRenderNode} which will now own this renderable object. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-This function returns the new \hyperlink{classc_linked_node}{cLinkedNode} which now owns this renderable object. 
-\end{DoxyReturn}
+This will Add the Texture to the next free Texture sampler following the default rules (default is \char`\"{}Texture0\char`\"{} \char`\"{}Texture1\char`\"{} \char`\"{}Texture2\char`\"{}) This is a slow compared to \hyperlink{classc_render_object_ae6383e70912480e39209e5ed6297380c}{AddTexture(string,cTexture$\ast$)} It also allows for mistakes in naming of samplers in the shader if the samplers are not named \char`\"{}Texture0\char`\"{} \char`\"{}Texture1\char`\"{} \char`\"{}Texture2\char`\"{} etc. 

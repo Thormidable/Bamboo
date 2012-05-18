@@ -79,8 +79,13 @@ std::string &cText::Text()
 }
 
 
-
+/*
 void cText::Text(char *lsText)
+{
+ mpString=lsText;
+}*/
+
+void cText::Text(string lsText)
 {
  mpString=lsText;
 }
@@ -90,12 +95,17 @@ cText::cText(const char *lsText)
  mpString=lsText;
 }
 
+cText::cText(string lsText)
+{
+ mpString=lsText;
+}
+
 cText::cText(cCamera *lpCamera) : cImage(lpCamera)
 {
 
 }
 
-cText::cText(const char *lsText,cCamera *lpCamera) : cImage(lpCamera)
+cText::cText(string lsText,cCamera *lpCamera) : cImage(lpCamera)
 {
 	mpString=lsText;
 }

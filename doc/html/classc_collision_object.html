@@ -75,24 +75,23 @@ Collaboration diagram for cCollisionObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="classc_collision_object__coll__graph.png" border="0" usemap="#c_collision_object_coll__map" alt="Collaboration graph"/></div>
 <map name="c_collision_object_coll__map" id="c_collision_object_coll__map">
-<area shape="rect" id="node27" href="classc_linked_node.html" title="cLinkedNode\&lt; cCollisionObject \&gt;" alt="" coords="1412,384,1628,413"/><area shape="rect" id="node2" href="classc_process.html" title="This is the base code for a process. This will automatically create a new process. It will hand itself to cKernel to be processed every frame. Any Processes created by the user should inherit this type to be handled by cKernel automatically. Initialisation code should go in the constructor of the user type. Linking to cKernel is performed automatically by cProcess. Update code should go in the function Run(). Coed performed when a process is killed should go in the function Stop(). NOT the destructor. Code to handle Sleeping and Waking signals should go in OnSleep() and OnWake(). Code to handle interaction of two processes should go in either processes UserSignal() function." alt="" coords="1003,269,1080,299"/><area shape="rect" id="node12" href="classc_linked_node.html" title="cLinkedNode\&lt; cProcess \&gt;" alt="" coords="233,189,409,219"/><area shape="rect" id="node22" href="classc_parent_stack.html" title="This class will automatically track the parents and children of each process. When a new process is c..." alt="" coords="1195,100,1296,129"/><area shape="rect" id="node4" href="classc_signal.html" title="Class for handling Signals sent between objects (cProcess, cRenderObject, cCollisionObject). Allows the user to wake, sleep and kill objects. For cProcess (while cParentStack is enabled) also allows signals to be sent to a process that will recursively affect all the children of that process. Possible signals to be passed in are _S_SLEEP,_S_WAKE,_S_KILL,_S_SLEEP_TREE, _S_WAKE_TREE,_S_KILL_TREE User Specified Signals are controlled by the class cUserSignal." alt="" coords="809,288,873,317"/><area shape="rect" id="node6" href="classc_user_signal.html" title="Class for handling user specified signals sent between classes inheriting cProcess. The function UserSignal should be defined for each object. The signals each class has defined can be independant. The code for processing the signal should be defined in UserSignal as there is no signal buffer. This should be used for dealing with Process interactions, to make a single point of detection of interaction and allowing both processes to handle the interaction. System signals (sleep, wake and kill) should be handled through cSignal." alt="" coords="795,341,888,371"/><area shape="rect" id="node8" href="classc_kernel.html" title="Kernel Object. Handles Processes. Tracks, runs and deletes current processes. Has complete control ov..." alt="" coords="808,184,875,213"/><area shape="rect" id="node10" href="classc_linked_list.html" title="cLinkedList\&lt; cProcess \&gt;" alt="" coords="513,103,679,132"/><area shape="rect" id="node16" href="classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="5,385,136,415"/><area shape="rect" id="node31" href="classc_linked_list.html" title="cLinkedList\&lt; cCollisionObject \&gt;" alt="" coords="1732,384,1937,413"/></map>
+<area shape="rect" id="node27" href="classc_linked_node.html" title="cLinkedNode\&lt; cCollisionObject \&gt;" alt="" coords="1417,404,1633,433"/><area shape="rect" id="node2" href="classc_process.html" title="This is the base code for a process. This will automatically create a new process. It will hand itself to cKernel to be processed every frame. Any Processes created by the user should inherit this type to be handled by cKernel automatically. Initialisation code should go in the constructor of the user type. Linking to cKernel is performed automatically by cProcess. Update code should go in the function Run(). Coed performed when a process is killed should go in the function Stop(). NOT the destructor. Code to handle Sleeping and Waking signals should go in OnSleep() and OnWake(). Code to handle interaction of two processes should go in either processes UserSignal() function." alt="" coords="1008,289,1085,319"/><area shape="rect" id="node12" href="classc_linked_node.html" title="cLinkedNode\&lt; cProcess \&gt;" alt="" coords="233,207,409,236"/><area shape="rect" id="node22" href="classc_parent_stack.html" title="This class will automatically track the parents and children of each process. When a new process is c..." alt="" coords="1200,120,1301,149"/><area shape="rect" id="node4" href="classc_signal.html" title="Class for handling Signals sent between objects (cProcess, cRenderObject, cCollisionObject). Allows the user to wake, sleep and kill objects. For cProcess (while cParentStack is enabled) also allows signals to be sent to a process that will recursively affect all the children of that process. Possible signals to be passed in are _S_SLEEP,_S_WAKE,_S_KILL,_S_SLEEP_TREE, _S_WAKE_TREE,_S_KILL_TREE User Specified Signals are controlled by the class cUserSignal." alt="" coords="815,308,879,337"/><area shape="rect" id="node6" href="classc_user_signal.html" title="Class for handling user specified signals sent between classes inheriting cProcess. The function UserSignal should be defined for each object. The signals each class has defined can be independant. The code for processing the signal should be defined in UserSignal as there is no signal buffer. This should be used for dealing with Process interactions, to make a single point of detection of interaction and allowing both processes to handle the interaction. System signals (sleep, wake and kill) should be handled through cSignal." alt="" coords="800,361,893,391"/><area shape="rect" id="node8" href="classc_kernel.html" title="Kernel Object. Handles Processes. Tracks, runs and deletes current processes. Has complete control ov..." alt="" coords="813,204,880,233"/><area shape="rect" id="node10" href="classc_linked_list.html" title="cLinkedList\&lt; cProcess \&gt;" alt="" coords="519,120,684,149"/><area shape="rect" id="node16" href="classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="5,405,136,435"/><area shape="rect" id="node31" href="classc_linked_list.html" title="cLinkedList\&lt; cCollisionObject \&gt;" alt="" coords="1743,404,1948,433"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classc_collision_object-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac56988f3641d39409fbf4ccba3525282"></a><!-- doxytag: member="cCollisionObject::CreatedThisFrame" ref="ac56988f3641d39409fbf4ccba3525282" args="()" -->
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#ac56988f3641d39409fbf4ccba3525282">CreatedThisFrame</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e2c3c60b9001189d314cc76e18a581d"></a><!-- doxytag: member="cCollisionObject::IsDelayed" ref="a5e2c3c60b9001189d314cc76e18a581d" args="()" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#a5e2c3c60b9001189d314cc76e18a581d">IsDelayed</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will return whether the CollisionObject was created this frame (and so unable to track locations as Global position is unknown) <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31156a5bfff63de45daa32893a30697c"></a><!-- doxytag: member="cCollisionObject::NotCreatedThisFrame" ref="a31156a5bfff63de45daa32893a30697c" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#a31156a5bfff63de45daa32893a30697c">NotCreatedThisFrame</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will return whether the CollisionObject was NOT created this frame (and so unable to track locations as Global position is unknown) <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abec1a68ab54f2e80244c8b336bca3626"></a><!-- doxytag: member="cCollisionObject::Signal" ref="abec1a68ab54f2e80244c8b336bca3626" args="(SIGNAL liFlags)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#abec1a68ab54f2e80244c8b336bca3626">Signal</a> (SIGNAL liFlags)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The Signal Function to allow <a class="el" href="classc_collision_object.html" title="This Object is the base object for detecting collisions. This object should be created and passed a p...">cCollisionObject</a> to receive Signals. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#a6f5b5341a726cb0a54fe3271b110dc8c">CheckCollision</a> (<a class="el" href="classc_collision_object.html">cCollisionObject</a> *lpOther)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will check for a collision between this object and the object lpOther.  <a href="#a6f5b5341a726cb0a54fe3271b110dc8c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classc_collision_list.html">cCollisionList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#a4fe3139893d4996304c63b1e4722a075">CheckCollisionDetail</a> (<a class="el" href="classc_collision_object.html">cCollisionObject</a> *lpOther, <a class="el" href="classc_collision_list.html">cCollisionList</a> *lpList=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will check for a collision between this object and the object lpOther.  <a href="#a4fe3139893d4996304c63b1e4722a075"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#a1d93858e03da25f8656ae688c4dedbce">TouchCollision</a> (<a class="el" href="classc_collision_object.html">cCollisionObject</a> *lpOther)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc47ab584910cc877b5e723be4e09eac"></a><!-- doxytag: member="cCollisionObject::CacheMatrix" ref="abc47ab584910cc877b5e723be4e09eac" args="()" -->
 <a class="el" href="classc_matrix4.html">cMatrix4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#abc47ab584910cc877b5e723be4e09eac">CacheMatrix</a> ()</td></tr>
@@ -106,8 +105,6 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a527f445a899adafbf18dddf140e179"></a><!-- doxytag: member="cCollisionObject::CollisionFilter" ref="a2a527f445a899adafbf18dddf140e179" args="(uint32 liID)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#a2a527f445a899adafbf18dddf140e179">CollisionFilter</a> (uint32 liID)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will set the Collision Filter ID of this object. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#ae9f62c64221d8cc347010fed3cf6e8d1">Collision</a> (<a class="el" href="classc_collision_object.html">cCollisionObject</a> *lpOther, uint32 lpCol)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#abf62376a5806d878b5810acfd40bc450">Collision</a> (<a class="el" href="classc_collision_object.html">cCollisionObject</a> *lpOther)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc8e58a747eba8e5c7903c8d769b9b31"></a><!-- doxytag: member="cCollisionObject::CompareRanges" ref="acc8e58a747eba8e5c7903c8d769b9b31" args="(float lf1, float lf2, float lfR)" -->
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#acc8e58a747eba8e5c7903c8d769b9b31">CompareRanges</a> (float lf1, float lf2, float lfR)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will do a sphere collision between two points. lf1 and lf2 are x*x+y*y+z*z. lfR is (Sum of Radii)*(Sum of Radii). <br/></td></tr>
@@ -151,6 +148,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will make a ray object. See cRayCollision::BuildObject(float *lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac28c6d5fff668bb3429de93909dd643d"></a><!-- doxytag: member="cCollisionObject::SetTypeRay" ref="ac28c6d5fff668bb3429de93909dd643d" args="(cRenderObject *lpObj)" -->
 <a class="el" href="classc_ray_collision.html">cRayCollision</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#ac28c6d5fff668bb3429de93909dd643d">SetTypeRay</a> (<a class="el" href="classc_render_object.html">cRenderObject</a> *lpObj)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will make a ray object. See cRayCollision::BuildObject(float *lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6fc6d835d646b55c36ccf0e62630cee"></a><!-- doxytag: member="cCollisionObject::SetType" ref="af6fc6d835d646b55c36ccf0e62630cee" args="(cRenderObject *lpObj, float lfRadius)" -->
+<a class="el" href="classc_ray_collision.html">cRayCollision</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#af6fc6d835d646b55c36ccf0e62630cee">SetType</a> (<a class="el" href="classc_render_object.html">cRenderObject</a> *lpObj, float lfRadius)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will make a ray object. See cRayCollision::BuildObject(float *lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e8f0b107345d7c03169d92eded17f87"></a><!-- doxytag: member="cCollisionObject::SetTypeRay" ref="a5e8f0b107345d7c03169d92eded17f87" args="(cRenderObject *lpObj, float lfRadius)" -->
+<a class="el" href="classc_ray_collision.html">cRayCollision</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#a5e8f0b107345d7c03169d92eded17f87">SetTypeRay</a> (<a class="el" href="classc_render_object.html">cRenderObject</a> *lpObj, float lfRadius)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will make a ray object. See cRayCollision::BuildObject(float *lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a647e170fc428c65d2795658ec737dee0"></a><!-- doxytag: member="cCollisionObject::SetTypeCompound" ref="a647e170fc428c65d2795658ec737dee0" args="(string lcReference)" -->
 <a class="el" href="classc_compound_collision.html">cCompoundCollision</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_collision_object.html#a647e170fc428c65d2795658ec737dee0">SetTypeCompound</a> (string lcReference)</td></tr>
@@ -198,12 +201,12 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 
 </div>
 </div>
-<a class="anchor" id="ae9f62c64221d8cc347010fed3cf6e8d1"></a><!-- doxytag: member="cCollisionObject::Collision" ref="ae9f62c64221d8cc347010fed3cf6e8d1" args="(cCollisionObject *lpOther, uint32 lpCol)" -->
+<a class="anchor" id="a4fe3139893d4996304c63b1e4722a075"></a><!-- doxytag: member="cCollisionObject::CheckCollisionDetail" ref="a4fe3139893d4996304c63b1e4722a075" args="(cCollisionObject *lpOther, cCollisionList *lpList=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool cCollisionObject::Collision </td>
+          <td class="memname"><a class="el" href="classc_collision_list.html">cCollisionList</a>* cCollisionObject::CheckCollisionDetail </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classc_collision_object.html">cCollisionObject</a> *&#160;</td>
           <td class="paramname"><em>lpOther</em>, </td>
@@ -211,8 +214,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32&#160;</td>
-          <td class="paramname"><em>lpCol</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classc_collision_list.html">cCollisionList</a> *&#160;</td>
+          <td class="paramname"><em>lpList</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -222,25 +225,16 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
       </table>
 </div>
 <div class="memdoc">
-<p>This Function will control the collision detection between this object and lpOther. It will check the filter lpCol to cehck that the other object is of a suitable type. Then will call <a class="el" href="classc_collision_object.html#a6f5b5341a726cb0a54fe3271b110dc8c" title="This will check for a collision between this object and the object lpOther.">CheckCollision(cCollisionObject *lpOther)</a> </p>
 
-</div>
-</div>
-<a class="anchor" id="abf62376a5806d878b5810acfd40bc450"></a><!-- doxytag: member="cCollisionObject::Collision" ref="abf62376a5806d878b5810acfd40bc450" args="(cCollisionObject *lpOther)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool cCollisionObject::Collision </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classc_collision_object.html">cCollisionObject</a> *&#160;</td>
-          <td class="paramname"><em>lpOther</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>This Function will control the collision detection between this object and lpOther. This has no filtering checks for type. It will check for errors and then call <a class="el" href="classc_collision_object.html#a6f5b5341a726cb0a54fe3271b110dc8c" title="This will check for a collision between this object and the object lpOther.">CheckCollision(cCollisionObject *lpOther)</a> </p>
+<p>This will check for a collision between this object and the object lpOther. </p>
+<p>* </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lpOther</td><td>is a pointer to the other collision object to check against. </td></tr>
+    <tr><td class="paramname">lpList</td><td>is a pointer to an existing <a class="el" href="classc_collision_list.html" title="This is generated by doing Collision Detection with an object. This will cache all the detected colli...">cCollisionList</a> object. If specified this will add all Collisions to the existing list. It will check both objects have collisions on. Then it will do an initial quick check to see if a collision is a possibility. Finally if required it will do a much more detailed collision check. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -302,7 +296,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:03 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:08 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

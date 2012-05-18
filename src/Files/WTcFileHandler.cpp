@@ -12,7 +12,7 @@ cFileHandler::~cFileHandler()
 {
 	trace("Deleting mpFiles");
 	delete mpFiles; mpFiles=0;
-	trace("Deleting mpFiles");
+	trace("mpFiles Deleted");
 }
 
 cFileHandler *cFileHandler::mpInstance=0;

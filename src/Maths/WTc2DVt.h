@@ -38,35 +38,76 @@ public:
         c2DVt(const c2DVt &lfVect);
 
        c2DVt<Type> operator=(c2DVt *lpValue);
-       c2DVt<Type> operator=(c2DVt &lpValue);
        c2DVt<Type> operator=(c2DVt lpValue);
        Type *operator=(Type *lpValue);
+	   Type operator=(Type lpValue);
 
-       c2DVt<Type> operator+=(c2DVt &lpValue);
+       c2DVt<Type> operator+=(c2DVt lpValue);
        c2DVt<Type> operator+=(c2DVt *lpValue);
        c2DVt<Type> operator+=(Type *lpValue);
+	   c2DVt<Type> operator+=(Type lpValue);
 
-       c2DVt<Type> operator-=(c2DVt &lpValue);
+       c2DVt<Type> operator-=(c2DVt lpValue);
        c2DVt<Type> operator-=(c2DVt *lpValue);
        c2DVt<Type> operator-=(Type *lpValue);
+	   c2DVt<Type> operator-=(Type lpValue);
 
-       c2DVt<Type> operator-(c2DVt &lpValue);
+       c2DVt<Type> operator-(c2DVt lpValue);
        c2DVt<Type> operator-(c2DVt *lpValue);
        c2DVt<Type> operator-(Type *lpValue);
+	   c2DVt<Type> operator-(Type lpValue);
 
-       c2DVt<Type> operator+(c2DVt &lpValue);
+       c2DVt<Type> operator+(c2DVt lpValue);
        c2DVt<Type> operator+(c2DVt *lpValue);
        c2DVt<Type> operator+(Type *lpValue);
+	   c2DVt<Type> operator+(Type lpValue);
+
+	   c2DVt<Type> operator*(c2DVt lpValue);
+       c2DVt<Type> operator*(c2DVt *lpValue);
+       c2DVt<Type> operator*(Type *lpValue);
+	   c2DVt<Type> operator*(Type lpValue);
+
+       c2DVt<Type> operator/(c2DVt lpValue);
+       c2DVt<Type> operator/(c2DVt *lpValue);
+       c2DVt<Type> operator/(Type *lpValue);
+	   c2DVt<Type> operator/(Type lpValue);
+
+       c2DVt<Type> operator*=(c2DVt lpValue);
+       c2DVt<Type> operator*=(c2DVt *lpValue);
+       c2DVt<Type> operator*=(Type *lpValue);
+	   c2DVt<Type> operator*=(Type lpValue);
+
+       c2DVt<Type> operator/=(c2DVt lpValue);
+       c2DVt<Type> operator/=(c2DVt *lpValue);
+       c2DVt<Type> operator/=(Type *lpValue);
+	   c2DVt<Type> operator/=(Type lpValue);
+
+
+	   bool operator==(c2DVt *lpValue);
+	   bool operator==(c2DVt lpValue);
+
+
 
 
 	   ///Will Findthe Dot Product of this vector and the vector lpValue.
-       Type Dot(c2DVt &lpValue);
+       Type Dot(c2DVt lpValue);
        Type Dot(Type *lpValue);
        Type Dot(c2DVt *lpValue);
 
+       c2DVt<Type> Perpendicular();
+       c2DVt<Type> PerpendicularLH();
+       c2DVt<Type> PerpendicularRH();
+
+        float Angle(c2DVt<Type> lpOther);
+        float SignedAngle(c2DVt<Type> lpOther);
 
 	   ///Allows the User to access the components as if an array of values.
        Type &operator[](uint32 liPos);
+
+	   void Equals(c2DVt *lpValue);
+       void Equals(c2DVt lpValue);
+       void Equals(Type *lpValue);
+	   void Equals(Type lpValue);
 
 };
 

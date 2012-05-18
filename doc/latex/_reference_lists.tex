@@ -17,9 +17,9 @@ This section contains a list of useful Macros for accessing various functions or
 \begin{DoxyItemize}
 \item A Class Type for passing Signals between Process', Render Objects and Collision Objects.
 \end{DoxyItemize}
-\item \_\-KEY(KEY\_\-ID)
+\item \_\-KEY(KEY\_\-CODE\_\-ID)
 \begin{DoxyItemize}
-\item Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List.
+\item Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List and start 'KEY\_\-CODE\_\-' .
 \end{DoxyItemize}
 \item \_\-MOUSE
 \begin{DoxyItemize}
@@ -174,7 +174,7 @@ The \hyperlink{classc_matrix4}{cMatrix4} class and cCameraMatrix classes are ver
  3D Object Translation Functions: \par
  void \hyperlink{classc_matrix4_a746ce09337cbf6a3292cbe15991efd79}{cMatrix4::Set3D()} \par
  float \hyperlink{classc_matrix4_a39cf7cefa0672684e69eb4af89366270}{cMatrix4::Determinant()}; \par
- \hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a7473299a57ffcfe284e6fd9005b98592}{cMatrix4::InvertRotationMatrix()}; \par
+ \hyperlink{classc_matrix4}{cMatrix4} cMatrix4::InvertRotationMatrix(); \par
  \hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_ac8b6f1a9352943cd86ef4c088c438307}{cMatrix4::Transpose()}; \par
  void \hyperlink{classc_matrix4_af728db2d340a48de20d9f9e143e3a19b}{cMatrix4::Translate(float lfX,float lfY,float lfZ)}; \par
  \par
@@ -244,7 +244,7 @@ The \hyperlink{classc_matrix4}{cMatrix4} class and cCameraMatrix classes are ver
  \par
  void \hyperlink{classc_matrix4_adb76264fa82ef10ebb24b64d6293bc9d}{cMatrix4::Equals(float $\ast$lpOther)}; \par
  void \hyperlink{classc_matrix4_a943edd1e04048bd2bcb93987a6c47819}{cMatrix4::Equals(cMatrix4 $\ast$lpOther)}; \par
- void \hyperlink{classc_matrix4_a2b04c467006fe476d6f2e5efc61b3ead}{cMatrix4::Equals(cMatrix4 \&lpOther)}; \par
+ void cMatrix4::Equals(cMatrix4 \&lpOther); \par
  void \hyperlink{classc_matrix4_a0af5e0b1dbbe6d7f4c512a5f07f1e273}{cMatrix4::Equals(cCameraMatrix4 \&lpOther)}; \par
  void \hyperlink{classc_matrix4_a12b028ad76a776c5a01d695ea620962b}{cMatrix4::Equals(cCameraMatrix4 $\ast$lpOther)}; \par
  \par
@@ -280,8 +280,8 @@ The \hyperlink{classc_matrix4}{cMatrix4} class and cCameraMatrix classes are ver
 cCameraMatrix4.h \par
  The \hyperlink{classc_camera_matrix4}{cCameraMatrix4} is the matrix used for the camera. The format is different to the \hyperlink{classc_matrix4}{cMatrix4} class as it is used in a different manner. Many of the functions are called the same thing and have the same function. It also has a few additional functions which are useful for Camera manipulation. \par
  \par
- float $\ast$cCameraMatrix4::Matrix() \par
- float $\ast$cCameraMatrix4::Position() \par
+ float$\ast$ \hyperlink{classc_camera_matrix4_ad8aad043cd8c21d5323b56cbcc90ef78}{cCameraMatrix4::Matrix()} \par
+ float$\ast$ \hyperlink{classc_camera_matrix4_a89fba901320f6dda9a6b92bac09db915}{cCameraMatrix4::Position()} \par
  \par
  float \hyperlink{classc_camera_matrix4_a0133c16b734fa93e767ea89964799fb5}{cCameraMatrix4::X()} \par
  float \hyperlink{classc_camera_matrix4_aec72cb78c62b2e0970824262b0b4aa1f}{cCameraMatrix4::Y()} \par
@@ -361,12 +361,7 @@ cCameraMatrix4.h \par
  void \hyperlink{classc_camera_matrix4_a1ec81a7ec3274f89d2b8fb94923345c0}{cCameraMatrix4::Zero()} \par
  float \hyperlink{classc_camera_matrix4_a4f3456fc67fbd37692a8daa9d11d5fc6}{cCameraMatrix4::Determinant()} \par
 \hypertarget{_reference_lists_KeyIdentifiersList}{}\section{List of Key Identifiers}\label{_reference_lists_KeyIdentifiersList}
-These correspond to the Key codes for the Macro \_\-KEY() 
-\begin{DoxyCode}
- if(_KEY(KEY_SPACE)) _CREATE(Bulltets());
- if(_KEY(KEY_TAB)) _KERNEL->KillAll();
-\end{DoxyCode}
-
+These correspond to the states of keys:
 
 KEY\_\-BACKSPACE \par
  KEY\_\-TAB \par
@@ -474,6 +469,123 @@ KEY\_\-a \par
  KEY\_\-x \par
  KEY\_\-y \par
  KEY\_\-z \par
+
+
+There are also accessor codes for the Macro \_\-KEY(). These are actually unsigned integers and so can be passed as parameters.
+
+
+\begin{DoxyCode}
+ if(_KEY(KEY_CODE_SPACE)) _CREATE(Bulltets());
+ if(_KEY(KEY_CODE_TAB)) _KERNEL->KillAll();
+\end{DoxyCode}
+
+
+KEY\_\-CODE\_\-BACKSPACE \par
+ KEY\_\-CODE\_\-TAB \par
+ KEY\_\-CODE\_\-ENTER \par
+ KEY\_\-CODE\_\-RETURN \par
+ KEY\_\-CODE\_\-SHIFT \par
+ KEY\_\-CODE\_\-CONTROL \par
+ KEY\_\-CODE\_\-CTRL \par
+ KEY\_\-CODE\_\-ALTERNATE \par
+ KEY\_\-CODE\_\-ALT \par
+ KEY\_\-CODE\_\-PAUSE \par
+ KEY\_\-CODE\_\-CAPSLOCK \par
+ KEY\_\-CODE\_\-CAPITALLOCK \par
+ KEY\_\-CODE\_\-ESCAPE \par
+ KEY\_\-CODE\_\-ESC \par
+ KEY\_\-CODE\_\-SPACE \par
+ KEY\_\-CODE\_\-PGUP \par
+ KEY\_\-CODE\_\-PAGEUP \par
+ KEY\_\-CODE\_\-PGDN \par
+ KEY\_\-CODE\_\-PAGEDOWN \par
+ KEY\_\-CODE\_\-END \par
+ KEY\_\-CODE\_\-HOME \par
+ KEY\_\-CODE\_\-LEFT \par
+ KEY\_\-CODE\_\-LEFTARROW \par
+ KEY\_\-CODE\_\-RIGHT \par
+ KEY\_\-CODE\_\-RIGHTARROW \par
+ KEY\_\-CODE\_\-UP \par
+ KEY\_\-CODE\_\-UPARROW \par
+ KEY\_\-CODE\_\-DOWN \par
+ KEY\_\-CODE\_\-DOWNARROW \par
+ KEY\_\-CODE\_\-SELECT \par
+ KEY\_\-CODE\_\-EARLYPRINT \par
+ KEY\_\-CODE\_\-EARLYPRINTSCREEN \par
+ KEY\_\-CODE\_\-EXECUTE \par
+ KEY\_\-CODE\_\-PRINT \par
+ KEY\_\-CODE\_\-PRINTSCREEN \par
+ KEY\_\-CODE\_\-INS \par
+ KEY\_\-CODE\_\-INSERT \par
+ KEY\_\-CODE\_\-DEL \par
+ KEY\_\-CODE\_\-DELETE \par
+ KEY\_\-CODE\_\-HELP \par
+ \par
+ KEY\_\-CODE\_\-0 \par
+ KEY\_\-CODE\_\-1 \par
+ KEY\_\-CODE\_\-2 \par
+ KEY\_\-CODE\_\-3 \par
+ KEY\_\-CODE\_\-4 \par
+ KEY\_\-CODE\_\-5 \par
+ KEY\_\-CODE\_\-6 \par
+ KEY\_\-CODE\_\-7 \par
+ KEY\_\-CODE\_\-8 \par
+ KEY\_\-CODE\_\-9 \par
+ \par
+ KEY\_\-CODE\_\-A \par
+ KEY\_\-CODE\_\-B \par
+ KEY\_\-CODE\_\-C \par
+ KEY\_\-CODE\_\-D \par
+ KEY\_\-CODE\_\-E \par
+ KEY\_\-CODE\_\-F \par
+ KEY\_\-CODE\_\-G \par
+ KEY\_\-CODE\_\-H \par
+ KEY\_\-CODE\_\-I \par
+ KEY\_\-CODE\_\-J \par
+ KEY\_\-CODE\_\-K \par
+ KEY\_\-CODE\_\-L \par
+ KEY\_\-CODE\_\-M \par
+ KEY\_\-CODE\_\-N \par
+ KEY\_\-CODE\_\-O \par
+ KEY\_\-CODE\_\-P \par
+ KEY\_\-CODE\_\-Q \par
+ KEY\_\-CODE\_\-R \par
+ KEY\_\-CODE\_\-S \par
+ KEY\_\-CODE\_\-T \par
+ KEY\_\-CODE\_\-U \par
+ KEY\_\-CODE\_\-V \par
+ KEY\_\-CODE\_\-W \par
+ KEY\_\-CODE\_\-X \par
+ KEY\_\-CODE\_\-Y \par
+ KEY\_\-CODE\_\-Z \par
+
+
+KEY\_\-CODE\_\-a \par
+ KEY\_\-CODE\_\-b \par
+ KEY\_\-CODE\_\-c \par
+ KEY\_\-CODE\_\-d \par
+ KEY\_\-CODE\_\-e \par
+ KEY\_\-CODE\_\-f \par
+ KEY\_\-CODE\_\-g \par
+ KEY\_\-CODE\_\-h \par
+ KEY\_\-CODE\_\-i \par
+ KEY\_\-CODE\_\-j \par
+ KEY\_\-CODE\_\-k \par
+ KEY\_\-CODE\_\-l \par
+ KEY\_\-CODE\_\-m \par
+ KEY\_\-CODE\_\-n \par
+ KEY\_\-CODE\_\-o \par
+ KEY\_\-CODE\_\-p \par
+ KEY\_\-CODE\_\-q \par
+ KEY\_\-CODE\_\-r \par
+ KEY\_\-CODE\_\-s \par
+ KEY\_\-CODE\_\-t \par
+ KEY\_\-CODE\_\-u \par
+ KEY\_\-CODE\_\-v \par
+ KEY\_\-CODE\_\-w \par
+ KEY\_\-CODE\_\-x \par
+ KEY\_\-CODE\_\-y \par
+ KEY\_\-CODE\_\-z \par
 \hypertarget{_reference_lists_EngineSettingsPage}{}\section{Engine Settings}\label{_reference_lists_EngineSettingsPage}
 This Section contains the complete list of engine settings. They are all variables. Most can be modified during run time. Ones which cannot are listed here.
 \begin{DoxyItemize}
@@ -623,20 +735,20 @@ This section contains information of which objects which are handled by Bamboo. 
 \item \hyperlink{classc_audio_object}{cAudioObject}
 \end{DoxyItemize}These objects can be used as instances and can be created and deleted as desired. The \hyperlink{classc_file}{cFile} objects are the types used when the \_\-GET\_\-FILE() macros are used. Otherwise you are unlikely to use them.
 \begin{DoxyItemize}
-\item \hyperlink{classc1_d_vf}{c1DVf}
-\item \hyperlink{classc2_d_vf}{c2DVf}
-\item \hyperlink{classc3_d_vf}{c3DVf}
-\item \hyperlink{classc4_d_vf}{c4DVf}
-\item \hyperlink{classc2_d_vi}{c2DVi}
-\item \hyperlink{classc3_d_vi}{c3DVi}
+\item c1DVf
+\item c2DVf
+\item c3DVf
+\item c4DVf
+\item c2DVi
+\item c3DVi
 \item \hyperlink{classc_matrix4}{cMatrix4}
 \item \hyperlink{classc_camera_matrix4}{cCameraMatrix4}
-\item cMatrixStack
+\item \hyperlink{classc_matrix_stack}{cMatrixStack}
 \item \hyperlink{classc_file}{cFile} (These are for loaded media files. You should not need to create objects of these types)
 \begin{DoxyItemize}
 \item cSoundObject
 \item \hyperlink{classc_mesh_file_collision}{cMeshFileCollision}
-\item cTexture
+\item \hyperlink{classc_texture}{cTexture}
 \item \hyperlink{classc_font}{cFont}
 \item \hyperlink{classc_mesh}{cMesh}
 \item \hyperlink{classcm_landscape}{cmLandscape}

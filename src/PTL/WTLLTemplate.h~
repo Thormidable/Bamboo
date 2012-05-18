@@ -25,6 +25,10 @@ template<class T> class cLinkedNode
 	cLinkedList<T> *mpList;
 
 	void List(cLinkedList<T> *lpTemp){mpList=lpTemp;};
+		/// This is a pointer to the data owned by this node.
+	T *mpData;
+
+public:
 	/// This will delete the data owned by this node as it is deconstructed.
 	~cLinkedNode()
 	{
@@ -34,15 +38,12 @@ template<class T> class cLinkedNode
 		mpPrev=0;
 	};
 
-		/// This is a pointer to the data owned by this node.
-	T *mpData;
-
-public:
-
 	/// This will return a pointer to the next node in the linked list. see cLinkedList.
 	cLinkedNode<T> *Next(){return mpNext;}
 	/// This will return a pointer to the previous node in the linked list. see cLinkedList.
 	cLinkedNode<T> *Previous(){return mpPrev;}
+
+	T *Data(){return mpData;};
 };
 
 /**
@@ -57,6 +58,8 @@ template<class T> class cLinkedList
        cLinkedNode<T> *mpStart;
 	/// This is a pointer to the last cLinkedNode in the list.
        cLinkedNode<T> *mpEnd;
+
+	   cLinkedNode<T> *mpCursor;
 
 public:
 
@@ -106,6 +109,9 @@ public:
 	void Display();
 	/// This will delete the cLinkedNode pointed to by lpOld and remove it from the list, but not delete mpData.
 	void Remove(cLinkedNode<T> *lpNode);
+
+	T *FindStart(){mpCursor=Start(); return mpCursor->Data();};
+	T *FindNext(){mpCursor=mpCursor->Next(); if(mpCursor) return mpCursor->Data(); else return 0;};
 };
 
 template<class T> void cLinkedList<T>::Initialise()

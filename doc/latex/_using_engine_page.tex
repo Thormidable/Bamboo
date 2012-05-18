@@ -114,7 +114,7 @@ Run(): Run() is run once every frame as long as cCore is alive and controls the 
  void cCore::Run()
  {
 
-  if(_KEY(KEY_SPACE)) _CAMERA->Far(10.0f);
+  if(KEY_SPACE) _CAMERA->Far(10.0f);
    else _CAMERA->Far(1000.0f);
   _CAMERA->Frustum();
 
@@ -190,7 +190,7 @@ Killing a Process: Process' must not be destroyed by deleting the process. Proce
  void player::Run()
  {
 
- if(_KEY(KEY_k))
+ if(KEY_k)
  {
  mpPointerToAnotherProcess->Signal(_S_KILL);
  _KILL(this);
@@ -205,7 +205,7 @@ Killing a Process: Process' must not be destroyed by deleting the process. Proce
  void player::Run()
  {
 
- if(_KEY(KEY_k))
+ if(KEY_k)
         {
          _KILL(mpPointerToAnotherProcess);
          _KILL();
@@ -222,8 +222,8 @@ Waking a Process: A Process can be awakend by calling the \hyperlink{classc_sign
  void player::Run()
  {
 
- if(_KEY(KEY_s)) mpPointerToAnotherProcess->Signal(_S_SLEEP);
- if(_KEY(KEY_w)) mpPointerToAnotherProcess->Signal(_S_WAKE);
+ if(KEY_s) mpPointerToAnotherProcess->Signal(_S_SLEEP);
+ if(KEY_w) mpPointerToAnotherProcess->Signal(_S_WAKE);
 
  }
 \end{DoxyCode}
@@ -234,7 +234,7 @@ Removing a Process: A Process can be killed by the \hyperlink{classc_kernel}{cKe
  void player::Run()
  {
 
- if(_KEY(KEY_k)) _KERNEL->Remove(mpPointerToAProcessesNode);
+ if(KEY_k) _KERNEL->Remove(mpPointerToAProcessesNode);
 
  }
 \end{DoxyCode}
@@ -336,7 +336,7 @@ The class \hyperlink{classc_audio_object}{cAudioObject} are used to play sounds 
 \hypertarget{_using_engine_page_SignalsPage}{}\section{Signals and Flags}\label{_using_engine_page_SignalsPage}
 There are a range of Signal macros which allow you to send signals to other processes. 
 \begin{DoxyCode}
- if(_KEY(KEY_SPACE)) _SLEEP_THIS();
+ if(KEY_SPACE) _SLEEP_THIS();
  cProcess *OtherProcess;
  OtherProcess=_FIND_PROCESS(cChildProcess);
  _KILL(OtherProcess);
@@ -345,7 +345,7 @@ There are a range of Signal macros which allow you to send signals to other proc
  \par
  List of macros: \_\-KILL(PROCESS) : Will kill the object pointed to by PROCESS. \_\-SLEEP(PROCESS) : Will sleep the object pointed to by PROCESS. \_\-WAKE(PROCESS) : Will wake the object pointed to by PROCESS. \_\-KILL\_\-THIS() : Will kill this object. Code after this will still be run, once this frame. The command return will allow the user to exit the object without running further code. \_\-SLEEP\_\-THIS() : Will sleep this object. Code after this will still be run, once this frame. The command return will allow the user to exit the object without running further code. \_\-WAKE\_\-THIS() : Will never have an effect. (As the code will not run if this object is asleep and there is no waking to be done if the process is awake).
 
-You can send your own signals between processes by defining the function \hyperlink{classc_user_signal_ab11af50af566f1df2a8cf41902e1ac9f}{cUserSignal::UserSignal(SIGNAL lsSignal,void $\ast$ lpData)} in your process class. This function is empty and virtual so This function is entirely user defined which means you can use your own flags to signal different actions for different processes. The void pointer allows you to send any additional information you may want. UserSignal() is a part of \hyperlink{classc_process}{cProcess} so any \hyperlink{classc_process}{cProcess} pointer can use it and will select the version of the function in the derived class. \par
+You can send your own signals between processes by defining the function \hyperlink{classc_user_signal_a2f7ada3ca4ee80e2082e12a97b450221}{cUserSignal::UserSignal(SIGNAL lsSignal,void $\ast$ lpData)} in your process class. This function is empty and virtual so This function is entirely user defined which means you can use your own flags to signal different actions for different processes. The void pointer allows you to send any additional information you may want. UserSignal() is a part of \hyperlink{classc_process}{cProcess} so any \hyperlink{classc_process}{cProcess} pointer can use it and will select the version of the function in the derived class. \par
 
 
 For Advanced Programmers: \par

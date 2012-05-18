@@ -1,11 +1,21 @@
 #include "../WTBamboo.h"
-
-void cCollisionHandler::MouseCollisionCheck(c3DVf lpRV,c3DVf lpStart,float lfRadius,cMatrix4 &lmOtherMatrix)
+/*
+void cCollisionHandler::MouseCollisionCheck(c3DVf lpRayVector,c3DVf lpStart,float lfRadius,cMatrix4 &lmOtherMatrix)
 {
  if(cCollisionList::mpOther->Asleep() || cCollisionList::mpOther->IsDelayed()) return;
 double lfEq[2];
 
-lpStart-=lmOtherMatrix.Position();
+    c3DVf lpRayTemp=lpStart-lmOtherMatrix.Position();
+
+	lpStart[0]=(lpRayTemp[0]*lmOtherMatrix[0]+lpRayTemp[1]*lmOtherMatrix[1]+lpRayTemp[2]*lmOtherMatrix[2]);
+	lpStart[1]=(lpRayTemp[0]*lmOtherMatrix[4]+lpRayTemp[1]*lmOtherMatrix[5]+lpRayTemp[2]*lmOtherMatrix[6]);
+ 	lpStart[2]=(lpRayTemp[0]*lmOtherMatrix[8]+lpRayTemp[1]*lmOtherMatrix[9]+lpRayTemp[2]*lmOtherMatrix[10]);
+
+        c3DVf lpRV;
+        lpRV[0]=(lpRayVector[0]*lmOtherMatrix[0]+lpRayVector[1]*lmOtherMatrix[1]+lpRayVector[2]*lmOtherMatrix[2]);
+        lpRV[1]=(lpRayVector[0]*lmOtherMatrix[4]+lpRayVector[1]*lmOtherMatrix[5]+lpRayVector[2]*lmOtherMatrix[6]);
+        lpRV[2]=(lpRayVector[0]*lmOtherMatrix[8]+lpRayVector[1]*lmOtherMatrix[9]+lpRayVector[2]*lmOtherMatrix[10]);
+
 
 //Find the number of Ray vectors to reach the sphere.
 lfEq[0]=(lpStart[0]*lpRV[0]+
@@ -23,7 +33,7 @@ lfEq[0]=(lpStart[0]*lpRV[0]+
 
     lfRadius+=cCollisionList::mpOther->Sphere()->CollisionSize();
 
-	if(lfEq[1]<lfRadius*lfRadius)
+	if(lfEq[1]<lfRadius)
 	{
         lfEq[1]=sqrt(lfEq[1]);
         cCollisionListObject *lpTemp=new cCollisionListObject;
@@ -35,7 +45,7 @@ lfEq[0]=(lpStart[0]*lpRV[0]+
 	}
 
 }
-
+*/
 cCollisionHandler *cCollisionHandler::spInstance=0;
 
 cCollisionHandler *cCollisionHandler::Instance()
@@ -48,12 +58,12 @@ cCollisionHandler *cCollisionHandler::Instance()
  return spInstance;
 }
 
-uint32 cCollisionHandlerType::FindSlot(cCollisionObject *lpObj)
+uint32 cCollisionHandlerType::FindSlot(cCollisionBase *lpObj)
 {
  return lpObj->CollisionFilter();
 }
 
-cCollisionList *cCollisionHandlerBSP::GenerateDetailedCollisionList(cCollisionObject *lpCheck,uint32 lpCol,cCollisionList *lpList)
+cCollisionList *cCollisionHandlerBSP::GenerateDetailedCollisionList(cCollisionBase *lpCheck,uint32 lpCol,cCollisionList *lpList)
 {
     if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpCheck);
 	else cCollisionList::mpStaticList=lpList;
@@ -76,7 +86,7 @@ cCollisionList *cCollisionHandlerBSP::GenerateDetailedCollisionList(cCollisionOb
 	return cCollisionList::mpStaticList;
 }
 
-cCollisionList *cCollisionHandlerBSP::GenerateCollisionList(cCollisionObject *lpCheck,uint32 lpCol,cCollisionList *lpList)
+cCollisionList *cCollisionHandlerBSP::GenerateCollisionList(cCollisionBase *lpCheck,uint32 lpCol,cCollisionList *lpList)
 {
 	if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpCheck);
 	else cCollisionList::mpStaticList=lpList;
@@ -99,7 +109,7 @@ cCollisionList *cCollisionHandlerBSP::GenerateCollisionList(cCollisionObject *lp
 	return cCollisionList::mpStaticList;
 }
 
-
+/*
 cCollisionList *cCollisionHandlerBSP::GenerateMouseSelection(c3DVf MouseVector,c3DVf MouseStart,float lfRadius,uint32 lpCol,cCollisionList *lpList)
 {
 if(!lpList) cCollisionList::mpStaticList=new cCollisionList(0);
@@ -107,7 +117,7 @@ else cCollisionList::mpStaticList=lpList;
 
         ResetCursors();
 
-        uint32 liTopPos;
+        uint32 liTopPos=0;
         if(WT_COLLISION_HANDLER_DIMENSIONS==WT_COLLISION_HANDLER_DIMENSIONS_1D) liTopPos=WT_COLLISION_HANDLER_SIZE;
         if(WT_COLLISION_HANDLER_DIMENSIONS==WT_COLLISION_HANDLER_DIMENSIONS_2D) liTopPos=WT_COLLISION_HANDLER_SIZE+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
         if(WT_COLLISION_HANDLER_DIMENSIONS==WT_COLLISION_HANDLER_DIMENSIONS_3D) liTopPos=WT_COLLISION_HANDLER_SIZE+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
@@ -124,16 +134,43 @@ else cCollisionList::mpStaticList=lpList;
             }
         }
 	return cCollisionList::mpStaticList;
-};
+};*/
 
-cCollisionList *cCollisionHandlerType::GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType,cCollisionList *lpList)
+/*
+cCollisionList *cCollisionHandlerBSP::GenerateMouseSelection(cMouseCollisionObject *lpMouse,uint32 lpCol,cCollisionList *lpList)
+{
+if(!lpList) cCollisionList::mpStaticList=new cCollisionList(0);
+else cCollisionList::mpStaticList=lpList;
+
+        ResetCursors();
+
+        uint32 liTopPos=0;
+        if(WT_COLLISION_HANDLER_DIMENSIONS==WT_COLLISION_HANDLER_DIMENSIONS_1D) liTopPos=WT_COLLISION_HANDLER_SIZE;
+        if(WT_COLLISION_HANDLER_DIMENSIONS==WT_COLLISION_HANDLER_DIMENSIONS_2D) liTopPos=WT_COLLISION_HANDLER_SIZE+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        if(WT_COLLISION_HANDLER_DIMENSIONS==WT_COLLISION_HANDLER_DIMENSIONS_3D) liTopPos=WT_COLLISION_HANDLER_SIZE+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        for(uint32 liSlot=0;liSlot<liTopPos;++liSlot)
+        {
+            ResetCursors();
+            while(NextListItem(liSlot))
+            {
+                if(mpColCur->Data()->CollisionFilter()==lpCol || !lpCol)
+                {
+                    cCollisionList::mpOther=mpColCur->Data();
+                    lpMouse->CheckCollision();
+                }
+            }
+        }
+	return cCollisionList::mpStaticList;
+};
+*/
+cCollisionList *cCollisionHandlerType::GenerateCollisionList(cCollisionBase *lpObj,uint32 lpType,cCollisionList *lpList)
 {
 	if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpObj);
 	else cCollisionList::mpStaticList=lpList;
 
   if(lpObj->Awake() && !lpObj->IsDelayed())
   {
-            ResetCursors();
+        ResetCursors();
         if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE)
         {
             if(lpType)
@@ -164,8 +201,8 @@ cCollisionList *cCollisionHandlerType::GenerateCollisionList(cCollisionObject *l
   }
   return cCollisionList::mpStaticList;
 }
-
-cCollisionList *cCollisionHandlerType::GenerateMouseSelection(c3DVf MouseVector,c3DVf MouseStart,float lfRadius,uint32 lpType,cCollisionList *lpList)
+/*
+cCollisionList *cCollisionHandlerType::GenerateMouseSelection(cMouseCollisionObject *lpMouse,uint32 lpType,cCollisionList *lpList)
 {
 	if(!lpList) cCollisionList::mpStaticList=new cCollisionList(0);
 	else cCollisionList::mpStaticList=lpList;
@@ -176,7 +213,7 @@ cCollisionList *cCollisionHandlerType::GenerateMouseSelection(c3DVf MouseVector,
             while(NextListItem(lpType))
                 {
                         cCollisionList::mpOther=mpColCur->Data();
-                        MouseCollisionCheck(MouseVector,MouseStart,lfRadius,cCollisionList::mpOther->CacheMatrix());
+                        lpMouse->CheckCollision();
                 }
         }
         else
@@ -189,15 +226,15 @@ cCollisionList *cCollisionHandlerType::GenerateMouseSelection(c3DVf MouseVector,
         }
   return cCollisionList::mpStaticList;
 };
+*/
 
-
-cCollisionList *cCollisionHandlerType::GenerateDetailedCollisionList(cCollisionObject *lpObj,uint32 lpType,cCollisionList *lpList)
+cCollisionList *cCollisionHandlerType::GenerateDetailedCollisionList(cCollisionBase *lpObj,uint32 lpType,cCollisionList *lpList)
 {
 	if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpObj);
 	else cCollisionList::mpStaticList=lpList;
     if(lpObj->Awake() && !lpObj->IsDelayed())
 	{
-            ResetCursors();
+        ResetCursors();
         if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE && lpType)
         {
             while(NextListItem(lpType))
@@ -276,14 +313,14 @@ bool cCollisionHandlerType::NextListItem(uint32 lpType)
 
 }
 
-void cCollisionHandlerType::RemoveFromList(cLinkedNode<cCollisionObject> *lpOld)
+void cCollisionHandlerType::RemoveFromList(cLinkedNode<cCollisionBase> *lpOld)
 {
  if(lpOld->Data())
  mpList[FindSlot(lpOld->Data())].Remove(lpOld);
 
 }
 
-cLinkedNode<cCollisionObject> *cCollisionHandlerType::Add(cCollisionObject *lpObject)
+cLinkedNode<cCollisionBase> *cCollisionHandlerType::Add(cCollisionBase *lpObject)
 {
 
 return mpList[FindSlot(lpObject)].Insert(lpObject);
@@ -294,7 +331,7 @@ return mpList[FindSlot(lpObject)].Insert(lpObject);
 
 cCollisionHandlerType::cCollisionHandlerType()
 {
-mpList=new cLinkedList<cCollisionObject>[WT_COLLISION_HANDLER_ARRAY_SIZE];
+mpList=new cLinkedList<cCollisionBase>[WT_COLLISION_HANDLER_ARRAY_SIZE];
 ResetCursors();
 if(!spInstance) spInstance=this;
 
@@ -313,7 +350,7 @@ miCurPos=0;
 mpColCur=0;
 }
 
-void cCollisionHandlerType::Remove(cLinkedNode<cCollisionObject> *lpOld)
+void cCollisionHandlerType::Remove(cLinkedNode<cCollisionBase> *lpOld)
 {
  lpOld->Data()->Signal(_S_KILL);
 }
@@ -355,14 +392,14 @@ return liPosition;
 
 }
 
-uint32 cCollisionHandlerBSP::FindSlot(cCollisionObject *lpObj)
+uint32 cCollisionHandlerBSP::FindSlot(cCollisionBase *lpObj)
 {
 	return FindSlot(lpObj->RenderObject()->GetCachedGlobalMatrix());
 }
 
 
 
-cLinkedList<cCollisionObject> *cCollisionHandlerBSP::FindSlot(uint32 *lpPos)
+cLinkedList<cCollisionBase> *cCollisionHandlerBSP::FindSlot(uint32 *lpPos)
 {
  uint32 liTemp=0;
  uint32 liState=1;

@@ -1,19 +1,20 @@
 #include "../WTBamboo.h"
 
 
-uint16 cMatrixStack::miDepth=8;
+uint16 cMatrixStack::miDepth=0;
 
 cMatrixStack *cMatrixStack::mpInstance=0;
 
 cMatrixStack::cMatrixStack(uint16 liDepth) : cLimitedList<cMatrix4>(liDepth)
 {
+	miDepth=liDepth;
 	UpdateCurrent();
 	mmCurrent->Identity();
 }
 
 cMatrixStack *cMatrixStack::Instance()
 {
-	if(!mpInstance) mpInstance=new cMatrixStack(miDepth);
+	if(!mpInstance) mpInstance=new cMatrixStack(_MATRIX_STACK_DEPTH);
 	return mpInstance;
 }
 

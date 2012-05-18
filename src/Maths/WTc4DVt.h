@@ -46,29 +46,35 @@ public:
        c4DVt<Type> operator=(c4DVt lpValue);
        c4DVt<Type> operator=(cRGBA *lpValue);
        c4DVt<Type> operator=(cRGBA &lpValue);
-       Type *operator=(Type *lpValue);
+       c4DVt<Type> operator=(Type *lpValue);
+       c4DVt<Type> operator=(Type lpValue);
 
-       c4DVt<Type> operator+=(c4DVt &lpValue);
+       c4DVt<Type> operator+=(c4DVt lpValue);
        c4DVt<Type> operator+=(c4DVt *lpValue);
        c4DVt<Type> operator+=(Type *lpValue);
+       c4DVt<Type> operator+=(Type lpValue);
 
-       c4DVt<Type> operator-=(c4DVt &lpValue);
+       c4DVt<Type> operator-=(c4DVt lpValue);
        c4DVt<Type> operator-=(c4DVt *lpValue);
        c4DVt<Type> operator-=(Type *lpValue);
+       c4DVt<Type> operator-=(Type lpValue);
 
-       c4DVt<Type> operator-(c4DVt &lpValue);
+       c4DVt<Type> operator-(c4DVt lpValue);
        c4DVt<Type> operator-(c4DVt *lpValue);
        c4DVt<Type> operator-(Type *lpValue);
+       c4DVt<Type> operator-(Type lpValue);
 
-       c4DVt<Type> operator+(c4DVt &lpValue);
+       c4DVt<Type> operator+(c4DVt lpValue);
        c4DVt<Type> operator+(c4DVt *lpValue);
        c4DVt<Type> operator+(Type *lpValue);
-/*
-       ///Will Find the cross Product of this vector and the vector lpValue.
-       c4DVt<Type> operator*(c4DVt &lpValue);
-       c4DVt<Type> operator*(c4DVt *lpValue);
-       c4DVt<Type> operator*(Type *lpValue);
-*/
+       c4DVt<Type> operator+(Type lpValue);
+
+       c4DVt<Type> operator*(Type lpValue);
+       c4DVt<Type> operator/(Type lpValue);
+
+       c4DVt<Type> operator*=(Type lpValue);
+       c4DVt<Type> operator/=(Type lpValue);
+
 
 	   ///Will Findthe Dot Product of this vector and the vector lpValue.
        Type Dot(c4DVt &lpValue);

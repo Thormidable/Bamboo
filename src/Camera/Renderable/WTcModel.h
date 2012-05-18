@@ -33,7 +33,9 @@ public:
     float GetSize();
     double GetSizeSq();
 
+	///Will return the closest UV co-ordinates based of a point in Global space.
     c2DVf GetUVCoords(c3DVf GlobalPos);
+
 };
 
 #endif

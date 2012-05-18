@@ -32,10 +32,10 @@ public:
 
 
 
- /// This will return a pointer to this objects matrix.
- float *Matrix();
- /// This will return the position vector of this objects matrix.
- float *Position();
+ ///This will return a pointer to this objects matrix.
+ float* Matrix();
+ ///This will return the position vector of this objects matrix.
+ float* Position();
 
 /// The position of this matrix has been seperated from the rest of the matrix as the camera should rotate around 0,0,0, not itself
 float mpPosition[3];

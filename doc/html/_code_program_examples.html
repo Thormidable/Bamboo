@@ -286,7 +286,7 @@ Example of a bouncing ball with a bounce sound.</h2>
 
  <span class="comment">//Create a variable for each dimension the ball moves in.</span>
  <span class="comment">//This could be a c3DVf which is a 3 dimensional vector</span>
- <a class="code" href="classc3_d_vf.html" title="This is a 3 dimensional float vector object.">c3DVf</a> BallSpeed;
+ c3DVf BallSpeed;
 
   <span class="comment">//Constructor - Initialisation code.</span>
         cCore()
@@ -323,9 +323,9 @@ Example of a bouncing ball with a bounce sound.</h2>
         <span class="comment">//Because this is an instance</span>
     <span class="comment">//(not a Bamboo engine object)</span>
     <span class="comment">//it should be accessed using the dot operator.</span>
-                BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>( RANDOM_NUMBER * 0.1 );
-                BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>( RANDOM_NUMBER * 0.1 );
-                BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>( RANDOM_NUMBER * 0.1 );
+                BallSpeed.X( RANDOM_NUMBER * 0.1 );
+                BallSpeed.Y( RANDOM_NUMBER * 0.1 );
+                BallSpeed.Z( RANDOM_NUMBER * 0.1 );
 
         <span class="comment">//Create an audio file for playing the bounce sound.</span>
                 BallBounce = _CREATE(<a class="code" href="classc_audio_object.html" title="This class will allow a sound to be played. This class will link an audio source and a buffer...">cAudioObject</a>);
@@ -342,24 +342,24 @@ Example of a bouncing ball with a bounce sound.</h2>
                         BallSpeedY = BallSpeedY - 0.01;
 
                 <span class="comment">//Advance the Ball by its speed in all three Global axis.</span>
-                        BallPointer -&gt; GAdvance( BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>() , BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>() , BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>() );
+                        BallPointer -&gt; GAdvance( BallSpeed.X() , BallSpeed.Y() , BallSpeed.Z() );
 
                 <span class="comment">//If the ball is outside any of the boundaries.</span>
                 <span class="comment">//There are much more concise ways of doing this but this is the clearest.</span>
                 <span class="comment">//This is the same as previously, but with 6 boundaries instead of 1.</span>
                 <span class="keywordflow">if</span>( BallPointer -&gt; X()  &lt; - 30.0  || BallPointer -&gt; X() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>() ) ;
+                        BallSpeed.<a class="code" href="classc_matrix4.html#aff5d7d1cf3cf0b9ddb9e55e2f799012f" title="This will return this objects X position value.">X</a>( -BallSpeed.X() ) ;
                         BallBounce -&gt; Play();
                 }
                 <span class="keywordflow">if</span>( BallPointer -&gt; Y()  &lt; - 30.0  || BallPointer -&gt; Y() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>() ) ;
+                        BallSpeed.Y( -BallSpeed.Y() ) ;
                         BallBounce -&gt; Play();
                 }
                 <span class="keywordflow">if</span>( BallPointer -&gt; Z()  &lt; - 30.0  || BallPointer -&gt; Z() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>() ) ;
+                        BallSpeed.Z( -BallSpeed.Z() ) ;
                         BallBounce -&gt; Play();
                 }
 
@@ -398,7 +398,7 @@ Making the camera controllable. Adding bullets.</h2>
 
  <span class="comment">//Create a variable for each dimension the ball moves in.</span>
  <span class="comment">//This could be a c3DVf which is a 3 dimensional vector</span>
- <a class="code" href="classc3_d_vf.html" title="This is a 3 dimensional float vector object.">c3DVf</a> BallSpeed;
+ c3DVf BallSpeed;
 
   <span class="comment">//Constructor - Initialisation code.</span>
         cBall()
@@ -434,9 +434,9 @@ Making the camera controllable. Adding bullets.</h2>
                 <span class="comment">//(not a Bamboo engine object)</span>
                 <span class="comment">//it should be accessed using the dot operator.</span>
 
-        BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>( RANDOM_NUMBER * 0.1 );
-        BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>( RANDOM_NUMBER * 0.1 );
-        BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>( RANDOM_NUMBER * 0.1 );
+        BallSpeed.X( RANDOM_NUMBER * 0.1 );
+        BallSpeed.Y( RANDOM_NUMBER * 0.1 );
+        BallSpeed.Z( RANDOM_NUMBER * 0.1 );
 
         <span class="comment">//Create an audio file for playing the bounce sound.</span>
         BallBounce = _CREATE(<a class="code" href="classc_audio_object.html" title="This class will allow a sound to be played. This class will link an audio source and a buffer...">cAudioObject</a>);
@@ -453,23 +453,23 @@ Making the camera controllable. Adding bullets.</h2>
                 BallSpeedY = BallSpeedY - 0.01;
 
                 <span class="comment">//Advance the Ball by its speed in all three Global axis.</span>
-                BallPointer -&gt; GAdvance( BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>() , BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>() , BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>() );
+                BallPointer -&gt; GAdvance( BallSpeed.X() , BallSpeed.Y() , BallSpeed.Z() );
 
                 <span class="comment">//If the ball is outside any of the boundaries.</span>
                 <span class="comment">//Reverse it&#39;s direction in that axis</span>
                 <span class="keywordflow">if</span>( BallPointer -&gt; X()  &lt; - 30.0  || BallPointer -&gt; X() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>() ) ;
+                        BallSpeed.<a class="code" href="classc_matrix4.html#aff5d7d1cf3cf0b9ddb9e55e2f799012f" title="This will return this objects X position value.">X</a>( -BallSpeed.X() ) ;
                         BallBounce -&gt; Play();
                 }
                 <span class="keywordflow">if</span>( BallPointer -&gt; Y()  &lt; - 30.0  || BallPointer -&gt; Y() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>() ) ;
+                        BallSpeed.Y( -BallSpeed.Y() ) ;
                         BallBounce -&gt; Play();
                 }
                 <span class="keywordflow">if</span>( BallPointer -&gt; Z()  &lt; - 30.0  || BallPointer -&gt; Z() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>() ) ;
+                        BallSpeed.Z( -BallSpeed.Z() ) ;
                         BallBounce -&gt; Play();
                 }
 
@@ -629,7 +629,7 @@ Example with Bullet and Ball collisions.</h2>
 
  <span class="comment">//Create a variable for each dimension the ball moves in.</span>
  <span class="comment">//This could be a c3DVf which is a 3 dimensional vector</span>
- <a class="code" href="classc3_d_vf.html" title="This is a 3 dimensional float vector object.">c3DVf</a> BallSpeed;
+ c3DVf BallSpeed;
 
   <span class="comment">//Constructor - Initialisation code.</span>
         cBall()
@@ -672,9 +672,9 @@ Example with Bullet and Ball collisions.</h2>
                 <span class="comment">//Set the ball to move in a random direction at 0.1 units per frame</span>
                 <span class="comment">//RANDOM_NUMBER is a random float between 0.0 and 1.0.</span>
                 <span class="comment">//Because this is an instance (not a Bamboo engine object) it should be accessed using the dot operator.</span>
-        BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>( RANDOM_NUMBER * 0.1 );
-        BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>( RANDOM_NUMBER * 0.1 );
-        BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>( RANDOM_NUMBER * 0.1 );
+        BallSpeed.X( RANDOM_NUMBER * 0.1 );
+        BallSpeed.Y( RANDOM_NUMBER * 0.1 );
+        BallSpeed.Z( RANDOM_NUMBER * 0.1 );
 
         <span class="comment">//Create an audio file for playing the bounce sound.</span>
         BallBounce = _CREATE(<a class="code" href="classc_audio_object.html" title="This class will allow a sound to be played. This class will link an audio source and a buffer...">cAudioObject</a>);
@@ -691,24 +691,24 @@ Example with Bullet and Ball collisions.</h2>
 
                         <span class="comment">//Advance the Ball by its speed in all three Global axis.</span>
                         <span class="comment">//If this was a Local axis you would not notice a change until you rotated the ball around.</span>
-                BallPointer -&gt; GAdvance( BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>() , BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>() , BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>() );
+                BallPointer -&gt; GAdvance( BallSpeed.X() , BallSpeed.Y() , BallSpeed.Z() );
 
                         <span class="comment">//If the ball is outside any of the boundaries.</span>
                         <span class="comment">//There are much more concise ways of doing this but this is the clearest.</span>
                         <span class="comment">//This is exactly the same as previously, but with 6 boundaries instead of 1.</span>
                 <span class="keywordflow">if</span>( BallPointer -&gt; X()  &lt; - 30.0  || BallPointer -&gt; X() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>() ) ;
+                        BallSpeed.<a class="code" href="classc_matrix4.html#aff5d7d1cf3cf0b9ddb9e55e2f799012f" title="This will return this objects X position value.">X</a>( -BallSpeed.X() ) ;
                         BallBounce -&gt; Play();
                 }
                 <span class="keywordflow">if</span>( BallPointer -&gt; Y()  &lt; - 30.0  || BallPointer -&gt; Y() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>() ) ;
+                        BallSpeed.Y( -BallSpeed.Y() ) ;
                         BallBounce -&gt; Play();
                 }
                 <span class="keywordflow">if</span>( BallPointer -&gt; Z()  &lt; - 30.0  || BallPointer -&gt; Z() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>() ) ;
+                        BallSpeed.Z( -BallSpeed.Z() ) ;
                         BallBounce -&gt; Play();
                 }
 
@@ -912,7 +912,7 @@ Example with a continual supply of balls.</h2>
 
         <span class="comment">//Create a variable for each dimension the ball moves in.</span>
         <span class="comment">//This could be a c3DVf which is a 3 dimensional vector</span>
- <a class="code" href="classc3_d_vf.html" title="This is a 3 dimensional float vector object.">c3DVf</a> BallSpeed;
+ c3DVf BallSpeed;
 
         <span class="comment">//Give this Ball a variable to store its health.</span>
  <span class="keywordtype">float</span> Health;
@@ -961,9 +961,9 @@ Example with a continual supply of balls.</h2>
         <span class="comment">//Set the ball to move in a random direction at 0.1 units per frame</span>
         <span class="comment">//RANDOM_NUMBER is a random float between 0.0 and 1.0.</span>
         <span class="comment">//Because this is an instance (not a Bamboo engine object) it should be accessed using the dot operator.</span>
-                BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>( RANDOM_NUMBER * 0.1 );
-                BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>( RANDOM_NUMBER * 0.1 );
-                BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>( RANDOM_NUMBER * 0.1 );
+                BallSpeed.X( RANDOM_NUMBER * 0.1 );
+                BallSpeed.Y( RANDOM_NUMBER * 0.1 );
+                BallSpeed.Z( RANDOM_NUMBER * 0.1 );
 
         <span class="comment">//Create an audio file for playing the bounce sound.</span>
                 BallBounce = _CREATE( <a class="code" href="classc_audio_object.html" title="This class will allow a sound to be played. This class will link an audio source and a buffer...">cAudioObject</a> );
@@ -984,24 +984,24 @@ Example with a continual supply of balls.</h2>
 
                 <span class="comment">//Advance the Ball by its speed in all three Global axis.</span>
                 <span class="comment">//If this was a Local axis you would not notice a change until you rotated the ball around.</span>
-                        BallPointer -&gt; GAdvance( BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>() , BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>() , BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>() );
+                        BallPointer -&gt; GAdvance( BallSpeed.X() , BallSpeed.Y() , BallSpeed.Z() );
 
                 <span class="comment">//If the ball is outside any of the boundaries.</span>
                 <span class="comment">//There are much more concise ways of doing this but this is the clearest.</span>
                 <span class="comment">//This is exactly the same as previously, but with 6 boundaries instead of 1.</span>
                 <span class="keywordflow">if</span>( BallPointer -&gt; X()  &lt; - 30.0  || BallPointer -&gt; X() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>() ) ;
+                        BallSpeed.<a class="code" href="classc_matrix4.html#aff5d7d1cf3cf0b9ddb9e55e2f799012f" title="This will return this objects X position value.">X</a>( -BallSpeed.X() ) ;
                         BallBounce -&gt; Play();
                 }
                 <span class="keywordflow">if</span>( BallPointer -&gt; Y()  &lt; - 30.0  || BallPointer -&gt; Y() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>() ) ;
+                        BallSpeed.Y( -BallSpeed.Y() ) ;
                         BallBounce -&gt; Play();
                 }
                 <span class="keywordflow">if</span>( BallPointer -&gt; Z()  &lt; - 30.0  || BallPointer -&gt; Z() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>() ) ;
+                        BallSpeed.Z( -BallSpeed.Z() ) ;
                         BallBounce -&gt; Play();
                 }
 
@@ -1233,7 +1233,7 @@ Previous Example without comments</h2>
  <a class="code" href="classc_model.html" title="A standard Textured Model renderable object.">cModel</a> *BallPointer;
  <a class="code" href="classc_audio_object.html" title="This class will allow a sound to be played. This class will link an audio source and a buffer...">cAudioObject</a> *BallBounce;
  <a class="code" href="classc_collision_object.html" title="This Object is the base object for detecting collisions. This object should be created and passed a p...">cCollisionObject</a> *BallCollision;
- <a class="code" href="classc3_d_vf.html" title="This is a 3 dimensional float vector object.">c3DVf</a> BallSpeed;
+ c3DVf BallSpeed;
  <span class="keywordtype">float</span> Health;
 
         cBall()
@@ -1250,9 +1250,9 @@ Previous Example without comments</h2>
         BallCollision -&gt; SetType( 1.0 );
         BallCollision -&gt; CollisionFilter( 1 );
 
-        BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>( RANDOM_NUMBER * 0.1 );
-        BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>( RANDOM_NUMBER * 0.1 );
-        BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>( RANDOM_NUMBER * 0.1 );
+        BallSpeed.X( RANDOM_NUMBER * 0.1 );
+        BallSpeed.Y( RANDOM_NUMBER * 0.1 );
+        BallSpeed.Z( RANDOM_NUMBER * 0.1 );
 
         BallBounce = _CREATE(<a class="code" href="classc_audio_object.html" title="This class will allow a sound to be played. This class will link an audio source and a buffer...">cAudioObject</a>);
         BallBounce -&gt; Buffer ( <span class="stringliteral">&quot;BallSound&quot;</span> );
@@ -1264,21 +1264,21 @@ Previous Example without comments</h2>
         {
                 BallSpeedY = BallSpeedY - 0.01;
 
-                BallPointer -&gt; GAdvance( BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>() , BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>() , BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>() );
+                BallPointer -&gt; GAdvance( BallSpeed.X() , BallSpeed.Y() , BallSpeed.Z() );
 
                 <span class="keywordflow">if</span>( BallPointer -&gt; X()  &lt; - 30.0  || BallPointer -&gt; X() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#a2304a40da7960b52ab47d18028011e1c" title="Return this Vectors X Value.">X</a>() ) ;
+                        BallSpeed.<a class="code" href="classc_matrix4.html#aff5d7d1cf3cf0b9ddb9e55e2f799012f" title="This will return this objects X position value.">X</a>( -BallSpeed.X() ) ;
                         BallBounce -&gt; Play();
                 }
                 <span class="keywordflow">if</span>( BallPointer -&gt; Y()  &lt; - 30.0  || BallPointer -&gt; Y() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#a2fb998ffcf6feb5cb74851b0e454e3f2" title="Return this Vectors Y Value.">Y</a>() ) ;
+                        BallSpeed.Y( -BallSpeed.Y() ) ;
                         BallBounce -&gt; Play();
                 }
                 <span class="keywordflow">if</span>( BallPointer -&gt; Z()  &lt; - 30.0  || BallPointer -&gt; Z() &gt; 30.0)
                 {
-                        BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>( -BallSpeed.<a class="code" href="classc3_d_vf.html#aec04e18360364105fee47d174ecee2e6" title="Return this Vectors Z Value.">Z</a>() ) ;
+                        BallSpeed.Z( -BallSpeed.Z() ) ;
                         BallBounce -&gt; Play();
                 }
 
@@ -1424,7 +1424,7 @@ _PROCESS(cCore)
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:03 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:07 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -28,6 +28,8 @@ vRenderObject::vRenderObject()
 
 cRenderObject::~cRenderObject()
 {
+    mbAlive=false;
+    mbAwake=false;
     if(mpCollisionObject)
 	{
 		_KILL(mpCollisionObject);
@@ -456,6 +458,8 @@ void cRenderObject::AddTexture(string lsTextureSlot,string lcTextureReference)
 c3DVf vRenderObject::GetScreenPosition()
 {
 	 c3DVf lfReturn;
+ //if(mpCamera)
+// {
  float lfPos[4];
 
  lfReturn.X(1.0f/mmTotalCache[15]);
@@ -467,6 +471,7 @@ c3DVf vRenderObject::GetScreenPosition()
  lfReturn.X(mpCamera->ViewportX() + mpCamera->ViewportWidth() * (lfPos[0]+1.0f)*0.5f);
  lfReturn.Y(mpCamera->ViewportY() + mpCamera->ViewportHeight() *(lfPos[1]+1.0f)*0.5f);
  lfReturn.Z(mpCamera->Near() + (mpCamera->Far()-mpCamera->Near())*lfPos[2]);
+// }
  return lfReturn;
 }
 
@@ -537,4 +542,9 @@ void vRenderObject::Process(cProcess *lpProcess)
 cProcess *vRenderObject::Process()
 {
  return mpProcess;
+};
+
+c3DVf vRenderObject::FindRelativeCoord(c3DVf GlobalPos)
+{
+    return mmCache.FindPointRelative(GlobalPos);
 };

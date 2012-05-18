@@ -1,206 +1,216 @@
 \begin{theindex}
 
   \item {AddTexture}
-    \subitem {cRenderObject}, \hyperpage{238}
+    \subitem {cRenderObject}, \hyperpage{272}
 
   \indexspace
 
   \item {BuildObject}
-    \subitem {cMeshCollision}, \hyperpage{197}
+    \subitem {cMeshCollision}, \hyperpage{221}
 
   \indexspace
 
-  \item {c1DVf}, \hyperpage{113}
-  \item {c2DVf}, \hyperpage{113}
-  \item {c2DVi}, \hyperpage{114}
-  \item {c3DVf}, \hyperpage{114}
-  \item {c3DVi}, \hyperpage{115}
-  \item {c4DVf}, \hyperpage{116}
-  \item {cAttributeArray1}, \hyperpage{116}
-  \item {cAttributeArray2}, \hyperpage{117}
-  \item {cAttributeArray3}, \hyperpage{118}
-  \item {cAttributeArray4}, \hyperpage{119}
-  \item {cAttributeBooleanArray1}, \hyperpage{120}
-  \item {cAttributeBooleanArray2}, \hyperpage{121}
-  \item {cAttributeBooleanArray3}, \hyperpage{122}
-  \item {cAttributeBooleanArray4}, \hyperpage{123}
-  \item {cAttributeIntArray1}, \hyperpage{124}
-  \item {cAttributeIntArray2}, \hyperpage{125}
-  \item {cAttributeIntArray3}, \hyperpage{126}
-  \item {cAttributeIntArray4}, \hyperpage{127}
-  \item {cAttributeStore}, \hyperpage{128}
-  \item {cAudioBuffer}, \hyperpage{130}
-  \item {cAudioDevice}, \hyperpage{130}
-  \item {cAudioListener}, \hyperpage{131}
-  \item {cAudioObject}, \hyperpage{132}
-  \item {cBeamCollision}, \hyperpage{134}
-  \item {cBeamMesh}, \hyperpage{135}
-  \item {cBooleanAttributeStore}, \hyperpage{136}
-  \item {cBooleanUniformStore}, \hyperpage{137}
-  \item {cButton}, \hyperpage{138}
-  \item {cButtonBase}, \hyperpage{139}
-  \item {cCamera}, \hyperpage{139}
-  \item {cCameraHandler}, \hyperpage{141}
-  \item {cCameraMatrix4}, \hyperpage{142}
-  \item {cCluster}, \hyperpage{146}
-  \item {cCollisionHandler}, \hyperpage{147}
-  \item {cCollisionList}, \hyperpage{150}
-  \item {cCollisionListObject}, \hyperpage{151}
-  \item {cCollisionObject}, \hyperpage{152}
-    \subitem {CheckCollision}, \hyperpage{154}
-    \subitem {Collision}, \hyperpage{154}
-    \subitem {SetLink}, \hyperpage{155}
-    \subitem {TouchCollision}, \hyperpage{155}
-  \item {cCompoundCollision}, \hyperpage{155}
-  \item {cCompoundCollisionNode}, \hyperpage{157}
-  \item {cEventHandler}, \hyperpage{158}
-  \item {cFace}, \hyperpage{159}
-  \item {cFile}, \hyperpage{159}
-  \item {cFileHandler}, \hyperpage{161}
-  \item {cFloatAttributeStore}, \hyperpage{163}
-  \item {cFloatUniformStore}, \hyperpage{164}
-  \item {cFont}, \hyperpage{164}
-  \item {cFrameRate}, \hyperpage{165}
-  \item {cGravityParticle}, \hyperpage{166}
+  \item {c2DVt}, \hyperpage{115}
+  \item {c3DVt}, \hyperpage{116}
+  \item {c4DVt}, \hyperpage{117}
+  \item {cAsteroid}, \hyperpage{118}
+    \subitem {cAsteroid}, \hyperpage{120}
+  \item {cAttributeArray1}, \hyperpage{121}
+  \item {cAttributeArray2}, \hyperpage{122}
+  \item {cAttributeArray3}, \hyperpage{123}
+  \item {cAttributeArray4}, \hyperpage{124}
+  \item {cAttributeBooleanArray1}, \hyperpage{125}
+  \item {cAttributeBooleanArray2}, \hyperpage{126}
+  \item {cAttributeBooleanArray3}, \hyperpage{127}
+  \item {cAttributeBooleanArray4}, \hyperpage{128}
+  \item {cAttributeData}, \hyperpage{129}
+  \item {cAttributeIntArray1}, \hyperpage{129}
+  \item {cAttributeIntArray2}, \hyperpage{130}
+  \item {cAttributeIntArray3}, \hyperpage{131}
+  \item {cAttributeIntArray4}, \hyperpage{132}
+  \item {cAttributeStore}, \hyperpage{133}
+  \item {cAudioBuffer}, \hyperpage{135}
+  \item {cAudioDevice}, \hyperpage{135}
+  \item {cAudioListener}, \hyperpage{136}
+  \item {cAudioObject}, \hyperpage{137}
+  \item {cBeamCollision}, \hyperpage{139}
+  \item {cBeamMesh}, \hyperpage{140}
+  \item {cBooleanAttributeStore}, \hyperpage{142}
+  \item {cBooleanUniformStore}, \hyperpage{143}
+  \item {cButton}, \hyperpage{144}
+  \item {cButtonBase}, \hyperpage{146}
+  \item {cCamera}, \hyperpage{147}
+  \item {cCameraHandler}, \hyperpage{148}
+  \item {cCameraMatrix4}, \hyperpage{149}
+  \item {cCluster}, \hyperpage{154}
+  \item {cCollisionHandler}, \hyperpage{154}
+  \item {cCollisionList}, \hyperpage{157}
+  \item {cCollisionListObject}, \hyperpage{158}
+  \item {cCollisionObject}, \hyperpage{159}
+    \subitem {CheckCollision}, \hyperpage{162}
+    \subitem {CheckCollisionDetail}, \hyperpage{162}
+    \subitem {SetLink}, \hyperpage{162}
+    \subitem {TouchCollision}, \hyperpage{163}
+  \item {cCompoundCollision}, \hyperpage{163}
+  \item {cCompoundCollisionNode}, \hyperpage{165}
+  \item {cDynamicTexture}, \hyperpage{165}
+  \item {cEmptyTexture}, \hyperpage{167}
+  \item {cEventHandler}, \hyperpage{169}
+  \item {cFace}, \hyperpage{171}
+  \item {cFile}, \hyperpage{172}
+  \item {cFileHandler}, \hyperpage{174}
+  \item {cFloatAttributeStore}, \hyperpage{176}
+  \item {cFloatUniformStore}, \hyperpage{177}
+  \item {cFont}, \hyperpage{178}
+  \item {cFrameRate}, \hyperpage{180}
+  \item {cGravityParticle}, \hyperpage{181}
   \item {CheckCollision}
-    \subitem {cCollisionObject}, \hyperpage{154}
-  \item {cImage}, \hyperpage{167}
-  \item {cImage3D}, \hyperpage{169}
-  \item {cIMF}, \hyperpage{111}
-  \item {cIntAttributeStore}, \hyperpage{169}
-  \item {cIntUniformStore}, \hyperpage{170}
-  \item {cKernel}, \hyperpage{171}
-    \subitem {FindProcess}, \hyperpage{173}
-  \item {cKeyStore}, \hyperpage{173}
-  \item {cLandscape}, \hyperpage{174}
-  \item {cLandscapeMeshFile}, \hyperpage{175}
+    \subitem {cCollisionObject}, \hyperpage{162}
+  \item {CheckCollisionDetail}
+    \subitem {cCollisionObject}, \hyperpage{162}
+  \item {cImage}, \hyperpage{182}
+  \item {cImage3D}, \hyperpage{184}
+  \item {cIMF}, \hyperpage{113}
+  \item {cIntAttributeStore}, \hyperpage{187}
+  \item {cIntUniformStore}, \hyperpage{188}
+  \item {cKernel}, \hyperpage{189}
+    \subitem {FindProcess}, \hyperpage{190}
+  \item {cKeyStore}, \hyperpage{191}
+  \item {cLandscape}, \hyperpage{191}
+  \item {cLandscapeMeshFile}, \hyperpage{193}
   \item {ClearColor}
-    \subitem {cViewportControl}, \hyperpage{272}
-  \item {cLightHandler}, \hyperpage{177}
-  \item {cLimitedList}, \hyperpage{178}
-    \subitem {operator=}, \hyperpage{179}
-  \item {cLimitedPointerList}, \hyperpage{179}
-  \item {cLine}, \hyperpage{181}
-  \item {cLinkedList}, \hyperpage{182}
-    \subitem {Find}, \hyperpage{183}
-  \item {cLinkedNode}, \hyperpage{183}
-  \item {cMainThread}, \hyperpage{184}
-  \item {cMaterial}, \hyperpage{185}
-  \item {cMatrix4}, \hyperpage{185}
-  \item {cMesh}, \hyperpage{192}
-  \item {cMeshArray}, \hyperpage{195}
-  \item {cMeshCollision}, \hyperpage{196}
-    \subitem {BuildObject}, \hyperpage{197}
-  \item {cMeshFileCollision}, \hyperpage{197}
-  \item {cMeshTree}, \hyperpage{198}
-  \item {cMeshTreeArray}, \hyperpage{200}
-  \item {cMeshTreeNode}, \hyperpage{202}
-  \item {cMinLL}, \hyperpage{204}
-  \item {cMinLN}, \hyperpage{205}
-  \item {cmLandscape}, \hyperpage{205}
-    \subitem {cmLandscape}, \hyperpage{207}
-  \item {cmLandscapeArray}, \hyperpage{207}
-  \item {cModel}, \hyperpage{207}
-  \item {cMomentum}, \hyperpage{208}
-  \item {cMouse}, \hyperpage{210}
-  \item {cNodeList}, \hyperpage{211}
-    \subitem {cNodeList}, \hyperpage{214}
-    \subitem {SetLevel}, \hyperpage{214}
-  \item {cNodeListNode}, \hyperpage{215}
-  \item {Collision}
-    \subitem {cCollisionObject}, \hyperpage{154}
-  \item {cParentStack}, \hyperpage{215}
-  \item {cParticle}, \hyperpage{217}
-  \item {cParticleForGroup}, \hyperpage{218}
-  \item {cParticleHandler}, \hyperpage{219}
-  \item {cPerspectiveControl}, \hyperpage{219}
-  \item {cPlane}, \hyperpage{221}
-  \item {cPlaneList}, \hyperpage{222}
-  \item {cPoint}, \hyperpage{223}
-  \item {cPolygon}, \hyperpage{224}
-  \item {cPolygonList}, \hyperpage{226}
-  \item {cProcess}, \hyperpage{228}
-    \subitem {cProcess}, \hyperpage{230}
-    \subitem {Signal}, \hyperpage{231}
-    \subitem {UserSignal}, \hyperpage{231}
-  \item {cRayCollision}, \hyperpage{232}
-  \item {cReferenceList}, \hyperpage{233}
-  \item {cRenderNode}, \hyperpage{233}
-  \item {cRenderObject}, \hyperpage{235}
-    \subitem {AddTexture}, \hyperpage{238}
-    \subitem {SetRenderNode}, \hyperpage{238}
-  \item {cRenderPointer}, \hyperpage{239}
-  \item {cRGB}, \hyperpage{239}
-  \item {cRGBA}, \hyperpage{240}
-  \item {cShaderProgram}, \hyperpage{241}
-  \item {cSignal}, \hyperpage{244}
-  \item {cSphereCollision}, \hyperpage{245}
-  \item {cSync}, \hyperpage{246}
-  \item {cText}, \hyperpage{247}
-  \item {cTextButton}, \hyperpage{248}
-  \item {cUniformBooleanVector1}, \hyperpage{249}
-  \item {cUniformBooleanVector2}, \hyperpage{250}
-  \item {cUniformBooleanVector3}, \hyperpage{251}
-  \item {cUniformBooleanVector4}, \hyperpage{252}
-  \item {cUniformIntVector1}, \hyperpage{253}
-  \item {cUniformIntVector2}, \hyperpage{254}
-  \item {cUniformIntVector3}, \hyperpage{255}
-  \item {cUniformIntVector4}, \hyperpage{256}
-  \item {cUniformMatrix2}, \hyperpage{257}
-  \item {cUniformMatrix3}, \hyperpage{259}
-  \item {cUniformMatrix4}, \hyperpage{260}
-  \item {cUniformStore}, \hyperpage{261}
-  \item {cUniformVector1}, \hyperpage{262}
-  \item {cUniformVector2}, \hyperpage{263}
-  \item {cUniformVector3}, \hyperpage{264}
-  \item {cUniformVector4}, \hyperpage{265}
-  \item {cUserSignal}, \hyperpage{266}
-  \item {cUserVariable}, \hyperpage{266}
-  \item {cVariableStore}, \hyperpage{267}
-  \item {cViewport}, \hyperpage{268}
-  \item {cViewportControl}, \hyperpage{270}
-    \subitem {ClearColor}, \hyperpage{272}
-  \item {cVoidVariable}, \hyperpage{272}
-  \item {cWindAndGravityParticle}, \hyperpage{273}
-  \item {cWindow}, \hyperpage{274}
+    \subitem {cViewportControl}, \hyperpage{313}
+  \item {cLightHandler}, \hyperpage{195}
+  \item {cLimitedList}, \hyperpage{196}
+    \subitem {operator=}, \hyperpage{197}
+  \item {cLimitedPointerList}, \hyperpage{197}
+  \item {cLine}, \hyperpage{199}
+  \item {cLinkedList}, \hyperpage{202}
+    \subitem {Find}, \hyperpage{203}
+  \item {cLinkedNode}, \hyperpage{203}
+  \item {cMainThread}, \hyperpage{204}
+  \item {cMaterial}, \hyperpage{205}
+  \item {cMatrix4}, \hyperpage{205}
+  \item {cMatrixStack}, \hyperpage{215}
+  \item {cMesh}, \hyperpage{215}
+  \item {cMeshArray}, \hyperpage{219}
+  \item {cMeshCollision}, \hyperpage{220}
+    \subitem {BuildObject}, \hyperpage{221}
+  \item {cMeshFileCollision}, \hyperpage{221}
+  \item {cMeshTree}, \hyperpage{222}
+  \item {cMeshTreeArray}, \hyperpage{224}
+  \item {cMeshTreeNode}, \hyperpage{226}
+  \item {cMinLL}, \hyperpage{228}
+  \item {cMinLN}, \hyperpage{229}
+  \item {cmLandscape}, \hyperpage{229}
+    \subitem {cmLandscape}, \hyperpage{231}
+  \item {cmLandscapeArray}, \hyperpage{231}
+  \item {cModel}, \hyperpage{231}
+  \item {cMomentum}, \hyperpage{233}
+  \item {cMouse}, \hyperpage{237}
+  \item {cNodeList}, \hyperpage{240}
+    \subitem {cNodeList}, \hyperpage{243}
+    \subitem {SetLevel}, \hyperpage{243}
+  \item {cNodeListNode}, \hyperpage{244}
+  \item {cParentStack}, \hyperpage{244}
+  \item {cParticle}, \hyperpage{246}
+  \item {cParticleHandler}, \hyperpage{248}
+  \item {cPerspectiveControl}, \hyperpage{249}
+  \item {cPlane}, \hyperpage{251}
+  \item {cPlaneList}, \hyperpage{253}
+  \item {cPoint}, \hyperpage{254}
+  \item {cPolygon}, \hyperpage{256}
+  \item {cPolygonList}, \hyperpage{258}
+  \item {cPredictiveAiming}, \hyperpage{259}
+  \item {cPredictiveTracking}, \hyperpage{260}
+  \item {cProcess}, \hyperpage{261}
+    \subitem {cProcess}, \hyperpage{264}
+    \subitem {Signal}, \hyperpage{264}
+    \subitem {UserSignal}, \hyperpage{265}
+  \item {cRayCollision}, \hyperpage{265}
+  \item {cReferenceList}, \hyperpage{266}
+  \item {cRenderNode}, \hyperpage{267}
+  \item {cRenderObject}, \hyperpage{268}
+    \subitem {AddTexture}, \hyperpage{272}
+  \item {cRenderPointer}, \hyperpage{272}
+  \item {cRGB}, \hyperpage{274}
+  \item {cRGBA}, \hyperpage{275}
+  \item {cShaderProgram}, \hyperpage{276}
+  \item {cSignal}, \hyperpage{279}
+  \item {cSimplexNoise}, \hyperpage{280}
+    \subitem {Noise}, \hyperpage{280}
+  \item {cSphereCollision}, \hyperpage{281}
+  \item {cSync}, \hyperpage{282}
+  \item {cTBNVectors}, \hyperpage{283}
+  \item {cText}, \hyperpage{283}
+  \item {cTextButton}, \hyperpage{285}
+  \item {cTexture}, \hyperpage{287}
+  \item {cUniformBooleanVector1}, \hyperpage{290}
+  \item {cUniformBooleanVector2}, \hyperpage{291}
+  \item {cUniformBooleanVector3}, \hyperpage{292}
+  \item {cUniformBooleanVector4}, \hyperpage{293}
+  \item {cUniformIntVector1}, \hyperpage{294}
+  \item {cUniformIntVector2}, \hyperpage{295}
+  \item {cUniformIntVector3}, \hyperpage{296}
+  \item {cUniformIntVector4}, \hyperpage{297}
+  \item {cUniformMatrix2}, \hyperpage{298}
+  \item {cUniformMatrix3}, \hyperpage{300}
+  \item {cUniformMatrix4}, \hyperpage{301}
+  \item {cUniformStore}, \hyperpage{302}
+  \item {cUniformVector1}, \hyperpage{303}
+  \item {cUniformVector2}, \hyperpage{304}
+  \item {cUniformVector3}, \hyperpage{305}
+  \item {cUniformVector4}, \hyperpage{306}
+  \item {cUserSignal}, \hyperpage{307}
+  \item {cUserVariable}, \hyperpage{307}
+  \item {cVariableStore}, \hyperpage{308}
+  \item {cViewport}, \hyperpage{309}
+  \item {cViewportControl}, \hyperpage{311}
+    \subitem {ClearColor}, \hyperpage{313}
+  \item {cVoidVariable}, \hyperpage{313}
+  \item {cWindAndGravityParticle}, \hyperpage{314}
+  \item {cWindow}, \hyperpage{315}
 
   \indexspace
 
   \item {Find}
-    \subitem {cLinkedList}, \hyperpage{183}
+    \subitem {cLinkedList}, \hyperpage{203}
   \item {FindProcess}
-    \subitem {cKernel}, \hyperpage{173}
+    \subitem {cKernel}, \hyperpage{190}
+
+  \indexspace
+
+  \item {Noise}
+    \subitem {cSimplexNoise}, \hyperpage{280}
 
   \indexspace
 
   \item {operator=}
-    \subitem {cLimitedList}, \hyperpage{179}
+    \subitem {cLimitedList}, \hyperpage{197}
 
   \indexspace
 
   \item {SetLevel}
-    \subitem {cNodeList}, \hyperpage{214}
+    \subitem {cNodeList}, \hyperpage{243}
   \item {SetLink}
-    \subitem {cCollisionObject}, \hyperpage{155}
-  \item {SetRenderNode}
-    \subitem {cRenderObject}, \hyperpage{238}
+    \subitem {cCollisionObject}, \hyperpage{162}
   \item {Signal}
-    \subitem {cProcess}, \hyperpage{231}
+    \subitem {cProcess}, \hyperpage{264}
 
   \indexspace
 
   \item {TouchCollision}
-    \subitem {cCollisionObject}, \hyperpage{155}
+    \subitem {cCollisionObject}, \hyperpage{163}
 
   \indexspace
 
   \item {UserSignal}
-    \subitem {cProcess}, \hyperpage{231}
+    \subitem {cProcess}, \hyperpage{265}
 
   \indexspace
 
-  \item {v2DPolygon}, \hyperpage{275}
-  \item {vCollisionData}, \hyperpage{276}
-  \item {vFile}, \hyperpage{277}
+  \item {v2DPolygon}, \hyperpage{316}
+  \item {vCollisionData}, \hyperpage{316}
+  \item {vFile}, \hyperpage{317}
 
 \end{theindex}

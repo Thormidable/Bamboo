@@ -7,7 +7,7 @@
  *
  */
 
-class cBeamMesh;
+class cBeam;
 class cRenderObject;
 class vRenderObject;
 class cCollisionList;
@@ -88,9 +88,9 @@ public:
         ///This will procedurally generate a Box Collision object. This is the same as handing it a float pointer.
         cMeshCollision *SetType(float lfXP,float lfXN,float lfYP,float lfYN,float lfZP,float lfZN);
         ///This will make a Beam object to match a rendered Beam. (Nice and easy eh?)
-        cBeamCollision *SetType(cBeamMesh *lpBeam);
+        cBeamCollision *SetType(cBeam *lpBeam);
         ///This will make a Beam object to match a rendered Beam. (Nice and easy eh?)
-        cBeamCollision *SetTypeBeam(cBeamMesh *lpBeam);
+        cBeamCollision *SetTypeBeam(cBeam *lpBeam);
         ///This will make a Compound Collision Object.
         cCompoundCollision *SetType();
 
@@ -158,7 +158,24 @@ public:
         ///Internal function for checking for Ray / Model collision between this object and the object lpOther;
         static void RayModelDetail(cBeamCollision* lpFirst, cMatrix4 &lmFirstMatrix,cMeshCollision* lpSecond, cMatrix4 &lmSecondMatrix);
 
+        static bool CompoundCollision(cCompoundCollision* lpCompound,cMatrix4 &lcCompoundCollision, vCollisionData *lpOther,cMatrix4 &lpOtherMatrix);
+        static void CompoundCollisionDetail(cCompoundCollision* lpCompound,cMatrix4 &lcCompoundCollision, vCollisionData *lpOther,cMatrix4 &lpOtherMatrix);
+
+
 		#endif
+
+
+
+
+
+		virtual cProcess *GetLink(){return 0;};
+		virtual vRenderObject *RenderObject(){return 0;};
+		virtual cMatrix4 &CacheMatrix()=0;
+		virtual uint32 CollisionFilter(){return 0;};
+		virtual bool IsDelayed(){return 0;}
+
+		virtual void CheckCollisionDetail(){};
+		virtual bool CheckCollision(){return 0;};
 
 };
 

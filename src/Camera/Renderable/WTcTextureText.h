@@ -14,16 +14,24 @@ public:
 	/// Creates a text object and gives it a text string to use.
        cText(const char *lsText);
 	   cText(const char *lsText,cCamera *lpCamera);
+	   cText(string lsText);
+	   cText(string lsText,cCamera *lpCamera);
 	/// Creates an empty text object with no text string.
        cText();
 	   cText(cCamera *lpCamera);
 
 	/// Will set the text string the cText object will render.
-       void Text(char *lsText);
+       //void Text(char *lsText);
+       void Text(string lsText);
 	/// Will accept a generic data type to render to the screen (will convert to a string).
        template <class T> void Value(T &t);
 
        template <class T> void Add(T &t);
+
+       	/// Will accept a generic data type to render to the screen (will convert to a string).
+       template <class T> void Value(T &t,uint8 liPrecision);
+
+       template <class T> void Add(T &t,uint8 liPrecision);
 	// Will render the text string from the cPainter render list to the screen.
        void RenderPainter();
 
@@ -57,6 +65,25 @@ inline void cText::Add(T &t)
      ss << t;
     mpString += ss.str();
 }
+
+template <class T>
+inline void cText::Value ( T &t,uint8 liPrecision)
+{
+    std::stringstream ss;
+    ss << setprecision(liPrecision) << fixed << t;
+    mpString=ss.str();
+}
+
+
+template <class T>
+inline void cText::Add(T &t,uint8 liPrecision)
+{
+     std::stringstream ss;
+     ss.precision(liPrecision);
+     ss << setprecision(liPrecision) << fixed << t;
+     mpString += ss.str();
+}
+
 #endif
 
 #endif

@@ -14,10 +14,16 @@ public:
 	/**
 	* \brief This will generate an Asteroid from the cMesh lpBase.
 	* \param lfRandomRange gives the range that verteces can be randomised on the initial model.
-	* \param liSubDivisions is the number of times the mesh can be subdivided.
+	* \param liSubdivisions is the number of times the mesh can be subdivided.
 	* \param lpBase is a pointer to a Base Mesh.
 	**/
 	cAsteroid(float lfRandomRange, uint8 liSubdivisions,cMesh *lpBase);
+		/**
+	* \brief This will generate an Asteroid from the cMesh lpBase.
+	* \param lfRandomRange gives the range that verteces can be randomised on the initial model.
+	* \param liSubdivisions is the number of times the mesh can be subdivided.
+	* \param lfAsteroidSize is the size in spatial units of the starting Asteroid.
+	**/
 	cAsteroid(float lfRandomRange, uint8 liSubdivisions,float lfAsteroidSize);
 	~cAsteroid();
 

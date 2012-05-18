@@ -72,6 +72,8 @@ uint16 PUSH_POP_STACK_DEPTH=16;
 
 float WT_FRAME_TIME=0.04f;
 
+bool WT_ENABLE_LOGGING=true;
+
 void cSettings::SetupVariables()
 {
 
@@ -101,3 +103,5 @@ void cSettings::SetupVariables()
 
     WT_FRAME_TIME=1.0f/(WT_STARTING_FRAMES_PER_SECOND*WT_STARTING_PROCESSES_PER_FRAME);
 }
+
+cSettings *gpSettings=0;

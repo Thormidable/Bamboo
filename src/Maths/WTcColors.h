@@ -16,6 +16,8 @@ public:
     cRGBA(float lfR=0.0f,float lfG=0.0f,float lfB=0.0f,float lfA=1.0f);
 	///Constructor taking a pointer to an array of four floats
     cRGBA(float *lfRGB);
+    ///Constructor taking a pointer to an array of four unsigned ints. Range 0-255.
+    cRGBA(uint8 *lfRGBA);
 
     cRGBA(c3DVf lfOther);
     cRGBA(c4DVf lfOther);
@@ -138,6 +140,8 @@ public:
     cRGB(float lfR=0.0f,float lfG=0.0f,float lfB=0.0f);
 	///Constructor taking a pointer to an array of three floats
     cRGB(float *lfRGB);
+    ///Constructor taking a pointer to an array of four unsigned ints. Range 0-255.
+    cRGB(uint8 *lfRGB);
 
     cRGB(c3DVf lfOther);
     cRGB(c4DVf lfOther);

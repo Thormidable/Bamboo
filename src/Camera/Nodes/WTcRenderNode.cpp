@@ -32,9 +32,9 @@ Initialise();
 
 cRenderNode::~cRenderNode()
 {
-
-	delete mpObjects;
-	mpObjects=0;
+	KillAll();
+	//delete mpObjects;
+	//mpObjects=0;
 	mpRenderer=0;
 	mcOwnerNode.Node=0;
 	mpCamera=0;
@@ -61,8 +61,8 @@ void cRenderNode::Delete(cRenderOwner lpOld)
 void cRenderNode::StartKillAll()
 {
     KillAll();
-    if(mpRenderer) mpRenderer->Delete(mcOwnerNode);
-    else trace("This is the Camera cRenderNode. Cannot Delete.");
+    //if(mpRenderer) mpRenderer->Delete(mcOwnerNode);
+    //else trace("This is the Camera cRenderNode. Cannot Delete.");
 }
 
 void cRenderNode::KillAll()
@@ -145,9 +145,9 @@ void cRenderNode::CalculateMatrices()
   while(mpCursor)
   {
 		_MATRIX_STACK->Push();
-
 	if(mpCursor->Data()->Awake())
 	{
+
 		mpCursor->Data()->CalculateMatrices();
 		mpCursor=mpCursor->Next();
 	}
@@ -332,3 +332,16 @@ void cRenderNode::TreeProcessSignal(SIGNAL lsSignal)
     }
  }
 };
+
+
+void cRenderNode::TreeSignal(SIGNAL lsSignal)
+{
+ Signal(lsSignal);
+     if(mpObjects)
+ {
+    for(vRenderObject *lpCur=mpObjects->FindStart();lpCur;lpCur=mpObjects->FindNext())
+    {
+        lpCur->TreeSignal(lsSignal);
+    }
+ }
+}

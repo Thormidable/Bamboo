@@ -41,8 +41,8 @@ void cIMF::LoadIMF(const char *lpPath)
 			new cMesh(&lpDataStore);
                 }break;
 
-                case IMF_TYPE_TEXTURE :
-		{
+        case IMF_TYPE_TEXTURE :
+		 {
 		//	trace("Type Texture")
 			cTextureArray lpTexture;
 			FileStream.ignore(sizeof(uint32));
@@ -60,6 +60,27 @@ void cIMF::LoadIMF(const char *lpPath)
 			FileStream.read((char *) lpTexture.mpData,lpTexture.miWidth*lpTexture.miHeight*lpTexture.miDepth>>3);
 
 			new cTexture(&lpTexture);
+                }break;
+
+            case IMF_TYPE_DYNAMIC_TEXTURE :
+		 {
+		//	trace("Type Texture")
+			cTextureArray lpTexture;
+			FileStream.ignore(sizeof(uint32));
+
+			FileStream.read((char *) &liTemp,sizeof(uint32));
+			lpTexture.mpRef=new char[liTemp+1];
+			FileStream.read((char *) lpTexture.mpRef,liTemp*sizeof(char));
+			lpTexture.mpRef[liTemp]=0;
+
+			FileStream.read((char *) &(lpTexture.miWidth),sizeof(uint32));
+			FileStream.read((char *) &(lpTexture.miHeight),sizeof(uint32));
+			FileStream.read((char *) &(lpTexture.miDepth),sizeof(uint32));
+
+			lpTexture.mpData=new uint8[lpTexture.miWidth*lpTexture.miHeight*lpTexture.miDepth>>3];
+			FileStream.read((char *) lpTexture.mpData,lpTexture.miWidth*lpTexture.miHeight*lpTexture.miDepth>>3);
+
+			new cDynamicTexture(&lpTexture);
                 }break;
 
                 case IMF_TYPE_FONT :

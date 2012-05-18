@@ -5,11 +5,81 @@ cMatrix4 cMatrix4::mpTemp;
 float cMatrix4::mpZero[]={0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
 float cMatrix4::mpIdentity[]={1.0f,0.0f,0.0f,0.0f,0.0f,1.0f,0.0f,0.0f,0.0f,0.0f,1.0f,0.0f,0.0f,0.0f,0.0f,1.0f};
 
+
+cIdentityMatrix *cIdentityMatrix::spInstance=0;
+cIdentityMatrix cIdentityMatrix::Instance()
+{
+    if(!spInstance) spInstance=new cIdentityMatrix();
+    return *spInstance;
+};
+
+cMatrix4::cMatrix4(float lfX,float lfY,float lfZ,float lfXA,float lfYA,float lfZA)
+{
+    Identity();
+    mb3D=true;
+    Position(lfX,lfY,lfZ);
+    if(lfXA) RotateX(lfXA);
+    if(lfYA) RotateY(lfYA);
+    if(lfZA) RotateZ(lfZA);
+};
+
+cMatrix4::cMatrix4(float lfX,float lfY,float lfZ)
+{
+    Identity();
+    mb3D=true;
+    Position(lfX,lfY,lfZ);
+};
+
+
+cZeroMatrix *cZeroMatrix::spInstance=0;
+cZeroMatrix cZeroMatrix::Instance()
+{
+    if(!spInstance) spInstance=new cZeroMatrix();
+    return *spInstance;
+};
+
+cMatrix4::cMatrix4(float *lpOther)
+{
+    memcpy(mpData,lpOther,sizeof(float));
+    mb3D=true;
+};
+
+cMatrix4::cMatrix4(double *lpOther)
+{
+    mpData[0]=lpOther[0];
+    mpData[1]=lpOther[1];
+    mpData[2]=lpOther[2];
+    mpData[3]=lpOther[3];
+    mpData[4]=lpOther[4];
+    mpData[5]=lpOther[5];
+    mpData[6]=lpOther[6];
+    mpData[7]=lpOther[7];
+    mpData[8]=lpOther[8];
+    mpData[9]=lpOther[9];
+    mpData[10]=lpOther[10];
+    mpData[11]=lpOther[11];
+    mpData[12]=lpOther[12];
+    mpData[13]=lpOther[13];
+    mpData[14]=lpOther[14];
+    mpData[15]=lpOther[15];
+    mb3D=true;
+};
+
+cMatrix4::cMatrix4(const cDoubleMatrix4 &lpOther)
+{
+    mb3D=lpOther.mb3D;
+    Equals(lpOther);
+};
+cMatrix4::cMatrix4(cDoubleMatrix4 *lpOther)
+{
+    mb3D=lpOther->Is3D();
+    Equals(lpOther);
+};
+
 cMatrix4::cMatrix4()
 {
-
-Set3D();
-
+ Identity();
+ Set3D();
 }
 
 void cMatrix4::UpdateMatrix()
@@ -221,16 +291,30 @@ cMatrix4 cMatrix4::operator/(const float lVal)
 }
 
 
-float *cMatrix4::operator=(float *lVal)
+cMatrix4 cMatrix4::operator=(float *lVal)
 {
  memcpy(mpData,lVal,sizeof(float)*16);
- return lVal;
+ return *this;
 }
 
 cMatrix4 cMatrix4::operator=(cMatrix4 lVal)
 {
 memcpy(mpData,lVal.mpData,sizeof(float)*16);
 return lVal;
+}
+
+
+cMatrix4 cMatrix4::operator=(cDoubleMatrix4 lVal)
+{
+    Equals(lVal);
+return *this;
+}
+
+
+cMatrix4 cMatrix4::operator=(cDoubleMatrix4 *lVal)
+{
+Equals(lVal);
+return *this;
 }
 
 float cMatrix4::operator=(float &lVal)
@@ -268,10 +352,10 @@ cMatrix4 &cMatrix4::operator=(cMatrix4 &lVal)
  return this;
 }
 */
-cMatrix4 *cMatrix4::operator=(cMatrix4 *lVal)
+cMatrix4 cMatrix4::operator=(cMatrix4 *lVal)
 {
  memcpy(mpData,lVal->mpData,16*sizeof(float));
- return this;
+ return *this;
 }
 
 void cMatrix4::Zero()
@@ -1343,8 +1427,51 @@ void cMatrix4::Advance(float *lfDistances)
 	if(mb3D) mpData[14]+=lfDistances.X()*mpData[2]+lfDistances.Y()*mpData[6]+lfDistances.Z()*mpData[10];
  }
 
- void cMatrix4::Equals(cMatrix4 *lpOther){memcpy(mpData,lpOther->Matrix(),sizeof(float)*16);};
- void cMatrix4::Equals(cMatrix4 lpOther){memcpy(mpData,lpOther.Matrix(),sizeof(float)*16);};
+ void cMatrix4::Equals(cMatrix4 *lpOther){memcpy(mpData,lpOther->Matrix(),sizeof(float)*16); mb3D=lpOther->Is3D();};
+ void cMatrix4::Equals(cMatrix4 lpOther){memcpy(mpData,lpOther.Matrix(),sizeof(float)*16); mb3D=lpOther.Is3D();};
+ void cMatrix4::Equals(cDoubleMatrix4 *lpOther)
+ {
+    double *lVal=lpOther->Matrix();
+    mpData[0]=lVal[0];
+    mpData[1]=lVal[1];
+    mpData[2]=lVal[2];
+    mpData[3]=lVal[3];
+    mpData[4]=lVal[4];
+    mpData[5]=lVal[5];
+    mpData[6]=lVal[6];
+    mpData[7]=lVal[7];
+    mpData[8]=lVal[8];
+    mpData[9]=lVal[9];
+    mpData[10]=lVal[10];
+    mpData[11]=lVal[11];
+    mpData[12]=lVal[12];
+    mpData[13]=lVal[13];
+    mpData[14]=lVal[14];
+    mpData[15]=lVal[15];
+    mb3D=lpOther->Is3D();
+ };
+ void cMatrix4::Equals(cDoubleMatrix4 lVal)
+  {
+    mpData[0]=lVal[0];
+    mpData[1]=lVal[1];
+    mpData[2]=lVal[2];
+    mpData[3]=lVal[3];
+    mpData[4]=lVal[4];
+    mpData[5]=lVal[5];
+    mpData[6]=lVal[6];
+    mpData[7]=lVal[7];
+    mpData[8]=lVal[8];
+    mpData[9]=lVal[9];
+    mpData[10]=lVal[10];
+    mpData[11]=lVal[11];
+    mpData[12]=lVal[12];
+    mpData[13]=lVal[13];
+    mpData[14]=lVal[14];
+    mpData[15]=lVal[15];
+    mb3D=lVal.Is3D();
+
+ };
+
 
 
 
@@ -1915,5 +2042,29 @@ float cMatrix4::Yaw()
 float cMatrix4::Pitch()
 {
     return atan2(mpData[9],mpData[10]);
+};
+
+bool cMatrix4::Is3D(){return mb3D;};
+
+c3DVf cMatrix4::FindPointRelative(c3DVf SameSpace)
+{
+    SameSpace-=Position();
+ return c3DVf(SameSpace[0]*Xx()+SameSpace[1]*Xy()+SameSpace[2]*Xz(),SameSpace[0]*Yx()+SameSpace[1]*Yy()+SameSpace[2]*Yz(),SameSpace[0]*Zx()+SameSpace[1]*Zy()+SameSpace[2]*Zz());
+}
+
+
+
+
+cIdentityMatrix::cIdentityMatrix()
+{
+    memcpy(mpData,cMatrix4::mpIdentity,sizeof(16));
+    mb3D=true;
+};
+
+
+cZeroMatrix::cZeroMatrix()
+{
+    memcpy(mpData,cMatrix4::mpZero,sizeof(16));
+    mb3D=false;
 };
 

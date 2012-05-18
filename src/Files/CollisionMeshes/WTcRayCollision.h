@@ -14,6 +14,7 @@ class cRayCollision : public cBeamCollision
 {
  float GLastPos[3];
  bool lbCreated;
+ bool mbNormalised;
 public:
  //Constructor
  cRayCollision();
@@ -22,6 +23,7 @@ public:
  void Update(cMatrix4 &New);
  //A Ray object cannot collide on the frame it was created (as it has moved nowhere). This controls avoiding collisions until the 2nd frame.
  bool CreatedThisFrame();
+ void PrepForCollision();
 
  ///Will return the Objects Type
 	uint8 Type();

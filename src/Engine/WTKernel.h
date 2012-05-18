@@ -91,6 +91,28 @@ template<class tType> tType *FindProcess(tType *lpStart);
 
 };
 
+class cFrameUpdateType
+{
+
+public:
+    cFrameUpdateType();
+    ~cFrameUpdateType();
+    virtual void FrameUpdate()=0;
+};
+
+class cFrameUpdateHandler : public cLimitedPointerList<cFrameUpdateType>
+{
+  static cFrameUpdateHandler *mpInstance;
+  cFrameUpdateHandler();
+public:
+
+  static cFrameUpdateHandler *Instance();
+  static cFrameUpdateHandler *Pointer();
+
+  void FrameUpdate();
+
+};
+
 
 template<class tType> tType *cKernel::FindProcess()
 {

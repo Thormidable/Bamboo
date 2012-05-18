@@ -75,6 +75,8 @@ public:
     /// [] operator to allow access of any item as if it were a normal array.
 	cX &operator[](uint32 liItem){return mpList[liItem];};
 
+    cX &Item(uint32 liItem){return mpList[liItem];};
+
     /// = operator to allow copying a cLimitedList array.
     ///This SHOULD NOT be used with cX classes containing pointers.
 	cLimitedList<cX> &operator=(cLimitedList<cX> &lpOther)
@@ -224,7 +226,7 @@ public:
 		{
 			delete mpList[liPos]; mpList[liPos]=0;
 			--miItems;
-			if(miItems-liPos) memmove(mpList[liPos],mpList[liPos+2],sizeof(cX*)*miItems-liPos);
+			if(miItems-liPos) memmove(&mpList[liPos],&mpList[liPos+1],sizeof(cX*)*(miItems-liPos));
 		}
 	};
 	///This will remove the Item from the list without deleting it.
@@ -234,7 +236,7 @@ public:
 		{
 			mpList[liPos]=0;
 			--miItems;
-			if(miItems-liPos) memmove(mpList[liPos],mpList[liPos+2],sizeof(cX*)*miItems-liPos);
+			if(miItems-liPos) memmove(&mpList[liPos],&mpList[liPos+1],sizeof(cX*)*(miItems-liPos));
 		}
 	};
     ///This will switch the positions of the items at positions li1 and li2 in the list.

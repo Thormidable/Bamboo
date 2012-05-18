@@ -132,6 +132,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ReadIMF()
 : <a class="el" href="classc_mesh_tree_node.html#a1ca09fa05700321ca076d327fa99220b">cMeshTreeNode</a>
 </li>
+<li>RecalculateAllMatrices()
+: <a class="el" href="classc_camera.html#a4b27d2d3296c628615dc06b312459d70">cCamera</a>
+</li>
+<li>RecalculateDistance()
+: <a class="el" href="classc_collision_list_object.html#a523f156c7f21b71a0385289215673d03">cCollisionListObject</a>
+</li>
+<li>RecalculateTotalMatrices()
+: <a class="el" href="classc_camera.html#a1dbeb4e752d2a4cb50073a43c8c2132f">cCamera</a>
+</li>
 <li>Reference()
 : <a class="el" href="classc_reference_list.html#a5973a3c0fb616e62087d167330b720a0">cReferenceList</a>
 </li>
@@ -140,8 +149,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>Remove()
 : <a class="el" href="classc_collision_handler.html#aec2e30bb6be227d30daef0b6eb36d3b3">cCollisionHandler</a>
-, <a class="el" href="classc_limited_list.html#a944c6ae2b1e13a144cc384766f9c12ae">cLimitedList&lt; cX &gt;</a>
-, <a class="el" href="classc_limited_pointer_list.html#a61fdd759615a826b5f385ad0b9ddfb0d">cLimitedPointerList&lt; cX &gt;</a>
 , <a class="el" href="classc_linked_list.html#a676cd3bd124df98773c296ed6f67ba16">cLinkedList&lt; T &gt;</a>
 </li>
 <li>RemoveFromList()
@@ -167,13 +174,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classc_mesh_tree_node.html#ab3c5c436df69d8f6ef8a5348e76f5784">cMeshTreeNode</a>
 </li>
 <li>RenderAreaHeight()
-: <a class="el" href="classc_window.html#a984e0c37a6444f9910dfe7269276eac8">cWindow</a>
+: <a class="el" href="classc_window.html#afa0cbc2da583d467144875afd4caf368">cWindow</a>
 </li>
 <li>RenderAreaWidth()
-: <a class="el" href="classc_window.html#aa17184bf0642dffb87bb001adfb52d37">cWindow</a>
-</li>
-<li>Renderer()
-: <a class="el" href="classc_render_object.html#a532344b60df3ebd0cf893fa550df318e">cRenderObject</a>
+: <a class="el" href="classc_window.html#a4930935cab62c77e3eca1daf6eff58bd">cWindow</a>
 </li>
 <li>RenderList()
 : <a class="el" href="classc_camera.html#a9f2dcf74c52d7d3d0f4199b9e0d491c6">cCamera</a>
@@ -190,11 +194,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ResetFindProcess()
 : <a class="el" href="classc_kernel.html#a42d5d224af7acfe4aee27b7cee2b0a02">cKernel</a>
 </li>
-<li>ResetList()
-: <a class="el" href="classc_collision_list.html#ac04316a4e8d0e3c5c3213c20bd7897cc">cCollisionList</a>
-</li>
 <li>ResetPosition()
 : <a class="el" href="classc_mesh.html#a6b4d72718fa9a90fae3ee30dbe5f2575">cMesh</a>
+, <a class="el" href="classc_matrix4.html#ac8048c00e45627f5910271ad8eb24c80">cMatrix4</a>
+</li>
+<li>ResetRotations()
+: <a class="el" href="classc_matrix4.html#a0d04302f66eb8afc0f2e8d7b880a0873">cMatrix4</a>
 </li>
 <li>ResetTextCoords()
 : <a class="el" href="classv2_d_polygon.html#a78d66fe7885be81ad62c79a000dc696f">v2DPolygon</a>
@@ -205,38 +210,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classc_window.html#a38129c91195b1e7f5711aecc1ffb4d77">cWindow</a>
 </li>
 <li>ResizeX()
-: <a class="el" href="classc_matrix4.html#a6f721212ba596c5e80f85eba5b70766d">cMatrix4</a>
-, <a class="el" href="classc_camera_matrix4.html#ab5ec9054a71a9df7bb671829875600f2">cCameraMatrix4</a>
+: <a class="el" href="classc_camera_matrix4.html#ab5ec9054a71a9df7bb671829875600f2">cCameraMatrix4</a>
+, <a class="el" href="classc_matrix4.html#a6f721212ba596c5e80f85eba5b70766d">cMatrix4</a>
 </li>
 <li>ResizeY()
-: <a class="el" href="classc_matrix4.html#a77ef7c3392fd4d02ddfa4d206f91265b">cMatrix4</a>
-, <a class="el" href="classc_camera_matrix4.html#a44507dbaa203a79c420d9ceef985e186">cCameraMatrix4</a>
+: <a class="el" href="classc_camera_matrix4.html#a44507dbaa203a79c420d9ceef985e186">cCameraMatrix4</a>
+, <a class="el" href="classc_matrix4.html#a77ef7c3392fd4d02ddfa4d206f91265b">cMatrix4</a>
 </li>
 <li>ResizeZ()
-: <a class="el" href="classc_camera_matrix4.html#a6c4d89f66c5b6568b5f334c3ab4a7414">cCameraMatrix4</a>
-, <a class="el" href="classc_matrix4.html#ac2789d9134f4b599f3f79f7b89c05af1">cMatrix4</a>
+: <a class="el" href="classc_matrix4.html#ac2789d9134f4b599f3f79f7b89c05af1">cMatrix4</a>
+, <a class="el" href="classc_camera_matrix4.html#a6c4d89f66c5b6568b5f334c3ab4a7414">cCameraMatrix4</a>
 </li>
 <li>Right()
 : <a class="el" href="classc_mouse.html#a4d84d97d051d920a476e5b300fc38396">cMouse</a>
 </li>
+<li>Roll()
+: <a class="el" href="classc_matrix4.html#ab118d7f14e3a34e1d65ed105aeea552e">cMatrix4</a>
+</li>
+<li>RollToPointPitch()
+: <a class="el" href="classc_matrix4.html#ac228aef3d8a951ba471c33255c5c5986">cMatrix4</a>
+</li>
+<li>RollToPointYaw()
+: <a class="el" href="classc_matrix4.html#af29fcc2d2ac6c266e8c8075944afb8fc">cMatrix4</a>
+</li>
+<li>RollToVectorPitch()
+: <a class="el" href="classc_matrix4.html#acb360bcac4f8ec6b2c74f567e10f5bec">cMatrix4</a>
+</li>
+<li>RollToVectorYaw()
+: <a class="el" href="classc_matrix4.html#ad5f6e431adcf465f7ce01544b251b55c">cMatrix4</a>
+</li>
 <li>Rotate()
 : <a class="el" href="classc_camera_matrix4.html#a1de293dc89d68f1688098dc82a1c2655">cCameraMatrix4</a>
 , <a class="el" href="classc_matrix4.html#ab21d0553250b8ca4b0388105afc79478">cMatrix4</a>
+</li>
+<li>RotateVectorByAngles()
+: <a class="el" href="classc_matrix4.html#abd6f4049cde35ad7b72d395762c17c0f">cMatrix4</a>
 </li>
 <li>RotateX()
 : <a class="el" href="classc_camera_matrix4.html#abb8a5e1d961915829f3200b74319af61">cCameraMatrix4</a>
 , <a class="el" href="classc_matrix4.html#af3c238c3d65276912b3071c33c9a8e59">cMatrix4</a>
 </li>
 <li>RotateY()
-: <a class="el" href="classc_matrix4.html#ac625c531c3644462cc91ed53bef5e1e9">cMatrix4</a>
-, <a class="el" href="classc_camera_matrix4.html#a86e20cd48f8a5427d98361d9b838273d">cCameraMatrix4</a>
+: <a class="el" href="classc_camera_matrix4.html#a86e20cd48f8a5427d98361d9b838273d">cCameraMatrix4</a>
+, <a class="el" href="classc_matrix4.html#ac625c531c3644462cc91ed53bef5e1e9">cMatrix4</a>
 </li>
 <li>RotateZ()
-: <a class="el" href="classc_camera_matrix4.html#ab0d7c6b5cdc0b9581633736404a3b843">cCameraMatrix4</a>
-, <a class="el" href="classc_matrix4.html#a784f4dd7106e393b654d17ff78cc49a7">cMatrix4</a>
+: <a class="el" href="classc_matrix4.html#a784f4dd7106e393b654d17ff78cc49a7">cMatrix4</a>
+, <a class="el" href="classc_camera_matrix4.html#ab0d7c6b5cdc0b9581633736404a3b843">cCameraMatrix4</a>
 </li>
 <li>Rotation()
 : <a class="el" href="classc_matrix4.html#aeca3db3711d09781ec4ecf78a0423574">cMatrix4</a>
+</li>
+<li>RotationVector()
+: <a class="el" href="classc_momentum.html#a39db7d06be015d5c2d42fd6ca3092857">cMomentum</a>
 </li>
 <li>Run()
 : <a class="el" href="classc_process.html#a3e0fab4ccc0a8fb065d50eb88b6a0dd5">cProcess</a>
@@ -257,7 +283,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:03 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:07 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

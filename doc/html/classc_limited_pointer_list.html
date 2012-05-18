@@ -101,9 +101,12 @@ cX *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ba95ea83cbfee5957645c711ccab08c"></a><!-- doxytag: member="cLimitedPointerList::Add" ref="a0ba95ea83cbfee5957645c711ccab08c" args="(cX *lpValue)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_limited_pointer_list.html#a0ba95ea83cbfee5957645c711ccab08c">Add</a> (cX *lpValue)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Will Add the pointer lpValue to the list. Once added the Array will control deleting the object pointed to by lpValue. It will also expand the array to acomodate the item as required. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61fdd759615a826b5f385ad0b9ddfb0d"></a><!-- doxytag: member="cLimitedPointerList::Remove" ref="a61fdd759615a826b5f385ad0b9ddfb0d" args="(uint32 liPos)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_limited_pointer_list.html#a61fdd759615a826b5f385ad0b9ddfb0d">Remove</a> (uint32 liPos)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b6e333326d73cf1049b03a67cff1cbb"></a><!-- doxytag: member="cLimitedPointerList::Delete" ref="a7b6e333326d73cf1049b03a67cff1cbb" args="(uint32 liPos)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_limited_pointer_list.html#a7b6e333326d73cf1049b03a67cff1cbb">Delete</a> (uint32 liPos)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will remove the item liPos from the List. It will delete the item and shuffle all the other items in teh list to the front of the list. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa97c52b1c2752bbd2020e08348cd3a6"></a><!-- doxytag: member="cLimitedPointerList::StripItem" ref="aaa97c52b1c2752bbd2020e08348cd3a6" args="(uint32 liPos)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_limited_pointer_list.html#aaa97c52b1c2752bbd2020e08348cd3a6">StripItem</a> (uint32 liPos)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will remove the Item from the list without deleting it. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2981a22dcb5e79790b8644125cc7322"></a><!-- doxytag: member="cLimitedPointerList::SwitchItems" ref="ad2981a22dcb5e79790b8644125cc7322" args="(uint32 li1, uint32 li2)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_limited_pointer_list.html#ad2981a22dcb5e79790b8644125cc7322">SwitchItems</a> (uint32 li1, uint32 li2)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will switch the positions of the items at positions li1 and li2 in the list. <br/></td></tr>
@@ -128,7 +131,7 @@ class cLimitedPointerList&lt; cX &gt;</h3>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:04 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:08 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

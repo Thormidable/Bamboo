@@ -24,6 +24,7 @@ public:
         virtual cMeshCollision *Mesh();
         virtual cRayCollision *Ray();
         virtual cCompoundCollision *Compound();
+        virtual cMouseCollision *Mouse();
     #endif
     virtual void Update(cMatrix4 &New);
 

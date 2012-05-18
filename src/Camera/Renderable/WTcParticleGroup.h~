@@ -31,17 +31,18 @@ class cParticleForGroup
 {
 
 protected:
-	cParticleForGroup(){};
+	cParticleForGroup();
 public:
 	cRGBA Color;
 	float Position[3];
 	float Speed[3];
+	float Size;
 	float FadeSpeed;
 	float Life;
-	float Size;
 
 
-	~cParticleForGroup(){};
+
+	~cParticleForGroup();
 	friend class cParticleGroup;
 	friend class cStarMap;
 
@@ -61,6 +62,7 @@ public:
 	void SetColor(cRGBA *lpRGB);
 	void SetColor(cRGB &lpRGB);
 	void SetColor(cRGBA &lpRGB);
+
 };
 
 
@@ -77,6 +79,8 @@ protected:
 	uint32 miSpaces;
 	bool mbRespawn;
 	bool mbUseGravity;
+
+
 
 public:
 

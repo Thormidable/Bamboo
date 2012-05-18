@@ -1,5 +1,58 @@
 //#include "../WTBamboo.h"
 
+template<class Type> c4DVt<Type> c4DVt<Type>::operator*(Type lpValue)
+{
+ c4DVt<Type> lfReturn;
+ lfReturn[0]=v[0]*lpValue;
+ lfReturn[1]=v[2]*lpValue;
+ lfReturn[2]=v[2]*lpValue;
+ lfReturn[3]=v[3]*lpValue;
+ return lfReturn;
+};
+template<class Type> c4DVt<Type> c4DVt<Type>::operator/(Type lpValue)
+{
+ c4DVt<Type> lfReturn;
+ lfReturn[0]=v[0]/lpValue;
+ lfReturn[1]=v[2]/lpValue;
+ lfReturn[2]=v[2]/lpValue;
+ lfReturn[3]=v[3]/lpValue;
+ return lfReturn;
+};
+
+template<class Type>c4DVt<Type> c4DVt<Type>::operator*=(Type lpValue)
+{
+ v[0]*=lpValue;
+ v[1]*=lpValue;
+ v[2]*=lpValue;
+ v[3]*=lpValue;
+ return *this;
+};
+template<class Type> c4DVt<Type> c4DVt<Type>::operator/=(Type lpValue)
+{
+ v[0]/=lpValue;
+ v[1]/=lpValue;
+ v[2]/=lpValue;
+ v[3]/=lpValue;
+ return *this;
+};
+
+template<class Type>c4DVt<Type> c4DVt<Type>::operator+=(Type lpValue)
+{
+ v[0]+=lpValue;
+ v[1]+=lpValue;
+ v[2]+=lpValue;
+ v[3]+=lpValue;
+ return *this;
+};
+template<class Type> c4DVt<Type> c4DVt<Type>::operator-=(Type lpValue)
+{
+ v[0]-=lpValue;
+ v[1]-=lpValue;
+ v[2]-=lpValue;
+ v[3]-=lpValue;
+ return *this;
+};
+
 template<class Type> c4DVt<Type>::c4DVt(Type lf0,Type lf1,Type lf2,Type lf3)
 {
  v[0]=lf0;
@@ -73,7 +126,7 @@ template<class Type> c4DVt<Type> c4DVt<Type>::operator=(c4DVt<Type> lpValue)
 }
 
 
-template<class Type> Type *c4DVt<Type>::operator=(Type *lpValue)
+template<class Type> c4DVt<Type> c4DVt<Type>::operator=(Type *lpValue)
 {
  memcpy(v,lpValue,4*sizeof(Type));
  return lpValue;
@@ -91,6 +144,15 @@ template<class Type> c4DVt<Type> c4DVt<Type>::operator=(cRGBA &lpValue)
  return *this;
 }
 
+template<class Type> c4DVt<Type> c4DVt<Type>::operator=(Type lpValue)
+{
+ v[0]=lpValue;
+ v[1]=lpValue;
+ v[2]=lpValue;
+ v[3]=lpValue;
+ return *this;
+}
+
 
 template<class Type> c4DVt<Type> c4DVt<Type>::operator+=(Type *lpValue)
 {
@@ -101,7 +163,7 @@ template<class Type> c4DVt<Type> c4DVt<Type>::operator+=(Type *lpValue)
  return *this;
 }
 
-template<class Type> c4DVt<Type> c4DVt<Type>::operator+=(c4DVt<Type> &lpValue)
+template<class Type> c4DVt<Type> c4DVt<Type>::operator+=(c4DVt<Type> lpValue)
 {
  v[0]+=lpValue.v[0];
  v[1]+=lpValue.v[1];
@@ -162,7 +224,7 @@ template<class Type> c4DVt<Type> c4DVt<Type>::operator+(c4DVt<Type> *lvOther)
  return lvReturn;
 };
 
-template<class Type> c4DVt<Type> c4DVt<Type>::operator+(c4DVt<Type> &lvOther)
+template<class Type> c4DVt<Type> c4DVt<Type>::operator+(c4DVt<Type> lvOther)
 {
    c4DVt<Type> lvReturn;
  lvReturn.v[0]=v[0]+lvOther.v[0];
@@ -182,6 +244,16 @@ template<class Type> c4DVt<Type> c4DVt<Type>::operator+(Type *lvOther)
  return lvReturn;
 };
 
+template<class Type> c4DVt<Type> c4DVt<Type>::operator+(Type lvOther)
+{
+   c4DVt<Type> lvReturn;
+ lvReturn.v[0]=v[0]+lvOther;
+ lvReturn.v[1]=v[1]+lvOther;
+ lvReturn.v[2]=v[2]+lvOther;
+ lvReturn.v[3]=v[3]+lvOther;
+ return lvReturn;
+};
+
 
 template<class Type> c4DVt<Type> c4DVt<Type>::operator-(c4DVt<Type> *lvOther)
 {
@@ -193,7 +265,7 @@ template<class Type> c4DVt<Type> c4DVt<Type>::operator-(c4DVt<Type> *lvOther)
  return lvReturn;
 };
 
-template<class Type> c4DVt<Type> c4DVt<Type>::operator-(c4DVt<Type> &lvOther)
+template<class Type> c4DVt<Type> c4DVt<Type>::operator-(c4DVt<Type> lvOther)
 {
    c4DVt<Type> lvReturn;
  lvReturn.v[0]=v[0]-lvOther.v[0];
@@ -213,6 +285,15 @@ template<class Type> c4DVt<Type> c4DVt<Type>::operator-(Type *lvOther)
  return lvReturn;
 };
 
+template<class Type> c4DVt<Type> c4DVt<Type>::operator-(Type lvOther)
+{
+   c4DVt<Type> lvReturn;
+ lvReturn.v[0]=v[0]-lvOther;
+ lvReturn.v[1]=v[1]-lvOther;
+ lvReturn.v[2]=v[2]-lvOther;
+ lvReturn.v[3]=v[3]-lvOther;
+ return lvReturn;
+};
 
 
 template<class Type> c4DVt<Type> c4DVt<Type>::operator-=(Type *lpValue)
@@ -224,7 +305,7 @@ template<class Type> c4DVt<Type> c4DVt<Type>::operator-=(Type *lpValue)
  return *this;
 }
 
-template<class Type> c4DVt<Type> c4DVt<Type>::operator-=(c4DVt<Type> &lpValue)
+template<class Type> c4DVt<Type> c4DVt<Type>::operator-=(c4DVt<Type> lpValue)
 {
  v[0]-=lpValue.v[0];
  v[1]-=lpValue.v[1];

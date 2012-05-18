@@ -2,13 +2,15 @@
 #define __WTDEFINITIONS_H__
 
 #define WT_FULL_VERSION_BAMBOO 1
-
+#define WT_PI 3.141592654
 ///Function to return a random number in the range 0.0f-1.0f. Can be seeded by SEED_RANDOM_NUMBER.
 #define RANDOM_NUMBER static_cast<double>(rand())/static_cast<double>(RAND_MAX)
 #define ZEROED_RANDOM_NUMBER ((static_cast<double>(rand())/static_cast<double>(RAND_MAX)-0.5)*2)
 
 #define SIGNAL unsigned char
 #define FACE_TYPE uint16
+#define SEAM_ID_TYPE uint16
+#define SEAM_VOID_VALUE 0xFFFF
 
 #if WT_OS_BITS==OS_32_BIT
 
@@ -59,10 +61,13 @@
 	#define pbits (sizeof(uint32*)*8)
 #endif
 
+#define c2DVd c2DVt<double>
 #define c2DVf c2DVt<float>
 #define c2DVi c2DVt<int32>
+#define c3DVd c3DVt<double>
 #define c3DVf c3DVt<float>
 #define c3DVi c3DVt<int32>
+#define c4DVd c4DVt<double>
 #define c4DVf c4DVt<float>
 #define c4DVi c4DVt<int32>
 

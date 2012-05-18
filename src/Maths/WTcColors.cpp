@@ -1,5 +1,20 @@
 #include "../WTBamboo.h"
 
+cRGBA::cRGBA(uint8 *lfRGBA)
+{
+    color[0]=lfRGBA[0]/255;
+    color[1]=lfRGBA[1]/255;
+    color[2]=lfRGBA[2]/255;
+    color[3]=lfRGBA[3]/255;
+};
+
+cRGB::cRGB(uint8 *lfRGB)
+{
+    color[0]=lfRGB[0]/255;
+    color[1]=lfRGB[1]/255;
+    color[2]=lfRGB[2]/255;
+};
+
     float cRGB::R(){return color[0];};
     float cRGB::G(){return color[1];};
     float cRGB::B(){return color[2];};

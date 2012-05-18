@@ -152,12 +152,16 @@ public:
 	float SpeedY();
 	///Will return the speed along the Local Z Axis
 	float SpeedZ();
+	///This will return the Global Speed Vector (Global X,Y,Z Axis Speeds)
+	float *GSpeeds();
 	///Will return the speed along the Global X Axis
 	float GSpeedX();
 	///Will return the speed along the Global Y Axis
 	float GSpeedY();
 	///Will return the speed along the Global Z Axis
 	float GSpeedZ();
+	///This will return the Angular Speed Vector (Global X,Y,Z Axis Speeds)
+	float *AngularSpeeds();
 	///Will return the Angular speed about the Local X Axis
 	float AngularSpeedX();
 	///Will return the Angular speed about the Local Y Axis

@@ -10,16 +10,26 @@ public:
 	cSettings(){};
 	~cSettings(){};
 	virtual void Settings(){};
+	virtual void UserWindowSizeUpdate(){};
 
 	friend class cBase;
 	template<class cX,class cS> friend class cMainThread;
 };
 
-///This is the number of Items the Painter can hold at start
+///This is the number of cCamera slots created in the cCameraHandler at start. The number of slots will be increased as required, but this involves some overhead.
+extern uint8 WT_STARTING_CAMERA_SLOTS;
+///This is the number of cViewport slots created in the cViewportHandler at start. The number of slots will be increased as required, but this involves some overhead.
+extern uint8 WT_STARTING_VIEWPORT_SLOTS;
+
+///This is the depth of a cPushPop Stack object.
+extern uint16 PUSH_POP_STACK_DEPTH;
+
+///This is the number of Textures which can be linked to any single object. The limit on this is based on teh graphics card. Almost all modern graphics cards support two, though some support up to 8. Keep this to the minimum number required for the shaders being used. If multitexturing is not being used set this to 1.
+extern uint8 WT_TEXTURE_NUMBER_ALLOWED;
+///This is the number of Items the Painter can hold at start. It will expand as required, but each expansion has a non negligable overhead.
 extern uint16 WT_PAINTER_STARTING_SIZE;
 
-///Flag defining the maximum number of levels that the cPushPopStack class will use.
-extern uint16 StackDepth;
+extern uint16 _MATRIX_STACK_DEPTH;
 
 /// This sets the number of OpenGL Lights to use in Rendering. See cLight().
 extern uint16 WT_OPENGL_LIGHTS;
@@ -93,4 +103,7 @@ extern float WT_RAY_ANGLE_LOWER;
 extern float WT_LANDSCAPE_TEXTURE_ACTUAL_SCALE;
 extern float WT_LANDSCAPE_TEXTURE_PERCENTAGE_SHIFT;
 
+extern float WT_FRAME_TIME;
+
+extern bool WT_ENABLE_LOGGING;
 #endif

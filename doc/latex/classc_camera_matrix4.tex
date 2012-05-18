@@ -45,7 +45,7 @@ float \hyperlink{classc_camera_matrix4_a7e3030fcedbd3b74270b26ea2b61904c}{Z} ()}
 
 \begin{DoxyCompactList}\small\item\em This will return the Z position of this objects matrix. \end{DoxyCompactList}\item 
 \hypertarget{classc_camera_matrix4_a7110b0f3aa924a2cfefe8ca149e0b41f}{
-void \hyperlink{classc_camera_matrix4_a7110b0f3aa924a2cfefe8ca149e0b41f}{Position} (\hyperlink{classc3_d_vf}{c3DVf} $\ast$lpPosition)}
+void \hyperlink{classc_camera_matrix4_a7110b0f3aa924a2cfefe8ca149e0b41f}{Position} (c3DVf $\ast$lpPosition)}
 \label{classc_camera_matrix4_a7110b0f3aa924a2cfefe8ca149e0b41f}
 
 \begin{DoxyCompactList}\small\item\em This will set this objects matrix position vector to be the same as lpPosition. \end{DoxyCompactList}\item 
@@ -69,6 +69,11 @@ void \hyperlink{classc_camera_matrix4_a6ea814a92ce2d7fcc1ba66490127b2f2}{Positio
 \label{classc_camera_matrix4_a6ea814a92ce2d7fcc1ba66490127b2f2}
 
 \begin{DoxyCompactList}\small\item\em This will set this objects Z position to he lfZ. \end{DoxyCompactList}\item 
+\hypertarget{classc_camera_matrix4_a6226abdf3731075f95e10704bcc717bf}{
+void \hyperlink{classc_camera_matrix4_a6226abdf3731075f95e10704bcc717bf}{Advance} (float lfDist)}
+\label{classc_camera_matrix4_a6226abdf3731075f95e10704bcc717bf}
+
+\begin{DoxyCompactList}\small\item\em This will advance the position of this objects X,Y and Z positions by lfX,lfY and lfZ along local axis. \end{DoxyCompactList}\item 
 \hypertarget{classc_camera_matrix4_a4a07cdf5cb578378193487a1ac304380}{
 void \hyperlink{classc_camera_matrix4_a4a07cdf5cb578378193487a1ac304380}{AdvanceX} (float lfDistance)}
 \label{classc_camera_matrix4_a4a07cdf5cb578378193487a1ac304380}
@@ -219,6 +224,16 @@ void \hyperlink{classc_camera_matrix4_a1f0549e1ae97a959863a8fe27bec1169}{Follow}
 \label{classc_camera_matrix4_a1f0549e1ae97a959863a8fe27bec1169}
 
 \begin{DoxyCompactList}\small\item\em This will make the camera position itself with the same orientation as the Matrix lpOther at the point lfX,lfY,lfZ relative to its local Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_camera_matrix4_a17065b6fdb233d94ad87608a1518d501}{
+void \hyperlink{classc_camera_matrix4_a17065b6fdb233d94ad87608a1518d501}{Follow} (vRenderObject $\ast$lpObj, float lfDist)}
+\label{classc_camera_matrix4_a17065b6fdb233d94ad87608a1518d501}
+
+\begin{DoxyCompactList}\small\item\em This will make the camera position itself with the same orientation as the Render Object lpOther at the point lfDist behind its local Co-\/ordinates. This uses the objects mmCache Matrix. \end{DoxyCompactList}\item 
+\hypertarget{classc_camera_matrix4_a6d2ac844b95f6a23239047a1598880a9}{
+void \hyperlink{classc_camera_matrix4_a6d2ac844b95f6a23239047a1598880a9}{Follow} (vRenderObject $\ast$lpObj, float lfX, float lfY, float lfZ)}
+\label{classc_camera_matrix4_a6d2ac844b95f6a23239047a1598880a9}
+
+\begin{DoxyCompactList}\small\item\em This will make the camera position itself with the same orientation as the Render Object lpOther at the point lfX,lfY,lfZ relative to its local Co-\/ordinates. This uses the objects mmCache Matrix. \end{DoxyCompactList}\item 
 \hypertarget{classc_camera_matrix4_aa8ca47d59f6b3b454d700329bdbbdeea}{
 void \hyperlink{classc_camera_matrix4_aa8ca47d59f6b3b454d700329bdbbdeea}{PointAt} (float $\ast$mpPos)}
 \label{classc_camera_matrix4_aa8ca47d59f6b3b454d700329bdbbdeea}
@@ -235,15 +250,20 @@ void \hyperlink{classc_camera_matrix4_aa4cd6a1c22791a336c3eb21d0a0d94e4}{PointAt
 
 \begin{DoxyCompactList}\small\item\em This will make the camera point itself at the global point defined by the three float array lpPos. \end{DoxyCompactList}\item 
 \hypertarget{classc_camera_matrix4_ac9e73a11692a91065a59af310e8e246b}{
-void \hyperlink{classc_camera_matrix4_ac9e73a11692a91065a59af310e8e246b}{PointAt} (\hyperlink{classc3_d_vf}{c3DVf} \&mpPos)}
+void \hyperlink{classc_camera_matrix4_ac9e73a11692a91065a59af310e8e246b}{PointAt} (c3DVf \&mpPos)}
 \label{classc_camera_matrix4_ac9e73a11692a91065a59af310e8e246b}
 
 \begin{DoxyCompactList}\small\item\em This will make the camera point itself at the global point defined by the three float array lpPos. \end{DoxyCompactList}\item 
 \hypertarget{classc_camera_matrix4_aee6a49404715d0a891f7e59c0124fc16}{
-void \hyperlink{classc_camera_matrix4_aee6a49404715d0a891f7e59c0124fc16}{PointAt} (\hyperlink{classc3_d_vf}{c3DVf} $\ast$mpPos)}
+void \hyperlink{classc_camera_matrix4_aee6a49404715d0a891f7e59c0124fc16}{PointAt} (c3DVf $\ast$mpPos)}
 \label{classc_camera_matrix4_aee6a49404715d0a891f7e59c0124fc16}
 
 \begin{DoxyCompactList}\small\item\em This will make the camera point itself at the global point defined by the three float array lpPos. \end{DoxyCompactList}\item 
+\hypertarget{classc_camera_matrix4_a2a17ab7086abec91dc96a3ee2acffcc0}{
+void \hyperlink{classc_camera_matrix4_a2a17ab7086abec91dc96a3ee2acffcc0}{PointAt} (vRenderObject $\ast$lpObj)}
+\label{classc_camera_matrix4_a2a17ab7086abec91dc96a3ee2acffcc0}
+
+\begin{DoxyCompactList}\small\item\em This will make the camera point itself at the global point of the Render Object lpObjs cache matrix mmCache. \end{DoxyCompactList}\item 
 \hypertarget{classc_camera_matrix4_ac22d068fd30bfd2c5cb23dc06822f500}{
 void \hyperlink{classc_camera_matrix4_ac22d068fd30bfd2c5cb23dc06822f500}{Equals} (\hyperlink{classc_camera_matrix4}{cCameraMatrix4} $\ast$lpOther)}
 \label{classc_camera_matrix4_ac22d068fd30bfd2c5cb23dc06822f500}
@@ -295,7 +315,7 @@ float \& \hyperlink{classc_camera_matrix4_a47de224c654b31aa8c22e55ec1d58ed0}{ope
 
 \begin{DoxyCompactList}\small\item\em This will return the float in the position \mbox{[}liColumn,liRow\mbox{]} in this objects matrix. \end{DoxyCompactList}\item 
 \hypertarget{classc_camera_matrix4_a62fa2879539cc733e661d02b8a898578}{
-void \hyperlink{classc_camera_matrix4_a62fa2879539cc733e661d02b8a898578}{Position} (\hyperlink{classc2_d_vf}{c2DVf} $\ast$lpPosition)}
+void \hyperlink{classc_camera_matrix4_a62fa2879539cc733e661d02b8a898578}{Position} (c2DVf $\ast$lpPosition)}
 \label{classc_camera_matrix4_a62fa2879539cc733e661d02b8a898578}
 
 \begin{DoxyCompactList}\small\item\em This will set this objects matrix position (2D -\/ X,Y) vector to be the same as lpPosition. \end{DoxyCompactList}\item 

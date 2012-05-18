@@ -369,6 +369,48 @@ template<class Type> c3DVt<Type> c3DVt<Type>::operator-=(c3DVt<Type> *lpValue)
  return *this;
 }
 
+template<class Type> Type c3DVt<Type>::Distance(c3DVt<Type> lpOther)
+{
+ c3DVf lpTemp(v);
+ lpTemp-=lpOther;
+ return lpTemp.Magnitude();
+};
+
+template<class Type> Type c3DVt<Type>::Distance(c3DVt<Type> *lpOther)
+{
+ c3DVf lpTemp(v);
+ lpTemp-=lpOther;
+ return lpTemp.Magnitude();
+};
+
+template<class Type> Type c3DVt<Type>::Distance(Type *lpOther)
+{
+ c3DVf lpTemp(v);
+ lpTemp-=lpOther;
+ return lpTemp.Magnitude();
+};
+
+template<class Type> Type c3DVt<Type>::DistanceSq(c3DVt<Type> lpOther)
+{
+ c3DVf lpTemp(v);
+ lpTemp-=lpOther;
+ return lpTemp.MagnitudeSq();
+};
+
+template<class Type> Type c3DVt<Type>::DistanceSq(c3DVt<Type> *lpOther)
+{
+ c3DVf lpTemp(v);
+ lpTemp-=lpOther;
+ return lpTemp.MagnitudeSq();
+};;
+
+template<class Type> Type c3DVt<Type>::DistanceSq(Type *lpOther)
+{
+ c3DVf lpTemp(v);
+ lpTemp-=lpOther;
+ return lpTemp.MagnitudeSq();
+};;
+
 
 template<class Type> Type c3DVt<Type>::MagnitudeSq()
 {

@@ -10,6 +10,7 @@ public:
 	cSettings(){};
 	~cSettings(){};
 	virtual void Settings(){};
+	virtual void UserWindowSizeUpdate(){};
 
 	friend class cBase;
 	template<class cX,class cS> friend class cMainThread;
@@ -104,4 +105,5 @@ extern float WT_LANDSCAPE_TEXTURE_PERCENTAGE_SHIFT;
 
 extern float WT_FRAME_TIME;
 
+extern bool WT_ENABLE_LOGGING;
 #endif

@@ -4,5 +4,5 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =   -W -Wall -g -ggdb -O0
 
-CXX_DEFINES = 
+CXX_DEFINES = -Dm32
 

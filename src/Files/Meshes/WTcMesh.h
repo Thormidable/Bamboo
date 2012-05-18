@@ -94,7 +94,7 @@ GLuint mBuffer2;
        void CreateUVSphereMap();
 
  /// This will return the number of verteces in the vertex position array mpVertex.
- uint32 Vertex();
+ uint32 Verteces();
 /// This will return the number of faces in the face array mpFaces.
  uint32 Faces();
  /// This will return a pointer to the vertex position array.
@@ -137,12 +137,15 @@ FACE_TYPE *Face(uint32 liFace);
 FACE_TYPE Face(uint32 liFace,uint8 liVertex);
 
 float GetAngleSum(uint32 liFace,float *lpPos);
+///This will return the closest UV co-ordinates to a point in Model Space. Requires TBN Data.
 c2DVf FindUVCoordinates(c3DVf ModelPos,float *lpTangent,float *lpBinormal,float *NormalData);
 
 ///This will duplicate this mesh and return the pointer to the new instance. It can be named with lsFileName, if not it will be named "GeneratedMesh".
 cMesh *Duplicate(string lsFileName="");
 ///This will make this cMesh duplicate lpMesh. It can be named with lsFileName, if not it will be named "GeneratedMesh".
 void Equals(cMesh *lpMesh,string lsFileName="");
+
+void ZeroCentre();
 
 uint8 VertexSize();
 
@@ -159,6 +162,15 @@ bool ContainsVertex(c3DVf lcVert,uint32 liFace);
 
 uint8 FaceCompare(float *lpFurthest,float *lpFurthestNormal,uint16 *lpFaceCorrect,uint16 *lpFaceUnknown);
 int8 FacesShareEdge(uint16 *lpFace1,uint16 *lpFace2);
+
+c3DVf GetTexture3DLocation(c2DVf lfPos);
+
+cSeamPair UVSeam(FACE_TYPE *Face1,FACE_TYPE *Face2);
+
+void GenerateSpace(uint16 liVerteces,bool lbNormal,bool lbUV,uint32 liFaces);
+
+void RemoveErrorFaces(float lfRange);
+
 
 };
 #endif

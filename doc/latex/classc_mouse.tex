@@ -7,6 +7,15 @@
 This will store all the input data for a single mouse. It also controls the interpretation of the input and controls the cursor. It allows the user to Lock the cursor to the centre of the screen reading mouse position based on the distance moved every frame. The mouse inputs are buffered meaning that the mouse inputs are consistent for an entire process cycle. It also means that the actual cursor speed can be calculated.  
 
 
+
+
+Collaboration diagram for cMouse:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classc_mouse__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -79,7 +88,12 @@ void \hyperlink{classc_mouse_abef74e9066d916ec62daf4a440dbbe58}{Lock} ()}
 void \hyperlink{classc_mouse_a869bb420067947a30b57ad649e3f1f14}{Unlock} ()}
 \label{classc_mouse_a869bb420067947a30b57ad649e3f1f14}
 
-\begin{DoxyCompactList}\small\item\em This will unlock the mouse cursor from the centre of the window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This will unlock the mouse cursor from the centre of the window. \end{DoxyCompactList}\item 
+\hypertarget{classc_mouse_a2a3632592810662e9ab868eba250b7cd}{
+\hyperlink{classc_collision_list}{cCollisionList} $\ast$ \hyperlink{classc_mouse_a2a3632592810662e9ab868eba250b7cd}{Selection} (\hyperlink{classc_perspective_control}{cPerspectiveControl} $\ast$lpCamera=\_\-CAMERA, float lfRadius=0.0f)}
+\label{classc_mouse_a2a3632592810662e9ab868eba250b7cd}
+
+\begin{DoxyCompactList}\small\item\em This will Generate a detailed Mouse Selection Collision List. This list will do a sphere collision check with a beam of radius lfRadius. The Vector of the mouses collision is determined from the \hyperlink{classc_camera}{cCamera} and it's main viewport. The list produced will fill mfBeamlengths with the length along the beam to reach the colliding item. The mfDistance in the list is automatically generated and is the distance from the closest point on the Mosue vector. The vector is from the cameras position through the mouse co-\/ordinates in the viewport. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 

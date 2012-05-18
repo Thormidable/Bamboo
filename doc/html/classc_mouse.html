@@ -70,6 +70,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <!-- doxytag: class="cMouse" -->
 <p>This will store all the input data for a single mouse. It also controls the interpretation of the input and controls the cursor. It allows the user to Lock the cursor to the centre of the screen reading mouse position based on the distance moved every frame. The mouse inputs are buffered meaning that the mouse inputs are consistent for an entire process cycle. It also means that the actual cursor speed can be calculated.  
  <a href="classc_mouse.html#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for cMouse:</div>
+<div class="dyncontent">
+<div class="center"><img src="classc_mouse__coll__graph.png" border="0" usemap="#c_mouse_coll__map" alt="Collaboration graph"/></div>
+<map name="c_mouse_coll__map" id="c_mouse_coll__map">
+<area shape="rect" id="node2" href="classc_texture.html" title="This class stores the data for rendering a 2D texture. This stores and processes the data for a 2D te..." alt="" coords="43,541,115,571"/><area shape="rect" id="node4" href="classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh..." alt="" coords="53,461,104,491"/><area shape="rect" id="node6" href="classv_file.html" title="This is the virtual file for cFile. It is a virtual representation of the base code for files loaded ..." alt="" coords="5,8,56,37"/><area shape="rect" id="node13" href="classc_linked_node.html" title="cLinkedNode\&lt; vFile \&gt;" alt="" coords="71,123,220,152"/><area shape="rect" id="node8" href="classc_file_handler.html" title="This is the handler for the file system. This handles all files loaded from a hdd. It will give allow processes to use files loaded else where, using either the filenames or if loaded from an IMF a file reference. The files are stored in the list mpFiles." alt="" coords="139,365,232,395"/><area shape="rect" id="node11" href="classc_linked_list.html" title="cLinkedList\&lt; vFile \&gt;" alt="" coords="116,269,255,299"/><area shape="rect" id="node17" href="classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="84,8,215,37"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classc_mouse-members.html">List of all members.</a></p>
 <table class="memberdecls">
@@ -117,6 +124,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a869bb420067947a30b57ad649e3f1f14"></a><!-- doxytag: member="cMouse::Unlock" ref="a869bb420067947a30b57ad649e3f1f14" args="()" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_mouse.html#a869bb420067947a30b57ad649e3f1f14">Unlock</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will unlock the mouse cursor from the centre of the window. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a3632592810662e9ab868eba250b7cd"></a><!-- doxytag: member="cMouse::Selection" ref="a2a3632592810662e9ab868eba250b7cd" args="(cPerspectiveControl *lpCamera=_CAMERA, float lfRadius=0.0f)" -->
+<a class="el" href="classc_collision_list.html">cCollisionList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_mouse.html#a2a3632592810662e9ab868eba250b7cd">Selection</a> (<a class="el" href="classc_perspective_control.html">cPerspectiveControl</a> *lpCamera=_CAMERA, float lfRadius=0.0f)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will Generate a detailed Mouse Selection Collision List. This list will do a sphere collision check with a beam of radius lfRadius. The Vector of the mouses collision is determined from the <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> and it's main viewport. The list produced will fill mfBeamlengths with the length along the beam to reach the colliding item. The mfDistance in the list is automatically generated and is the distance from the closest point on the Mosue vector. The vector is from the cameras position through the mouse co-ordinates in the viewport. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6306d52aba6df1e6496c038db013442"></a><!-- doxytag: member="cMouse::Pos" ref="ad6306d52aba6df1e6496c038db013442" args="" -->
@@ -140,7 +150,7 @@ tagPOINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:04 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:08 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

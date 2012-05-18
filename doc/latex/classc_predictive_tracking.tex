@@ -1,0 +1,55 @@
+\hypertarget{classc_predictive_tracking}{
+\section{cPredictiveTracking Class Reference}
+\label{classc_predictive_tracking}\index{cPredictiveTracking@{cPredictiveTracking}}
+}
+
+
+This class will track an object relative to another object and give the vector to be fired to intercept the target (given projectile speed) This class inherits from \hyperlink{classc_predictive_aiming}{cPredictiveAiming}, but automatically tracks a target relative to a firing objec. This class is set to follow two objects, and firer and a target. It can be polled for a most likely targeting vector to hit the target. It can also return the expected number of time steps before collisions. This can be roughly assumed to be inversely proportional to the likelyhood of a hit. The Vector returned is the direction the projectile should be traveling in global co-\/ordinates. This assumes that the Firers velocity is not going to affect the projectiles velocity. To update This class MUST point at a living target and a living firer. If either die, the dead object should be replaced or the class deleted.  
+
+
+
+
+Collaboration diagram for cPredictiveTracking:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classc_predictive_tracking__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_predictive_tracking_a71b8c07e6575ac7173696bd70fe62b5b}{
+void \hyperlink{classc_predictive_tracking_a71b8c07e6575ac7173696bd70fe62b5b}{UpdateFast} ()}
+\label{classc_predictive_tracking_a71b8c07e6575ac7173696bd70fe62b5b}
+
+\begin{DoxyCompactList}\small\item\em This will keep the tracking active but not calculate the targeting vector. After this function is used a targeting vector will not be calculated. \end{DoxyCompactList}\item 
+\hypertarget{classc_predictive_tracking_ae19205b48dfaacd9c5aefe0e9783cff1}{
+void \hyperlink{classc_predictive_tracking_ae19205b48dfaacd9c5aefe0e9783cff1}{Update} (float lfProjectileSpeed)}
+\label{classc_predictive_tracking_ae19205b48dfaacd9c5aefe0e9783cff1}
+
+\begin{DoxyCompactList}\small\item\em This should be called once a time step, it will update the calculations of the objects. \end{DoxyCompactList}\item 
+\hypertarget{classc_predictive_tracking_aac242467fa6023705514791e54c72b5e}{
+void \hyperlink{classc_predictive_tracking_aac242467fa6023705514791e54c72b5e}{ChangeTarget} (vRenderObject $\ast$lpTarg)}
+\label{classc_predictive_tracking_aac242467fa6023705514791e54c72b5e}
+
+\begin{DoxyCompactList}\small\item\em This will change the Target. \end{DoxyCompactList}\item 
+\hypertarget{classc_predictive_tracking_a4a9466f91c3c371130a0d139df321714}{
+void \hyperlink{classc_predictive_tracking_a4a9466f91c3c371130a0d139df321714}{ChangeTarget} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lpTarg)}
+\label{classc_predictive_tracking_a4a9466f91c3c371130a0d139df321714}
+
+\begin{DoxyCompactList}\small\item\em This will change the Target. \end{DoxyCompactList}\item 
+\hypertarget{classc_predictive_tracking_a5dd024f056c2f6ac4682736ea83a739f}{
+void \hyperlink{classc_predictive_tracking_a5dd024f056c2f6ac4682736ea83a739f}{ChangeFirer} (vRenderObject $\ast$lpFirer)}
+\label{classc_predictive_tracking_a5dd024f056c2f6ac4682736ea83a739f}
+
+\begin{DoxyCompactList}\small\item\em This will change the Firer. \end{DoxyCompactList}\item 
+\hypertarget{classc_predictive_tracking_a78d56bcf03800ff5ad41f879d0fc3f23}{
+void \hyperlink{classc_predictive_tracking_a78d56bcf03800ff5ad41f879d0fc3f23}{ChangeFirer} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lpFirer)}
+\label{classc_predictive_tracking_a78d56bcf03800ff5ad41f879d0fc3f23}
+
+\begin{DoxyCompactList}\small\item\em This will change the Firer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will track an object relative to another object and give the vector to be fired to intercept the target (given projectile speed) This class inherits from \hyperlink{classc_predictive_aiming}{cPredictiveAiming}, but automatically tracks a target relative to a firing objec. This class is set to follow two objects, and firer and a target. It can be polled for a most likely targeting vector to hit the target. It can also return the expected number of time steps before collisions. This can be roughly assumed to be inversely proportional to the likelyhood of a hit. The Vector returned is the direction the projectile should be traveling in global co-\/ordinates. This assumes that the Firers velocity is not going to affect the projectiles velocity. To update This class MUST point at a living target and a living firer. If either die, the dead object should be replaced or the class deleted. 

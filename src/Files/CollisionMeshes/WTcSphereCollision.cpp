@@ -16,3 +16,5 @@ cSphereCollision *cSphereCollision::Sphere(){return this;};
 void cSphereCollision::Update(cMatrix4 &New){(void) New;};
 
 uint8 cSphereCollision::Type(){return WT_COLLISION_RADIUS;}
+
+cMouseCollision *cSphereCollision::Mouse(){return 0;};

@@ -1,0 +1,63 @@
+\hypertarget{classc_attribute_data}{
+\section{cAttributeData$<$ tType $>$ Class Template Reference}
+\label{classc_attribute_data}\index{cAttributeData@{cAttributeData}}
+}
+
+
+A class for storing generated Attribute data for RenderObjects.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_attribute_data_a833c523844faa905207e55d4473aeeb3}{
+\hyperlink{classc_attribute_data_a833c523844faa905207e55d4473aeeb3}{cAttributeData} (uint32 liElements)}
+\label{classc_attribute_data_a833c523844faa905207e55d4473aeeb3}
+
+\begin{DoxyCompactList}\small\item\em Constructor for creating an instance of the class. Takes number of verteces in the linked mesh. \end{DoxyCompactList}\item 
+\hypertarget{classc_attribute_data_a9c43ef79aec90c13493db09020e56551}{
+\hyperlink{classc_attribute_data_a9c43ef79aec90c13493db09020e56551}{cAttributeData} (uint32 liElements, string lsName)}
+\label{classc_attribute_data_a9c43ef79aec90c13493db09020e56551}
+
+\begin{DoxyCompactList}\small\item\em Constructor for creating an instance of the class. Takes number of verteces in the linked mesh and text reference of the attribute variable to link to. \end{DoxyCompactList}\item 
+\hypertarget{classc_attribute_data_aceea8fbe67e84433a660f0fc5700dc28}{
+tType $\ast$ \hyperlink{classc_attribute_data_aceea8fbe67e84433a660f0fc5700dc28}{Data} ()}
+\label{classc_attribute_data_aceea8fbe67e84433a660f0fc5700dc28}
+
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the type of data. \end{DoxyCompactList}\item 
+\hypertarget{classc_attribute_data_a8326b7d4ad72493b4934dc0f730db98c}{
+uint32 \hyperlink{classc_attribute_data_a8326b7d4ad72493b4934dc0f730db98c}{Elements} ()}
+\label{classc_attribute_data_a8326b7d4ad72493b4934dc0f730db98c}
+
+\begin{DoxyCompactList}\small\item\em Returns the number of elements in this \hyperlink{classc_attribute_data}{cAttributeData} object. \end{DoxyCompactList}\item 
+\hypertarget{classc_attribute_data_a1f45ce92d3a92cf94b1cc31d69e6b440}{
+string \hyperlink{classc_attribute_data_a1f45ce92d3a92cf94b1cc31d69e6b440}{Name} ()}
+\label{classc_attribute_data_a1f45ce92d3a92cf94b1cc31d69e6b440}
+
+\begin{DoxyCompactList}\small\item\em Returns the text reference of the attribute variable to link to. \end{DoxyCompactList}\item 
+\hypertarget{classc_attribute_data_a5e426850dafe2925d372d4e8fa7386df}{
+void \hyperlink{classc_attribute_data_a5e426850dafe2925d372d4e8fa7386df}{LinkToShader} (\hyperlink{classc_render_object}{cRenderObject} $\ast$lpObject)}
+\label{classc_attribute_data_a5e426850dafe2925d372d4e8fa7386df}
+
+\begin{DoxyCompactList}\small\item\em This will Link this array of data to the \hyperlink{classc_render_object}{cRenderObject} lpObject. \end{DoxyCompactList}\item 
+\hypertarget{classc_attribute_data_ad8e445c34d8450c383b9163303e7bfc4}{
+void \hyperlink{classc_attribute_data_ad8e445c34d8450c383b9163303e7bfc4}{LinkToShader} (\hyperlink{classc_render_object}{cRenderObject} $\ast$lpObject, string lsName)}
+\label{classc_attribute_data_ad8e445c34d8450c383b9163303e7bfc4}
+
+\begin{DoxyCompactList}\small\item\em This will Link this array of data to the atrribute variable with the text reference lsName within the shader used by the \hyperlink{classc_render_object}{cRenderObject} lpObject. \end{DoxyCompactList}\item 
+\hypertarget{classc_attribute_data_a59b992eac95556cc95ab855b1d3b9668}{
+tType \& \hyperlink{classc_attribute_data_a59b992eac95556cc95ab855b1d3b9668}{operator\mbox{[}$\,$\mbox{]}} (uint32 liPos)}
+\label{classc_attribute_data_a59b992eac95556cc95ab855b1d3b9668}
+
+\begin{DoxyCompactList}\small\item\em Will return the data item at position liPos. \end{DoxyCompactList}\item 
+\hypertarget{classc_attribute_data_a081ea5ae43b9d365a018b5a4386d8092}{
+tType \& \hyperlink{classc_attribute_data_a081ea5ae43b9d365a018b5a4386d8092}{Get} (uint32 liPos)}
+\label{classc_attribute_data_a081ea5ae43b9d365a018b5a4386d8092}
+
+\begin{DoxyCompactList}\small\item\em Will return the data item at position liPos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class tType$>$class cAttributeData$<$ tType $>$}
+
+A class for storing generated Attribute data for RenderObjects. 

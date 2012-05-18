@@ -34,14 +34,14 @@ cCollisionList *cCollisionHandlerType::GenerateCollisionList(cCollisionObject *l
 {
 	cCollisionList *lpList=new cCollisionList;
 	ResetCursors();
-	printf("lpType : %u, %u\n",lpType,WT_COLLISION_HANDLER_ARRAY_SIZE);
 if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE)
 {
 	if(lpType)
 	{
 	while(NextListItem(lpType))
 		{
-
+			printf("mpCollCur mpFollowing : %p\n",mpColCur->Data()->Following());
+			printf("lpObj mpFollowing : %p\n",lpObj->Following());
 			if(mpColCur->Data()!=lpObj)
 			{
 				if(mpColCur->Data()->Collision(lpObj))

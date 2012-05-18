@@ -150,7 +150,7 @@ void \hyperlink{classc_matrix4_a6e0051199566d89193d7c2e07e957eb4}{Position} (\hy
 
 \begin{DoxyCompactList}\small\item\em Will copy the position data from the matrix lpOther. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_ac182a447e047d9071b035b374e8abf45}{
-void \hyperlink{classc_matrix4_ac182a447e047d9071b035b374e8abf45}{Position} (\hyperlink{classc2_d_vf}{c2DVf} $\ast$lpPosition)}
+void \hyperlink{classc_matrix4_ac182a447e047d9071b035b374e8abf45}{Position} (c2DVf $\ast$lpPosition)}
 \label{classc_matrix4_ac182a447e047d9071b035b374e8abf45}
 
 \begin{DoxyCompactList}\small\item\em This will position the current object to the 2D Vector lpPosition. (X,Y) \end{DoxyCompactList}\item 
@@ -160,7 +160,7 @@ void \hyperlink{classc_matrix4_a81cd364d37dc5eae6f968551331ad7a3}{Position} (flo
 
 \begin{DoxyCompactList}\small\item\em This will position the current object to lfX,lfY. (X,Y) \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_a8a49976693c27e4fbb5fce427eb6bcf5}{
-void \hyperlink{classc_matrix4_a8a49976693c27e4fbb5fce427eb6bcf5}{Position} (\hyperlink{classc3_d_vf}{c3DVf} $\ast$lpPosition)}
+void \hyperlink{classc_matrix4_a8a49976693c27e4fbb5fce427eb6bcf5}{Position} (c3DVf $\ast$lpPosition)}
 \label{classc_matrix4_a8a49976693c27e4fbb5fce427eb6bcf5}
 
 \begin{DoxyCompactList}\small\item\em This will position the current object to the 3D Vector lpPosition. (X,Y,Z) \end{DoxyCompactList}\item 
@@ -175,22 +175,22 @@ void \hyperlink{classc_matrix4_a91f9e8d79d7721ba35f59c754a5507d1}{Advance} (floa
 
 \begin{DoxyCompactList}\small\item\em Will Advance the object along its local axis by the distance of the floats in the array lfDistance. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_a6c53b28448e2d2531a19cd49955f5901}{
-void \hyperlink{classc_matrix4_a6c53b28448e2d2531a19cd49955f5901}{Advance} (\hyperlink{classc2_d_vf}{c2DVf} $\ast$lfDistances)}
+void \hyperlink{classc_matrix4_a6c53b28448e2d2531a19cd49955f5901}{Advance} (c2DVf $\ast$lfDistances)}
 \label{classc_matrix4_a6c53b28448e2d2531a19cd49955f5901}
 
 \begin{DoxyCompactList}\small\item\em Will Advance the object along its local X and Y axis by the Vector lfDistances;. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_a86aefa3a444eaabd4ad1a66e4857f40e}{
-void \hyperlink{classc_matrix4_a86aefa3a444eaabd4ad1a66e4857f40e}{Advance} (\hyperlink{classc3_d_vf}{c3DVf} $\ast$lfDistances)}
+void \hyperlink{classc_matrix4_a86aefa3a444eaabd4ad1a66e4857f40e}{Advance} (c3DVf $\ast$lfDistances)}
 \label{classc_matrix4_a86aefa3a444eaabd4ad1a66e4857f40e}
 
 \begin{DoxyCompactList}\small\item\em Will Advance the object along its local X, Y and Z axis by the Vector lfDistances;. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_a07d410e6592dacf244ad118d70443181}{
-void \hyperlink{classc_matrix4_a07d410e6592dacf244ad118d70443181}{Advance} (\hyperlink{classc2_d_vf}{c2DVf} \&lfDistances)}
+void \hyperlink{classc_matrix4_a07d410e6592dacf244ad118d70443181}{Advance} (c2DVf \&lfDistances)}
 \label{classc_matrix4_a07d410e6592dacf244ad118d70443181}
 
 \begin{DoxyCompactList}\small\item\em Will Advance the object along its local X and Y axis by the Vector lfDistances;. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_ac07dd71793d6df522efa2098f9e1daa6}{
-void \hyperlink{classc_matrix4_ac07dd71793d6df522efa2098f9e1daa6}{Advance} (\hyperlink{classc3_d_vf}{c3DVf} \&lfDistances)}
+void \hyperlink{classc_matrix4_ac07dd71793d6df522efa2098f9e1daa6}{Advance} (c3DVf \&lfDistances)}
 \label{classc_matrix4_ac07dd71793d6df522efa2098f9e1daa6}
 
 \begin{DoxyCompactList}\small\item\em Will Advance the object along its local X, Y and Z axis by the Vector lfDistances;. \end{DoxyCompactList}\item 
@@ -349,14 +349,189 @@ void \hyperlink{classc_matrix4_af5ecfcfab719acf23ddb1148ad24825a}{GRotateOriginZ
 \label{classc_matrix4_af5ecfcfab719acf23ddb1148ad24825a}
 
 \begin{DoxyCompactList}\small\item\em This will rotate the object around the global Z axis at point 0,0,0 by lfAngle radians. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a0982225c44091485ea386d9cd6cae3f0}{
+void \hyperlink{classc_matrix4_a0982225c44091485ea386d9cd6cae3f0}{LookAt} (float $\ast$lfPoint)}
+\label{classc_matrix4_a0982225c44091485ea386d9cd6cae3f0}
+
+\begin{DoxyCompactList}\small\item\em This will make the current object look at the point lfPoint in Local Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_ade806c1acf4d2b367b5cf3179a93c733}{
+void \hyperlink{classc_matrix4_ade806c1acf4d2b367b5cf3179a93c733}{LookAt} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lfPoint)}
+\label{classc_matrix4_ade806c1acf4d2b367b5cf3179a93c733}
+
+\begin{DoxyCompactList}\small\item\em This will make the current object look at the point lfPoint in Local Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_ad11efc9975ea8db0d7c728a2c215b532}{
+void \hyperlink{classc_matrix4_ad11efc9975ea8db0d7c728a2c215b532}{LookAt} (\hyperlink{classc_matrix4}{cMatrix4} \&lfPoint)}
+\label{classc_matrix4_ad11efc9975ea8db0d7c728a2c215b532}
+
+\begin{DoxyCompactList}\small\item\em This will make the current object look at the point lfPoint in Local Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_ad6d00603264b64af06f98208978908c9}{
+void \hyperlink{classc_matrix4_ad6d00603264b64af06f98208978908c9}{LookAt} (float lfX, float lfY, float lfZ)}
+\label{classc_matrix4_ad6d00603264b64af06f98208978908c9}
+
+\begin{DoxyCompactList}\small\item\em This will make the current object look at the point lfPoint in Local Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_ab085c6a0964db502efd867ff1b89d567}{
+void \hyperlink{classc_matrix4_ab085c6a0964db502efd867ff1b89d567}{LookAt} (c3DVf lfVect)}
+\label{classc_matrix4_ab085c6a0964db502efd867ff1b89d567}
+
+\begin{DoxyCompactList}\small\item\em This will make the current object look at the point lfVect in Local Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a3bf4d3fd5053e524f48d2ef03c7ab187}{
+void \hyperlink{classc_matrix4_a3bf4d3fd5053e524f48d2ef03c7ab187}{LookVector} (float $\ast$lfVect)}
+\label{classc_matrix4_a3bf4d3fd5053e524f48d2ef03c7ab187}
+
+\begin{DoxyCompactList}\small\item\em This will make the current object look in the direction lfVect in Local Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a20184fd23338127b98d617086e12a934}{
+void \hyperlink{classc_matrix4_a20184fd23338127b98d617086e12a934}{LookVector} (float lfX, float lfY, float lfZ)}
+\label{classc_matrix4_a20184fd23338127b98d617086e12a934}
+
+\begin{DoxyCompactList}\small\item\em This will make the current object look in the direction lfX,lfY,lfZ in Local Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a9a08d629625f1c5f03b51b5739981e08}{
+void \hyperlink{classc_matrix4_a9a08d629625f1c5f03b51b5739981e08}{LookVector} (c3DVf lfVect)}
+\label{classc_matrix4_a9a08d629625f1c5f03b51b5739981e08}
+
+\begin{DoxyCompactList}\small\item\em This will make the current object look in the direction lfVect in Local Co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a5cf9c759a7681810486a1f11f6bc3c64}{
+float \hyperlink{classc_matrix4_a5cf9c759a7681810486a1f11f6bc3c64}{RollToPointPitch} (float $\ast$lfPoint)}
+\label{classc_matrix4_a5cf9c759a7681810486a1f11f6bc3c64}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must roll (about X Axis) to have the point on its ZY Plane. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_af29fcc2d2ac6c266e8c8075944afb8fc}{
+float \hyperlink{classc_matrix4_af29fcc2d2ac6c266e8c8075944afb8fc}{RollToPointYaw} (float $\ast$lfPoint)}
+\label{classc_matrix4_af29fcc2d2ac6c266e8c8075944afb8fc}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must roll (about X Axis) to have the point on its ZX Plane. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a2838155185f07e02acd1a8e07c532732}{
+float \hyperlink{classc_matrix4_a2838155185f07e02acd1a8e07c532732}{YawToPoint} (float $\ast$lfPoint)}
+\label{classc_matrix4_a2838155185f07e02acd1a8e07c532732}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must Yaw (about Y Axis) to be 'facing' the Local point lfPoint. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_ac1c46f4ef1c8ffff6419222207e26d26}{
+float \hyperlink{classc_matrix4_ac1c46f4ef1c8ffff6419222207e26d26}{PitchToPoint} (float $\ast$lfPoint)}
+\label{classc_matrix4_ac1c46f4ef1c8ffff6419222207e26d26}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must pitch (about Z Axis) to be 'facing' the Local point lfPoint. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_ae58f483946b6f8e973d459594ae9870a}{
+float \hyperlink{classc_matrix4_ae58f483946b6f8e973d459594ae9870a}{AngleToPoint} (float $\ast$lfPoint)}
+\label{classc_matrix4_ae58f483946b6f8e973d459594ae9870a}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle between this matrices z axis and the vector from this matrix to the point lfPoint. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a0e6077b826b967c94f44183670225b95}{
+bool \hyperlink{classc_matrix4_a0e6077b826b967c94f44183670225b95}{AngleToPointCheck} (float $\ast$lfPoint, float lfAngle)}
+\label{classc_matrix4_a0e6077b826b967c94f44183670225b95}
+
+\begin{DoxyCompactList}\small\item\em This will return true if the angle between this matrices z axis and the vector from this matrix to the point lfPoint is less than lfAngle. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_acb360bcac4f8ec6b2c74f567e10f5bec}{
+float \hyperlink{classc_matrix4_acb360bcac4f8ec6b2c74f567e10f5bec}{RollToVectorPitch} (float $\ast$lfVector)}
+\label{classc_matrix4_acb360bcac4f8ec6b2c74f567e10f5bec}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must roll (about X Axis) to have the Vector lfVector on its ZY Plane. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_aa5c96c056490046056fffcdfe446c5ca}{
+float \hyperlink{classc_matrix4_aa5c96c056490046056fffcdfe446c5ca}{RollToVectorYaw} (float $\ast$lfVector)}
+\label{classc_matrix4_aa5c96c056490046056fffcdfe446c5ca}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must roll (about X Axis) to have the Vector lfVector on its ZX Plane. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a579148ed3a89f6a02c8487339b64e4e7}{
+float \hyperlink{classc_matrix4_a579148ed3a89f6a02c8487339b64e4e7}{YawToVector} (float $\ast$lfVector)}
+\label{classc_matrix4_a579148ed3a89f6a02c8487339b64e4e7}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must Yaw (about Y Axis) to be inline with the Local Vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a15b8a8f655f63c36fd3070e7c964b873}{
+float \hyperlink{classc_matrix4_a15b8a8f655f63c36fd3070e7c964b873}{PitchToVector} (float $\ast$lfVector)}
+\label{classc_matrix4_a15b8a8f655f63c36fd3070e7c964b873}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must pitch (about Z Axis) to be inline with the Local Vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a62ae3bdd1675684e4b75e92d0eb64d38}{
+float \hyperlink{classc_matrix4_a62ae3bdd1675684e4b75e92d0eb64d38}{AngleToVector} (float $\ast$lfVector)}
+\label{classc_matrix4_a62ae3bdd1675684e4b75e92d0eb64d38}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle between this matrices z axis and the vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a07ec35f3954c866a88cd842acb463656}{
+bool \hyperlink{classc_matrix4_a07ec35f3954c866a88cd842acb463656}{AngleToVectorCheck} (float $\ast$lfVector, float lfAngle)}
+\label{classc_matrix4_a07ec35f3954c866a88cd842acb463656}
+
+\begin{DoxyCompactList}\small\item\em This will return true if the angle between this matrices z axis and the vector lfVector is less than lfAngle. Otherwise will return false. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_ac228aef3d8a951ba471c33255c5c5986}{
+float \hyperlink{classc_matrix4_ac228aef3d8a951ba471c33255c5c5986}{RollToPointPitch} (c3DVf lfPoint)}
+\label{classc_matrix4_ac228aef3d8a951ba471c33255c5c5986}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must roll (about X Axis) to have the point on its ZY Plane. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a345d305007ab54ff0d1efcb08ef225de}{
+float \hyperlink{classc_matrix4_a345d305007ab54ff0d1efcb08ef225de}{RollToPointYaw} (c3DVf lfPoint)}
+\label{classc_matrix4_a345d305007ab54ff0d1efcb08ef225de}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must roll (about X Axis) to have the point on its ZX Plane. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a9722060886042fea5579a9dd7e0be915}{
+float \hyperlink{classc_matrix4_a9722060886042fea5579a9dd7e0be915}{YawToPoint} (c3DVf lfPoint)}
+\label{classc_matrix4_a9722060886042fea5579a9dd7e0be915}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must Yaw (about Y Axis) to be 'facing' the Local point lfPoint. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a2a2f83b86dccf8996b0689e1ca22f932}{
+float \hyperlink{classc_matrix4_a2a2f83b86dccf8996b0689e1ca22f932}{PitchToPoint} (c3DVf lfPoint)}
+\label{classc_matrix4_a2a2f83b86dccf8996b0689e1ca22f932}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must pitch (about Z Axis) to be 'facing' the Local point lfPoint. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a9c1be26ade96fbcd300fe048ad1b2d36}{
+float \hyperlink{classc_matrix4_a9c1be26ade96fbcd300fe048ad1b2d36}{AngleToPoint} (c3DVf lfPoint)}
+\label{classc_matrix4_a9c1be26ade96fbcd300fe048ad1b2d36}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle between this matrices z axis and the vector from this matrix to the point lfPoint. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_abcc06bf2acc43d27b434d7ef993ca29e}{
+bool \hyperlink{classc_matrix4_abcc06bf2acc43d27b434d7ef993ca29e}{AngleToPointCheck} (c3DVf lfPoint, float lfAngle)}
+\label{classc_matrix4_abcc06bf2acc43d27b434d7ef993ca29e}
+
+\begin{DoxyCompactList}\small\item\em This will return true if the angle between this matrices z axis and the vector from this matrix to the point lfPoint is less than lfAngle. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_aeabdf01d5d98c2a3c9f4b811242656c1}{
+float \hyperlink{classc_matrix4_aeabdf01d5d98c2a3c9f4b811242656c1}{RollToVectorPitch} (c3DVf lfVector)}
+\label{classc_matrix4_aeabdf01d5d98c2a3c9f4b811242656c1}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must roll (about X Axis) to have the Vector lfVector on its ZY Plane. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_ad5f6e431adcf465f7ce01544b251b55c}{
+float \hyperlink{classc_matrix4_ad5f6e431adcf465f7ce01544b251b55c}{RollToVectorYaw} (c3DVf lfVector)}
+\label{classc_matrix4_ad5f6e431adcf465f7ce01544b251b55c}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must roll (about X Axis) to have the Vector lfVector on its ZX Plane. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a8a902847d50d7e5009f71dc294edf8f0}{
+float \hyperlink{classc_matrix4_a8a902847d50d7e5009f71dc294edf8f0}{YawToVector} (c3DVf lfVector)}
+\label{classc_matrix4_a8a902847d50d7e5009f71dc294edf8f0}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must Yaw (about Y Axis) to be inline with the Local Vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a3c35e449673c3b186c8a4a03e4584a1d}{
+float \hyperlink{classc_matrix4_a3c35e449673c3b186c8a4a03e4584a1d}{PitchToVector} (c3DVf lfVector)}
+\label{classc_matrix4_a3c35e449673c3b186c8a4a03e4584a1d}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle this object must pitch (about Z Axis) to be inline with the Local Vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a125f58fe6df0728bf235aed83374214e}{
+float \hyperlink{classc_matrix4_a125f58fe6df0728bf235aed83374214e}{AngleToVector} (c3DVf lfVector)}
+\label{classc_matrix4_a125f58fe6df0728bf235aed83374214e}
+
+\begin{DoxyCompactList}\small\item\em This will give the angle between this matrices z axis and the vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a49146fe67ef49168a4136816398647dc}{
+bool \hyperlink{classc_matrix4_a49146fe67ef49168a4136816398647dc}{AngleToVectorCheck} (c3DVf lfVector, float lfAngle)}
+\label{classc_matrix4_a49146fe67ef49168a4136816398647dc}
+
+\begin{DoxyCompactList}\small\item\em This will return true if the angle between this matrices z axis and the vector lfVector is less than lfAngle. Otherwise will return false. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_ab118d7f14e3a34e1d65ed105aeea552e}{
+float \hyperlink{classc_matrix4_ab118d7f14e3a34e1d65ed105aeea552e}{Roll} ()}
+\label{classc_matrix4_ab118d7f14e3a34e1d65ed105aeea552e}
+
+\begin{DoxyCompactList}\small\item\em This will return the objects Roll angle (angle between the Y Axis and the Local objects Identity YZ Plane) \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_af0b7c2e464763756c11b741d1f1266e4}{
+float \hyperlink{classc_matrix4_af0b7c2e464763756c11b741d1f1266e4}{Yaw} ()}
+\label{classc_matrix4_af0b7c2e464763756c11b741d1f1266e4}
+
+\begin{DoxyCompactList}\small\item\em This will return the objects Yaw angle (angle between the Z Axis and the Local objects Identity YZ Plane) \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a8832e5a8f1173fa0de619186ba13d0c2}{
+float \hyperlink{classc_matrix4_a8832e5a8f1173fa0de619186ba13d0c2}{Pitch} ()}
+\label{classc_matrix4_a8832e5a8f1173fa0de619186ba13d0c2}
+
+\begin{DoxyCompactList}\small\item\em This will return the objects Pitch angle (angle between the Z Axis and the Local objects Identity XZ Plane) \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_a943edd1e04048bd2bcb93987a6c47819}{
 void \hyperlink{classc_matrix4_a943edd1e04048bd2bcb93987a6c47819}{Equals} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lpOther)}
 \label{classc_matrix4_a943edd1e04048bd2bcb93987a6c47819}
 
 \begin{DoxyCompactList}\small\item\em Makes this matrix Equal the \hyperlink{classc_matrix4}{cMatrix4} pointed to by lpOther. \end{DoxyCompactList}\item 
-\hypertarget{classc_matrix4_a2b04c467006fe476d6f2e5efc61b3ead}{
-void \hyperlink{classc_matrix4_a2b04c467006fe476d6f2e5efc61b3ead}{Equals} (\hyperlink{classc_matrix4}{cMatrix4} \&lpOther)}
-\label{classc_matrix4_a2b04c467006fe476d6f2e5efc61b3ead}
+\hypertarget{classc_matrix4_ac5ed8437aa32a05185d51b9472640a8d}{
+void \hyperlink{classc_matrix4_ac5ed8437aa32a05185d51b9472640a8d}{Equals} (\hyperlink{classc_matrix4}{cMatrix4} lpOther)}
+\label{classc_matrix4_ac5ed8437aa32a05185d51b9472640a8d}
 
 \begin{DoxyCompactList}\small\item\em Makes this matrix Equal the \hyperlink{classc_matrix4}{cMatrix4} lpOther. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_a0af5e0b1dbbe6d7f4c512a5f07f1e273}{
@@ -469,6 +644,11 @@ float \hyperlink{classc_matrix4_af5ad4a4ea96eb13c9c12b6edfa1f96c2}{GScaleZ} ()}
 \label{classc_matrix4_af5ad4a4ea96eb13c9c12b6edfa1f96c2}
 
 \begin{DoxyCompactList}\small\item\em This will get the objects Global Z Axis scale. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_ae9eae21b1f949a96b77968b7d4d68306}{
+float \hyperlink{classc_matrix4_ae9eae21b1f949a96b77968b7d4d68306}{Distance} (\hyperlink{classc_matrix4}{cMatrix4} \&lpOther)}
+\label{classc_matrix4_ae9eae21b1f949a96b77968b7d4d68306}
+
+\begin{DoxyCompactList}\small\item\em This will return the distance between this matrix and the \hyperlink{classc_matrix4}{cMatrix4} pointed to by lpOther. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_acd04bb06d1d12807b203b0aaf9e9b608}{
 float \hyperlink{classc_matrix4_acd04bb06d1d12807b203b0aaf9e9b608}{Distance} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lpOther)}
 \label{classc_matrix4_acd04bb06d1d12807b203b0aaf9e9b608}
@@ -478,7 +658,12 @@ float \hyperlink{classc_matrix4_acd04bb06d1d12807b203b0aaf9e9b608}{Distance} (\h
 float \hyperlink{classc_matrix4_a83fd4655f67a81cb42f3c50262ec593e}{Distance} (float $\ast$lpOther)}
 \label{classc_matrix4_a83fd4655f67a81cb42f3c50262ec593e}
 
-\begin{DoxyCompactList}\small\item\em This will return the distance between this matrix and the \hyperlink{classc_matrix4}{cMatrix4} pointed to by lpOther. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This will return the distance between this matrix and the Global Position lpOther. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a33661efb10e41c9e1f84a399113e235c}{
+float \hyperlink{classc_matrix4_a33661efb10e41c9e1f84a399113e235c}{Distance} (c3DVf lpOther)}
+\label{classc_matrix4_a33661efb10e41c9e1f84a399113e235c}
+
+\begin{DoxyCompactList}\small\item\em This will return the distance between this matrix and the Global Position lpOther. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_afb4a1edc36d2de9330e48bd182fe2a9b}{
 double \hyperlink{classc_matrix4_afb4a1edc36d2de9330e48bd182fe2a9b}{DistanceSq} (\hyperlink{classc_matrix4}{cMatrix4} $\ast$lpOther)}
 \label{classc_matrix4_afb4a1edc36d2de9330e48bd182fe2a9b}
@@ -493,7 +678,22 @@ double \hyperlink{classc_matrix4_ad225d8db157a99b593f774e08c266722}{DistanceSq} 
 double \hyperlink{classc_matrix4_ac524fac9525c6ff780e95c648b229e41}{DistanceSq} (float $\ast$lpOther)}
 \label{classc_matrix4_ac524fac9525c6ff780e95c648b229e41}
 
-\begin{DoxyCompactList}\small\item\em This will return the square of the distance between this matrix and the \hyperlink{classc_matrix4}{cMatrix4} pointed to by lpOther. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This will return the square of the distance between this matrix and the Global Position lpOther. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a9fcbadde64114136ecf9cccf75eb2838}{
+double \hyperlink{classc_matrix4_a9fcbadde64114136ecf9cccf75eb2838}{DistanceSq} (c3DVf lpOther)}
+\label{classc_matrix4_a9fcbadde64114136ecf9cccf75eb2838}
+
+\begin{DoxyCompactList}\small\item\em This will return the square of the distance between this matrix and the Global Position lpOther. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_ad6b0005cc0a13b2e186bc213ee842a51}{
+float \hyperlink{classc_matrix4_ad6b0005cc0a13b2e186bc213ee842a51}{Distance} ()}
+\label{classc_matrix4_ad6b0005cc0a13b2e186bc213ee842a51}
+
+\begin{DoxyCompactList}\small\item\em This will return the distance between this matrix and the origin. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a11fc226f72e4dbd6a5428355def33ee5}{
+double \hyperlink{classc_matrix4_a11fc226f72e4dbd6a5428355def33ee5}{DistanceSq} ()}
+\label{classc_matrix4_a11fc226f72e4dbd6a5428355def33ee5}
+
+\begin{DoxyCompactList}\small\item\em This will return the square of the distance between this matrix and the origin. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_a4b91a4d790f5a0decc76d41e54b80049}{
 float \& \hyperlink{classc_matrix4_a4b91a4d790f5a0decc76d41e54b80049}{operator\mbox{[}$\,$\mbox{]}} (uint16 liPos)}
 \label{classc_matrix4_a4b91a4d790f5a0decc76d41e54b80049}
@@ -534,11 +734,11 @@ float \hyperlink{classc_matrix4_a39cf7cefa0672684e69eb4af89366270}{Determinant} 
 \label{classc_matrix4_a5b57ac77fee2c235af694060361f84d2}
 
 \begin{DoxyCompactList}\small\item\em Returns a pointer to this matrix. \end{DoxyCompactList}\item 
-\hypertarget{classc_matrix4_a7473299a57ffcfe284e6fd9005b98592}{
-\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a7473299a57ffcfe284e6fd9005b98592}{InvertRotationMatrix} ()}
-\label{classc_matrix4_a7473299a57ffcfe284e6fd9005b98592}
+\hypertarget{classc_matrix4_a88d1247e71bb96965a0e847a7a72e2dc}{
+\hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_a88d1247e71bb96965a0e847a7a72e2dc}{InversionMatrix} ()}
+\label{classc_matrix4_a88d1247e71bb96965a0e847a7a72e2dc}
 
-\begin{DoxyCompactList}\small\item\em This will find the inverse of the matrix if it is a standard rotation / translation matrix. (0,1,2,4,5,6,8,9,10 are orthogonal. 3,7,11 are zero. 12,13,14 are position and 15 is one.) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This will calculate the inversion matrix for this matrix. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_ac8b6f1a9352943cd86ef4c088c438307}{
 \hyperlink{classc_matrix4}{cMatrix4} \hyperlink{classc_matrix4_ac8b6f1a9352943cd86ef4c088c438307}{Transpose} ()}
 \label{classc_matrix4_ac8b6f1a9352943cd86ef4c088c438307}
@@ -554,6 +754,16 @@ void \hyperlink{classc_matrix4_acf16f37d849137d2e410ec20f2b4e74d}{Zero} ()}
 \label{classc_matrix4_acf16f37d849137d2e410ec20f2b4e74d}
 
 \begin{DoxyCompactList}\small\item\em This will set every float in this objects matrix to be equal to zero. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a0d04302f66eb8afc0f2e8d7b880a0873}{
+void \hyperlink{classc_matrix4_a0d04302f66eb8afc0f2e8d7b880a0873}{ResetRotations} ()}
+\label{classc_matrix4_a0d04302f66eb8afc0f2e8d7b880a0873}
+
+\begin{DoxyCompactList}\small\item\em This will reset the objects Local Rotations. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_ac8048c00e45627f5910271ad8eb24c80}{
+void \hyperlink{classc_matrix4_ac8048c00e45627f5910271ad8eb24c80}{ResetPosition} ()}
+\label{classc_matrix4_ac8048c00e45627f5910271ad8eb24c80}
+
+\begin{DoxyCompactList}\small\item\em This will reset the objects Local Position. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_afc8fe82a6dfb40e77abc3117d10c18e5}{
 void \hyperlink{classc_matrix4_afc8fe82a6dfb40e77abc3117d10c18e5}{Multiply} (\hyperlink{classc_matrix4}{cMatrix4} \&Other)}
 \label{classc_matrix4_afc8fe82a6dfb40e77abc3117d10c18e5}
@@ -579,6 +789,46 @@ void \hyperlink{classc_matrix4_a67be2f0c0552a8c88ccd25e6fe4c3e4e}{Multiply} (flo
 \label{classc_matrix4_a67be2f0c0552a8c88ccd25e6fe4c3e4e}
 
 \begin{DoxyCompactList}\small\item\em This will multiply this matrix by the 4x4 float Matrix pointed to by Other. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a48bd924892489442e2b123f9748b2fd4}{
+c4DVf \hyperlink{classc_matrix4_a48bd924892489442e2b123f9748b2fd4}{MultiplyVector} (float $\ast$lfVector)}
+\label{classc_matrix4_a48bd924892489442e2b123f9748b2fd4}
+
+\begin{DoxyCompactList}\small\item\em This will multiply this matrix by the 4 dimensional Vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a0ea7f1ee83288bfc09db32d5939f18b1}{
+c4DVf \hyperlink{classc_matrix4_a0ea7f1ee83288bfc09db32d5939f18b1}{MultiplyVector} (c4DVf lfVector)}
+\label{classc_matrix4_a0ea7f1ee83288bfc09db32d5939f18b1}
+
+\begin{DoxyCompactList}\small\item\em This will multiply this matrix by the 4 dimensional Vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a04a7a29ceff673479de7500fbfe332ae}{
+c4DVf \hyperlink{classc_matrix4_a04a7a29ceff673479de7500fbfe332ae}{Multiply} (c4DVf lfVector)}
+\label{classc_matrix4_a04a7a29ceff673479de7500fbfe332ae}
+
+\begin{DoxyCompactList}\small\item\em This will multiply this matrix by the 4 dimensional Vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a95d71e1823bbca3ddd9834e2d9af1b46}{
+c3DVf \hyperlink{classc_matrix4_a95d71e1823bbca3ddd9834e2d9af1b46}{RotateVectorByAngles} (float $\ast$lfVector)}
+\label{classc_matrix4_a95d71e1823bbca3ddd9834e2d9af1b46}
+
+\begin{DoxyCompactList}\small\item\em This will multiply this matrices angles by the 3 dimensional Vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_abd6f4049cde35ad7b72d395762c17c0f}{
+c3DVf \hyperlink{classc_matrix4_abd6f4049cde35ad7b72d395762c17c0f}{RotateVectorByAngles} (c3DVf lfVector)}
+\label{classc_matrix4_abd6f4049cde35ad7b72d395762c17c0f}
+
+\begin{DoxyCompactList}\small\item\em This will multiply this matrices angles by the 3 dimensional Vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a832568da5c48ddd89b5f6feb99f3c528}{
+c3DVf \hyperlink{classc_matrix4_a832568da5c48ddd89b5f6feb99f3c528}{Multiply} (c3DVf lfVector)}
+\label{classc_matrix4_a832568da5c48ddd89b5f6feb99f3c528}
+
+\begin{DoxyCompactList}\small\item\em This will multiply this matrices angles by the 3 dimensional Vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a011321db92a3b461c46fdbf96e16fe7b}{
+c3DVf \hyperlink{classc_matrix4_a011321db92a3b461c46fdbf96e16fe7b}{MultiplyVectorPosition} (float $\ast$lfVector)}
+\label{classc_matrix4_a011321db92a3b461c46fdbf96e16fe7b}
+
+\begin{DoxyCompactList}\small\item\em This will multiply this matrices position by the 3 dimensional Vector lfVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a802eff4e68910ce08624ec1a9c3258ad}{
+c3DVf \hyperlink{classc_matrix4_a802eff4e68910ce08624ec1a9c3258ad}{MultiplyVectorPosition} (c3DVf lfVector)}
+\label{classc_matrix4_a802eff4e68910ce08624ec1a9c3258ad}
+
+\begin{DoxyCompactList}\small\item\em This will multiply this matrices position by the 3 dimensional Vector lfVector. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_ac6bb495542c08395c26fd412db13a959}{
 \hyperlink{classc_camera_matrix4}{cCameraMatrix4} \& \hyperlink{classc_matrix4_ac6bb495542c08395c26fd412db13a959}{ConvertToCameraMatrix} ()}
 \label{classc_matrix4_ac6bb495542c08395c26fd412db13a959}

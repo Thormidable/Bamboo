@@ -29,6 +29,20 @@ public:
        Type Magnitude();
        /// This will return the squared absolute size of this vector.
        Type MagnitudeSq();
+
+       /// This will return the Distance between this point and the point at lpOther.
+       Type Distance(c3DVt<Type> lpOther);
+       /// This will return the Distance between this point and the point at lpOther.
+       Type Distance(c3DVt<Type> *lpOther);
+       /// This will return the Distance between this point and the point at lpOther.
+       Type Distance(Type *lpOther);
+       /// This will return the Squared Distance between this point and the point at lpOther.
+       Type DistanceSq(c3DVt<Type> lpOther);
+       /// This will return the Squared Distance between this point and the point at lpOther.
+       Type DistanceSq(c3DVt<Type> *lpOther);
+       /// This will return the Squared Distance between this point and the point at lpOther.
+       Type DistanceSq(Type *lpOther);
+
 	/// This will make the magnitude of this vector 1 while maintaining its direction.
        void Normalise();
 

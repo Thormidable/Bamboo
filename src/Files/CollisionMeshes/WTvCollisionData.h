@@ -6,6 +6,7 @@ class cBeamCollision;
 class cMeshCollision;
 class cRayCollision;
 class cCompoundCollision;
+class cMouseCollision;
 
 /// Virtual Class so cCollisionObject can access the Collision data object it needs.
 class vCollisionData
@@ -30,6 +31,7 @@ public:
         virtual cRayCollision *Ray()=0;
         ///Will return a pointer if this object contains a Compound collision data objecty. Otherwise returns 0;
         virtual cCompoundCollision *Compound()=0;
+        virtual cMouseCollision *Mouse()=0;
 	#endif
 	//Will Update the collision Data Object based off the new global position matrix. This is important for rays.
 	virtual void Update(cMatrix4 &New)=0;

@@ -372,6 +372,30 @@ Camera/Renderable/WTcBeamMesh.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.s
 .PHONY : Camera/Renderable/WTcBeamMesh.cpp.s
 
+Camera/Renderable/WTcBillBoard.o: Camera/Renderable/WTcBillBoard.cpp.o
+.PHONY : Camera/Renderable/WTcBillBoard.o
+
+# target to build an object file
+Camera/Renderable/WTcBillBoard.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o
+.PHONY : Camera/Renderable/WTcBillBoard.cpp.o
+
+Camera/Renderable/WTcBillBoard.i: Camera/Renderable/WTcBillBoard.cpp.i
+.PHONY : Camera/Renderable/WTcBillBoard.i
+
+# target to preprocess a source file
+Camera/Renderable/WTcBillBoard.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.i
+.PHONY : Camera/Renderable/WTcBillBoard.cpp.i
+
+Camera/Renderable/WTcBillBoard.s: Camera/Renderable/WTcBillBoard.cpp.s
+.PHONY : Camera/Renderable/WTcBillBoard.s
+
+# target to generate assembly for a file
+Camera/Renderable/WTcBillBoard.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.s
+.PHONY : Camera/Renderable/WTcBillBoard.cpp.s
+
 Camera/Renderable/WTcButton.o: Camera/Renderable/WTcButton.cpp.o
 .PHONY : Camera/Renderable/WTcButton.o
 
@@ -467,6 +491,30 @@ Camera/Renderable/WTcLine.s: Camera/Renderable/WTcLine.cpp.s
 Camera/Renderable/WTcLine.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.s
 .PHONY : Camera/Renderable/WTcLine.cpp.s
+
+Camera/Renderable/WTcLineArray.o: Camera/Renderable/WTcLineArray.cpp.o
+.PHONY : Camera/Renderable/WTcLineArray.o
+
+# target to build an object file
+Camera/Renderable/WTcLineArray.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o
+.PHONY : Camera/Renderable/WTcLineArray.cpp.o
+
+Camera/Renderable/WTcLineArray.i: Camera/Renderable/WTcLineArray.cpp.i
+.PHONY : Camera/Renderable/WTcLineArray.i
+
+# target to preprocess a source file
+Camera/Renderable/WTcLineArray.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.i
+.PHONY : Camera/Renderable/WTcLineArray.cpp.i
+
+Camera/Renderable/WTcLineArray.s: Camera/Renderable/WTcLineArray.cpp.s
+.PHONY : Camera/Renderable/WTcLineArray.s
+
+# target to generate assembly for a file
+Camera/Renderable/WTcLineArray.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.s
+.PHONY : Camera/Renderable/WTcLineArray.cpp.s
 
 Camera/Renderable/WTcModel.o: Camera/Renderable/WTcModel.cpp.o
 .PHONY : Camera/Renderable/WTcModel.o
@@ -1380,6 +1428,54 @@ Files/Meshes/MeshClasses/WTcVertex.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.s
 .PHONY : Files/Meshes/MeshClasses/WTcVertex.cpp.s
 
+Files/Meshes/WTcAsteroid.o: Files/Meshes/WTcAsteroid.cpp.o
+.PHONY : Files/Meshes/WTcAsteroid.o
+
+# target to build an object file
+Files/Meshes/WTcAsteroid.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o
+.PHONY : Files/Meshes/WTcAsteroid.cpp.o
+
+Files/Meshes/WTcAsteroid.i: Files/Meshes/WTcAsteroid.cpp.i
+.PHONY : Files/Meshes/WTcAsteroid.i
+
+# target to preprocess a source file
+Files/Meshes/WTcAsteroid.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.i
+.PHONY : Files/Meshes/WTcAsteroid.cpp.i
+
+Files/Meshes/WTcAsteroid.s: Files/Meshes/WTcAsteroid.cpp.s
+.PHONY : Files/Meshes/WTcAsteroid.s
+
+# target to generate assembly for a file
+Files/Meshes/WTcAsteroid.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.s
+.PHONY : Files/Meshes/WTcAsteroid.cpp.s
+
+Files/Meshes/WTcIcoSphere.o: Files/Meshes/WTcIcoSphere.cpp.o
+.PHONY : Files/Meshes/WTcIcoSphere.o
+
+# target to build an object file
+Files/Meshes/WTcIcoSphere.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o
+.PHONY : Files/Meshes/WTcIcoSphere.cpp.o
+
+Files/Meshes/WTcIcoSphere.i: Files/Meshes/WTcIcoSphere.cpp.i
+.PHONY : Files/Meshes/WTcIcoSphere.i
+
+# target to preprocess a source file
+Files/Meshes/WTcIcoSphere.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.i
+.PHONY : Files/Meshes/WTcIcoSphere.cpp.i
+
+Files/Meshes/WTcIcoSphere.s: Files/Meshes/WTcIcoSphere.cpp.s
+.PHONY : Files/Meshes/WTcIcoSphere.s
+
+# target to generate assembly for a file
+Files/Meshes/WTcIcoSphere.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.s
+.PHONY : Files/Meshes/WTcIcoSphere.cpp.s
+
 Files/Meshes/WTcMesh.o: Files/Meshes/WTcMesh.cpp.o
 .PHONY : Files/Meshes/WTcMesh.o
 
@@ -1403,6 +1499,30 @@ Files/Meshes/WTcMesh.s: Files/Meshes/WTcMesh.cpp.s
 Files/Meshes/WTcMesh.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.s
 .PHONY : Files/Meshes/WTcMesh.cpp.s
+
+Files/Meshes/WTcUVSphere.o: Files/Meshes/WTcUVSphere.cpp.o
+.PHONY : Files/Meshes/WTcUVSphere.o
+
+# target to build an object file
+Files/Meshes/WTcUVSphere.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o
+.PHONY : Files/Meshes/WTcUVSphere.cpp.o
+
+Files/Meshes/WTcUVSphere.i: Files/Meshes/WTcUVSphere.cpp.i
+.PHONY : Files/Meshes/WTcUVSphere.i
+
+# target to preprocess a source file
+Files/Meshes/WTcUVSphere.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.i
+.PHONY : Files/Meshes/WTcUVSphere.cpp.i
+
+Files/Meshes/WTcUVSphere.s: Files/Meshes/WTcUVSphere.cpp.s
+.PHONY : Files/Meshes/WTcUVSphere.s
+
+# target to generate assembly for a file
+Files/Meshes/WTcUVSphere.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.s
+.PHONY : Files/Meshes/WTcUVSphere.cpp.s
 
 Files/Meshes/WTcmLandscape.o: Files/Meshes/WTcmLandscape.cpp.o
 .PHONY : Files/Meshes/WTcmLandscape.o
@@ -1451,6 +1571,30 @@ Files/Meshes/WTv2DPolygon.s: Files/Meshes/WTv2DPolygon.cpp.s
 Files/Meshes/WTv2DPolygon.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.s
 .PHONY : Files/Meshes/WTv2DPolygon.cpp.s
+
+Files/Misc/WTcLineArrayData.o: Files/Misc/WTcLineArrayData.cpp.o
+.PHONY : Files/Misc/WTcLineArrayData.o
+
+# target to build an object file
+Files/Misc/WTcLineArrayData.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o
+.PHONY : Files/Misc/WTcLineArrayData.cpp.o
+
+Files/Misc/WTcLineArrayData.i: Files/Misc/WTcLineArrayData.cpp.i
+.PHONY : Files/Misc/WTcLineArrayData.i
+
+# target to preprocess a source file
+Files/Misc/WTcLineArrayData.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.i
+.PHONY : Files/Misc/WTcLineArrayData.cpp.i
+
+Files/Misc/WTcLineArrayData.s: Files/Misc/WTcLineArrayData.cpp.s
+.PHONY : Files/Misc/WTcLineArrayData.s
+
+# target to generate assembly for a file
+Files/Misc/WTcLineArrayData.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.s
+.PHONY : Files/Misc/WTcLineArrayData.cpp.s
 
 Files/Misc/WTcMeshTree.o: Files/Misc/WTcMeshTree.cpp.o
 .PHONY : Files/Misc/WTcMeshTree.o
@@ -1619,6 +1763,30 @@ Files/Shaders/WTcUserDefinedShaderVariable.s: Files/Shaders/WTcUserDefinedShader
 Files/Shaders/WTcUserDefinedShaderVariable.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.s
 .PHONY : Files/Shaders/WTcUserDefinedShaderVariable.cpp.s
+
+Files/Textures/WTcSeamlessTextureClasses.o: Files/Textures/WTcSeamlessTextureClasses.cpp.o
+.PHONY : Files/Textures/WTcSeamlessTextureClasses.o
+
+# target to build an object file
+Files/Textures/WTcSeamlessTextureClasses.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o
+.PHONY : Files/Textures/WTcSeamlessTextureClasses.cpp.o
+
+Files/Textures/WTcSeamlessTextureClasses.i: Files/Textures/WTcSeamlessTextureClasses.cpp.i
+.PHONY : Files/Textures/WTcSeamlessTextureClasses.i
+
+# target to preprocess a source file
+Files/Textures/WTcSeamlessTextureClasses.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.i
+.PHONY : Files/Textures/WTcSeamlessTextureClasses.cpp.i
+
+Files/Textures/WTcSeamlessTextureClasses.s: Files/Textures/WTcSeamlessTextureClasses.cpp.s
+.PHONY : Files/Textures/WTcSeamlessTextureClasses.s
+
+# target to generate assembly for a file
+Files/Textures/WTcSeamlessTextureClasses.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.s
+.PHONY : Files/Textures/WTcSeamlessTextureClasses.cpp.s
 
 Files/Textures/WTcTexture.o: Files/Textures/WTcTexture.cpp.o
 .PHONY : Files/Textures/WTcTexture.o
@@ -1859,6 +2027,30 @@ Maths/WTcColors.s: Maths/WTcColors.cpp.s
 Maths/WTcColors.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.s
 .PHONY : Maths/WTcColors.cpp.s
+
+Maths/WTcDoubleMatrix4.o: Maths/WTcDoubleMatrix4.cpp.o
+.PHONY : Maths/WTcDoubleMatrix4.o
+
+# target to build an object file
+Maths/WTcDoubleMatrix4.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o
+.PHONY : Maths/WTcDoubleMatrix4.cpp.o
+
+Maths/WTcDoubleMatrix4.i: Maths/WTcDoubleMatrix4.cpp.i
+.PHONY : Maths/WTcDoubleMatrix4.i
+
+# target to preprocess a source file
+Maths/WTcDoubleMatrix4.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.i
+.PHONY : Maths/WTcDoubleMatrix4.cpp.i
+
+Maths/WTcDoubleMatrix4.s: Maths/WTcDoubleMatrix4.cpp.s
+.PHONY : Maths/WTcDoubleMatrix4.s
+
+# target to generate assembly for a file
+Maths/WTcDoubleMatrix4.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.s
+.PHONY : Maths/WTcDoubleMatrix4.cpp.s
 
 Maths/WTcMatrix4.o: Maths/WTcMatrix4.cpp.o
 .PHONY : Maths/WTcMatrix4.o
@@ -2148,6 +2340,30 @@ Windows/EventHandler/WTcKeyStore.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.s
 .PHONY : Windows/EventHandler/WTcKeyStore.cpp.s
 
+Windows/EventHandler/WTcKeyToggle.o: Windows/EventHandler/WTcKeyToggle.cpp.o
+.PHONY : Windows/EventHandler/WTcKeyToggle.o
+
+# target to build an object file
+Windows/EventHandler/WTcKeyToggle.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o
+.PHONY : Windows/EventHandler/WTcKeyToggle.cpp.o
+
+Windows/EventHandler/WTcKeyToggle.i: Windows/EventHandler/WTcKeyToggle.cpp.i
+.PHONY : Windows/EventHandler/WTcKeyToggle.i
+
+# target to preprocess a source file
+Windows/EventHandler/WTcKeyToggle.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.i
+.PHONY : Windows/EventHandler/WTcKeyToggle.cpp.i
+
+Windows/EventHandler/WTcKeyToggle.s: Windows/EventHandler/WTcKeyToggle.cpp.s
+.PHONY : Windows/EventHandler/WTcKeyToggle.s
+
+# target to generate assembly for a file
+Windows/EventHandler/WTcKeyToggle.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.s
+.PHONY : Windows/EventHandler/WTcKeyToggle.cpp.s
+
 Windows/EventHandler/WTcMouse.o: Windows/EventHandler/WTcMouse.cpp.o
 .PHONY : Windows/EventHandler/WTcMouse.o
 
@@ -2262,6 +2478,9 @@ help:
 	@echo "... Camera/Renderable/WTcBeamMesh.o"
 	@echo "... Camera/Renderable/WTcBeamMesh.i"
 	@echo "... Camera/Renderable/WTcBeamMesh.s"
+	@echo "... Camera/Renderable/WTcBillBoard.o"
+	@echo "... Camera/Renderable/WTcBillBoard.i"
+	@echo "... Camera/Renderable/WTcBillBoard.s"
 	@echo "... Camera/Renderable/WTcButton.o"
 	@echo "... Camera/Renderable/WTcButton.i"
 	@echo "... Camera/Renderable/WTcButton.s"
@@ -2274,6 +2493,9 @@ help:
 	@echo "... Camera/Renderable/WTcLine.o"
 	@echo "... Camera/Renderable/WTcLine.i"
 	@echo "... Camera/Renderable/WTcLine.s"
+	@echo "... Camera/Renderable/WTcLineArray.o"
+	@echo "... Camera/Renderable/WTcLineArray.i"
+	@echo "... Camera/Renderable/WTcLineArray.s"
 	@echo "... Camera/Renderable/WTcModel.o"
 	@echo "... Camera/Renderable/WTcModel.i"
 	@echo "... Camera/Renderable/WTcModel.s"
@@ -2388,15 +2610,27 @@ help:
 	@echo "... Files/Meshes/MeshClasses/WTcVertex.o"
 	@echo "... Files/Meshes/MeshClasses/WTcVertex.i"
 	@echo "... Files/Meshes/MeshClasses/WTcVertex.s"
+	@echo "... Files/Meshes/WTcAsteroid.o"
+	@echo "... Files/Meshes/WTcAsteroid.i"
+	@echo "... Files/Meshes/WTcAsteroid.s"
+	@echo "... Files/Meshes/WTcIcoSphere.o"
+	@echo "... Files/Meshes/WTcIcoSphere.i"
+	@echo "... Files/Meshes/WTcIcoSphere.s"
 	@echo "... Files/Meshes/WTcMesh.o"
 	@echo "... Files/Meshes/WTcMesh.i"
 	@echo "... Files/Meshes/WTcMesh.s"
+	@echo "... Files/Meshes/WTcUVSphere.o"
+	@echo "... Files/Meshes/WTcUVSphere.i"
+	@echo "... Files/Meshes/WTcUVSphere.s"
 	@echo "... Files/Meshes/WTcmLandscape.o"
 	@echo "... Files/Meshes/WTcmLandscape.i"
 	@echo "... Files/Meshes/WTcmLandscape.s"
 	@echo "... Files/Meshes/WTv2DPolygon.o"
 	@echo "... Files/Meshes/WTv2DPolygon.i"
 	@echo "... Files/Meshes/WTv2DPolygon.s"
+	@echo "... Files/Misc/WTcLineArrayData.o"
+	@echo "... Files/Misc/WTcLineArrayData.i"
+	@echo "... Files/Misc/WTcLineArrayData.s"
 	@echo "... Files/Misc/WTcMeshTree.o"
 	@echo "... Files/Misc/WTcMeshTree.i"
 	@echo "... Files/Misc/WTcMeshTree.s"
@@ -2418,6 +2652,9 @@ help:
 	@echo "... Files/Shaders/WTcUserDefinedShaderVariable.o"
 	@echo "... Files/Shaders/WTcUserDefinedShaderVariable.i"
 	@echo "... Files/Shaders/WTcUserDefinedShaderVariable.s"
+	@echo "... Files/Textures/WTcSeamlessTextureClasses.o"
+	@echo "... Files/Textures/WTcSeamlessTextureClasses.i"
+	@echo "... Files/Textures/WTcSeamlessTextureClasses.s"
 	@echo "... Files/Textures/WTcTexture.o"
 	@echo "... Files/Textures/WTcTexture.i"
 	@echo "... Files/Textures/WTcTexture.s"
@@ -2448,6 +2685,9 @@ help:
 	@echo "... Maths/WTcColors.o"
 	@echo "... Maths/WTcColors.i"
 	@echo "... Maths/WTcColors.s"
+	@echo "... Maths/WTcDoubleMatrix4.o"
+	@echo "... Maths/WTcDoubleMatrix4.i"
+	@echo "... Maths/WTcDoubleMatrix4.s"
 	@echo "... Maths/WTcMatrix4.o"
 	@echo "... Maths/WTcMatrix4.i"
 	@echo "... Maths/WTcMatrix4.s"
@@ -2484,6 +2724,9 @@ help:
 	@echo "... Windows/EventHandler/WTcKeyStore.o"
 	@echo "... Windows/EventHandler/WTcKeyStore.i"
 	@echo "... Windows/EventHandler/WTcKeyStore.s"
+	@echo "... Windows/EventHandler/WTcKeyToggle.o"
+	@echo "... Windows/EventHandler/WTcKeyToggle.i"
+	@echo "... Windows/EventHandler/WTcKeyToggle.s"
 	@echo "... Windows/EventHandler/WTcMouse.o"
 	@echo "... Windows/EventHandler/WTcMouse.i"
 	@echo "... Windows/EventHandler/WTcMouse.s"

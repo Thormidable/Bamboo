@@ -78,33 +78,14 @@ bool cMouse::Left(){return left;};
 bool cMouse::Right(){return right;};
 bool cMouse::Middle(){return middle;};
 
-cCollisionList *cMouse::Selection(cPerspectiveControl *lpCamera,float lfRadius)
+cCollisionList *cMouse::Selection(cMouseCollisionObject *lpMouse,uint32 liFilter,cCollisionList *lpList)
 {
-    lpCamera->ViewportWidth();
-    lpCamera->ViewportHeight();
-    lpCamera->ViewportX();
-    lpCamera->ViewportY();
+ return _COLLISION_HANDLER->GenerateCollisionList(lpMouse,liFilter,lpList);
+};
 
-       c3DVf MouseVector(X());
-
-    if((X()>lpCamera->ViewportX() && X()<lpCamera->ViewportX()+lpCamera->ViewportWidth())&&(Y()>lpCamera->ViewportY() && Y()<lpCamera->ViewportY()+lpCamera->ViewportHeight()))
-    {
-        float lfWidthMod=(((X()-lpCamera->ViewportX())/lpCamera->ViewportWidth())-0.5f)*lpCamera->Width();
-        float lfHeightMod=(((Y()-lpCamera->ViewportY())/lpCamera->ViewportHeight())-0.5f)*lpCamera->Height();
-        float lfDepthMod=(lpCamera->Near());
-        float* lpMatrix=lpCamera->Matrix();
-
-        c3DVf MouseVector(lpMatrix[0]*lfWidthMod+lpMatrix[4]*lfHeightMod+lpMatrix[8]*lfDepthMod,
-                          lpMatrix[1]*lfWidthMod+lpMatrix[5]*lfHeightMod+lpMatrix[9]*lfDepthMod,
-                          lpMatrix[2]*lfWidthMod+lpMatrix[6]*lfHeightMod+lpMatrix[10]*lfDepthMod);
-
-        c3DVf MouseStart(lpCamera->Position());
-        MouseStart.Invert();
-
-        return cCollisionHandler::Instance()->GenerateMouseSelection(MouseVector,MouseStart,lfRadius);
-    }
-
- return new cCollisionList(0);
+cCollisionList *cMouse::SelectionDetailed(cMouseCollisionObject *lpMouse,uint32 liFilter,cCollisionList *lpList)
+{
+    return _COLLISION_HANDLER->GenerateDetailedCollisionList(lpMouse,liFilter,lpList);
 };
 
 /*

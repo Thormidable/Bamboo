@@ -19,11 +19,18 @@ public:
  	///Function for Starting the Engine and Game. Will Create a window and initialise all components of the engine. It will create and instance of cX and enter the main loop.
 	static uint32 Start(HINSTANCE hInstance)
 	{
-		cS *mpSettings =new cS;
+		if(WT_ENABLE_LOGGING)
+		{
+			LOGGING_INIT()
+			LOGGING_ADD_FILE("main","main.log")
+			LOGGING_SET_SCOPE_SOURCE("main")
+			TRACE("Entering")
+		}
+		gpSettings =new cS;
 		cSettings *mpCast;
-		mpCast=dynamic_cast<cSettings*>(mpSettings);
+		mpCast=dynamic_cast<cSettings*>(gpSettings);
 		mpCast->cSettings::Settings();
-		mpSettings->Settings();
+		gpSettings->Settings();
 		if(mpCast) cSettings::SetupVariables();
 		gpWindow=new cWindow(hInstance);
 
@@ -44,7 +51,8 @@ public:
 		trace("Start Updating");
 		cKernel::Instance()->Update();
 
-		delete mpSettings;
+		delete gpSettings;
+		gpSettings=0;
 		delete cKernel::Instance();
 		trace("Finished Bamboo V 1.2");
 		return gpWindow->msg.wParam;
@@ -101,17 +109,17 @@ public:
 	///Function for Starting the Engine and Game. Will Create a window and initialise all components of the engine. It will create and instance of cX and enter the main loop.
 	static uint32 Start()
 	{
-		LOGGING_INIT()
-		LOGGING_ADD_FILE("main","main.log")
-		LOGGING_SET_SCOPE_SOURCE("main")
-		TRACE("Entering")
+			LOGGING_INIT()
+			LOGGING_ADD_FILE("main","main.log")
+			LOGGING_SET_SCOPE_SOURCE("main")
+			TRACE("Entering")
 
 		try {
-		  	cS *mpSettings =new cS;
+		  	gpSettings =new cS;
 		cSettings *mpCast;
-		mpCast=dynamic_cast<cSettings*>(mpSettings);
+		mpCast=dynamic_cast<cSettings*>(gpSettings);
 		mpCast->cSettings::Settings();
-		mpSettings->Settings();
+		gpSettings->Settings();
 		if(mpCast) cSettings::SetupVariables();
 
 		TRACE("calling glewInit to initialise OpenGL");
@@ -143,7 +151,7 @@ public:
 			TRACE("Calling cKernel::Update to start the main loop");
 			cKernel::Instance()->Update();
 
-			delete mpSettings;
+			delete gpSettings;
 
 			TRACE("Exiting cKernel");
 			delete cKernel::Instance();

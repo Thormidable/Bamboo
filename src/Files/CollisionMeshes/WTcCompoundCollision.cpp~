@@ -9,7 +9,7 @@ cCompoundCollision *cCompoundCollision::Compound(){return this;};
 
 void cCompoundCollision::Update(cMatrix4 &New)
 {
- #warning comment This should recalculate the size of the object.
+ #pragma warning (This should recalculate the size of the object.)
 
 };
 
@@ -89,10 +89,14 @@ cMeshCollision *cCompoundCollision::AddType(float lfXP,float lfXN,float lfYP,flo
 };
 cBeamCollision *cCompoundCollision::AddType(cBeamMesh *lpBeam)
 {
+ if(lpBeam)
+ {
     cBeamCollision *lpTemp=new cBeamCollision;
     lpTemp->BuildObject(lpBeam->Length(),lpBeam->Radius());
     AddType(lpTemp);
     return lpTemp;
+ }
+ return 0;
 };
 
 uint8 cCompoundCollision::GetType(uint32 liPos)

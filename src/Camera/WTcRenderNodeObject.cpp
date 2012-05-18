@@ -50,7 +50,7 @@ void vRenderNode::Stop()
 		mpCollisionObject=0;
 	}
 
-	StartKillAll();
+	//StartKillAll();
 }
 
 void vRenderNode::OnSleep()
@@ -70,6 +70,7 @@ if(mpCollisionObject)
 }
 
 }
+
 vRenderNode::~vRenderNode()
 {
     if(mpCollisionObject)
@@ -77,6 +78,7 @@ vRenderNode::~vRenderNode()
 		_KILL(mpCollisionObject);
 		mpCollisionObject=0;
 	}
+	//StartKillAll();
 
 }
 

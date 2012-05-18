@@ -2,7 +2,7 @@
 
 #if WT_FULL_VERSION_BAMBOO
 
-cBeamMesh::~cBeamMesh()
+cBeam::~cBeam()
 {
 	delete []VertexList;
 	VertexList=0;
@@ -11,19 +11,63 @@ cBeamMesh::~cBeamMesh()
 
 }
 
-cBeamMesh::cBeamMesh(float Radius,float Length,uint16 Segments,vRenderNode *lpNode): cRenderObject(lpNode,true)
+
+cBeamMesh::cBeamMesh(float lfLength,float lfBeamRadius,uint16 liSegments)
+{
+    mfLength=lfLength;
+    mfRadius=lfBeamRadius;
+    miSegments=liSegments;
+    if(miSegments%2) ++miSegments;
+};
+
+void cBeamMesh::Set(float lfLength,float lfBeamRadius,uint16 liSegments)
+{
+    mfLength=lfLength;
+    mfRadius=lfBeamRadius;
+    miSegments=liSegments;
+    if(miSegments%2) ++miSegments;
+};
+
+cBeamMesh &cBeamMesh::operator=(cBeamMesh lpBeamMesh)
+{
+    mfLength=lpBeamMesh.mfLength;
+    mfRadius=lpBeamMesh.mfRadius;
+    miSegments=lpBeamMesh.miSegments;
+    return *this;
+};
+
+cBeamMesh &cBeamMesh::operator=(cBeamMesh *lpBeamMesh)
+{
+    mfLength=lpBeamMesh->mfLength;
+    mfRadius=lpBeamMesh->mfRadius;
+    miSegments=lpBeamMesh->miSegments;
+    return *this;
+};
+cBeam::cBeam(cBeamMesh *lpMesh)
+{
+    VertexData=0; VertexList=0; GenerateData(lpMesh->mfRadius,lpMesh->mfLength,lpMesh->miSegments);
+	mpShader=0;
+};
+
+cBeam::cBeam(cBeamMesh lpMesh)
+{
+    VertexData=0; VertexList=0; GenerateData(lpMesh.mfRadius,lpMesh.mfLength,lpMesh.miSegments);
+	mpShader=0;
+};
+
+cBeam::cBeam(float Radius,float Length,uint16 Segments,vRenderNode *lpNode): cRenderObject(lpNode,true)
 {
 	VertexData=0; VertexList=0; GenerateData(Radius,Length,Segments);
 	mpShader=0;
 };
 
-cBeamMesh::cBeamMesh(float Radius,float Length,uint16 Segments,cCamera *lpNode) : cRenderObject(lpNode,true)
+cBeam::cBeam(float Radius,float Length,uint16 Segments,cCamera *lpNode) : cRenderObject(lpNode,true)
 {
 	VertexData=0; VertexList=0; GenerateData(Radius,Length,Segments);
 	mpShader=0;
 }
 
-void cBeamMesh::RenderBeam()
+void cBeam::RenderBeam()
 {
 	glDisable(GL_CULL_FACE);
 	glDisable(GL_NORMAL_ARRAY);
@@ -40,7 +84,7 @@ void cBeamMesh::RenderBeam()
 	glEnable(GL_CULL_FACE);
 }
 
-void cBeamMesh::BufferBeam()
+void cBeam::BufferBeam()
 {
 	//if (!mpBufferIDs) mpBufferIDs= new uint32[2];
 	glGenBuffers(1,&mBuffer1);
@@ -55,7 +99,7 @@ void cBeamMesh::BufferBeam()
 }
 
 
-void cBeamMesh::RenderPainter()
+void cBeam::RenderPainter()
 {
 	SetShaderVariables();
 	RenderBeam();
@@ -64,7 +108,7 @@ void cBeamMesh::RenderPainter()
 
 
 
-void cBeamMesh::Radius(float Radius)
+void cBeam::Radius(float Radius)
 {
 	mfRadius=Radius;
 
@@ -89,7 +133,7 @@ void cBeamMesh::Radius(float Radius)
 	BufferBeam();
 };
 
-void cBeamMesh::Length(float Length)
+void cBeam::Length(float Length)
 {
 	mfLength=Length;
 	uint32 liCount;
@@ -114,7 +158,7 @@ void cBeamMesh::Length(float Length)
 };
 
 
-void cBeamMesh::GenerateData(float Radius,float Length,uint16 Segments)
+void cBeam::GenerateData(float Radius,float Length,uint16 Segments)
 {
 
 	mfRadius=Radius;
@@ -199,7 +243,7 @@ int16 HalfSegments=Segments>>1;
 
 }
 
-float cBeamMesh::GetSize(){if(mfLength*2>mfRadius) return mfLength*2; return mfRadius;};
-double cBeamMesh::GetSizeSq(){if(mfLength*2>mfRadius) return mfLength*mfLength*4; return mfRadius*mfRadius;};;
+float cBeam::GetSize(){if(mfLength*2>mfRadius) return mfLength*2; return mfRadius;};
+double cBeam::GetSizeSq(){if(mfLength*2>mfRadius) return mfLength*mfLength*4; return mfRadius*mfRadius;};;
 
 #endif

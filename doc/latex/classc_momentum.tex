@@ -4,7 +4,7 @@
 }
 
 
-This Class will store an objects momentum (assumed mass of 1.0) and automatically update its matrix when the function \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update()} is called. This gives the user the options of global and local thrusts and will update the objects linear and angular momentum by the thrusts applied to it. An instance of \hyperlink{classc_momentum}{cMomentum} must be linked to a matrix. It will only update whne the function \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update()} is called.  
+This Class will store an objects momentum (assumed mass of 1.0) and automatically update its matrix when the function \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update()} is called. This gives the user the options of global and local thrusts and will update the objects linear and angular momentum by the thrusts applied to it. An instance of \hyperlink{classc_momentum}{cMomentum} must be linked to a matrix. It will only update when the function \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update()} is called.  
 
 
 
@@ -24,6 +24,21 @@ Collaboration diagram for cMomentum:\nopagebreak
 \label{classc_momentum_a816c2fe90c305565b30f890a24b034ff}
 
 \begin{DoxyCompactList}\small\item\em Constructor passing this object a \hyperlink{classc_matrix4}{cMatrix4}. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a0f391a6818c89956551fd600005f7a4b}{
+void \hyperlink{classc_momentum_a0f391a6818c89956551fd600005f7a4b}{Thrust} (c3DVf lfVect)}
+\label{classc_momentum_a0f391a6818c89956551fd600005f7a4b}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis linear thrust along Local axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_ad6ecb8025208e677cfee31abe2368525}{
+void \hyperlink{classc_momentum_ad6ecb8025208e677cfee31abe2368525}{Thrust} (float $\ast$lfVect)}
+\label{classc_momentum_ad6ecb8025208e677cfee31abe2368525}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis linear thrust along Local axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a6a1a61d96ab7b10bae49b170603aa107}{
+void \hyperlink{classc_momentum_a6a1a61d96ab7b10bae49b170603aa107}{Thrust} (float lfX, float lfY, float lfZ)}
+\label{classc_momentum_a6a1a61d96ab7b10bae49b170603aa107}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis linear thrust along Local axis. \end{DoxyCompactList}\item 
 \hypertarget{classc_momentum_a4c8e14d57f23820fd66f4f90b0b0cf0c}{
 void \hyperlink{classc_momentum_a4c8e14d57f23820fd66f4f90b0b0cf0c}{ThrustX} (float lfThrust)}
 \label{classc_momentum_a4c8e14d57f23820fd66f4f90b0b0cf0c}
@@ -39,6 +54,51 @@ void \hyperlink{classc_momentum_a391c5ecfd1f3bc59b77dc1f3846a3abc}{ThrustZ} (flo
 \label{classc_momentum_a391c5ecfd1f3bc59b77dc1f3846a3abc}
 
 \begin{DoxyCompactList}\small\item\em Applies a linear thrust equal to lfThrust along the objects Local Z Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a3f175575044b2dba890a4c58d6266196}{
+void \hyperlink{classc_momentum_a3f175575044b2dba890a4c58d6266196}{LimitedThrust} (c3DVf lfVect, c3DVf lfLimit)}
+\label{classc_momentum_a3f175575044b2dba890a4c58d6266196}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis linear thrust about Local axis. Thrust effectiveness will deteriate as speed in the Local Axis increases. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a2cf51a54386f252f48ae4f73a21d97f7}{
+void \hyperlink{classc_momentum_a2cf51a54386f252f48ae4f73a21d97f7}{LimitedThrust} (float $\ast$lfVect)}
+\label{classc_momentum_a2cf51a54386f252f48ae4f73a21d97f7}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis linear thrust about Local axis. Thrust effectiveness will deteriate as speed in the Local Axis increases. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_aea016c7d28e2d3e2f68fadeefb08d0ea}{
+void \hyperlink{classc_momentum_aea016c7d28e2d3e2f68fadeefb08d0ea}{LimitedThrust} (float lfX, float lfY, float lfZ, float lfXLimit, float lfYLimit, float lfZLimit)}
+\label{classc_momentum_aea016c7d28e2d3e2f68fadeefb08d0ea}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis linear thrust about Local axis. Thrust effectiveness will deteriate as speed in the Local Axis increases. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a870fa47fea008f9d1cdb696b066b4b0b}{
+void \hyperlink{classc_momentum_a870fa47fea008f9d1cdb696b066b4b0b}{LimitedThrustX} (float lfThrust, float lfLimit)}
+\label{classc_momentum_a870fa47fea008f9d1cdb696b066b4b0b}
+
+\begin{DoxyCompactList}\small\item\em Applies a linear thrust along the Local X axis. Thrust effectiveness will deteriate as speed in the Local X Axis increases. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a82fc6e57d1256ed5c86512f84957ad68}{
+void \hyperlink{classc_momentum_a82fc6e57d1256ed5c86512f84957ad68}{LimitedThrustY} (float lfThrust, float lfLimit)}
+\label{classc_momentum_a82fc6e57d1256ed5c86512f84957ad68}
+
+\begin{DoxyCompactList}\small\item\em Applies a linear thrust along the Local X axis. Thrust effectiveness will deteriate as speed in the Local Y Axis increases. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a1d2f86f5d7319dd6b080adffff11b80d}{
+void \hyperlink{classc_momentum_a1d2f86f5d7319dd6b080adffff11b80d}{LimitedThrustZ} (float lfThrust, float lfLimit)}
+\label{classc_momentum_a1d2f86f5d7319dd6b080adffff11b80d}
+
+\begin{DoxyCompactList}\small\item\em Applies a linear thrust along the Local X axis. Thrust effectiveness will deteriate as speed in the Local Z Axis increases. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a6e230ba45811e244926ca5bd0917de81}{
+void \hyperlink{classc_momentum_a6e230ba45811e244926ca5bd0917de81}{GThrust} (c3DVf lfVect)}
+\label{classc_momentum_a6e230ba45811e244926ca5bd0917de81}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis linear thrust about Global Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_aac6e85ad29872d6452b739e528870732}{
+void \hyperlink{classc_momentum_aac6e85ad29872d6452b739e528870732}{GThrust} (float $\ast$lfVect)}
+\label{classc_momentum_aac6e85ad29872d6452b739e528870732}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis linear thrust about Global Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a634a0e4b2dd11aedb9e0396e381620f7}{
+void \hyperlink{classc_momentum_a634a0e4b2dd11aedb9e0396e381620f7}{GThrust} (float lfX, float lfY, float lfZ)}
+\label{classc_momentum_a634a0e4b2dd11aedb9e0396e381620f7}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis linear thrust about Global Axis. \end{DoxyCompactList}\item 
 \hypertarget{classc_momentum_accf174f3d17297f2b13b32c69465459f}{
 void \hyperlink{classc_momentum_accf174f3d17297f2b13b32c69465459f}{GThrustX} (float lfThrust)}
 \label{classc_momentum_accf174f3d17297f2b13b32c69465459f}
@@ -54,6 +114,51 @@ void \hyperlink{classc_momentum_a3d140c25bb390b1b37a93bc917fb27c6}{GThrustZ} (fl
 \label{classc_momentum_a3d140c25bb390b1b37a93bc917fb27c6}
 
 \begin{DoxyCompactList}\small\item\em Applies a linear thrust equal to lfThrust along the objects Global Z Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_af95b5ba2c24f9fb6964ca2b7466c0b1a}{
+void \hyperlink{classc_momentum_af95b5ba2c24f9fb6964ca2b7466c0b1a}{VectorThrust} (float lfThrust, float lfAngleThrust, c3DVf lfDistance, c3DVf lfFacing)}
+\label{classc_momentum_af95b5ba2c24f9fb6964ca2b7466c0b1a}
+
+\begin{DoxyCompactList}\small\item\em Applies a Thrust to the Object at a point lfDistance from its origin along the global axis with a global vector lfFacing. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a129836338add9a05e54cee757ab38c17}{
+void \hyperlink{classc_momentum_a129836338add9a05e54cee757ab38c17}{VectorThrust} (float lfThrust, float lfAngleThrust, \hyperlink{classc_matrix4}{cMatrix4} $\ast$lpMatrix)}
+\label{classc_momentum_a129836338add9a05e54cee757ab38c17}
+
+\begin{DoxyCompactList}\small\item\em Applies a Thrust to the Object using the position and facing of the \hyperlink{classc_matrix4}{cMatrix4} lpMatrix. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_ad16806d92816dd5e2746228ab801f96a}{
+void \hyperlink{classc_momentum_ad16806d92816dd5e2746228ab801f96a}{VectorThrust} (float lfThrust, float lfAngleThrust, \hyperlink{classc_matrix4}{cMatrix4} lpMatrix)}
+\label{classc_momentum_ad16806d92816dd5e2746228ab801f96a}
+
+\begin{DoxyCompactList}\small\item\em Applies a Thrust to the Object using the position and facing of the \hyperlink{classc_matrix4}{cMatrix4} lpMatrix. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a757bf4b32f53f2985a2a9ba59c3be3b9}{
+void \hyperlink{classc_momentum_a757bf4b32f53f2985a2a9ba59c3be3b9}{LimitedVectorThrust} (float lfThrust, float lfAngleThrust, float lfLimit, c3DVf lfDistance, c3DVf lfFacing)}
+\label{classc_momentum_a757bf4b32f53f2985a2a9ba59c3be3b9}
+
+\begin{DoxyCompactList}\small\item\em Applies a Limited Thrust to the Object at a point lfDistance from its origin along the global axis with a global vector lfFacing. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a2f47d7a52c895ea2fbcdc24ebf1fb199}{
+void \hyperlink{classc_momentum_a2f47d7a52c895ea2fbcdc24ebf1fb199}{LimitedVectorThrust} (float lfThrust, float lfAngleThrust, float lfLimit, \hyperlink{classc_matrix4}{cMatrix4} $\ast$lpMatrix)}
+\label{classc_momentum_a2f47d7a52c895ea2fbcdc24ebf1fb199}
+
+\begin{DoxyCompactList}\small\item\em Applies a Limited Thrust to the Object using the position and facing of the \hyperlink{classc_matrix4}{cMatrix4} lpMatrix. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a9ca39ec6bc76a76b95d1a81f9b195a54}{
+void \hyperlink{classc_momentum_a9ca39ec6bc76a76b95d1a81f9b195a54}{LimitedVectorThrust} (float lfThrust, float lfAngleThrust, float lfLimit, \hyperlink{classc_matrix4}{cMatrix4} lpMatrix)}
+\label{classc_momentum_a9ca39ec6bc76a76b95d1a81f9b195a54}
+
+\begin{DoxyCompactList}\small\item\em Applies a Limited Thrust to the Object using the position and facing of the \hyperlink{classc_matrix4}{cMatrix4} lpMatrix. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_ae27ece977d623140f2ec64ab57b5882b}{
+void \hyperlink{classc_momentum_ae27ece977d623140f2ec64ab57b5882b}{ThrustAngle} (c3DVf lfVect)}
+\label{classc_momentum_ae27ece977d623140f2ec64ab57b5882b}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis angular thrust about Local axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a04957410ed4c847b2feee9d9f9f9cf1b}{
+void \hyperlink{classc_momentum_a04957410ed4c847b2feee9d9f9f9cf1b}{ThrustAngle} (float $\ast$lfVect)}
+\label{classc_momentum_a04957410ed4c847b2feee9d9f9f9cf1b}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis angular thrust about Local axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a286b5ad14ffcd9818b23265ed70c9855}{
+void \hyperlink{classc_momentum_a286b5ad14ffcd9818b23265ed70c9855}{ThrustAngle} (float lfX, float lfY, float lfZ)}
+\label{classc_momentum_a286b5ad14ffcd9818b23265ed70c9855}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis angular thrust about Local axis. \end{DoxyCompactList}\item 
 \hypertarget{classc_momentum_afb154e00f9bc7a8c38a2c52dfb899a21}{
 void \hyperlink{classc_momentum_afb154e00f9bc7a8c38a2c52dfb899a21}{ThrustAngleX} (float lfThrust)}
 \label{classc_momentum_afb154e00f9bc7a8c38a2c52dfb899a21}
@@ -69,6 +174,21 @@ void \hyperlink{classc_momentum_abaf5e48af42bb5a865145297af403eaa}{ThrustAngleZ}
 \label{classc_momentum_abaf5e48af42bb5a865145297af403eaa}
 
 \begin{DoxyCompactList}\small\item\em Applies an angular thrust equal to lfThrust around the objects Local Z Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a91707ca7d1a16c9a79f4023c6f99bb60}{
+void \hyperlink{classc_momentum_a91707ca7d1a16c9a79f4023c6f99bb60}{GThrustAngle} (c3DVf lfVect)}
+\label{classc_momentum_a91707ca7d1a16c9a79f4023c6f99bb60}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis angular thrust about Global axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a831603670d8ffcb21b47ce5efcb6fe4a}{
+void \hyperlink{classc_momentum_a831603670d8ffcb21b47ce5efcb6fe4a}{GThrustAngle} (float $\ast$lfVect)}
+\label{classc_momentum_a831603670d8ffcb21b47ce5efcb6fe4a}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis angular thrust about Global axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a4d0ceb36e5d2a06a2419328e2f87ad24}{
+void \hyperlink{classc_momentum_a4d0ceb36e5d2a06a2419328e2f87ad24}{GThrustAngle} (float lfX, float lfY, float lfZ)}
+\label{classc_momentum_a4d0ceb36e5d2a06a2419328e2f87ad24}
+
+\begin{DoxyCompactList}\small\item\em Applies a 3 axis angular thrust about Global axis. \end{DoxyCompactList}\item 
 \hypertarget{classc_momentum_a0ef0aa6ac876af22bee53e282afefb08}{
 void \hyperlink{classc_momentum_a0ef0aa6ac876af22bee53e282afefb08}{GThrustAngleX} (float lfThrust)}
 \label{classc_momentum_a0ef0aa6ac876af22bee53e282afefb08}
@@ -103,18 +223,158 @@ void \hyperlink{classc_momentum_a761435c725896ef0f60452a68fdddaf4}{DampenAngular
 void \hyperlink{classc_momentum_a9f6e219b6b7de80f9ed48f8424a54db5}{Straighten} (float lfThrust)}
 \label{classc_momentum_a9f6e219b6b7de80f9ed48f8424a54db5}
 
-\begin{DoxyCompactList}\small\item\em This Will apply thrust to reduce non-\/forward motion. Not Yet Implemented. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This Will apply thrust to reduce non-\/forward motion. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a791aadaf8e6ac5454ae3010fed305491}{
+void \hyperlink{classc_momentum_a791aadaf8e6ac5454ae3010fed305491}{StraightenX} (float lfThrust)}
+\label{classc_momentum_a791aadaf8e6ac5454ae3010fed305491}
+
+\begin{DoxyCompactList}\small\item\em This Will apply thrust to reduce Left/Right motion. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_aeedc30da55072e8474cd953f5c4a73ae}{
+void \hyperlink{classc_momentum_aeedc30da55072e8474cd953f5c4a73ae}{StraightenY} (float lfThrust)}
+\label{classc_momentum_aeedc30da55072e8474cd953f5c4a73ae}
+
+\begin{DoxyCompactList}\small\item\em This Will apply thrust to reduce Up/Down motion. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_acb62a85b38989877c8388361c52077ff}{
+void \hyperlink{classc_momentum_acb62a85b38989877c8388361c52077ff}{StraightenZ} (float lfThrust)}
+\label{classc_momentum_acb62a85b38989877c8388361c52077ff}
+
+\begin{DoxyCompactList}\small\item\em This will apply thrust to reduce forwards / backwards motion. \end{DoxyCompactList}\item 
 \hypertarget{classc_momentum_a1f20db0caa8b8e903193287988b3f27e}{
 void \hyperlink{classc_momentum_a1f20db0caa8b8e903193287988b3f27e}{Stabilise} (float lfThrust)}
 \label{classc_momentum_a1f20db0caa8b8e903193287988b3f27e}
 
 \begin{DoxyCompactList}\small\item\em This will apply thrust to reduce rotations. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a4706da0c9c1ad3aafe30080b83359ba5}{
+void \hyperlink{classc_momentum_a4706da0c9c1ad3aafe30080b83359ba5}{StabiliseX} (float lfThrust)}
+\label{classc_momentum_a4706da0c9c1ad3aafe30080b83359ba5}
+
+\begin{DoxyCompactList}\small\item\em This will apply thrust to reduce rotations about the X Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_adf603b9ff43241e9d2efdfdc3adebd11}{
+void \hyperlink{classc_momentum_adf603b9ff43241e9d2efdfdc3adebd11}{StabiliseY} (float lfThrust)}
+\label{classc_momentum_adf603b9ff43241e9d2efdfdc3adebd11}
+
+\begin{DoxyCompactList}\small\item\em This will apply thrust to reduce rotations about the Y Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_aa93d50eaf70304b4e94981cd514aa170}{
+void \hyperlink{classc_momentum_aa93d50eaf70304b4e94981cd514aa170}{StabiliseZ} (float lfThrust)}
+\label{classc_momentum_aa93d50eaf70304b4e94981cd514aa170}
+
+\begin{DoxyCompactList}\small\item\em This will apply thrust to reduce rotations about the Z Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_af70dbc27cb23dbb630934916a5ce1578}{
+void \hyperlink{classc_momentum_af70dbc27cb23dbb630934916a5ce1578}{LimitSpeeds} (c3DVf lfVect)}
+\label{classc_momentum_af70dbc27cb23dbb630934916a5ce1578}
+
+\begin{DoxyCompactList}\small\item\em This will limit the Speeds along the three axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a92874204b14a8fac3d5ad0267b18d3c4}{
+void \hyperlink{classc_momentum_a92874204b14a8fac3d5ad0267b18d3c4}{LimitSpeedX} (float lfLimit)}
+\label{classc_momentum_a92874204b14a8fac3d5ad0267b18d3c4}
+
+\begin{DoxyCompactList}\small\item\em This will limit the Speed along the Local X axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_ab92115d594581e69de1b45aebec76442}{
+void \hyperlink{classc_momentum_ab92115d594581e69de1b45aebec76442}{LimitSpeedY} (float lfLimit)}
+\label{classc_momentum_ab92115d594581e69de1b45aebec76442}
+
+\begin{DoxyCompactList}\small\item\em This will limit the Speed along the Local X axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a58b3ec5a203e9913e968f4e745c65ac2}{
+void \hyperlink{classc_momentum_a58b3ec5a203e9913e968f4e745c65ac2}{LimitSpeedZ} (float lfLimit)}
+\label{classc_momentum_a58b3ec5a203e9913e968f4e745c65ac2}
+
+\begin{DoxyCompactList}\small\item\em This will limit the Speed along the Local X axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_ab01fd3e19978ba13d4e28db1b0fa10fb}{
+void \hyperlink{classc_momentum_ab01fd3e19978ba13d4e28db1b0fa10fb}{LimitAngularSpeeds} (c3DVf lfVect)}
+\label{classc_momentum_ab01fd3e19978ba13d4e28db1b0fa10fb}
+
+\begin{DoxyCompactList}\small\item\em This will limit the angular Speeds about all three axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a0053ff7b3676c13a672d2e716920f4ed}{
+void \hyperlink{classc_momentum_a0053ff7b3676c13a672d2e716920f4ed}{LimitAngularSpeedX} (float lfLimit)}
+\label{classc_momentum_a0053ff7b3676c13a672d2e716920f4ed}
+
+\begin{DoxyCompactList}\small\item\em This will limit the angular Speeds about the Local X axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_aa2d5665da3652cb1386f197822f18dd1}{
+void \hyperlink{classc_momentum_aa2d5665da3652cb1386f197822f18dd1}{LimitAngularSpeedY} (float lfLimit)}
+\label{classc_momentum_aa2d5665da3652cb1386f197822f18dd1}
+
+\begin{DoxyCompactList}\small\item\em This will limit the angular Speeds about the Local Y axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a2039b235b89de1b6a597a0b108083b07}{
+void \hyperlink{classc_momentum_a2039b235b89de1b6a597a0b108083b07}{LimitAngularSpeedZ} (float lfLimit)}
+\label{classc_momentum_a2039b235b89de1b6a597a0b108083b07}
+
+\begin{DoxyCompactList}\small\item\em This will limit the angular Speeds about the Local Z axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_ab5373c0fe8207cd19b986b9c4cf2882b}{
+void \hyperlink{classc_momentum_ab5373c0fe8207cd19b986b9c4cf2882b}{LimitAll} (c3DVf lfVect, c3DVf lfAngular)}
+\label{classc_momentum_ab5373c0fe8207cd19b986b9c4cf2882b}
+
+\begin{DoxyCompactList}\small\item\em This will limit the Speeds and angular speeds. \end{DoxyCompactList}\item 
 \hypertarget{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{
 void \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update} ()}
 \label{classc_momentum_ae860280e817e7afef71222afd0b12ec8}
 
-\begin{DoxyCompactList}\small\item\em Will update the Matrix with the effects of the objects momentum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Will update the Matrix with the effects of the objects momentum. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a4b3e9a8aa461415455166f5c0a56b4ef}{
+float \hyperlink{classc_momentum_a4b3e9a8aa461415455166f5c0a56b4ef}{SpeedX} ()}
+\label{classc_momentum_a4b3e9a8aa461415455166f5c0a56b4ef}
+
+\begin{DoxyCompactList}\small\item\em Will return the speed along the Local X Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a649b177cb629fce975641e69ac9df2ab}{
+float \hyperlink{classc_momentum_a649b177cb629fce975641e69ac9df2ab}{SpeedY} ()}
+\label{classc_momentum_a649b177cb629fce975641e69ac9df2ab}
+
+\begin{DoxyCompactList}\small\item\em Will return the speed along the Local Y Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_ab107d0a5bb3c2c935410830009455b3c}{
+float \hyperlink{classc_momentum_ab107d0a5bb3c2c935410830009455b3c}{SpeedZ} ()}
+\label{classc_momentum_ab107d0a5bb3c2c935410830009455b3c}
+
+\begin{DoxyCompactList}\small\item\em Will return the speed along the Local Z Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_acaad0c9e2d375a82b2cffe8ca8056acc}{
+float \hyperlink{classc_momentum_acaad0c9e2d375a82b2cffe8ca8056acc}{GSpeedX} ()}
+\label{classc_momentum_acaad0c9e2d375a82b2cffe8ca8056acc}
+
+\begin{DoxyCompactList}\small\item\em Will return the speed along the Global X Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a614d9e117518e4cbcbb1caa8b2b68ccd}{
+float \hyperlink{classc_momentum_a614d9e117518e4cbcbb1caa8b2b68ccd}{GSpeedY} ()}
+\label{classc_momentum_a614d9e117518e4cbcbb1caa8b2b68ccd}
+
+\begin{DoxyCompactList}\small\item\em Will return the speed along the Global Y Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a0572c183336eeb1f5d9e21bbfffb9291}{
+float \hyperlink{classc_momentum_a0572c183336eeb1f5d9e21bbfffb9291}{GSpeedZ} ()}
+\label{classc_momentum_a0572c183336eeb1f5d9e21bbfffb9291}
+
+\begin{DoxyCompactList}\small\item\em Will return the speed along the Global Z Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a7feaf09a6ac800e6e5971a445323a779}{
+float \hyperlink{classc_momentum_a7feaf09a6ac800e6e5971a445323a779}{AngularSpeedX} ()}
+\label{classc_momentum_a7feaf09a6ac800e6e5971a445323a779}
+
+\begin{DoxyCompactList}\small\item\em Will return the Angular speed about the Local X Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a0600f643a0b75be8aaedf95fa05aa6c3}{
+float \hyperlink{classc_momentum_a0600f643a0b75be8aaedf95fa05aa6c3}{AngularSpeedY} ()}
+\label{classc_momentum_a0600f643a0b75be8aaedf95fa05aa6c3}
+
+\begin{DoxyCompactList}\small\item\em Will return the Angular speed about the Local Y Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_ab9d37f33cc2ca5b5138d25bc8e21a39f}{
+float \hyperlink{classc_momentum_ab9d37f33cc2ca5b5138d25bc8e21a39f}{AngularSpeedZ} ()}
+\label{classc_momentum_ab9d37f33cc2ca5b5138d25bc8e21a39f}
+
+\begin{DoxyCompactList}\small\item\em Will return the Angular speed about the Local Z Axis. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a7862ced21b7c6732bc37638d166c5bda}{
+c3DVf \hyperlink{classc_momentum_a7862ced21b7c6732bc37638d166c5bda}{GMomentumVector} ()}
+\label{classc_momentum_a7862ced21b7c6732bc37638d166c5bda}
+
+\begin{DoxyCompactList}\small\item\em Will return the Current MomentumVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a39db7d06be015d5c2d42fd6ca3092857}{
+c3DVf \hyperlink{classc_momentum_a39db7d06be015d5c2d42fd6ca3092857}{RotationVector} ()}
+\label{classc_momentum_a39db7d06be015d5c2d42fd6ca3092857}
+
+\begin{DoxyCompactList}\small\item\em Will return the Current RotationVector. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_a311a4552715fb147b96cfcefacc939e4}{
+void \hyperlink{classc_momentum_a311a4552715fb147b96cfcefacc939e4}{EqualsRelative} (\hyperlink{classc_momentum}{cMomentum} $\ast$lpOther, \hyperlink{classc_matrix4}{cMatrix4} $\ast$lpRelVec)}
+\label{classc_momentum_a311a4552715fb147b96cfcefacc939e4}
+
+\begin{DoxyCompactList}\small\item\em This will Make this momentum Base itself off the Matrix Translations lpRelVec from the Base Momentum. \end{DoxyCompactList}\item 
+\hypertarget{classc_momentum_ad7c006b17a0f51bf910ba4969e2f67e4}{
+void \hyperlink{classc_momentum_ad7c006b17a0f51bf910ba4969e2f67e4}{EqualsRelative} (\hyperlink{classc_momentum}{cMomentum} $\ast$lpOther, c3DVf lpRelVec)}
+\label{classc_momentum_ad7c006b17a0f51bf910ba4969e2f67e4}
+
+\begin{DoxyCompactList}\small\item\em This will. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-This Class will store an objects momentum (assumed mass of 1.0) and automatically update its matrix when the function \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update()} is called. This gives the user the options of global and local thrusts and will update the objects linear and angular momentum by the thrusts applied to it. An instance of \hyperlink{classc_momentum}{cMomentum} must be linked to a matrix. It will only update whne the function \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update()} is called. 
+This Class will store an objects momentum (assumed mass of 1.0) and automatically update its matrix when the function \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update()} is called. This gives the user the options of global and local thrusts and will update the objects linear and angular momentum by the thrusts applied to it. An instance of \hyperlink{classc_momentum}{cMomentum} must be linked to a matrix. It will only update when the function \hyperlink{classc_momentum_ae860280e817e7afef71222afd0b12ec8}{Update()} is called. 

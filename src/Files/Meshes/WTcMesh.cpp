@@ -331,8 +331,28 @@ void cMesh::ForceNormalDirectionStart(uint32 liFurthest,uint32 liFace)
 
     for(uint32 liCount=0;liCount<miFaces;++liCount)
 	{
-     if(!lbDone[liCount])  printf("Face Not Done : %u\n",liCount);
+     if(!lbDone[liCount])  printf("Face Not Done : %lu\n",liCount);
 	}
+}
+
+void cMesh::ZeroCentre()
+{
+    c3DVd Centre(0.0f,0.0f,0.0f);
+    for(uint32 liCount=0;liCount<miVertex;++liCount)
+    {
+        c3DVd Temp(mpVertex[liCount*3],mpVertex[liCount*3+1],mpVertex[liCount*3+2]);
+        Centre+=Temp;
+    }
+
+    double lfMag=1.0/(miVertex);
+    Centre*=lfMag;
+
+    for(uint32 liCount=0;liCount<miVertex;++liCount)
+    {
+        mpVertex[liCount*3]-=Centre[0];
+        mpVertex[liCount*3+1]-=Centre[1];
+        mpVertex[liCount*3+2]-=Centre[2];
+    }
 }
 
 void cMesh::ForceNormalDirection(uint32 liFurthest,uint32 liFace,bool *lbDone)
@@ -346,34 +366,7 @@ void cMesh::ForceNormalDirection(uint32 liFurthest,uint32 liFace,bool *lbDone)
                 int8 Share=FacesShareEdge(&mpFaces[liFace*3],&mpFaces[liCount*3]);
                 if(Share>-1)
                 {
-                    /*
-                    int8 liFurthestShare=FacesShareEdge(&mpFaces[liCount*3],&mpFaces[liFace*3]);
-                    int8 liOtherShare=Share;
-
-                    c3DVf lvFurthestVec(&mpVertex[mpFaces[liFace*3+liFurthestShare]*3]);
-                    lvFurthestVec-=&mpVertex[liFurthest*3];
-
-                    c3DVf lvOtherVect(&mpVertex[mpFaces[liCount*3+liOtherShare]*3]);
-                    lvOtherVect-=&mpVertex[liFurthest*3];
-
-                    c3DVf lvFurthestNormal=&mpNormals[liFurthest*3];
-
-                     bool lbConcave;
-                     Vect=&mpVertex[mpFaces[liCount*3+Share]*3];
-                     Vect-=&mpVertex[liFurthest*3];
-                     if(Vect.Dot(&mpNormals[liFurthest*3])<0.0f) lbConcave=false;
-                     else lbConcave=true;
-
-                     Vect.Dot(&mpNormals)
-
-                     Share=FacesShareEdge(&mpFaces[liCount*3],&mpFaces[liFace*3]);
-                     c3DVf Vect=&mpVertex[mpFaces[liFace*3+Share]*3];
-                     Vect-=&mpVertex[liFurthest*3];*/
-
-                     //uint8 cMesh::FaceCompare(float *lpFurthest,float *lpFurthestNormal,uint16 *lpFaceCorrect,uint16 *lpFaceUnknown)
-                     //uint8 FaceData=FaceCompare(&mpVertex[liFurthest*3],&mpNormals[liFurthest*3],&mpFaces[liFace*3],&mpFaces[liCount*3]);
-
-                    c3DVf Vect;
+                                     c3DVf Vect;
                     bool lbConcave;
                     bool lbPerpendicular;
                     bool lbAcute;
@@ -457,16 +450,10 @@ lpFurthestCentre+=(lpRV*lfEq);
     if(lfNormalDot>-0.0001f && lfNormalDot<0.0001f) lbPerpendicular=true;
     else lbPerpendicular=false;
 
-    printf("\n");
-    printf("Angle : %f\n",lpOtherFaceVect.Angle(lpFurthestFaceVect));
+    //printf("\n");
+    //printf("Angle : %f\n",lpOtherFaceVect.Angle(lpFurthestFaceVect));
     if(lpOtherFaceVect.Angle(lpFurthestFaceVect)<(3.141569*0.5f)) lbAcute=true;
     else lbAcute=false;
-
-    printf("lpOtherFaceVect : %f %f %f\n",lpOtherFaceVect[0],lpOtherFaceVect[1],lpOtherFaceVect[2]);
-    printf("lpOtherFaceNormal : %f %f %f\n",&mpNormals[mpFaces[liCount*3]*3],&mpNormals[mpFaces[liCount*3]*3+1],&mpNormals[mpFaces[liCount*3]*3+2]);
-    printf("lpFurthestFaceVect : %f %f %f\n",lpFurthestFaceVect[0],lpFurthestFaceVect[1],lpFurthestFaceVect[2]);
-    printf("lpFurthestFaceNormal : %f %f %f\n",lpFurthestNormal[0],lpFurthestNormal[2],lpFurthestNormal[2]);
-    printf("Acute : %i\n",lbAcute);
 
     }
 
@@ -654,7 +641,7 @@ c3DVf lpFurthestCentre=lpStart+lpRV*lfEq;
 
 }
 
-int8 cMesh::FacesShareEdge(uint16 *lpFace1,uint16 *lpFace2)
+int8 cMesh::FacesShareEdge(FACE_TYPE *lpFace1,FACE_TYPE *lpFace2)
 {
     int8 liCount=0;
     bool lbVerts[3];
@@ -694,39 +681,95 @@ bool cMesh::ContainsVertex(c3DVf lcVert,uint32 liFace)
 //This operates Exclusively on a triangulated array
 void cMesh::CreateUVSphereMap()
 {
-    /*
-// determine extents
-D3DXVECTOR3 vMin,vMax;
-D3DXComputeBoundingBox(pVerts,numVerts,FVF_VERTEX,&vMin,&vMax);
+ float *lpVert=new float[16*miVertex];
+ float *lpNorm=&lpVert[6*miVertex];
+ float *lpUV=&lpVert[12*miVertex];
+ uint32 liVertex=miVertex;
+ memcpy(lpVert,mpVertex,sizeof(float)*miVertex*3);
+ memcpy(lpNorm,mpNormals,sizeof(float)*miVertex*3);
+ memcpy(lpUV,mpUV,sizeof(float)*miVertex*2);
 
-// calculate center
-D3DXVECTOR3 vCent;
-vCent=(vMax+vMin)*0.5f;
+ //uint32 liSeamStart=miVertex;
 
-// loop through the vertices
-for (i=0;i<numVerts;i++) {
 
-    // calculate normalized offset from center
-    D3DXVECTOR3 v;
-    v=pVerts->pos-vCent;
-    D3DXVec3Normalize(&v,&v);
 
-    // calculate texture coordinates
-    pVerts->tu=asinf(v.x)/D3DX_PI+0.5f;
-    pVerts->tv=asinf(v.y)/D3DX_PI+0.5f;
+//FindSeam
+for(uint32 liCount=0;liCount<miFaces;++liCount)
+{
+    float *lpVertex[3];
+    lpVertex[0]=&mpVertex[mpFaces[liCount*3]*3];
+    lpVertex[1]=&mpVertex[mpFaces[liCount*3+1]*3];
+    lpVertex[2]=&mpVertex[mpFaces[liCount*3+2]*3];
+//if one point above and one point beneath the line, duplicate the Vertex beneath.
 
-    // go to next vertex
-    pVerts++;
-}*/
+    bool lbAbove=false;
+    bool lbBelow=false;
 
+    for(uint8 liLoop=0;liLoop<3;++liLoop)
+    {
+        if(lpVertex[liLoop][1]>=0.0f) lbAbove=true;
+        if(lpVertex[liLoop][1]<0.0f) lbBelow=true;
+         mpUV[mpFaces[liCount*3+liLoop]*2]=1.0f;
+        mpUV[mpFaces[liCount*3+liLoop]*2+1]=1.0f;
+    }
+
+    //If this is a seam
+    if(lbAbove && lbBelow)
+    {
+     for(uint8 liLoop=0;liLoop<3;++liLoop)
+     {
+        if(lpVertex[liLoop][1]<0.0f)
+        {
+            memcpy(&lpVert[liVertex*3],lpVertex[liLoop],sizeof(float)*3);
+            memcpy(&lpNorm[liVertex*3],&mpNormals[mpFaces[liCount*3+liLoop]*3],sizeof(float)*3);
+            lpUV[liVertex*2]=-2.0f;
+            lpUV[liVertex*2+1]=-2.0f;
+            mpFaces[liCount*3+liLoop]=liVertex;
+
+            ++liVertex;
+        }
+     }
+    }
+
+}
+
+delete[] mpVertex;
+
+mpVertex=new float[liVertex*8];
+mpNormals=&mpVertex[liVertex*3];
+mpUV=&mpVertex[liVertex*6];
+
+memcpy(mpVertex,lpVert,sizeof(float)*3*liVertex);
+memcpy(mpNormals,lpNorm,sizeof(float)*3*liVertex);
+memcpy(mpUV,lpUV,sizeof(float)*2*liVertex);
+
+miVertex=liVertex;
+
+lpVert=mpVertex;
+lpUV=mpUV;
 for(uint32 liCount=0;liCount<miVertex;liCount++)
 {
-    c3DVf v=&mpVertex[liCount];
-    v.Normalise();
+	lpVert=&mpVertex[liCount*3];
+	lpUV=&mpUV[liCount*2];
+    float lfAlpha=atan2(sqrt(lpVert[0]*lpVert[0]+lpVert[2]*lpVert[2]),lpVert[1]);
 
-    // calculate texture coordinates
-    mpUV[liCount*2]=(asin(v[0])/3.141569f)+0.5f;
-    mpUV[liCount*2+1]=(asin(v[1])/3.141569f)+0.5f;
+	c2DVf lfVec(lpVert[0],lpVert[2]);
+	float lfScale=lfVec.Magnitude();
+
+	if(lpVert[1]>=0.0f || (lpUV[0]<0.0f && lpUV[1]<0.0f))
+	{
+		c2DVf lvPos(0.3f,0.3f);
+		lvPos+=(lfVec*lfAlpha*0.5f/(3.141569f*lfScale));
+		lpUV[0]=lvPos[0];
+		lpUV[1]=lvPos[1];
+	}
+	else
+	{
+	    c2DVf lvPos(0.75f,0.75f);
+		lvPos+=(lfVec*((3.141569-fabs(lfAlpha))*0.5f/(3.141569f*lfScale)));
+		lpUV[0]=lvPos[0];
+		lpUV[1]=lvPos[1];
+	}
 }
 
 }
@@ -737,8 +780,12 @@ void cMesh::BufferMesh()
 //	trace("Entering cMesh::BufferMesh")
 	//if (!mpBufferIDs) mpBufferIDs= new uint32[2];
 
+	uint8 liSize=3;
+	if(mpNormals) liSize+=3;
+	if(mpUV) liSize+=2;
+
 	glBindBuffer(GL_ARRAY_BUFFER, mBuffer1);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(float)*miVertex*8, mpVertex, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(float)*miVertex*liSize, mpVertex, GL_STATIC_DRAW);
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint16)*miFaces*3, mpFaces, GL_STATIC_DRAW);
@@ -751,8 +798,16 @@ void cMesh::RenderMesh()
 	glBindBuffer(GL_ARRAY_BUFFER, mBuffer1);
 
 	glVertexPointer(3,GL_FLOAT,0,0);
-	glNormalPointer(GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*3*sizeof(float)));
-    glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*6*sizeof(float)));
+	uint8 liSize=3;
+	if(mpNormals)
+	{
+		glNormalPointer(GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*liSize*sizeof(float)));
+		liSize+=3;
+	}
+	if(mpUV)
+	{
+	    glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*liSize*sizeof(float)));
+	}
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
 	glDrawElements(GL_TRIANGLES,miFaces*3,GL_UNSIGNED_SHORT,0);
@@ -847,7 +902,7 @@ cMesh::cMesh()
 
 
  /// This will return the number of verteces in the vertex position array mpVertex.
- uint32 cMesh::Vertex(){return miVertex;}
+ uint32 cMesh::Verteces(){return miVertex;}
 /// This will return the number of faces in the face array mpFaces.
  uint32 cMesh::Faces(){return miFaces;}
  /// This will return a pointer to the vertex position array.
@@ -905,7 +960,7 @@ c2DVf cMesh::FindUVCoordinates(c3DVf ModelPos,float *lpTangent,float *lpBinormal
 
     if(lpTangent && lpBinormal && NormalData)
 	{
-	    printf("Vertex Centre : %f %f %f\n",ModelPos[0],ModelPos[1],ModelPos[2]);
+	   // printf("Vertex Centre : %f %f %f\n",ModelPos[0],ModelPos[1],ModelPos[2]);
 		//printf("FindUV Centre : %f %f %f\n",ModelPos[0],ModelPos[1],ModelPos[2]);
     //Find Face.
     float lfDist=10000.0f;
@@ -955,9 +1010,15 @@ c2DVf cMesh::FindUVCoordinates(c3DVf ModelPos,float *lpTangent,float *lpBinormal
         c2DVf FinalUV;
         c2DVf lpUV(&mpUV[mpFaces[liPos*3]*2]);
 
-		printf("Face Has been found\n");
-        c3DVf TVect(&lpTangent[mpFaces[liPos*3]]);
-        c3DVf BVect(&lpBinormal[mpFaces[liPos*3]]);
+       /* printf("Face Has been found\n");
+        printf("lpVertex: %f %f %f\n",lpVertex[0],lpVertex[1],lpVertex[2]);
+        printf("lpNormal: %f %f %f\n",lpNormal[0],lpNormal[1],lpNormal[2]);
+        printf("lpUV: %f %f\n",lpUV[0],lpUV[1]);*/
+
+
+
+        c3DVf TVect(&lpTangent[mpFaces[liPos*3]*3]);
+        c3DVf BVect(&lpBinormal[mpFaces[liPos*3]*3]);
 
         c3DVf lvVectXYZC0(lvFacePoint-lpVertex);
 
@@ -970,162 +1031,65 @@ c2DVf cMesh::FindUVCoordinates(c3DVf ModelPos,float *lpTangent,float *lpBinormal
         lvVectUV10-=lpUV;
         c2DVf lvVectUV20(&mpUV[mpFaces[liPos*3+2]*2]);
         lvVectUV20-=lpUV;
-
+/*
         printf("Tangent (U) : %f %f %f\n",TVect[0],TVect[1],TVect[2]);
-        printf("Binormal (V) : %f %f %f\n",BVect[0],BVect[1],BVect[2]);
+        printf("Binormal (V) : %f %f %f\n",BVect[0],BVect[1],BVect[2]);*/
 
         float *lpDisp=&mpVertex[mpFaces[liPos*3]*3];
-        printf("Vertex 0: %f %f %f\n",lpDisp[0],lpDisp[1],lpDisp[2]);
+        //printf("Vertex 0: %f %f %f\n",lpDisp[0],lpDisp[1],lpDisp[2]);
         lpDisp=&mpVertex[mpFaces[liPos*3+1]*3];
-        printf("Vertex 1: %f %f %f\n",lpDisp[0],lpDisp[1],lpDisp[2]);
+        //printf("Vertex 1: %f %f %f\n",lpDisp[0],lpDisp[1],lpDisp[2]);
         lpDisp=&mpVertex[mpFaces[liPos*3+2]*3];
-        printf("Vertex 2: %f %f %f\n",lpDisp[0],lpDisp[1],lpDisp[2]);
+        //printf("Vertex 2: %f %f %f\n",lpDisp[0],lpDisp[1],lpDisp[2]);
 
         lpDisp=&mpUV[mpFaces[liPos*3]*2];
-        printf("UV : 0 %f %f\n",lpDisp[0],lpDisp[1]);
+        //printf("UV : 0 %f %f\n",lpDisp[0],lpDisp[1]);
         lpDisp=&mpUV[mpFaces[liPos*3+1]*2];
-        printf("UV : 1 %f %f\n",lpDisp[0],lpDisp[1]);
+        //printf("UV : 1 %f %f\n",lpDisp[0],lpDisp[1]);
         lpDisp=&mpUV[mpFaces[liPos*3+2]*2];
-        printf("UV : 2 %f %f\n",lpDisp[0],lpDisp[1]);
+        //printf("UV : 2 %f %f\n",lpDisp[0],lpDisp[1]);
 
 
         float TDot=TVect.Dot(lvVectXYZ10);
         float TDot2=TVect.Dot(lvVectXYZ20);
-        printf("TDot : %f %f\n",TDot,TDot2);
+      //  printf("TDot : %f %f\n",TDot,TDot2);
         //if(fabs(TDot)>fabs(TDot2))
         if(fabs(lvVectUV10[0])>fabs(lvVectUV20[0]))
         {
             FinalUV[0]=lpUV[0]+((lvVectUV10[0]*TVect.Dot(lvVectXYZC0))/(TDot));
-            printf("Tangent Ratio: %f\n",TVect.Dot(lvVectXYZC0)/TDot);
-            printf("U Vect : %f\n",lvVectUV10[0]);
+        //    printf("Tangent Ratio: %f\n",TVect.Dot(lvVectXYZC0)/TDot);
+        //    printf("U Vect : %f\n",lvVectUV10[0]);
         }
         else
         {
 
                 FinalUV[0]=lpUV[0]+((lvVectUV20[0]*TVect.Dot(lvVectXYZC0))/TDot2);
-                printf("Tangent Ratio: %f\n",TVect.Dot(lvVectXYZC0)/TDot2);
-                printf("U Vect : %f\n",lvVectUV20[0]);
+       //         printf("Tangent Ratio: %f\n",TVect.Dot(lvVectXYZC0)/TDot2);
+       //         printf("U Vect : %f\n",lvVectUV20[0]);
         }
-        printf("U Base: %f\n",lpUV[1]);
+       // printf("U Base: %f\n",lpUV[1]);
 
         TDot=BVect.Dot(lvVectXYZ10);
         TDot2=BVect.Dot(lvVectXYZ20);
-        printf("BDot : %f %f\n",TDot,TDot2);
+      //  printf("BDot : %f %f\n",TDot,TDot2);
         //if(fabs(TDot)>fabs(TDot2))
         if(fabs(lvVectUV10[1])>fabs(lvVectUV20[1]))
         {
             FinalUV[1]=lpUV[1]+((lvVectUV10[1]*BVect.Dot(lvVectXYZC0))/(TDot));
-            printf("Binormal Ratio: %f\n",BVect.Dot(lvVectXYZC0)/TDot);
-            printf("V Vect : %f\n",lvVectUV10[1]);
+       //     printf("Binormal Ratio: %f\n",BVect.Dot(lvVectXYZC0)/TDot);
+       //     printf("V Vect : %f\n",lvVectUV10[1]);
         }
         else
         {
                 FinalUV[1]=lpUV[1]+((lvVectUV20[1]*BVect.Dot(lvVectXYZC0))/TDot2);
-                printf("Binormal Ratio: %f\n",BVect.Dot(lvVectXYZC0)/TDot2);
-                printf("V Vect : %f\n",lvVectUV20[1]);
+        //        printf("Binormal Ratio: %f\n",BVect.Dot(lvVectXYZC0)/TDot2);
+        //        printf("V Vect : %f\n",lvVectUV20[1]);
         }
-        printf("V Base: %f\n",lpUV[1]);
+      //  printf("V Base: %f\n",lpUV[1]);
 
 
 
         return FinalUV;
-
-/*
-        if(lpBinormal[0] && !lpBinormal[1] && !lpBinormal[2]) {CoeffB=lvVect[0]; goto FoundCoeffB;}
-        if(!lpBinormal[0] && lpBinormal[1] && !lpBinormal[2]) {CoeffB=lvVect[1]; goto FoundCoeffB;}
-        if(!lpBinormal[0] && !lpBinormal[1] && lpBinormal[2]) {CoeffB=lvVect[2]; goto FoundCoeffB;}
-
-        if(lpTangent[0] && lpTangent[1] && lpBinormal[1]-lpBinormal[0])
-        {
-            CoeffB=(lvVect[1]-lvVect[0])/(lpBinormal[1]-lpBinormal[0]);
-            //CoeffB=(lpVertex[0]-lpVertex[1]-ModelPos[0]+ModelPos[1])/(lpBinormal[1]-lpBinormal[0]);
-            goto FoundCoeffB;
-        }
-
-        if(lpTangent[2] && lpTangent[1] && lpBinormal[1]-lpBinormal[2])
-        {
-            CoeffB=(lvVect[1]-lvVect[2])/(lpBinormal[1]-lpBinormal[2]);
-            //CoeffB=(lpVertex[2]-lpVertex[1]-ModelPos[2]+ModelPos[1])/(lpBinormal[1]-lpBinormal[2]);
-            goto FoundCoeffB;
-        }
-
-        if(lpTangent[2] && lpTangent[0] && lpBinormal[0]-lpBinormal[2])
-        {
-            CoeffB=(lvVect[0]-lvVect[2])/(lpBinormal[0]-lpBinormal[2]);
-            //CoeffB=(lpVertex[2]-lpVertex[0]-ModelPos[2]+ModelPos[0])/(lpBinormal[0]-lpBinormal[2]);
-            goto FoundCoeffB;
-        }
-
-        if(lpTangent[0] && !lpTangent[1] && !lpTangent[2]) {CoeffT=ModelPos[0]-lpVertex[0]; goto FoundCoeffT;}
-        if(!lpTangent[0] && lpTangent[1] && !lpTangent[2]) {CoeffT=ModelPos[1]-lpVertex[1]; goto FoundCoeffT;}
-        if(!lpTangent[0] && !lpTangent[1] && lpTangent[2]) {CoeffT=ModelPos[2]-lpVertex[2]; goto FoundCoeffT;}
-
-        goto Error_Detected;
-
-FoundCoeffB :
-
-        if(lpTangent[0]) {CoeffT=(lvVect[0]-CoeffB*lpBinormal[0])/(lpTangent[0]); goto FoundBothCoeff;}
-        if(lpTangent[1]) {CoeffT=(lvVect[1]-CoeffB*lpBinormal[1])/(lpTangent[1]); goto FoundBothCoeff;}
-        if(lpTangent[2]) {CoeffT=(lvVect[2]-CoeffB*lpBinormal[2])/(lpTangent[2]); goto FoundBothCoeff;}
-
-FoundCoeffT :
-
-        if(lpBinormal[0]) {CoeffT=(lvVect[0]-CoeffB*lpTangent[0])/(lpBinormal[0]); goto FoundBothCoeff;}
-        if(lpBinormal[1]) {CoeffT=(lvVect[1]-CoeffB*lpTangent[1])/(lpBinormal[1]); goto FoundBothCoeff;}
-        if(lpBinormal[2]) {CoeffT=(lvVect[2]-CoeffB*lpTangent[2])/(lpBinormal[2]); goto FoundBothCoeff;}
-
-FoundBothCoeff :
-
-        printf("CoeffTB :%f %f\n",CoeffT,CoeffB);
-
-        c2DVf Vect21UV=&mpUV[mpFaces[liPos*3+1]*2];
-        Vect21UV-=&mpUV[mpFaces[liPos*3]*2];
-
-        c3DVf Vect21XYZ=&mpVertex[mpFaces[liPos*3+1]*3];
-        Vect21XYZ-=&mpVertex[mpFaces[liPos*3]*3];
-
-        printf("UVVec : %f %f\n",Vect21UV[0],Vect21UV[1]);
-        printf("XYZVec: %f %f %f\n",Vect21XYZ[0],Vect21XYZ[1],Vect21XYZ[2]);
-
-        if(Vect21UV[0])
-        {
-            CoeffT*=Vect21UV[0]/(lpTangent[0]*Vect21XYZ[0]+lpTangent[1]*Vect21XYZ[1]+lpTangent[2]*Vect21XYZ[2]);
-        }
-        else
-        {
-            c2DVf Vect31UV=&mpUV[mpFaces[liPos*3+2]*2];
-            Vect31UV-=&mpUV[mpFaces[liPos*3]*2];
-
-            c3DVf Vect31XYZ=&mpVertex[mpFaces[liPos*3+1]*3];
-            Vect31XYZ-=&mpVertex[mpFaces[liPos*3]*3];
-            if(Vect31UV[0])
-            {
-                CoeffT*=Vect31UV[0]/(lpTangent[0]*Vect31XYZ[0]+lpTangent[1]*Vect31XYZ[1]+lpTangent[2]*Vect31XYZ[2]);
-            }
-        }
-
-        if(Vect21UV[1])
-        {
-            CoeffB*=Vect21UV[1]/(lpBinormal[0]*Vect21XYZ[0]+lpBinormal[1]*Vect21XYZ[1]+lpBinormal[2]*Vect21XYZ[2]);
-        }
-        else
-        {
-            c2DVf Vect31UV=&mpUV[mpFaces[liPos*3+2]*2];
-            Vect31UV-=&mpUV[mpFaces[liPos*3]*2];
-
-            c3DVf Vect31XYZ=&mpVertex[mpFaces[liPos*3+1]*3];
-            Vect31XYZ-=&mpVertex[mpFaces[liPos*3]*3];
-            if(Vect31UV[0])
-            {
-                CoeffB*=Vect31UV[0]/(lpBinormal[0]*Vect31XYZ[0]+lpBinormal[1]*Vect31XYZ[1]+lpBinormal[2]*Vect31XYZ[2]);
-            }
-        }
-
-		printf("CoeffTB : %f %f\n",CoeffT,CoeffB);
-		printf("UV : %f %f\n",mpUV[mpFaces[liPos*3]*2],mpUV[mpFaces[liPos*3]*2+1]);
-        c2DVf Result(mpUV[mpFaces[liPos*3]*2]+CoeffT,mpUV[mpFaces[liPos*3]*2+1]+CoeffB);
-        return Result;
-        */
 
     }
 	}
@@ -1155,7 +1119,7 @@ if(!mpNormals && !mpUV)
         if(!lbFound)
         {
             UpdateFaces(liSpace,liCount);
-            memcpy(&mpVertex[liSpace*3],&mpVertex[liCount*3],sizeof(float)*3);
+            memmove(&mpVertex[liSpace*3],&mpVertex[liCount*3],sizeof(float)*3);
             liSpace++;
         }
     }
@@ -1281,10 +1245,8 @@ bool cMesh::UVMatch(uint32 liOne, uint32 liTwo,float lfMergeRange)
             {
                  if(mpUV[liOne*2+1]<mpUV[liTwo*2+1]+lfMergeRange && mpUV[liOne*2+1]>mpUV[liTwo*2+1]-lfMergeRange)
                 {
-                     if(mpUV[liOne*2+2]<mpUV[liTwo*2+2]+lfMergeRange && mpUV[liOne*2+2]>mpUV[liTwo*2+2]-lfMergeRange)
-                    {
+
                         return 1;
-                    }
                 }
             }
 
@@ -1296,5 +1258,218 @@ void cMesh::UpdateFaces(uint32 liBase,uint32 liCopy)
     for(uint32 liOther=0;liOther<miFaces*3;++liOther)
     {
         if(mpFaces[liOther]==liCopy) mpFaces[liOther]=liBase;
+    }
+};
+
+
+c3DVf cMesh::GetTexture3DLocation(c2DVf lfPos)
+{
+    c2DVf One,Two,Three;
+    for(uint32 liFace=0;liFace<miFaces;++liFace)
+    {
+        One=mpUV[mpFaces[liFace*3]*2];
+        Two=mpUV[mpFaces[liFace*3+1]*2];
+        Three=mpUV[mpFaces[liFace*3+2]*2];
+
+        c2DVf Centre=(One+Two+Three)/3;
+
+        One-=lfPos;
+        Two-=lfPos;
+        Three-=lfPos;
+        float lfAngle=One.Angle(Two)+One.Angle(Three)+Two.Angle(Three);
+        if(lfAngle>2*WT_PI-0.001f && lfAngle<2*WT_PI+0.001f)
+        {
+            c3DVf Onep=mpVertex[mpFaces[liFace*3]*3];
+            c3DVf Twop=mpVertex[mpFaces[liFace*3+1]*3];
+            c3DVf Threep=mpVertex[mpFaces[liFace*3+2]*3];
+
+            c3DVf Average=(Onep+Twop+Threep)/3;
+
+            Onep-=Average;
+            Twop-=Average;
+            Threep-=Average;
+
+            One=mpUV[mpFaces[liFace*3]*2];
+            Two=mpUV[mpFaces[liFace*3+1]*2];
+            Three=mpUV[mpFaces[liFace*3+2]*2];
+
+            One-=Centre;
+            Two-=Centre;
+            Three-=Centre;
+
+            lfPos-=Centre;
+            float a,b;
+            b=a=0.0f;
+            if(One.Dot(lfPos)<Three.Dot(lfPos))
+            {
+                if(Two.Dot(lfPos)<Three.Dot(lfPos))
+                {
+                    //a*One+b*Two=lfPos;
+                   float Denom=One[1]*Two[0]-One[0]*Two[1];
+                   if(Denom)
+                   {
+                       if(One[0])
+                       {
+
+                           b=(lfPos[0]*One[1]-lfPos[1]*One[0])/Denom;
+                           a=(lfPos[0]-b*Two[0]/One[0]);
+                       }
+                       else
+                       {
+
+                            a=-(lfPos[0]*Two[2]-lfPos[2]*Two[0])/Denom;
+                            b=(lfPos[0]-a*One[0]/Two[0]);
+                       }
+                       Average+=Onep*a+Twop*b;
+                       return Average;
+                   }
+                }
+            }
+                if(One.Dot(lfPos)<Two.Dot(lfPos))
+                {
+                    //a*One+c*Three=lfPos;
+                 float Denom=One[1]*Three[0]-One[0]*Three[1];
+                   if(Denom)
+                   {
+                       if(One[0])
+                       {
+                           b=(lfPos[0]*One[1]-lfPos[1]*One[0])/Denom;
+                           a=(lfPos[0]-b*Three[0]/One[0]);
+                       }
+                       else
+                       {
+                            a=-(lfPos[0]*Three[2]-lfPos[2]*Three[0])/Denom;
+                            b=(lfPos[0]-a*One[0]/Three[0]);
+                       }
+                       Average+=Onep*a+Threep*b;
+                       return Average;
+                   }
+
+                }
+
+                    //a*Two+b*Three=lfPos;
+
+                    float Denom=Two[1]*Three[0]-Two[0]*Three[1];
+                   if(Denom)
+                   {
+                       if(Two[0])
+                       {
+                           b=(lfPos[0]*Two[1]-lfPos[1]*Two[0])/Denom;
+                           a=(lfPos[0]-b*Three[0]/Two[0]);
+                       }
+                       else
+                       {
+                            a=-(lfPos[0]*Three[2]-lfPos[2]*Three[0])/Denom;
+                            b=(lfPos[0]-a*Two[0]/Three[0]);
+                       }
+                       Average+=Twop*a+Threep*b;
+                       return Average;
+                   }
+
+            }
+
+    }
+
+    return c3DVf(0.0f,0.0f,0.0f);
+}
+
+
+cSeamPair cMesh::UVSeam(FACE_TYPE *Face1,FACE_TYPE *Face2)
+{
+    cSeamPair lsPair;
+    bool lbFound=false;
+
+
+    c3DVf Vertex1[3];
+    c3DVf Vertex2[3];
+
+    c2DVf UV1[3];
+    c2DVf UV2[3];
+
+    Vertex1[0]=&mpVertex[Face1[0]*3];
+    Vertex1[1]=&mpVertex[Face1[1]*3];
+    Vertex1[2]=&mpVertex[Face1[2]*3];
+
+    Vertex2[0]=&mpVertex[Face2[0]*3];
+    Vertex2[1]=&mpVertex[Face2[1]*3];
+    Vertex2[2]=&mpVertex[Face2[2]*3];
+
+    UV1[0]=&mpUV[Face1[0]*2];
+    UV1[1]=&mpUV[Face1[1]*2];
+    UV1[2]=&mpUV[Face1[2]*2];
+
+    UV2[0]=&mpUV[Face2[0]*2];
+    UV2[1]=&mpUV[Face2[1]*2];
+    UV2[2]=&mpUV[Face2[2]*2];
+
+    for(uint8 li1=0;li1<3;++li1)
+    {
+        for(uint8 li2=0;li2<3;++li2)
+        {
+            if(Vertex2[li2]==Vertex1[li1])
+            {
+                if(!(UV2[li2]==UV1[li1]))
+                {
+                    if(lbFound==false)
+                    {
+                        lbFound=true;
+                        lsPair.Data[0].mvStart=UV1[li1];
+                        lsPair.Data[1].mvStart=UV2[li2];
+                    }
+                    else
+                    {
+                        lsPair.Data[0].mvEnd=UV1[li1];
+                        lsPair.Data[1].mvEnd=UV2[li2];
+                        lsPair.Data[0].miTemplate=SEAM_VOID_VALUE;
+                        lsPair.Data[1].miTemplate=SEAM_VOID_VALUE;
+                        return lsPair;
+                    }
+                }
+            }
+        }
+    }
+
+    lsPair.Data[0].miTemplate=0;
+    lsPair.Data[1].miTemplate=0;
+
+    return lsPair;
+};
+
+void cMesh::GenerateSpace(uint16 liVerteces,bool lbNormal,bool lbUV,uint32 liFaces)
+{
+    if(mpVertex) delete []mpVertex;
+    if(mpFaces) delete []mpFaces;
+    miVertex=liVerteces;
+    uint8 liSize=3;
+    if(lbNormal) liSize+=3;
+    if(lbUV) liSize+=2;
+
+    mpVertex=new float[liVerteces*liSize];
+    liSize=3;
+    if(lbNormal)
+    {
+      mpNormals=&mpVertex[liVerteces*liSize];
+      liSize+=3;
+    }
+    if(lbUV)
+    {
+        mpUV=&mpVertex[liVerteces*liSize];
+        liSize+=2;
+    }
+
+    mpFaces=new uint16[liFaces*3];
+    miFaces=liFaces;
+};
+
+void cMesh::RemoveErrorFaces(float lfRange)
+{
+    RemoveDuplicateVerteces(lfRange);
+    for(uint32 liCount=0;liCount<miFaces*3;liCount+=3)
+    {
+        if(mpFaces[liCount]==mpFaces[liCount+1] || mpFaces[liCount]==mpFaces[liCount+2] || mpFaces[liCount+1]==mpFaces[liCount+2])
+        {
+            --miFaces;
+            memmove(&mpFaces[liCount],&mpFaces[liCount+3],sizeof(uint16)*(miFaces*3-liCount));
+        }
     }
 };

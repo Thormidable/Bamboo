@@ -78,7 +78,7 @@ public:
 
 
   // virtual functions to allow polymorphism. see cCamera::RenderPainter();
-  virtual void RenderPainter()=0;
+  virtual void RenderPainter(){};
 
   void RenderToPainter();
  /// Will remove this object from the render list owned by mpRenderer.

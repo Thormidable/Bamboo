@@ -273,8 +273,8 @@
  * The cCameraMatrix4 is the matrix used for the camera. The format is different to the cMatrix4 class as it is used in a different manner. Many of the functions are called the same thing and have the same function.
  * It also has a few additional functions which are useful for Camera manipulation. \n
  * \n
- * float *cCameraMatrix4::Matrix() \n
- * float *cCameraMatrix4::Position() \n
+ * float* cCameraMatrix4::Matrix() \n
+ * float* cCameraMatrix4::Position() \n
  * \n
  * float cCameraMatrix4::X() \n
  * float cCameraMatrix4::Y() \n
@@ -3905,6 +3905,8 @@ public:
 
 #include "./WTOsBits.h"
 
+#include "./Global/WTKeyStateDefinitions.h"
+
 #if WT_OS_TYPE==OS_WIN32
 	#include <windows.h>
 
@@ -3957,6 +3959,7 @@ public:
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <iomanip>
 
 #include "./Global/GlobalPointers.h"
 #include "./Global/log.h"
@@ -3979,11 +3982,13 @@ public:
 #include "./Maths/WTc4DVt.h"
 #include "./Maths/WTcColors.h"
 #include "./Maths/WTcMatrix4.h"
+#include "./Maths/WTcDoubleMatrix4.h"
 #include "./Maths/WTcMomentum.h"
 #include "./Maths/WTcPerspectiveMatrix.h"
 #include "./Maths/WTcMatrixStack.h"
 #include "./Maths/WTcCameraMatrix4.h"
 #include "./Maths/WTcPredictiveTracking.h"
+#include "./Maths/WTcSimplexNoise.h"
 #include "./Files/WTString.h"
 
 
@@ -4022,8 +4027,11 @@ public:
 #include "./Files/CollisionMeshes/WTcMeshFileCollision.h"
 #include "./Files/CollisionMeshes/WTcCompoundCollision.h"
 #include "./Files/CollisionMeshes/WTcCompoundCollisionFile.h"
+#include "./Files/CollisionMeshes/WTcMouseCollision.h"
 
 #include "./Files/Textures/WTcTexture.h"
+#include "./Files/Textures/WTcSeamlessTextureClasses.h"
+#include "./Files/Textures/WTcTextureGenerator.h"
 #include "./Files/Fonts/WTcFont.h"
 
 #include "./Files/Shaders/WTcShader.h"
@@ -4036,10 +4044,13 @@ public:
 #include "./Camera/WTvRenderObject.h"
 #include "./Files/Meshes/WTcMesh.h"
 #include "./Files/Meshes/WTcAsteroid.h"
+#include "./Files/Meshes/WTcUVSphere.h"
+#include "./Files/Meshes/WTcIcoSphere.h"
 
 #include "./Files/Misc/WTcMeshTreeNode.h"
 #include "./Files/Misc/WTvMeshTree.h"
 #include "./Files/Misc/WTcMeshTree.h"
+#include "./Files/Misc/WTcLineArrayData.h"
 
 #include "./Files/Meshes/WTv2DPolygon.h"
 
@@ -4051,6 +4062,8 @@ public:
 #include "./Camera/WTcExtraViewport.h"
 #include "./Camera/WTcRenderPointer.h"
 #include "./Camera/WTcRenderObject.h"
+
+#include "./Physics/WTcMouseCollisionObject.h"
 
 #include "./Camera/Nodes/WTcRenderNode.h"
 #include "./Camera/Nodes/WTcNodeList.h"
@@ -4071,7 +4084,9 @@ public:
          #include "./Camera/Renderable/WTcModel.h"
 	 #include "./Camera/Renderable/WTcLandscape.h"
 	 #include "./Camera/Renderable/WTcPoint.h"
+	 #include "./Camera/Renderable/WTcBillBoard.h"
 	 #include "./Camera/Renderable/WTcLine.h"
+	 #include "./Camera/Renderable/WTcLineArray.h"
 	 #include "./Camera/Renderable/WTcParticleSettings.h"
 	 #include "./Camera/Renderable/WTcParticle.h"
 	 #include "./Camera/Renderable/WTcParticleGroup.h"
@@ -4082,6 +4097,7 @@ public:
 #include "./Camera/WTcPainter.h"
 
 #include "./Windows/EventHandler/WTcKeyStore.h"
+#include "./Windows/EventHandler/WTcKeyToggle.h"
 #include "./Windows/EventHandler/WTcMouse.h"
 #include "./Windows/EventHandler/WTcEventHandler.h"
 

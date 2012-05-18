@@ -50,13 +50,7 @@ float *cPoint::Color()
 {
  return mfColor.Color();
 }
-/*
-void cPoint::PointSize(float lfPointSize)
-{
-  mfPointSize=lfPointSize;
 
-};
-*/
 void cPoint::Color(cRGB *lpOther){mfColor=lpOther;}
 void cPoint::Color(cRGBA *lpOther){mfColor=lpOther;}
 void cPoint::Color(cRGB &lpOther){mfColor=lpOther;}

@@ -97,7 +97,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a7e3030fcedbd3b74270b26ea2b61904c">Z</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will return the Z position of this objects matrix. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7110b0f3aa924a2cfefe8ca149e0b41f"></a><!-- doxytag: member="cCameraMatrix4::Position" ref="a7110b0f3aa924a2cfefe8ca149e0b41f" args="(c3DVf *lpPosition)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a7110b0f3aa924a2cfefe8ca149e0b41f">Position</a> (<a class="el" href="classc3_d_vf.html">c3DVf</a> *lpPosition)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a7110b0f3aa924a2cfefe8ca149e0b41f">Position</a> (c3DVf *lpPosition)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will set this objects matrix position vector to be the same as lpPosition. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1aa471464a30ce27fe339b743b840516"></a><!-- doxytag: member="cCameraMatrix4::Position" ref="a1aa471464a30ce27fe339b743b840516" args="(float lfX, float lfY, float lfZ)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a1aa471464a30ce27fe339b743b840516">Position</a> (float lfX, float lfY, float lfZ)</td></tr>
@@ -111,6 +111,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ea814a92ce2d7fcc1ba66490127b2f2"></a><!-- doxytag: member="cCameraMatrix4::PositionZ" ref="a6ea814a92ce2d7fcc1ba66490127b2f2" args="(float lfZ)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a6ea814a92ce2d7fcc1ba66490127b2f2">PositionZ</a> (float lfZ)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will set this objects Z position to he lfZ. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6226abdf3731075f95e10704bcc717bf"></a><!-- doxytag: member="cCameraMatrix4::Advance" ref="a6226abdf3731075f95e10704bcc717bf" args="(float lfDist)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a6226abdf3731075f95e10704bcc717bf">Advance</a> (float lfDist)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will advance the position of this objects X,Y and Z positions by lfX,lfY and lfZ along local axis. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a07cdf5cb578378193487a1ac304380"></a><!-- doxytag: member="cCameraMatrix4::AdvanceX" ref="a4a07cdf5cb578378193487a1ac304380" args="(float lfDistance)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a4a07cdf5cb578378193487a1ac304380">AdvanceX</a> (float lfDistance)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will advance the position of this objects X position by lfDistance along local axis. <br/></td></tr>
@@ -201,6 +204,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f0549e1ae97a959863a8fe27bec1169"></a><!-- doxytag: member="cCameraMatrix4::Follow" ref="a1f0549e1ae97a959863a8fe27bec1169" args="(cMatrix4 &amp;lpOther, float lfX, float lfY, float lfZ)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a1f0549e1ae97a959863a8fe27bec1169">Follow</a> (<a class="el" href="classc_matrix4.html">cMatrix4</a> &amp;lpOther, float lfX, float lfY, float lfZ)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will make the camera position itself with the same orientation as the Matrix lpOther at the point lfX,lfY,lfZ relative to its local Co-ordinates. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17065b6fdb233d94ad87608a1518d501"></a><!-- doxytag: member="cCameraMatrix4::Follow" ref="a17065b6fdb233d94ad87608a1518d501" args="(vRenderObject *lpObj, float lfDist)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a17065b6fdb233d94ad87608a1518d501">Follow</a> (vRenderObject *lpObj, float lfDist)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will make the camera position itself with the same orientation as the Render Object lpOther at the point lfDist behind its local Co-ordinates. This uses the objects mmCache Matrix. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d2ac844b95f6a23239047a1598880a9"></a><!-- doxytag: member="cCameraMatrix4::Follow" ref="a6d2ac844b95f6a23239047a1598880a9" args="(vRenderObject *lpObj, float lfX, float lfY, float lfZ)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a6d2ac844b95f6a23239047a1598880a9">Follow</a> (vRenderObject *lpObj, float lfX, float lfY, float lfZ)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will make the camera position itself with the same orientation as the Render Object lpOther at the point lfX,lfY,lfZ relative to its local Co-ordinates. This uses the objects mmCache Matrix. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8ca47d59f6b3b454d700329bdbbdeea"></a><!-- doxytag: member="cCameraMatrix4::PointAt" ref="aa8ca47d59f6b3b454d700329bdbbdeea" args="(float *mpPos)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#aa8ca47d59f6b3b454d700329bdbbdeea">PointAt</a> (float *mpPos)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will make the camera point itself at the global point defined by the three float array lpPos. <br/></td></tr>
@@ -211,11 +220,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#aa4cd6a1c22791a336c3eb21d0a0d94e4">PointAt</a> (<a class="el" href="classc_matrix4.html">cMatrix4</a> &amp;mpPos)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will make the camera point itself at the global point defined by the three float array lpPos. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9e73a11692a91065a59af310e8e246b"></a><!-- doxytag: member="cCameraMatrix4::PointAt" ref="ac9e73a11692a91065a59af310e8e246b" args="(c3DVf &amp;mpPos)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#ac9e73a11692a91065a59af310e8e246b">PointAt</a> (<a class="el" href="classc3_d_vf.html">c3DVf</a> &amp;mpPos)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#ac9e73a11692a91065a59af310e8e246b">PointAt</a> (c3DVf &amp;mpPos)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will make the camera point itself at the global point defined by the three float array lpPos. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee6a49404715d0a891f7e59c0124fc16"></a><!-- doxytag: member="cCameraMatrix4::PointAt" ref="aee6a49404715d0a891f7e59c0124fc16" args="(c3DVf *mpPos)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#aee6a49404715d0a891f7e59c0124fc16">PointAt</a> (<a class="el" href="classc3_d_vf.html">c3DVf</a> *mpPos)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#aee6a49404715d0a891f7e59c0124fc16">PointAt</a> (c3DVf *mpPos)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will make the camera point itself at the global point defined by the three float array lpPos. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a17ab7086abec91dc96a3ee2acffcc0"></a><!-- doxytag: member="cCameraMatrix4::PointAt" ref="a2a17ab7086abec91dc96a3ee2acffcc0" args="(vRenderObject *lpObj)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a2a17ab7086abec91dc96a3ee2acffcc0">PointAt</a> (vRenderObject *lpObj)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will make the camera point itself at the global point of the Render Object lpObjs cache matrix mmCache. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac22d068fd30bfd2c5cb23dc06822f500"></a><!-- doxytag: member="cCameraMatrix4::Equals" ref="ac22d068fd30bfd2c5cb23dc06822f500" args="(cCameraMatrix4 *lpOther)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#ac22d068fd30bfd2c5cb23dc06822f500">Equals</a> (<a class="el" href="classc_camera_matrix4.html">cCameraMatrix4</a> *lpOther)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Will Make this equal the 4x4 <a class="el" href="classc_camera_matrix4.html" title="This is a translation matrix for a camera object A Special Matric for Cameras. All the translations a...">cCameraMatrix4</a> lpOther. <br/></td></tr>
@@ -247,7 +259,7 @@ float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a47de224c654b31aa8c22e55ec1d58ed0">operator()</a> (uint16 liColumn, uint16 liRow)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will return the float in the position [liColumn,liRow] in this objects matrix. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62fa2879539cc733e661d02b8a898578"></a><!-- doxytag: member="cCameraMatrix4::Position" ref="a62fa2879539cc733e661d02b8a898578" args="(c2DVf *lpPosition)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a62fa2879539cc733e661d02b8a898578">Position</a> (<a class="el" href="classc2_d_vf.html">c2DVf</a> *lpPosition)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a62fa2879539cc733e661d02b8a898578">Position</a> (c2DVf *lpPosition)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will set this objects matrix position (2D - X,Y) vector to be the same as lpPosition. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a293ac7d2919eae7205b568ea56fa104c"></a><!-- doxytag: member="cCameraMatrix4::Position" ref="a293ac7d2919eae7205b568ea56fa104c" args="(float lfX, float lfY)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_camera_matrix4.html#a293ac7d2919eae7205b568ea56fa104c">Position</a> (float lfX, float lfY)</td></tr>
@@ -306,7 +318,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Feb 7 2012 16:30:03 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:08 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>
