@@ -14,18 +14,20 @@ class cWindow
     uint8 miTitleBarHeight;
     uint32 miRenderWidth;
     uint32 miRenderHeight;
+    uint32 miRenderX;
+    uint32 miRenderY;
 	// This is the window current X position on the desktop in pixels.
-	uint16 miX;
+	uint16 miWindowX;
 	// This is the windows current Y position on the desktop in pixels.
-	uint16 miY;
+	uint16 miWindowY;
 	// This is the windows current width in pixels.
-	uint16 miWidth;
+	uint16 miWindowWidth;
 	// This is the windows current height in pixels.
-	uint16 miHeight;
+	uint16 miWindowHeight;
 	//Inverse value for window width.
-	float32 miInvWidth;
+	float32 miInvWindowWidth;
 	//Inverse value for window width.
-	float32 miInvHeight;
+	float32 miInvWindowHeight;
 		// This is a flag telling the system if the window has been resized and so if the context needs updating.
           bool Resized;
 	// This is a flag telling the system if the window has been moved.
@@ -34,7 +36,9 @@ class cWindow
           bool Hidden;
 
 	// This is a float storing the ratio of the window to avoid distorting the view.
-          float32 mfRatio;
+          float32 mfRenderRatio;
+
+          float32 mfWindowRatio;
 
 public:
 // This is a flag telling the system that the window requires repainting (updating)
@@ -49,7 +53,13 @@ public:
 	cWindow(HINSTANCE lphInstance);
 
 	friend LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam);
+
 #endif
+
+		///This will return the height of the Title bar in pixels. This is Windows only.
+    uint32 TitleBarHeight();
+    ///This will return the size of the window border in pixels. This is Windows only.
+    uint32 BorderThickness();
 
 #if WT_OS_TYPE==OS_LINUX
 	Display *lpDisplay;
@@ -72,20 +82,23 @@ public:
           bool mbQuit;
 
 	/// This is the window current X position on the desktop in pixels.
-	uint16 X();
+	uint16 WindowX();
 	/// This is the windows current Y position on the desktop in pixels.
-	uint16 Y();
+	uint16 WindowY();
 	/// This is the windows current width in pixels.
-	uint16 Width();
+	uint16 WindowWidth();
 	/// This is the windows current height in pixels.
-	uint16 Height();
+	uint16 WindowHeight();
 	///Inverse value for window width.
-	float32 InvWidth();
+	float32 InvWindowWidth();
 	///Inverse value for window width.
-	float32 InvHeight();
+	float32 InvWindowHeight();
 
 	/// This will return the Windows Width Height Ratio.
-	float Ratio();
+	float WindowRatio();
+
+    ///This will return the render Areas Width Height Ratio.
+	float RenderRatio();
 
 
 	~cWindow();
@@ -121,6 +134,11 @@ public:
     uint32 RenderAreaWidth();
 	///This will return the render Areas height supplied by the OS (May be different to Window Height)
     uint32 RenderAreaHeight();
+    ///This will return the render Areas X Position supplied by the OS (May be different to Window X)
+    uint32 RenderAreaX();
+	///This will return the render Areas Y Position supplied by the OS (May be different to Window Y)
+    uint32 RenderAreaY();
+
     friend class cCamera;
     friend class cCameraPainter;
 

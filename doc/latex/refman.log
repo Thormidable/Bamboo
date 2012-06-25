@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.12.19)  25 APR 2012 20:37
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.12.19)  6 JUN 2012 10:29
 entering extended mode
  %&-line parsing enabled.
 **refman.tex
@@ -830,90 +830,6 @@ Writing index file refman.idx
 LaTeX Warning: Label `classc_main_thread_a9b744fd9997b08998fb246221b945925' mul
 tiply defined.
 
-
-LaTeX Warning: Label `classc_mesh_a1b689b9d00f34fe7e4cbf8910bb310f9' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_ae24161941f8538d55caa144d76b535bc' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a8dd2a8840d8e2c6aaefa95884a2f9f68' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a5f35c2b9245d765b7958f91379d63e7d' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a5f1b578685730d581301f3b5dbb2f83c' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a56283d0c69f6b4987176c8714eb10987' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a6bc80e837d5556b84399065c9a21fa79' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a534e2fc01c1ed2319d067cdb2df0c439' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a98e9d13a984398ecbe18300d435d01d8' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a022d36f1b2f456b5edb50d32956960e0' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a4d0f5cbdb12f1bc7fb8899c61d2328d5' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a031dd39f3c8aa1643a978b42bfc68ddc' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a75062dccdd861877dd206f81ac2f9ec0' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a6b4d72718fa9a90fae3ee30dbe5f2575' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a93bdde998cfebc274b7573444dc98d34' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a47b1bea169448ce42035a82115a6ac48' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_abaa10891ab82ca5988bb255fda7cfdae' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a325c1397e0594d3b19b11e4f789f93ca' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_a637f8906a64eef54f320b59e8064a725' multiply d
-efined.
-
-
-LaTeX Warning: Label `classc_mesh_array_adce4a1c4b77569227f23d1e4cc46b4bb' mult
-iply defined.
-
-
-LaTeX Warning: Label `classc_particle_a208780eb109c709449a2edd3f7867e51' multip
-ly defined.
-
 )
 \openout1 = `refman.aux'.
 
@@ -1066,317 +982,317 @@ Overfull \hbox (1.0618pt too wide) detected at line 57
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 58
- \T1/phv/b/n/10 113
+ \T1/phv/b/n/10 111
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 59
- \T1/phv/m/n/10 113
+ \T1/phv/m/n/10 111
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 60
- \T1/phv/m/n/10 113
+ \T1/phv/m/n/10 111
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 61
- \T1/phv/b/n/10 115
+ \T1/phv/b/n/10 113
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 62
- \T1/phv/m/n/10 115
+ \T1/phv/m/n/10 113
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 63
- \T1/phv/m/n/10 116
+ \T1/phv/m/n/10 114
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 64
- \T1/phv/m/n/10 116
+ \T1/phv/m/n/10 114
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 65
- \T1/phv/m/n/10 117
+ \T1/phv/m/n/10 115
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 66
- \T1/phv/m/n/10 117
+ \T1/phv/m/n/10 115
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 67
- \T1/phv/m/n/10 118
+ \T1/phv/m/n/10 116
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 68
- \T1/phv/m/n/10 118
+ \T1/phv/m/n/10 116
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 69
- \T1/phv/m/n/10 120
+ \T1/phv/m/n/10 118
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 70
- \T1/phv/m/n/10 120
+ \T1/phv/m/n/10 118
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 71
- \T1/phv/m/n/10 120
+ \T1/phv/m/n/10 118
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 72
- \T1/phv/m/n/10 120
+ \T1/phv/m/n/10 118
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 73
- \T1/phv/m/n/10 121
+ \T1/phv/m/n/10 119
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 74
- \T1/phv/m/n/10 121
+ \T1/phv/m/n/10 119
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 75
- \T1/phv/m/n/10 122
+ \T1/phv/m/n/10 120
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 76
- \T1/phv/m/n/10 122
+ \T1/phv/m/n/10 120
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 77
- \T1/phv/m/n/10 123
+ \T1/phv/m/n/10 121
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 78
- \T1/phv/m/n/10 123
+ \T1/phv/m/n/10 121
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 79
- \T1/phv/m/n/10 124
+ \T1/phv/m/n/10 122
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 80
- \T1/phv/m/n/10 124
+ \T1/phv/m/n/10 122
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 81
- \T1/phv/m/n/10 125
+ \T1/phv/m/n/10 123
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 82
- \T1/phv/m/n/10 125
+ \T1/phv/m/n/10 123
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 83
- \T1/phv/m/n/10 126
+ \T1/phv/m/n/10 124
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 84
- \T1/phv/m/n/10 126
+ \T1/phv/m/n/10 124
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 85
- \T1/phv/m/n/10 127
+ \T1/phv/m/n/10 125
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 86
- \T1/phv/m/n/10 127
+ \T1/phv/m/n/10 125
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 87
- \T1/phv/m/n/10 128
+ \T1/phv/m/n/10 126
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 88
- \T1/phv/m/n/10 128
+ \T1/phv/m/n/10 126
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 89
- \T1/phv/m/n/10 129
+ \T1/phv/m/n/10 127
  []
 
 [3]
 Overfull \hbox (1.0618pt too wide) detected at line 90
- \T1/phv/m/n/10 129
+ \T1/phv/m/n/10 127
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 91
- \T1/phv/m/n/10 129
+ \T1/phv/m/n/10 127
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 92
- \T1/phv/m/n/10 130
+ \T1/phv/m/n/10 128
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 93
- \T1/phv/m/n/10 130
+ \T1/phv/m/n/10 128
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 94
- \T1/phv/m/n/10 131
+ \T1/phv/m/n/10 129
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 95
- \T1/phv/m/n/10 131
+ \T1/phv/m/n/10 129
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 96
- \T1/phv/m/n/10 132
+ \T1/phv/m/n/10 130
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 97
- \T1/phv/m/n/10 132
+ \T1/phv/m/n/10 130
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 98
- \T1/phv/m/n/10 133
+ \T1/phv/m/n/10 131
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 99
- \T1/phv/m/n/10 133
+ \T1/phv/m/n/10 131
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 100
- \T1/phv/m/n/10 134
+ \T1/phv/m/n/10 132
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 101
- \T1/phv/m/n/10 135
+ \T1/phv/m/n/10 133
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 102
- \T1/phv/m/n/10 135
+ \T1/phv/m/n/10 133
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 103
- \T1/phv/m/n/10 135
+ \T1/phv/m/n/10 133
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 104
- \T1/phv/m/n/10 136
+ \T1/phv/m/n/10 134
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 105
- \T1/phv/m/n/10 136
+ \T1/phv/m/n/10 134
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 106
- \T1/phv/m/n/10 136
+ \T1/phv/m/n/10 134
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 107
- \T1/phv/m/n/10 137
+ \T1/phv/m/n/10 135
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 108
- \T1/phv/m/n/10 138
+ \T1/phv/m/n/10 136
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 109
- \T1/phv/m/n/10 139
+ \T1/phv/m/n/10 136
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 110
- \T1/phv/m/n/10 139
+ \T1/phv/m/n/10 138
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 111
- \T1/phv/m/n/10 140
+ \T1/phv/m/n/10 138
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 112
- \T1/phv/m/n/10 142
+ \T1/phv/m/n/10 139
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 113
- \T1/phv/m/n/10 142
+ \T1/phv/m/n/10 139
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 114
- \T1/phv/m/n/10 143
+ \T1/phv/m/n/10 140
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 115
- \T1/phv/m/n/10 143
+ \T1/phv/m/n/10 140
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 116
- \T1/phv/m/n/10 144
+ \T1/phv/m/n/10 142
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 117
- \T1/phv/m/n/10 144
+ \T1/phv/m/n/10 142
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 118
- \T1/phv/m/n/10 146
+ \T1/phv/m/n/10 142
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 119
- \T1/phv/m/n/10 146
+ \T1/phv/m/n/10 143
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 120
- \T1/phv/m/n/10 146
+ \T1/phv/m/n/10 147
  []
 
 
@@ -1406,17 +1322,17 @@ Overfull \hbox (1.0618pt too wide) detected at line 125
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 126
- \T1/phv/m/n/10 153
+ \T1/phv/m/n/10 151
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 127
- \T1/phv/m/n/10 154
+ \T1/phv/m/n/10 152
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 128
- \T1/phv/m/n/10 154
+ \T1/phv/m/n/10 153
  []
 
 
@@ -1426,232 +1342,232 @@ Overfull \hbox (1.0618pt too wide) detected at line 129
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 130
- \T1/phv/m/n/10 156
+ \T1/phv/m/n/10 154
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 131
- \T1/phv/m/n/10 157
+ \T1/phv/m/n/10 154
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 132
- \T1/phv/m/n/10 158
+ \T1/phv/m/n/10 156
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 133
- \T1/phv/m/n/10 158
+ \T1/phv/m/n/10 156
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 134
- \T1/phv/m/n/10 159
+ \T1/phv/m/n/10 156
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 135
- \T1/phv/m/n/10 159
+ \T1/phv/m/n/10 157
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 136
- \T1/phv/m/n/10 162
+ \T1/phv/m/n/10 157
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 137
- \T1/phv/m/n/10 162
+ \T1/phv/m/n/10 157
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 138
- \T1/phv/m/n/10 162
+ \T1/phv/m/n/10 157
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 139
- \T1/phv/m/n/10 162
+ \T1/phv/m/n/10 166
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 140
- \T1/phv/m/n/10 162
+ \T1/phv/m/n/10 166
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 141
- \T1/phv/m/n/10 163
+ \T1/phv/m/n/10 168
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 142
- \T1/phv/m/n/10 163
+ \T1/phv/m/n/10 168
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 143
- \T1/phv/m/n/10 164
+ \T1/phv/m/n/10 170
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 144
- \T1/phv/m/n/10 165
+ \T1/phv/m/n/10 170
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 145
- \T1/phv/m/n/10 165
+ \T1/phv/m/n/10 172
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 146
- \T1/phv/m/n/10 165
+ \T1/phv/m/n/10 172
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 147
- \T1/phv/m/n/10 167
+ \T1/phv/m/n/10 173
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 148
- \T1/phv/m/n/10 167
+ \T1/phv/m/n/10 173
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 149
- \T1/phv/m/n/10 169
+ \T1/phv/m/n/10 175
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 150
- \T1/phv/m/n/10 169
+ \T1/phv/m/n/10 175
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 151
- \T1/phv/m/n/10 171
+ \T1/phv/m/n/10 177
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 152
- \T1/phv/m/n/10 171
+ \T1/phv/m/n/10 177
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 153
- \T1/phv/m/n/10 172
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 154
- \T1/phv/m/n/10 172
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 155
- \T1/phv/m/n/10 174
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 156
- \T1/phv/m/n/10 174
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 157
- \T1/phv/m/n/10 176
- []
-
-[5]
-Overfull \hbox (1.0618pt too wide) detected at line 158
- \T1/phv/m/n/10 176
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 159
- \T1/phv/m/n/10 177
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 160
- \T1/phv/m/n/10 177
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 161
- \T1/phv/m/n/10 177
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 162
  \T1/phv/m/n/10 178
  []
 
 
+Overfull \hbox (1.0618pt too wide) detected at line 154
+ \T1/phv/m/n/10 178
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 155
+ \T1/phv/m/n/10 179
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 156
+ \T1/phv/m/n/10 179
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 157
+ \T1/phv/m/n/10 181
+ []
+
+[5]
+Overfull \hbox (1.0618pt too wide) detected at line 158
+ \T1/phv/m/n/10 181
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 159
+ \T1/phv/m/n/10 182
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 160
+ \T1/phv/m/n/10 182
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 161
+ \T1/phv/m/n/10 184
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 162
+ \T1/phv/m/n/10 184
+ []
+
+
 Overfull \hbox (1.0618pt too wide) detected at line 163
- \T1/phv/m/n/10 180
+ \T1/phv/m/n/10 184
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 164
- \T1/phv/m/n/10 180
+ \T1/phv/m/n/10 184
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 165
- \T1/phv/m/n/10 181
+ \T1/phv/m/n/10 185
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 166
- \T1/phv/m/n/10 181
+ \T1/phv/m/n/10 185
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 167
- \T1/phv/m/n/10 182
+ \T1/phv/m/n/10 186
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 168
- \T1/phv/m/n/10 182
+ \T1/phv/m/n/10 186
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 169
- \T1/phv/m/n/10 184
+ \T1/phv/m/n/10 188
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 170
- \T1/phv/m/n/10 184
+ \T1/phv/m/n/10 188
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 171
- \T1/phv/m/n/10 187
+ \T1/phv/m/n/10 188
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 172
- \T1/phv/m/n/10 187
+ \T1/phv/m/n/10 188
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 173
- \T1/phv/m/n/10 188
+ \T1/phv/m/n/10 189
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 174
- \T1/phv/m/n/10 188
+ \T1/phv/m/n/10 189
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 175
- \T1/phv/m/n/10 188
+ \T1/phv/m/n/10 189
  []
 
 
@@ -1676,7 +1592,7 @@ Overfull \hbox (1.0618pt too wide) detected at line 179
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 180
- \T1/phv/m/n/10 191
+ \T1/phv/m/n/10 190
  []
 
 
@@ -1686,62 +1602,62 @@ Overfull \hbox (1.0618pt too wide) detected at line 181
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 182
- \T1/phv/m/n/10 191
+ \T1/phv/m/n/10 192
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 183
- \T1/phv/m/n/10 193
+ \T1/phv/m/n/10 194
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 184
- \T1/phv/m/n/10 193
+ \T1/phv/m/n/10 194
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 185
- \T1/phv/m/n/10 195
+ \T1/phv/m/n/10 196
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 186
- \T1/phv/m/n/10 195
+ \T1/phv/m/n/10 196
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 187
- \T1/phv/m/n/10 196
+ \T1/phv/m/n/10 197
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 188
- \T1/phv/m/n/10 196
+ \T1/phv/m/n/10 197
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 189
- \T1/phv/m/n/10 197
+ \T1/phv/m/n/10 198
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 190
- \T1/phv/m/n/10 197
+ \T1/phv/m/n/10 198
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 191
- \T1/phv/m/n/10 197
+ \T1/phv/m/n/10 198
  []
 
 [6]
 Overfull \hbox (1.0618pt too wide) detected at line 192
- \T1/phv/m/n/10 197
+ \T1/phv/m/n/10 198
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 193
- \T1/phv/m/n/10 198
+ \T1/phv/m/n/10 199
  []
 
 
@@ -1751,62 +1667,62 @@ Overfull \hbox (1.0618pt too wide) detected at line 194
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 195
- \T1/phv/m/n/10 201
+ \T1/phv/m/n/10 199
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 196
- \T1/phv/m/n/10 202
+ \T1/phv/m/n/10 200
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 197
- \T1/phv/m/n/10 202
+ \T1/phv/m/n/10 200
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 198
- \T1/phv/m/n/10 203
+ \T1/phv/m/n/10 200
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 199
- \T1/phv/m/n/10 203
+ \T1/phv/m/n/10 210
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 200
- \T1/phv/m/n/10 203
+ \T1/phv/m/n/10 210
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 201
- \T1/phv/m/n/10 203
+ \T1/phv/m/n/10 210
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 202
- \T1/phv/m/n/10 204
+ \T1/phv/m/n/10 210
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 203
- \T1/phv/m/n/10 204
+ \T1/phv/m/n/10 213
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 204
- \T1/phv/m/n/10 205
+ \T1/phv/m/n/10 213
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 205
- \T1/phv/m/n/10 205
+ \T1/phv/m/n/10 213
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 206
- \T1/phv/m/n/10 205
+ \T1/phv/m/n/10 214
  []
 
 
@@ -1816,42 +1732,42 @@ Overfull \hbox (1.0618pt too wide) detected at line 207
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 208
- \T1/phv/m/n/10 215
+ \T1/phv/m/n/10 214
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 209
- \T1/phv/m/n/10 215
+ \T1/phv/m/n/10 214
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 210
- \T1/phv/m/n/10 215
+ \T1/phv/m/n/10 214
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 211
- \T1/phv/m/n/10 219
+ \T1/phv/m/n/10 216
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 212
- \T1/phv/m/n/10 219
+ \T1/phv/m/n/10 216
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 213
- \T1/phv/m/n/10 220
+ \T1/phv/m/n/10 219
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 214
- \T1/phv/m/n/10 220
+ \T1/phv/m/n/10 219
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 215
- \T1/phv/m/n/10 221
+ \T1/phv/m/n/10 220
  []
 
 
@@ -1861,42 +1777,42 @@ Overfull \hbox (1.0618pt too wide) detected at line 216
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 217
- \T1/phv/m/n/10 221
+ \T1/phv/m/n/10 222
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 218
- \T1/phv/m/n/10 221
+ \T1/phv/m/n/10 223
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 219
- \T1/phv/m/n/10 222
+ \T1/phv/m/n/10 224
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 220
- \T1/phv/m/n/10 222
+ \T1/phv/m/n/10 224
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 221
- \T1/phv/m/n/10 224
+ \T1/phv/m/n/10 225
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 222
- \T1/phv/m/n/10 224
+ \T1/phv/m/n/10 225
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 223
- \T1/phv/m/n/10 226
+ \T1/phv/m/n/10 227
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 224
- \T1/phv/m/n/10 226
+ \T1/phv/m/n/10 227
  []
 
 
@@ -1906,82 +1822,82 @@ Overfull \hbox (1.0618pt too wide) detected at line 225
 
 [7]
 Overfull \hbox (1.0618pt too wide) detected at line 226
- \T1/phv/m/n/10 228
+ \T1/phv/m/n/10 229
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 227
- \T1/phv/m/n/10 228
+ \T1/phv/m/n/10 230
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 228
- \T1/phv/m/n/10 229
+ \T1/phv/m/n/10 230
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 229
- \T1/phv/m/n/10 229
+ \T1/phv/m/n/10 232
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 230
- \T1/phv/m/n/10 229
+ \T1/phv/m/n/10 232
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 231
- \T1/phv/m/n/10 231
+ \T1/phv/m/n/10 233
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 232
- \T1/phv/m/n/10 231
+ \T1/phv/m/n/10 233
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 233
- \T1/phv/m/n/10 231
+ \T1/phv/m/n/10 233
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 234
- \T1/phv/m/n/10 231
+ \T1/phv/m/n/10 233
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 235
- \T1/phv/m/n/10 231
+ \T1/phv/m/n/10 233
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 236
- \T1/phv/m/n/10 231
+ \T1/phv/m/n/10 234
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 237
- \T1/phv/m/n/10 231
+ \T1/phv/m/n/10 234
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 238
- \T1/phv/m/n/10 233
+ \T1/phv/m/n/10 235
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 239
- \T1/phv/m/n/10 233
+ \T1/phv/m/n/10 236
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 240
- \T1/phv/m/n/10 237
+ \T1/phv/m/n/10 240
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 241
- \T1/phv/m/n/10 237
+ \T1/phv/m/n/10 240
  []
 
 
@@ -1996,17 +1912,17 @@ Overfull \hbox (1.0618pt too wide) detected at line 243
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 244
- \T1/phv/m/n/10 242
+ \T1/phv/m/n/10 240
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 245
- \T1/phv/m/n/10 243
+ \T1/phv/m/n/10 242
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 246
- \T1/phv/m/n/10 243
+ \T1/phv/m/n/10 242
  []
 
 
@@ -2031,27 +1947,27 @@ Overfull \hbox (1.0618pt too wide) detected at line 250
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 251
- \T1/phv/m/n/10 244
+ \T1/phv/m/n/10 247
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 252
- \T1/phv/m/n/10 244
+ \T1/phv/m/n/10 247
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 253
- \T1/phv/m/n/10 245
+ \T1/phv/m/n/10 248
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 254
- \T1/phv/m/n/10 246
+ \T1/phv/m/n/10 248
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 255
- \T1/phv/m/n/10 247
+ \T1/phv/m/n/10 248
  []
 
 
@@ -2061,7 +1977,7 @@ Overfull \hbox (1.0618pt too wide) detected at line 256
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 257
- \T1/phv/m/n/10 249
+ \T1/phv/m/n/10 248
  []
 
 
@@ -2071,1004 +1987,509 @@ Overfull \hbox (1.0618pt too wide) detected at line 258
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 259
- \T1/phv/m/n/10 251
+ \T1/phv/m/n/10 249
  []
 
 [8]
 Overfull \hbox (1.0618pt too wide) detected at line 260
- \T1/phv/m/n/10 251
+ \T1/phv/m/n/10 249
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 261
- \T1/phv/m/n/10 252
+ \T1/phv/m/n/10 250
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 262
- \T1/phv/m/n/10 253
+ \T1/phv/m/n/10 250
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 263
- \T1/phv/m/n/10 253
+ \T1/phv/m/n/10 250
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 264
- \T1/phv/m/n/10 254
+ \T1/phv/m/n/10 251
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 265
- \T1/phv/m/n/10 256
+ \T1/phv/m/n/10 251
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 266
- \T1/phv/m/n/10 256
+ \T1/phv/m/n/10 254
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 267
- \T1/phv/m/n/10 257
+ \T1/phv/m/n/10 254
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 268
- \T1/phv/m/n/10 258
+ \T1/phv/m/n/10 255
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 269
- \T1/phv/m/n/10 259
+ \T1/phv/m/n/10 255
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 270
- \T1/phv/m/n/10 259
+ \T1/phv/m/n/10 256
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 271
- \T1/phv/m/n/10 259
+ \T1/phv/m/n/10 256
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 272
- \T1/phv/m/n/10 260
+ \T1/phv/m/n/10 257
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 273
- \T1/phv/m/n/10 261
+ \T1/phv/m/n/10 257
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 274
- \T1/phv/m/n/10 261
+ \T1/phv/m/n/10 258
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 275
- \T1/phv/m/n/10 263
+ \T1/phv/m/n/10 258
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 276
- \T1/phv/m/n/10 264
+ \T1/phv/m/n/10 259
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 277
- \T1/phv/m/n/10 264
+ \T1/phv/m/n/10 259
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 278
- \T1/phv/m/n/10 264
+ \T1/phv/m/n/10 260
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 279
- \T1/phv/m/n/10 264
+ \T1/phv/m/n/10 260
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 280
- \T1/phv/m/n/10 265
+ \T1/phv/m/n/10 261
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 281
- \T1/phv/m/n/10 265
+ \T1/phv/m/n/10 261
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 282
- \T1/phv/m/n/10 266
+ \T1/phv/m/n/10 262
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 283
- \T1/phv/m/n/10 266
+ \T1/phv/m/n/10 262
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 284
- \T1/phv/m/n/10 266
+ \T1/phv/m/n/10 263
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 285
- \T1/phv/m/n/10 267
+ \T1/phv/m/n/10 264
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 286
- \T1/phv/m/n/10 268
+ \T1/phv/m/n/10 264
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 287
- \T1/phv/m/n/10 268
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 288
- \T1/phv/m/n/10 272
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 289
- \T1/phv/m/n/10 272
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 290
- \T1/phv/m/n/10 272
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 291
- \T1/phv/m/n/10 272
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 292
+Overfull \hbox (4.52136pt too wide) detected at line 287
 \T1/phv/m/n/10 10.100 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 292
- \T1/phv/m/n/10 272
+Overfull \hbox (1.0618pt too wide) detected at line 287
+ \T1/phv/m/n/10 265
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 293
+Overfull \hbox (3.0272pt too wide) detected at line 288
 \T1/phv/m/n/10 10.100.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 293
- \T1/phv/m/n/10 274
+Overfull \hbox (1.0618pt too wide) detected at line 288
+ \T1/phv/m/n/10 265
  []
 
-[9]
-Overfull \hbox (4.52136pt too wide) detected at line 294
+
+Overfull \hbox (4.52136pt too wide) detected at line 289
 \T1/phv/m/n/10 10.101 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 294
- \T1/phv/m/n/10 274
+Overfull \hbox (1.0618pt too wide) detected at line 289
+ \T1/phv/m/n/10 266
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 295
+Overfull \hbox (3.0272pt too wide) detected at line 290
 \T1/phv/m/n/10 10.101.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 295
- \T1/phv/m/n/10 275
+Overfull \hbox (1.0618pt too wide) detected at line 290
+ \T1/phv/m/n/10 267
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 296
+Overfull \hbox (4.52136pt too wide) detected at line 291
 \T1/phv/m/n/10 10.102 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 296
- \T1/phv/m/n/10 275
+Overfull \hbox (1.0618pt too wide) detected at line 291
+ \T1/phv/m/n/10 267
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 297
+Overfull \hbox (3.0272pt too wide) detected at line 292
 \T1/phv/m/n/10 10.102.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 297
- \T1/phv/m/n/10 276
+Overfull \hbox (1.0618pt too wide) detected at line 292
+ \T1/phv/m/n/10 268
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 298
+Overfull \hbox (4.52136pt too wide) detected at line 293
 \T1/phv/m/n/10 10.103 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 298
- \T1/phv/m/n/10 276
+Overfull \hbox (1.0618pt too wide) detected at line 293
+ \T1/phv/m/n/10 268
  []
 
-
-Overfull \hbox (3.0272pt too wide) detected at line 299
+[9]
+Overfull \hbox (3.0272pt too wide) detected at line 294
 \T1/phv/m/n/10 10.103.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 299
- \T1/phv/m/n/10 279
+Overfull \hbox (1.0618pt too wide) detected at line 294
+ \T1/phv/m/n/10 269
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 300
+Overfull \hbox (4.52136pt too wide) detected at line 295
 \T1/phv/m/n/10 10.104 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 300
- \T1/phv/m/n/10 279
+Overfull \hbox (1.0618pt too wide) detected at line 295
+ \T1/phv/m/n/10 269
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 301
+Overfull \hbox (3.0272pt too wide) detected at line 296
 \T1/phv/m/n/10 10.104.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 301
- \T1/phv/m/n/10 280
+Overfull \hbox (1.0618pt too wide) detected at line 296
+ \T1/phv/m/n/10 270
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 302
+Overfull \hbox (4.52136pt too wide) detected at line 297
 \T1/phv/m/n/10 10.105 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 302
- \T1/phv/m/n/10 280
+Overfull \hbox (1.0618pt too wide) detected at line 297
+ \T1/phv/m/n/10 270
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 303
+Overfull \hbox (3.0272pt too wide) detected at line 298
 \T1/phv/m/n/10 10.105.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 303
- \T1/phv/m/n/10 280
+Overfull \hbox (1.0618pt too wide) detected at line 298
+ \T1/phv/m/n/10 271
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 304
-\T1/phv/m/n/10 10.105.2 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 304
- \T1/phv/m/n/10 280
- []
-
-
-Overfull \hbox (1.5329pt too wide) detected at line 305
-\T1/phv/m/n/10 10.105.2.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 305
- \T1/phv/m/n/10 280
- []
-
-
-Overfull \hbox (1.5329pt too wide) detected at line 306
-\T1/phv/m/n/10 10.105.2.2 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 306
- \T1/phv/m/n/10 281
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 307
+Overfull \hbox (4.52136pt too wide) detected at line 299
 \T1/phv/m/n/10 10.106 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 307
- \T1/phv/m/n/10 281
+Overfull \hbox (1.0618pt too wide) detected at line 299
+ \T1/phv/m/n/10 271
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 308
+Overfull \hbox (3.0272pt too wide) detected at line 300
 \T1/phv/m/n/10 10.106.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 308
- \T1/phv/m/n/10 282
+Overfull \hbox (1.0618pt too wide) detected at line 300
+ \T1/phv/m/n/10 271
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 309
+Overfull \hbox (4.52136pt too wide) detected at line 301
 \T1/phv/m/n/10 10.107 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 309
- \T1/phv/m/n/10 282
+Overfull \hbox (1.0618pt too wide) detected at line 301
+ \T1/phv/m/n/10 271
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 310
+Overfull \hbox (3.0272pt too wide) detected at line 302
 \T1/phv/m/n/10 10.107.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 310
- \T1/phv/m/n/10 282
+Overfull \hbox (1.0618pt too wide) detected at line 302
+ \T1/phv/m/n/10 272
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 311
+Overfull \hbox (4.52136pt too wide) detected at line 303
 \T1/phv/m/n/10 10.108 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 311
- \T1/phv/m/n/10 283
+Overfull \hbox (1.0618pt too wide) detected at line 303
+ \T1/phv/m/n/10 272
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 312
+Overfull \hbox (3.0272pt too wide) detected at line 304
 \T1/phv/m/n/10 10.108.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 312
- \T1/phv/m/n/10 283
+Overfull \hbox (1.0618pt too wide) detected at line 304
+ \T1/phv/m/n/10 275
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 313
+Overfull \hbox (3.0272pt too wide) detected at line 305
+\T1/phv/m/n/10 10.108.2 
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 305
+ \T1/phv/m/n/10 275
+ []
+
+
+Overfull \hbox (1.5329pt too wide) detected at line 306
+\T1/phv/m/n/10 10.108.2.1 
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 306
+ \T1/phv/m/n/10 275
+ []
+
+
+Overfull \hbox (4.52136pt too wide) detected at line 307
 \T1/phv/m/n/10 10.109 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 313
- \T1/phv/m/n/10 283
+Overfull \hbox (1.0618pt too wide) detected at line 307
+ \T1/phv/m/n/10 275
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 314
+Overfull \hbox (3.0272pt too wide) detected at line 308
 \T1/phv/m/n/10 10.109.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 314
- \T1/phv/m/n/10 285
+Overfull \hbox (1.0618pt too wide) detected at line 308
+ \T1/phv/m/n/10 276
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 315
+Overfull \hbox (4.52136pt too wide) detected at line 309
 \T1/phv/m/n/10 10.110 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 315
- \T1/phv/m/n/10 285
+Overfull \hbox (1.0618pt too wide) detected at line 309
+ \T1/phv/m/n/10 276
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 316
+Overfull \hbox (3.0272pt too wide) detected at line 310
 \T1/phv/m/n/10 10.110.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 316
- \T1/phv/m/n/10 287
+Overfull \hbox (1.0618pt too wide) detected at line 310
+ \T1/phv/m/n/10 278
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 317
+Overfull \hbox (3.0272pt too wide) detected at line 311
+\T1/phv/m/n/10 10.110.2 
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 311
+ \T1/phv/m/n/10 279
+ []
+
+
+Overfull \hbox (1.5329pt too wide) detected at line 312
+\T1/phv/m/n/10 10.110.2.1 
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 312
+ \T1/phv/m/n/10 279
+ []
+
+
+Overfull \hbox (4.52136pt too wide) detected at line 313
 \T1/phv/m/n/10 10.111 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 317
- \T1/phv/m/n/10 287
+Overfull \hbox (1.0618pt too wide) detected at line 313
+ \T1/phv/m/n/10 279
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 318
+Overfull \hbox (3.0272pt too wide) detected at line 314
 \T1/phv/m/n/10 10.111.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 318
- \T1/phv/m/n/10 290
+Overfull \hbox (1.0618pt too wide) detected at line 314
+ \T1/phv/m/n/10 279
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 319
+Overfull \hbox (4.52136pt too wide) detected at line 315
 \T1/phv/m/n/10 10.112 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 319
- \T1/phv/m/n/10 290
+Overfull \hbox (1.0618pt too wide) detected at line 315
+ \T1/phv/m/n/10 280
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 320
+Overfull \hbox (3.0272pt too wide) detected at line 316
 \T1/phv/m/n/10 10.112.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 320
- \T1/phv/m/n/10 291
+Overfull \hbox (1.0618pt too wide) detected at line 316
+ \T1/phv/m/n/10 281
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 321
+Overfull \hbox (4.52136pt too wide) detected at line 317
 \T1/phv/m/n/10 10.113 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 321
- \T1/phv/m/n/10 291
+Overfull \hbox (1.0618pt too wide) detected at line 317
+ \T1/phv/m/n/10 281
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 322
+Overfull \hbox (3.0272pt too wide) detected at line 318
 \T1/phv/m/n/10 10.113.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 322
- \T1/phv/m/n/10 292
+Overfull \hbox (1.0618pt too wide) detected at line 318
+ \T1/phv/m/n/10 282
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 323
+Overfull \hbox (4.52136pt too wide) detected at line 319
 \T1/phv/m/n/10 10.114 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 323
- \T1/phv/m/n/10 292
+Overfull \hbox (1.0618pt too wide) detected at line 319
+ \T1/phv/m/n/10 282
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 324
+Overfull \hbox (3.0272pt too wide) detected at line 320
 \T1/phv/m/n/10 10.114.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 324
- \T1/phv/m/n/10 293
+Overfull \hbox (1.0618pt too wide) detected at line 320
+ \T1/phv/m/n/10 282
  []
 
 
-Overfull \hbox (4.52136pt too wide) detected at line 325
+Overfull \hbox (4.52136pt too wide) detected at line 321
 \T1/phv/m/n/10 10.115 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 325
- \T1/phv/m/n/10 293
+Overfull \hbox (1.0618pt too wide) detected at line 321
+ \T1/phv/m/n/10 282
  []
 
 
-Overfull \hbox (3.0272pt too wide) detected at line 326
+Overfull \hbox (3.0272pt too wide) detected at line 322
 \T1/phv/m/n/10 10.115.1 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 326
- \T1/phv/m/n/10 294
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 327
-\T1/phv/m/n/10 10.116 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 327
- \T1/phv/m/n/10 294
- []
-
-[10]
-Overfull \hbox (3.0272pt too wide) detected at line 328
-\T1/phv/m/n/10 10.116.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 328
- \T1/phv/m/n/10 295
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 329
-\T1/phv/m/n/10 10.117 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 329
- \T1/phv/m/n/10 295
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 330
-\T1/phv/m/n/10 10.117.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 330
- \T1/phv/m/n/10 296
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 331
-\T1/phv/m/n/10 10.118 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 331
- \T1/phv/m/n/10 296
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 332
-\T1/phv/m/n/10 10.118.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 332
- \T1/phv/m/n/10 297
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 333
-\T1/phv/m/n/10 10.119 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 333
- \T1/phv/m/n/10 297
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 334
-\T1/phv/m/n/10 10.119.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 334
- \T1/phv/m/n/10 298
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 335
-\T1/phv/m/n/10 10.120 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 335
- \T1/phv/m/n/10 298
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 336
-\T1/phv/m/n/10 10.120.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 336
- \T1/phv/m/n/10 299
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 337
-\T1/phv/m/n/10 10.121 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 337
- \T1/phv/m/n/10 300
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 338
-\T1/phv/m/n/10 10.121.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 338
- \T1/phv/m/n/10 300
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 339
-\T1/phv/m/n/10 10.122 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 339
- \T1/phv/m/n/10 301
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 340
-\T1/phv/m/n/10 10.122.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 340
- \T1/phv/m/n/10 301
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 341
-\T1/phv/m/n/10 10.123 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 341
- \T1/phv/m/n/10 302
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 342
-\T1/phv/m/n/10 10.123.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 342
- \T1/phv/m/n/10 303
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 343
-\T1/phv/m/n/10 10.124 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 343
- \T1/phv/m/n/10 303
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 344
-\T1/phv/m/n/10 10.124.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 344
- \T1/phv/m/n/10 304
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 345
-\T1/phv/m/n/10 10.125 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 345
- \T1/phv/m/n/10 304
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 346
-\T1/phv/m/n/10 10.125.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 346
- \T1/phv/m/n/10 305
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 347
-\T1/phv/m/n/10 10.126 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 347
- \T1/phv/m/n/10 305
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 348
-\T1/phv/m/n/10 10.126.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 348
- \T1/phv/m/n/10 306
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 349
-\T1/phv/m/n/10 10.127 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 349
- \T1/phv/m/n/10 306
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 350
-\T1/phv/m/n/10 10.127.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 350
- \T1/phv/m/n/10 307
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 351
-\T1/phv/m/n/10 10.128 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 351
- \T1/phv/m/n/10 307
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 352
-\T1/phv/m/n/10 10.128.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 352
- \T1/phv/m/n/10 307
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 353
-\T1/phv/m/n/10 10.129 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 353
- \T1/phv/m/n/10 307
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 354
-\T1/phv/m/n/10 10.129.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 354
- \T1/phv/m/n/10 308
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 355
-\T1/phv/m/n/10 10.130 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 355
- \T1/phv/m/n/10 308
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 356
-\T1/phv/m/n/10 10.130.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 356
- \T1/phv/m/n/10 309
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 357
-\T1/phv/m/n/10 10.131 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 357
- \T1/phv/m/n/10 309
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 358
-\T1/phv/m/n/10 10.131.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 358
- \T1/phv/m/n/10 310
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 359
-\T1/phv/m/n/10 10.132 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 359
- \T1/phv/m/n/10 311
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 360
-\T1/phv/m/n/10 10.132.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 360
- \T1/phv/m/n/10 313
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 361
-\T1/phv/m/n/10 10.132.2 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 361
- \T1/phv/m/n/10 313
- []
-
-[11]
-Overfull \hbox (1.5329pt too wide) detected at line 362
-\T1/phv/m/n/10 10.132.2.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 362
- \T1/phv/m/n/10 313
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 363
-\T1/phv/m/n/10 10.133 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 363
- \T1/phv/m/n/10 313
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 364
-\T1/phv/m/n/10 10.133.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 364
- \T1/phv/m/n/10 314
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 365
-\T1/phv/m/n/10 10.134 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 365
- \T1/phv/m/n/10 314
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 366
-\T1/phv/m/n/10 10.134.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 366
- \T1/phv/m/n/10 314
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 367
-\T1/phv/m/n/10 10.135 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 367
- \T1/phv/m/n/10 315
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 368
-\T1/phv/m/n/10 10.135.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 368
- \T1/phv/m/n/10 316
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 369
-\T1/phv/m/n/10 10.136 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 369
- \T1/phv/m/n/10 316
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 370
-\T1/phv/m/n/10 10.136.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 370
- \T1/phv/m/n/10 316
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 371
-\T1/phv/m/n/10 10.137 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 371
- \T1/phv/m/n/10 316
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 372
-\T1/phv/m/n/10 10.137.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 372
- \T1/phv/m/n/10 317
- []
-
-
-Overfull \hbox (4.52136pt too wide) detected at line 373
-\T1/phv/m/n/10 10.138 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 373
- \T1/phv/m/n/10 317
- []
-
-
-Overfull \hbox (3.0272pt too wide) detected at line 374
-\T1/phv/m/n/10 10.138.1 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 374
- \T1/phv/m/n/10 317
+Overfull \hbox (1.0618pt too wide) detected at line 322
+ \T1/phv/m/n/10 283
  []
 
 )
 \tf@toc=\write5
 \openout5 = `refman.toc'.
 
- [12]
+ [10]
 Package hyperref Info: Option `pageanchor' set `true' on input line 58.
 
 Chapter 1.
@@ -4591,7 +4012,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Chapter 6.
 (./namespaces.tex
 Overfull \hbox (1.0618pt too wide) detected at line 3
- [][]\T1/phv/m/n/10 113[][]
+ [][]\T1/phv/m/n/10 111[][]
  []
 
 ) [95] [96
@@ -4600,1174 +4021,222 @@ Overfull \hbox (1.0618pt too wide) detected at line 3
 Chapter 7.
 (./hierarchy.tex
 Overfull \hbox (1.0618pt too wide) detected at line 3
- [][]\T1/phv/m/n/10 115[][]
+ [][]\T1/phv/m/n/10 113[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 4
- [][]\T1/phv/m/n/10 116[][]
+ [][]\T1/phv/m/n/10 114[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 5
- [][]\T1/phv/m/n/10 117[][]
+ [][]\T1/phv/m/n/10 115[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 6
- [][]\T1/phv/m/n/10 129[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 7
- [][]\T1/phv/m/n/10 135[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 8
- [][]\T1/phv/m/n/10 135[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 9
- [][]\T1/phv/m/n/10 136[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 10
- [][]\T1/phv/m/n/10 146[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 12
- [][]\T1/phv/m/n/10 144[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 13
- [][]\T1/phv/m/n/10 285[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 15
- [][]\T1/phv/m/n/10 148[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 16
- [][]\T1/phv/m/n/10 149[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 18
- [][]\T1/phv/m/n/10 249[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 20
- [][]\T1/phv/m/n/10 147[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 21
- [][]\T1/phv/m/n/10 309[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 24
- [][]\T1/phv/m/n/10 154[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 25
- [][]\T1/phv/m/n/10 154[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 26
- [][]\T1/phv/m/n/10 158[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 27
- [][]\T1/phv/m/n/10 159[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 28
- [][]\T1/phv/m/n/10 165[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 29
- [][]\T1/phv/m/n/10 169[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 30
- [][]\T1/phv/m/n/10 171[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 31
- [][]\T1/phv/m/n/10 174[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 32
- [][]\T1/phv/m/n/10 180[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 33
- [][]\T1/phv/m/n/10 181[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 34
- [][]\T1/phv/m/n/10 189[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 35
- [][]\T1/phv/m/n/10 191[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 36
- [][]\T1/phv/m/n/10 195[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 37
- [][]\T1/phv/m/n/10 196[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 38
- [][]\T1/phv/m/n/10 196[][]
- []
-
-[97]
-Overfull \hbox (1.0618pt too wide) detected at line 39
- [][]\T1/phv/m/n/10 196[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 40
- [][]\T1/phv/m/n/10 196[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 42
- [][]\T1/phv/m/n/10 215[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 44
- [][]\T1/phv/m/n/10 196[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 46
- [][]\T1/phv/m/n/10 248[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 48
- [][]\T1/phv/m/n/10 196[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 50
- [][]\T1/phv/m/n/10 253[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 52
- [][]\T1/phv/m/n/10 196[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 54
- [][]\T1/phv/m/n/10 258[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 56
- [][]\T1/phv/m/n/10 196[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 57
- [][]\T1/phv/m/n/10 196[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 58
- [][]\T1/phv/m/n/10 197[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 59
- [][]\T1/phv/m/n/10 197[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 60
- [][]\T1/phv/m/n/10 197[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 62
- [][]\T1/phv/m/n/10 157[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 64
- [][]\T1/phv/m/n/10 197[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 66
- [][]\T1/phv/m/n/10 163[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 68
- [][]\T1/phv/m/n/10 197[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 69
- [][]\T1/phv/m/n/10 202[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 70
- [][]\T1/phv/m/n/10 203[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 71
- [][]\T1/phv/m/n/10 204[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 72
- [][]\T1/phv/m/n/10 205[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 74
- [][]\T1/phv/m/n/10 191[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 75
- [][]\T1/phv/m/n/10 231[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 77
- [][]\T1/phv/m/n/10 205[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 78
- [][]\T1/phv/m/n/10 219[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 79
- [][]\T1/phv/m/n/10 224[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 80
- [][]\T1/phv/m/n/10 226[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 81
- [][]\T1/phv/m/n/10 228[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 82
- [][]\T1/phv/m/n/10 229[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 83
- [][]\T1/phv/m/n/10 229[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 85
- [][]\T1/phv/m/n/10 193[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 87
- [][]\T1/phv/m/n/10 231[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 88
- [][]\T1/phv/m/n/10 233[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 89
- [][]\T1/phv/m/n/10 237[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 90
- [][]\T1/phv/m/n/10 240[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 91
- [][]\T1/phv/m/n/10 244[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 92
- [][]\T1/phv/m/n/10 244[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 93
- [][]\T1/phv/m/n/10 251[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 94
- [][]\T1/phv/m/n/10 256[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 95
- [][]\T1/phv/m/n/10 259[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 97
- [][]\T1/phv/m/n/10 260[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 99
- [][]\T1/phv/m/n/10 266[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 100
- [][]\T1/phv/m/n/10 267[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 101
- [][]\T1/phv/m/n/10 268[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 103
- [][]\T1/phv/m/n/10 140[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 104
- [][]\T1/phv/m/n/10 182[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 106
- [][]\T1/phv/m/n/10 144[][]
- []
-
-[98]
-Overfull \hbox (1.0618pt too wide) detected at line 107
- [][]\T1/phv/m/n/10 184[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 108
- [][]\T1/phv/m/n/10 283[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 110
- [][]\T1/phv/m/n/10 285[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 113
- [][]\T1/phv/m/n/10 191[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 114
- [][]\T1/phv/m/n/10 199[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 115
- [][]\T1/phv/m/n/10 231[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 116
- [][]\T1/phv/m/n/10 248[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 117
- [][]\T1/phv/m/n/10 248[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 118
- [][]\T1/phv/m/n/10 254[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 120
- [][]\T1/phv/m/n/10 272[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 121
- [][]\T1/phv/m/n/10 274[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 122
- [][]\T1/phv/m/n/10 275[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 123
- [][]\T1/phv/m/n/10 279[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 125
- [][]\T1/phv/m/n/10 137[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 126
- [][]\T1/phv/m/n/10 147[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 127
- [][]\T1/phv/m/n/10 246[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 128
- [][]\T1/phv/m/n/10 261[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 129
- [][]\T1/phv/m/n/10 309[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 131
- [][]\T1/phv/m/n/10 280[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 132
- [][]\T1/phv/m/n/10 282[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 133
- [][]\T1/phv/m/n/10 283[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 134
- [][]\T1/phv/m/n/10 307[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 136
- [][]\T1/phv/m/n/10 261[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 138
- [][]\T1/phv/m/n/10 307[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 140
- [][]\T1/phv/m/n/10 133[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 142
- [][]\T1/phv/m/n/10 142[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 144
- [][]\T1/phv/m/n/10 125[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 145
- [][]\T1/phv/m/n/10 126[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 146
  [][]\T1/phv/m/n/10 127[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 147
- [][]\T1/phv/m/n/10 128[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 149
- [][]\T1/phv/m/n/10 176[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 151
- [][]\T1/phv/m/n/10 121[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 152
- [][]\T1/phv/m/n/10 122[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 153
- [][]\T1/phv/m/n/10 123[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 154
- [][]\T1/phv/m/n/10 124[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 156
- [][]\T1/phv/m/n/10 187[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 158
- [][]\T1/phv/m/n/10 129[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 159
- [][]\T1/phv/m/n/10 130[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 160
- [][]\T1/phv/m/n/10 131[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 161
- [][]\T1/phv/m/n/10 132[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 164
- [][]\T1/phv/m/n/10 302[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 166
- [][]\T1/phv/m/n/10 143[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 168
- [][]\T1/phv/m/n/10 290[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 169
- [][]\T1/phv/m/n/10 291[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 170
- [][]\T1/phv/m/n/10 292[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 171
- [][]\T1/phv/m/n/10 293[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 173
- [][]\T1/phv/m/n/10 177[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 175
- [][]\T1/phv/m/n/10 298[][]
- []
-
-[99]
-Overfull \hbox (1.0618pt too wide) detected at line 176
- [][]\T1/phv/m/n/10 300[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 177
- [][]\T1/phv/m/n/10 301[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 178
- [][]\T1/phv/m/n/10 303[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 179
- [][]\T1/phv/m/n/10 304[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 180
- [][]\T1/phv/m/n/10 305[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 181
- [][]\T1/phv/m/n/10 306[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 183
- [][]\T1/phv/m/n/10 188[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 185
- [][]\T1/phv/m/n/10 294[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 186
- [][]\T1/phv/m/n/10 295[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 187
- [][]\T1/phv/m/n/10 296[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 188
- [][]\T1/phv/m/n/10 297[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 191
- [][]\T1/phv/m/n/10 313[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 193
- [][]\T1/phv/m/n/10 308[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 194
- [][]\T1/phv/m/n/10 311[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 196
- [][]\T1/phv/m/n/10 249[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 198
- [][]\T1/phv/m/n/10 314[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 199
- [][]\T1/phv/m/n/10 315[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 200
- [][]\T1/phv/m/n/10 316[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 201
- [][]\T1/phv/m/n/10 316[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 203
- [][]\T1/phv/m/n/10 281[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 205
- [][]\T1/phv/m/n/10 139[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 207
- [][]\T1/phv/m/n/10 265[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 209
- [][]\T1/phv/m/n/10 163[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 210
- [][]\T1/phv/m/n/10 220[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 212
- [][]\T1/phv/m/n/10 221[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 216
- [][]\T1/phv/m/n/10 317[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 218
- [][]\T1/phv/m/n/10 172[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 220
- [][]\T1/phv/m/n/10 193[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 221
- [][]\T1/phv/m/n/10 215[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 223
- [][]\T1/phv/m/n/10 118[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 224
- [][]\T1/phv/m/n/10 222[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 226
- [][]\T1/phv/m/n/10 215[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 227
- [][]\T1/phv/m/n/10 221[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 228
- [][]\T1/phv/m/n/10 276[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 229
- [][]\T1/phv/m/n/10 287[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 231
- [][]\T1/phv/m/n/10 165[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 232
- [][]\T1/phv/m/n/10 167[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 233
- [][]\T1/phv/m/n/10 178[][]
- []
-
-) [100]
-Chapter 8.
-(./annotated.tex
-Overfull \hbox (1.0618pt too wide) detected at line 3
- [][]\T1/phv/m/n/10 115[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 4
- [][]\T1/phv/m/n/10 116[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 5
- [][]\T1/phv/m/n/10 117[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 6
- [][]\T1/phv/m/n/10 118[][]
- []
-
-
 Overfull \hbox (1.0618pt too wide) detected at line 7
- [][]\T1/phv/m/n/10 121[][]
+ [][]\T1/phv/m/n/10 133[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 8
- [][]\T1/phv/m/n/10 122[][]
+ [][]\T1/phv/m/n/10 133[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 9
- [][]\T1/phv/m/n/10 123[][]
+ [][]\T1/phv/m/n/10 134[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 10
- [][]\T1/phv/m/n/10 124[][]
+ [][]\T1/phv/m/n/10 142[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 11
- [][]\T1/phv/m/n/10 125[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 12
- [][]\T1/phv/m/n/10 126[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 13
- [][]\T1/phv/m/n/10 127[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 14
- [][]\T1/phv/m/n/10 128[][]
- []
-
-[101
-
-]
-Overfull \hbox (1.0618pt too wide) detected at line 15
- [][]\T1/phv/m/n/10 129[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 16
- [][]\T1/phv/m/n/10 129[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 17
- [][]\T1/phv/m/n/10 130[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 18
- [][]\T1/phv/m/n/10 131[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 19
- [][]\T1/phv/m/n/10 132[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 20
- [][]\T1/phv/m/n/10 133[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 21
- [][]\T1/phv/m/n/10 135[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 22
- [][]\T1/phv/m/n/10 135[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 23
- [][]\T1/phv/m/n/10 136[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 24
- [][]\T1/phv/m/n/10 137[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 25
- [][]\T1/phv/m/n/10 139[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 26
- [][]\T1/phv/m/n/10 140[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 27
- [][]\T1/phv/m/n/10 142[][]
- []
-
-
-Overfull \hbox (7.54845pt too wide) in paragraph at lines 27--27
- [][] [][]\T1/phv/m/n/10 cBooleanAt-tribute-Store[][] (More Spe-cific Base clas
-s for At-tribute Han-dling classes. 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 28
  [][]\T1/phv/m/n/10 143[][]
  []
 
 
-Overfull \hbox (3.51717pt too wide) in paragraph at lines 28--28
- [][] [][]\T1/phv/m/n/10 cBoolea-nUni-form-Store[][] (More Spe-cific Base class
- for Uni-form Han-dling classes. 
+Overfull \hbox (1.0618pt too wide) detected at line 13
+ [][]\T1/phv/m/n/10 221[][]
  []
 
 
-Overfull \hbox (6.52895pt too wide) in paragraph at lines 28--28
- \T1/phv/m/n/10 form-Boolean-Vec-tor2[][], [][]cU-ni-form-Boolean-Vec-tor3[][],
- [][]cU-ni-form-Boolean-Vec- 
+Overfull \hbox (1.0618pt too wide) detected at line 15
+ [][]\T1/phv/m/n/10 140[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 29
- [][]\T1/phv/m/n/10 144[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 30
- [][]\T1/phv/m/n/10 146[][]
- []
-
-
-Underfull \vbox (badness 6396) has occurred while \output is active []
-
- [102]
-Overfull \hbox (1.0618pt too wide) detected at line 31
- [][]\T1/phv/m/n/10 147[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 32
+Overfull \hbox (1.0618pt too wide) detected at line 18
  [][]\T1/phv/m/n/10 148[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 33
+Overfull \hbox (1.0618pt too wide) detected at line 19
  [][]\T1/phv/m/n/10 149[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 34
+Overfull \hbox (1.0618pt too wide) detected at line 20
  [][]\T1/phv/m/n/10 154[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 35
+Overfull \hbox (1.0618pt too wide) detected at line 21
  [][]\T1/phv/m/n/10 154[][]
  []
 
 
-Overfull \hbox (34.70313pt too wide) in paragraph at lines 35--35
- \T1/phv/m/n/10 COLLISION_-HANDLER is a quick pointer to the [][]cCol-li-sion-H
-an-dler::Instance()[][] 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 36
+Overfull \hbox (1.0618pt too wide) detected at line 22
  [][]\T1/phv/m/n/10 157[][]
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [103]
-Overfull \hbox (1.0618pt too wide) detected at line 37
- [][]\T1/phv/m/n/10 158[][]
+Overfull \hbox (1.0618pt too wide) detected at line 23
+ [][]\T1/phv/m/n/10 170[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 38
- [][]\T1/phv/m/n/10 159[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 39
- [][]\T1/phv/m/n/10 163[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 40
- [][]\T1/phv/m/n/10 165[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 41
- [][]\T1/phv/m/n/10 165[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 42
- [][]\T1/phv/m/n/10 167[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 43
- [][]\T1/phv/m/n/10 169[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 44
- [][]\T1/phv/m/n/10 171[][]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [104]
-Overfull \hbox (1.0618pt too wide) detected at line 45
+Overfull \hbox (1.0618pt too wide) detected at line 24
  [][]\T1/phv/m/n/10 172[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 46
- [][]\T1/phv/m/n/10 174[][]
+Overfull \hbox (1.0618pt too wide) detected at line 25
+ [][]\T1/phv/m/n/10 175[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 47
- [][]\T1/phv/m/n/10 176[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 48
- [][]\T1/phv/m/n/10 177[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 49
- [][]\T1/phv/m/n/10 178[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 50
- [][]\T1/phv/m/n/10 180[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 51
+Overfull \hbox (1.0618pt too wide) detected at line 26
  [][]\T1/phv/m/n/10 181[][]
  []
 
 
-Overfull \hbox (14.58917pt too wide) in paragraph at lines 51--51
- \T1/phv/m/n/10 have the code to be af-fected by the vari-ables _-GRAVITY_-X,_-
-GRAVITY_- 
+Overfull \hbox (1.0618pt too wide) detected at line 27
+ [][]\T1/phv/m/n/10 186[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 52
- [][]\T1/phv/m/n/10 182[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 53
- [][]\T1/phv/m/n/10 184[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 54
- [][]\T1/phv/m/n/10 187[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 55
+Overfull \hbox (1.0618pt too wide) detected at line 28
  [][]\T1/phv/m/n/10 188[][]
  []
 
 
-Overfull \hbox (9.5327pt too wide) in paragraph at lines 55--55
- \T1/phv/m/n/10 Suit-able for In-te-ger Vari-ables. see [][]cU-ni-formIntVec-to
-r1[][], [][]cU-ni-formIntVec- 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 56
+Overfull \hbox (1.0618pt too wide) detected at line 29
  [][]\T1/phv/m/n/10 189[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 57
- [][]\T1/phv/m/n/10 191[][]
+Overfull \hbox (1.0618pt too wide) detected at line 30
+ [][]\T1/phv/m/n/10 189[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 58
- [][]\T1/phv/m/n/10 191[][]
+Overfull \hbox (1.0618pt too wide) detected at line 31
+ [][]\T1/phv/m/n/10 189[][]
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [105]
-Overfull \hbox (1.0618pt too wide) detected at line 59
- [][]\T1/phv/m/n/10 193[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 60
- [][]\T1/phv/m/n/10 195[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 61
+Overfull \hbox (1.0618pt too wide) detected at line 33
  [][]\T1/phv/m/n/10 196[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 62
+Overfull \hbox (1.0618pt too wide) detected at line 35
+ [][]\T1/phv/m/n/10 147[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 38
+ [][]\T1/phv/m/n/10 189[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 39
+ [][]\T1/phv/m/n/10 189[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 40
+ [][]\T1/phv/m/n/10 189[][]
+ []
+
+[97]
+Overfull \hbox (1.0618pt too wide) detected at line 42
+ [][]\T1/phv/m/n/10 210[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 44
+ [][]\T1/phv/m/n/10 189[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 46
+ [][]\T1/phv/m/n/10 224[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 48
+ [][]\T1/phv/m/n/10 189[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 50
+ [][]\T1/phv/m/n/10 229[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 52
+ [][]\T1/phv/m/n/10 189[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 53
+ [][]\T1/phv/m/n/10 189[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 54
+ [][]\T1/phv/m/n/10 190[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 55
+ [][]\T1/phv/m/n/10 190[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 56
+ [][]\T1/phv/m/n/10 190[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 58
+ [][]\T1/phv/m/n/10 152[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 60
+ [][]\T1/phv/m/n/10 190[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 61
  [][]\T1/phv/m/n/10 197[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 62
+ [][]\T1/phv/m/n/10 198[][]
  []
 
 
@@ -5777,113 +4246,883 @@ Overfull \hbox (1.0618pt too wide) detected at line 63
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 64
- [][]\T1/phv/m/n/10 202[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 65
- [][]\T1/phv/m/n/10 203[][]
+ [][]\T1/phv/m/n/10 200[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 66
- [][]\T1/phv/m/n/10 204[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 67
- [][]\T1/phv/m/n/10 205[][]
+ [][]\T1/phv/m/n/10 214[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 68
- [][]\T1/phv/m/n/10 205[][]
+ [][]\T1/phv/m/n/10 200[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 69
- [][]\T1/phv/m/n/10 215[][]
+ [][]\T1/phv/m/n/10 213[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 70
- [][]\T1/phv/m/n/10 215[][]
+ [][]\T1/phv/m/n/10 214[][]
  []
 
-[106]
+
+Overfull \hbox (1.0618pt too wide) detected at line 71
+ [][]\T1/phv/m/n/10 214[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 72
+ [][]\T1/phv/m/n/10 216[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 73
+ [][]\T1/phv/m/n/10 219[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 74
+ [][]\T1/phv/m/n/10 223[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 75
+ [][]\T1/phv/m/n/10 227[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 76
+ [][]\T1/phv/m/n/10 233[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 77
+ [][]\T1/phv/m/n/10 234[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 78
+ [][]\T1/phv/m/n/10 236[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 80
+ [][]\T1/phv/m/n/10 136[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 81
+ [][]\T1/phv/m/n/10 192[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 82
+ [][]\T1/phv/m/n/10 194[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 83
+ [][]\T1/phv/m/n/10 214[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 84
+ [][]\T1/phv/m/n/10 225[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 86
+ [][]\T1/phv/m/n/10 240[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 87
+ [][]\T1/phv/m/n/10 242[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 88
+ [][]\T1/phv/m/n/10 243[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 89
+ [][]\T1/phv/m/n/10 247[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 91
+ [][]\T1/phv/m/n/10 135[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 92
+ [][]\T1/phv/m/n/10 140[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 93
+ [][]\T1/phv/m/n/10 230[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 94
+ [][]\T1/phv/m/n/10 282[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 96
+ [][]\T1/phv/m/n/10 173[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 98
+ [][]\T1/phv/m/n/10 210[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 100
+ [][]\T1/phv/m/n/10 116[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 101
+ [][]\T1/phv/m/n/10 182[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 102
+ [][]\T1/phv/m/n/10 272[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 104
+ [][]\T1/phv/m/n/10 244[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 105
+ [][]\T1/phv/m/n/10 251[][]
+ []
+
+[98]
+Overfull \hbox (1.0618pt too wide) detected at line 107
+ [][]\T1/phv/m/n/10 166[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 108
+ [][]\T1/phv/m/n/10 168[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 109
+ [][]\T1/phv/m/n/10 179[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 114
+ [][]\T1/phv/m/n/10 248[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 115
+ [][]\T1/phv/m/n/10 250[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 116
+ [][]\T1/phv/m/n/10 250[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 117
+ [][]\T1/phv/m/n/10 271[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 119
+ [][]\T1/phv/m/n/10 230[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 121
+ [][]\T1/phv/m/n/10 271[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 123
+ [][]\T1/phv/m/n/10 131[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 125
+ [][]\T1/phv/m/n/10 138[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 127
+ [][]\T1/phv/m/n/10 123[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 128
+ [][]\T1/phv/m/n/10 124[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 129
+ [][]\T1/phv/m/n/10 125[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 130
+ [][]\T1/phv/m/n/10 126[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 132
+ [][]\T1/phv/m/n/10 177[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 134
+ [][]\T1/phv/m/n/10 119[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 135
+ [][]\T1/phv/m/n/10 120[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 136
+ [][]\T1/phv/m/n/10 121[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 137
+ [][]\T1/phv/m/n/10 122[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 139
+ [][]\T1/phv/m/n/10 184[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 141
+ [][]\T1/phv/m/n/10 127[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 142
+ [][]\T1/phv/m/n/10 128[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 143
+ [][]\T1/phv/m/n/10 129[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 144
+ [][]\T1/phv/m/n/10 130[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 147
+ [][]\T1/phv/m/n/10 266[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 149
+ [][]\T1/phv/m/n/10 139[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 151
+ [][]\T1/phv/m/n/10 254[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 152
+ [][]\T1/phv/m/n/10 255[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 153
+ [][]\T1/phv/m/n/10 256[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 154
+ [][]\T1/phv/m/n/10 257[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 156
+ [][]\T1/phv/m/n/10 178[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 158
+ [][]\T1/phv/m/n/10 262[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 159
+ [][]\T1/phv/m/n/10 264[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 160
+ [][]\T1/phv/m/n/10 265[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 161
+ [][]\T1/phv/m/n/10 267[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 162
+ [][]\T1/phv/m/n/10 268[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 163
+ [][]\T1/phv/m/n/10 269[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 164
+ [][]\T1/phv/m/n/10 270[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 166
+ [][]\T1/phv/m/n/10 185[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 168
+ [][]\T1/phv/m/n/10 258[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 169
+ [][]\T1/phv/m/n/10 259[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 170
+ [][]\T1/phv/m/n/10 260[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 171
+ [][]\T1/phv/m/n/10 261[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 174
+ [][]\T1/phv/m/n/10 279[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 176
+ [][]\T1/phv/m/n/10 275[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 177
+ [][]\T1/phv/m/n/10 276[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 179
+ [][]\T1/phv/m/n/10 221[][]
+ []
+
+[99]
+Overfull \hbox (1.0618pt too wide) detected at line 181
+ [][]\T1/phv/m/n/10 280[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 182
+ [][]\T1/phv/m/n/10 281[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 183
+ [][]\T1/phv/m/n/10 282[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 185
+ [][]\T1/phv/m/n/10 249[][]
+ []
+
+) [100]
+Chapter 8.
+(./annotated.tex
+Overfull \hbox (1.0618pt too wide) detected at line 3
+ [][]\T1/phv/m/n/10 113[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 4
+ [][]\T1/phv/m/n/10 114[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 5
+ [][]\T1/phv/m/n/10 115[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 6
+ [][]\T1/phv/m/n/10 116[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 7
+ [][]\T1/phv/m/n/10 119[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 8
+ [][]\T1/phv/m/n/10 120[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 9
+ [][]\T1/phv/m/n/10 121[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 10
+ [][]\T1/phv/m/n/10 122[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 11
+ [][]\T1/phv/m/n/10 123[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 12
+ [][]\T1/phv/m/n/10 124[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 13
+ [][]\T1/phv/m/n/10 125[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 14
+ [][]\T1/phv/m/n/10 126[][]
+ []
+
+[101
+
+]
+Overfull \hbox (1.0618pt too wide) detected at line 15
+ [][]\T1/phv/m/n/10 127[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 16
+ [][]\T1/phv/m/n/10 127[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 17
+ [][]\T1/phv/m/n/10 128[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 18
+ [][]\T1/phv/m/n/10 129[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 19
+ [][]\T1/phv/m/n/10 130[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 20
+ [][]\T1/phv/m/n/10 131[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 21
+ [][]\T1/phv/m/n/10 133[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 22
+ [][]\T1/phv/m/n/10 133[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 23
+ [][]\T1/phv/m/n/10 134[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 24
+ [][]\T1/phv/m/n/10 135[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 25
+ [][]\T1/phv/m/n/10 136[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 26
+ [][]\T1/phv/m/n/10 138[][]
+ []
+
+
+Overfull \hbox (7.54845pt too wide) in paragraph at lines 26--26
+ [][] [][]\T1/phv/m/n/10 cBooleanAt-tribute-Store[][] (More Spe-cific Base clas
+s for At-tribute Han-dling classes. 
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 27
+ [][]\T1/phv/m/n/10 139[][]
+ []
+
+
+Overfull \hbox (3.51717pt too wide) in paragraph at lines 27--27
+ [][] [][]\T1/phv/m/n/10 cBoolea-nUni-form-Store[][] (More Spe-cific Base class
+ for Uni-form Han-dling classes. 
+ []
+
+
+Overfull \hbox (6.52895pt too wide) in paragraph at lines 27--27
+ \T1/phv/m/n/10 form-Boolean-Vec-tor2[][], [][]cU-ni-form-Boolean-Vec-tor3[][],
+ [][]cU-ni-form-Boolean-Vec- 
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 28
+ [][]\T1/phv/m/n/10 140[][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [102]
+Overfull \hbox (1.0618pt too wide) detected at line 29
+ [][]\T1/phv/m/n/10 142[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 30
+ [][]\T1/phv/m/n/10 143[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 31
+ [][]\T1/phv/m/n/10 147[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 32
+ [][]\T1/phv/m/n/10 148[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 33
+ [][]\T1/phv/m/n/10 149[][]
+ []
+
+
+Overfull \hbox (34.70313pt too wide) in paragraph at lines 33--33
+ \T1/phv/m/n/10 COLLISION_-HANDLER is a quick pointer to the [][]cCol-li-sion-H
+an-dler::Instance()[][] 
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 34
+ [][]\T1/phv/m/n/10 152[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 35
+ [][]\T1/phv/m/n/10 154[][]
+ []
+
+[103]
+Overfull \hbox (1.0618pt too wide) detected at line 36
+ [][]\T1/phv/m/n/10 154[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 37
+ [][]\T1/phv/m/n/10 157[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 38
+ [][]\T1/phv/m/n/10 166[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 39
+ [][]\T1/phv/m/n/10 168[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 40
+ [][]\T1/phv/m/n/10 170[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 41
+ [][]\T1/phv/m/n/10 172[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 42
+ [][]\T1/phv/m/n/10 173[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 43
+ [][]\T1/phv/m/n/10 175[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 44
+ [][]\T1/phv/m/n/10 177[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 45
+ [][]\T1/phv/m/n/10 178[][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [104]
+Overfull \hbox (1.0618pt too wide) detected at line 46
+ [][]\T1/phv/m/n/10 179[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 47
+ [][]\T1/phv/m/n/10 181[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 48
+ [][]\T1/phv/m/n/10 182[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 49
+ [][]\T1/phv/m/n/10 184[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 50
+ [][]\T1/phv/m/n/10 185[][]
+ []
+
+
+Overfull \hbox (9.5327pt too wide) in paragraph at lines 50--50
+ \T1/phv/m/n/10 Suit-able for In-te-ger Vari-ables. see [][]cU-ni-formIntVec-to
+r1[][], [][]cU-ni-formIntVec- 
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 51
+ [][]\T1/phv/m/n/10 186[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 52
+ [][]\T1/phv/m/n/10 188[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 53
+ [][]\T1/phv/m/n/10 189[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 54
+ [][]\T1/phv/m/n/10 189[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 55
+ [][]\T1/phv/m/n/10 190[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 56
+ [][]\T1/phv/m/n/10 192[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 57
+ [][]\T1/phv/m/n/10 194[][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [105]
+Overfull \hbox (1.0618pt too wide) detected at line 58
+ [][]\T1/phv/m/n/10 196[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 59
+ [][]\T1/phv/m/n/10 197[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 60
+ [][]\T1/phv/m/n/10 198[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 61
+ [][]\T1/phv/m/n/10 199[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 62
+ [][]\T1/phv/m/n/10 200[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 63
+ [][]\T1/phv/m/n/10 200[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 64
+ [][]\T1/phv/m/n/10 210[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 65
+ [][]\T1/phv/m/n/10 210[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 66
+ [][]\T1/phv/m/n/10 213[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 67
+ [][]\T1/phv/m/n/10 214[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 68
+ [][]\T1/phv/m/n/10 214[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 69
+ [][]\T1/phv/m/n/10 214[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 70
+ [][]\T1/phv/m/n/10 216[][]
+ []
+
+
 Overfull \hbox (1.0618pt too wide) detected at line 71
  [][]\T1/phv/m/n/10 219[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 72
- [][]\T1/phv/m/n/10 220[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 73
  [][]\T1/phv/m/n/10 221[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 74
- [][]\T1/phv/m/n/10 222[][]
+Underfull \vbox (badness 7851) has occurred while \output is active []
+
+ [106]
+Overfull \hbox (1.0618pt too wide) detected at line 73
+ [][]\T1/phv/m/n/10 223[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 75
+Overfull \hbox (1.0618pt too wide) detected at line 74
  [][]\T1/phv/m/n/10 224[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 76
- [][]\T1/phv/m/n/10 226[][]
+Overfull \hbox (1.0618pt too wide) detected at line 75
+ [][]\T1/phv/m/n/10 225[][]
  []
 
 
-Overfull \hbox (9.12375pt too wide) in paragraph at lines 76--76
- [][] [][]\T1/phv/m/n/10 cMeshTreeN-ode[][] (This ob-ject will store the data f
-or a sin-gle item in a cMeshTree(). 
+Overfull \hbox (1.0618pt too wide) detected at line 76
+ [][]\T1/phv/m/n/10 227[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 77
- [][]\T1/phv/m/n/10 228[][]
+ [][]\T1/phv/m/n/10 229[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 78
- [][]\T1/phv/m/n/10 229[][]
+ [][]\T1/phv/m/n/10 230[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 79
- [][]\T1/phv/m/n/10 229[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 80
- [][]\T1/phv/m/n/10 231[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 81
- [][]\T1/phv/m/n/10 231[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 82
  [][]\T1/phv/m/n/10 233[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 83
- [][]\T1/phv/m/n/10 237[][]
+Overfull \hbox (1.0618pt too wide) detected at line 80
+ [][]\T1/phv/m/n/10 234[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 84
+Overfull \hbox (1.0618pt too wide) detected at line 81
+ [][]\T1/phv/m/n/10 236[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 82
  [][]\T1/phv/m/n/10 240[][]
+ []
+
+
+Overfull \hbox (1.0618pt too wide) detected at line 83
+ [][]\T1/phv/m/n/10 242[][]
+ []
+
+[107]
+Overfull \hbox (1.0618pt too wide) detected at line 84
+ [][]\T1/phv/m/n/10 243[][]
  []
 
 
@@ -5892,33 +5131,45 @@ Overfull \hbox (1.0618pt too wide) detected at line 85
  []
 
 
+Overfull \hbox (8.45102pt too wide) in paragraph at lines 85--85
+ \T1/phv/m/n/10 piled into a pro-gram. [][]cShader-Pro-gram[][] is a [][]cFile(
+)[][] ob-ject. The [][]cShader- 
+ []
+
+
 Overfull \hbox (1.0618pt too wide) detected at line 86
- [][]\T1/phv/m/n/10 244[][]
+ [][]\T1/phv/m/n/10 247[][]
+ []
+
+
+Overfull \hbox (11.30392pt too wide) in paragraph at lines 86--86
+ \T1/phv/m/n/10 WAKE,_-S_-KILL,_-S_-SLEEP_-TREE, _-S_-WAKE_-TREE,_-S_-KILL_-TRE
+E 
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 87
- [][]\T1/phv/m/n/10 246[][]
- []
-
-[107]
-Overfull \hbox (1.0618pt too wide) detected at line 88
  [][]\T1/phv/m/n/10 248[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 89
+Overfull \hbox (1.0618pt too wide) detected at line 88
  [][]\T1/phv/m/n/10 249[][]
  []
 
 
+Overfull \hbox (1.0618pt too wide) detected at line 89
+ [][]\T1/phv/m/n/10 250[][]
+ []
+
+
 Overfull \hbox (1.0618pt too wide) detected at line 90
- [][]\T1/phv/m/n/10 251[][]
+ [][]\T1/phv/m/n/10 250[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 91
- [][]\T1/phv/m/n/10 253[][]
+ [][]\T1/phv/m/n/10 251[][]
  []
 
 
@@ -5928,290 +5179,151 @@ Overfull \hbox (1.0618pt too wide) detected at line 92
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 93
- [][]\T1/phv/m/n/10 256[][]
+ [][]\T1/phv/m/n/10 255[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 94
- [][]\T1/phv/m/n/10 258[][]
+ [][]\T1/phv/m/n/10 256[][]
  []
 
-
+[108]
 Overfull \hbox (1.0618pt too wide) detected at line 95
- [][]\T1/phv/m/n/10 259[][]
+ [][]\T1/phv/m/n/10 257[][]
  []
 
 
 Overfull \hbox (1.0618pt too wide) detected at line 96
- [][]\T1/phv/m/n/10 260[][]
+ [][]\T1/phv/m/n/10 258[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 97
- [][]\T1/phv/m/n/10 261[][]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [108]
-Overfull \hbox (1.0618pt too wide) detected at line 98
- [][]\T1/phv/m/n/10 265[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 99
- [][]\T1/phv/m/n/10 266[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 100
- [][]\T1/phv/m/n/10 267[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 101
- [][]\T1/phv/m/n/10 268[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 102
- [][]\T1/phv/m/n/10 272[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 103
- [][]\T1/phv/m/n/10 274[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 104
- [][]\T1/phv/m/n/10 275[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 105
- [][]\T1/phv/m/n/10 276[][]
- []
-
-
-Overfull \hbox (8.45102pt too wide) in paragraph at lines 105--105
- \T1/phv/m/n/10 piled into a pro-gram. [][]cShader-Pro-gram[][] is a [][]cFile(
-)[][] ob-ject. The [][]cShader- 
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 106
- [][]\T1/phv/m/n/10 279[][]
- []
-
-
-Overfull \hbox (11.30392pt too wide) in paragraph at lines 106--106
- \T1/phv/m/n/10 WAKE,_-S_-KILL,_-S_-SLEEP_-TREE, _-S_-WAKE_-TREE,_-S_-KILL_-TRE
-E 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [109]
-Overfull \hbox (1.0618pt too wide) detected at line 107
- [][]\T1/phv/m/n/10 280[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 108
- [][]\T1/phv/m/n/10 281[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 109
- [][]\T1/phv/m/n/10 282[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 110
- [][]\T1/phv/m/n/10 283[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 111
- [][]\T1/phv/m/n/10 283[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 112
- [][]\T1/phv/m/n/10 285[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 113
- [][]\T1/phv/m/n/10 287[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 114
- [][]\T1/phv/m/n/10 290[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 115
- [][]\T1/phv/m/n/10 291[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 116
- [][]\T1/phv/m/n/10 292[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 117
- [][]\T1/phv/m/n/10 293[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 118
- [][]\T1/phv/m/n/10 294[][]
- []
-
-
-Overfull \hbox (2.43022pt too wide) in paragraph at lines 118--118
+Overfull \hbox (2.43022pt too wide) in paragraph at lines 96--96
  \T1/phv/m/n/10 Data must be up-dated by the end of ev-ery frame if the data is
  changed 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [110]
-Overfull \hbox (1.0618pt too wide) detected at line 119
- [][]\T1/phv/m/n/10 295[][]
+Overfull \hbox (1.0618pt too wide) detected at line 97
+ [][]\T1/phv/m/n/10 259[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 120
- [][]\T1/phv/m/n/10 296[][]
+Overfull \hbox (1.0618pt too wide) detected at line 98
+ [][]\T1/phv/m/n/10 260[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 121
- [][]\T1/phv/m/n/10 297[][]
+Overfull \hbox (1.0618pt too wide) detected at line 99
+ [][]\T1/phv/m/n/10 261[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 122
- [][]\T1/phv/m/n/10 298[][]
+Overfull \hbox (1.0618pt too wide) detected at line 100
+ [][]\T1/phv/m/n/10 262[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 123
- [][]\T1/phv/m/n/10 300[][]
+Overfull \hbox (1.0618pt too wide) detected at line 101
+ [][]\T1/phv/m/n/10 264[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 124
- [][]\T1/phv/m/n/10 301[][]
+Overfull \hbox (1.0618pt too wide) detected at line 102
+ [][]\T1/phv/m/n/10 265[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 125
- [][]\T1/phv/m/n/10 302[][]
+Overfull \hbox (1.0618pt too wide) detected at line 103
+ [][]\T1/phv/m/n/10 266[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 126
- [][]\T1/phv/m/n/10 303[][]
+Overfull \hbox (1.0618pt too wide) detected at line 104
+ [][]\T1/phv/m/n/10 267[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 127
- [][]\T1/phv/m/n/10 304[][]
+Overfull \hbox (1.0618pt too wide) detected at line 105
+ [][]\T1/phv/m/n/10 268[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 128
- [][]\T1/phv/m/n/10 305[][]
+Overfull \hbox (1.0618pt too wide) detected at line 106
+ [][]\T1/phv/m/n/10 269[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 129
- [][]\T1/phv/m/n/10 306[][]
+Overfull \hbox (1.0618pt too wide) detected at line 107
+ [][]\T1/phv/m/n/10 270[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 130
- [][]\T1/phv/m/n/10 307[][]
+Overfull \hbox (1.0618pt too wide) detected at line 108
+ [][]\T1/phv/m/n/10 271[][]
  []
 
 
-Overfull \hbox (4.99539pt too wide) in paragraph at lines 130--130
+Overfull \hbox (4.99539pt too wide) in paragraph at lines 108--108
  \T1/phv/m/n/10 dant. The code for pro-cess-ing the sig-nal should be de-fined 
 in UserSig- 
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 131
- [][]\T1/phv/m/n/10 307[][]
+Overfull \hbox (1.0618pt too wide) detected at line 109
+ [][]\T1/phv/m/n/10 271[][]
+ []
+
+[109]
+Overfull \hbox (1.0618pt too wide) detected at line 110
+ [][]\T1/phv/m/n/10 272[][]
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [111]
-Overfull \hbox (1.0618pt too wide) detected at line 132
- [][]\T1/phv/m/n/10 308[][]
+Overfull \hbox (1.0618pt too wide) detected at line 111
+ [][]\T1/phv/m/n/10 275[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 133
- [][]\T1/phv/m/n/10 309[][]
+Overfull \hbox (1.0618pt too wide) detected at line 112
+ [][]\T1/phv/m/n/10 276[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 134
- [][]\T1/phv/m/n/10 311[][]
+Overfull \hbox (1.0618pt too wide) detected at line 113
+ [][]\T1/phv/m/n/10 279[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 135
- [][]\T1/phv/m/n/10 313[][]
+Overfull \hbox (1.0618pt too wide) detected at line 114
+ [][]\T1/phv/m/n/10 280[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 136
- [][]\T1/phv/m/n/10 314[][]
+Overfull \hbox (1.0618pt too wide) detected at line 115
+ [][]\T1/phv/m/n/10 281[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 137
- [][]\T1/phv/m/n/10 315[][]
+Overfull \hbox (1.0618pt too wide) detected at line 116
+ [][]\T1/phv/m/n/10 282[][]
  []
 
 
-Overfull \hbox (1.0618pt too wide) detected at line 138
- [][]\T1/phv/m/n/10 316[][]
+Overfull \hbox (1.0618pt too wide) detected at line 117
+ [][]\T1/phv/m/n/10 282[][]
  []
 
-
-Overfull \hbox (1.0618pt too wide) detected at line 139
- [][]\T1/phv/m/n/10 316[][]
- []
-
-
-Overfull \hbox (1.0618pt too wide) detected at line 140
- [][]\T1/phv/m/n/10 317[][]
- []
-
-) [112]
+) [110]
 Chapter 9.
 (./namespacec_i_m_f.tex
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 17.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 17.
-) [113
+) [111
 
-] [114
+] [112
 
 ]
 Chapter 10.
@@ -6241,7 +5353,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
 (Font)              scaled to size 8.99994pt on input line 71.
-[115]) (./classc3_d_vt.tex
+[113]) (./classc3_d_vt.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
@@ -6258,7 +5370,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
 
-[116]) (./classc4_d_vt.tex
+[114]) (./classc4_d_vt.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
@@ -6275,18 +5387,21 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
 
-[117]) (./classc_asteroid.tex
+[115]) (./classc_asteroid.tex
 
 pdfTeX warning: pdflatex (file ./classc_asteroid__coll__graph.pdf): PDF inclusi
 on: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_asteroid__coll__graph.pdf, id=3959, 321.2pt x 566.115pt>
+<classc_asteroid__coll__graph.pdf, id=3519, 326.21875pt x 626.34pt>
 File: classc_asteroid__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_asteroid__coll__graph.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3088) has occurred while \output is active []
 
- [118]
-[119 <./classc_asteroid__coll__graph.pdf>]
+ [116]
+Overfull \vbox (35.00246pt too high) has occurred while \output is active []
+
+
+[117 <./classc_asteroid__coll__graph.pdf>]
 LaTeX Font Info:    Font shape `OT1/phv/bc/it' in size <10> not available
 (Font)              Font shape `OT1/phv/bc/sl' tried instead on input line 41.
 LaTeX Font Info:    Font shape `OT1/phv/bc/sl' will be
@@ -6316,75 +5431,75 @@ Underfull \vbox (badness 10000) detected at line 79
 ) (./classc_attribute_array1.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [120]
+ [118]
 
 pdfTeX warning: pdflatex (file ./classc_attribute_array1__coll__graph.pdf): PDF
  inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_attribute_array1__coll__graph.pdf, id=3999, 184.69pt x 277.035pt>
+<classc_attribute_array1__coll__graph.pdf, id=3564, 184.69pt x 277.035pt>
 File: classc_attribute_array1__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_attribute_array1__coll__graph.pdf>) (./classc_attribute_array2.tex
-[121 <./classc_attribute_array1__coll__graph.pdf>]
+[119 <./classc_attribute_array1__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_attribute_array2__coll__graph.pdf): PDF
  inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_attribute_array2__coll__graph.pdf, id=4019, 184.69pt x 277.035pt>
+<classc_attribute_array2__coll__graph.pdf, id=3584, 184.69pt x 277.035pt>
 File: classc_attribute_array2__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_attribute_array2__coll__graph.pdf>) (./classc_attribute_array3.tex
-[122 <./classc_attribute_array2__coll__graph.pdf>]
+[120 <./classc_attribute_array2__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_attribute_array3__coll__graph.pdf): PDF
  inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_attribute_array3__coll__graph.pdf, id=4039, 184.69pt x 277.035pt>
+<classc_attribute_array3__coll__graph.pdf, id=3604, 184.69pt x 277.035pt>
 File: classc_attribute_array3__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_attribute_array3__coll__graph.pdf>) (./classc_attribute_array4.tex
-[123 <./classc_attribute_array3__coll__graph.pdf>]
+[121 <./classc_attribute_array3__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_attribute_array4__coll__graph.pdf): PDF
  inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_attribute_array4__coll__graph.pdf, id=4059, 184.69pt x 277.035pt>
+<classc_attribute_array4__coll__graph.pdf, id=3625, 184.69pt x 277.035pt>
 File: classc_attribute_array4__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_attribute_array4__coll__graph.pdf>)
-(./classc_attribute_boolean_array1.tex [124 <./classc_attribute_array4__coll__g
+(./classc_attribute_boolean_array1.tex [122 <./classc_attribute_array4__coll__g
 raph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_attribute_boolean_array1__coll__graph.p
 df): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_attribute_boolean_array1__coll__graph.pdf, id=4079, 202.7575pt x 277.03
+<classc_attribute_boolean_array1__coll__graph.pdf, id=3645, 202.7575pt x 277.03
 5pt>
 File: classc_attribute_boolean_array1__coll__graph.pdf Graphic file (type pdf)
  <use classc_attribute_boolean_array1__coll__graph.pdf>)
-(./classc_attribute_boolean_array2.tex [125 <./classc_attribute_boolean_array1_
+(./classc_attribute_boolean_array2.tex [123 <./classc_attribute_boolean_array1_
 _coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_attribute_boolean_array2__coll__graph.p
 df): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_attribute_boolean_array2__coll__graph.pdf, id=4100, 202.7575pt x 277.03
+<classc_attribute_boolean_array2__coll__graph.pdf, id=3665, 202.7575pt x 277.03
 5pt>
 File: classc_attribute_boolean_array2__coll__graph.pdf Graphic file (type pdf)
  <use classc_attribute_boolean_array2__coll__graph.pdf>)
-(./classc_attribute_boolean_array3.tex [126 <./classc_attribute_boolean_array2_
+(./classc_attribute_boolean_array3.tex [124 <./classc_attribute_boolean_array2_
 _coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_attribute_boolean_array3__coll__graph.p
 df): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_attribute_boolean_array3__coll__graph.pdf, id=4120, 202.7575pt x 277.03
+<classc_attribute_boolean_array3__coll__graph.pdf, id=3685, 202.7575pt x 277.03
 5pt>
 File: classc_attribute_boolean_array3__coll__graph.pdf Graphic file (type pdf)
  <use classc_attribute_boolean_array3__coll__graph.pdf>)
-(./classc_attribute_boolean_array4.tex [127 <./classc_attribute_boolean_array3_
+(./classc_attribute_boolean_array4.tex [125 <./classc_attribute_boolean_array3_
 _coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_attribute_boolean_array4__coll__graph.p
 df): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_attribute_boolean_array4__coll__graph.pdf, id=4140, 202.7575pt x 277.03
+<classc_attribute_boolean_array4__coll__graph.pdf, id=3705, 202.7575pt x 277.03
 5pt>
 File: classc_attribute_boolean_array4__coll__graph.pdf Graphic file (type pdf)
  <use classc_attribute_boolean_array4__coll__graph.pdf>)
@@ -6405,92 +5520,116 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
 
-[128 <./classc_attribute_boolean_array4__coll__graph.pdf>])
+[126 <./classc_attribute_boolean_array4__coll__graph.pdf>])
 (./classc_attribute_int_array1.tex
 
 pdfTeX warning: pdflatex (file ./classc_attribute_int_array1__coll__graph.pdf):
  PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_attribute_int_array1__coll__graph.pdf, id=4174, 178.6675pt x 277.035pt>
+<classc_attribute_int_array1__coll__graph.pdf, id=3739, 178.6675pt x 277.035pt>
 File: classc_attribute_int_array1__coll__graph.pdf Graphic file (type pdf)
-<use classc_attribute_int_array1__coll__graph.pdf> [129])
+<use classc_attribute_int_array1__coll__graph.pdf> [127])
 (./classc_attribute_int_array2.tex
 
 pdfTeX warning: pdflatex (file ./classc_attribute_int_array2__coll__graph.pdf):
  PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_attribute_int_array2__coll__graph.pdf, id=4196, 178.6675pt x 277.035pt>
+<classc_attribute_int_array2__coll__graph.pdf, id=3762, 178.6675pt x 277.035pt>
 File: classc_attribute_int_array2__coll__graph.pdf Graphic file (type pdf)
-<use classc_attribute_int_array2__coll__graph.pdf> [130 <./classc_attribute_int
+<use classc_attribute_int_array2__coll__graph.pdf> [128 <./classc_attribute_int
 _array1__coll__graph.pdf>]) (./classc_attribute_int_array3.tex
 
 pdfTeX warning: pdflatex (file ./classc_attribute_int_array3__coll__graph.pdf):
  PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_attribute_int_array3__coll__graph.pdf, id=4216, 178.6675pt x 277.035pt>
+<classc_attribute_int_array3__coll__graph.pdf, id=3782, 178.6675pt x 277.035pt>
 File: classc_attribute_int_array3__coll__graph.pdf Graphic file (type pdf)
-<use classc_attribute_int_array3__coll__graph.pdf> [131 <./classc_attribute_int
+<use classc_attribute_int_array3__coll__graph.pdf> [129 <./classc_attribute_int
 _array2__coll__graph.pdf>]) (./classc_attribute_int_array4.tex
 
 pdfTeX warning: pdflatex (file ./classc_attribute_int_array4__coll__graph.pdf):
  PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_attribute_int_array4__coll__graph.pdf, id=4237, 178.6675pt x 277.035pt>
+<classc_attribute_int_array4__coll__graph.pdf, id=3802, 178.6675pt x 277.035pt>
 File: classc_attribute_int_array4__coll__graph.pdf Graphic file (type pdf)
-<use classc_attribute_int_array4__coll__graph.pdf> [132 <./classc_attribute_int
-_array3__coll__graph.pdf>]) (./classc_attribute_store.tex [133 <./classc_attrib
+<use classc_attribute_int_array4__coll__graph.pdf> [130 <./classc_attribute_int
+_array3__coll__graph.pdf>]) (./classc_attribute_store.tex [131 <./classc_attrib
 ute_int_array4__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_attribute_store__coll__graph.pdf): PDF 
 inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_attribute_store__coll__graph.pdf, id=4270, 162.6075pt x 160.6pt>
+<classc_attribute_store__coll__graph.pdf, id=3835, 162.6075pt x 160.6pt>
 File: classc_attribute_store__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_attribute_store__coll__graph.pdf>) (./classc_audio_buffer.tex
-[134 <./classc_attribute_store__coll__graph.pdf>]) (./classc_audio_device.tex
+[132 <./classc_attribute_store__coll__graph.pdf>]) (./classc_audio_device.tex
 
 pdfTeX warning: pdflatex (file ./classc_audio_device__coll__graph.pdf): PDF inc
 lusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_audio_device__coll__graph.pdf, id=4300, 226.8475pt x 102.3825pt>
+<classc_audio_device__coll__graph.pdf, id=3865, 226.8475pt x 102.3825pt>
 File: classc_audio_device__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_audio_device__coll__graph.pdf> [135 <./classc_audio_device__coll__g
+<use classc_audio_device__coll__graph.pdf> [133 <./classc_audio_device__coll__g
 raph.pdf>]) (./classc_audio_listener.tex
 
 pdfTeX warning: pdflatex (file ./classc_audio_listener__coll__graph.pdf): PDF i
 nclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_audio_listener__coll__graph.pdf, id=4323, 230.8625pt x 102.3825pt>
+<classc_audio_listener__coll__graph.pdf, id=3889, 230.8625pt x 102.3825pt>
 File: classc_audio_listener__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_audio_listener__coll__graph.pdf>) (./classc_audio_object.tex
-[136 <./classc_audio_listener__coll__graph.pdf>]
+[134 <./classc_audio_listener__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_audio_object__coll__graph.pdf): PDF inc
 lusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_audio_object__coll__graph.pdf, id=4346, 218.8175pt x 174.6525pt>
+<classc_audio_object__coll__graph.pdf, id=3912, 218.8175pt x 174.6525pt>
 File: classc_audio_object__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_audio_object__coll__graph.pdf> [137 <./classc_audio_object__coll__g
-raph.pdf>]) (./classc_beam_collision.tex
+<use classc_audio_object__coll__graph.pdf> [135 <./classc_audio_object__coll__g
+raph.pdf>]) (./classc_bill_board.tex
 
-pdfTeX warning: pdflatex (file ./classc_beam_collision__coll__graph.pdf): PDF i
-nclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_beam_collision__coll__graph.pdf, id=4392, 170.6375pt x 218.8175pt>
-File: classc_beam_collision__coll__graph.pdf Graphic file (type pdf)
+pdfTeX warning: pdflatex (file ./classc_bill_board__coll__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_bill_board__coll__graph.pdf, id=3957, 475.7775pt x 734.745pt>
+File: classc_bill_board__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_beam_collision__coll__graph.pdf>
-Underfull \vbox (badness 3503) has occurred while \output is active []
+<use classc_bill_board__coll__graph.pdf>
+Overfull \hbox (43.55017pt too wide) in paragraph at lines 15--17
+ [] 
+ []
 
- [138])
-(./classc_beam_mesh.tex [139 <./classc_beam_collision__coll__graph.pdf>]
+[136]
+Overfull \vbox (36.00246pt too high) has occurred while \output is active []
 
-pdfTeX warning: pdflatex (file ./classc_beam_mesh__coll__graph.pdf): PDF inclus
-ion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_beam_mesh__coll__graph.pdf, id=4437, 458.71375pt x 674.52pt>
-File: classc_beam_mesh__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_beam_mesh__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
+[137 <./classc_bill_board__coll__graph.pdf>])
+(./classc_boolean_attribute_store.tex
+
+pdfTeX warning: pdflatex (file ./classc_boolean_attribute_store__coll__graph.pd
+f): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+<classc_boolean_attribute_store__coll__graph.pdf, id=3998, 196.735pt x 218.8175
+pt>
+File: classc_boolean_attribute_store__coll__graph.pdf Graphic file (type pdf)
+ <use classc_boolean_attribute_store__coll__graph.pdf> [138 <./classc_boolean_a
+ttribute_store__coll__graph.pdf>]) (./classc_boolean_uniform_store.tex
+
+pdfTeX warning: pdflatex (file ./classc_boolean_uniform_store__coll__graph.pdf)
+: PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+
+<classc_boolean_uniform_store__coll__graph.pdf, id=4029, 194.7275pt x 218.8175p
+t>
+File: classc_boolean_uniform_store__coll__graph.pdf Graphic file (type pdf)
+ <use classc_boolean_uniform_store__coll__graph.pdf> [139 <./classc_boolean_uni
+form_store__coll__graph.pdf>]) (./classc_camera.tex
+
+pdfTeX warning: pdflatex (file ./classc_camera__coll__graph.pdf): PDF inclusion
+: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_camera__coll__graph.pdf, id=4068, 859.21pt x 439.6425pt>
+File: classc_camera__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_camera__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 16--18
  [] 
  []
 
@@ -6498,100 +5637,57 @@ Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [140]
-Overfull \vbox (24.2093pt too high) has occurred while \output is active []
-
-
-[141 <./classc_beam_mesh__coll__graph.pdf>])
-(./classc_boolean_attribute_store.tex
-
-pdfTeX warning: pdflatex (file ./classc_boolean_attribute_store__coll__graph.pd
-f): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-
-<classc_boolean_attribute_store__coll__graph.pdf, id=4464, 196.735pt x 218.8175
-pt>
-File: classc_boolean_attribute_store__coll__graph.pdf Graphic file (type pdf)
- <use classc_boolean_attribute_store__coll__graph.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [142])
-(./classc_boolean_uniform_store.tex
-
-pdfTeX warning: pdflatex (file ./classc_boolean_uniform_store__coll__graph.pdf)
-: PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-
-<classc_boolean_uniform_store__coll__graph.pdf, id=4489, 194.7275pt x 218.8175p
-t>
-File: classc_boolean_uniform_store__coll__graph.pdf Graphic file (type pdf)
- <use classc_boolean_uniform_store__coll__graph.pdf> [143 <./classc_boolean_att
-ribute_store__coll__graph.pdf>]) (./classc_button.tex
-
-pdfTeX warning: pdflatex (file ./classc_button__coll__graph.pdf): PDF inclusion
-: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_button__coll__graph.pdf, id=4516, 530.98375pt x 734.745pt>
-File: classc_button__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_button__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
- [] 
- []
-
-[144 <./classc_boolean_uniform_store__coll__graph.pdf>]
-Underfull \vbox (badness 7649) has occurred while \output is active []
-
- [145 <./classc_button__coll__graph.pdf>]) (./classc_button_base.tex) (./classc
-_camera.tex
-[146]
-
-pdfTeX warning: pdflatex (file ./classc_camera__coll__graph.pdf): PDF inclusion
-: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_camera__coll__graph.pdf, id=4583, 1804.7425pt x 537.00626pt>
-File: classc_camera__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_camera__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
- [] 
- []
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
-[147 <./classc_camera__coll__graph.pdf>]) (./classc_camera_handler.tex
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+)
+(./classc_camera_handler.tex [141 <./classc_camera__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_camera_handler__coll__graph.pdf): PDF i
 nclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_camera_handler__coll__graph.pdf, id=4640, 2186.1675pt x 537.00626pt>
+<classc_camera_handler__coll__graph.pdf, id=4126, 1240.635pt x 439.6425pt>
 File: classc_camera_handler__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_camera_handler__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
+Overfull \hbox (55.0pt too wide) in paragraph at lines 16--18
  [] 
  []
 
-) (./classc_camera_matrix4.tex [148 <./classc_camera_handler__coll__graph.pdf>]
+) (./classc_camera_matrix4.tex [142 <./classc_camera_handler__coll__graph.pdf>]
 
 
 pdfTeX warning: pdflatex (file ./classc_camera_matrix4__coll__graph.pdf): PDF i
 nclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_camera_matrix4__coll__graph.pdf, id=4660, 225.84375pt x 102.3825pt>
+<classc_camera_matrix4__coll__graph.pdf, id=4142, 225.84375pt x 102.3825pt>
 File: classc_camera_matrix4__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_camera_matrix4__coll__graph.pdf> [149 <./classc_camera_matrix4__col
-l__graph.pdf>] [150] [151] [152]) (./classc_cluster.tex [153]
+<use classc_camera_matrix4__coll__graph.pdf> [143 <./classc_camera_matrix4__col
+l__graph.pdf>] [144] [145] [146]) (./classc_circle_line_data.tex
+
+pdfTeX warning: pdflatex (file ./classc_circle_line_data__coll__graph.pdf): PDF
+ inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_circle_line_data__coll__graph.pdf, id=4269, 194.7275pt x 218.8175pt>
+File: classc_circle_line_data__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_circle_line_data__coll__graph.pdf> [147]) (./classc_cluster.tex
 
 pdfTeX warning: pdflatex (file ./classc_cluster__coll__graph.pdf): PDF inclusio
 n: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_cluster__coll__graph.pdf, id=4797, 134.5025pt x 246.9225pt>
+<classc_cluster__coll__graph.pdf, id=4283, 134.5025pt x 246.9225pt>
 File: classc_cluster__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_cluster__coll__graph.pdf>) (./classc_collision_handler.tex
+<use classc_cluster__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [148 <./classc_circle_line_data__coll__graph.pdf>]) (./classc_collision_handle
+r.tex
 
 pdfTeX warning: pdflatex (file ./classc_collision_handler__coll__graph.pdf): PD
 F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-
-<classc_collision_handler__coll__graph.pdf, id=4803, 940.51375pt x 479.7925pt>
+<classc_collision_handler__coll__graph.pdf, id=4302, 483.8075pt x 216.81pt>
 File: classc_collision_handler__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_collision_handler__coll__graph.pdf>
@@ -6602,49 +5698,44 @@ Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [154 <./classc_cluster__coll__graph.pdf>] [155 <./classc_collision_handler__co
-ll__graph.pdf>] [156]
-Overfull \hbox (60.10083pt too wide) in paragraph at lines 123--124
-[]\T1/phv/m/n/10 Type searches are fil-tered by type. cCol-li-sionOb-ject's are
- given a [][]cCol-li-sionOb-ject::CollisionFilter(uint32
+ [149 <./classc_cluster__coll__graph.pdf>]
+Overfull \hbox (6.9129pt too wide) in paragraph at lines 73--75
+[]\T1/phv/m/n/10 virtual [][]cCol-li-sion-List[][] $\OMS/ztmcm/m/n/10 ^^C$ [][]
+\T1/phv/m/n/10 Gen-er-at-eDe-tailed-Col-li-sion-List[][] (cCol-li-sion-Base $\O
+MS/ztmcm/m/n/10 ^^C$\T1/phv/m/n/10 lpObj, uint32
+ []
+
+[150 <./classc_collision_handler__coll__graph.pdf>]
+Overfull \hbox (7.28203pt too wide) in paragraph at lines 78--80
+[]\T1/phv/m/n/10 virtual [][]cCol-li-sion-List[][] $\OMS/ztmcm/m/n/10 ^^C$ [][]
+\T1/phv/m/n/10 Gen-er-atePos-si-bleCol-li-sion-List[][] (cCol-li-sion-Base $\OM
+S/ztmcm/m/n/10 ^^C$\T1/phv/m/n/10 lpObj, uint32
+ []
+
+[151]
+Overfull \hbox (49.10318pt too wide) in paragraph at lines 127--128
+[]\T1/phv/m/n/10 Type searches are fil-tered by type. cCol-li-sion-Base's are g
+iven a cCol-li-sion-Base::CollisionFilter(uint32
  []
 
 ) (./classc_collision_list.tex
 
 pdfTeX warning: pdflatex (file ./classc_collision_list__coll__graph.pdf): PDF i
 nclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_collision_list__coll__graph.pdf, id=4893, 1714.405pt x 452.69125pt>
+<classc_collision_list__coll__graph.pdf, id=4393, 293.095pt x 234.8775pt>
 File: classc_collision_list__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_collision_list__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
- [] 
- []
+Underfull \vbox (badness 1466) has occurred while \output is active []
 
-[157 <./classc_collision_list__coll__graph.pdf>])
-(./classc_collision_list_object.tex
-
-pdfTeX warning: pdflatex (file ./classc_collision_list_object__coll__graph.pdf)
-: PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-
-<classc_collision_list_object__coll__graph.pdf, id=4940, 1543.7675pt x 452.6912
-5pt>
-File: classc_collision_list_object__coll__graph.pdf Graphic file (type pdf)
- <use classc_collision_list_object__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
- [] 
- []
-
-
-Underfull \vbox (badness 1308) has occurred while \output is active []
-
- [158])
-(./classc_collision_object.tex
+ [152 <./classc_collision_list__coll__graph.pdf>]) (./classc_collision_list_obj
+ect.tex
+[153]) (./classc_collision_object.tex
 
 pdfTeX warning: pdflatex (file ./classc_collision_object__coll__graph.pdf): PDF
  inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_collision_object__coll__graph.pdf, id=4961, 1543.7675pt x 452.69125pt>
+<classc_collision_object__coll__graph.pdf, id=4450, 1009.7725pt x 522.95375pt>
 File: classc_collision_object__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_collision_object__coll__graph.pdf>
@@ -6655,12 +5746,12 @@ Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [159 <./classc_collision_list_object__coll__graph.pdf>]
-Overfull \hbox (27.24002pt too wide) in paragraph at lines 34--35
+ [154]
+Overfull \hbox (21.7412pt too wide) in paragraph at lines 34--35
 [][][]\T1/phv/m/n/10 cCollisionList[][] $\OMS/ztmcm/m/n/10 ^^C$ [][]\T1/phv/m/n
-/10 Check-Col-li-sion-De-tail[][] ([][]cCol-li-sionOb-ject[][] $\OMS/ztmcm/m/n/
-10 ^^C$\T1/phv/m/n/10 lpOther, [][]cCol-li-sion-List[][] $\OMS/ztmcm/m/n/10 ^^C
-$\T1/phv/m/n/10 lpList=0)
+/10 Check-Col-li-sion-De-tail[][] (cCol-li-sion-Base $\OMS/ztmcm/m/n/10 ^^C$\T1
+/phv/m/n/10 lpOther, [][]cCol-li-sion-List[][] $\OMS/ztmcm/m/n/10 ^^C$\T1/phv/m
+/n/10 lpList=0)
  []
 
 
@@ -6668,87 +5759,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-[160 <./classc_collision_object__coll__graph.pdf>] [161]
-Overfull \hbox (21.88861pt too wide) in alignment at lines 188--191
+[155 <./classc_collision_object__coll__graph.pdf>]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 120--123
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 191
+Underfull \vbox (badness 10000) detected at line 123
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 200.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 132.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 
 LaTeX Font Warning: Font shape `OT1/pcr/bc/it' undefined
-(Font)              using `OT1/pcr/m/n' instead on input line 200.
+(Font)              using `OT1/pcr/m/n' instead on input line 132.
 
 
-Overfull \hbox (21.88861pt too wide) in alignment at lines 207--212
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [156]
+Overfull \hbox (21.88861pt too wide) in alignment at lines 139--144
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 212
+Underfull \vbox (badness 10000) detected at line 144
  []
 
 
 LaTeX Font Warning: Font shape `OT1/pcr/bc/n' undefined
-(Font)              using `OT1/pcr/m/n' instead on input line 220.
+(Font)              using `OT1/pcr/m/n' instead on input line 152.
 
 
-Overfull \hbox (21.88861pt too wide) in alignment at lines 227--230
+Overfull \hbox (21.88861pt too wide) in alignment at lines 159--162
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 230
+Underfull \vbox (badness 10000) detected at line 162
  []
 
+) (./classc_double_matrix4.tex
 
-Overfull \vbox (11.47453pt too high) has occurred while \output is active []
+pdfTeX warning: pdflatex (file ./classc_double_matrix4__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_double_matrix4__coll__graph.pdf, id=4525, 221.82875pt x 102.3825pt>
+File: classc_double_matrix4__coll__graph.pdf Graphic file (type pdf)
 
+<use classc_double_matrix4__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[162]) (./classc_compound_collision.tex
-
-pdfTeX warning: pdflatex (file ./classc_compound_collision__coll__graph.pdf): P
-DF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-
-<classc_compound_collision__coll__graph.pdf, id=5104, 419.5675pt x 234.8775pt>
-File: classc_compound_collision__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_compound_collision__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
- [] 
- []
-
-[163 <./classc_compound_collision__coll__graph.pdf>])
-(./classc_compound_collision_node.tex [164]) (./classc_dynamic_texture.tex
+ [157]
+[158 <./classc_double_matrix4__coll__graph.pdf>] [159] [160] [161] [162]
+[163] [164] [165]) (./classc_dynamic_texture.tex
 
 pdfTeX warning: pdflatex (file ./classc_dynamic_texture__coll__graph.pdf): PDF 
 inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_dynamic_texture__coll__graph.pdf, id=5182, 321.2pt x 566.115pt>
+<classc_dynamic_texture__coll__graph.pdf, id=4927, 326.21875pt x 626.34pt>
 File: classc_dynamic_texture__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_dynamic_texture__coll__graph.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<use classc_dynamic_texture__coll__graph.pdf> [166]
+Overfull \vbox (35.00246pt too high) has occurred while \output is active []
 
- [165]
-[166 <./classc_dynamic_texture__coll__graph.pdf>]) (./classc_empty_texture.tex
+
+[167 <./classc_dynamic_texture__coll__graph.pdf>]) (./classc_empty_texture.tex
 
 pdfTeX warning: pdflatex (file ./classc_empty_texture__coll__graph.pdf): PDF in
 clusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_empty_texture__coll__graph.pdf, id=5237, 321.2pt x 566.115pt>
+<classc_empty_texture__coll__graph.pdf, id=4989, 326.21875pt x 626.34pt>
 File: classc_empty_texture__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_empty_texture__coll__graph.pdf>
 Underfull \vbox (badness 4072) has occurred while \output is active []
 
- [167]
-[168 <./classc_empty_texture__coll__graph.pdf>]
+ [168]
+Overfull \vbox (35.00246pt too high) has occurred while \output is active []
+
+
+[169 <./classc_empty_texture__coll__graph.pdf>]
 Overfull \hbox (45.11816pt too wide) in paragraph at lines 23--25
 [][][]\T1/phv/m/n/10 cEmptyTexture[][] (c2DVi li-Size, uint8 liDepth=32, string
  ls-File-Name="GeneratedEmptyTexture")
@@ -6758,40 +5849,40 @@ Overfull \hbox (45.11816pt too wide) in paragraph at lines 23--25
 
 pdfTeX warning: pdflatex (file ./classc_event_handler__coll__graph.pdf): PDF in
 clusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_event_handler__coll__graph.pdf, id=5267, 320.19624pt x 650.43pt>
+<classc_event_handler__coll__graph.pdf, id=5019, 330.23375pt x 710.655pt>
 File: classc_event_handler__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_event_handler__coll__graph.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [169]
+ [170]
 Overfull \vbox (35.00246pt too high) has occurred while \output is active []
 
 
-[170 <./classc_event_handler__coll__graph.pdf>]) (./classc_face.tex
+[171 <./classc_event_handler__coll__graph.pdf>]) (./classc_face.tex
 
 pdfTeX warning: pdflatex (file ./classc_face__coll__graph.pdf): PDF inclusion: 
 found PDF version <1.5>, but at most version <1.4> allowed
-<classc_face__coll__graph.pdf, id=5295, 128.48pt x 174.6525pt>
+<classc_face__coll__graph.pdf, id=5047, 128.48pt x 174.6525pt>
 File: classc_face__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_face__coll__graph.pdf>) (./classc_file.tex [171 <./classc_face__col
+<use classc_face__coll__graph.pdf>) (./classc_file.tex [172 <./classc_face__col
 l__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_file__coll__graph.pdf): PDF inclusion: 
 found PDF version <1.5>, but at most version <1.4> allowed
-<classc_file__coll__graph.pdf, id=5314, 321.2pt x 445.665pt>
+<classc_file__coll__graph.pdf, id=5066, 326.21875pt x 505.89pt>
 File: classc_file__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_file__coll__graph.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [172]
-[173 <./classc_file__coll__graph.pdf>]) (./classc_file_handler.tex
+ [173]
+[174 <./classc_file__coll__graph.pdf>]) (./classc_file_handler.tex
 
 pdfTeX warning: pdflatex (file ./classc_file_handler__coll__graph.pdf): PDF inc
 lusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_file_handler__coll__graph.pdf, id=5348, 440.64626pt x 289.08pt>
+<classc_file_handler__coll__graph.pdf, id=5099, 433.62pt x 349.305pt>
 File: classc_file_handler__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_file_handler__coll__graph.pdf>
@@ -6799,118 +5890,97 @@ Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
  [] 
  []
 
-
-Underfull \vbox (badness 1715) has occurred while \output is active []
-
- [174])
-(./classc_float_attribute_store.tex [175 <./classc_file_handler__coll__graph.pd
-f>]
+[175] [176 <./classc_file_handler__coll__graph.pdf>])
+(./classc_float_attribute_store.tex
 
 pdfTeX warning: pdflatex (file ./classc_float_attribute_store__coll__graph.pdf)
 : PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_float_attribute_store__coll__graph.pdf, id=5398, 184.69pt x 218.8175pt>
+<classc_float_attribute_store__coll__graph.pdf, id=5150, 184.69pt x 218.8175pt>
 File: classc_float_attribute_store__coll__graph.pdf Graphic file (type pdf)
-<use classc_float_attribute_store__coll__graph.pdf>)
-(./classc_float_uniform_store.tex [176 <./classc_float_attribute_store__coll__g
-raph.pdf>]
+<use classc_float_attribute_store__coll__graph.pdf> [177 <./classc_float_attrib
+ute_store__coll__graph.pdf>]) (./classc_float_uniform_store.tex
 
 pdfTeX warning: pdflatex (file ./classc_float_uniform_store__coll__graph.pdf): 
 PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_float_uniform_store__coll__graph.pdf, id=5426, 180.675pt x 218.8175pt>
+<classc_float_uniform_store__coll__graph.pdf, id=5178, 180.675pt x 218.8175pt>
 File: classc_float_uniform_store__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_float_uniform_store__coll__graph.pdf>) (./classc_font.tex [177 <./c
-lassc_float_uniform_store__coll__graph.pdf>]
+<use classc_float_uniform_store__coll__graph.pdf> [178 <./classc_float_uniform_
+store__coll__graph.pdf>]) (./classc_font.tex
 
 pdfTeX warning: pdflatex (file ./classc_font__coll__graph.pdf): PDF inclusion: 
 found PDF version <1.5>, but at most version <1.4> allowed
-<classc_font__coll__graph.pdf, id=5449, 321.2pt x 566.115pt>
+<classc_font__coll__graph.pdf, id=5201, 326.21875pt x 626.34pt>
 File: classc_font__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_font__coll__graph.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [178]
-[179 <./classc_font__coll__graph.pdf>]) (./classc_frame_rate.tex
+ [179]
+Overfull \vbox (35.00246pt too high) has occurred while \output is active []
+
+
+[180 <./classc_font__coll__graph.pdf>]) (./classc_frame_rate.tex
 
 pdfTeX warning: pdflatex (file ./classc_frame_rate__coll__graph.pdf): PDF inclu
 sion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_frame_rate__coll__graph.pdf, id=5470, 220.825pt x 102.3825pt>
+<classc_frame_rate__coll__graph.pdf, id=5220, 220.825pt x 102.3825pt>
 File: classc_frame_rate__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_frame_rate__coll__graph.pdf> [180 <./classc_frame_rate__coll__graph
-.pdf>]) (./classc_gravity_particle.tex) (./classc_image.tex [181]
+<use classc_frame_rate__coll__graph.pdf> [181 <./classc_frame_rate__coll__graph
+.pdf>]) (./classc_ico_sphere.tex
 
-pdfTeX warning: pdflatex (file ./classc_image__coll__graph.pdf): PDF inclusion:
- found PDF version <1.5>, but at most version <1.4> allowed
-<classc_image__coll__graph.pdf, id=5510, 447.6725pt x 674.52pt>
-File: classc_image__coll__graph.pdf Graphic file (type pdf)
+pdfTeX warning: pdflatex (file ./classc_ico_sphere__coll__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_ico_sphere__coll__graph.pdf, id=5250, 326.21875pt x 626.34pt>
+File: classc_ico_sphere__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_image__coll__graph.pdf>
-Overfull \hbox (53.22234pt too wide) in paragraph at lines 15--17
- [] 
+<use classc_ico_sphere__coll__graph.pdf> [182]
+Overfull \vbox (35.00246pt too high) has occurred while \output is active []
+
+
+[183 <./classc_ico_sphere__coll__graph.pdf>]
+Overfull \hbox (1.99275pt too wide) in paragraph at lines 22--23
+[][][]\T1/phv/m/n/10 cIcoSphere[][] (uint8 liSub-di-vi-sions, float lfI-co-Sphe
+re-Size, bool lb-Nor-mals=false, bool
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [182]
-Overfull \vbox (36.00246pt too high) has occurred while \output is active []
-
-
-[183 <./classc_image__coll__graph.pdf>]
-Overfull \hbox (21.88861pt too wide) in alignment at lines 76--79
+Overfull \hbox (21.88861pt too wide) in alignment at lines 47--56
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 79
+Underfull \vbox (badness 10000) detected at line 56
  []
 
-) (./classc_image3_d.tex [184]
-
-pdfTeX warning: pdflatex (file ./classc_image3_d__coll__graph.pdf): PDF inclusi
-on: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_image3_d__coll__graph.pdf, id=5555, 454.69875pt x 734.745pt>
-File: classc_image3_d__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_image3_d__coll__graph.pdf>
-Overfull \hbox (26.33592pt too wide) in paragraph at lines 15--17
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [185]
-Overfull \vbox (36.00246pt too high) has occurred while \output is active []
-
-
-[186 <./classc_image3_d__coll__graph.pdf>]) (./classc_int_attribute_store.tex
+) (./classc_int_attribute_store.tex
 
 pdfTeX warning: pdflatex (file ./classc_int_attribute_store__coll__graph.pdf): 
 PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_int_attribute_store__coll__graph.pdf, id=5578, 172.645pt x 218.8175pt>
+<classc_int_attribute_store__coll__graph.pdf, id=5278, 172.645pt x 218.8175pt>
 File: classc_int_attribute_store__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_int_attribute_store__coll__graph.pdf>)
-(./classc_int_uniform_store.tex [187 <./classc_int_attribute_store__coll__graph
-.pdf>]
+<use classc_int_attribute_store__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [184])
+(./classc_int_uniform_store.tex
 
 pdfTeX warning: pdflatex (file ./classc_int_uniform_store__coll__graph.pdf): PD
 F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_int_uniform_store__coll__graph.pdf, id=5606, 170.6375pt x 218.8175pt>
+<classc_int_uniform_store__coll__graph.pdf, id=5298, 170.6375pt x 218.8175pt>
 File: classc_int_uniform_store__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_int_uniform_store__coll__graph.pdf>) (./classc_kernel.tex [188 <./c
-lassc_int_uniform_store__coll__graph.pdf>]
+<use classc_int_uniform_store__coll__graph.pdf> [185 <./classc_int_attribute_st
+ore__coll__graph.pdf>]) (./classc_kernel.tex
 
 pdfTeX warning: pdflatex (file ./classc_kernel__coll__graph.pdf): PDF inclusion
 : found PDF version <1.5>, but at most version <1.4> allowed
-<classc_kernel__coll__graph.pdf, id=5629, 472.76625pt x 449.68pt>
+<classc_kernel__coll__graph.pdf, id=5322, 472.76625pt x 449.68pt>
 File: classc_kernel__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_kernel__coll__graph.pdf>
@@ -6918,7 +5988,8 @@ Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
  [] 
  []
 
-[189 <./classc_kernel__coll__graph.pdf>]
+[186 <./classc_int_uniform_store__coll__graph.pdf>] [187 <./classc_kernel__coll
+__graph.pdf>]
 Overfull \hbox (21.89388pt too wide) in alignment at lines 72--75
  [] [] 
  []
@@ -6927,48 +5998,8 @@ Overfull \hbox (21.89388pt too wide) in alignment at lines 72--75
 Underfull \vbox (badness 10000) detected at line 75
  []
 
-[190]) (./classc_key_store.tex) (./classc_landscape.tex
-
-pdfTeX warning: pdflatex (file ./classc_landscape__coll__graph.pdf): PDF inclus
-ion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_landscape__coll__graph.pdf, id=5667, 564.1075pt x 674.52pt>
-File: classc_landscape__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_landscape__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [191]
-[192 <./classc_landscape__coll__graph.pdf>]) (./classc_landscape_mesh_file.tex
-
-pdfTeX warning: pdflatex (file ./classc_landscape_mesh_file__coll__graph.pdf): 
-PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_landscape_mesh_file__coll__graph.pdf, id=5703, 379.4175pt x 505.89pt>
-File: classc_landscape_mesh_file__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_landscape_mesh_file__coll__graph.pdf>
-Overfull \hbox (33.0pt too wide) in paragraph at lines 15--17
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [193]
-[194 <./classc_landscape_mesh_file__coll__graph.pdf>])
-(./classc_light_handler.tex
-
-pdfTeX warning: pdflatex (file ./classc_light_handler__coll__graph.pdf): PDF in
-clusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_light_handler__coll__graph.pdf, id=5731, 235.88126pt x 373.395pt>
-File: classc_light_handler__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_light_handler__coll__graph.pdf> [195 <./classc_light_handler__coll_
-_graph.pdf>]) (./classc_limited_list.tex
+) (./classc_key_store.tex [188]) (./classc_key_toggle.tex)
+(./classc_limited_list.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
@@ -6985,7 +6016,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
 
-[196]) (./classc_limited_pointer_list.tex
+[189]) (./classc_limited_pointer_list.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
@@ -7002,26 +6033,47 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
 
-[197]) (./classc_line.tex [198]
+[190]) (./classc_line.tex [191]
 
 pdfTeX warning: pdflatex (file ./classc_line__coll__graph.pdf): PDF inclusion: 
 found PDF version <1.5>, but at most version <1.4> allowed
-<classc_line__coll__graph.pdf, id=5830, 471.7625pt x 674.52pt>
+<classc_line__coll__graph.pdf, id=5451, 465.74pt x 734.745pt>
 File: classc_line__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_line__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
+Overfull \hbox (35.35292pt too wide) in paragraph at lines 15--17
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [199]
-Overfull \vbox (7.92683pt too high) has occurred while \output is active []
+ [192]
+Overfull \vbox (36.00246pt too high) has occurred while \output is active []
 
 
-[200 <./classc_line__coll__graph.pdf>]) (./classc_linked_list.tex
+[193 <./classc_line__coll__graph.pdf>]) (./classc_line_array.tex
+
+pdfTeX warning: pdflatex (file ./classc_line_array__coll__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_line_array__coll__graph.pdf, id=5487, 583.17876pt x 734.745pt>
+File: classc_line_array__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_line_array__coll__graph.pdf>
+Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
+ [] 
+ []
+
+[194] [195 <./classc_line_array__coll__graph.pdf>])
+(./classc_line_array_data.tex
+
+pdfTeX warning: pdflatex (file ./classc_line_array_data__coll__graph.pdf): PDF 
+inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_line_array_data__coll__graph.pdf, id=5534, 194.7275pt x 160.6pt>
+File: classc_line_array_data__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_line_array_data__coll__graph.pdf> [196 <./classc_line_array_data__c
+oll__graph.pdf>]) (./classc_linked_list.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
@@ -7038,7 +6090,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
 
-[201] [202]) (./classc_linked_node.tex
+[197]) (./classc_linked_node.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
@@ -7059,11 +6111,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 pdfTeX warning: pdflatex (file ./classc_linked_node__coll__graph.pdf): PDF incl
 usion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_linked_node__coll__graph.pdf, id=5941, 231.86626pt x 106.3975pt>
+<classc_linked_node__coll__graph.pdf, id=5601, 231.86626pt x 106.3975pt>
 File: classc_linked_node__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_linked_node__coll__graph.pdf>) (./classc_main_thread.tex [203 <./cl
-assc_linked_node__coll__graph.pdf>]
+<use classc_linked_node__coll__graph.pdf> [198 <./classc_linked_node__coll__gra
+ph.pdf>]) (./classc_main_thread.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
@@ -7089,7 +6141,7 @@ Overfull \hbox (21.89388pt too wide) in alignment at lines 41--50
 Underfull \vbox (badness 10000) detected at line 50
  []
 
-[204pdfTeX warning (ext4): destination with the same identifier (name{classc_ma
+[199pdfTeX warning (ext4): destination with the same identifier (name{classc_ma
 in_thread_a9b744fd9997b08998fb246221b945925}) has been already used, duplicate 
 ignored
 
@@ -7100,248 +6152,42 @@ l.50 \end{DoxyTemplParams}
 
 pdfTeX warning: pdflatex (file ./classc_matrix4__coll__graph.pdf): PDF inclusio
 n: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_matrix4__coll__graph.pdf, id=5992, 191.71625pt x 102.3825pt>
+<classc_matrix4__coll__graph.pdf, id=5653, 191.71625pt x 102.3825pt>
 File: classc_matrix4__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_matrix4__coll__graph.pdf>
-Underfull \vbox (badness 1867) has occurred while \output is active []
-
- [205]
-[206 <./classc_matrix4__coll__graph.pdf>] [207] [208] [209] [210] [211]
-[212] [213]) (./classc_matrix_stack.tex [214]
+<use classc_matrix4__coll__graph.pdf> [200] [201 <./classc_matrix4__coll__graph
+.pdf>] [202] [203] [204] [205] [206] [207] [208]) (./classc_matrix_stack.tex
+[209]
 
 pdfTeX warning: pdflatex (file ./classc_matrix_stack__coll__graph.pdf): PDF inc
 lusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_matrix_stack__coll__graph.pdf, id=6349, 271.0125pt x 234.8775pt>
+<classc_matrix_stack__coll__graph.pdf, id=6020, 271.0125pt x 234.8775pt>
 File: classc_matrix_stack__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_matrix_stack__coll__graph.pdf>) (./classc_mesh.tex
 
 pdfTeX warning: pdflatex (file ./classc_mesh__coll__graph.pdf): PDF inclusion: 
 found PDF version <1.5>, but at most version <1.4> allowed
-<classc_mesh__coll__graph.pdf, id=6352, 321.2pt x 505.89pt>
+<classc_mesh__coll__graph.pdf, id=6023, 326.21875pt x 566.115pt>
 File: classc_mesh__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_mesh__coll__graph.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [215 <./classc_matrix_stack__coll__graph.pdf>] [216 <./classc_mesh__coll__grap
-h.pdf>]pdfTeX warning (ext4): destination with the same identifier (name{classc
-_mesh_a1b689b9d00f34fe7e4cbf8910bb310f9}) has been already used, duplicate igno
-red
-<to be read again> 
-                   \relax 
-l.123 ...89b9d00f34fe7e4cbf8910bb310f9}{cMesh} ()}
-                                                   [217]pdfTeX warning (ext4): 
-destination with the same identifier (name{classc_mesh_a8dd2a8840d8e2c6aaefa958
-84a2f9f68}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.133 ...40d8e2c6aaefa95884a2f9f68}{SetFormat} ()}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a5f35c2b9245d765b7958f91379d63
-e7d}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.138 ...b7958f91379d63e7d}{CreateNormalArray} ()}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a5f1b578685730d581301f3b5dbb2f
-83c}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.148 ...b578685730d581301f3b5dbb2f83c}{Faces} ()}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a56283d0c69f6b4987176c8714eb10
-987}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.153 ...69f6b4987176c8714eb10987}{VertexData} ()}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a6bc80e837d5556b84399065c9a21f
-a79}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.158 ...837d5556b84399065c9a21fa79}{FaceData} ()}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a534e2fc01c1ed2319d067cdb2df0c
-439}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.163 ...1c1ed2319d067cdb2df0c439}{NormalData} ()}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a98e9d13a984398ecbe18300d435d0
-1d8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.168 ...d13a984398ecbe18300d435d01d8}{UVData} ()}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a022d36f1b2f456b5edb50d3295696
-0e0}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.173 ...ition} (float lfX, float lfY, float lfZ)}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a4d0f5cbdb12f1bc7fb8899c61d232
-8d5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.178 ...fb8899c61d2328d5}{PositionX} (float lfX)}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a031dd39f3c8aa1643a978b42bfc68
-ddc}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.183 ...3a978b42bfc68ddc}{PositionY} (float lfY)}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a75062dccdd861877dd206f81ac2f9
-ec0}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.188 ...dd206f81ac2f9ec0}{PositionZ} (float lfZ)}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a6b4d72718fa9a90fae3ee30dbe5f2
-575}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.193 ...9a90fae3ee30dbe5f2575}{ResetPosition} ()}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a93bdde998cfebc274b7573444dc98
-d34}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.198 ...e998cfebc274b7573444dc98d34}{GetSize} ()}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a47b1bea169448ce42035a82115a6a
-c48}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.203 ...169448ce42035a82115a6ac48}{GetSizeSq} ()}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_abaa10891ab82ca5988bb255fda7cf
-dae}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.208 ...91ab82ca5988bb255fda7cfdae}{FindSize} ()}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classc_mesh_a325c1397e0594d3b19b11e4f789f9
-3ca}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.218 ...(string lsFileName=\char`\"{}\char`\"{})}
-                                                   [218pdfTeX warning (ext4): d
-estination with the same identifier (name{classc_mesh_ae24161941f8538d55caa144d
-76b535bc}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.221 ...atedMesh\char`\"{}. \end{DoxyCompactList}
-                                                  \item]pdfTeX warning (ext4): 
-destination with the same identifier (name{classc_mesh_a637f8906a64eef54f320b59
-e8064a725}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.223 ... string lsFileName=\char`\"{}\char`\"{})}
-                                                  
-Overfull \hbox (14.49454pt too wide) in paragraph at lines 234--234
+<use classc_mesh__coll__graph.pdf> [210 <./classc_matrix_stack__coll__graph.pdf
+>] [211 <./classc_mesh__coll__graph.pdf>] [212]
+Overfull \hbox (14.49454pt too wide) in paragraph at lines 134--134
 \T1/phv/m/sl/9 FORMAT_-UVS, WT_-MESH_-FORMAT_-NORMALS and WT_-MESH_-FORMAT_-POS
 ITIVE. 
  []
 
 
-Overfull \hbox (21.88861pt too wide) in alignment at lines 241--244
+Overfull \hbox (21.88861pt too wide) in alignment at lines 141--144
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 244
+Underfull \vbox (badness 10000) detected at line 144
  []
 
-) (./classc_mesh_array.tex) (./classc_mesh_collision.tex [219pdfTeX warning (ex
-t4): destination with the same identifier (name{classc_mesh_array_adce4a1c4b775
-69227f23d1e4cc46b4bb}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4 }
-     ]
-
-pdfTeX warning: pdflatex (file ./classc_mesh_collision__coll__graph.pdf): PDF i
-nclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_mesh_collision__coll__graph.pdf, id=6478, 401.5pt x 399.4925pt>
-File: classc_mesh_collision__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_mesh_collision__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 10--12
- [] 
- []
-
-[220 <./classc_mesh_collision__coll__graph.pdf>])
-(./classc_mesh_file_collision.tex
-
-pdfTeX warning: pdflatex (file ./classc_mesh_file_collision__coll__graph.pdf): 
-PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-
-<classc_mesh_file_collision__coll__graph.pdf, id=6498, 647.41875pt x 513.92pt>
-File: classc_mesh_file_collision__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_mesh_file_collision__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [221])
-(./classc_mesh_tree.tex
-
-pdfTeX warning: pdflatex (file ./classc_mesh_tree__coll__graph.pdf): PDF inclus
-ion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_mesh_tree__coll__graph.pdf, id=6509, 515.9275pt x 662.475pt>
-File: classc_mesh_tree__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_mesh_tree__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
- [] 
- []
-
-[222 <./classc_mesh_file_collision__coll__graph.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [223 <./classc_mesh_tree__coll__graph.pdf>]) (./classc_mesh_tree_array.tex
-
-pdfTeX warning: pdflatex (file ./classc_mesh_tree_array__coll__graph.pdf): PDF 
-inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_mesh_tree_array__coll__graph.pdf, id=6547, 526.96875pt x 662.475pt>
-File: classc_mesh_tree_array__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_mesh_tree_array__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [224]
-[225 <./classc_mesh_tree_array__coll__graph.pdf>]) (./classc_mesh_tree_node.tex
-
-
-pdfTeX warning: pdflatex (file ./classc_mesh_tree_node__coll__graph.pdf): PDF i
-nclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_mesh_tree_node__coll__graph.pdf, id=6579, 526.96875pt x 590.205pt>
-File: classc_mesh_tree_node__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_mesh_tree_node__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [226]
-[227 <./classc_mesh_tree_node__coll__graph.pdf>]) (./classc_min_l_l.tex
+) (./classc_mesh_array.tex) (./classc_min_l_l.tex [213]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
@@ -7379,33 +6225,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 pdfTeX warning: pdflatex (file ./classc_min_l_n__coll__graph.pdf): PDF inclusio
 n: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_min_l_n__coll__graph.pdf, id=6621, 207.77625pt x 106.3975pt>
+<classc_min_l_n__coll__graph.pdf, id=6116, 207.77625pt x 106.3975pt>
 File: classc_min_l_n__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_min_l_n__coll__graph.pdf> [228]) (./classcm_landscape.tex [229 <./c
-lassc_min_l_n__coll__graph.pdf>] [230]
-Overfull \hbox (21.88861pt too wide) in alignment at lines 140--143
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 143
- []
-
-
-Overfull \hbox (21.88861pt too wide) in alignment at lines 161--170
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 170
- []
-
-) (./classcm_landscape_array.tex) (./classc_model.tex
+<use classc_min_l_n__coll__graph.pdf>) (./classc_model.tex
 
 pdfTeX warning: pdflatex (file ./classc_model__coll__graph.pdf): PDF inclusion:
  found PDF version <1.5>, but at most version <1.4> allowed
-<classc_model__coll__graph.pdf, id=6710, 595.22375pt x 674.52pt>
+<classc_model__coll__graph.pdf, id=6119, 583.17876pt x 742.775pt>
 File: classc_model__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_model__coll__graph.pdf>
@@ -7413,91 +6240,41 @@ Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
  [] 
  []
 
-[231] [232 <./classc_model__coll__graph.pdf>]) (./classc_momentum.tex
+[214 <./classc_min_l_n__coll__graph.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-pdfTeX warning: pdflatex (file ./classc_momentum__coll__graph.pdf): PDF inclusi
-on: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_momentum__coll__graph.pdf, id=6751, 199.74625pt x 174.6525pt>
-File: classc_momentum__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_momentum__coll__graph.pdf> [233 <./classc_momentum__coll__graph.pdf
->] [234] [235] [236]) (./classc_mouse.tex
+ [215 <./classc_model__coll__graph.pdf>]) (./classc_mouse.tex
 
 pdfTeX warning: pdflatex (file ./classc_mouse__coll__graph.pdf): PDF inclusion:
  found PDF version <1.5>, but at most version <1.4> allowed
-<classc_mouse__coll__graph.pdf, id=6928, 321.2pt x 578.16pt>
+<classc_mouse__coll__graph.pdf, id=6162, 326.21875pt x 638.385pt>
 File: classc_mouse__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_mouse__coll__graph.pdf> [237]
-Overfull \vbox (11.01729pt too high) has occurred while \output is active []
+<use classc_mouse__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [216]
+Overfull \vbox (35.00246pt too high) has occurred while \output is active []
 
 
-[238 <./classc_mouse__coll__graph.pdf>]
-Overfull \hbox (1.42955pt too wide) in paragraph at lines 86--86
+[217 <./classc_mouse__coll__graph.pdf>]
+Overfull \hbox (1.42955pt too wide) in paragraph at lines 96--96
 []\T1/phv/m/sl/9 This will lock the mouse cur-sor to the cen-tre of the win-dow
  (al-low-ing un-lim-ited scrolling). 
  []
 
-[239]) (./classc_node_list.tex
 
-pdfTeX warning: pdflatex (file ./classc_node_list__coll__graph.pdf): PDF inclus
-ion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_node_list__coll__graph.pdf, id=6998, 638.385pt x 734.745pt>
-File: classc_node_list__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_node_list__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
- [] 
+Overfull \hbox (6.27606pt too wide) in paragraph at lines 108--110
+[][][]\T1/phv/m/n/10 cCollisionList[][] $\OMS/ztmcm/m/n/10 ^^C$ [][]\T1/phv/m/n
+/10 Se-lec-tion[][] (cMouseC-ol-li-sionOb-ject $\OMS/ztmcm/m/n/10 ^^C$\T1/phv/m
+/n/10 lpMouse, uint32 li-Fil-ter=0, [][]cCol-
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [240]
-[241 <./classc_node_list__coll__graph.pdf>]
-Overfull \hbox (21.88861pt too wide) in alignment at lines 79--84
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 84
- []
-
-[242]
-Overfull \hbox (21.88861pt too wide) in alignment at lines 102--105
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 105
- []
-
-
-Overfull \hbox (21.88861pt too wide) in alignment at lines 121--126
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 126
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [243]
-Overfull \hbox (21.88861pt too wide) in alignment at lines 145--150
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 150
- []
-
-) (./classc_node_list_node.tex) (./classc_parent_stack.tex
+[218]) (./classc_parent_stack.tex
 
 pdfTeX warning: pdflatex (file ./classc_parent_stack__coll__graph.pdf): PDF inc
 lusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_parent_stack__coll__graph.pdf, id=7091, 647.41875pt x 449.68pt>
+<classc_parent_stack__coll__graph.pdf, id=6237, 647.41875pt x 449.68pt>
 File: classc_parent_stack__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_parent_stack__coll__graph.pdf>
@@ -7508,62 +6285,13 @@ Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [244]
-[245 <./classc_parent_stack__coll__graph.pdf>]) (./classc_particle.tex
-
-pdfTeX warning: pdflatex (file ./classc_particle__coll__graph.pdf): PDF inclusi
-on: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_particle__coll__graph.pdf, id=7130, 196.735pt x 174.6525pt>
-File: classc_particle__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_particle__coll__graph.pdf>
-Overfull \hbox (4.51517pt too wide) in paragraph at lines 26--26
-[]\T1/phv/m/sl/9 This is the func-tion that will up-date a cPar-ti-cles Po-si-t
-ion. if WT_-PARTICLE_-HANDLER_-
- []
-
-
-Overfull \hbox (4.51517pt too wide) in paragraph at lines 51--51
-[]\T1/phv/m/sl/9 This is the func-tion that will up-date a cPar-ti-cles Po-si-t
-ion. if WT_-PARTICLE_-HANDLER_-
- []
-
-[246pdfTeX warning (ext4): destination with the same identifier (name{classc_pa
-rticle_a208780eb109c709449a2edd3f7867e51}) has been already used, duplicate ign
-ored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.51 ... this automatically. \end{DoxyCompactList}
-                                                  \end{DoxyCompactItemize} <./c
-lassc_particle__coll__graph.pdf>]) (./classc_particle_handler.tex
-
-pdfTeX warning: pdflatex (file ./classc_particle_handler__coll__graph.pdf): PDF
- inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_particle_handler__coll__graph.pdf, id=7164, 628.3475pt x 674.52pt>
-File: classc_particle_handler__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_particle_handler__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 10--12
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [247]
-[248 <./classc_particle_handler__coll__graph.pdf>])
+ [219]
+[220 <./classc_parent_stack__coll__graph.pdf>])
 (./classc_perspective_control.tex
-Overfull \hbox (61.03653pt too wide) in paragraph at lines 38--4
-\T1/phv/m/n/10 work in teh back-ground and han-dle ob-jects of types [][]cPar-t
-i-cle[][],[][]cGravityParticle[][],[][]cWindAndGravityParticle[][].
- []
-
-
 
 pdfTeX warning: pdflatex (file ./classc_perspective_control__coll__graph.pdf): 
 PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_perspective_control__coll__graph.pdf, id=7199, 465.74pt x 285.065pt>
+<classc_perspective_control__coll__graph.pdf, id=6279, 465.74pt x 285.065pt>
 File: classc_perspective_control__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_perspective_control__coll__graph.pdf>
@@ -7571,29 +6299,25 @@ Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
  [] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [249]
+[221 <./classc_perspective_control__coll__graph.pdf>]
 Overfull \hbox (0.49792pt too wide) in paragraph at lines 61--61
 []\T1/phv/m/sl/9 This will set the Fur-thest dis-tance [][]cCam-era[][] will re
 n-der poly-gons in Or-tho-graphic space. 
  []
 
-[250 <./classc_perspective_control__coll__graph.pdf>]) (./classc_plane.tex
-[251]) (./classc_plane_list.tex [252]
+) (./classc_plane.tex [222]) (./classc_plane_list.tex [223]
 
 pdfTeX warning: pdflatex (file ./classc_plane_list__coll__graph.pdf): PDF inclu
 sion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_plane_list__coll__graph.pdf, id=7323, 196.735pt x 234.8775pt>
+<classc_plane_list__coll__graph.pdf, id=6395, 196.735pt x 234.8775pt>
 File: classc_plane_list__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_plane_list__coll__graph.pdf>) (./classc_point.tex [253 <./classc_pl
+<use classc_plane_list__coll__graph.pdf>) (./classc_point.tex [224 <./classc_pl
 ane_list__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_point__coll__graph.pdf): PDF inclusion:
  found PDF version <1.5>, but at most version <1.4> allowed
-<classc_point__coll__graph.pdf, id=7348, 471.7625pt x 674.52pt>
+<classc_point__coll__graph.pdf, id=6420, 500.87125pt x 734.745pt>
 File: classc_point__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_point__coll__graph.pdf>
@@ -7604,41 +6328,31 @@ Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [254]
-Overfull \vbox (7.92683pt too high) has occurred while \output is active []
+ [225]
+Overfull \vbox (22.80144pt too high) has occurred while \output is active []
 
 
-[255 <./classc_point__coll__graph.pdf>]) (./classc_polygon.tex
+[226 <./classc_point__coll__graph.pdf>]) (./classc_polygon.tex
 
 pdfTeX warning: pdflatex (file ./classc_polygon__coll__graph.pdf): PDF inclusio
 n: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_polygon__coll__graph.pdf, id=7379, 136.51pt x 174.6525pt>
+<classc_polygon__coll__graph.pdf, id=6451, 136.51pt x 174.6525pt>
 File: classc_polygon__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_polygon__coll__graph.pdf> [256 <./classc_polygon__coll__graph.pdf>]
-) (./classc_polygon_list.tex [257]
+<use classc_polygon__coll__graph.pdf> [227 <./classc_polygon__coll__graph.pdf>]
+) (./classc_polygon_list.tex [228]
 
 pdfTeX warning: pdflatex (file ./classc_polygon_list__coll__graph.pdf): PDF inc
 lusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_polygon_list__coll__graph.pdf, id=7449, 208.78pt x 307.1475pt>
+<classc_polygon_list__coll__graph.pdf, id=6520, 208.78pt x 307.1475pt>
 File: classc_polygon_list__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_polygon_list__coll__graph.pdf> [258 <./classc_polygon_list__coll__g
-raph.pdf>]) (./classc_predictive_aiming.tex) (./classc_predictive_tracking.tex
-[259]
-
-pdfTeX warning: pdflatex (file ./classc_predictive_tracking__coll__graph.pdf): 
-PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-
-<classc_predictive_tracking__coll__graph.pdf, id=7493, 304.13625pt x 186.6975pt
->
-File: classc_predictive_tracking__coll__graph.pdf Graphic file (type pdf)
- <use classc_predictive_tracking__coll__graph.pdf> [260 <./classc_predictive_tr
-acking__coll__graph.pdf>]) (./classc_process.tex
+<use classc_polygon_list__coll__graph.pdf> [229 <./classc_polygon_list__coll__g
+raph.pdf>]) (./classc_process.tex
 
 pdfTeX warning: pdflatex (file ./classc_process__coll__graph.pdf): PDF inclusio
 n: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_process__coll__graph.pdf, id=7531, 627.34375pt x 437.635pt>
+<classc_process__coll__graph.pdf, id=6557, 627.34375pt x 437.635pt>
 File: classc_process__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_process__coll__graph.pdf>
@@ -7646,11 +6360,7 @@ Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
  [] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [261]
-[262 <./classc_process__coll__graph.pdf>] [263] [264]
+[230 <./classc_process__coll__graph.pdf>] [231] [232]
 Overfull \hbox (21.88861pt too wide) in alignment at lines 154--157
  [] [] 
  []
@@ -7659,19 +6369,11 @@ Overfull \hbox (21.88861pt too wide) in alignment at lines 154--157
 Underfull \vbox (badness 10000) detected at line 157
  []
 
-) (./classc_ray_collision.tex
-
-pdfTeX warning: pdflatex (file ./classc_ray_collision__coll__graph.pdf): PDF in
-clusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_ray_collision__coll__graph.pdf, id=7601, 170.6375pt x 277.035pt>
-File: classc_ray_collision__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_ray_collision__coll__graph.pdf> [265 <./classc_ray_collision__coll_
-_graph.pdf>]) (./classc_reference_list.tex) (./classc_render_node.tex [266]
+) (./classc_reference_list.tex [233]) (./classc_render_node.tex
 
 pdfTeX warning: pdflatex (file ./classc_render_node__coll__graph.pdf): PDF incl
 usion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_render_node__coll__graph.pdf, id=7644, 398.48875pt x 289.08pt>
+<classc_render_node__coll__graph.pdf, id=6640, 398.48875pt x 289.08pt>
 File: classc_render_node__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_render_node__coll__graph.pdf>
@@ -7679,26 +6381,30 @@ Overfull \hbox (52.0pt too wide) in paragraph at lines 15--17
  [] 
  []
 
-[267 <./classc_render_node__coll__graph.pdf>]) (./classc_render_object.tex
+
+Underfull \vbox (badness 4608) has occurred while \output is active []
+
+ [234])
+(./classc_render_object.tex [235 <./classc_render_node__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_render_object__coll__graph.pdf): PDF in
 clusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_render_object__coll__graph.pdf, id=7674, 428.60126pt x 674.52pt>
+<classc_render_object__coll__graph.pdf, id=6680, 439.6425pt x 734.745pt>
 File: classc_render_object__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_render_object__coll__graph.pdf>
-Overfull \hbox (36.25772pt too wide) in paragraph at lines 15--17
+Overfull \hbox (14.04004pt too wide) in paragraph at lines 15--17
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [268]
+ [236]
 Overfull \vbox (36.00246pt too high) has occurred while \output is active []
 
 
-[269 <./classc_render_object__coll__graph.pdf>] [270] [271]
+[237 <./classc_render_object__coll__graph.pdf>] [238] [239]
 Overfull \hbox (21.88861pt too wide) in alignment at lines 182--192
  [] [] 
  []
@@ -7718,24 +6424,24 @@ Overfull \hbox (32.23358pt too wide) in paragraph at lines 223--4
 
 pdfTeX warning: pdflatex (file ./classc_render_pointer__coll__graph.pdf): PDF i
 nclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_render_pointer__coll__graph.pdf, id=7785, 434.62375pt x 674.52pt>
+<classc_render_pointer__coll__graph.pdf, id=6790, 451.6875pt x 734.745pt>
 File: classc_render_pointer__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_render_pointer__coll__graph.pdf>
-Overfull \hbox (41.61496pt too wide) in paragraph at lines 15--17
+Overfull \hbox (23.87675pt too wide) in paragraph at lines 15--17
  [] 
  []
 
-[272]
+[240]
 Overfull \vbox (36.00246pt too high) has occurred while \output is active []
 
 
-[273 <./classc_render_pointer__coll__graph.pdf>]) (./classc_r_g_b.tex [274])
-(./classc_r_g_b_a.tex [275]) (./classc_shader_program.tex
+[241 <./classc_render_pointer__coll__graph.pdf>]) (./classc_r_g_b.tex [242])
+(./classc_r_g_b_a.tex [243]) (./classc_shader_program.tex
 
 pdfTeX warning: pdflatex (file ./classc_shader_program__coll__graph.pdf): PDF i
 nclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_shader_program__coll__graph.pdf, id=7888, 418.56375pt x 517.935pt>
+<classc_shader_program__coll__graph.pdf, id=6893, 428.60126pt x 578.16pt>
 File: classc_shader_program__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_shader_program__coll__graph.pdf>
@@ -7746,9 +6452,9 @@ Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [276]
-[277 <./classc_shader_program__coll__graph.pdf>] [278]) (./classc_signal.tex
-[279]) (./classc_simplex_noise.tex
+ [244]
+[245 <./classc_shader_program__coll__graph.pdf>] [246]) (./classc_signal.tex
+[247]) (./classc_simplex_noise.tex
 Overfull \hbox (7.81938pt too wide) in paragraph at lines 7--8
 \T1/phv/m/n/10 Simplex Noise Gen-er-a-tor. Based on code by Ste-fan Gus-tavson 
 ([][]\T1/pcr/m/n/10 stegu@itn.liu.se[][]\T1/phv/m/n/10 ).
@@ -7760,121 +6466,86 @@ Overfull \hbox (7.81938pt too wide) in paragraph at lines 20--21
 ([][]\T1/pcr/m/n/10 stegu@itn.liu.se[][]\T1/phv/m/n/10 ).
  []
 
-) (./classc_sphere_collision.tex [280]
+[248]) (./classc_sphere_collision.tex
 
 pdfTeX warning: pdflatex (file ./classc_sphere_collision__coll__graph.pdf): PDF
  inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_sphere_collision__coll__graph.pdf, id=8016, 170.6375pt x 160.6pt>
+<classc_sphere_collision__coll__graph.pdf, id=7022, 170.6375pt x 160.6pt>
 File: classc_sphere_collision__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_sphere_collision__coll__graph.pdf> [281 <./classc_sphere_collision_
-_coll__graph.pdf>]) (./classc_sync.tex
+<use classc_sphere_collision__coll__graph.pdf>) (./classc_sync.tex [249 <./clas
+sc_sphere_collision__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_sync__coll__graph.pdf): PDF inclusion: 
 found PDF version <1.5>, but at most version <1.4> allowed
-<classc_sync__coll__graph.pdf, id=8056, 194.7275pt x 102.3825pt>
+<classc_sync__coll__graph.pdf, id=7049, 194.7275pt x 102.3825pt>
 File: classc_sync__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_sync__coll__graph.pdf>) (./classc_t_b_n_vectors.tex [282 <./classc_
-sync__coll__graph.pdf>]
+<use classc_sync__coll__graph.pdf>) (./classc_t_b_n_vectors.tex
 
 pdfTeX warning: pdflatex (file ./classc_t_b_n_vectors__coll__graph.pdf): PDF in
 clusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_t_b_n_vectors__coll__graph.pdf, id=8081, 204.765pt x 200.75pt>
+<classc_t_b_n_vectors__coll__graph.pdf, id=7057, 204.765pt x 200.75pt>
 File: classc_t_b_n_vectors__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_t_b_n_vectors__coll__graph.pdf>) (./classc_text.tex
-
-pdfTeX warning: pdflatex (file ./classc_text__coll__graph.pdf): PDF inclusion: 
-found PDF version <1.5>, but at most version <1.4> allowed
-<classc_text__coll__graph.pdf, id=8086, 447.6725pt x 734.745pt>
-File: classc_text__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_text__coll__graph.pdf>
-Overfull \hbox (20.59785pt too wide) in paragraph at lines 15--17
- [] 
- []
-
-[283 <./classc_t_b_n_vectors__coll__graph.pdf>]
-Overfull \vbox (36.00246pt too high) has occurred while \output is active []
-
-
-[284 <./classc_text__coll__graph.pdf>]) (./classc_text_button.tex
-
-pdfTeX warning: pdflatex (file ./classc_text_button__coll__graph.pdf): PDF incl
-usion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_text_button__coll__graph.pdf, id=8127, 526.96875pt x 794.97pt>
-File: classc_text_button__coll__graph.pdf Graphic file (type pdf)
-
-<use classc_text_button__coll__graph.pdf>
-Overfull \hbox (52.74239pt too wide) in paragraph at lines 15--17
- [] 
- []
-
-
-Underfull \vbox (badness 1558) has occurred while \output is active []
-
- [285]
-Overfull \vbox (36.00246pt too high) has occurred while \output is active []
-
-
-[286 <./classc_text_button__coll__graph.pdf>]) (./classc_texture.tex
+<use classc_t_b_n_vectors__coll__graph.pdf> [250 <./classc_sync__coll__graph.pd
+f>]) (./classc_texture.tex
 
 pdfTeX warning: pdflatex (file ./classc_texture__coll__graph.pdf): PDF inclusio
 n: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_texture__coll__graph.pdf, id=8161, 321.2pt x 505.89pt>
+<classc_texture__coll__graph.pdf, id=7081, 326.21875pt x 566.115pt>
 File: classc_texture__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_texture__coll__graph.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2435) has occurred while \output is active []
 
- [287]
-[288 <./classc_texture__coll__graph.pdf>] [289])
-(./classc_uniform_boolean_vector1.tex
+ [251 <./classc_t_b_n_vectors__coll__graph.pdf>] [252 <./classc_texture__coll__
+graph.pdf>]
+[253]) (./classc_uniform_boolean_vector1.tex
 
 pdfTeX warning: pdflatex (file ./classc_uniform_boolean_vector1__coll__graph.pd
 f): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_uniform_boolean_vector1__coll__graph.pdf, id=8284, 204.765pt x 277.035p
+<classc_uniform_boolean_vector1__coll__graph.pdf, id=7207, 204.765pt x 277.035p
 t>
 File: classc_uniform_boolean_vector1__coll__graph.pdf Graphic file (type pdf)
  <use classc_uniform_boolean_vector1__coll__graph.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 8056) has occurred while \output is active []
 
- [290])
+ [254])
 (./classc_uniform_boolean_vector2.tex
 
 pdfTeX warning: pdflatex (file ./classc_uniform_boolean_vector2__coll__graph.pd
 f): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_uniform_boolean_vector2__coll__graph.pdf, id=8305, 204.765pt x 277.035p
+<classc_uniform_boolean_vector2__coll__graph.pdf, id=7229, 204.765pt x 277.035p
 t>
 File: classc_uniform_boolean_vector2__coll__graph.pdf Graphic file (type pdf)
- <use classc_uniform_boolean_vector2__coll__graph.pdf> [291 <./classc_uniform_b
+ <use classc_uniform_boolean_vector2__coll__graph.pdf> [255 <./classc_uniform_b
 oolean_vector1__coll__graph.pdf>]) (./classc_uniform_boolean_vector3.tex
 
 pdfTeX warning: pdflatex (file ./classc_uniform_boolean_vector3__coll__graph.pd
 f): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_uniform_boolean_vector3__coll__graph.pdf, id=8332, 204.765pt x 277.035p
+<classc_uniform_boolean_vector3__coll__graph.pdf, id=7256, 204.765pt x 277.035p
 t>
 File: classc_uniform_boolean_vector3__coll__graph.pdf Graphic file (type pdf)
- <use classc_uniform_boolean_vector3__coll__graph.pdf> [292 <./classc_uniform_b
+ <use classc_uniform_boolean_vector3__coll__graph.pdf> [256 <./classc_uniform_b
 oolean_vector2__coll__graph.pdf>]) (./classc_uniform_boolean_vector4.tex
 
 pdfTeX warning: pdflatex (file ./classc_uniform_boolean_vector4__coll__graph.pd
 f): PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 
-<classc_uniform_boolean_vector4__coll__graph.pdf, id=8359, 204.765pt x 277.035p
+<classc_uniform_boolean_vector4__coll__graph.pdf, id=7283, 204.765pt x 277.035p
 t>
 File: classc_uniform_boolean_vector4__coll__graph.pdf Graphic file (type pdf)
- <use classc_uniform_boolean_vector4__coll__graph.pdf> [293 <./classc_uniform_b
-oolean_vector3__coll__graph.pdf>]) (./classc_uniform_int_vector1.tex [294 <./cl
+ <use classc_uniform_boolean_vector4__coll__graph.pdf> [257 <./classc_uniform_b
+oolean_vector3__coll__graph.pdf>]) (./classc_uniform_int_vector1.tex [258 <./cl
 assc_uniform_boolean_vector4__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_uniform_int_vector1__coll__graph.pdf): 
 PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_uniform_int_vector1__coll__graph.pdf, id=8405, 180.675pt x 277.035pt>
+<classc_uniform_int_vector1__coll__graph.pdf, id=7328, 180.675pt x 277.035pt>
 File: classc_uniform_int_vector1__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_uniform_int_vector1__coll__graph.pdf>)
@@ -7882,124 +6553,144 @@ File: classc_uniform_int_vector1__coll__graph.pdf Graphic file (type pdf)
 
 pdfTeX warning: pdflatex (file ./classc_uniform_int_vector2__coll__graph.pdf): 
 PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_uniform_int_vector2__coll__graph.pdf, id=8416, 180.675pt x 277.035pt>
+<classc_uniform_int_vector2__coll__graph.pdf, id=7339, 180.675pt x 277.035pt>
 File: classc_uniform_int_vector2__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_uniform_int_vector2__coll__graph.pdf> [295 <./classc_uniform_int_ve
+<use classc_uniform_int_vector2__coll__graph.pdf> [259 <./classc_uniform_int_ve
 ctor1__coll__graph.pdf>]) (./classc_uniform_int_vector3.tex
 
 pdfTeX warning: pdflatex (file ./classc_uniform_int_vector3__coll__graph.pdf): 
 PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_uniform_int_vector3__coll__graph.pdf, id=8446, 180.675pt x 277.035pt>
+<classc_uniform_int_vector3__coll__graph.pdf, id=7370, 180.675pt x 277.035pt>
 File: classc_uniform_int_vector3__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_uniform_int_vector3__coll__graph.pdf> [296 <./classc_uniform_int_ve
+<use classc_uniform_int_vector3__coll__graph.pdf> [260 <./classc_uniform_int_ve
 ctor2__coll__graph.pdf>]) (./classc_uniform_int_vector4.tex
 
 pdfTeX warning: pdflatex (file ./classc_uniform_int_vector4__coll__graph.pdf): 
 PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_uniform_int_vector4__coll__graph.pdf, id=8473, 180.675pt x 277.035pt>
+<classc_uniform_int_vector4__coll__graph.pdf, id=7397, 180.675pt x 277.035pt>
 File: classc_uniform_int_vector4__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_uniform_int_vector4__coll__graph.pdf> [297 <./classc_uniform_int_ve
+<use classc_uniform_int_vector4__coll__graph.pdf> [261 <./classc_uniform_int_ve
 ctor3__coll__graph.pdf>]) (./classc_uniform_matrix2.tex
 
 pdfTeX warning: pdflatex (file ./classc_uniform_matrix2__coll__graph.pdf): PDF 
 inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_uniform_matrix2__coll__graph.pdf, id=8500, 180.675pt x 277.035pt>
+<classc_uniform_matrix2__coll__graph.pdf, id=7424, 180.675pt x 277.035pt>
 File: classc_uniform_matrix2__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_uniform_matrix2__coll__graph.pdf> [298 <./classc_uniform_int_vector
-4__coll__graph.pdf>]) (./classc_uniform_matrix3.tex [299 <./classc_uniform_matr
+<use classc_uniform_matrix2__coll__graph.pdf> [262 <./classc_uniform_int_vector
+4__coll__graph.pdf>]) (./classc_uniform_matrix3.tex [263 <./classc_uniform_matr
 ix2__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_uniform_matrix3__coll__graph.pdf): PDF 
 inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_uniform_matrix3__coll__graph.pdf, id=8543, 180.675pt x 277.035pt>
+<classc_uniform_matrix3__coll__graph.pdf, id=7466, 180.675pt x 277.035pt>
 File: classc_uniform_matrix3__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_uniform_matrix3__coll__graph.pdf>) (./classc_uniform_matrix4.tex
-[300 <./classc_uniform_matrix3__coll__graph.pdf>]
+[264 <./classc_uniform_matrix3__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_uniform_matrix4__coll__graph.pdf): PDF 
 inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_uniform_matrix4__coll__graph.pdf, id=8570, 180.675pt x 277.035pt>
+<classc_uniform_matrix4__coll__graph.pdf, id=7493, 180.675pt x 277.035pt>
 File: classc_uniform_matrix4__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_uniform_matrix4__coll__graph.pdf>) (./classc_uniform_store.tex
-[301 <./classc_uniform_matrix4__coll__graph.pdf>]
+[265 <./classc_uniform_matrix4__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_uniform_store__coll__graph.pdf): PDF in
 clusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_uniform_store__coll__graph.pdf, id=8599, 160.6pt x 160.6pt>
+<classc_uniform_store__coll__graph.pdf, id=7523, 160.6pt x 160.6pt>
 File: classc_uniform_store__coll__graph.pdf Graphic file (type pdf)
 
 <use classc_uniform_store__coll__graph.pdf>) (./classc_uniform_vector1.tex
-[302 <./classc_uniform_store__coll__graph.pdf>]
+[266 <./classc_uniform_store__coll__graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./classc_uniform_vector1__coll__graph.pdf): PDF 
 inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_uniform_vector1__coll__graph.pdf, id=8632, 180.675pt x 277.035pt>
+<classc_uniform_vector1__coll__graph.pdf, id=7556, 180.675pt x 277.035pt>
 File: classc_uniform_vector1__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_uniform_vector1__coll__graph.pdf> [303 <./classc_uniform_vector1__c
+<use classc_uniform_vector1__coll__graph.pdf> [267 <./classc_uniform_vector1__c
 oll__graph.pdf>]) (./classc_uniform_vector2.tex
 
 pdfTeX warning: pdflatex (file ./classc_uniform_vector2__coll__graph.pdf): PDF 
 inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_uniform_vector2__coll__graph.pdf, id=8657, 180.675pt x 277.035pt>
+<classc_uniform_vector2__coll__graph.pdf, id=7581, 180.675pt x 277.035pt>
 File: classc_uniform_vector2__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_uniform_vector2__coll__graph.pdf> [304 <./classc_uniform_vector2__c
+<use classc_uniform_vector2__coll__graph.pdf> [268 <./classc_uniform_vector2__c
 oll__graph.pdf>]) (./classc_uniform_vector3.tex
 
 pdfTeX warning: pdflatex (file ./classc_uniform_vector3__coll__graph.pdf): PDF 
 inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_uniform_vector3__coll__graph.pdf, id=8682, 180.675pt x 277.035pt>
+<classc_uniform_vector3__coll__graph.pdf, id=7606, 180.675pt x 277.035pt>
 File: classc_uniform_vector3__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_uniform_vector3__coll__graph.pdf> [305 <./classc_uniform_vector3__c
+<use classc_uniform_vector3__coll__graph.pdf> [269 <./classc_uniform_vector3__c
 oll__graph.pdf>]) (./classc_uniform_vector4.tex
 
 pdfTeX warning: pdflatex (file ./classc_uniform_vector4__coll__graph.pdf): PDF 
 inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_uniform_vector4__coll__graph.pdf, id=8710, 180.675pt x 277.035pt>
+<classc_uniform_vector4__coll__graph.pdf, id=7633, 180.675pt x 277.035pt>
 File: classc_uniform_vector4__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_uniform_vector4__coll__graph.pdf> [306 <./classc_uniform_vector4__c
+<use classc_uniform_vector4__coll__graph.pdf> [270 <./classc_uniform_vector4__c
 oll__graph.pdf>]) (./classc_user_signal.tex) (./classc_user_variable.tex
-[307]) (./classc_variable_store.tex
+[271]) (./classc_u_v_sphere.tex [272]
 
-pdfTeX warning: pdflatex (file ./classc_variable_store__coll__graph.pdf): PDF i
-nclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_variable_store__coll__graph.pdf, id=8776, 175.65625pt x 174.6525pt>
-File: classc_variable_store__coll__graph.pdf Graphic file (type pdf)
+pdfTeX warning: pdflatex (file ./classc_u_v_sphere__coll__graph.pdf): PDF inclu
+sion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_u_v_sphere__coll__graph.pdf, id=7717, 326.21875pt x 626.34pt>
+File: classc_u_v_sphere__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_variable_store__coll__graph.pdf> [308]) (./classc_viewport.tex
+<use classc_u_v_sphere__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-pdfTeX warning: pdflatex (file ./classc_viewport__coll__graph.pdf): PDF inclusi
-on: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_viewport__coll__graph.pdf, id=8808, 465.74pt x 345.29pt>
-File: classc_viewport__coll__graph.pdf Graphic file (type pdf)
+ [273]
+Overfull \vbox (35.00246pt too high) has occurred while \output is active []
 
-<use classc_viewport__coll__graph.pdf>
-Overfull \hbox (55.0pt too wide) in paragraph at lines 15--17
- [] 
+
+[274 <./classc_u_v_sphere__coll__graph.pdf>]
+Overfull \hbox (19.47754pt too wide) in paragraph at lines 22--23
+[][][]\T1/phv/m/n/10 cUVSphere[][] (uint8 liSub-di-vi-sions=16, float lfU-V-Sph
+ere-Size=1.0f, bool lb-Nor-mals=false,
  []
 
 
+Overfull \hbox (21.88861pt too wide) in alignment at lines 47--56
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 56
+ []
+
+) (./classc_variable_store.tex
+
+pdfTeX warning: pdflatex (file ./classc_variable_store__coll__graph.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<classc_variable_store__coll__graph.pdf, id=7737, 175.65625pt x 174.6525pt>
+File: classc_variable_store__coll__graph.pdf Graphic file (type pdf)
+
+<use classc_variable_store__coll__graph.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [309 <./classc_variable_store__coll__graph.pdf>]) (./classc_viewport_control.t
-ex [310 <./classc_viewport__coll__graph.pdf>]
+ [275])
+(./classc_viewport_control.tex
 
 pdfTeX warning: pdflatex (file ./classc_viewport_control__coll__graph.pdf): PDF
  inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_viewport_control__coll__graph.pdf, id=8863, 187.70125pt x 174.6525pt>
+<classc_viewport_control__coll__graph.pdf, id=7750, 187.70125pt x 174.6525pt>
 File: classc_viewport_control__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_viewport_control__coll__graph.pdf> [311 <./classc_viewport_control_
-_coll__graph.pdf>] [312]
+<use classc_viewport_control__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [276 <./classc_variable_store__coll__graph.pdf>] [277 <./classc_viewport_contr
+ol__coll__graph.pdf>] [278]
 Overfull \hbox (21.88861pt too wide) in alignment at lines 187--196
  [] [] 
  []
@@ -8012,32 +6703,37 @@ Underfull \vbox (badness 10000) detected at line 196
 
 pdfTeX warning: pdflatex (file ./classc_void_variable__coll__graph.pdf): PDF in
 clusion: found PDF version <1.5>, but at most version <1.4> allowed
-<classc_void_variable__coll__graph.pdf, id=8957, 158.5925pt x 160.6pt>
+<classc_void_variable__coll__graph.pdf, id=7856, 158.5925pt x 160.6pt>
 File: classc_void_variable__coll__graph.pdf Graphic file (type pdf)
 
-<use classc_void_variable__coll__graph.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [313])
-(./classc_wind_and_gravity_particle.tex) (./classc_window.tex [314 <./classc_vo
-id_variable__coll__graph.pdf>]
+<use classc_void_variable__coll__graph.pdf>) (./classc_window.tex [279 <./class
+c_void_variable__coll__graph.pdf>]
 Overfull \hbox (2.37726pt too wide) in paragraph at lines 17--17
 []\T1/phv/m/sl/9 This will cre-ate a new [][]cWin-dow[][] class. Cre-ate a desk
 -top win-dow and Ini-tialiseOpenGL().
  []
 
 
-Overfull \hbox (2.37726pt too wide) in paragraph at lines 22--22
+Overfull \hbox (2.37726pt too wide) in paragraph at lines 32--32
 []\T1/phv/m/sl/9 This will cre-ate a new [][]cWin-dow[][] class. Cre-ate a desk
 -top win-dow and Ini-tialiseOpenGL().
  []
 
-) (./classv2_d_polygon.tex [315]) (./classv_collision_data.tex [316])
-(./classv_file.tex) (./refman.ind [317] [318
+[280]) (./classv2_d_polygon.tex [281]) (./classv_collision_data.tex)
+(./classv_file.tex
 
-] [319] [320
+pdfTeX warning: pdflatex (file ./classv_file__coll__graph.pdf): PDF inclusion: 
+found PDF version <1.5>, but at most version <1.4> allowed
+<classv_file__coll__graph.pdf, id=7946, 128.48pt x 160.6pt>
+File: classv_file__coll__graph.pdf Graphic file (type pdf)
 
-]) (./refman.aux)
+<use classv_file__coll__graph.pdf>
+Underfull \vbox (badness 4752) has occurred while \output is active []
+
+ [282])
+(./refman.ind [283 <./classv_file__coll__graph.pdf>] [284
+
+] [285]) (./refman.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -8046,13 +6742,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14217 strings out of 495061
- 302098 string characters out of 1182620
- 298197 words of memory out of 3000000
- 14525 multiletter control sequences out of 15000+50000
+ 13743 strings out of 495061
+ 288583 string characters out of 1182620
+ 290116 words of memory out of 3000000
+ 14320 multiletter control sequences out of 15000+50000
  86940 words of font info for 129 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 41i,16n,58p,1755b,577s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,15n,58p,1720b,623s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/cou
@@ -8061,9 +6757,9 @@ rier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb><
 -texlive/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/share/texmf-texlive/fonts/
 type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helveti
 c/uhvro8a.pfb>
-Output written on refman.pdf (334 pages, 5815540 bytes).
+Output written on refman.pdf (297 pages, 4981483 bytes).
 PDF statistics:
- 9749 PDF objects out of 10688 (max. 8388607)
- 2238 named destinations out of 2487 (max. 500000)
- 3518 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 8579 PDF objects out of 8907 (max. 8388607)
+ 2031 named destinations out of 2073 (max. 500000)
+ 3022 words of extra memory for PDF output out of 10000 (max. 10000000)
 

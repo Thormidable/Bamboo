@@ -9,47 +9,5 @@ A Procedurally generated cylindrical Renderable Object. This class will generate
 
 
 
-Collaboration diagram for cBeamMesh:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=400pt]{classc_beam_mesh__coll__graph}
-\end{center}
-\end{figure}
-\subsection*{Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{classc_beam_mesh_acf82cda9d282def977903ff877f36a26}{
-\hyperlink{classc_beam_mesh_acf82cda9d282def977903ff877f36a26}{cBeamMesh} (float Radius=0.1f, float Length=1.0f, uint16 Segments=6, vRenderNode $\ast$lpNode=cCamera::Instance()-\/$>$RenderList())}
-\label{classc_beam_mesh_acf82cda9d282def977903ff877f36a26}
-
-\begin{DoxyCompactList}\small\item\em Constructor to Create a Beam with the specified Dimensions. Segments must be an even integer. \end{DoxyCompactList}\item 
-\hypertarget{classc_beam_mesh_a1d2f2bfef0e3f96597ae6e1e73072030}{
-void \hyperlink{classc_beam_mesh_a1d2f2bfef0e3f96597ae6e1e73072030}{Length} (float Length)}
-\label{classc_beam_mesh_a1d2f2bfef0e3f96597ae6e1e73072030}
-
-\begin{DoxyCompactList}\small\item\em Sets the Length of the Cylinder. \end{DoxyCompactList}\item 
-\hypertarget{classc_beam_mesh_ac11934e813765321e76405cd96304088}{
-void \hyperlink{classc_beam_mesh_ac11934e813765321e76405cd96304088}{Radius} (float Radius)}
-\label{classc_beam_mesh_ac11934e813765321e76405cd96304088}
-
-\begin{DoxyCompactList}\small\item\em Sets the Radius of the Cylinder. \end{DoxyCompactList}\item 
-\hypertarget{classc_beam_mesh_ab59d3bb8c0a5c2944a206deaca3d2022}{
-void \hyperlink{classc_beam_mesh_ab59d3bb8c0a5c2944a206deaca3d2022}{GenerateData} (float Radius, float Length, uint16 Segments)}
-\label{classc_beam_mesh_ab59d3bb8c0a5c2944a206deaca3d2022}
-
-\begin{DoxyCompactList}\small\item\em Will regenerate the cylinder with the specified Specifications. \end{DoxyCompactList}\item 
-\hypertarget{classc_beam_mesh_aa4daa383162c2560c1c5ed47d22484e5}{
-float \hyperlink{classc_beam_mesh_aa4daa383162c2560c1c5ed47d22484e5}{Length} ()}
-\label{classc_beam_mesh_aa4daa383162c2560c1c5ed47d22484e5}
-
-\begin{DoxyCompactList}\small\item\em Returns the current Length of the Cylinder. \end{DoxyCompactList}\item 
-\hypertarget{classc_beam_mesh_a6068db701b4835449bd40a437e3ee908}{
-float \hyperlink{classc_beam_mesh_a6068db701b4835449bd40a437e3ee908}{Radius} ()}
-\label{classc_beam_mesh_a6068db701b4835449bd40a437e3ee908}
-
-\begin{DoxyCompactList}\small\item\em Returns the current Radius of the Cylinder. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
 \subsection{Detailed Description}
 A Procedurally generated cylindrical Renderable Object. This class will generate a cylinder with specified dimensions and segments. The origin for the cylinder is in the radial center of one end of the cylinder. 

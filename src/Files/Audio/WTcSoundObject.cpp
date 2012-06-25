@@ -3,8 +3,9 @@
 
 cSoundObject::~cSoundObject()
 {
-    delete mpSoundData;
+	delete mpSoundData;
     mpSoundData=0;
+
 }
 
 cSoundObject::cSoundObject()

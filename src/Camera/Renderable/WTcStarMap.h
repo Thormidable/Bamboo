@@ -43,6 +43,7 @@ public:
 	void Initialise(uint32 liParticles,float lfDist=0.0);
 
 	void RenderPainter();
+	void UpdateCache();
 
 	void Buffer();
 

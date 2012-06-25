@@ -13,17 +13,21 @@ public:
 
 	/**
 	* \brief This will generate an IcoSphere from the cMesh lpBase.
-	* \param lfRandomRange gives the range that verteces can be randomised on the initial model.
 	* \param liSubdivisions is the number of times the mesh can be subdivided.
 	* \param lfIcoSphereSize is the size in spatial units of the starting IcoSphere.
+	* \param lbNormals is whether the mesh needs Normal vectors.
+	* \param lbUV is whether the mesh needs UV Coordinates. UV is formed from two hemi spheres meeting at the waist.
 	**/
-	cIcoSphere(uint8 liSubdivisions,float lfIcoSphereSize);
+	cIcoSphere(uint8 liSubdivisions,float lfIcoSphereSize,bool lbNormals=false,bool lbUV=false);
+	cIcoSphere(cIcoSphere *lpOther);
 	~cIcoSphere();
 
     void Generate(uint8 liSubdivisions);
 	void SubdivideEdges();
 	void GenerateIcosphere();
 	void PushToSphere();
+
+	void Radius(float  lfNewSize);
 
 
 };

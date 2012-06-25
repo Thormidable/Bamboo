@@ -4,24 +4,15 @@
 }
 
 
-This will form a single object in the List owned by a \hyperlink{classc_collision_list}{cCollisionList}. It will store all the important data about a single collision. Currently all the important data is the other \hyperlink{classc_collision_object}{cCollisionObject} involved in the collision and the relative distance between teh two objects. This means that the list can be generated (very slow) and then is cached to allow sorting or other user controls on filtering, Without having to test collisions again.  
+This will form a single object in the List owned by a \hyperlink{classc_collision_list}{cCollisionList}. It will store all the important data about a single collision. Currently all the important data is the other cCollisionBase involved in the collision and the relative distance between teh two objects. This means that the list can be generated (very slow) and then is cached to allow sorting or other user controls on filtering, Without having to test collisions again.  
 
 
-
-
-Collaboration diagram for cCollisionListObject:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=400pt]{classc_collision_list_object__coll__graph}
-\end{center}
-\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classc_collision_list_object_a523f156c7f21b71a0385289215673d03}{
-void \hyperlink{classc_collision_list_object_a523f156c7f21b71a0385289215673d03}{RecalculateDistance} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpThis)}
-\label{classc_collision_list_object_a523f156c7f21b71a0385289215673d03}
+\hypertarget{classc_collision_list_object_ad469b6e0f98587c64cb2c74c1020ca61}{
+void \hyperlink{classc_collision_list_object_ad469b6e0f98587c64cb2c74c1020ca61}{RecalculateDistance} (cCollisionBase $\ast$lpThis)}
+\label{classc_collision_list_object_ad469b6e0f98587c64cb2c74c1020ca61}
 
 \begin{DoxyCompactList}\small\item\em This will Recalculate the Distances from the base object as this cannot be determined when the collision is detected. \end{DoxyCompactList}\item 
 \hypertarget{classc_collision_list_object_a760a3e6b5627e5afe233291bda0e8909}{
@@ -32,4 +23,4 @@ c3DVf \hyperlink{classc_collision_list_object_a760a3e6b5627e5afe233291bda0e8909}
 
 
 \subsection{Detailed Description}
-This will form a single object in the List owned by a \hyperlink{classc_collision_list}{cCollisionList}. It will store all the important data about a single collision. Currently all the important data is the other \hyperlink{classc_collision_object}{cCollisionObject} involved in the collision and the relative distance between teh two objects. This means that the list can be generated (very slow) and then is cached to allow sorting or other user controls on filtering, Without having to test collisions again. 
+This will form a single object in the List owned by a \hyperlink{classc_collision_list}{cCollisionList}. It will store all the important data about a single collision. Currently all the important data is the other cCollisionBase involved in the collision and the relative distance between teh two objects. This means that the list can be generated (very slow) and then is cached to allow sorting or other user controls on filtering, Without having to test collisions again. 

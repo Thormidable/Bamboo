@@ -33,8 +33,8 @@ Initialise();
 cRenderNode::~cRenderNode()
 {
 	KillAll();
-	//delete mpObjects;
-	//mpObjects=0;
+	delete mpObjects;
+	mpObjects=0;
 	mpRenderer=0;
 	mcOwnerNode.Node=0;
 	mpCamera=0;

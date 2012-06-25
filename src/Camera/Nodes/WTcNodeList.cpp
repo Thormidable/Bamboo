@@ -68,7 +68,7 @@ float cNodeList::lsPosition[16];
 
 cNodeList::~cNodeList()
 {
-    DeleteAll();
+    KillAll();
     mpCamera=0;
 }
 
@@ -463,6 +463,18 @@ void cNodeList::TreeProcessSignal(SIGNAL lsSignal)
   for(uint32 liCount=0;liCount<mpList.Items();++liCount)
   {
        mpList[liCount]->mpObject->TreeProcessSignal(lsSignal);
+  }
+ }
+}
+
+void cNodeList::TreeSignal(SIGNAL lsSignal)
+{
+ Signal(lsSignal);
+ if(mpList.Items())
+ {
+  for(uint32 liCount=0;liCount<mpList.Items();++liCount)
+  {
+       mpList[liCount]->mpObject->TreeSignal(lsSignal);
   }
  }
 }

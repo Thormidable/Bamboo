@@ -1,187 +1,113 @@
 #include "../../WTBamboo.h"
 
-uint32 cShaderVariables::GetUniformPosition(string Name)
-{
- uint32 liCount;
- for(liCount=0;liCount<miUniforms;++liCount)
- {
-	if(mpUniformText[liCount]==Name) return liCount+1;
- }
- return 0;
 
-}
-
-int32 cShaderVariables::GetAttributePosition(string Name)
+uint32 cShaderVariableSet::GetVariablePosition(string Name)
 {
 uint32 liCount;
- for(liCount=0;liCount<miAttributes;++liCount)
+ for(liCount=0;liCount<miVariables;++liCount)
  {
-	if(mpAttributeText[liCount]==Name) return liCount+1;
-
-}
+	if(CompareVariables(mpVariables[liCount].Start(),Name.c_str()," ,;"))
+	{
+	    return liCount+1;
+	}
+ }
  return 0;
 
 }
 
-void cShaderVariables::GetUniformLocations(uint32 liProgramID,cShader **lpShader,uint32 liShaders)
+uint32 cShaderVariableSet::GetUniformPosition(string Name)
 {
-	delete []mpUniforms;
-	delete []mpUniformText;
+ uint32 liCount;
+ for(liCount=0;liCount<miVariables;++liCount)
+ {
+	if(mpVariables[liCount].Uniform() && CompareVariables(mpVariables[liCount].Start(),Name.c_str()," ,;"))
+	{
+	    return liCount+1;
+	}
+ }
+ return 0;
+
+}
+
+uint32 cShaderVariableSet::GetAttributePosition(string Name)
+{
+uint32 liCount;
+ for(liCount=0;liCount<miVariables;++liCount)
+ {
+	if(mpVariables[liCount].Attribute() && CompareVariables(mpVariables[liCount].Start(),Name.c_str()," ,;"))
+	{
+	    return liCount+1;
+	}
+ }
+ return 0;
+
+}
+
+void cShaderVariableSet::GetVariableLocations(uint32 liProgramID,cShader **lpShader,uint32 liShaders)
+{
+	delete []mpVariables;
 
 	uint32 liCount;
 	uint32 liLoop;
-	uint32 liUni;
+	uint32 liVars;
 	uint32 liOther;
-	miUniforms=0;
+	miVariables=0;
 	for(liCount=0;liCount<liShaders;++liCount)
 	{
-		miUniforms+=lpShader[liCount]->miUniforms;
+		miVariables+=lpShader[liCount]->Variables();
 	}
-
-	mpUniforms=new int32[miUniforms];
-	mpUniformText=new string[miUniforms];
- char Variable[256];
- char *Text;
+	mpVariables=new cShaderVariable[miVariables];
  liOther=0;
  for(liLoop=0;liLoop<liShaders;++liLoop)
  {
-	 Text=(char*)lpShader[liLoop]->mpShaderText[0];
-	 liUni=lpShader[liLoop]->miUniforms;
- 	for(liCount=0;liCount<liUni;++liCount)
+	 liVars=lpShader[liLoop]->Variables();
+ 	for(liCount=0;liCount<liVars;++liCount)
  	{
-  		LineCopy(Variable,&Text[lpShader[liLoop]->mpUniforms[liCount]],"; ,@([");
-  		mpUniforms[liOther]=glGetUniformLocation(liProgramID,Variable);
-		mpUniformText[liOther]=Variable;
-  		if(mpUniforms[liOther]==-1) {trace("Error Getting Shader Variable " << Variable);}
-  		else printf("Program ID %lu : Variable ID %li : %s\n",liProgramID,mpUniforms[liOther],Variable);
-		++liOther;
+		mpVariables[liOther]=lpShader[liLoop]->Variable(liCount);
+		if(lpShader[liLoop]->Variable(liCount).Uniform()) mpVariables[liOther].SetID(glGetUniformLocation(liProgramID,mpVariables[liOther].Start()));
+		if(lpShader[liLoop]->Variable(liCount).Attribute()) mpVariables[liOther].SetID(glGetAttribLocation(liProgramID,mpVariables[liOther].Start()));
+  		if(mpVariables[liOther].ID()==-1)
+		{
+			trace("Error Getting Shader Variable " << mpVariables[liOther].Start());
+		}
+  		else
+		{
+			printf("Program ID %lu : Variable ID %li : %s\n",liProgramID,mpVariables[liOther].ID(),mpVariables[liOther].Start());
+			++liOther;
+		}
  	}
  }
+ miVariables=liOther;
 }
 
-void cShaderVariables::GetAttributeLocations(uint32 liProgramID,cShader **lpShader,uint32 liShaders)
+cShaderVariableSet::cShaderVariableSet()
 {
-
-	delete []mpAttributes;
-	delete []mpAttributeText;
-	uint32 liCount;
-	uint32 liLoop;
-	uint32 liUni;
-	uint32 liOther;
-	miAttributes=0;
-	for(liCount=0;liCount<liShaders;++liCount)
-	{
-		miAttributes+=lpShader[liCount]->miAttributes;
-	}
-
-	mpAttributes=new int32[miAttributes];
-	mpAttributeText=new string[miAttributes];
- char Variable[256];
-
-char *Text;
- liOther=0;
- for(liLoop=0;liLoop<liShaders;++liLoop)
- {
-	 Text=(char*)lpShader[liLoop]->mpShaderText[0];
-	 liUni=lpShader[liLoop]->miAttributes;
- 	for(liCount=0;liCount<liUni;++liCount)
- 	{
-  		LineCopy(Variable,&Text[lpShader[liLoop]->mpAttributes[liCount]],"; ,@([");
-  		mpAttributes[liOther]=glGetAttribLocation(liProgramID,Variable);
-		mpAttributeText[liOther]=Variable;
-  		if(mpAttributes[liOther]==-1) {trace("Error Getting Shader Variable " << Variable);}
-  		else printf("Program ID %lu : Variable ID %li : %s\n",liProgramID,mpAttributes[liOther],Variable);
-		++liOther;
- 	}
- }
-	/*
-	miAttributes=lpShader->miAttributes;
-	mpAttributes=new int32[miAttributes];
-char Variable[256];
-char *Text=(char*)lpShader->mpShaderText[0];
- uint32 liCount;
- for(liCount=0;liCount<miAttributes;++liCount)
- {
-  LineCopy(Variable,&Text[lpShader->mpAttributes[liCount]],"; ,@([");
-  mpAttributes[liCount]=glGetAttribLocation(liProgramID,Variable);
-  if(mpAttributes[liCount]==-1) {trace("Error Getting Shader Variable " << Variable);}
-  else
-  {
-	  printf("Program ID %u : Variable ID %i : %s\n",liProgramID,liCount,Variable);
-	  glEnableVertexAttribArray(mpAttributes[liCount]);
-  }
- }
- */
+ miVariables=0;
+ mpVariables=0;
 }
 
-
-void cShaderVariables::SetUniform(uint32 liUniform,float Value0){if(liUniform<miUniforms) glUniform1f(mpUniforms[liUniform],Value0);}
-void cShaderVariables::SetUniform(uint32 liUniform,float Value0,float Value1){if(liUniform<miUniforms) glUniform2f(mpUniforms[liUniform],Value0,Value1);}
-void cShaderVariables::SetUniform(uint32 liUniform,float Value0,float Value1,float Value2){if(liUniform<miUniforms) glUniform3f(mpUniforms[liUniform],Value0,Value1,Value2);}
-void cShaderVariables::SetUniform(uint32 liUniform,float Value0,float Value1,float Value2,float Value3){if(liUniform<miUniforms) glUniform4f(mpUniforms[liUniform],Value0,Value1,Value2,Value3);}
-
-void cShaderVariables::SetUniform1(uint32 liUniform,float *Value,uint16 liItems){if(liUniform<miUniforms) glUniform1fv(mpUniforms[liUniform],liItems,Value);}
-void cShaderVariables::SetUniform2(uint32 liUniform,float *Value,uint16 liItems){if(liUniform<miUniforms) glUniform2fv(mpUniforms[liUniform],liItems,Value);}
-void cShaderVariables::SetUniform3(uint32 liUniform,float *Value,uint16 liItems){if(liUniform<miUniforms) glUniform3fv(mpUniforms[liUniform],liItems,Value);}
-void cShaderVariables::SetUniform4(uint32 liUniform,float *Value,uint16 liItems){if(liUniform<miUniforms) glUniform4fv(mpUniforms[liUniform],liItems,Value);}
-
-void cShaderVariables::SetMatrix2(uint32 liUniform,float *Value){if(liUniform<miUniforms) glUniformMatrix2fv(mpUniforms[liUniform],1,0,Value);}
-void cShaderVariables::SetMatrix3(uint32 liUniform,float *Value){if(liUniform<miUniforms) glUniformMatrix3fv(mpUniforms[liUniform],1,0,Value);}
-void cShaderVariables::SetMatrix4(uint32 liUniform,float *Value){if(liUniform<miUniforms) glUniformMatrix4fv(mpUniforms[liUniform],1,0,Value);}
-void cShaderVariables::SetMatrix(uint32 liUniform,cMatrix4 *lpMatrix,uint32 liMatricesInArray){if(liUniform<miUniforms) glUniformMatrix4fv(mpUniforms[liUniform],liMatricesInArray,0,lpMatrix->Matrix());}
-
-/*
-void cShaderVariables::SetAttribute(uint32 liAttribute,float Value){if(liAttribute<miAttributes) glVertexAttrib1f(mpAttributes[liAttribute],Value);}
-void cShaderVariables::SetAttribute(uint32 liAttribute,float Value,float Value1){if(liAttribute<miAttributes) glVertexAttrib2f(mpAttributes[liAttribute],Value,Value1);}
-void cShaderVariables::SetAttribute(uint32 liAttribute,float Value,float Value1,float Value2){if(liAttribute<miAttributes) glVertexAttrib3f(mpAttributes[liAttribute],Value,Value1,Value2);}
-void cShaderVariables::SetAttribute(uint32 liAttribute,float Value,float Value1,float Value2,float Value3){if(liAttribute<miAttributes) glVertexAttrib4f(mpAttributes[liAttribute],Value,Value1,Value2,Value3);}
-
-void cShaderVariables::SetAttribute1(uint32 liAttribute,float *Value){if(liAttribute<miAttributes) glVertexAttrib1fv(mpAttributes[liAttribute],Value);}
-void cShaderVariables::SetAttribute2(uint32 liAttribute,float *Value){if(liAttribute<miAttributes) glVertexAttrib2fv(mpAttributes[liAttribute],Value);}
-void cShaderVariables::SetAttribute3(uint32 liAttribute,float *Value){if(liAttribute<miAttributes) glVertexAttrib3fv(mpAttributes[liAttribute],Value);}
-void cShaderVariables::SetAttribute4(uint32 liAttribute,float *Value){if(liAttribute<miAttributes) glVertexAttrib4fv(mpAttributes[liAttribute],Value);}
-*/
-
-
-
-
-
-void cShaderVariables::SetAttribute(uint32 liAttribute,uint8 Size,uint16 liStride,float *lpData){if(liAttribute<miAttributes) glVertexAttribPointer(mpAttributes[liAttribute],Size,GL_FLOAT,0,liStride,lpData);}
-void cShaderVariables::SetAttribute(uint32 liAttribute,uint8 Size,uint16 liStride,uint32 *lpData){if(liAttribute<miAttributes) glVertexAttribPointer(mpAttributes[liAttribute],Size,GL_UNSIGNED_INT,0,liStride,lpData);}
-void cShaderVariables::SetAttribute(uint32 liAttribute,uint8 Size,uint16 liStride,uint16 *lpData){if(liAttribute<miAttributes) glVertexAttribPointer(mpAttributes[liAttribute],Size,GL_UNSIGNED_SHORT,0,liStride,lpData);}
-void cShaderVariables::SetAttribute(uint32 liAttribute,uint8 Size,uint16 liStride,uint8 *lpData){if(liAttribute<miAttributes) glVertexAttribPointer(mpAttributes[liAttribute],Size,GL_UNSIGNED_BYTE,0,liStride,lpData);}
-void cShaderVariables::SetAttribute(uint32 liAttribute,uint8 Size,uint16 liStride,int32 *lpData){if(liAttribute<miAttributes) glVertexAttribPointer(mpAttributes[liAttribute],Size,GL_INT,0,liStride,lpData);}
-void cShaderVariables::SetAttribute(uint32 liAttribute,uint8 Size,uint16 liStride,int16 *lpData){if(liAttribute<miAttributes) glVertexAttribPointer(mpAttributes[liAttribute],Size,GL_SHORT,0,liStride,lpData);}
-void cShaderVariables::SetAttribute(uint32 liAttribute,uint8 Size,uint16 liStride,int8 *lpData){if(liAttribute<miAttributes) glVertexAttribPointer(mpAttributes[liAttribute],Size,GL_BYTE,0,liStride,lpData);}
-
-cShaderVariables::cShaderVariables()
+cShaderVariableSet::~cShaderVariableSet()
 {
- miUniforms=miAttributes=0;
- mpUniforms=mpAttributes=0;
- mpUniformText=mpAttributeText=0;
+//delete []mpVariables; mpVariables=0;
 }
 
-cShaderVariables::~cShaderVariables()
+int32 cShaderVariableSet::GetID(uint32 liVariableNumber)
 {
-delete []mpUniforms; mpUniforms=0;
-delete []mpAttributes; mpAttributes=0;
-}
-
-int32 cShaderVariables::GetUniformID(uint32 liVariableNumber){if(liVariableNumber<miUniforms) return mpUniforms[liVariableNumber]; return -1;};
-int32 cShaderVariables::GetAttributeID(uint32 liVariableNumber){if(liVariableNumber<miAttributes) return mpAttributes[liVariableNumber]; return -1;};
+    if(liVariableNumber<miVariables) return mpVariables[liVariableNumber].ID();
+    return -1;
+};
 
 
 
-void cShaderVariables::BindAttributes(uint32 liProgramID)
+void cShaderVariableSet::BindAttributes(uint32 liProgramID)
 {
-if(mpAttributes)
+if(mpVariables)
  {
  uint32 liCount;
- for(liCount=0;liCount<miAttributes;++liCount)
+ for(liCount=0;liCount<miVariables;++liCount)
  {
-		glBindAttribLocation(liProgramID,mpAttributes[liCount],mpAttributeText[liCount].c_str());
+		if(mpVariables[liCount].Attribute()) glBindAttribLocation(liProgramID,mpVariables[liCount].ID(),mpVariables[liCount].Start());
  }
-
  }
 }
 

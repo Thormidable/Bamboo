@@ -1,5 +1,6 @@
 #include "../../WTBamboo.h"
 
+#if WT_FULL_BAMBOO_VERSION
 void cMouseCollision::PrepForCollision()
 {
   if(!mbNormalised)
@@ -17,3 +18,5 @@ cMouseCollision::cMouseCollision()
 }
 
 cMouseCollision *cMouseCollision::Mouse(){return this;};
+
+#endif

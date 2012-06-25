@@ -66,6 +66,7 @@ CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Misc/WTcMeshTreeNode.h
@@ -110,7 +111,6 @@ CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioBuffer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTcSingleton.h
@@ -196,6 +196,7 @@ CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Misc/WTcMeshTreeNode.h
@@ -240,7 +241,6 @@ CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioDevice.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTcSingleton.h
@@ -326,6 +326,7 @@ CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Files/Misc/WTcMeshTreeNode.h
@@ -370,7 +371,6 @@ CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Audio/WTcAudioObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Audio/.././PTL/WTcSingleton.h
@@ -456,6 +456,7 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcMeshTreeNode.h
@@ -500,7 +501,6 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcFog.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTcSingleton.h
@@ -586,6 +586,7 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcMeshTreeNode.h
@@ -630,7 +631,6 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTcSingleton.h
@@ -716,6 +716,7 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Document
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcMeshTreeNode.h
@@ -760,7 +761,6 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Document
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcMaterial.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTcSingleton.h
@@ -846,6 +846,7 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Files/Misc/WTcMeshTreeNode.h
@@ -890,7 +891,6 @@ CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/FX/WTcSpotLight.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/FX/../.././PTL/WTcSingleton.h
@@ -976,6 +976,7 @@ CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -1020,7 +1021,6 @@ CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcNodeList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTcSingleton.h
@@ -1106,6 +1106,7 @@ CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -1150,7 +1151,6 @@ CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Nodes/WTcRenderNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTcSingleton.h
@@ -1236,6 +1236,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -1280,7 +1281,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcAttributeData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -1366,6 +1366,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -1410,7 +1411,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBeamMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -1496,6 +1496,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -1540,7 +1541,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcBillBoard.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -1626,6 +1626,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Do
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -1670,7 +1671,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Do
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcButton.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -1756,6 +1756,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -1800,7 +1801,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcImage.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -1886,6 +1886,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -1930,7 +1931,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -2016,6 +2016,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -2060,7 +2061,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLine.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -2146,6 +2146,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -2190,7 +2191,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcLineArray.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -2276,6 +2276,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -2320,7 +2321,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcModel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -2406,6 +2406,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -2450,7 +2451,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ 
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -2536,6 +2536,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -2580,7 +2581,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleGroup.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -2666,6 +2666,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileSt
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -2710,7 +2711,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileSt
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -2796,6 +2796,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -2840,7 +2841,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -2926,6 +2926,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ D
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -2970,7 +2971,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ D
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -3056,6 +3056,7 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/M
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Files/Misc/WTcMeshTreeNode.h
@@ -3100,7 +3101,6 @@ CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/M
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/Renderable/../.././PTL/WTcSingleton.h
@@ -3186,6 +3186,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTreeNode.h
@@ -3230,7 +3231,6 @@ CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcSingleton.h
@@ -3316,6 +3316,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Docume
 CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTreeNode.h
@@ -3360,7 +3361,6 @@ CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Docume
 CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcSingleton.h
@@ -3446,6 +3446,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTreeNode.h
@@ -3490,7 +3491,6 @@ CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcSingleton.h
@@ -3576,6 +3576,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C+
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTreeNode.h
@@ -3620,7 +3621,6 @@ CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C+
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/WTcPainter.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcSingleton.h
@@ -3706,6 +3706,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ D
 CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTreeNode.h
@@ -3750,7 +3751,6 @@ CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ D
 CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/WTcPerspectiveControl.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcSingleton.h
@@ -3836,6 +3836,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTreeNode.h
@@ -3880,7 +3881,6 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderNodeObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcSingleton.h
@@ -3966,6 +3966,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTreeNode.h
@@ -4010,7 +4011,6 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcSingleton.h
@@ -4096,6 +4096,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Docume
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTreeNode.h
@@ -4140,7 +4141,6 @@ CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Docume
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcSingleton.h
@@ -4226,6 +4226,7 @@ CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTreeNode.h
@@ -4270,7 +4271,6 @@ CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcSingleton.h
@@ -4356,6 +4356,7 @@ CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ 
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Misc/WTcMeshTreeNode.h
@@ -4400,7 +4401,6 @@ CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ 
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTcSingleton.h
@@ -4486,6 +4486,7 @@ CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Files/Misc/WTcMeshTreeNode.h
@@ -4530,7 +4531,6 @@ CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/Process/../.././PTL/WTcSingleton.h
@@ -4616,6 +4616,7 @@ CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcMeshTreeNode.h
@@ -4660,7 +4661,6 @@ CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTcSingleton.h
@@ -4680,6 +4680,136 @@ CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Windows/WTcWindow.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/../WTBamboo.h
 CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/WTKernel.cpp
+
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Audio/WTcAudioBuffer.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Audio/WTcAudioDevice.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Audio/WTcAudioObject.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/FX/WTcFog.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/FX/WTcLight.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/FX/WTcMaterial.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/FX/WTcSpotLight.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/FX/WTvLight.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Nodes/WTcNodeList.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Nodes/WTcRenderNode.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcAttributeData.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcBeamMesh.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcBillBoard.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcButton.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcImage.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcLandscape.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcLine.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcLineArray.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcModel.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcParticle.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcParticleGroup.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcParticleSettings.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcPoint.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcStarMap.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/Renderable/WTcTextureText.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/WTcCamera.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/WTcExtraViewport.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/WTcLightHandler.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/WTcPainter.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/WTcPerspectiveControl.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/WTcRenderObject.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/WTcRenderOwner.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/WTcRenderPointer.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/WTcTextureStack.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Camera/WTvRenderObject.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Engine/Process/WTcParentStack.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Engine/Process/WTcProcess.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Engine/WTKernel.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Engine/WTcBase.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Engine/WTcFrameRate.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Engine/WTcSignal.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Audio/WTcAudioData.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Audio/WTcSoundObject.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/CollisionMeshes/WTcBeamCollision.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/CollisionMeshes/WTcCompoundCollision.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/CollisionMeshes/WTcCompoundCollisionFile.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/CollisionMeshes/WTcMeshCollision.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/CollisionMeshes/WTcMeshFileCollision.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/CollisionMeshes/WTcMouseCollision.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/CollisionMeshes/WTcRayCollision.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/CollisionMeshes/WTcSphereCollision.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/CollisionMeshes/WTvCollisionData.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Fonts/WTcFont.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/MeshClasses/WTcCluster.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/MeshClasses/WTcFace.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/MeshClasses/WTcFullFaceData.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/MeshClasses/WTcPlane.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/MeshClasses/WTcPolygon.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/MeshClasses/WTcVertex.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTcAsteroid.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTcIcoSphere.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTcMesh.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTcUVSphere.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTcmLandscape.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcCircleLineData.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcLineArrayData.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcMeshTree.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcMeshTreeNode.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcReferenceList.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTvMeshTree.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Shaders/WTcShader.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Shaders/WTcShaderVariables.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Shaders/WTcUserDefinedShaderVariable.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Textures/WTcSeamlessTextureClasses.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Textures/WTcTexture.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Textures/WTcTextureGenerator.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/WTString.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/WTcFile.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/WTcFileHandler.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/WTcIMFLoader.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/WTvFile.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Global/CException.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Global/GlobalPointers.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Global/IMFDefinitions.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Global/WTDefinitions.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Global/WTKeyStateDefinitions.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Global/WTSetDefinitions.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Global/WTSettings.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Global/WTcFlags.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Global/log.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTMath.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc2DVt.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc2DVtCode.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc3DVt.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc3DVtCode.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc4DVt.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTc4DVtCode.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcCameraMatrix4.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcColors.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcDoubleMatrix4.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcMatrix4.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcMatrixStack.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcMomentum.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcPerspectiveMatrix.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcPredictiveTracking.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcSimplexNoise.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLLTemplate.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLimitedList.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTRadix.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTcPushPopStack.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTcSingleton.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Physics/WTcCollisionBase.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Physics/WTcCollisionHandler.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Physics/WTcCollisionList.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Physics/WTcCollisionObject.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Physics/WTcMouseCollisionObject.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././WTOsBits.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Windows/EventHandler/WTcEventHandler.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Windows/EventHandler/WTcKeyStore.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Windows/EventHandler/WTcKeyToggle.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Windows/EventHandler/WTcMouse.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Windows/WTWindowsKeyCodes.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Windows/WTXWindowsKeyCodes.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Windows/WTcSync.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Windows/WTcWindow.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/../WTBamboo.h
+CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/WTcBase.cpp
 
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Audio/WTcAudioBuffer.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Audio/WTcAudioDevice.h
@@ -4746,6 +4876,7 @@ CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcMeshTreeNode.h
@@ -4790,7 +4921,6 @@ CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTcSingleton.h
@@ -4876,6 +5006,7 @@ CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Files/Misc/WTcMeshTreeNode.h
@@ -4920,7 +5051,6 @@ CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Engine/WTcSignal.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Engine/.././PTL/WTcSingleton.h
@@ -5006,6 +5136,7 @@ CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Misc/WTcMeshTreeNode.h
@@ -5050,7 +5181,6 @@ CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcAudioData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTcSingleton.h
@@ -5136,6 +5266,7 @@ CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Files/Misc/WTcMeshTreeNode.h
@@ -5180,7 +5311,6 @@ CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Audio/WTcSoundObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Audio/../.././PTL/WTcSingleton.h
@@ -5266,6 +5396,7 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileS
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -5310,7 +5441,6 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileS
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcBeamCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcSingleton.h
@@ -5396,6 +5526,7 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/F
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -5440,7 +5571,6 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/F
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcSingleton.h
@@ -5526,6 +5656,7 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /med
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -5570,7 +5701,6 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /med
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcSingleton.h
@@ -5656,6 +5786,7 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileS
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -5700,7 +5831,6 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileS
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcSingleton.h
@@ -5786,6 +5916,7 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/F
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -5830,7 +5961,6 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/F
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcMeshFileCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcSingleton.h
@@ -5916,6 +6046,7 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileSt
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -5960,7 +6091,6 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileSt
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcRayCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcSingleton.h
@@ -6046,6 +6176,7 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/Fil
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -6090,7 +6221,6 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/Fil
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTcSphereCollision.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcSingleton.h
@@ -6176,6 +6306,7 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileS
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -6220,7 +6351,6 @@ CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileS
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/CollisionMeshes/WTvCollisionData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/CollisionMeshes/../.././PTL/WTcSingleton.h
@@ -6306,6 +6436,7 @@ CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Files/Misc/WTcMeshTreeNode.h
@@ -6350,7 +6481,6 @@ CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Fonts/WTcFont.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Fonts/../.././PTL/WTcSingleton.h
@@ -6436,6 +6566,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStor
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcMeshTreeNode.h
@@ -6480,7 +6611,6 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStor
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcCluster.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTcSingleton.h
@@ -6566,6 +6696,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/M
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcMeshTreeNode.h
@@ -6610,7 +6741,6 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/M
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFace.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTcSingleton.h
@@ -6696,6 +6826,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/Fil
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcMeshTreeNode.h
@@ -6740,7 +6871,6 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/Fil
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcFullFaceData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTcSingleton.h
@@ -6826,6 +6956,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcMeshTreeNode.h
@@ -6870,7 +7001,6 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPlane.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTcSingleton.h
@@ -6956,6 +7086,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStor
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcMeshTreeNode.h
@@ -7000,7 +7131,6 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStor
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTcSingleton.h
@@ -7086,6 +7216,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Files/Misc/WTcMeshTreeNode.h
@@ -7130,7 +7261,6 @@ CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Meshes/MeshClasses/WTcVertex.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/../../.././PTL/WTcSingleton.h
@@ -7216,6 +7346,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -7260,7 +7391,6 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcAsteroid.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTcSingleton.h
@@ -7346,6 +7476,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -7390,7 +7521,6 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcIcoSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTcSingleton.h
@@ -7476,6 +7606,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -7520,7 +7651,6 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcMesh.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTcSingleton.h
@@ -7606,6 +7736,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -7650,7 +7781,6 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcUVSphere.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTcSingleton.h
@@ -7736,6 +7866,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -7780,7 +7911,6 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTcmLandscape.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTcSingleton.h
@@ -7866,6 +7996,7 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Files/Misc/WTcMeshTreeNode.h
@@ -7910,7 +8041,6 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././PTL/WTcSingleton.h
@@ -7930,6 +8060,136 @@ CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../.././Windows/WTcWindow.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/../../WTBamboo.h
 CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Meshes/WTv2DPolygon.cpp
+
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Audio/WTcAudioBuffer.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Audio/WTcAudioDevice.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Audio/WTcAudioObject.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/FX/WTcFog.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/FX/WTcLight.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/FX/WTcMaterial.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/FX/WTcSpotLight.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/FX/WTvLight.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Nodes/WTcNodeList.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Nodes/WTcRenderNode.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcAttributeData.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcBeamMesh.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcBillBoard.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcButton.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcImage.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcLandscape.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcLine.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcLineArray.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcModel.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcParticle.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcParticleGroup.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcParticleSettings.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcPoint.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcStarMap.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/Renderable/WTcTextureText.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/WTcCamera.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/WTcExtraViewport.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/WTcLightHandler.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/WTcPainter.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/WTcPerspectiveControl.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/WTcRenderObject.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/WTcRenderOwner.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/WTcRenderPointer.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/WTcTextureStack.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Camera/WTvRenderObject.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Engine/Process/WTcParentStack.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Engine/Process/WTcProcess.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Engine/WTKernel.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Engine/WTcBase.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Engine/WTcFrameRate.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Engine/WTcSignal.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Audio/WTcAudioData.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Audio/WTcSoundObject.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/CollisionMeshes/WTcBeamCollision.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/CollisionMeshes/WTcCompoundCollision.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/CollisionMeshes/WTcCompoundCollisionFile.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/CollisionMeshes/WTcMeshCollision.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/CollisionMeshes/WTcMeshFileCollision.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/CollisionMeshes/WTcMouseCollision.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/CollisionMeshes/WTcRayCollision.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/CollisionMeshes/WTcSphereCollision.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/CollisionMeshes/WTvCollisionData.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Fonts/WTcFont.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/MeshClasses/WTcCluster.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/MeshClasses/WTcFace.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/MeshClasses/WTcFullFaceData.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/MeshClasses/WTcPlane.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/MeshClasses/WTcPolygon.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/MeshClasses/WTcVertex.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcAsteroid.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcIcoSphere.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcMesh.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcUVSphere.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcmLandscape.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcCircleLineData.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcLineArrayData.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcMeshTree.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcMeshTreeNode.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcReferenceList.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTvMeshTree.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcShader.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcShaderProgram.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcShaderVariables.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Shaders/WTcUserDefinedShaderVariable.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Textures/WTcSeamlessTextureClasses.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Textures/WTcTexture.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Textures/WTcTextureGenerator.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/WTString.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/WTcFile.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/WTcFileHandler.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/WTcIMFLoader.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/WTvFile.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/CException.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/GlobalPointers.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/IMFDefinitions.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/WTDefinitions.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/WTKeyStateDefinitions.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/WTSetDefinitions.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/WTSettings.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/WTcFlags.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Global/log.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTMath.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc2DVt.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc2DVtCode.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc3DVt.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc3DVtCode.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc4DVt.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTc4DVtCode.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcCameraMatrix4.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcColors.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcDoubleMatrix4.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcMatrix4.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcMatrixStack.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcMomentum.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcPerspectiveMatrix.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcPredictiveTracking.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcSimplexNoise.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLLTemplate.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLimitedList.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTRadix.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTcPushPopStack.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTcSingleton.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Physics/WTcCollisionBase.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Physics/WTcCollisionHandler.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Physics/WTcCollisionList.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Physics/WTcCollisionObject.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Physics/WTcMouseCollisionObject.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././WTOsBits.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Windows/EventHandler/WTcEventHandler.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Windows/EventHandler/WTcKeyStore.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Windows/EventHandler/WTcKeyToggle.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Windows/EventHandler/WTcMouse.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Windows/WTWindowsKeyCodes.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Windows/WTXWindowsKeyCodes.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Windows/WTcSync.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Windows/WTcWindow.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../../WTBamboo.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/WTcCircleLineData.cpp
 
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Audio/WTcAudioBuffer.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Audio/WTcAudioDevice.h
@@ -7996,6 +8256,7 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Do
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcMeshTreeNode.h
@@ -8040,7 +8301,6 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Do
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcLineArrayData.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTcSingleton.h
@@ -8126,6 +8386,7 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcMeshTreeNode.h
@@ -8170,7 +8431,6 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTcSingleton.h
@@ -8256,6 +8516,7 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcMeshTreeNode.h
@@ -8300,7 +8561,6 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTcSingleton.h
@@ -8386,6 +8646,7 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Do
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Files/Misc/WTcMeshTreeNode.h
@@ -8430,7 +8691,6 @@ CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Do
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Misc/../.././PTL/WTcSingleton.h
@@ -8516,6 +8776,7 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Docume
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcMeshTreeNode.h
@@ -8560,7 +8821,6 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Docume
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTcSingleton.h
@@ -8646,6 +8906,7 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcMeshTreeNode.h
@@ -8690,7 +8951,6 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTcSingleton.h
@@ -8776,6 +9036,7 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/M
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcMeshTreeNode.h
@@ -8820,7 +9081,6 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/M
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTcSingleton.h
@@ -8906,6 +9166,7 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/F
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Files/Misc/WTcMeshTreeNode.h
@@ -8950,7 +9211,6 @@ CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/F
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Shaders/WTcUserDefinedShaderVariable.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Shaders/../.././PTL/WTcSingleton.h
@@ -9036,6 +9296,7 @@ CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/Fil
 CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Misc/WTcMeshTreeNode.h
@@ -9080,7 +9341,6 @@ CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/Fil
 CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcSeamlessTextureClasses.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTcSingleton.h
@@ -9166,6 +9426,7 @@ CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Files/Misc/WTcMeshTreeNode.h
@@ -9210,7 +9471,6 @@ CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Docu
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/Textures/WTcTexture.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/Textures/../.././PTL/WTcSingleton.h
@@ -9296,6 +9556,7 @@ CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ 
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcMeshTreeNode.h
@@ -9340,7 +9601,6 @@ CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ 
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/WTString.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTcSingleton.h
@@ -9426,6 +9686,7 @@ CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ C
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcMeshTreeNode.h
@@ -9470,7 +9731,6 @@ CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ C
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTcSingleton.h
@@ -9556,6 +9816,7 @@ CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcMeshTreeNode.h
@@ -9600,7 +9861,6 @@ CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTcSingleton.h
@@ -9686,6 +9946,7 @@ CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Files/Misc/WTcMeshTreeNode.h
@@ -9730,7 +9991,6 @@ CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Files/.././PTL/WTcSingleton.h
@@ -9816,6 +10076,7 @@ CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C+
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Misc/WTcMeshTreeNode.h
@@ -9860,7 +10121,6 @@ CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C+
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././PTL/WTcSingleton.h
@@ -9946,6 +10206,7 @@ CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Files/Misc/WTcMeshTreeNode.h
@@ -9990,7 +10251,6 @@ CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Global/log.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Global/.././PTL/WTcSingleton.h
@@ -10076,6 +10336,7 @@ CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Co
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTreeNode.h
@@ -10120,7 +10381,6 @@ CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Co
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcSingleton.h
@@ -10206,6 +10466,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTreeNode.h
@@ -10250,7 +10511,6 @@ CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Maths/WTcCameraMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcSingleton.h
@@ -10336,6 +10596,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\
 CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTreeNode.h
@@ -10380,7 +10641,6 @@ CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\
 CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Maths/WTcColors.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcSingleton.h
@@ -10466,6 +10726,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTreeNode.h
@@ -10510,7 +10771,6 @@ CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documen
 CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Maths/WTcDoubleMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcSingleton.h
@@ -10596,6 +10856,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTreeNode.h
@@ -10640,7 +10901,6 @@ CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrix4.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcSingleton.h
@@ -10726,6 +10986,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTreeNode.h
@@ -10770,7 +11031,6 @@ CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Maths/WTcMatrixStack.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcSingleton.h
@@ -10856,6 +11116,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C+
 CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTreeNode.h
@@ -10900,7 +11161,6 @@ CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C+
 CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Maths/WTcMomentum.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcSingleton.h
@@ -10986,6 +11246,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTreeNode.h
@@ -11030,7 +11291,6 @@ CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Maths/WTcPerspectiveMatrix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcSingleton.h
@@ -11116,6 +11376,7 @@ CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Do
 CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Files/Misc/WTcMeshTreeNode.h
@@ -11160,7 +11421,6 @@ CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Do
 CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Maths/WTcPredictiveTracking.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Maths/.././PTL/WTcSingleton.h
@@ -11246,6 +11506,7 @@ CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Cod
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././Files/Misc/WTcMeshTreeNode.h
@@ -11290,7 +11551,6 @@ CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Cod
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/PTL/WTRadix.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/PTL/.././PTL/WTcSingleton.h
@@ -11376,6 +11636,7 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcMeshTreeNode.h
@@ -11420,7 +11681,6 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionBase.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTcSingleton.h
@@ -11506,6 +11766,7 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Do
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcMeshTreeNode.h
@@ -11550,7 +11811,6 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Do
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTcSingleton.h
@@ -11636,6 +11896,7 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcMeshTreeNode.h
@@ -11680,7 +11941,6 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Docum
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionList.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTcSingleton.h
@@ -11766,6 +12026,7 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Files/Misc/WTcMeshTreeNode.h
@@ -11810,7 +12071,6 @@ CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Doc
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Physics/WTcCollisionObject.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Physics/.././PTL/WTcSingleton.h
@@ -11896,6 +12156,7 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileSto
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcMeshTreeNode.h
@@ -11940,7 +12201,6 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileSto
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcEventHandler.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTcSingleton.h
@@ -12026,6 +12286,7 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/M
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcMeshTreeNode.h
@@ -12070,7 +12331,6 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/M
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyStore.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTcSingleton.h
@@ -12156,6 +12416,7 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcMeshTreeNode.h
@@ -12200,7 +12461,6 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcKeyToggle.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTcSingleton.h
@@ -12286,6 +12546,7 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ 
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcMeshTreeNode.h
@@ -12330,7 +12591,6 @@ CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ 
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Windows/EventHandler/WTcMouse.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTcSingleton.h
@@ -12416,6 +12676,7 @@ CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcMeshTreeNode.h
@@ -12460,7 +12721,6 @@ CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Windows/WTcSync.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTcSingleton.h
@@ -12546,6 +12806,7 @@ CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C+
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcUVSphere.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcmLandscape.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTv2DPolygon.h
+CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcCircleLineData.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcLineArrayData.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcMeshTree.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcMeshTreeNode.h
@@ -12590,7 +12851,6 @@ CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C+
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcSimplexNoise.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTLLTemplate.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTLimitedList.h
-CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTMinLinkedList.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTRadix.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTcPushPopStack.h
 CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o: /media/FileStore/My\ Documents/C++\ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTcSingleton.h

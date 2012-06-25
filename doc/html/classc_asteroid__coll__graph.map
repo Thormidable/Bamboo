@@ -1,9 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$classc_mesh.html" title="This class stores the data for a 3D model." alt="" coords="48,541,109,571"/>
-<area shape="rect" id="node4" href="$classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh..." alt="" coords="53,461,104,491"/>
-<area shape="rect" id="node6" href="$classv_file.html" title="This is the virtual file for cFile. It is a virtual representation of the base code for files loaded ..." alt="" coords="5,8,56,37"/>
-<area shape="rect" id="node13" href="$classc_linked_node.html" title="cLinkedNode\&lt; vFile \&gt;" alt="" coords="71,123,220,152"/>
-<area shape="rect" id="node8" href="$classc_file_handler.html" title="This is the handler for the file system. This handles all files loaded from a hdd. It will give allow processes to use files loaded else where, using either the filenames or if loaded from an IMF a file reference. The files are stored in the list mpFiles." alt="" coords="139,365,232,395"/>
-<area shape="rect" id="node11" href="$classc_linked_list.html" title="cLinkedList\&lt; vFile \&gt;" alt="" coords="116,269,255,299"/>
-<area shape="rect" id="node17" href="$classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="84,8,215,37"/>
+<area shape="rect" id="node2" href="$classc_mesh.html" title="This class stores the data for a 3D model." alt="" coords="83,621,145,651"/>
+<area shape="rect" id="node4" href="$classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh..." alt="" coords="89,541,139,571"/>
+<area shape="rect" id="node6" href="$classv_file.html" title="This is the virtual file for cFile. It is a virtual representation of the base code for files loaded ..." alt="" coords="275,88,326,117"/>
+<area shape="rect" id="node15" href="$classc_linked_node.html" title="cLinkedNode\&lt; vFile \&gt;" alt="" coords="50,203,199,232"/>
+<area shape="rect" id="node8" href="$classc_signal.html" title="Class for handling Signals sent between objects (cProcess, cRenderObject, cCollisionObject). Allows the user to wake, sleep and kill objects. For cProcess (while cParentStack is enabled) also allows signals to be sent to a process that will recursively affect all the children of that process. Possible signals to be passed in are _S_SLEEP,_S_WAKE,_S_KILL,_S_SLEEP_TREE, _S_WAKE_TREE,_S_KILL_TREE User Specified Signals are controlled by the class cUserSignal." alt="" coords="269,5,333,35"/>
+<area shape="rect" id="node10" href="$classc_file_handler.html" title="This is the handler for the file system. This handles all files loaded from a hdd. It will give allow processes to use files loaded else where, using either the filenames or if loaded from an IMF a file reference. The files are stored in the list mpFiles." alt="" coords="67,445,161,475"/>
+<area shape="rect" id="node13" href="$classc_linked_list.html" title="cLinkedList\&lt; vFile \&gt;" alt="" coords="19,349,158,379"/>
+<area shape="rect" id="node19" href="$classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="50,88,181,117"/>
 </map>

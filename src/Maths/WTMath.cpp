@@ -342,3 +342,36 @@ c3DVf c3DVf::operator=(cRGB &lpValue)
 	void c4DVf::Z(float lfZ){v[2]=lfZ;};
 	void c4DVf::W(float lfW){v[3]=lfW;};
 */
+
+float FastSquareRoot(float number) {
+    int32 i;
+    float x, y;
+    const float f = 1.5F;
+
+    x = number * 0.5F;
+    y  = number;
+    i  = * ( long * ) &y;
+    i  = 0x5f3759df - ( i >> 1 );
+    y  = * ( float * ) &i;
+    y  = y * ( f - ( x * y * y ) );
+    y  = y * ( f - ( x * y * y ) );
+    return number * y;
+}
+
+float FastSquareRoot(double number)
+{
+    int64 i;
+
+    double x, y;
+    const double f = 1.5F;
+
+    x = number * 0.5F;
+    y  = number;
+    i  = * ( int64* ) &y;
+    i  = 0x5fe6ec85e7de30daLL - ( i >> 1 );
+
+    y  = * ( float * ) &i;
+    y  = y * ( f - ( x * y * y ) );
+    y  = y * ( f - ( x * y * y ) );
+    return number * y;
+}

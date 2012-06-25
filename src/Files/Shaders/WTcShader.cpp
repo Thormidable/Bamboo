@@ -42,7 +42,8 @@ cShaderVariable::~cShaderVariable()
 
 cShaderVariable &cShaderVariable::operator=(cShaderVariable &lcOther)
 {
- mpStart=lcOther.mpStart;
+ mpStart=new char[strlen(lcOther.mpStart)+1];
+ strcpy(mpStart,lcOther.mpStart);
  miType=lcOther.miType;
  miID=lcOther.miID;
  return *this;
@@ -93,7 +94,8 @@ void cShaderVariable::Set(bool lbUniform,uint8 liType,char* liStart)
 {
     miType=liType;
     miType=miType|(0x80*lbUniform);
-    mpStart=liStart;
+    mpStart=new char[strlen(liStart)+1];
+	strcpy(mpStart,liStart);
 }
 
 void cShaderVariable::SetType(uint8 liType)
@@ -192,8 +194,8 @@ if(miShaderType == IMF_SHADER_TYPE_VERTEX)
 if(miShaderType == IMF_SHADER_TYPE_FRAGMENT) miShaderID=glCreateShader(GL_FRAGMENT_SHADER);
 //if(miShaderType == IMF_SHADER_TYPE_GEOMETRY) miShaderID=glCreateShader(GL_GEOMETRY_SHADER);
 
- if(!miShaderID){trace("Failed to Create Shader "<<mpFileName);}
- else trace("Shader "<<mpFileName<<" Created Successfully");
+ if(!miShaderID){TRACE("Failed to Create Shader " << mpFileName);}
+ else TRACE("Shader " << mpFileName << " Created Successfully");
 
  //glShaderSource(miShaderID,0,mpShaderText,0);
 const GLchar** lpTemp=mpShaderText;
@@ -202,13 +204,13 @@ const GLchar** lpTemp=mpShaderText;
 int liID;
  glGetShaderiv(miShaderID, GL_COMPILE_STATUS, &liID);
  if(!liID)
-  {trace("Shader "<<mpFileName<<" Failed to Compile");
+  {TRACE("Shader " << mpFileName << " Failed to Compile");
     char lpLog[256];
     GLsizei liLength;
     glGetShaderInfoLog(miShaderID,256,&liLength,lpLog);
     trace(lpLog);
   }
- else trace("Shader "<<mpFileName<<" Compiled Successfully");
+ else trace("Shader " << mpFileName << " Compiled Successfully");
 
 
 }

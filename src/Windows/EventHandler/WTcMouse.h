@@ -9,13 +9,17 @@
  */
 class cMouse
 {
+	friend class cWindow;
  /// This is a pointer to the texture the system should use for the mouse cursor.
 cTexture *mpImage;
 
 /// This is a flag determining whether the cursor is shown or not.
 bool miShown;
 
-public:
+#if WT_OS_TYPE==OS_LINUX
+	Cursor mcCursor;
+#endif
+
  //Current Frames X, Y and Z values - IE use these
  // This stores the current frames X value (in pixels from the windows 0,0).
  int x;
@@ -23,7 +27,10 @@ public:
  int y;
 // This stores the current frames Z value (in pixels from the windows 0,0).
  int z;
-
+// This is the real mouses X position. It will change as the mouse moves, so will not be consistent through out the frame. Should avoid being used.
+ int cx;
+// This is the real mouses Y position. It will change as the mouse moves, so will not be consistent through out the frame. Should avoid being used.
+ int cy;
  // This stores the mouses current left button state.
  bool left;
 // This stores the mouses current right button state.
@@ -38,10 +45,12 @@ public:
 // This will store the mouses current Y speed. (pixels travelled since last frame).
  int ys;
  //Actual current X and Y values, these track the cursor continuously.
-// This is the real mouses X position. It will change as the mouse moves, so will not be consistent through out the frame. Should avoid being used.
- int cx;
-// This is the real mouses Y position. It will change as the mouse moves, so will not be consistent through out the frame. Should avoid being used.
- int cy;
+ int miLockedX;
+ int miLockedY;
+ int miLockedZ;
+public:
+
+
  ///Will return the current X Position of the mouse cursor in pixels from the left hand edge of the screen.
  int X();
  ///Will return the current Y Position of the mouse cursor in pixels from the bottom edge of the screen.
@@ -59,7 +68,21 @@ public:
 ///Will return the pressed state of the mouses middle button.
  bool Middle();
 
- #if WT_OS_TYPE==OS_WIN32
+ bool Locked();
+
+ ///Will return the current position of the cursor. When mouse is Locked, this will retain the last free position of the cursor.
+ int LockedX();
+ ///Will return the current position of the cursor. When mouse is Locked, this will retain the last free position of the cursor.
+ int LockedY();
+
+#if WT_OS_TYPE==OS_WIN32
+
+	void SetPos(int lX,int lY);
+	void SetPos(int lX,int lY,int lZ);
+	void SetLeft(bool lbLeft);
+	void SetRight(bool lbLeft);
+	void SetMiddle(bool lbMiddle);
+
  /// Windows only variable. Windows format for mouse position...?
  tagPOINT Pos;
 #endif
@@ -77,6 +100,9 @@ public:
  void Lock();
 /// This will unlock the mouse cursor from the centre of the window.
  void Unlock();
+/// This will unlock the mouse cursor and reposition the cursor at the last co-ordinates.
+ void UnlockPosition();
+
 
 /**
 * \brief This will Generate a detailed Mouse Selection Collision List.
@@ -86,9 +112,11 @@ public:
 * The mfDistance in the list is automatically generated and is the distance from the closest point on the Mosue vector.
 * The vector is from the cameras position through the mouse co-ordinates in the viewport.
 */
+#if WT_FULL_VERSION_BAMBOO
 cCollisionList *Selection(cMouseCollisionObject *lpMouse,uint32 liFilter=0,cCollisionList *lpList=0);
 cCollisionList *SelectionDetailed(cMouseCollisionObject *lpMouse,uint32 liFilter=0,cCollisionList *lpList=0);
 //cCollisionList *Selection(cViewport *lpCamera,float lfRadius=0.0f);
+#endif
 
 };
 

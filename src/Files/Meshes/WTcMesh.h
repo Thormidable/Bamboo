@@ -79,6 +79,8 @@ GLuint mBuffer2;
 	cMesh();
 	/// This will load the data in lpMesh to be used by this object.
 	cMesh(cMeshArray *lpMesh);
+
+	cMesh(cMesh *lpMesh);
 	~cMesh();
 
 	/// This will return the models rendering format.
@@ -170,6 +172,10 @@ cSeamPair UVSeam(FACE_TYPE *Face1,FACE_TYPE *Face2);
 void GenerateSpace(uint16 liVerteces,bool lbNormal,bool lbUV,uint32 liFaces);
 
 void RemoveErrorFaces(float lfRange);
+
+void AddData(bool lbNormals,bool lbUV);
+
+cMesh *operator=(cMesh *lpOther);
 
 
 };

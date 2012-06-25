@@ -19,11 +19,11 @@ This section contains a list of useful Macros for accessing various functions or
 \end{DoxyItemize}
 \item \_\-KEY(KEY\_\-CODE\_\-ID)
 \begin{DoxyItemize}
-\item Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List and start 'KEY\_\-CODE\_\-' .
+\item Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List and start 'KEY\_\-CODE\_\-'. They can be stored as unsigned integers.
 \end{DoxyItemize}
 \item \_\-MOUSE
 \begin{DoxyItemize}
-\item Reference giving access the systems mouse states.
+\item Pointer Reference giving access the systems mouse states.
 \end{DoxyItemize}
 \item \_\-LOAD(FileName)
 \begin{DoxyItemize}
@@ -95,7 +95,7 @@ This section contains a list of useful Macros for accessing various functions or
 \end{DoxyItemize}
 \item \_\-GET\_\-LANDSCAPE\_\-FILE(Reference)
 \begin{DoxyItemize}
-\item Function returning a pointer to the \hyperlink{classcm_landscape}{cmLandscape} Object with the name Reference.
+\item Function returning a pointer to the cmLandscape Object with the name Reference.
 \end{DoxyItemize}
 \end{DoxyItemize}
 \begin{DoxyItemize}
@@ -107,7 +107,7 @@ This section contains a list of useful Macros for accessing various functions or
 \begin{DoxyItemize}
 \item \_\-GET\_\-MODELLIST\_\-FILE(Reference)
 \begin{DoxyItemize}
-\item Function returning a pointer to the \hyperlink{classc_mesh_tree}{cMeshTree} Object with the name Reference.
+\item Function returning a pointer to the cMeshTree Object with the name Reference.
 \end{DoxyItemize}
 \end{DoxyItemize}
 \begin{DoxyItemize}
@@ -117,11 +117,11 @@ This section contains a list of useful Macros for accessing various functions or
 \end{DoxyItemize}
 \item \_\-CAMERA
 \begin{DoxyItemize}
-\item A Pointer to the default \hyperlink{classc_camera}{cCamera} Object.
+\item Pointer Reference to the default \hyperlink{classc_camera}{cCamera} Object.
 \end{DoxyItemize}
 \item \_\-LIGHT
 \begin{DoxyItemize}
-\item A Pointer to the \hyperlink{classc_light_handler}{cLightHandler} Object.
+\item A Pointer to the cLightHandler Object.
 \end{DoxyItemize}
 \item \_\-KERNEL
 \begin{DoxyItemize}
@@ -141,7 +141,7 @@ This section contains a list of useful Macros for accessing various functions or
 \end{DoxyItemize}
 \item WT\_\-TIME\_\-IND
 \begin{DoxyItemize}
-\item This is the current frame length in seconds. Multiply anything time dependant by this to make it time independant. (It is a float multiplyer, think before use.)\par
+\item This is the current frame length in seconds. Multiply anything time dependant variable by this to make it time independant. (It is a float multiplyer, think before use.)\par
 
 \end{DoxyItemize}
 \item \_\-COLLISION\_\-PROCESS\_\-LOOP(lpList,lpVar)
@@ -475,7 +475,7 @@ There are also accessor codes for the Macro \_\-KEY(). These are actually unsign
 
 
 \begin{DoxyCode}
- if(_KEY(KEY_CODE_SPACE)) _CREATE(Bulltets());
+ if(_KEY(KEY_CODE_SPACE)) _CREATE(Bullets());
  if(_KEY(KEY_CODE_TAB)) _KERNEL->KillAll();
 \end{DoxyCode}
 
@@ -595,7 +595,7 @@ This Section contains the complete list of engine settings. They are all variabl
 \end{DoxyItemize}
 \item WT\_\-STARTING\_\-VIEWPORT\_\-SLOTS
 \begin{DoxyItemize}
-\item This is the number of \hyperlink{classc_viewport}{cViewport} slots created in the cViewportHandler at start. The number of slots will be increased as required, but this involves some overhead.
+\item This is the number of cViewport slots created in the cViewportHandler at start. The number of slots will be increased as required, but this involves some overhead.
 \end{DoxyItemize}
 \item WT\_\-TEXTURE\_\-NUMBER\_\-ALLOWED
 \begin{DoxyItemize}
@@ -689,7 +689,7 @@ This Section contains the complete list of engine settings. They are all variabl
 \begin{DoxyItemize}
 \item WT\_\-MAX\_\-PARTICLES
 \begin{DoxyItemize}
-\item This is the maximum particles that \hyperlink{classc_particle_handler}{cParticleHandler} should need to maintain at any one time. Should not be modifed at run time.
+\item This is the maximum particles that cParticleHandler should need to maintain at any one time. Should not be modifed at run time.
 \end{DoxyItemize}
 \end{DoxyItemize}
 \begin{DoxyItemize}
@@ -715,24 +715,35 @@ This section contains information of which objects which are handled by Bamboo. 
 \item \hyperlink{classc_process}{cProcess}
 \item \hyperlink{classc_render_object}{cRenderObject}
 \item \hyperlink{classc_camera}{cCamera}
-\item \hyperlink{classc_viewport}{cViewport}
+\item cViewport
 \begin{DoxyItemize}
-\item \hyperlink{classc_image}{cImage}
+\item cImage
 \item \hyperlink{classc_model}{cModel}
-\item \hyperlink{classc_text_button}{cTextButton}
-\item \hyperlink{classc_button}{cButton}
-\item \hyperlink{classc_text}{cText}
-\item \hyperlink{classc_landscape}{cLandscape}
+\item cTextButton
+\item cButton
+\item cText
+\item cLandscape
 \item \hyperlink{classc_render_node}{cRenderNode}
-\item \hyperlink{classc_node_list}{cNodeList}
-\item \hyperlink{classc_beam_mesh}{cBeamMesh}
+\item cNodeList
+\item cBeamMesh
 \item \hyperlink{classc_line}{cLine}
 \item \hyperlink{classc_point}{cPoint}
 \item cParticleGroup
-\item \hyperlink{classc_particle}{cParticle}
+\item cParticle
 \end{DoxyItemize}
 \item \hyperlink{classc_collision_object}{cCollisionObject}
 \item \hyperlink{classc_audio_object}{cAudioObject}
+\item \hyperlink{classc_file}{cFile}
+\begin{DoxyItemize}
+\item cMeshFileCollision
+\item \hyperlink{classc_texture}{cTexture}
+\item \hyperlink{classc_font}{cFont}
+\item \hyperlink{classc_mesh}{cMesh}
+\item cmLandscape
+\item cShader
+\item \hyperlink{classc_shader_program}{cShaderProgram}
+\item cSoundObject
+\end{DoxyItemize}
 \end{DoxyItemize}These objects can be used as instances and can be created and deleted as desired. The \hyperlink{classc_file}{cFile} objects are the types used when the \_\-GET\_\-FILE() macros are used. Otherwise you are unlikely to use them.
 \begin{DoxyItemize}
 \item c1DVf
@@ -744,35 +755,26 @@ This section contains information of which objects which are handled by Bamboo. 
 \item \hyperlink{classc_matrix4}{cMatrix4}
 \item \hyperlink{classc_camera_matrix4}{cCameraMatrix4}
 \item \hyperlink{classc_matrix_stack}{cMatrixStack}
-\item \hyperlink{classc_file}{cFile} (These are for loaded media files. You should not need to create objects of these types)
-\begin{DoxyItemize}
-\item cSoundObject
-\item \hyperlink{classc_mesh_file_collision}{cMeshFileCollision}
-\item \hyperlink{classc_texture}{cTexture}
-\item \hyperlink{classc_font}{cFont}
-\item \hyperlink{classc_mesh}{cMesh}
-\item \hyperlink{classcm_landscape}{cmLandscape}
-\item cShader
-\item \hyperlink{classc_shader_program}{cShaderProgram}
-\end{DoxyItemize}
 \item \hyperlink{classc_r_g_b}{cRGB}
 \item \hyperlink{classc_r_g_b_a}{cRGBA}
 \item \hyperlink{classc_collision_list}{cCollisionList}
 \end{DoxyItemize}\hypertarget{_reference_lists_OptimisationTechniques}{}\section{Optimisation Techniques}\label{_reference_lists_OptimisationTechniques}
 Bamboo is written to be as optimised as possible while remaining very simple. There are many things that can be done to optimise your code. \par
  {\bfseries Reduce Collisions:} \par
- It is very important to only check for collisions that matter. Collisions should only detected one way (I.E. either From the Tank to the Bullet OR from the Bullet to the Tank, not both). Use \hyperlink{classc_collision_object_a1490cdf75c8037049bfa7891aa8756b7}{cCollisionObject::CollisionFilter()} to minimise the collision checks that are made. \par
+ It is very important to only check for collisions that matter. Collisions should only detected one way (I.E. either From the Tank to the Bullet OR from the Bullet to the Tank, not both). Use \hyperlink{classc_collision_object_a1490cdf75c8037049bfa7891aa8756b7}{cCollisionObject::CollisionFilter()} to minimise the collision checks that are made. Also sphere sphere collisions are much faster than other collision types. Where possible make collisions Sphere, then Box, then Beam, then Mesh, then Compound. \par
  {\bfseries Turn off Lighting where not required:} \par
  If an object will not use the lighting settings there is no point in calculating the lighting values. Turn it off with the function \hyperlink{classc_render_object_a67191d0fe8aceaa10052a542b3c34650}{cRenderObject::Lighting(bool)}. {\bfseries Reduce Matrix Multiplications:} \par
  Where possible use the minimum of Matrix multiplications. Both in shaders and in programs. Don't use cRenderObject::CalculateGlobalMatrix() unless absolutely neccessay. try to use cRenderObject::GetCacheMatrix() instead. It will not include changes to the Global matrix this frame but it is very fast. Use the highest level of Matrices possible in a shader. \par
  {\bfseries Avoid searching with strings:} \par
- Pointers are much quicker for accessing Media objects loaded onto the harddrive. If a piece of media will be accessed many times get a pointer to it using the functions for getting files (\_\-GET\_\-AUDIO\_\-FILE(),\_\-GET\_\-COLLISION\_\-MESH\_\-FILE(),\_\-GET\_\-FONT\_\-FILE(),\_\-GET\_\-LANDSCAPE\_\-FILE(),\_\-GET\_\-MESH\_\-FILE(),\_\-GET\_\-SHADER\_\-FILE(),\_\-GET\_\-TEXTURE\_\-FILE()). Each takes a string and returns a pointer of the correct type to the media object. if it cannot be found it returns 0; \hypertarget{_reference_lists_CommonMistakes}{}\section{Common Mistakes}\label{_reference_lists_CommonMistakes}
+ Pointers are much quicker for accessing Media objects loaded onto the harddrive. If a piece of media will be accessed many times get a pointer to it using the functions for getting files (\_\-GET\_\-AUDIO\_\-FILE(),\_\-GET\_\-COLLISION\_\-MESH\_\-FILE(),\_\-GET\_\-FONT\_\-FILE(),\_\-GET\_\-LANDSCAPE\_\-FILE(),\_\-GET\_\-MESH\_\-FILE(),\_\-GET\_\-SHADER\_\-FILE(),\_\-GET\_\-TEXTURE\_\-FILE()). Each takes a string and returns a pointer of the correct type to the media object. if it cannot be found it returns 0. \par
+ Avoid Slow functions: \par
+ sqrt is a very slow function. As is dividing, trig and writting to the console. Performing these many times a second will slow the program substantially. \hypertarget{_reference_lists_CommonMistakes}{}\section{Common Mistakes}\label{_reference_lists_CommonMistakes}
 {\bfseries  Nothing is showing on screen: } \par
  Check your Render Objects have been given valid shader programs using \hyperlink{classc_render_object_a75f92ce4ba7b36a07e24be0643e4f020}{cRenderObject::Shader(string)} or \hyperlink{classc_render_object_abd47a58de22adfe1e9a1970f66a2f4cd}{cRenderObject::Shader(cShaderProgram$\ast$)}. Check the camera is facing the objects. Check the objects are between the cameras near and far distances \hyperlink{classc_perspective_control_af4c9bf530c680788925079d1ed64f7db}{cCamera::Near()} \hyperlink{classc_perspective_control_aa2a129ba8718923f805335bdb7661f40}{cCamera::Far()}. Change the cameras clear color to be not black and not green using \hyperlink{classc_viewport_control_ac3cee84c15d6b7bb35daf33a95a41f08}{cViewportControl::ClearColor(float,float,float,float)}. (Objects are most likely to default to black or green depending on the shader program and OS). Finally check the version of OpenGL that is being used by Bamboo. This is displayed as the first piece of information in the debugging console. It should be at least 3.0. {\bfseries  My Textures aren't working: } \par
  Has the Mesh got UV Co-\/ordinates? The entire model will have random colors or be faded to a very dark color without UV co-\/ordinates. \par
  The object must have its shader assigned before it can receive any textures. {\bfseries  My Lighting isn't working: } \par
  If the model is entirely black it may not have Normals. A Mesh without normals cannot use lighting. If the lighting is not using the correct lights it may be worth checking if lighting is enabled for the current object with \hyperlink{classc_render_object_a67191d0fe8aceaa10052a542b3c34650}{cRenderObject::Lighting(bool)}. \par
  {\bfseries  My Transparent Textures and Images are not working:} \par
- Check that the Texture has an alpha channel to enable transparency. Check that Transparency is enabled with cRenderObject::Transparent(bool) \par
+ Check that the Texture has an alpha channel to enable transparency. Check that Transparency is enabled with cRenderObject::Transparent(uint8) \par
  {\bfseries When I change an Objects shader it goes funny:} \par
  Each shader assigns its variables to a location specific to that \hyperlink{classc_shader_program}{cShaderProgram}. This is done by the graphics card. Variables should be reassigned when an objects shader is changed. 

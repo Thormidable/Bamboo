@@ -2,11 +2,13 @@
 #define __WTVFILE_H__
 
 /// This is the virtual file for cFile. It is a virtual representation of the base code for files loaded from a hdd.
-class vFile
+class vFile : public cSignal
 {
-
+	friend class cLinkedNode<vFile>;
+protected:
+	virtual ~vFile(){};
 public:
- virtual ~vFile(){};
+
  /// This will return the filename or file reference of this file.
  virtual char *FileName()=0;
 

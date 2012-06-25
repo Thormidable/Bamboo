@@ -9,6 +9,7 @@ class cLine :public cRenderObject
  float mfPosition[3];
  float mfEnd[3];
  float mfVector[3];
+ float mfWidth;
 
 public:
  /// cLine constructor
@@ -35,6 +36,11 @@ public:
       void Vector(float* lfPos);
       ///Will set the vector of this object to the values specified (XYZ).
       void Vector(float lfX,float lfY,float lfZ=0.0f);
+
+	  ///Will set the width for the line
+	  void Width(float lfWidth);
+	  ///Will return the lines width
+	  float Width();
 
     float GetSize();
     double GetSizeSq();

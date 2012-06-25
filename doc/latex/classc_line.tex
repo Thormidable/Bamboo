@@ -13,7 +13,7 @@ Collaboration diagram for cLine:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=400pt]{classc_line__coll__graph}
+\includegraphics[height=600pt]{classc_line__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -34,41 +34,6 @@ Collaboration diagram for cLine:\nopagebreak
 \label{classc_line_a8a84cc1fe6a5a875faece391612347fc}
 
 \begin{DoxyCompactList}\small\item\em \hyperlink{classc_line}{cLine} constructor. Will be owned by the \hyperlink{classc_render_node}{cRenderNode} of the \hyperlink{classc_camera}{cCamera} lpCamera. \end{DoxyCompactList}\item 
-\hypertarget{classc_line_a9406a39ed9a76fb03673345b6e0e7255}{
-\hyperlink{classc_r_g_b_a}{cRGBA} $\ast$ \hyperlink{classc_line_a9406a39ed9a76fb03673345b6e0e7255}{Color} ()}
-\label{classc_line_a9406a39ed9a76fb03673345b6e0e7255}
-
-\begin{DoxyCompactList}\small\item\em Will return a pointer to the color of this line (RGBA). \end{DoxyCompactList}\item 
-\hypertarget{classc_line_a06c260e9319257479988f3867ad12d0e}{
-void \hyperlink{classc_line_a06c260e9319257479988f3867ad12d0e}{Color} (\hyperlink{classc_r_g_b_a}{cRGBA} \&lpColor)}
-\label{classc_line_a06c260e9319257479988f3867ad12d0e}
-
-\begin{DoxyCompactList}\small\item\em Will Set the color of this object to the float array pointed to by lfColor. Expects 4 floats (RGBA). \end{DoxyCompactList}\item 
-\hypertarget{classc_line_a1b7753f4abdae0eab9e3b26082251241}{
-void \hyperlink{classc_line_a1b7753f4abdae0eab9e3b26082251241}{Color} (\hyperlink{classc_r_g_b_a}{cRGBA} $\ast$lpColor)}
-\label{classc_line_a1b7753f4abdae0eab9e3b26082251241}
-
-\begin{DoxyCompactList}\small\item\em See \hyperlink{classc_line_a06c260e9319257479988f3867ad12d0e}{cLine::Color(cRGBA \&lpColor)}. \end{DoxyCompactList}\item 
-\hypertarget{classc_line_a10aa6baf5531433d4944bcaeebaa17e1}{
-void \hyperlink{classc_line_a10aa6baf5531433d4944bcaeebaa17e1}{Color} (\hyperlink{classc_r_g_b}{cRGB} \&lpColor)}
-\label{classc_line_a10aa6baf5531433d4944bcaeebaa17e1}
-
-\begin{DoxyCompactList}\small\item\em See \hyperlink{classc_line_a06c260e9319257479988f3867ad12d0e}{cLine::Color(cRGBA \&lpColor)}. \end{DoxyCompactList}\item 
-\hypertarget{classc_line_a03c832a0976c29bfbfe1c19dd5d3c3a3}{
-void \hyperlink{classc_line_a03c832a0976c29bfbfe1c19dd5d3c3a3}{Color} (\hyperlink{classc_r_g_b}{cRGB} $\ast$lpColor)}
-\label{classc_line_a03c832a0976c29bfbfe1c19dd5d3c3a3}
-
-\begin{DoxyCompactList}\small\item\em See \hyperlink{classc_line_a06c260e9319257479988f3867ad12d0e}{cLine::Color(cRGBA \&lpColor)}. \end{DoxyCompactList}\item 
-\hypertarget{classc_line_a64cbbcfc9b8a08a0c882b5ac9f5c9bfc}{
-void \hyperlink{classc_line_a64cbbcfc9b8a08a0c882b5ac9f5c9bfc}{Color} (float $\ast$lpColor)}
-\label{classc_line_a64cbbcfc9b8a08a0c882b5ac9f5c9bfc}
-
-\begin{DoxyCompactList}\small\item\em See \hyperlink{classc_line_a06c260e9319257479988f3867ad12d0e}{cLine::Color(cRGBA \&lpColor)}. \end{DoxyCompactList}\item 
-\hypertarget{classc_line_a525d28a1f6c2cfe048e7d27a0e483511}{
-void \hyperlink{classc_line_a525d28a1f6c2cfe048e7d27a0e483511}{Color} (float lpR, float lpG, float lpB, float lpA=1.0)}
-\label{classc_line_a525d28a1f6c2cfe048e7d27a0e483511}
-
-\begin{DoxyCompactList}\small\item\em See \hyperlink{classc_line_a06c260e9319257479988f3867ad12d0e}{cLine::Color(cRGBA \&lpColor)}. \end{DoxyCompactList}\item 
 \hypertarget{classc_line_a32342ae3b470044b21f38f3fe3e0c232}{
 float $\ast$ \hyperlink{classc_line_a32342ae3b470044b21f38f3fe3e0c232}{Position} ()}
 \label{classc_line_a32342ae3b470044b21f38f3fe3e0c232}
@@ -79,9 +44,9 @@ void \hyperlink{classc_line_acfefe5128253475e8291d110f004095b}{Position} (float 
 \label{classc_line_acfefe5128253475e8291d110f004095b}
 
 \begin{DoxyCompactList}\small\item\em Will set the position of this object to the float array pointed to by lfPos. Expects 3 floats (XYZ). \end{DoxyCompactList}\item 
-\hypertarget{classc_line_a6abc4fedc3f30a6fb45ce4dd83070082}{
-void \hyperlink{classc_line_a6abc4fedc3f30a6fb45ce4dd83070082}{Position} (float lfX, float lfY, float lfZ)}
-\label{classc_line_a6abc4fedc3f30a6fb45ce4dd83070082}
+\hypertarget{classc_line_aedeac0c1874b8212e8cc878b920513d9}{
+void \hyperlink{classc_line_aedeac0c1874b8212e8cc878b920513d9}{Position} (float lfX, float lfY, float lfZ=0.0f)}
+\label{classc_line_aedeac0c1874b8212e8cc878b920513d9}
 
 \begin{DoxyCompactList}\small\item\em Will set the position of this object to the values specified (XYZ). \end{DoxyCompactList}\item 
 \hypertarget{classc_line_a4b37bd0ff6ea3834a2c49d5efbd222c9}{
@@ -94,11 +59,21 @@ void \hyperlink{classc_line_ad558bfa28a78a6594446ae0c5e11c262}{Vector} (float $\
 \label{classc_line_ad558bfa28a78a6594446ae0c5e11c262}
 
 \begin{DoxyCompactList}\small\item\em Will set the vector of this object to the float array pointed to by lfPos. Expects 3 floats (XYZ). \end{DoxyCompactList}\item 
-\hypertarget{classc_line_aa9b3156e1504378683e34aa8c2f38ec2}{
-void \hyperlink{classc_line_aa9b3156e1504378683e34aa8c2f38ec2}{Vector} (float lfX, float lfY, float lfZ)}
-\label{classc_line_aa9b3156e1504378683e34aa8c2f38ec2}
+\hypertarget{classc_line_abfbbb77ed5b1c9208baf6d38b907b7b5}{
+void \hyperlink{classc_line_abfbbb77ed5b1c9208baf6d38b907b7b5}{Vector} (float lfX, float lfY, float lfZ=0.0f)}
+\label{classc_line_abfbbb77ed5b1c9208baf6d38b907b7b5}
 
-\begin{DoxyCompactList}\small\item\em Will set the vector of this object to the values specified (XYZ). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Will set the vector of this object to the values specified (XYZ). \end{DoxyCompactList}\item 
+\hypertarget{classc_line_a4b02fb7febded866cc8fda351d623811}{
+void \hyperlink{classc_line_a4b02fb7febded866cc8fda351d623811}{Width} (float lfWidth)}
+\label{classc_line_a4b02fb7febded866cc8fda351d623811}
+
+\begin{DoxyCompactList}\small\item\em Will set the width for the line. \end{DoxyCompactList}\item 
+\hypertarget{classc_line_a26247a346a469646b250fa0116e1ec34}{
+float \hyperlink{classc_line_a26247a346a469646b250fa0116e1ec34}{Width} ()}
+\label{classc_line_a26247a346a469646b250fa0116e1ec34}
+
+\begin{DoxyCompactList}\small\item\em Will return the lines width. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

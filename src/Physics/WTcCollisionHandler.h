@@ -67,13 +67,16 @@ public:
 
  /// This will return a pointer to the classes current instance and if there is none it will create one.
  static cCollisionHandler *Instance();
-
+/// This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType.
  virtual cCollisionList *GenerateCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0)=0;
+ /// This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType, with extra collision detail.
  virtual cCollisionList *GenerateDetailedCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0)=0;
+     ///This will Generate a list of all awake cCollisionObjects with the the correct filter and in the correct spatial slots. No Collision Checks will be performed.
+ virtual cCollisionList *GeneratePossibleCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0)=0;
  /// This will deconstruct the class.
  virtual ~cCollisionHandler();
 
- /// This will reset both the cursors used to track position through the collision object lists.
+ /// This will reset both the cursors used to track position through the collision object lists. Does not point to the first item in the list.
  virtual void ResetCursors()=0;
 
  friend class cCollisionBase;
@@ -86,54 +89,53 @@ protected:
 
 
 	//XXXXXXXXXXXXXXx may want to make this an Array of pointers. Need to check pointers before use. XXXXXXXXXXXXXX
-	///This is the current cursor position in the array mpList.
+	//This is the current cursor position in the array mpList.
 	uint32 miCurPos;
-	///This is the current cursor position (the current cLinkedNode) in the List mpList[miTypeCur].
+	//This is the current cursor position (the current cLinkedNode) in the List mpList[miTypeCur].
 	cLinkedNode<cCollisionBase> *mpColCur;
 
 
-	///Private Constructor
+	//Private Constructor
 	cCollisionHandlerType();
 
-	///This will add the cCollisionBase pointed to by lpObject to the list mpList.
+	//This will add the cCollisionBase pointed to by lpObject to the list mpList.
  	cLinkedNode<cCollisionBase> *Add(cCollisionBase *lpTemp);
 
-	///This will turn off Collisions for the cLinkedNode lpOld. This should in turn call RemoveFromList().
+	//This will turn off Collisions for the cLinkedNode lpOld. This should in turn call RemoveFromList().
 	void Remove(cLinkedNode<cCollisionBase> *lpOld);
-	///This will acutally remove the clinkedNode from the relevant list.
+	//This will acutally remove the clinkedNode from the relevant list.
 	void RemoveFromList(cLinkedNode<cCollisionBase> *lpOld);
 
-	/// This will return the Next item in the lists in order. (The item is pointed to by mpColCur). If an item is found will return true, else will return false.
+	// This will return the Next item in the lists in order. (The item is pointed to by mpColCur). If an item is found will return true, else will return false.
 	bool NextListItem();
-	/// This will return the Next item in the list storing lpType in order. (the item is pointed to by mpColCur).If an item is found will return true, else will return false.
+	// This will return the Next item in the list storing lpType in order. (the item is pointed to by mpColCur).If an item is found will return true, else will return false.
 	bool NextListItem(uint32 lpType);
-	/// This will find the appropriate array slot for the cCollisionBase lpObj. It will return the array position of the slot.
+	// This will find the appropriate array slot for the cCollisionBase lpObj. It will return the array position of the slot.
 	virtual uint32 FindSlot(cCollisionBase *lpObj);
 
 
-	///This will set the current Position of the Spatial Array.
+	//This will set the current Position of the Spatial Array.
 	virtual void Position(float *lpTemp){(void) lpTemp;};
-	///This will return the current Position of the Spatial Array.
+	//This will return the current Position of the Spatial Array.
 	virtual float *Position(){return 0;};
 
-	///This will Find the Spatial Slot for the position lpPos.
+	//This will Find the Spatial Slot for the position lpPos.
 	virtual uint32 FindSlot(float *lpPos){(void) lpPos; return 0;};
-	///This will return the list for the spatial slot lpPos[0],lpPos[1],lpPos[2]. (Array slots not spatial co-ordinates).
+	//This will return the list for the spatial slot lpPos[0],lpPos[1],lpPos[2]. (Array slots not spatial co-ordinates).
 	virtual cLinkedList<cCollisionBase> *FindSlot(uint32 *lpPos){(void) lpPos; return 0;};
 
 public:
 
-	/// This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType.
+
 	cCollisionList *GenerateCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
-
-	/// This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType, with extra collision detail.
 	cCollisionList *GenerateDetailedCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
+    cCollisionList *GeneratePossibleCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
 
-	/// This will reset both the cursors used to track position through the collision object lists.
+	// This will reset both the cursors used to track position through the collision object lists.
 	void ResetCursors();
 
 
-	/// This will deconstruct the class.
+	// This will deconstruct the class.
 	virtual ~cCollisionHandlerType();
 
 	friend class cCollisionHandler;
@@ -143,28 +145,23 @@ class cCollisionHandlerBSP : public cCollisionHandlerType
 {
 
 protected:
-	/// This stores the Current central position of the Spatial Array.
+	// This stores the Current central position of the Spatial Array.
 	float mfCentre[3];
-	/// This makes arrays dimensions order in X,Z,Y without hard coding it. (1D is X Axis, 2D is X,Z axis and 3D is X,Z,Y axis).
+	// This makes arrays dimensions order in X,Z,Y without hard coding it. (1D is X Axis, 2D is X,Z axis and 3D is X,Z,Y axis).
 	static uint32 mpAxisOrder[3];
 
 	cCollisionHandlerBSP();
 public:
 
-    /// This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType.
+    // This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType.
 	cCollisionList *GenerateCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
-	///This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType, with extra collision detail.
+	//This will Actually search the Collision Lists and create a cCollisionList with all the detected collisions with objects of type lpType, with extra collision detail.
 	cCollisionList *GenerateDetailedCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
-
-	///This will set the current Position of the Spatial Array.
+    cCollisionList *GeneratePossibleCollisionList(cCollisionBase *lpObj,uint32 lpType=0,cCollisionList *lpList=0);
 	void Position(float *lpTemp){memcpy(mfCentre,lpTemp,sizeof(float)*3);};
-	///This will return the current Position of the Spatial Array.
 	float *Position(){return mfCentre;};
-	/// This will find the appropriate array slot for the cCollisionBase lpObj. It will return the array position of the slot.
 	uint32 FindSlot(cCollisionBase *lpObj);
-	///This will Find the Spatial Slot for the position lpPos.
 	uint32 FindSlot(float *lpPos);
-	///This will return the list for the spatial slot lpPos[0],lpPos[1],lpPos[2]. (Array slots not spatial co-ordinates).
 	cLinkedList<cCollisionBase> *FindSlot(uint32 *lpPos);
 
 	virtual ~cCollisionHandlerBSP();

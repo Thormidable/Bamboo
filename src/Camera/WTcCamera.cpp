@@ -10,6 +10,8 @@ cCamera::cCamera()
 	 mpInstance=this;
 	 Proportional(true);
 	 ViewportProportional(0.0f,0.0f,1.0f,1.0f);
+	 Width(1.0f);
+	 Height(0.75f);
  }
 
  cCameraHandler::Instance()->Add(this);
@@ -38,7 +40,6 @@ cCamera::~cCamera()
  delete mpRenderList; mpRenderList=0;
  #if WT_FULL_VERSION_BAMBOO
     delete mpViewportHandler; mpViewportHandler=0;
-    //delete mpParticleHandler; mpParticleHandler=0;
  #endif
  delete mpPainter; mpPainter=0;
 }
@@ -185,10 +186,10 @@ void cCamera::UpdateWindowSize()
 #endif
  if(Proportional())
  {
-  mfViewportX=mfProportionalX*gpWindow->Width();
-  mfViewportY=mfProportionalY*gpWindow->Height();
-  mfViewportWidth=mfProportionalWidth*gpWindow->Width();
-  mfViewportHeight=mfProportionalHeight*gpWindow->Height();
+  mfViewportX=mfProportionalX*gpWindow->RenderAreaX();
+  mfViewportY=mfProportionalY*gpWindow->RenderAreaY();
+  mfViewportWidth=mfProportionalWidth*gpWindow->RenderAreaWidth();
+  mfViewportHeight=mfProportionalHeight*gpWindow->RenderAreaHeight();
  }
  UpdateProjectionMatrix();
 

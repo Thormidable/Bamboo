@@ -972,6 +972,30 @@ Engine/WTKernel.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.s
 .PHONY : Engine/WTKernel.cpp.s
 
+Engine/WTcBase.o: Engine/WTcBase.cpp.o
+.PHONY : Engine/WTcBase.o
+
+# target to build an object file
+Engine/WTcBase.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o
+.PHONY : Engine/WTcBase.cpp.o
+
+Engine/WTcBase.i: Engine/WTcBase.cpp.i
+.PHONY : Engine/WTcBase.i
+
+# target to preprocess a source file
+Engine/WTcBase.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.i
+.PHONY : Engine/WTcBase.cpp.i
+
+Engine/WTcBase.s: Engine/WTcBase.cpp.s
+.PHONY : Engine/WTcBase.s
+
+# target to generate assembly for a file
+Engine/WTcBase.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.s
+.PHONY : Engine/WTcBase.cpp.s
+
 Engine/WTcFrameRate.o: Engine/WTcFrameRate.cpp.o
 .PHONY : Engine/WTcFrameRate.o
 
@@ -1571,6 +1595,30 @@ Files/Meshes/WTv2DPolygon.s: Files/Meshes/WTv2DPolygon.cpp.s
 Files/Meshes/WTv2DPolygon.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Meshes/WTv2DPolygon.cpp.s
 .PHONY : Files/Meshes/WTv2DPolygon.cpp.s
+
+Files/Misc/WTcCircleLineData.o: Files/Misc/WTcCircleLineData.cpp.o
+.PHONY : Files/Misc/WTcCircleLineData.o
+
+# target to build an object file
+Files/Misc/WTcCircleLineData.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.o
+.PHONY : Files/Misc/WTcCircleLineData.cpp.o
+
+Files/Misc/WTcCircleLineData.i: Files/Misc/WTcCircleLineData.cpp.i
+.PHONY : Files/Misc/WTcCircleLineData.i
+
+# target to preprocess a source file
+Files/Misc/WTcCircleLineData.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.i
+.PHONY : Files/Misc/WTcCircleLineData.cpp.i
+
+Files/Misc/WTcCircleLineData.s: Files/Misc/WTcCircleLineData.cpp.s
+.PHONY : Files/Misc/WTcCircleLineData.s
+
+# target to generate assembly for a file
+Files/Misc/WTcCircleLineData.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Misc/WTcCircleLineData.cpp.s
+.PHONY : Files/Misc/WTcCircleLineData.cpp.s
 
 Files/Misc/WTcLineArrayData.o: Files/Misc/WTcLineArrayData.cpp.o
 .PHONY : Files/Misc/WTcLineArrayData.o
@@ -2553,6 +2601,9 @@ help:
 	@echo "... Engine/WTKernel.o"
 	@echo "... Engine/WTKernel.i"
 	@echo "... Engine/WTKernel.s"
+	@echo "... Engine/WTcBase.o"
+	@echo "... Engine/WTcBase.i"
+	@echo "... Engine/WTcBase.s"
 	@echo "... Engine/WTcFrameRate.o"
 	@echo "... Engine/WTcFrameRate.i"
 	@echo "... Engine/WTcFrameRate.s"
@@ -2628,6 +2679,9 @@ help:
 	@echo "... Files/Meshes/WTv2DPolygon.o"
 	@echo "... Files/Meshes/WTv2DPolygon.i"
 	@echo "... Files/Meshes/WTv2DPolygon.s"
+	@echo "... Files/Misc/WTcCircleLineData.o"
+	@echo "... Files/Misc/WTcCircleLineData.i"
+	@echo "... Files/Misc/WTcCircleLineData.s"
 	@echo "... Files/Misc/WTcLineArrayData.o"
 	@echo "... Files/Misc/WTcLineArrayData.i"
 	@echo "... Files/Misc/WTcLineArrayData.s"

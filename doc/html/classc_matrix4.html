@@ -62,7 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">cMatrix4 Class Reference</div>  </div>
@@ -390,6 +390,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5ed8437aa32a05185d51b9472640a8d"></a><!-- doxytag: member="cMatrix4::Equals" ref="ac5ed8437aa32a05185d51b9472640a8d" args="(cMatrix4 lpOther)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_matrix4.html#ac5ed8437aa32a05185d51b9472640a8d">Equals</a> (<a class="el" href="classc_matrix4.html">cMatrix4</a> lpOther)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes this matrix Equal the <a class="el" href="classc_matrix4.html" title="this is a standard 4x4 translation matrix for objects. This is a standard 4x4 translation matrix for ...">cMatrix4</a> lpOther. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1343c34e7b128e2bf4cf45c256746324"></a><!-- doxytag: member="cMatrix4::Equals" ref="a1343c34e7b128e2bf4cf45c256746324" args="(cDoubleMatrix4 *lpOther)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_matrix4.html#a1343c34e7b128e2bf4cf45c256746324">Equals</a> (<a class="el" href="classc_double_matrix4.html">cDoubleMatrix4</a> *lpOther)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes this matrix Equal the <a class="el" href="classc_double_matrix4.html" title="this is a standard 4x4 translation matrix for objects with components consisting of double...">cDoubleMatrix4</a> pointed to by lpOther. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afecfb51e689b472fa6ff3a2cebffa869"></a><!-- doxytag: member="cMatrix4::Equals" ref="afecfb51e689b472fa6ff3a2cebffa869" args="(cDoubleMatrix4 lpOther)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_matrix4.html#afecfb51e689b472fa6ff3a2cebffa869">Equals</a> (<a class="el" href="classc_double_matrix4.html">cDoubleMatrix4</a> lpOther)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes this matrix Equal the <a class="el" href="classc_double_matrix4.html" title="this is a standard 4x4 translation matrix for objects with components consisting of double...">cDoubleMatrix4</a> lpOther. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0af5e0b1dbbe6d7f4c512a5f07f1e273"></a><!-- doxytag: member="cMatrix4::Equals" ref="a0af5e0b1dbbe6d7f4c512a5f07f1e273" args="(cCameraMatrix4 &amp;lpOther)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_matrix4.html#a0af5e0b1dbbe6d7f4c512a5f07f1e273">Equals</a> (<a class="el" href="classc_camera_matrix4.html">cCameraMatrix4</a> &amp;lpOther)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes this matrix Equal the <a class="el" href="classc_camera_matrix4.html" title="This is a translation matrix for a camera object A Special Matric for Cameras. All the translations a...">cCameraMatrix4</a> lpOther. <br/></td></tr>
@@ -570,8 +576,11 @@ c3DVf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6bb495542c08395c26fd412db13a959"></a><!-- doxytag: member="cMatrix4::ConvertToCameraMatrix" ref="ac6bb495542c08395c26fd412db13a959" args="()" -->
 <a class="el" href="classc_camera_matrix4.html">cCameraMatrix4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_matrix4.html#ac6bb495542c08395c26fd412db13a959">ConvertToCameraMatrix</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will return this <a class="el" href="classc_matrix4.html" title="this is a standard 4x4 translation matrix for objects. This is a standard 4x4 translation matrix for ...">cMatrix4</a> in the format of a <a class="el" href="classc_camera_matrix4.html" title="This is a translation matrix for a camera object A Special Matric for Cameras. All the translations a...">cCameraMatrix4</a>. This is because they have different formats. <br/></td></tr>
-<tr><td colspan="2"><h2><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b1f976f0ef9b6dd5570e1f6b376d2c1"></a><!-- doxytag: member="cMatrix4::FindPointRelative" ref="a1b1f976f0ef9b6dd5570e1f6b376d2c1" args="(c3DVf SameSpace)" -->
+c3DVf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_matrix4.html#a1b1f976f0ef9b6dd5570e1f6b376d2c1">FindPointRelative</a> (c3DVf SameSpace)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will transpose the point to be relative to this matrix, where the point SameSpace starts in the same space (Global / Camaera / Local) <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0ebba0d10d97c6657dccd1575f761ab"></a><!-- doxytag: member="cMatrix4::mb3D" ref="ac0ebba0d10d97c6657dccd1575f761ab" args="" -->
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_matrix4.html#ac0ebba0d10d97c6657dccd1575f761ab">mb3D</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a boolean flag to define whether the object is 3D or 2D. True is 3D. False is 2D. See <a class="el" href="classc_matrix4.html#a746ce09337cbf6a3292cbe15991efd79" title="This will set the current matrix to operate as if it is a 3D object.">cMatrix4::Set3D()</a> and <a class="el" href="classc_matrix4.html#ad24236403317622459c3309938be9d21" title="This will set the current matrix to operate as if it is a 2D object.">cMatrix4::Set2D()</a>. <br/></td></tr>
@@ -597,7 +606,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:08 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Jun 6 2012 10:28:50 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

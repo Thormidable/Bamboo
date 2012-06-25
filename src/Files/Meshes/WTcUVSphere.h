@@ -13,15 +13,17 @@ public:
 
 	/**
 	* \brief This will generate an UVSphere from the cMesh lpBase.
-	* \param lfRandomRange gives the range that verteces can be randomised on the initial model.
 	* \param liSubdivisions is the number of times the mesh can be subdivided.
-	* \param lpBase is a pointer to a Base Mesh.
+	* \param lfUVSphereSize is the radius of the sphere generated.
+	* \param lbNormals is whether the user desires normals generated for the sphere.
+	* \param UVCoords is whether the user desires UV co-ordinates generated for the sphere.
 	**/
 	cUVSphere(uint8 liSubdivisions=16,float lfUVSphereSize=1.0f,bool lbNormals=false,bool UVCoords=false);
-
+    cUVSphere(cUVSphere *lpOther);
 	~cUVSphere();
+    void Generate(uint8 liSubdivisions,float lfUVSphereSize);
 
-    void Generate(uint8 liSubdivisions,float lfUVSphereSize,bool lbNormals,bool UVCoords);
+    void Radius(float lfSize);
 
 };
 #endif

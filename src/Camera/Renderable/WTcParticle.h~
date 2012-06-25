@@ -48,6 +48,7 @@ public:
 	void SetColor(cRGB &lpRGB);
 	void SetColor(cRGBA &lpRGB);
 
+
 	cParticle operator=(cParticle *lpOther);
 	cParticle operator=(cParticle lpOther);
 };
@@ -67,15 +68,14 @@ class cParticleHandler : public cLimitedList<cParticle>, public cRenderObject
 
 protected:
 	bool lbRefresh;
-
+    bool mbDepthTest;
 	cManualInterleavedAttributeArray *mpAttributes;
 	cAttributeLinker *mpAttributeLinker;
-
-	~cParticleHandler();
-
-
+	cShaderProgram *mpLastShader;
+    ~cParticleHandler();
 public:
 	cParticleHandler();
+
 	cParticleHandler(uint32 liParticles);
     cParticleHandler(uint32 liParticles,vRenderNode *lpNode);
 	cParticleHandler(uint32 liParticles,cCamera *lpCamera);
@@ -100,6 +100,7 @@ public:
 
 	void InitialiseParticleHandler(uint32 liParticles);
 
+
 };
 
 #endif
@@ -116,7 +117,7 @@ c3DVf ParticleSideVelocity(c3DVf lpSpeedInfo,float lfSpeedRange, float lfSideSpe
 ///This is a global function for generating Random speeds with a random speed along the Vector (lpSpeedInfo[0],lpSpeedInfo[1],lpSpeedInfo[2]) within the range +/- lpSpeedInfo[3] %. and with a random perpendicular component up to magnitude lpSpeedInfo[4].
 c3DVf ParticleSideVelocity(float *lpSpeedInfo);
 
-///This will generate a random uniform vector in 3 dimensions.
+///This will efficiently generate a random uniform vector in 3 dimensions.
 c3DVf GenerateUniformRandomVector();
 
 #endif

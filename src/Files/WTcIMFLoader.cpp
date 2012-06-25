@@ -4,7 +4,7 @@ using namespace std;
 
 void cIMF::LoadIMF(const char *lpPath)
 {
-	trace("Load File " << lpPath);
+	TRACE("Load File " << lpPath);
 	uint32 liTemp;
 
 	ifstream FileStream;
@@ -14,7 +14,7 @@ void cIMF::LoadIMF(const char *lpPath)
 	{
 		string msg("LoadIMF couldn't open ");
 		msg=msg+lpPath;
-		trace(msg);
+		TRACE(msg);
 		throw CException(msg);
 
 	}
@@ -207,7 +207,7 @@ void cIMF::LoadIMF(const char *lpPath)
 
                 default :
                 {
-			trace("Type not found")
+			TRACE("IMF Object Type not found")
 			//If FileType not recognised
 			FileStream.read((char *) &liTemp,sizeof(uint32));
 			FileStream.ignore(liTemp);

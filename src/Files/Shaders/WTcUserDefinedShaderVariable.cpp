@@ -1,5 +1,15 @@
 #include "../../WTBamboo.h"
 
+void cUniformStore::ClearData()
+{
+
+};
+
+cUniformStore::~cUniformStore()
+{
+	ClearData();
+};
+
 void cFloatUniformStore::ClearData()
 {
  if(mbGenerated) delete []mpData;

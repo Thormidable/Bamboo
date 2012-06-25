@@ -63,6 +63,28 @@ uint32 cCollisionHandlerType::FindSlot(cCollisionBase *lpObj)
  return lpObj->CollisionFilter();
 }
 
+cCollisionList *cCollisionHandlerBSP::GeneratePossibleCollisionList(cCollisionBase *lpCheck,uint32 lpCol,cCollisionList *lpList)
+{
+    if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpCheck);
+	else cCollisionList::mpStaticList=lpList;
+	if(lpCheck->Awake() && !lpCheck->IsDelayed())
+	{
+        ResetCursors();
+
+        uint32 liSlot=FindSlot(lpCheck);
+
+        while(NextListItem(liSlot))
+        {
+            if(mpColCur->Data()->CollisionFilter()==lpCol || !lpCol)
+            {
+                if(mpColCur->Data()!=lpCheck) cCollisionList::mpStaticList->AddCollision(mpColCur->Data());
+            }
+        }
+	}
+
+	return cCollisionList::mpStaticList;
+};
+
 cCollisionList *cCollisionHandlerBSP::GenerateDetailedCollisionList(cCollisionBase *lpCheck,uint32 lpCol,cCollisionList *lpList)
 {
     if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpCheck);
@@ -163,6 +185,41 @@ else cCollisionList::mpStaticList=lpList;
 	return cCollisionList::mpStaticList;
 };
 */
+cCollisionList *cCollisionHandlerType::GeneratePossibleCollisionList(cCollisionBase *lpObj,uint32 lpType,cCollisionList *lpList)
+{
+  if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpObj);
+	else cCollisionList::mpStaticList=lpList;
+
+  if(lpObj->Awake() && !lpObj->IsDelayed())
+  {
+        ResetCursors();
+        if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE)
+        {
+            if(lpType)
+            {
+            while(NextListItem(lpType))
+                {
+                    if(mpColCur->Data()!=lpObj)
+                    {
+                        cCollisionList::mpStaticList->AddCollision(mpColCur->Data());
+                    }
+                }
+            }
+            else
+            {
+            while(NextListItem())
+            {
+                if(mpColCur->Data()!=lpObj)
+                {
+                 cCollisionList::mpStaticList->AddCollision(mpColCur->Data());
+                }
+            }
+            }
+        }
+  }
+  return cCollisionList::mpStaticList;
+};
+
 cCollisionList *cCollisionHandlerType::GenerateCollisionList(cCollisionBase *lpObj,uint32 lpType,cCollisionList *lpList)
 {
 	if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpObj);

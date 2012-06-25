@@ -68,7 +68,7 @@ class cParticleHandler : public cLimitedList<cParticle>, public cRenderObject
 
 protected:
 	bool lbRefresh;
-    bool mbDepthTest;
+
 	cManualInterleavedAttributeArray *mpAttributes;
 	cAttributeLinker *mpAttributeLinker;
 	cShaderProgram *mpLastShader;

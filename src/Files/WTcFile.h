@@ -10,7 +10,8 @@
 */
 class cFile : public vFile
 {
-
+protected:
+	~cFile();
 public:
        friend class cFileHandler;
 	/// This is a pointer to the cLinkedNode which owns this file.
@@ -18,7 +19,7 @@ public:
 
 	/// This constructor will automatically load the file from memory and add it to the list in cFilehandler.
        cFile();
-       ~cFile();
+
 
 	/// This will store the files filename.
        char mpFileName[64];
@@ -28,8 +29,9 @@ public:
 	/// This is the function that will actually load the file from a hdd.
        void Load();
 
-	/// This will delete the file from memory.
-       void Delete();
+       void FileName(string lsFileName);
+
+	   void Stop();
 
 
 protected:

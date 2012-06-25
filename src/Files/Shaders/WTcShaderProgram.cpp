@@ -26,11 +26,11 @@ void cShaderProgram::LoadIMF(ifstream &FileStream)
     //lpTemp=reinterpret_cast<cShader*>(cFileHandler::Instance()->File(mcList.Reference(liBuff)));
     lpTemp=_GET_FILE(cShader,mcList.Reference(liBuff));
     if(lpTemp) {mpShader[liBuff]=lpTemp; AttachShader(lpTemp);}
-    else {mpShader[liBuff]=0; trace("Reference : "<<mcList.Reference(liBuff)<<"Not Found");}
+    else {mpShader[liBuff]=0; TRACE("Reference : "<<mcList.Reference(liBuff)<<"Not Found");}
   }
  Link();
 
-trace("Loaded and Processed ShaderProgram : " << mpFileName);
+TRACE("Loaded and Processed ShaderProgram : " << mpFileName);
 
 	StoredVariables()->Link(this);
 
@@ -74,7 +74,7 @@ cVariableStore *cShaderProgram::StoredVariables()
 cShaderProgram::cShaderProgram()
 {
 miProgramID=glCreateProgram();
-printf("Shader Program ID: %u\n",miProgramID);
+TRACE("Shader Program ID: " << miProgramID);
 mpShader=0;
 mpVariableSet=0;
 mpStoredVariables=0;
@@ -87,7 +87,7 @@ cShaderProgram::~cShaderProgram()
 glUseProgram(0);
  if(miProgramID){glDeleteProgram(miProgramID); miProgramID=0;}
  delete []mpShader; mpShader=0;
- //delete mpVariableSet;
+ delete mpVariableSet;
  mpVariableSet=0;
  delete mpStoredVariables; mpStoredVariables=0;
 }
@@ -120,15 +120,15 @@ void cShaderProgram::Link()
 		if(mpShader[liStatus]->Type()==IMF_SHADER_TYPE_VERTEX) Types[0]=0;
 		if(mpShader[liStatus]->Type()==IMF_SHADER_TYPE_FRAGMENT) Types[1]=0;
 	 }
-	 if(Types[0]) trace("No Vertex Shader Linked to Program. This is required.");
-	 if(Types[1]) trace("No Fragment Shader Linked to Program. This is required.");
+	 if(Types[0]) TRACE("No Vertex Shader Linked to Program. This is required.");
+	 if(Types[1]) TRACE("No Fragment Shader Linked to Program. This is required.");
 
-	 trace("Shader Program failed to Link");
+	 TRACE("Shader Program failed to Link");
 
  }
  else
  {
-	 trace("Shader Program Linked");
+	 TRACE("Shader Program Linked");
 	 Use();
  	 mpVariableSet->GetVariableLocations(miProgramID,mpShader,Size());
  }

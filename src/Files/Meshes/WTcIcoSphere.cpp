@@ -1,12 +1,21 @@
 #include "../../WTBamboo.h"
 
-cIcoSphere::cIcoSphere(uint8 liSubdivisions,float lfIcoSphereSize)
+cIcoSphere::cIcoSphere(cIcoSphere *lpOther) : cMesh(lpOther)
+{
+    mfSize=lpOther->mfSize;
+}
+
+
+cIcoSphere::cIcoSphere(uint8 liSubdivisions,float lfIcoSphereSize,bool lbNormals,bool lbUV)
 {
     mfSize=lfIcoSphereSize;
     GenerateIcosphere();
     Generate(liSubdivisions);
 
+   AddData(lbNormals,lbUV);
+
     BufferMesh();
+
 }
 
 cIcoSphere::~cIcoSphere()
@@ -22,25 +31,13 @@ void cIcoSphere::Generate(uint8 liSubdivisions)
      PushToSphere();
  }
 
- float *lpTempV=new float[miVertex*8];
-  memcpy(lpTempV,mpVertex,sizeof(float)*miVertex*3);
-  delete []mpVertex;
-  mpVertex=lpTempV;
-  mpNormals=&mpVertex[miVertex*3];
-  mpUV=&mpVertex[miVertex*6];
-
-  ZeroCentre();
-
-  CreateNormalArray();
-  CreateUVSphereMap();
-
 };
 
 void cIcoSphere::PushToSphere()
 {
     for(uint32 liCount=0;liCount<miVertex*3;liCount+=3)
     {
-        double lfScale=sqrt(mpVertex[liCount]*mpVertex[liCount]+mpVertex[liCount+1]*mpVertex[liCount+1]+mpVertex[liCount+2]*mpVertex[liCount+2])*mfSize;
+        double lfScale=mfSize/sqrt(mpVertex[liCount]*mpVertex[liCount]+mpVertex[liCount+1]*mpVertex[liCount+1]+mpVertex[liCount+2]*mpVertex[liCount+2]);
         mpVertex[liCount]*=lfScale;
         mpVertex[liCount+1]*=lfScale;
         mpVertex[liCount+2]*=lfScale;
@@ -102,8 +99,8 @@ void cIcoSphere::SubdivideEdges()
 delete []mpFaces;
 delete []mpVertex;
 
-miVertex=liVerteces*3;
-miFaces=liFaces;
+miVertex=liVMade;
+miFaces=liFMade/3;
 mpVertex=lpTempV;
 mpFaces=lpTempF;
 
@@ -164,4 +161,18 @@ void cIcoSphere::GenerateIcosphere()
     miFaces=20;
     miVertex=12;
 
+};
+
+void cIcoSphere::Radius(float lfNewScale)
+{
+    float lfScale=lfNewScale/mfSize;
+    for(uint32 liCount=0;liCount<miVertex*3;liCount+=3)
+    {
+        mpVertex[liCount]*=lfScale;
+        mpVertex[liCount+1]*=lfScale;
+        mpVertex[liCount+2]*=lfScale;
+    }
+    mfSize=lfNewScale;
+
+    BufferMesh();
 };

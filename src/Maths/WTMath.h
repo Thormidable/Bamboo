@@ -364,58 +364,17 @@ template<class T> void QuickSort(T *a,const int& leftarg, const int& rightarg)
   QuickSort(a, leftarg, pivot);
   QuickSort(a, pivot + 1, rightarg);
   }
-}
+};
+
+float FastSquareRoot(float number);
+float FastSquareRoot(double number);
 
 /*
-template<class T> void QuickSort(T *a, uint32 liItems,bool (*Comparison)(T*,T*))
+double inline __declspec (naked) __fastcall FastSquareRoot(double n)
 {
-  uint32 liStart=0;
-    T *pivotvalue = &a[liStart];
-    int left = liStart - 1;
-    int right = liItems + 1;
-
-  for(;;) {
-
-    while (Comparison(&a[--right],pivotvalue));
-    while (!Comparison(&a[++left],pivotvalue));
-
-    if (left >= right) break;
-
-    T temp = a[right];
-    a[right] = a[left];
-    a[left] = temp;
-  }
-
-  int pivot = right;
-  QuickSort(&a[liStart], pivot-liStart,Comparison);
-  QuickSort(&a[pivot+1], liItems-pivot-1,Comparison);
-
-}
-
-
-template<class T> void QuickSort(T **a, uint32 liItems,bool (*Comparison)(T*,T*),bool OtherComparison)
-{
-  uint32 liStart=0;
-    T **pivotvalue = &a[liStart];
-    int left = liStart - 1;
-    int right = liItems + 1;
-
-  for(;;) {
-
-    while (Comparison(a[--right],pivotvalue[0]));
-    while (Comparison(a[++left],pivotvalue[0]));
-
-    if (left >= right) break;
-
-    T temp = a[right];
-    a[right] = a[left];
-    a[left] = temp;
-  }
-
-  int pivot = right;
-  QuickSort(&a[liStart], pivot,Comparison);
-  QuickSort(&a[pivot+1], liItems,Comparison);
-
-}*/
+	asm("fld qword ptr [esp+4]");
+	asm("fsqrt");
+	asm("ret 8");
+};*/
 
 #endif

@@ -138,6 +138,8 @@ public:
 
 	void TreeProcessUserSignal(SIGNAL lsSignal,void *lpData);
 	void TreeProcessSignal(SIGNAL lsSignal);
+
+	void TreeSignal(SIGNAL lsSignal);
 };
 
 #endif

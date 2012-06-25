@@ -100,9 +100,12 @@ This is the complete list of members for <a class="el" href="classc_matrix4.html
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#a11fc226f72e4dbd6a5428355def33ee5">DistanceSq</a>()</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#a943edd1e04048bd2bcb93987a6c47819">Equals</a>(cMatrix4 *lpOther)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#ac5ed8437aa32a05185d51b9472640a8d">Equals</a>(cMatrix4 lpOther)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classc_matrix4.html#a1343c34e7b128e2bf4cf45c256746324">Equals</a>(cDoubleMatrix4 *lpOther)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classc_matrix4.html#afecfb51e689b472fa6ff3a2cebffa869">Equals</a>(cDoubleMatrix4 lpOther)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#a0af5e0b1dbbe6d7f4c512a5f07f1e273">Equals</a>(cCameraMatrix4 &amp;lpOther)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#a12b028ad76a776c5a01d695ea620962b">Equals</a>(cCameraMatrix4 *lpOther)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#adb76264fa82ef10ebb24b64d6293bc9d">Equals</a>(float *lpOther)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classc_matrix4.html#a1b1f976f0ef9b6dd5570e1f6b376d2c1">FindPointRelative</a>(c3DVf SameSpace)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#a92335a0e15b30c55f4838f1ab3dea1af">GAdvance</a>(float *lfDistance)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#a2dc12cbe708c7bc63ca2beff47c0c835">GAdvance</a>(float lfX, float lfY)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#ac1c16ceb7ac4c2f771fc0d4662df643c">GAdvance</a>(float lfX, float lfY, float lfZ)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
@@ -141,7 +144,7 @@ This is the complete list of members for <a class="el" href="classc_matrix4.html
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#a9a08d629625f1c5f03b51b5739981e08">LookVector</a>(c3DVf lfVect)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#a8697973a28e45b0866cce4cdba2e216d">Matrix</a>()</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#a1e70788aed256a22cf62b11a12e0db74">Matrix</a>(uint8 lcData)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classc_matrix4.html#ac0ebba0d10d97c6657dccd1575f761ab">mb3D</a></td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classc_matrix4.html#ac0ebba0d10d97c6657dccd1575f761ab">mb3D</a></td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#afc8fe82a6dfb40e77abc3117d10c18e5">Multiply</a>(cMatrix4 &amp;Other)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#aa36c01bc7f4f7a7ac47c1e154cd8a4ba">Multiply</a>(cMatrix4 *Other)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classc_matrix4.html#a4eddb15044110cb20c1fa8df80bf1e05">Multiply</a>(cCameraMatrix4 *Other)</td><td><a class="el" href="classc_matrix4.html">cMatrix4</a></td><td></td></tr>
@@ -244,7 +247,7 @@ This is the complete list of members for <a class="el" href="classc_matrix4.html
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:08 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Jun 6 2012 10:28:50 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

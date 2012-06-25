@@ -1,11 +1,16 @@
 #include "../WTBamboo.h"
 
+#if WT_FULL_VERSION_BAMBOO
 bool cCollisionBase::Owns(vCollisionData *lpData)
 {
- if(mpObject==lpData || (Compound() && Compound()->Owns(lpData))) return 1;
- return 0;
+ return (mpObject==lpData || (Compound() && Compound()->Owns(lpData)));
 };
-
+#else
+bool cCollisionBase::Owns(vCollisionData *lpData)
+{
+ return mpObject==lpData;
+};
+#endif
 void cCollisionBase::SetType(cSphereCollision *lpSphere){ OnFile(lpSphere);};
 
 void cCollisionBase::OnFile(vCollisionData *lpPoint){ClearProcedural();  mpObject=lpPoint; mbAwake=true; mbAlive=true; ProceduralObj=false;}

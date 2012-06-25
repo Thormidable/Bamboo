@@ -23,19 +23,31 @@ public:
 	/// Will set the text string the cText object will render.
        //void Text(char *lsText);
        void Text(string lsText);
-	/// Will accept a generic data type to render to the screen (will convert to a string).
+	   /*
+		/// Will accept a generic data type to render to the screen (will convert to a string).
        template <class T> void Value(T &t);
-
+		///Will add a generic data type to render to the screen.
        template <class T> void Add(T &t);
 
-       	/// Will accept a generic data type to render to the screen (will convert to a string).
+       	/// Will accept a generic data type to render to the screen (will convert to a string). Will use the specified amount of precision
        template <class T> void Value(T &t,uint8 liPrecision);
-
+		///Will add a generic data type to render to the screen. Will use the specified amount of precision
        template <class T> void Add(T &t,uint8 liPrecision);
+*/
+	   /// Will accept a generic data type to render to the screen (will convert to a string).
+       template <class T> void Value(T t);
+	   ///Will add a generic data type to render to the screen.
+       template <class T> void Add(T t);
+
+       	/// Will accept a generic data type to render to the screen (will convert to a string). Will use the specified amount of precision
+       template <class T> void Value(T t,uint8 liPrecision);
+	   ///Will add a generic data type to render to the screen. Will use the specified amount of precision
+       template <class T> void Add(T t,uint8 liPrecision);
 	// Will render the text string from the cPainter render list to the screen.
        void RenderPainter();
 
        std::string &Text();
+
 
 		///Will Add the Font lcFont to this object using the uniform variable labelled lsFontSlot.
 		void AddFont(string lsFontSlot,cFont *lcFont);
@@ -48,7 +60,7 @@ public:
 };
 
 //#include <sstream>
-
+/*
 template <class T>
 inline void cText::Value ( T &t)
 {
@@ -77,6 +89,43 @@ inline void cText::Value ( T &t,uint8 liPrecision)
 
 template <class T>
 inline void cText::Add(T &t,uint8 liPrecision)
+{
+     std::stringstream ss;
+     ss.precision(liPrecision);
+     ss << setprecision(liPrecision) << fixed << t;
+     mpString += ss.str();
+}
+*/
+
+template <class T>
+inline void cText::Value ( T t)
+{
+    std::stringstream ss;
+    ss << t;
+    mpString=ss.str();
+}
+
+
+template <class T>
+inline void cText::Add(T t)
+{
+     std::stringstream ss;
+     ss << t;
+    mpString += ss.str();
+}
+
+
+template <class T>
+inline void cText::Value ( T t,uint8 liPrecision)
+{
+    std::stringstream ss;
+    ss << setprecision(liPrecision) << fixed << t;
+    mpString=ss.str();
+}
+
+
+template <class T>
+inline void cText::Add(T t,uint8 liPrecision)
 {
      std::stringstream ss;
      ss.precision(liPrecision);

@@ -50,11 +50,11 @@ while(lpTemp)
 vRenderObject *cCollisionList::NextCollisionR()
 {
 	cCollisionBase *lpTemp=NextCollisionItem();
-	do
+	while(lpTemp)
 	{
-		if(lpTemp && lpTemp->RenderObject()) return lpTemp->RenderObject();
+		if(lpTemp->RenderObject()) return lpTemp->RenderObject();
 		lpTemp=NextCollisionItem();
-	}while(lpTemp);
+	}
 	return 0;
 
 }

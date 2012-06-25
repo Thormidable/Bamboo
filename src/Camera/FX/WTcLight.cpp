@@ -34,8 +34,12 @@ void cLight::Position(float lfX,float lfY,float lfZ)
  mpPosition[1]=lfY;
  mpPosition[2]=lfZ;
  //For being used in multiplication with 4x4 Matrices.
- mpPosition[3]=1;
+ mpPosition[3]=1.0f;
 }
+
+        void cLight::Position(float *lfX){memcpy(mpPosition,lfX,sizeof(float)*4);};
+        void cLight::Position(c3DVf *lfPos){memcpy(mpPosition,lfPos->v,sizeof(float)*3); mpPosition[3]=1.0f;};
+        void cLight::Position(c3DVf &lfPos){memcpy(mpPosition,lfPos.v,sizeof(float)*3); mpPosition[3]=1.0f;};
 
 void cLight::Ambient(float lfR,float lfG,float lfB,float lfA){ mpAmbient.Set(lfR,lfG,lfB,lfA);}
 void cLight::Ambient(cRGBA &lcColor){mpAmbient=lcColor;};

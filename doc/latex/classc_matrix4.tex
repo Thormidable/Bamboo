@@ -534,6 +534,16 @@ void \hyperlink{classc_matrix4_ac5ed8437aa32a05185d51b9472640a8d}{Equals} (\hype
 \label{classc_matrix4_ac5ed8437aa32a05185d51b9472640a8d}
 
 \begin{DoxyCompactList}\small\item\em Makes this matrix Equal the \hyperlink{classc_matrix4}{cMatrix4} lpOther. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a1343c34e7b128e2bf4cf45c256746324}{
+void \hyperlink{classc_matrix4_a1343c34e7b128e2bf4cf45c256746324}{Equals} (\hyperlink{classc_double_matrix4}{cDoubleMatrix4} $\ast$lpOther)}
+\label{classc_matrix4_a1343c34e7b128e2bf4cf45c256746324}
+
+\begin{DoxyCompactList}\small\item\em Makes this matrix Equal the \hyperlink{classc_double_matrix4}{cDoubleMatrix4} pointed to by lpOther. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_afecfb51e689b472fa6ff3a2cebffa869}{
+void \hyperlink{classc_matrix4_afecfb51e689b472fa6ff3a2cebffa869}{Equals} (\hyperlink{classc_double_matrix4}{cDoubleMatrix4} lpOther)}
+\label{classc_matrix4_afecfb51e689b472fa6ff3a2cebffa869}
+
+\begin{DoxyCompactList}\small\item\em Makes this matrix Equal the \hyperlink{classc_double_matrix4}{cDoubleMatrix4} lpOther. \end{DoxyCompactList}\item 
 \hypertarget{classc_matrix4_a0af5e0b1dbbe6d7f4c512a5f07f1e273}{
 void \hyperlink{classc_matrix4_a0af5e0b1dbbe6d7f4c512a5f07f1e273}{Equals} (\hyperlink{classc_camera_matrix4}{cCameraMatrix4} \&lpOther)}
 \label{classc_matrix4_a0af5e0b1dbbe6d7f4c512a5f07f1e273}
@@ -833,8 +843,13 @@ c3DVf \hyperlink{classc_matrix4_a802eff4e68910ce08624ec1a9c3258ad}{MultiplyVecto
 \hyperlink{classc_camera_matrix4}{cCameraMatrix4} \& \hyperlink{classc_matrix4_ac6bb495542c08395c26fd412db13a959}{ConvertToCameraMatrix} ()}
 \label{classc_matrix4_ac6bb495542c08395c26fd412db13a959}
 
-\begin{DoxyCompactList}\small\item\em This will return this \hyperlink{classc_matrix4}{cMatrix4} in the format of a \hyperlink{classc_camera_matrix4}{cCameraMatrix4}. This is because they have different formats. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Protected Attributes}
+\begin{DoxyCompactList}\small\item\em This will return this \hyperlink{classc_matrix4}{cMatrix4} in the format of a \hyperlink{classc_camera_matrix4}{cCameraMatrix4}. This is because they have different formats. \end{DoxyCompactList}\item 
+\hypertarget{classc_matrix4_a1b1f976f0ef9b6dd5570e1f6b376d2c1}{
+c3DVf \hyperlink{classc_matrix4_a1b1f976f0ef9b6dd5570e1f6b376d2c1}{FindPointRelative} (c3DVf SameSpace)}
+\label{classc_matrix4_a1b1f976f0ef9b6dd5570e1f6b376d2c1}
+
+\begin{DoxyCompactList}\small\item\em This will transpose the point to be relative to this matrix, where the point SameSpace starts in the same space (Global / Camaera / Local) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{classc_matrix4_ac0ebba0d10d97c6657dccd1575f761ab}{

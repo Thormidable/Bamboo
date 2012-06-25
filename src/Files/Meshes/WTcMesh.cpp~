@@ -202,7 +202,8 @@ void cMesh::CreateNormalArrayFlat()
 {
     float *lpVertex=new float[miFaces*24];
     float *lpNormals=&lpVertex[miFaces*9];
-    float *lpUV=&lpVertex[miFaces*18];
+
+    float *lpUV=0; if(mpUV) lpUV=&lpVertex[miFaces*18];
 
     uint16 *lpFaces=new uint16[miFaces*3];
     uint32 liVertex=miFaces*3;
@@ -215,7 +216,7 @@ void cMesh::CreateNormalArrayFlat()
 	    uint32 liPos=mpFaces[liCount];
 	    memcpy(&lpVertex[liCount*3],&mpVertex[liPos*3],sizeof(float)*3);
 	    lpNormals[liCount*3]=lpNormals[liCount*3+1]=lpNormals[liCount*3+2]=0.0f;
-	    memcpy(&lpUV[liCount*2],&mpUV[liPos*2],sizeof(float)*2);
+	    if(mpUV) memcpy(&lpUV[liCount*2],&mpUV[liPos*2],sizeof(float)*2);
 
 	    lpFaces[liCount]=liCount;
 	}
@@ -226,6 +227,7 @@ void cMesh::CreateNormalArrayFlat()
     mpVertex=lpVertex;
     mpNormals=lpNormals;
     mpUV=lpUV;
+
     mpFaces=lpFaces;
     miVertex=liVertex;
     miFaces=liFaces;
@@ -498,60 +500,6 @@ lpFurthestCentre+=(lpRV*lfEq);
                     if(mpFaces[liCount*3]!=liFurthest) ForceNormalDirection(mpFaces[liCount*3],liCount,lbDone);
                     if(mpFaces[liCount*3+1]!=liFurthest) ForceNormalDirection(mpFaces[liCount*3+1],liCount,lbDone);
                     if(mpFaces[liCount*3+2]!=liFurthest) ForceNormalDirection(mpFaces[liCount*3+2],liCount,lbDone);
-/*
-                     bool lbConcave;
-                     c3DVf Vect(&mpVertex[mpFaces[liCount*3+Share]*3]);
-                     Vect-=&mpVertex[liFurthest*3];
-                     if(Vect.Dot(&mpNormals[liFurthest*3])<0.0f) lbConcave=false;
-                     else lbConcave=true;
-
-                     Share=FacesShareEdge(&mpFaces[liCount*3],&mpFaces[liFace*3]);
-                     Vect=&mpVertex[mpFaces[liFace*3+Share]*3];
-                     Vect-=&mpVertex[liFurthest*3];
-
-                    uint32 liCurFace=mpFaces[liCount*3]*3;
-                    if(v1.Dot(&mpNormals[liCurFace])<0.0f){ mpNormals[liCurFace]=-mpNormals[liCurFace]; mpNormals[liCurFace+1]=-mpNormals[liCurFace+1]; mpNormals[liCurFace+2]=-mpNormals[liCurFace+2]; }
-                    else{
-                    if(v1.Dot(&mpNormals[liCurFace])<0.0001f)
-                    {
-                         if((lbConcave && Vect.Dot(&mpNormals[liCurFace])>0.0f ) ||(!lbConcave && Vect.Dot(&mpNormals[liCurFace])<0.0f ))
-                         {
-                            mpNormals[liCurFace]=-mpNormals[liCurFace]; mpNormals[liCurFace+1]=-mpNormals[liCurFace+1]; mpNormals[liCurFace+2]=-mpNormals[liCurFace+2];
-                         }
-                     }}
-                    //printf("Vertex/Norm %u: %f %f %f,%f %f %f\n",liCurFace,mpVertex[liCurFace],mpVertex[liCurFace+1],mpVertex[liCurFace+2],mpNormals[liCurFace],mpNormals[liCurFace+1],mpNormals[liCurFace+2]);
-                    liCurFace=mpFaces[liCount*3+1]*3;
-                    if(v1.Dot(&mpNormals[liCurFace])<0.0f){ mpNormals[liCurFace]=-mpNormals[liCurFace]; mpNormals[liCurFace+1]=-mpNormals[liCurFace+1]; mpNormals[liCurFace+2]=-mpNormals[liCurFace+2]; }
-                    else{
-                    if(v1.Dot(&mpNormals[liCurFace])<0.0001f)
-                    {
-                         if((lbConcave && Vect.Dot(&mpNormals[liCurFace])>0.0f ) ||(!lbConcave && Vect.Dot(&mpNormals[liCurFace])<0.0f ))
-                         {
-                            mpNormals[liCurFace]=-mpNormals[liCurFace]; mpNormals[liCurFace+1]=-mpNormals[liCurFace+1]; mpNormals[liCurFace+2]=-mpNormals[liCurFace+2];
-                         }
-                     }}
-                    //printf("Vertex/Norm %u: %f %f %f,%f %f %f\n",liCurFace,mpVertex[liCurFace],mpVertex[liCurFace+1],mpVertex[liCurFace+2],mpNormals[liCurFace],mpNormals[liCurFace+1],mpNormals[liCurFace+2]);
-                    liCurFace=mpFaces[liCount*3+2]*3;
-                    if(v1.Dot(&mpNormals[liCurFace])<0.0f){ mpNormals[liCurFace]=-mpNormals[liCurFace]; mpNormals[liCurFace+1]=-mpNormals[liCurFace+1]; mpNormals[liCurFace+2]=-mpNormals[liCurFace+2]; }
-                    else
-                 {
-
-                  if(v1.Dot(&mpNormals[liCurFace])<0.0001f)
-                    {
-                         if((lbConcave && Vect.Dot(&mpNormals[liCurFace])>0.0f ) ||(!lbConcave && Vect.Dot(&mpNormals[liCurFace])<0.0f ))
-                         {
-                            mpNormals[liCurFace]=-mpNormals[liCurFace]; mpNormals[liCurFace+1]=-mpNormals[liCurFace+1]; mpNormals[liCurFace+2]=-mpNormals[liCurFace+2];
-                         }
-                     }
-                }
-                    //printf("Vertex/Norm %u: %f %f %f,%f %f %f\n",liCurFace,mpVertex[liCurFace],mpVertex[liCurFace+1],mpVertex[liCurFace+2],mpNormals[liCurFace],mpNormals[liCurFace+1],mpNormals[liCurFace+2]);
-
-                    lbDone[liCount]=true;
-
-                    if(mpFaces[liCount*3]!=liFurthest) ForceNormalDirection(mpFaces[liCount*3],liCount,lbDone);
-                    if(mpFaces[liCount*3+1]!=liFurthest) ForceNormalDirection(mpFaces[liCount*3+1],liCount,lbDone);
-                    if(mpFaces[liCount*3+2]!=liFurthest) ForceNormalDirection(mpFaces[liCount*3+2],liCount,lbDone);
-*/
                 }
                 }
 
@@ -682,11 +630,13 @@ bool cMesh::ContainsVertex(c3DVf lcVert,uint32 liFace)
 void cMesh::CreateUVSphereMap()
 {
  float *lpVert=new float[16*miVertex];
- float *lpNorm=&lpVert[6*miVertex];
- float *lpUV=&lpVert[12*miVertex];
+ uint32 liSize=6;
+ float *lpNorm=0; if(mpNormals) {lpNorm=&lpVert[liSize*miVertex]; liSize+=6;}
+ float *lpUV=&lpVert[liSize*miVertex];
+
  uint32 liVertex=miVertex;
  memcpy(lpVert,mpVertex,sizeof(float)*miVertex*3);
- memcpy(lpNorm,mpNormals,sizeof(float)*miVertex*3);
+ if(mpNormals) memcpy(lpNorm,mpNormals,sizeof(float)*miVertex*3);
  memcpy(lpUV,mpUV,sizeof(float)*miVertex*2);
 
  //uint32 liSeamStart=miVertex;
@@ -721,7 +671,7 @@ for(uint32 liCount=0;liCount<miFaces;++liCount)
         if(lpVertex[liLoop][1]<0.0f)
         {
             memcpy(&lpVert[liVertex*3],lpVertex[liLoop],sizeof(float)*3);
-            memcpy(&lpNorm[liVertex*3],&mpNormals[mpFaces[liCount*3+liLoop]*3],sizeof(float)*3);
+            if(mpNormals) memcpy(&lpNorm[liVertex*3],&mpNormals[mpFaces[liCount*3+liLoop]*3],sizeof(float)*3);
             lpUV[liVertex*2]=-2.0f;
             lpUV[liVertex*2+1]=-2.0f;
             mpFaces[liCount*3+liLoop]=liVertex;
@@ -736,11 +686,12 @@ for(uint32 liCount=0;liCount<miFaces;++liCount)
 delete[] mpVertex;
 
 mpVertex=new float[liVertex*8];
-mpNormals=&mpVertex[liVertex*3];
-mpUV=&mpVertex[liVertex*6];
+liSize=3;
+if(mpNormals) {mpNormals=&mpVertex[liVertex*3]; liSize+=3;}
+mpUV=&mpVertex[liVertex*liSize];
 
 memcpy(mpVertex,lpVert,sizeof(float)*3*liVertex);
-memcpy(mpNormals,lpNorm,sizeof(float)*3*liVertex);
+if(mpNormals) memcpy(mpNormals,lpNorm,sizeof(float)*3*liVertex);
 memcpy(mpUV,lpUV,sizeof(float)*2*liVertex);
 
 miVertex=liVertex;
@@ -801,10 +752,15 @@ void cMesh::RenderMesh()
 	uint8 liSize=3;
 	if(mpNormals)
 	{
-		glNormalPointer(GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*3*sizeof(float)));
+		glNormalPointer(GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*liSize*sizeof(float)));
 		liSize+=3;
 	}
-    glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*6*sizeof(float)));
+	else glDisableClientState(GL_NORMAL_ARRAY);
+	if(mpUV)
+	{
+	    glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*liSize*sizeof(float)));
+	}
+	else glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
 	glDrawElements(GL_TRIANGLES,miFaces*3,GL_UNSIGNED_SHORT,0);
@@ -1115,8 +1071,11 @@ if(!mpNormals && !mpUV)
         }
         if(!lbFound)
         {
-            UpdateFaces(liSpace,liCount);
-            memmove(&mpVertex[liSpace*3],&mpVertex[liCount*3],sizeof(float)*3);
+			if(liSpace!=liCount)
+			{
+            	UpdateFaces(liSpace,liCount);
+            	memmove(&mpVertex[liSpace*3],&mpVertex[liCount*3],sizeof(float)*3);
+			}
             liSpace++;
         }
     }
@@ -1144,10 +1103,13 @@ else
                 }
                 if(!lbFound)
                 {
-                    UpdateFaces(liSpace,liCount);
-                    memcpy(&mpVertex[liSpace*3],&mpVertex[liCount*3],sizeof(float)*3);
-                    memcpy(&mpNormals[liSpace*3],&mpNormals[liCount*3],sizeof(float)*3);
-                    memcpy(&mpUV[liSpace*2],&mpUV[liCount*2],sizeof(float)*2);
+					if(liSpace!=liCount)
+					{
+                    	UpdateFaces(liSpace,liCount);
+                    	memcpy(&mpVertex[liSpace*3],&mpVertex[liCount*3],sizeof(float)*3);
+                    	memcpy(&mpNormals[liSpace*3],&mpNormals[liCount*3],sizeof(float)*3);
+                    	memcpy(&mpUV[liSpace*2],&mpUV[liCount*2],sizeof(float)*2);
+					}
                     liSpace++;
                 }
             }
@@ -1168,9 +1130,12 @@ else
                 }
                 if(!lbFound)
                 {
-                    UpdateFaces(liSpace,liCount);
-                    memcpy(&mpVertex[liSpace*3],&mpVertex[liCount*3],sizeof(float)*3);
-                    memcpy(&mpNormals[liSpace*3],&mpNormals[liCount*3],sizeof(float)*3);
+					if(liSpace!=liCount)
+					{
+                    	UpdateFaces(liSpace,liCount);
+                    	memcpy(&mpVertex[liSpace*3],&mpVertex[liCount*3],sizeof(float)*3);
+                    	memcpy(&mpNormals[liSpace*3],&mpNormals[liCount*3],sizeof(float)*3);
+					}
                     liSpace++;
                 }
             }
@@ -1193,9 +1158,12 @@ else
             }
             if(!lbFound)
             {
-                UpdateFaces(liSpace,liCount);
-                memcpy(&mpVertex[liSpace*3],&mpVertex[liCount*3],sizeof(float)*3);
-                memcpy(&mpUV[liSpace*2],&mpUV[liCount*2],sizeof(float)*2);
+				if(liSpace!=liCount)
+				{
+                	UpdateFaces(liSpace,liCount);
+                	memcpy(&mpVertex[liSpace*3],&mpVertex[liCount*3],sizeof(float)*3);
+                	memcpy(&mpUV[liSpace*2],&mpUV[liCount*2],sizeof(float)*2);
+				}
                 liSpace++;
             }
         }
@@ -1470,3 +1438,82 @@ void cMesh::RemoveErrorFaces(float lfRange)
         }
     }
 };
+
+cMesh *cMesh::operator=(cMesh *lpOther)
+{
+    delete []mpFaces;
+    delete []mpVertex;
+    miFaces=lpOther->miFaces;
+    mpFaces=new FACE_TYPE[miFaces*3];
+
+    uint8 miSize=3;
+    if(lpOther->mpNormals) miSize+=3;
+    if(lpOther->mpUV) miSize+=2;
+
+
+    miVertex=lpOther->miVertex;
+    mpVertex=new float[miSize*miVertex];
+    miSize=3;
+    if(lpOther->mpNormals) {mpNormals=&mpVertex[miSize*miVertex]; miSize+=3;}
+    if(lpOther->mpUV) {mpUV=&mpVertex[miSize*miVertex]; miSize+=2;}
+
+    memcpy(mpFaces,lpOther->mpFaces,sizeof(FACE_TYPE)*miFaces*3);
+    memcpy(mpVertex,lpOther->mpVertex,sizeof(float)*miVertex*miSize);
+ return this;
+};
+
+cMesh::cMesh(cMesh *lpOther)
+{
+    glGenBuffers(1,&mBuffer1);
+	glGenBuffers(1,&mBuffer2);
+
+	miModelCentre[0]=miModelCentre[1]=miModelCentre[2]=0.0f;
+	strcpy(mpFileName,lpOther->mpFileName);
+
+    miFaces=lpOther->miFaces;
+    mpFaces=new FACE_TYPE[miFaces*3];
+
+    uint8 miSize=3;
+    if(lpOther->mpNormals) miSize+=3;
+    if(lpOther->mpUV) miSize+=2;
+
+    miVertex=lpOther->miVertex;
+    mpVertex=new float[miSize*miVertex];
+    miSize=3;
+    if(lpOther->mpNormals) {mpNormals=&mpVertex[miSize*miVertex]; miSize+=3;} else {mpNormals=0;}
+    if(lpOther->mpUV) {mpUV=&mpVertex[miSize*miVertex]; miSize+=2;} else {mpUV=0;}
+
+    memcpy(mpFaces,lpOther->mpFaces,sizeof(FACE_TYPE)*miFaces*3);
+    memcpy(mpVertex,lpOther->mpVertex,sizeof(float)*miVertex*miSize);
+
+    SetFormat();
+    BufferMesh();
+    FindSize();
+};
+
+void cMesh::AddData(bool lbNormals,bool lbUV)
+{
+if(lbNormals || lbUV)
+{
+   uint8 miSize=3;
+if(lbNormals) miSize+=3;
+ if(lbUV) miSize+=2;
+
+  float *lpTempV=new float[miVertex*miSize];
+  memcpy(lpTempV,mpVertex,sizeof(float)*miVertex*3);
+  delete []mpVertex;
+  mpVertex=lpTempV;
+  miSize=3;
+  if(lbNormals) {mpNormals=&mpVertex[miVertex*miSize]; miSize+=3; memset(mpNormals,0,sizeof(float)*3*miVertex);} else {mpNormals=0;}
+  if(lbUV) {mpUV=&mpVertex[miVertex*miSize]; miSize+=2; memset(mpUV,0,sizeof(float)*2*miVertex);} else {mpUV=0;}
+
+
+    if(lbNormals) CreateNormalArray();
+    if(lbUV) CreateUVSphereMap();
+}
+else
+{
+    mpNormals=0;
+    mpUV=0;
+}
+}

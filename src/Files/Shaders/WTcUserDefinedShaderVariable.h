@@ -145,9 +145,10 @@ public:
 	//Does nothing for Attributes.
 	void DataValue(void *lpData)=0;
 
-	virtual void ClearData()=0;
+	virtual void ClearData();
 	virtual void DataPointer(void *lpData)=0;
 
+	~cUniformStore();
     void Buffer(){};
 };
 /**

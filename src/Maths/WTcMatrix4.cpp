@@ -1787,11 +1787,11 @@ void cMatrix4::LookVector(float lfX,float lfY,float lfZ)
 void cMatrix4::LookVector(c3DVf lfVect)
 {
     double Yaw=atan2(lfVect.X(),lfVect.Z());
-    double Pitch=atan2(lfVect.Y(),lfVect.Z());
+    double Pitch=atan2(lfVect.Y(),sqrt(lfVect[0]*lfVect[0]+lfVect[2]*lfVect[2]));
 
     ResetRotations();
     RotateY(Yaw);
-    RotateX(Pitch);
+    RotateX(-Pitch);
 };
 
 void cMatrix4::LookAt(float *lfPoint)
@@ -1845,11 +1845,11 @@ lfVect.v[0]=mpData[12]-lfVect[0];
 lfVect.v[1]=mpData[13]-lfVect[1];
 lfVect.v[2]=mpData[14]-lfVect[2];
 
-double Yaw=atan2(lfVect.v[0],lfVect.v[2]);
-double Pitch=atan2(lfVect.v[1],lfVect.v[2]);
+double Yaw=atan2(lfVect.v[0],-lfVect.v[2]);
+double Pitch=atan2(lfVect.v[1],sqrt(lfVect[0]*lfVect[0]+lfVect[2]*lfVect[2]));
 
 ResetRotations();
-RotateY(Yaw);
+RotateY(-Yaw);
 RotateX(Pitch);
  };
 

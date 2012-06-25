@@ -844,9 +844,11 @@ void cCameraMatrix4::PointAt(vRenderObject *lpObj)
 void cCameraMatrix4::Follow(cMatrix4* lpOther,float lfX,float lfY,float lfZ)
 {
     cMatrix4 lpInv=lpOther->InversionMatrix();
+
     memcpy(mpData,lpInv.Matrix(),sizeof(float)*12);
 
     RotateY(3.14159265);
+
 
 	mpPosition[0]=-lpOther->X();
 	mpPosition[1]=-lpOther->Y();
@@ -886,17 +888,17 @@ void cCameraMatrix4::PointAt(float *mpPos)
 
 c3DVf Z;
 
-Z.v[0]=mpPos[0]+mpPosition[0];
-Z.v[1]=mpPos[1]+mpPosition[1];
-Z.v[2]=mpPos[2]+mpPosition[2];
+Z[0]=mpPos[0]+mpPosition[0];
+Z[1]=mpPos[1]+mpPosition[1];
+Z[2]=mpPos[2]+mpPosition[2];
 
-double Yaw=atan2(Z.v[0],Z.v[2]);
-double Pitch=atan2(Z.v[1],Z.v[2]);
+double Yaw=atan2(Z[0],-Z[2]);
+
+double Pitch=atan2(Z[1],sqrt(Z[0]*Z[0]+Z[2]*Z[2]));
 
 Identity();
-RotateY(Yaw);
+RotateY(-Yaw);
 RotateX(Pitch);
-
 
 }
 

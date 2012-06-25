@@ -29,11 +29,11 @@ void \hyperlink{classc_collision_object_abec1a68ab54f2e80244c8b336bca3626}{Signa
 \label{classc_collision_object_abec1a68ab54f2e80244c8b336bca3626}
 
 \begin{DoxyCompactList}\small\item\em The Signal Function to allow \hyperlink{classc_collision_object}{cCollisionObject} to receive Signals. \end{DoxyCompactList}\item 
-bool \hyperlink{classc_collision_object_a6f5b5341a726cb0a54fe3271b110dc8c}{CheckCollision} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpOther)
+bool \hyperlink{classc_collision_object_a054c6522eef2c32087dd66a1a4659a1b}{CheckCollision} (cCollisionBase $\ast$lpOther)
 \begin{DoxyCompactList}\small\item\em This will check for a collision between this object and the object lpOther. \end{DoxyCompactList}\item 
-\hyperlink{classc_collision_list}{cCollisionList} $\ast$ \hyperlink{classc_collision_object_a4fe3139893d4996304c63b1e4722a075}{CheckCollisionDetail} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpOther, \hyperlink{classc_collision_list}{cCollisionList} $\ast$lpList=0)
+\hyperlink{classc_collision_list}{cCollisionList} $\ast$ \hyperlink{classc_collision_object_afcab60963a0b2ca63b4f10b2c2055110}{CheckCollisionDetail} (cCollisionBase $\ast$lpOther, \hyperlink{classc_collision_list}{cCollisionList} $\ast$lpList=0)
 \begin{DoxyCompactList}\small\item\em This will check for a collision between this object and the object lpOther. \end{DoxyCompactList}\item 
-bool \hyperlink{classc_collision_object_a1d93858e03da25f8656ae688c4dedbce}{TouchCollision} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpOther)
+bool \hyperlink{classc_collision_object_a013d8510d8045b48666a53ba51dd2841}{TouchCollision} (cCollisionBase $\ast$lpOther)
 \item 
 \hypertarget{classc_collision_object_abc47ab584910cc877b5e723be4e09eac}{
 \hyperlink{classc_matrix4}{cMatrix4} \& \hyperlink{classc_collision_object_abc47ab584910cc877b5e723be4e09eac}{CacheMatrix} ()}
@@ -87,99 +87,31 @@ void \hyperlink{classc_collision_object_a7719840f3fcc5bf3dcef08d123066739}{PostU
 \label{classc_collision_object_a7719840f3fcc5bf3dcef08d123066739}
 
 \begin{DoxyCompactList}\small\item\em This will Add the \hyperlink{classc_collision_object}{cCollisionObject} to the relevant Spatial Slots after it has found it's new position. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_a53623f53b0ac497bfa1c794a76d2f818}{
-bool \hyperlink{classc_collision_object_a53623f53b0ac497bfa1c794a76d2f818}{SphereSphere} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpOther)}
-\label{classc_collision_object_a53623f53b0ac497bfa1c794a76d2f818}
+\hypertarget{classc_collision_object_aa05f370617943b2a0ef8560e3f8048a3}{
+bool \hyperlink{classc_collision_object_aa05f370617943b2a0ef8560e3f8048a3}{SphereSphere} (cCollisionBase $\ast$lpOther)}
+\label{classc_collision_object_aa05f370617943b2a0ef8560e3f8048a3}
 
 \begin{DoxyCompactList}\small\item\em Internal function for checking for Sphere / Sphere collision between this object and the object lpOther;. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_ae87264d7ecd143a67244c95b10c07ab7}{
-bool \hyperlink{classc_collision_object_ae87264d7ecd143a67244c95b10c07ab7}{ModelModel} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpOther)}
-\label{classc_collision_object_ae87264d7ecd143a67244c95b10c07ab7}
-
-\begin{DoxyCompactList}\small\item\em Internal function for checking for Model / Model collision between this object and the object lpOther;. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_aa4500b5834736e5abeabe71c300e64e8}{
-bool \hyperlink{classc_collision_object_aa4500b5834736e5abeabe71c300e64e8}{RayRay} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpOther)}
-\label{classc_collision_object_aa4500b5834736e5abeabe71c300e64e8}
-
-\begin{DoxyCompactList}\small\item\em Internal function for checking for Ray / Ray collision between this object and the object lpOther;. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_a299e49b5d78e1e7dbe5e801c7760462a}{
-bool \hyperlink{classc_collision_object_a299e49b5d78e1e7dbe5e801c7760462a}{SphereModel} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpOther)}
-\label{classc_collision_object_a299e49b5d78e1e7dbe5e801c7760462a}
-
-\begin{DoxyCompactList}\small\item\em Internal function for checking for Sphere / Model collision between this object and the object lpOther;. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_ae4761ec4a0f60667e83cb6d4cf39d359}{
-bool \hyperlink{classc_collision_object_ae4761ec4a0f60667e83cb6d4cf39d359}{SphereRay} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpOther)}
-\label{classc_collision_object_ae4761ec4a0f60667e83cb6d4cf39d359}
-
-\begin{DoxyCompactList}\small\item\em Internal function for checking for Sphere / Ray collision between this object and the object lpOther;. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_a7ccea939e1f91fa7eeda4c31128901c3}{
-bool \hyperlink{classc_collision_object_a7ccea939e1f91fa7eeda4c31128901c3}{RayModel} (\hyperlink{classc_collision_object}{cCollisionObject} $\ast$lpOther)}
-\label{classc_collision_object_a7ccea939e1f91fa7eeda4c31128901c3}
-
-\begin{DoxyCompactList}\small\item\em Internal function for checking for Ray / Model collision between this object and the object lpOther;. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_a8677f76a5812003334092737348a42c5}{
-\hyperlink{classc_ray_collision}{cRayCollision} $\ast$ \hyperlink{classc_collision_object_a8677f76a5812003334092737348a42c5}{SetType} (\hyperlink{classc_render_object}{cRenderObject} $\ast$lpObj)}
-\label{classc_collision_object_a8677f76a5812003334092737348a42c5}
-
-\begin{DoxyCompactList}\small\item\em This will make a ray object. See cRayCollision::BuildObject(float $\ast$lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_ac28c6d5fff668bb3429de93909dd643d}{
-\hyperlink{classc_ray_collision}{cRayCollision} $\ast$ \hyperlink{classc_collision_object_ac28c6d5fff668bb3429de93909dd643d}{SetTypeRay} (\hyperlink{classc_render_object}{cRenderObject} $\ast$lpObj)}
-\label{classc_collision_object_ac28c6d5fff668bb3429de93909dd643d}
-
-\begin{DoxyCompactList}\small\item\em This will make a ray object. See cRayCollision::BuildObject(float $\ast$lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_af6fc6d835d646b55c36ccf0e62630cee}{
-\hyperlink{classc_ray_collision}{cRayCollision} $\ast$ \hyperlink{classc_collision_object_af6fc6d835d646b55c36ccf0e62630cee}{SetType} (\hyperlink{classc_render_object}{cRenderObject} $\ast$lpObj, float lfRadius)}
-\label{classc_collision_object_af6fc6d835d646b55c36ccf0e62630cee}
-
-\begin{DoxyCompactList}\small\item\em This will make a ray object. See cRayCollision::BuildObject(float $\ast$lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_a5e8f0b107345d7c03169d92eded17f87}{
-\hyperlink{classc_ray_collision}{cRayCollision} $\ast$ \hyperlink{classc_collision_object_a5e8f0b107345d7c03169d92eded17f87}{SetTypeRay} (\hyperlink{classc_render_object}{cRenderObject} $\ast$lpObj, float lfRadius)}
-\label{classc_collision_object_a5e8f0b107345d7c03169d92eded17f87}
-
-\begin{DoxyCompactList}\small\item\em This will make a ray object. See cRayCollision::BuildObject(float $\ast$lpBounds) for more information. Makes Ray radius to be same as object and ray to follow it's movement. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_a647e170fc428c65d2795658ec737dee0}{
-\hyperlink{classc_compound_collision}{cCompoundCollision} $\ast$ \hyperlink{classc_collision_object_a647e170fc428c65d2795658ec737dee0}{SetTypeCompound} (string lcReference)}
-\label{classc_collision_object_a647e170fc428c65d2795658ec737dee0}
-
-\begin{DoxyCompactList}\small\item\em This will use the cCompoundCollisionFile with reference lcReference. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_a3621925675923227a484860b5c38f017}{
-\hyperlink{classc_compound_collision}{cCompoundCollision} $\ast$ \hyperlink{classc_collision_object_a3621925675923227a484860b5c38f017}{SetType} (cCompoundCollisionFile $\ast$lpData)}
-\label{classc_collision_object_a3621925675923227a484860b5c38f017}
-
-\begin{DoxyCompactList}\small\item\em This will use the cCompoundCollisionFile pointed to by lpData. \end{DoxyCompactList}\item 
-\hypertarget{classc_collision_object_a2ef3e85552221a2a33356e6f36cfe070}{
-\hyperlink{classc_compound_collision}{cCompoundCollision} $\ast$ \hyperlink{classc_collision_object_a2ef3e85552221a2a33356e6f36cfe070}{SetTypeCompound} (cCompoundCollisionFile $\ast$lpData)}
-\label{classc_collision_object_a2ef3e85552221a2a33356e6f36cfe070}
-
-\begin{DoxyCompactList}\small\item\em This will use the cCompoundCollisionFile pointed to by lpData. \end{DoxyCompactList}\item 
 \hypertarget{classc_collision_object_a0d785a464cb0c6ca7e43dd79ce167473}{
 void \hyperlink{classc_collision_object_a0d785a464cb0c6ca7e43dd79ce167473}{Stop} ()}
 \label{classc_collision_object_a0d785a464cb0c6ca7e43dd79ce167473}
 
 \begin{DoxyCompactList}\small\item\em Virtual Functions to allow additional commands to be processed when a kill signal is received by an object. This can be user modified for classes inheriting \hyperlink{classc_process}{cProcess}. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Friends}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{classc_collision_object_adac1704bd2ebfcd3d16228685997db63}{
-class \hyperlink{classc_collision_object_adac1704bd2ebfcd3d16228685997db63}{cCompoundCollision}}
-\label{classc_collision_object_adac1704bd2ebfcd3d16228685997db63}
-
-\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 This Object is the base object for detecting collisions. This object should be created and passed a pointer to a Renderable Object and a pointer to a \hyperlink{classc_process}{cProcess}. This object will track the global position of its Renderable object and detect collisions with other cCollisionObject's. 
 
 \subsection{Member Function Documentation}
-\hypertarget{classc_collision_object_a6f5b5341a726cb0a54fe3271b110dc8c}{
+\hypertarget{classc_collision_object_a054c6522eef2c32087dd66a1a4659a1b}{
 \index{cCollisionObject@{cCollisionObject}!CheckCollision@{CheckCollision}}
 \index{CheckCollision@{CheckCollision}!cCollisionObject@{cCollisionObject}}
 \subsubsection[{CheckCollision}]{\setlength{\rightskip}{0pt plus 5cm}bool cCollisionObject::CheckCollision (
 \begin{DoxyParamCaption}
-\item[{{\bf cCollisionObject} $\ast$}]{lpOther}
+\item[{cCollisionBase $\ast$}]{lpOther}
 \end{DoxyParamCaption}
 )}}
-\label{classc_collision_object_a6f5b5341a726cb0a54fe3271b110dc8c}
+\label{classc_collision_object_a054c6522eef2c32087dd66a1a4659a1b}
 
 
 This will check for a collision between this object and the object lpOther. 
@@ -189,16 +121,16 @@ $\ast$
 {\em lpOther} & is a pointer to the other collision object to check against. It will check both objects have collisions on. Then it will do an initial quick check to see if a collision is a possibility. Finally if required it will do a much more detailed collision check. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classc_collision_object_a4fe3139893d4996304c63b1e4722a075}{
+\hypertarget{classc_collision_object_afcab60963a0b2ca63b4f10b2c2055110}{
 \index{cCollisionObject@{cCollisionObject}!CheckCollisionDetail@{CheckCollisionDetail}}
 \index{CheckCollisionDetail@{CheckCollisionDetail}!cCollisionObject@{cCollisionObject}}
 \subsubsection[{CheckCollisionDetail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cCollisionList}$\ast$ cCollisionObject::CheckCollisionDetail (
 \begin{DoxyParamCaption}
-\item[{{\bf cCollisionObject} $\ast$}]{lpOther, }
+\item[{cCollisionBase $\ast$}]{lpOther, }
 \item[{{\bf cCollisionList} $\ast$}]{lpList = {\ttfamily 0}}
 \end{DoxyParamCaption}
 )}}
-\label{classc_collision_object_a4fe3139893d4996304c63b1e4722a075}
+\label{classc_collision_object_afcab60963a0b2ca63b4f10b2c2055110}
 
 
 This will check for a collision between this object and the object lpOther. 
@@ -228,13 +160,13 @@ This sets the process that this renderable object will return collision signals 
 {\em lpLink} & Points to the process that this renderable object will return collision signals to. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classc_collision_object_a1d93858e03da25f8656ae688c4dedbce}{
+\hypertarget{classc_collision_object_a013d8510d8045b48666a53ba51dd2841}{
 \index{cCollisionObject@{cCollisionObject}!TouchCollision@{TouchCollision}}
 \index{TouchCollision@{TouchCollision}!cCollisionObject@{cCollisionObject}}
 \subsubsection[{TouchCollision}]{\setlength{\rightskip}{0pt plus 5cm}bool cCollisionObject::TouchCollision (
 \begin{DoxyParamCaption}
-\item[{{\bf cCollisionObject} $\ast$}]{lpOther}
+\item[{cCollisionBase $\ast$}]{lpOther}
 \end{DoxyParamCaption}
 )}}
-\label{classc_collision_object_a1d93858e03da25f8656ae688c4dedbce}
+\label{classc_collision_object_a013d8510d8045b48666a53ba51dd2841}
 It is used for quickly detecting if two objects MAY be colliding. This function is will assume all objects are either Spheres or Beams. This is a highly inaccurate way of colliding objects, but should filter the majority of collisions from the much slower more accurate collision detection performed elsewhere. 

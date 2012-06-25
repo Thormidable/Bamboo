@@ -1,8 +1,36 @@
 #include "../../WTBamboo.h"
 
+void cStarMap::UpdateCache()
+{
+	//printf("This : %p, mpCollisionObject : %p\n",this,mpCollisionObject);
+	if(mpCollisionObject)
+	{
+		mpCollisionObject->PreUpdateCache();
+
+		mmCache=_MATRIX_STACK->Current();
+		StarMapMatrices();
+		mmTotalCache=_COMBINED_MATRIX;
+        mmTotalCache.Multiply(mmCache);
+
+
+
+		mpCollisionObject->PostUpdateCache();
+	}
+	else
+	{
+		mmCache=_MATRIX_STACK->Current();
+		StarMapMatrices();
+		mmTotalCache=_COMBINED_MATRIX;
+        mmTotalCache.Multiply(mmCache);
+
+
+	}
+
+};
+
 void cStarMap::RenderPainter()
 {
-    //StarMapMatrices();
+
 	SetShaderVariables();
 
     if(mpLastShader!=mpShader && mpShader)
@@ -15,6 +43,9 @@ void cStarMap::RenderPainter()
 
         mpAttributes->Buffer();
     }
+
+    glDisableClientState(GL_NORMAL_ARRAY);
+    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 
     mpAttributeLinker->Write();
     glDrawArrays(GL_POINTS,0,miParticles);
@@ -59,10 +90,12 @@ void cStarMap::StarMapMatrices()
  mmTotalCache[12]=0.0f;
  mmTotalCache[13]=0.0f;
  mmTotalCache[14]=0.0f;
+ //mmTotalCache[15]=1.0f;
 
  mmCache[12]=-_CAMERA->X();
  mmCache[13]=-_CAMERA->Y();
  mmCache[14]=-_CAMERA->Z();
+ //mmCache[15]=1.0f;
 
 }
 
@@ -116,6 +149,8 @@ void cStarMap::Initialise(uint32 liParticles,float lfDist)
 	mpAttributes->PointData((char*)mpParticles);
 
 	mpAttributeLinker=new cAttributeLinker(mpAttributes);
+
+	Transparency(1);
 }
 
 	void cStar::SetSize(float lpSize)

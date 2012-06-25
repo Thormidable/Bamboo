@@ -3,6 +3,9 @@
 
 #if WT_FULL_VERSION_BAMBOO
 
+class cImage3D;
+
+
 /**
 * \brief A 2D renderable object.
 * \param lpTexture pointer to the texture to bind to this 2D object
@@ -11,6 +14,8 @@
 */
 class cImage : public cRenderObject
 {
+	friend class cImage3D;
+
 protected:
  // This is the size of the sprite on the screen.
  float mfWidth;
@@ -27,13 +32,17 @@ protected:
  // This boolean determines whether the arrays need to be generated.
  static bool mbFirst;
 
+float mfPriority;
  	// Will fill the arrays for forming the polygon.
        void InitialiseArrays();
        	// Updates arrays to make the image of size mfSize.
        void ResizeArrays();
+
+	   cImage(vRenderNode *lpRenderNode);
 public:
  	/// Constructor for cImage. Will Create an Empty cImage Object.
        cImage();
+	   cImage(cCamera *lpCamera);
 	// This function will set this object to being a 2D object and initialise the arrays.
        virtual void SetUp();
 	//Destructor for cImage.
@@ -56,10 +65,9 @@ public:
         ///Will return the Height of this image in pixels.
         float Height();
 
-		///Will Add the Font lcFont to this object using the uniform variable labelled lsFontSlot.
-		void AddFont(string lsFontSlot,cFont *lcFont);
-		///Will Add the Font lcFont to the first free default Font slot ("Font0" "Font1" "Font2"). This is slower than AddFont(string,cFont*). Also it allows for mistakes in the naming of samplers in the shader.
-		void AddFont(cFont *lcFont);
+        float GetSize(){return 0.0f;};
+        double GetSizeSq(){return 0.0f;};
+
 
 };
 
@@ -74,7 +82,12 @@ class cImage3D : public cImage
 {
 
 public:
+	cImage3D();
+	cImage3D(vRenderNode *lpCamera);
+	cImage3D(cCamera *lpCamera);
     void SetUp();
+
+    void RenderPainter();
 };
 
 #endif

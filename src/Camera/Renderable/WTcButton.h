@@ -16,6 +16,7 @@ protected:
   float YCenter,YRange;
 
   bool MouseOver;
+  bool MousePressed;
 
 public:
 	///Will return true if the mouse cursor is over this button, irrespective of whether Mouse buttons are depressed.

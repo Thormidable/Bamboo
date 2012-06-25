@@ -170,6 +170,8 @@
 		<Unit filename="src\Files\Meshes\WTcmLandscape.h" />
 		<Unit filename="src\Files\Meshes\WTv2DPolygon.cpp" />
 		<Unit filename="src\Files\Meshes\WTv2DPolygon.h" />
+		<Unit filename="src\Files\Misc\WTcCircleLineData.cpp" />
+		<Unit filename="src\Files\Misc\WTcCircleLineData.h" />
 		<Unit filename="src\Files\Misc\WTcLineArrayData.cpp" />
 		<Unit filename="src\Files\Misc\WTcLineArrayData.h" />
 		<Unit filename="src\Files\Misc\WTcMeshTree.cpp" />

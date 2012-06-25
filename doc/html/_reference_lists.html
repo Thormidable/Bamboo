@@ -78,11 +78,11 @@ List of Useful Macros</h2>
 </ul>
 </li>
 <li>_KEY(KEY_CODE_ID)<ul>
-<li>Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List and start 'KEY_CODE_' .</li>
+<li>Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List and start 'KEY_CODE_'. They can be stored as unsigned integers.</li>
 </ul>
 </li>
 <li>_MOUSE<ul>
-<li>Reference giving access the systems mouse states.</li>
+<li>Pointer Reference giving access the systems mouse states.</li>
 </ul>
 </li>
 <li>_LOAD(FileName)<ul>
@@ -154,7 +154,7 @@ List of Useful Macros</h2>
 </ul>
 </li>
 <li>_GET_LANDSCAPE_FILE(Reference)<ul>
-<li>Function returning a pointer to the <a class="el" href="classcm_landscape.html" title="This will store the data for a landscape mesh. The data can be rendered through cLandscape.">cmLandscape</a> Object with the name Reference.</li>
+<li>Function returning a pointer to the cmLandscape Object with the name Reference.</li>
 </ul>
 </li>
 </ul>
@@ -166,7 +166,7 @@ List of Useful Macros</h2>
 </ul>
 <ul>
 <li>_GET_MODELLIST_FILE(Reference)<ul>
-<li>Function returning a pointer to the <a class="el" href="classc_mesh_tree.html" title="This will store the data for a cModelList()">cMeshTree</a> Object with the name Reference.</li>
+<li>Function returning a pointer to the cMeshTree Object with the name Reference.</li>
 </ul>
 </li>
 </ul>
@@ -176,11 +176,11 @@ List of Useful Macros</h2>
 </ul>
 </li>
 <li>_CAMERA<ul>
-<li>A Pointer to the default <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> Object.</li>
+<li>Pointer Reference to the default <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> Object.</li>
 </ul>
 </li>
 <li>_LIGHT<ul>
-<li>A Pointer to the <a class="el" href="classc_light_handler.html" title="cLightHandler will control the OpenGL Lights. It will turn off lights not required or possible for di...">cLightHandler</a> Object.</li>
+<li>A Pointer to the cLightHandler Object.</li>
 </ul>
 </li>
 <li>_KERNEL<ul>
@@ -200,7 +200,7 @@ List of Useful Macros</h2>
 </ul>
 </li>
 <li>WT_TIME_IND<ul>
-<li>This is the current frame length in seconds. Multiply anything time dependant by this to make it time independant. (It is a float multiplyer, think before use.)<br/>
+<li>This is the current frame length in seconds. Multiply anything time dependant variable by this to make it time independant. (It is a float multiplyer, think before use.)<br/>
 </li>
 </ul>
 </li>
@@ -533,7 +533,7 @@ List of Key Identifiers</h2>
  KEY_z <br/>
 </p>
 <p>There are also accessor codes for the Macro _KEY(). These are actually unsigned integers and so can be passed as parameters.</p>
-<div class="fragment"><pre class="fragment"> <span class="keywordflow">if</span>(_KEY(KEY_CODE_SPACE)) _CREATE(Bulltets());
+<div class="fragment"><pre class="fragment"> <span class="keywordflow">if</span>(_KEY(KEY_CODE_SPACE)) _CREATE(Bullets());
  <span class="keywordflow">if</span>(_KEY(KEY_CODE_TAB)) _KERNEL-&gt;KillAll();
 </pre></div><p>KEY_CODE_BACKSPACE <br/>
  KEY_CODE_TAB <br/>
@@ -650,7 +650,7 @@ Engine Settings</h2>
 </ul>
 </li>
 <li>WT_STARTING_VIEWPORT_SLOTS<ul>
-<li>This is the number of <a class="el" href="classc_viewport.html" title="cViewport allows a cCameras Render List to be rendered again from another position and rotation...">cViewport</a> slots created in the cViewportHandler at start. The number of slots will be increased as required, but this involves some overhead.</li>
+<li>This is the number of cViewport slots created in the cViewportHandler at start. The number of slots will be increased as required, but this involves some overhead.</li>
 </ul>
 </li>
 <li>WT_TEXTURE_NUMBER_ALLOWED<ul>
@@ -744,7 +744,7 @@ Engine Settings</h2>
 </ul>
 <ul>
 <li>WT_MAX_PARTICLES<ul>
-<li>This is the maximum particles that <a class="el" href="classc_particle_handler.html">cParticleHandler</a> should need to maintain at any one time. Should not be modifed at run time.</li>
+<li>This is the maximum particles that cParticleHandler should need to maintain at any one time. Should not be modifed at run time.</li>
 </ul>
 </li>
 </ul>
@@ -773,24 +773,35 @@ List of Objects using or not using the Create Macro.</h2>
 <li><a class="el" href="classc_process.html" title="This is the base code for a process. This will automatically create a new process. It will hand itself to cKernel to be processed every frame. Any Processes created by the user should inherit this type to be handled by cKernel automatically. Initialisation code should go in the constructor of the user type. Linking to cKernel is performed automatically by cProcess. Update code should go in the function Run(). Coed performed when a process is killed should go in the function Stop(). NOT the destructor. Code to handle Sleeping and Waking signals should go in OnSleep() and OnWake(). Code to handle interaction of two processes should go in either processes UserSignal() function.">cProcess</a></li>
 <li><a class="el" href="classc_render_object.html" title="This class contains the base code for all renderable objects. Any renderable object should inherit th...">cRenderObject</a></li>
 <li><a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a></li>
-<li><a class="el" href="classc_viewport.html" title="cViewport allows a cCameras Render List to be rendered again from another position and rotation...">cViewport</a><ul>
-<li><a class="el" href="classc_image.html" title="A 2D renderable object.">cImage</a></li>
+<li>cViewport<ul>
+<li>cImage</li>
 <li><a class="el" href="classc_model.html" title="A standard Textured Model renderable object.">cModel</a></li>
-<li><a class="el" href="classc_text_button.html" title="Renderable Button object for displaying a button as a string of text. Takes a font and will render as...">cTextButton</a></li>
-<li><a class="el" href="classc_button.html" title="Renderable Button object for displaying an object as a rendered image. Takes an image and will render...">cButton</a></li>
-<li><a class="el" href="classc_text.html" title="This class is a text renderable object.">cText</a></li>
-<li><a class="el" href="classc_landscape.html" title="A height map based, matrix structured Landscape. Landscape is composed of a matrix of square polygons...">cLandscape</a></li>
+<li>cTextButton</li>
+<li>cButton</li>
+<li>cText</li>
+<li>cLandscape</li>
 <li><a class="el" href="classc_render_node.html" title="This is a dynamic render tree branch. This class stores a dynamic list of cRenderObjects called mpObj...">cRenderNode</a></li>
-<li><a class="el" href="classc_node_list.html" title="Node list is a &#39;static&#39; render tree holding data for a series of renderable objects. It counts as a single renderable object.">cNodeList</a></li>
-<li><a class="el" href="classc_beam_mesh.html" title="A Procedurally generated cylindrical Renderable Object. This class will generate a cylinder with spec...">cBeamMesh</a></li>
+<li>cNodeList</li>
+<li>cBeamMesh</li>
 <li><a class="el" href="classc_line.html" title="A standard renderable Line object.">cLine</a></li>
 <li><a class="el" href="classc_point.html" title="A Renderable object for rendering single points.">cPoint</a></li>
 <li>cParticleGroup</li>
-<li><a class="el" href="classc_particle.html">cParticle</a></li>
+<li>cParticle</li>
 </ul>
 </li>
 <li><a class="el" href="classc_collision_object.html" title="This Object is the base object for detecting collisions. This object should be created and passed a p...">cCollisionObject</a></li>
 <li><a class="el" href="classc_audio_object.html" title="This class will allow a sound to be played. This class will link an audio source and a buffer...">cAudioObject</a></li>
+<li><a class="el" href="classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh...">cFile</a><ul>
+<li>cMeshFileCollision</li>
+<li><a class="el" href="classc_texture.html" title="This class stores the data for rendering a 2D texture. This stores and processes the data for a 2D te...">cTexture</a></li>
+<li><a class="el" href="classc_font.html" title="This class will store the data for a Font ready to be used for rendering cText. This should come from...">cFont</a></li>
+<li><a class="el" href="classc_mesh.html" title="This class stores the data for a 3D model.">cMesh</a></li>
+<li>cmLandscape</li>
+<li>cShader</li>
+<li><a class="el" href="classc_shader_program.html" title="A cShaderProgram() is a series of cShader() objects compiled into a program. cShaderProgram is a cFil...">cShaderProgram</a></li>
+<li>cSoundObject</li>
+</ul>
+</li>
 </ul>
 <p>These objects can be used as instances and can be created and deleted as desired. The <a class="el" href="classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh...">cFile</a> objects are the types used when the _GET_FILE() macros are used. Otherwise you are unlikely to use them.</p>
 <ul>
@@ -803,17 +814,6 @@ List of Objects using or not using the Create Macro.</h2>
 <li><a class="el" href="classc_matrix4.html" title="this is a standard 4x4 translation matrix for objects. This is a standard 4x4 translation matrix for ...">cMatrix4</a></li>
 <li><a class="el" href="classc_camera_matrix4.html" title="This is a translation matrix for a camera object A Special Matric for Cameras. All the translations a...">cCameraMatrix4</a></li>
 <li><a class="el" href="classc_matrix_stack.html" title="This is a cMatrixStack object for storing a matrix stack. This supports the Matrix.">cMatrixStack</a></li>
-<li><a class="el" href="classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh...">cFile</a> (These are for loaded media files. You should not need to create objects of these types)<ul>
-<li>cSoundObject</li>
-<li><a class="el" href="classc_mesh_file_collision.html" title="Mesh Collision Object with functionality to load a Collision Mesh from a file. This inherits cMeshCol...">cMeshFileCollision</a></li>
-<li><a class="el" href="classc_texture.html" title="This class stores the data for rendering a 2D texture. This stores and processes the data for a 2D te...">cTexture</a></li>
-<li><a class="el" href="classc_font.html" title="This class will store the data for a Font ready to be used for rendering cText. This should come from...">cFont</a></li>
-<li><a class="el" href="classc_mesh.html" title="This class stores the data for a 3D model.">cMesh</a></li>
-<li><a class="el" href="classcm_landscape.html" title="This will store the data for a landscape mesh. The data can be rendered through cLandscape.">cmLandscape</a></li>
-<li>cShader</li>
-<li><a class="el" href="classc_shader_program.html" title="A cShaderProgram() is a series of cShader() objects compiled into a program. cShaderProgram is a cFil...">cShaderProgram</a></li>
-</ul>
-</li>
 <li><a class="el" href="classc_r_g_b.html" title="This is a Color Variable. It can Store 3 components: Red, Green, Blue. It is assumed the color is opa...">cRGB</a></li>
 <li><a class="el" href="classc_r_g_b_a.html" title="this is a Color Variable. It can Store 4 components: Red, Green, Blue and Alpha. Alpha of 0...">cRGBA</a></li>
 <li><a class="el" href="classc_collision_list.html" title="This is generated by doing Collision Detection with an object. This will cache all the detected colli...">cCollisionList</a></li>
@@ -822,12 +822,14 @@ List of Objects using or not using the Create Macro.</h2>
 Optimisation Techniques</h2>
 <p>Bamboo is written to be as optimised as possible while remaining very simple. There are many things that can be done to optimise your code. <br/>
  <b>Reduce Collisions:</b> <br/>
- It is very important to only check for collisions that matter. Collisions should only detected one way (I.E. either From the Tank to the Bullet OR from the Bullet to the Tank, not both). Use <a class="el" href="classc_collision_object.html#a1490cdf75c8037049bfa7891aa8756b7" title="This will return the current Collision Filter ID of this object.">cCollisionObject::CollisionFilter()</a> to minimise the collision checks that are made. <br/>
+ It is very important to only check for collisions that matter. Collisions should only detected one way (I.E. either From the Tank to the Bullet OR from the Bullet to the Tank, not both). Use <a class="el" href="classc_collision_object.html#a1490cdf75c8037049bfa7891aa8756b7" title="This will return the current Collision Filter ID of this object.">cCollisionObject::CollisionFilter()</a> to minimise the collision checks that are made. Also sphere sphere collisions are much faster than other collision types. Where possible make collisions Sphere, then Box, then Beam, then Mesh, then Compound. <br/>
  <b>Turn off Lighting where not required:</b> <br/>
  If an object will not use the lighting settings there is no point in calculating the lighting values. Turn it off with the function <a class="el" href="classc_render_object.html#a67191d0fe8aceaa10052a542b3c34650" title="This will set whether lighting is used for the object.">cRenderObject::Lighting(bool)</a>. <b>Reduce Matrix Multiplications:</b> <br/>
  Where possible use the minimum of Matrix multiplications. Both in shaders and in programs. Don't use cRenderObject::CalculateGlobalMatrix() unless absolutely neccessay. try to use cRenderObject::GetCacheMatrix() instead. It will not include changes to the Global matrix this frame but it is very fast. Use the highest level of Matrices possible in a shader. <br/>
  <b>Avoid searching with strings:</b> <br/>
- Pointers are much quicker for accessing Media objects loaded onto the harddrive. If a piece of media will be accessed many times get a pointer to it using the functions for getting files (_GET_AUDIO_FILE(),_GET_COLLISION_MESH_FILE(),_GET_FONT_FILE(),_GET_LANDSCAPE_FILE(),_GET_MESH_FILE(),_GET_SHADER_FILE(),_GET_TEXTURE_FILE()). Each takes a string and returns a pointer of the correct type to the media object. if it cannot be found it returns 0; </p>
+ Pointers are much quicker for accessing Media objects loaded onto the harddrive. If a piece of media will be accessed many times get a pointer to it using the functions for getting files (_GET_AUDIO_FILE(),_GET_COLLISION_MESH_FILE(),_GET_FONT_FILE(),_GET_LANDSCAPE_FILE(),_GET_MESH_FILE(),_GET_SHADER_FILE(),_GET_TEXTURE_FILE()). Each takes a string and returns a pointer of the correct type to the media object. if it cannot be found it returns 0. <br/>
+ Avoid Slow functions: <br/>
+ sqrt is a very slow function. As is dividing, trig and writting to the console. Performing these many times a second will slow the program substantially. </p>
 <h2><a class="anchor" id="CommonMistakes"></a>
 Common Mistakes</h2>
 <p><b> Nothing is showing on screen: </b> <br/>
@@ -836,7 +838,7 @@ Common Mistakes</h2>
  The object must have its shader assigned before it can receive any textures. <b> My Lighting isn't working: </b> <br/>
  If the model is entirely black it may not have Normals. A Mesh without normals cannot use lighting. If the lighting is not using the correct lights it may be worth checking if lighting is enabled for the current object with <a class="el" href="classc_render_object.html#a67191d0fe8aceaa10052a542b3c34650" title="This will set whether lighting is used for the object.">cRenderObject::Lighting(bool)</a>. <br/>
  <b> My Transparent Textures and Images are not working:</b> <br/>
- Check that the Texture has an alpha channel to enable transparency. Check that Transparency is enabled with cRenderObject::Transparent(bool) <br/>
+ Check that the Texture has an alpha channel to enable transparency. Check that Transparency is enabled with cRenderObject::Transparent(uint8) <br/>
  <b>When I change an Objects shader it goes funny:</b> <br/>
  Each shader assigns its variables to a location specific to that <a class="el" href="classc_shader_program.html" title="A cShaderProgram() is a series of cShader() objects compiled into a program. cShaderProgram is a cFil...">cShaderProgram</a>. This is done by the graphics card. Variables should be reassigned when an objects shader is changed. </p>
 </div></div>
@@ -854,7 +856,7 @@ Common Mistakes</h2>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:07 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Jun 6 2012 10:28:49 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -32,7 +32,7 @@ Initialise();
 
 cRenderNode::~cRenderNode()
 {
-	StartKillAll();
+	KillAll();
 	//delete mpObjects;
 	//mpObjects=0;
 	mpRenderer=0;
@@ -110,12 +110,12 @@ void cRenderNode::RecalculateTotalMatrix()
 			if(mpCursor->Next())
 			{
 				mpCursor=mpCursor->Next();
-			//	mpObjects->Delete(mpCursor->Previous());
+				mpObjects->Delete(mpCursor->Previous());
 			}
 			else
 			{
 
-			//	mpObjects->Delete(mpCursor);
+				mpObjects->Delete(mpCursor);
 				mpCursor=0;
 			}
 		}
@@ -159,12 +159,12 @@ void cRenderNode::CalculateMatrices()
 			if(mpCursor->Next())
 			{
 				mpCursor=mpCursor->Next();
-			//	mpObjects->Delete(mpCursor->Previous());
+				mpObjects->Delete(mpCursor->Previous());
 			}
 			else
 			{
 
-			//	mpObjects->Delete(mpCursor);
+				mpObjects->Delete(mpCursor);
 				mpCursor=0;
 			}
 		}
@@ -204,12 +204,12 @@ void cRenderNode::RenderToPainter()
 			if(mpCursor->Next())
 			{
 				mpCursor=mpCursor->Next();
-			//	mpObjects->Delete(mpCursor->Previous());
+				mpObjects->Delete(mpCursor->Previous());
 			}
 			else
 			{
 
-			//	mpObjects->Delete(mpCursor);
+				mpObjects->Delete(mpCursor);
 				mpCursor=0;
 			}
 		}
@@ -342,18 +342,6 @@ void cRenderNode::TreeSignal(SIGNAL lsSignal)
     for(vRenderObject *lpCur=mpObjects->FindStart();lpCur;lpCur=mpObjects->FindNext())
     {
         lpCur->TreeSignal(lsSignal);
-    }
- }
-}
-
-void cRenderNode::TreeUserSignal(SIGNAL lsSignal,void *lpData)
-{
- UserSignal(lsSignal);
-     if(mpObjects)
- {
-    for(vRenderObject *lpCur=mpObjects->FindStart();lpCur;lpCur=mpObjects->FindNext())
-    {
-        lpCur->TreeUserSignal(lsSignal,lpData);
     }
  }
 }

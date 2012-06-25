@@ -13,7 +13,7 @@ Collaboration diagram for cMouse:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=320pt]{classc_mouse__coll__graph}
+\includegraphics[height=600pt]{classc_mouse__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -59,6 +59,16 @@ bool \hyperlink{classc_mouse_ae372f0b8e20928233060adc9a7450a93}{Middle} ()}
 \label{classc_mouse_ae372f0b8e20928233060adc9a7450a93}
 
 \begin{DoxyCompactList}\small\item\em Will return the pressed state of the mouses middle button. \end{DoxyCompactList}\item 
+\hypertarget{classc_mouse_ac254966f9f860197e4e581066775af74}{
+int \hyperlink{classc_mouse_ac254966f9f860197e4e581066775af74}{LockedX} ()}
+\label{classc_mouse_ac254966f9f860197e4e581066775af74}
+
+\begin{DoxyCompactList}\small\item\em Will return the current position of the cursor. When mouse is Locked, this will retain the last free position of the cursor. \end{DoxyCompactList}\item 
+\hypertarget{classc_mouse_a52df381bb54181ee574fcf4649353b52}{
+int \hyperlink{classc_mouse_a52df381bb54181ee574fcf4649353b52}{LockedY} ()}
+\label{classc_mouse_a52df381bb54181ee574fcf4649353b52}
+
+\begin{DoxyCompactList}\small\item\em Will return the current position of the cursor. When mouse is Locked, this will retain the last free position of the cursor. \end{DoxyCompactList}\item 
 \hypertarget{classc_mouse_a558d192a5c2df1352d1b8de7275a9359}{
 void \hyperlink{classc_mouse_a558d192a5c2df1352d1b8de7275a9359}{Update} ()}
 \label{classc_mouse_a558d192a5c2df1352d1b8de7275a9359}
@@ -89,9 +99,14 @@ void \hyperlink{classc_mouse_a869bb420067947a30b57ad649e3f1f14}{Unlock} ()}
 \label{classc_mouse_a869bb420067947a30b57ad649e3f1f14}
 
 \begin{DoxyCompactList}\small\item\em This will unlock the mouse cursor from the centre of the window. \end{DoxyCompactList}\item 
-\hypertarget{classc_mouse_a2a3632592810662e9ab868eba250b7cd}{
-\hyperlink{classc_collision_list}{cCollisionList} $\ast$ \hyperlink{classc_mouse_a2a3632592810662e9ab868eba250b7cd}{Selection} (\hyperlink{classc_perspective_control}{cPerspectiveControl} $\ast$lpCamera=\_\-CAMERA, float lfRadius=0.0f)}
-\label{classc_mouse_a2a3632592810662e9ab868eba250b7cd}
+\hypertarget{classc_mouse_a606b78beca6e7daee0a2142cdb26f9d6}{
+void \hyperlink{classc_mouse_a606b78beca6e7daee0a2142cdb26f9d6}{UnlockPosition} ()}
+\label{classc_mouse_a606b78beca6e7daee0a2142cdb26f9d6}
+
+\begin{DoxyCompactList}\small\item\em This will unlock the mouse cursor and reposition the cursor at the last co-\/ordinates. \end{DoxyCompactList}\item 
+\hypertarget{classc_mouse_a237297c2d9c3f12df280ab957571fa18}{
+\hyperlink{classc_collision_list}{cCollisionList} $\ast$ \hyperlink{classc_mouse_a237297c2d9c3f12df280ab957571fa18}{Selection} (cMouseCollisionObject $\ast$lpMouse, uint32 liFilter=0, \hyperlink{classc_collision_list}{cCollisionList} $\ast$lpList=0)}
+\label{classc_mouse_a237297c2d9c3f12df280ab957571fa18}
 
 \begin{DoxyCompactList}\small\item\em This will Generate a detailed Mouse Selection Collision List. This list will do a sphere collision check with a beam of radius lfRadius. The Vector of the mouses collision is determined from the \hyperlink{classc_camera}{cCamera} and it's main viewport. The list produced will fill mfBeamlengths with the length along the beam to reach the colliding item. The mfDistance in the list is automatically generated and is the distance from the closest point on the Mosue vector. The vector is from the cameras position through the mouse co-\/ordinates in the viewport. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
@@ -102,6 +117,14 @@ tagPOINT \hyperlink{classc_mouse_ad6306d52aba6df1e6496c038db013442}{Pos}}
 \label{classc_mouse_ad6306d52aba6df1e6496c038db013442}
 
 \begin{DoxyCompactList}\small\item\em Windows only variable. Windows format for mouse position...? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_mouse_a1e015f676ddfb09a249d209e2fbac01c}{
+class \hyperlink{classc_mouse_a1e015f676ddfb09a249d209e2fbac01c}{cWindow}}
+\label{classc_mouse_a1e015f676ddfb09a249d209e2fbac01c}
+
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

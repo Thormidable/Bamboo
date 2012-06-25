@@ -1,5 +1,7 @@
 #include "../WTBamboo.h"
 
+float cCameraHandler::sfCamera_Zoom=0.0f;
+
 cCamera::cCamera()
 {
  trace("Creating cCamera::cCamera()");
@@ -8,6 +10,8 @@ cCamera::cCamera()
 	 mpInstance=this;
 	 Proportional(true);
 	 ViewportProportional(0.0f,0.0f,1.0f,1.0f);
+	 Width(1.0f);
+	 Height(0.75f);
  }
 
  cCameraHandler::Instance()->Add(this);
@@ -32,11 +36,12 @@ cPainter *cCamera::Painter()
 cCamera::~cCamera()
 {
  trace("Destroying cCamera");
+ cCamera *lpTemp=reinterpret_cast<cCamera*>(0x1);
+ delete lpTemp;
  mpRenderList->StartKillAll();
  delete mpRenderList; mpRenderList=0;
  #if WT_FULL_VERSION_BAMBOO
     delete mpViewportHandler; mpViewportHandler=0;
-    //delete mpParticleHandler; mpParticleHandler=0;
  #endif
  delete mpPainter; mpPainter=0;
 }
@@ -60,6 +65,7 @@ void cCamera::UpdateRenderSettings()
 
 void cCamera::UpdateRenderState()
 {
+    _CAMERA_ZOOM=Near()/(Width()+Height());
 	#if WT_FULL_VERSION_BAMBOO
         _LIGHT->SetLightStates();
     #endif
@@ -147,7 +153,7 @@ void cCameraHandler::Add(cCamera *lpCamera)
 
 void cCameraHandler::Remove(cCamera *lpCamera)
 {
-	mcList.Remove(lpCamera);
+	mcList.Delete(lpCamera);
 };
 #if WT_FULL_VERSION_BAMBOO
 cParticleHandler *cCamera::ParticleHandler()
@@ -182,10 +188,10 @@ void cCamera::UpdateWindowSize()
 #endif
  if(Proportional())
  {
-  mfViewportX=mfProportionalX*gpWindow->Width();
-  mfViewportY=mfProportionalY*gpWindow->Height();
-  mfViewportWidth=mfProportionalWidth*gpWindow->Width();
-  mfViewportHeight=mfProportionalHeight*gpWindow->Height();
+  mfViewportX=mfProportionalX*gpWindow->RenderAreaX();
+  mfViewportY=mfProportionalY*gpWindow->RenderAreaY();
+  mfViewportWidth=mfProportionalWidth*gpWindow->RenderAreaWidth();
+  mfViewportHeight=mfProportionalHeight*gpWindow->RenderAreaHeight();
  }
  UpdateProjectionMatrix();
 
@@ -200,6 +206,7 @@ void cCameraHandler::UpdateWindowSize()
  {
   if(mcList[liPos]->Awake()) mcList[liPos]->UpdateWindowSize();
  }
+ gpSettings->UserWindowSizeUpdate();
 }
 
 void cCameraHandler::UpdateScreen()

@@ -33,33 +33,51 @@ public:
 	void NotUseGravity();
 
 };
+/**
+ * \brief cParticleSource will generate particles at a specified rate for a specified duration with specified properties.
+ * The class will generate particles at the specified rate for the specified duration, with the specified properties.
+ * This is designed to be a controller for temporary flame trails etc. The particles generated are not owned by this instance, but passed to a cParticleHandler for efficiency.
+ * */
 
-class cParticleSource : public cFrameUpdateType
+class cParticleSource : public cRenderObject
 {
     cParticleHandler *mpHandler;
     cParticleSettings Data;
     float mfDuration;
     float mfRate;
     float mfProduction;
-    vRenderNode *mpNode;
     c3DVf mfOffset;
 
 public:
-    cParticleSource(float lfDuration,float lfRate,cParticleSettings& lpSettings,cParticleHandler *lpHandler=_CAMERA->ParticleHandler(),vRenderNode *lpNode=0,c3DVf lfOffSet=c3DVf(0.0f,0.0f,0.0f));
+	/** \brief Constructor for cParticleSource.
+	 * \param lfDuration is the duration which the source will generate particles in seconds.
+	 * \param lfRate is the number of particles the source will generate per second.
+	 * \param lpSettings is the settings for the generated particles.
+	 * \param lpHandler specifies which cParticleHandler should own the generated particles. This has a default value.
+	 * \param lpNode specifies a vRenderNode object for the cParticleSource to follow. This automatically updates the Sources position relative to the Source.
+	 * \param lfOffSet is the spatial position of the source relative to the vRenderNode object (in co-ordinates local to the source).
+	 *
+	 */
+    cParticleSource(float lfDuration,float lfRate,cParticleSettings& lpSettings,vRenderNode *lpNode,c3DVf lfOffSet=c3DVf(0.0f,0.0f,0.0f),cParticleHandler *lpHandler=_CAMERA->ParticleHandler());
 	cParticleSettings &Settings();
-	~cParticleSource();
 
+	///Change the cParticleSettings the source will use.
 	void Settings(cParticleSettings &lpOther);
-	void RenderNode(vRenderNode *lpNode);
 
+	///Change the Offset the Source will use.
 	void OffSet(float *lpOffSet);
 
+	///Set the remaining duration of the Source.
 	void Duration(float lfDuration);
+	///Set the particle generation rate. (Particles per second)
 	void Rate(float lfRate);
 
-	void FrameUpdate();
+	void RenderToPainter();
+	void RenderPainter(){};
 
+	///Returns the remaining duration of the source.
 	float Duration();
+	///Returns the current particle Generation rate of the the source (Particles per second)
 	float Rate();
     void UseGravity();
 	void NotUseGravity();

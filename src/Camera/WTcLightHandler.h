@@ -22,7 +22,7 @@ class cLightHandler
  static cLightHandler* mpInstance;
  cLightHandler();
 
- cMinLL<vLight> *mpLightList;
+ cLinkedList<vLight> *mpLightList;
 
  cLightSpot *mpLightSlots;
 
@@ -36,7 +36,7 @@ public:
   static cLightHandler* Instance();
 
   //Add a new vLight Object to the handler.
-  cMinLN<vLight> *Add(vLight *lpNew);
+  cLinkedNode<vLight> *Add(vLight *lpNew);
 
  ///Will Prepare all the Lights for Rendering generally.
  void PrepareLight();
@@ -44,7 +44,7 @@ public:
  void PrepareLight(cMatrix4 *mpObj);
 
  // Will Remove the Light owned by node mpNode fom the LightList.
-void Remove(cMinLN<vLight> *lpOld);
+void Remove(cLinkedNode<vLight> *lpOld);
 
  /// Will Delete all the processes in the current Light list.
  void DeleteAll();

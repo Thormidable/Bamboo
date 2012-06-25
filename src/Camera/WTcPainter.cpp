@@ -15,9 +15,9 @@ cPainter::cPainter()//uint32 liSize)
 
  mpList=new cRenderPointer*[WT_PAINTER_STARTING_SIZE];
  mpBucket=new cRenderPointer*[WT_PAINTER_STARTING_SIZE];
- memset(mpList,0,sizeof(cRenderPointer*)*5);
- memset(mpBucket,0,sizeof(cRenderPointer*)*5);
- miSize=5;
+ memset(mpList,0,sizeof(cRenderPointer*)*WT_PAINTER_STARTING_SIZE);
+ memset(mpBucket,0,sizeof(cRenderPointer*)*WT_PAINTER_STARTING_SIZE);
+ miSize=WT_PAINTER_STARTING_SIZE;
 
  miPos=0;
 
@@ -39,11 +39,13 @@ void cPainter::Resize(uint32 liSize)
 
   lpTemp=new cRenderPointer*[liSize];
   memcpy(lpTemp,mpList,sizeof(cRenderPointer*)*miSize);
+  memset(&lpTemp[miSize],0,sizeof(cRenderPointer*)*(liSize-miSize));
   delete []mpList;
   mpList=lpTemp;
 
   lpTemp=new cRenderPointer*[liSize];
   memcpy(lpTemp,mpBucket,sizeof(cRenderPointer*)*miSize);
+  memset(&lpTemp[miSize],0,sizeof(cRenderPointer*)*(liSize-miSize));
   delete []mpBucket;
   mpBucket=lpTemp;
 
@@ -76,7 +78,6 @@ void cPainter::SortByDistance()
 
   float lfX,lfY,lfZ;
 
-
   lfX=mpList[liPass]->mpObject->mmTotalCache.Matrix()[12];
   lfY=mpList[liPass]->mpObject->mmTotalCache.Matrix()[13];
   lfZ=mpList[liPass]->mpObject->mmTotalCache.Matrix()[14];
@@ -93,7 +94,9 @@ for(liPass=0;liPass<25;liPass+=8)
  //Find the size of each bucket;
   for(liFindPos=0;liFindPos<miPos;++liFindPos)
   {
-	  //Apparently uninitialised value here! Believes that miDist is uninitialised, as comes from mmCache.Matrix()...
+	  //Apparently uninitialised value here!
+	  //On first pass, mmTotalCache is based un uninitialised values.
+	  //Not necessary to fix.
 	++lpStarts[(mpList[liFindPos]->miDist>>liPass)&0xFF];
 
   }
@@ -111,8 +114,10 @@ for(liPass=0;liPass<25;liPass+=8)
   //Fill the Buckets.
   for(liFindPos=0;liFindPos<miPos;++liFindPos)
   {
-    //Believes something is not initialised. lpStarts?
-	mpBucket[lpStarts[(mpList[liFindPos]->miDist>>liPass)&0xff]++]=mpList[liFindPos];
+    //Believes something is not initialised.
+    //On first pass, mmTotalCache is based un uninitialised values.
+	  //Not necessary to fix.
+	mpBucket[(lpStarts[(mpList[liFindPos]->miDist>>liPass)&0xff])++]=mpList[liFindPos];
   }
 
   lpSwitch=mpBucket;
@@ -267,11 +272,13 @@ void cPainter::ShaderState(cShaderProgram *mpCurrent,cShaderProgram *mpLast)
 
 void cPainter::DepthState(uint8 mpCurrent,uint8 mpLast)
 {
-  if(mpCurrent != mpLast)
+  if(mpCurrent && !mpLast)
   {
-   if(mpCurrent) glDisable(GL_DEPTH_TEST);
-   else glEnable(GL_DEPTH_TEST);
+   glDepthMask(GL_FALSE);
+   return;
   }
+
+  if(!mpCurrent && mpLast) glDepthMask(GL_TRUE);
 }
 
 void cPainter::Render()
@@ -300,8 +307,8 @@ if(miPos)
           mpList[0]->mpObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
         }
 
-      /*if(mpList[0]->miAlpha) glDisable(GL_DEPTH_TEST);
-      else glEnable(GL_DEPTH_TEST);*/
+      if(mpList[0]->miAlpha) glDepthMask(GL_FALSE);
+      else glDepthMask(GL_TRUE);
 
       #if WT_FULL_VERSION_BAMBOO
         if(_LIGHT->AnyLights() && mpList[0]->mpObject->Lighting()) _LIGHT->PrepareLight(&(mpList[0]->mpObject->mmCache));
@@ -328,7 +335,8 @@ if(miPos)
                 mpList[liCount]->mpObject->TextureItem(liTexSlot).TextureState(&(mpList[liCount-1]->mpObject->TextureItem(liTexSlot)),liTexSlot);
         }
     }
-     //   DepthState(mpList[liCount]->miAlpha,mpList[liCount-1]->miAlpha);
+
+	DepthState(mpList[liCount]->miAlpha,mpList[liCount-1]->miAlpha);
 
 
       #if WT_FULL_VERSION_BAMBOO
@@ -339,6 +347,7 @@ if(miPos)
 
      }
 }
+	glDepthMask(GL_TRUE);
 }
 
 void cPainter::Remove(cRenderPointer *lfSlot)

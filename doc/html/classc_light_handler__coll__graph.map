@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$classc_min_l_l.html" title="cMinLL\&lt; vLight \&gt;" alt="" coords="7,269,129,299"/>
-<area shape="rect" id="node4" href="$classc_min_l_n.html" title="cMinLN\&lt; vLight \&gt;" alt="" coords="5,123,131,152"/>
-<area shape="rect" id="node6" href="$classc_min_l_n.html" title="Linked Nodes Lite. I&#39;m not sure I use this. But quick small and simple templated Linked List nodes..." alt="" coords="19,8,117,37"/>
+<area shape="rect" id="node2" href="$classc_linked_list.html" title="cLinkedList\&lt; vLight \&gt;" alt="" coords="137,8,284,37"/>
+<area shape="rect" id="node4" href="$classc_linked_node.html" title="cLinkedNode\&lt; vLight \&gt;" alt="" coords="224,157,381,187"/>
+<area shape="rect" id="node7" href="$classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="308,8,439,37"/>
 </map>

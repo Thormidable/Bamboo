@@ -257,21 +257,21 @@ All Render Objects are inherited from class vRenderObject, through class \hyperl
 Currently there are lots of Render Objects:
 
 class \hyperlink{classc_model}{cModel}; \par
- class \hyperlink{classc_landscape}{cLandscape}; \par
- class \hyperlink{classc_beam_mesh}{cBeamMesh}; \par
- class \hyperlink{classc_image}{cImage}; \par
+ class cLandscape; \par
+ class cBeamMesh; \par
+ class cImage; \par
  class cTextureText; \par
  class \hyperlink{classc_line}{cLine}; \par
- class \hyperlink{classc_particle}{cParticle}; \par
+ class cParticle; \par
  class cParticleGroup; \par
- class \hyperlink{classc_particle_handler}{cParticleHandler}; \par
+ class cParticleHandler; \par
  class \hyperlink{classc_point}{cPoint}; \par
- class \hyperlink{classc_button}{cButton}; \par
- class \hyperlink{classc_text_button}{cTextButton}; \par
+ class cButton; \par
+ class cTextButton; \par
  \par
  There are also Render Nodes. These do not display on the screen bu manipulate the position of other objects. Essentially they create new co-\/ordinate systems. This allows objects to be positioned and rotated to other objects or points in space. This allows the 'gluing' or 'linking' of objects together. This allows the creating of models with limbs, or turrets etc. \par
  class \hyperlink{classc_render_node}{cRenderNode}; \par
- class \hyperlink{classc_node_list}{cNodeList}; \par
+ class cNodeList; \par
  \par
  See the relevant documentation for each for how to use them. \par
  \par
@@ -381,7 +381,7 @@ Collision Objects will only collide with other collision objects, NOT Render Obj
 Collision Objects are created using the \_\-CREATE() Macro and killed using the \_\-KILL() Macro, as per a process. They can be slept and woken, like other objects. When Created a Collision Object needs to be linked to a process and a Renderable object. In the initialiser a pointer to a Render Object and a \hyperlink{classc_process}{cProcess} should be handed to the object. Collisions can be Filtered based on an unsigned integer value. When a Collision check is made, a filter can be specified (if not specified or specified as 0 then all collision objects will be checked for a collision) allowing the user only to check against objects the user is interested in. Collisions are very slow and the number of checks should always be minimised. Sphere Collisions are the fastest type, but do not allow any adjustment to fit the object. Objects should be given a filter value to allow them to be searched based on user defined properties. If the objects have no filter they will only be searched when a filter free search is performed. Collision Objects need a media type to define how and when they collide. Objects which are linked to a Renderable Object will be killed when their Renderable object is killed. As such Killing them is not required. This is defined using the Type Function which gives the Collision Object the data it needs and sets the type of collision Object it will be. There are many ways that Type can be set -\/ either handing a pointer to Collision Data object: \par
  \par
  Types of Collision Data: cCollisionSphere\par
- \hyperlink{classc_mesh_collision}{cMeshCollision}\par
+ cMeshCollision\par
  cCollisionRay\par
  cCollisionBeam\par
  cCollisionBox\par
@@ -447,7 +447,7 @@ WTcRenderNode.h WTcNodeList.h
 
 To control a Render Object by a Render Node object pass a pointer to the Render Node as the first argument in the Render Objects Constructor. Render Node objects can control any Render Object, including Render Nodes. This means that there can be many levels of Render Nodes before reaching a Renderable Object, making positioning of complex positional relationships easy. \par
  \par
- {\bfseries  \hyperlink{classc_node_list}{cNodeList}:} There are also NodeLists. These are static objects. They are initialised to hold a certain number of objects and only support rotations around the local axis. These are good for predictable structure shapes which do not change often. Each object is given a level and will position and rotate itself around the last object with a lower depth value.
+ {\bfseries  cNodeList:} There are also NodeLists. These are static objects. They are initialised to hold a certain number of objects and only support rotations around the local axis. These are good for predictable structure shapes which do not change often. Each object is given a level and will position and rotate itself around the last object with a lower depth value.
 
 
 \begin{DoxyCode}
@@ -524,7 +524,7 @@ To control a Render Object by a Render Node object pass a pointer to the Render 
       a file.
 \end{DoxyCode}
  \hypertarget{_using_engine_page_MultipleCamerasViewports}{}\section{Multiple Cameras and Viewports}\label{_using_engine_page_MultipleCamerasViewports}
-Bamboo has full support for multiple \hyperlink{classc_camera}{cCamera} Objects, \hyperlink{classc_viewport}{cViewport} objects and rendering to specified regions. cCameras are seperate cameras. They store a scene graph (tree of vRenderObjects and vRenderNodes) and will render them to the specified region of the screen. cCameras are controlled by signals, so \_\-CREATE() should be used to create them and \_\-KILL() should be used to kill them. Once killed, all objects in their scene graph will be destroyed and so should not be accessed. Each \hyperlink{classc_camera}{cCamera} Object has it's own objects so creating a Render Object in one will not affect another. \par
+Bamboo has full support for multiple \hyperlink{classc_camera}{cCamera} Objects, cViewport objects and rendering to specified regions. cCameras are seperate cameras. They store a scene graph (tree of vRenderObjects and vRenderNodes) and will render them to the specified region of the screen. cCameras are controlled by signals, so \_\-CREATE() should be used to create them and \_\-KILL() should be used to kill them. Once killed, all objects in their scene graph will be destroyed and so should not be accessed. Each \hyperlink{classc_camera}{cCamera} Object has it's own objects so creating a Render Object in one will not affect another. \par
  cViewports are slightly different. They also render a scene graph to the screen in a specified region, but do not have a scene graph of their own. All cViewports are owned by a \hyperlink{classc_camera}{cCamera} object and will render the \hyperlink{classc_camera}{cCamera} objects scene graph. This is much more efficient than using a second \hyperlink{classc_camera}{cCamera} as only one scene graph is stored and updated. It allows the user to view the same scene as it's camera from a different position, rotation or perspective. All vRenderObjects can be passed a \hyperlink{classc_camera}{cCamera} as an argument in their constructor which will make them use the specified \hyperlink{classc_camera}{cCamera}. If they are passed a vRenderNode as a parameter, they will become a child of the \hyperlink{classc_camera}{cCamera} which owns the vRenderNode which owns the vRenderObject. the \_\-CAMERA pointer will always point to the first \hyperlink{classc_camera}{cCamera} object and will be used as a default when no \hyperlink{classc_camera}{cCamera} is specified. 
 \begin{DoxyCode}
  //Create a Model on the default cCamera object and have the cCamera follow it at
@@ -613,7 +613,7 @@ The \char`\"{}Add Media File\char`\"{} button :\par
  The \char`\"{}Add Shader Program\char`\"{} button :\par
  Shader Programs are not loaded from a file, but generated in the IMF Handler itself. The \char`\"{}Add Shader Program\char`\"{} button will ask for a string reference to identify the shader program. It will then create a new Shader Program in the current Media file. This can be modified by following the instructions in the Shader Program section. \par
  The \char`\"{}Add Render Tree\char`\"{} button :\par
- This allows the user to generate \hyperlink{classc_node_list}{cNodeList} Objects and store them in an IMF file. \par
+ This allows the user to generate cNodeList Objects and store them in an IMF file. \par
  The \char`\"{}Save IMF As...\char`\"{} button :\par
  Clicking the \char`\"{}Save IMF As...\char`\"{} button will save the current IMF. It will create a dialog to ask for the file name to use. This will write all the objects and references currently loaded into an IMF file. You do not need to add '.imf' to the end of the file name. The files can then be loaded by Bamboo. \par
  The \char`\"{}Remove Media\char`\"{} button :\par

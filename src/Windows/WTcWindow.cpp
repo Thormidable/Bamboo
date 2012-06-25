@@ -1,15 +1,11 @@
 #include "../WTBamboo.h"
 
 
+uint32 cWindow::RenderAreaX(){return miRenderX;}
+uint32 cWindow::RenderAreaY(){return miRenderY;}
 
-uint32 cWindow::RenderAreaWidth()
-{
-    return miRenderWidth;
-}
-uint32 cWindow::RenderAreaHeight()
-{
-    return miRenderHeight;
-}
+uint32 cWindow::RenderAreaWidth(){return miRenderWidth;}
+uint32 cWindow::RenderAreaHeight(){return miRenderHeight;}
 
 
 void cWindow::InitialiseOpenGL()
@@ -25,6 +21,7 @@ void cWindow::InitialiseOpenGL()
 	glEnable(GL_POINT_SPRITE);
 	glEnable(GL_POINT_SMOOTH);
 	glEnable(GL_COLOR_MATERIAL);
+	glEnable(GL_LINE_SMOOTH);
 	//glEnable(GL_MODULATE);
 	glEnable(GL_VERTEX_PROGRAM_POINT_SIZE);
     glBlendFunc (GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
@@ -43,12 +40,26 @@ void cWindow::FindRenderArea()
 {
 
     RECT Result;
-    GetClientRect(gpWindow->hWnd,&Result);
-
+    GetClientRect(hWnd,&Result);
     miRenderWidth=Result.right;
     miRenderHeight=Result.bottom;
+/*
+    GetWindowRect(hWnd,&Result);
+    miWindowWidth=Result.right-Result.left;
+    miWindowHeight=Result.bottom-Result.top;
+*/
+    POINT lcPoint;
+    lcPoint.x=0;
+    lcPoint.y=0;
+    ClientToScreen(hWnd,&lcPoint);
+    miRenderX=lcPoint.x;
+    miRenderY=lcPoint.y;
+
+    miBorderThickness=(miWindowWidth-miRenderWidth)*0.5f;
+    miTitleBarHeight=(miWindowHeight-miRenderHeight)-miBorderThickness;
 
 }
+
 
 void cWindow::HandleChanges()
 {
@@ -75,12 +86,17 @@ void cWindow::DisableInput()
 
 void cWindow::Move(short liX,short liY)
 {
-	MoveWindow(hWnd,liX,liY,miWidth,miHeight,0);
+	MoveWindow(hWnd,liX,liY,miWindowWidth,miWindowHeight,0);
 }
 
 void cWindow::Resize(short liX,short liY)
 {
-	MoveWindow(hWnd,miX,miY,liX,liY,0);
+    miWindowWidth=liX;
+    miWindowHeight=liY;
+    miInvWindowWidth=1.0f/miWindowWidth;
+    miInvWindowHeight=1.0f/miWindowHeight;
+    mfWindowRatio=((float)miWindowHeight)/miWindowWidth;
+	MoveWindow(hWnd,miWindowX,miWindowY,liX,liY,0);
 }
 
 cWindow::~cWindow()
@@ -95,6 +111,28 @@ cWindow::cWindow(HINSTANCE hInstance)
 {
     gpWindow=this;
     mbQuit = false;
+
+    miBorderThickness=0;
+    miTitleBarHeight=0;
+
+miWindowX=0;
+miWindowY=0;
+miWindowWidth=800;
+miWindowHeight=600;
+miInvWindowWidth=1.0f/miWindowWidth;
+miInvWindowHeight=1.0f/miWindowHeight;
+
+miRenderX=0;
+miRenderY=0;
+miRenderHeight=600;
+miRenderWidth=800;
+
+mfRenderRatio=600/800;
+mfWindowRatio=600/800;
+Hidden=false;
+Resized=false;
+Repaint=false;
+
 
     // register window class
     wcex.cbSize = sizeof(WNDCLASSEX);
@@ -127,6 +165,14 @@ InitialiseOpenGL();
 void cWindow::StartWindow()
 
 {
+    miWindowWidth=800;
+    miWindowHeight=600;
+    miRenderWidth=800;
+    miRenderHeight=600;
+    miInvWindowWidth=1.0f/miWindowWidth;
+    miInvWindowHeight=1.0f/miWindowHeight;
+    mfWindowRatio=((float)miWindowHeight)/miWindowWidth;
+    mfRenderRatio=((float)miRenderHeight)/miRenderWidth;
    hWnd=CreateWindowEx(0,
 		wcex.lpszClassName, "Bamboo",
 		WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE | WS_SIZEBOX,
@@ -139,6 +185,9 @@ void cWindow::StartWindow()
 		//Changed=false;
 		Resized=false;
 		//Moved=false;
+
+		FindRenderArea();
+
 
 }
 
@@ -175,6 +224,16 @@ void cWindow::EnableOpenGL()
 
 
 }
+
+uint32 cWindow::TitleBarHeight()
+{
+    return miTitleBarHeight;
+};
+
+uint32 cWindow::BorderThickness()
+{
+    return miBorderThickness;
+};
 
 void cWindow::MakeCurrent()
 {
@@ -217,13 +276,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
     case WM_SIZE:
        if (wParam==SIZE_RESTORED)
          {
-          gpWindow->miWidth=LOWORD(lParam);
-          gpWindow->miHeight=HIWORD(lParam);
-          gpWindow->miInvWidth=1.0f/gpWindow->miWidth;
-          gpWindow->miInvHeight=1.0f/gpWindow->miHeight;
-          gpWindow->mfRatio=((float)gpWindow->miHeight)/gpWindow->miWidth;
-          gpWindow->FindRenderArea();
-          cCameraHandler::Instance()->UpdateWindowSize();
+            gpWindow->miWindowWidth=LOWORD(lParam);
+            gpWindow->miWindowHeight=HIWORD(lParam);
+            gpWindow->miInvWindowWidth=1.0f/gpWindow->miWindowWidth;
+            gpWindow->miInvWindowHeight=1.0f/gpWindow->miWindowHeight;
+
+            gpWindow->mfWindowRatio=((float)gpWindow->miWindowHeight)/gpWindow->miWindowWidth;
+            gpWindow->mfRenderRatio=((float)gpWindow->miRenderHeight)/gpWindow->miRenderWidth;
+            gpWindow->FindRenderArea();
+            cCameraHandler::Instance()->UpdateWindowSize();
           return 0;
          }
         return 0;
@@ -232,47 +293,29 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
          return 0;
 
     case WM_MOVE:
-         gpWindow->miX=(int16)LOWORD(lParam);
-         gpWindow->miY=(int16)HIWORD(lParam);
-         //gpWindow->Moved=true;
+            gpWindow->miWindowX=(int16)LOWORD(lParam);
+            gpWindow->miWindowY=(int16)HIWORD(lParam);
          return 0;
 
 
     case WM_MOUSEMOVE:
-         if (!_MOUSE->locked)
-         {
-            _MOUSE->cx=(int16)LOWORD(lParam);
-            _MOUSE->cy=(int16)HIWORD(lParam);
-         }
-         else
-         {
-            _MOUSE->x=(int16)LOWORD(lParam);
-            _MOUSE->y=(int16)HIWORD(lParam);
-         }
+         _MOUSE->SetPos((int16)LOWORD(lParam),(int16)HIWORD(lParam));
          return 0;
 
     case WM_LBUTTONDOWN:
-         _MOUSE->left=true;
-  //       _MOUSE->x = (int16)LOWORD(lParam);
-   //      _MOUSE->y = (int16)HIWORD(lParam);
+         _MOUSE->SetLeft(true);
          return 0;
 
     case WM_LBUTTONUP:
-         _MOUSE->left=false;
- //        _MOUSE->x = (int16)LOWORD(lParam);
- //        _MOUSE->y = (int16)HIWORD(lParam);
+         _MOUSE->SetLeft(false);
          return 0;
 
     case WM_RBUTTONDOWN:
-         _MOUSE->right=true;
- //        _MOUSE->x = (int16)LOWORD(lParam);
- //        _MOUSE->y = (int16)HIWORD(lParam);
+         _MOUSE->SetRight(true);
          return 0;
 
     case WM_RBUTTONUP:
-         _MOUSE->right=false;
- //        _MOUSE->x = (int16)LOWORD(lParam);
- //        _MOUSE->y = (int16)HIWORD(lParam);
+         _MOUSE->SetRight(false);
          return 0;
 
     case WM_KEYDOWN:
@@ -301,17 +344,23 @@ cWindow::cWindow()
 {
 gpWindow=this;
 mbQuit=0;
-miX=0;
-miY=0;
-miWidth=800;
-miHeight=600;
-miInvWidth=1.0f/miWidth;
-miInvHeight=1.0f/miHeight;
+miWindowX=0;
+miWindowY=0;
+miWindowWidth=800;
+miWindowHeight=600;
+miInvWindowWidth=1.0f/miWindowWidth;
+miInvWindowHeight=1.0f/miWindowHeight;
+
+miRenderX=0;
+miRenderY=0;
+miRenderHeight=600;
+miRenderWidth=800;
+
 Resized=false;
 //Moved=false;
 Hidden=true;
 Repaint=false;
-mfRatio=((float)miHeight)/miWidth;;
+mfWindowRatio=((float)miWindowHeight)/miWindowWidth;
 
 lpDisplay=XOpenDisplay(0);
 lRoot=DefaultRootWindow(lpDisplay);
@@ -342,8 +391,8 @@ cWindow::~cWindow()
 
 void cWindow::StartWindow()
 {
- lWindow = XCreateWindow(lpDisplay, lRoot, 0, 0, miWidth,
-                        miHeight, 0, VisualInfo->depth, InputOutput, VisualInfo->visual,
+ lWindow = XCreateWindow(lpDisplay, lRoot, 0, 0, miWindowWidth,
+                        miWindowHeight, 0, VisualInfo->depth, InputOutput, VisualInfo->visual,
                         CWBorderPixel|CWColormap|CWEventMask, &WindowAttributes);
 
  XMapWindow(lpDisplay, lWindow);
@@ -428,15 +477,15 @@ void cWindow::HandleMessages()
 		}
 		if(Event.type == ConfigureNotify)
 		{
-			gpWindow->miX=Event.xconfigure.x;
-			gpWindow->miY=Event.xconfigure.y;
-			gpWindow->miWidth=Event.xconfigure.width;
-			gpWindow->miHeight=Event.xconfigure.height;
-			gpWindow->miInvWidth=1.0f/miWidth;
-            gpWindow->miInvHeight=1.0f/miHeight;
+			gpWindow->miWindowX=Event.xconfigure.x;
+			gpWindow->miWindowY=Event.xconfigure.y;
+			gpWindow->miWindowWidth=Event.xconfigure.width;
+			gpWindow->miWindowHeight=Event.xconfigure.height;
+			gpWindow->miInvWindowWidth=1.0f/miWindowWidth;
+            gpWindow->miInvWindowHeight=1.0f/miWindowHeight;
 			//gpWindow->Moved=true;
 			gpWindow->Resized=true;
-			gpWindow->mfRatio=((float)gpWindow->miHeight)/gpWindow->miWidth;
+			gpWindow->mfRenderRatio=gpWindow->mfWindowRatio=((float)gpWindow->miWindowHeight)/gpWindow->miWindowWidth;
 			FindRenderArea();
 			cCameraHandler::Instance()->UpdateWindowSize();
 
@@ -478,8 +527,11 @@ void cWindow::GetMouseSpeed()
 
 void cWindow::FindRenderArea()
 {
-    miRenderWidth=Width();
-    miRenderHeight=Height();
+    miRenderWidth=WindowWidth();
+    miRenderHeight=WindowHeight();
+
+    miRenderX=WindowX();
+    miRenderY=WindowY();
 
     miBorderThickness=0;
     miTitleBarHeight=0;
@@ -487,10 +539,11 @@ void cWindow::FindRenderArea()
 
 #endif
 
-	uint16 cWindow::X(){return miX;};
-	uint16 cWindow::Y(){return miY;};
-	uint16 cWindow::Width(){return miWidth;};
-	uint16 cWindow::Height(){return miHeight;};
-	float32 cWindow::InvWidth(){return miInvWidth;};
-	float32 cWindow::InvHeight(){return miInvHeight;};
-	float32 cWindow::Ratio(){return mfRatio;};
+	uint16 cWindow::WindowX(){return miWindowX;};
+	uint16 cWindow::WindowY(){return miWindowY;};
+	uint16 cWindow::WindowWidth(){return miWindowWidth;};
+	uint16 cWindow::WindowHeight(){return miWindowHeight;};
+	float32 cWindow::InvWindowWidth(){return miInvWindowWidth;};
+	float32 cWindow::InvWindowHeight(){return miInvWindowHeight;};
+	float32 cWindow::WindowRatio(){return mfWindowRatio;};
+	float32 cWindow::RenderRatio(){return mfRenderRatio;};

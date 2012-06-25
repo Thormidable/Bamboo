@@ -10,9 +10,9 @@ cFileHandler::cFileHandler()
 
 cFileHandler::~cFileHandler()
 {
-	trace("Deleting mpFiles");
+	TRACE("Deleting mpFiles");
 	delete mpFiles; mpFiles=0;
-	trace("mpFiles Deleted");
+	TRACE("mpFiles Deleted");
 }
 
 cFileHandler *cFileHandler::mpInstance=0;

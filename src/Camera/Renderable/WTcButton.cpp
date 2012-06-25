@@ -69,10 +69,10 @@ void cTextButton::RenderPainter()
               glNormal3f(0.0f,0.0f,1.0f);
               glBegin(GL_QUADS);
 
-              glTexCoord2f(0,liRange+IMF_FONT_SCALE);   glVertex3f(lfTextLeft-mfWidth*(liCount-0.5f),lfHeight,mfPriority);
-              glTexCoord2f(0,liRange);                  glVertex3f(lfTextLeft-mfWidth*(liCount-0.5f),-lfHeight,mfPriority);
-              glTexCoord2f(1,liRange);                  glVertex3f(lfTextLeft-mfWidth*(liCount+0.5f),-lfHeight,mfPriority);
-              glTexCoord2f(1,liRange+IMF_FONT_SCALE);   glVertex3f(lfTextLeft-mfWidth*(liCount+0.5f),lfHeight,mfPriority);
+              glTexCoord2f(0,liRange+IMF_FONT_SCALE);   glVertex3f(lfTextLeft-mfWidth*(liCount-0.5f),lfHeight,1.0f);
+              glTexCoord2f(0,liRange);                  glVertex3f(lfTextLeft-mfWidth*(liCount-0.5f),-lfHeight,1.0f);
+              glTexCoord2f(1,liRange);                  glVertex3f(lfTextLeft-mfWidth*(liCount+0.5f),-lfHeight,1.0f);
+              glTexCoord2f(1,liRange+IMF_FONT_SCALE);   glVertex3f(lfTextLeft-mfWidth*(liCount+0.5f),lfHeight,1.0f);
               glEnd();
 
         }
@@ -107,9 +107,9 @@ void cButton::Height(float lfHeight)
 void cButton::Size(float lfSize)
 {
   XRange=lfSize*0.5f;
-  YRange=XRange*gpWindow->Ratio();
+  YRange=XRange*gpWindow->WindowRatio();
   mfWidth=lfSize;
-  mfHeight=mfWidth*gpWindow->Ratio();
+  mfHeight=mfWidth*gpWindow->WindowRatio();
 }
 
 void cTextButton::Width(float lfWidth)
@@ -128,43 +128,53 @@ void cTextButton::Size(float lfSize)
 {
   XRange=lfSize*0.5f*Text().length();
   mfWidth=lfSize;
-  YRange=mfHeight=mfWidth*gpWindow->Ratio();
+  YRange=mfHeight=mfWidth*gpWindow->RenderRatio();
 }
 
 
 bool cButtonBase::Hover()
 {
 
-return _MOUSE->x>XCenter-XRange
-      && _MOUSE->x<XCenter+XRange
-      && _MOUSE->y>gpWindow->RenderAreaHeight()-YCenter-YRange
-      && _MOUSE->y<gpWindow->RenderAreaHeight()-YCenter+YRange;
+return _MOUSE->LockedX()>XCenter-XRange
+      && _MOUSE->LockedX()<XCenter+XRange
+      && _MOUSE->LockedY()>gpWindow->RenderAreaHeight()-YCenter-YRange
+      && _MOUSE->LockedY()<gpWindow->RenderAreaHeight()-YCenter+YRange;
 }
 
 bool cButtonBase::Pressed()
 {
-return _MOUSE->left && Hover();
+return _MOUSE->Left() && Hover();
 }
 
 bool cButtonBase::Clicked()
 {
    if(Hover())
     {
-        if(!_MOUSE->left)
+        if(!_MOUSE->Left())
         {
             MouseOver=true;
+            if(MousePressed)
+            {
+                MousePressed=false;
+                return true;
+            }
             return false;
         }
         else
         {
-            if(MouseOver) return true;
+            if(MouseOver)
+            {
+                MousePressed=true;
+            }
             return false;
         }
 
     }
     else
     {
-        MouseOver=false;
+        	MouseOver=false;
+        	MousePressed=false;
+
     }
     return false;
 }
@@ -173,8 +183,6 @@ bool cButtonBase::Clicked()
 
 bool cTextButton::Hover()
 {
-	//Width(cImage::Width());
- 	// Height(cImage::Height());
 	return cButtonBase::Hover();
 }
 

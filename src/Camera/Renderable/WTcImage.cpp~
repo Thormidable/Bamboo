@@ -9,26 +9,7 @@ uint16 cImage::mpFaces[6];
 float cImage::mpTextCoords[8];
 float cImage::mpNormals[12];
 
-void cImage::AddFont(string lsFontSlot,cFont *lpFont)
-{
- uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(lsFontSlot);
- if(liPos) AddTexture(liPos-1,lpFont);
-}
 
-void cImage::AddFont(cFont *lpFont)
-{
-
- int8 liSlot=ReturnFreeSlot();
- if(liSlot)
- {
- 		string lsTextureSlot="Font";
- 		std::stringstream out;
- 		out << liSlot;
-		lsTextureSlot.append(out.str());
-		uint32 liPos=mpShader->ShaderVariables()->GetUniformPosition(lsTextureSlot);
-	 	if(liPos) AddTexture(liPos-1,lpFont);
- }
-}
 
 
 
@@ -39,11 +20,22 @@ cImage::cImage()
  SetUp();
 }
 
+cImage::cImage(vRenderNode *lpRenderNode) : cRenderObject(lpRenderNode)
+{
+ SetUp();
+}
+
+cImage::cImage(cCamera *lpCamera) : cRenderObject(lpCamera)
+{
+ SetUp();
+}
+
 void cImage::SetUp()
 {
  Set2D();
  InitialiseArrays();
  Transparency(true);
+ mfPriority=6.0f;
 }
 
 
@@ -65,7 +57,6 @@ void cImage::Size(float lfSize)
 
 void cImage::RenderPainter()
 {
-
  if(Textures())
  {
      ResizeArrays();
@@ -75,18 +66,19 @@ void cImage::RenderPainter()
    glBegin(GL_QUADS);
 
     glNormal3f(0.0f,0.0f,1.0f);
-    glMultiTexCoord2f(GL_TEXTURE0,0.0f,0.0f);
-    glVertex3f(-lfWidth,-lfHeight,2.1f);
-
 
     glMultiTexCoord2f(GL_TEXTURE0,1.0f,0.0f);
-    glVertex3f(lfWidth,-lfHeight,2.1f);
+    glVertex3f(-lfWidth,lfHeight,1.0f);
 
-    glMultiTexCoord2f(GL_TEXTURE0,1.0f,1.0f);
-    glVertex3f(lfWidth,lfHeight,2.1f);
+    glMultiTexCoord2f(GL_TEXTURE0,0.0f,0.0f);
+    glVertex3f(lfWidth,lfHeight,1.0f);
 
     glMultiTexCoord2f(GL_TEXTURE0,0.0f,1.0f);
-    glVertex3f(-lfWidth,lfHeight,2.1f);
+    glVertex3f(lfWidth,-lfHeight,1.0f);
+
+    glMultiTexCoord2f(GL_TEXTURE0,1.0f,1.0f);
+    glVertex3f(-lfWidth,-lfHeight,1.0f);
+
 
    glEnd();
 
@@ -146,5 +138,52 @@ void cImage3D::SetUp()
 	{
 	    return mfHeight;
 	}
+
+cImage3D::cImage3D()
+{
+
+}
+
+cImage3D::cImage3D(vRenderNode *lpNode): cImage(lpNode)
+{
+
+}
+
+cImage3D::cImage3D(cCamera *lpCamera): cImage(lpCamera)
+{
+
+}
+
+
+void cImage3D::RenderPainter()
+{
+
+ if(Textures())
+ {
+     ResizeArrays();
+     SetShaderVariables();
+    float lfWidth=mfWidth*0.5f;
+    float lfHeight=mfHeight*0.5f;
+   glBegin(GL_QUADS);
+
+    glNormal3f(0.0f,0.0f,1.0f);
+
+    glMultiTexCoord2f(GL_TEXTURE0,0.0f,1.0f);
+    glVertex3f(-lfWidth,lfHeight,0.0f);
+
+    glMultiTexCoord2f(GL_TEXTURE0,1.0f,1.0f);
+    glVertex3f(lfWidth,lfHeight,0.0f);
+
+    glMultiTexCoord2f(GL_TEXTURE0,1.0f,0.0f);
+    glVertex3f(lfWidth,-lfHeight,0.0f);
+
+    glMultiTexCoord2f(GL_TEXTURE0,0.0f,0.0f);
+    glVertex3f(-lfWidth,-lfHeight,0.0f);
+
+   glEnd();
+
+ }
+
+}
 
 #endif

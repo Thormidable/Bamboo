@@ -17,6 +17,7 @@ mfEnd[0]=0.0f;
 mfEnd[1]=1.0f;
 mfEnd[2]=0.0f;
 
+mfWidth=1.0f;
 
 }
 
@@ -35,6 +36,7 @@ mfEnd[0]=0.0f;
 mfEnd[1]=1.0f;
 mfEnd[2]=0.0f;
 
+mfWidth=1.0f;
 }
 
 cLine::cLine(vRenderNode *lpRenderer) : cRenderObject(lpRenderer,1)
@@ -52,12 +54,14 @@ mfEnd[0]=0.0f;
 mfEnd[1]=1.0f;
 mfEnd[2]=0.0f;
 
+mfWidth=1.0f;
 }
 
 
 void cLine::RenderPainter()
 {
 
+	glLineWidth(mfWidth);
   SetShaderVariables();
   glBegin(GL_LINES);
     //glColor4fv(mfColor.Color());
@@ -66,6 +70,8 @@ void cLine::RenderPainter()
   glEnd();
 }
 
+void cLine::Width(float lfWidth){mfWidth=lfWidth;};
+float cLine::Width(){return mfWidth;};
 
 
 float *cLine::Position()

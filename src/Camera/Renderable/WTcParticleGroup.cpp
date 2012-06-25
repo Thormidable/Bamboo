@@ -96,48 +96,38 @@ cParticleGroup::~cParticleGroup()
 
 
 
-cParticleSource::cParticleSource(float lfDuration,float lfRate,cParticleSettings& lpSettings,cParticleHandler *lpHandler,vRenderNode *lpNode,c3DVf lfOffSet)
+cParticleSource::cParticleSource(float lfDuration,float lfRate,cParticleSettings& lpSettings,vRenderNode *lpNode,c3DVf lfOffSet,cParticleHandler *lpHandler) : cRenderObject(lpNode,0)
 {
     mfDuration=lfDuration;
     mfRate=1.0f/lfRate;
     mpHandler=lpHandler;
     Data=lpSettings;
-    mpNode=lpNode;
     mfOffset=lfOffSet;
+	mfProduction=0.0f;
 };
 
 cParticleSettings &cParticleSource::Settings(){return Data;};
-void cParticleSource::RenderNode(vRenderNode *lpNode)
-{
- mpNode=lpNode;
-};
-cParticleSource::~cParticleSource()
-{
 
-};
 
 void cParticleSource::Settings(cParticleSettings &lpOther){Data=lpOther;};
 void cParticleSource::Duration(float lfDuration){mfDuration=lfDuration;};
 void cParticleSource::Rate(float lfRate){mfRate=1.0f/lfRate;};
-void cParticleSource::FrameUpdate()
+void cParticleSource::RenderToPainter()
 {
- mfProduction+=0.04f;
+ mfProduction+=0.004f;
  while(mfProduction>mfRate)
  {
      mfProduction-=mfRate;
      cParticle *lpPart=mpHandler->NewParticle();
-     if(mpNode)
-     {
-         memcpy(Data.Position,mpNode->mmCache.Position(),sizeof(float)*3);
+         memcpy(Data.Position,mpRenderer->mmCache.Position(),sizeof(float)*3);
          Data.Position[0]+=mfOffset[0];
          Data.Position[1]+=mfOffset[1];
          Data.Position[2]+=mfOffset[2];
-     }
 
      lpPart->Spawn(Data);
  }
- mfDuration-=0.04f;
- if(mfDuration<0.0f) delete this;
+ mfDuration-=0.004f;
+ if(mfDuration<0.0f) _KILL_THIS();
 };
 
 float cParticleSource::Duration(){return mfDuration;};

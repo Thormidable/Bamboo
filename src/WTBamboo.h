@@ -47,10 +47,10 @@
  *  	- A Class Type for passing Signals between Process', Render Objects and Collision Objects.
  *  	.
  *  - _KEY(KEY_CODE_ID)
- *  	- Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List and start 'KEY_CODE_' .
+ *  	- Function for accessing the array of key states. Takes Key ident as an input. Key Idents are defined in the Key List and start 'KEY_CODE_'. They can be stored as unsigned integers.
  *  	.
  *  - _MOUSE
- *  	- Reference giving access the systems mouse states.
+ *  	- Pointer Reference giving access the systems mouse states.
  *  	.
  *  - _LOAD(FileName)
  *  	- Function for loading a file. Takes the filename as an input. Same as _LOAD_FILE(FileName);
@@ -116,7 +116,7 @@
  *  	- Function telling the system to used the fixed function pipeline and not use shaders. This will slow the system and disable functionality. Disadvised.
  *  	.
  *  - _CAMERA
- *  	- A Pointer to the default cCamera Object.
+ *  	- Pointer Reference to the default cCamera Object.
  *  	.
  *  - _LIGHT
  *  	- A Pointer to the cLightHandler Object.
@@ -134,7 +134,7 @@
  *  	- This will reset a stepping Collision Search, ready for a fresh search. (Not issue for Generating Collision Lists)
  *  	.
  *  - WT_TIME_IND
- *  	- This is the current frame length in seconds. Multiply anything time dependant by this to make it time independant. (It is a float multiplyer, think before use.)\n
+ *  	- This is the current frame length in seconds. Multiply anything time dependant variable by this to make it time independant. (It is a float multiplyer, think before use.)\n
  *  	.
  *  - _COLLISION_PROCESS_LOOP(lpList,lpVar)
  *  	- This will start a Loop to step through a collision list. lpList should point to the Collision List and lpVar will point at the current process in the collision list.\n
@@ -466,7 +466,7 @@
  *  There are also accessor codes for the Macro _KEY(). These are actually unsigned integers and so can be passed as parameters.
  *
  * \code
- * if(_KEY(KEY_CODE_SPACE)) _CREATE(Bulltets());
+ * if(_KEY(KEY_CODE_SPACE)) _CREATE(Bullets());
  * if(_KEY(KEY_CODE_TAB)) _KERNEL->KillAll();
  *
  * \endcode
@@ -667,6 +667,16 @@
  *  .
  * - cCollisionObject
  * - cAudioObject
+ * - cFile
+ *  - cMeshFileCollision
+ *  - cTexture
+ *  - cFont
+ *  - cMesh
+ *  - cmLandscape
+ *  - cShader
+ *  - cShaderProgram
+ *  - cSoundObject
+ *  .
  * .
  * These objects can be used as instances and can be created and deleted as desired. The cFile objects are the types used when the _GET_FILE() macros are used. Otherwise you are unlikely to use them.
  * - c1DVf
@@ -678,16 +688,6 @@
  * - cMatrix4
  * - cCameraMatrix4
  * - cMatrixStack
- * - cFile (These are for loaded media files. You should not need to create objects of these types)
- *  - cSoundObject
- *  - cMeshFileCollision
- *  - cTexture
- *  - cFont
- *  - cMesh
- *  - cmLandscape
- *  - cShader
- *  - cShaderProgram
- *  .
  * - cRGB
  * - cRGBA
  * - cCollisionList
@@ -697,14 +697,16 @@
  * Bamboo is written to be as optimised as possible while remaining very simple. There are many things that can be done to optimise your code. \n
  * <b>Reduce Collisions:</b> \n
  * It is very important to only check for collisions that matter. Collisions should only detected one way (I.E. either From the Tank to the Bullet OR from the Bullet to the Tank, not both).
- * Use cCollisionObject::CollisionFilter() to minimise the collision checks that are made. \n
+ * Use cCollisionObject::CollisionFilter() to minimise the collision checks that are made. Also sphere sphere collisions are much faster than other collision types. Where possible make collisions Sphere, then Box, then Beam, then Mesh, then Compound. \n
  * <b>Turn off Lighting where not required:</b> \n
  *  If an object will not use the lighting settings there is no point in calculating the lighting values. Turn it off with the function cRenderObject::Lighting(bool).
  * <b>Reduce Matrix Multiplications:</b> \n
  * Where possible use the minimum of Matrix multiplications. Both in shaders and in programs. Don't use cRenderObject::CalculateGlobalMatrix() unless absolutely neccessay. try to use cRenderObject::GetCacheMatrix() instead.
  * It will not include changes to the Global matrix this frame but it is very fast. Use the highest level of Matrices possible in a shader. \n
  * <b>Avoid searching with strings:</b> \n
- * Pointers are much quicker for accessing Media objects loaded onto the harddrive. If a piece of media will be accessed many times get a pointer to it using the functions for getting files (_GET_AUDIO_FILE(),_GET_COLLISION_MESH_FILE(),_GET_FONT_FILE(),_GET_LANDSCAPE_FILE(),_GET_MESH_FILE(),_GET_SHADER_FILE(),_GET_TEXTURE_FILE()). Each takes a string and returns a pointer of the correct type to the media object. if it cannot be found it returns 0;
+ * Pointers are much quicker for accessing Media objects loaded onto the harddrive. If a piece of media will be accessed many times get a pointer to it using the functions for getting files (_GET_AUDIO_FILE(),_GET_COLLISION_MESH_FILE(),_GET_FONT_FILE(),_GET_LANDSCAPE_FILE(),_GET_MESH_FILE(),_GET_SHADER_FILE(),_GET_TEXTURE_FILE()). Each takes a string and returns a pointer of the correct type to the media object. if it cannot be found it returns 0. \n
+ *    Avoid Slow functions: \n
+ * sqrt is a very slow function. As is dividing, trig and writting to the console. Performing these many times a second will slow the program substantially.
  * \section CommonMistakes Common Mistakes
  * <b> Nothing is showing on screen: </b> \n
  * Check your Render Objects have been given valid shader programs using cRenderObject::Shader(string) or cRenderObject::Shader(cShaderProgram*).
@@ -719,7 +721,7 @@
  * If the model is entirely black it may not have Normals. A Mesh without normals cannot use lighting.
  * If the lighting is not using the correct lights it may be worth checking if lighting is enabled for the current object with cRenderObject::Lighting(bool). \n
  * <b> My Transparent Textures and Images are not working:</b> \n
- * Check that the Texture has an alpha channel to enable transparency. Check that Transparency is enabled with cRenderObject::Transparent(bool) \n
+ * Check that the Texture has an alpha channel to enable transparency. Check that Transparency is enabled with cRenderObject::Transparent(uint8) \n
  * <b>When I change an Objects shader it goes funny:</b> \n
  * Each shader assigns its variables to a location specific to that cShaderProgram. This is done by the graphics card. Variables should be reassigned when an objects shader is changed.
  * */
@@ -3931,6 +3933,7 @@ public:
 	#include <X11/keysym.h>
 	#include <X11/Xlib.h>
 	#include <X11/X.h>
+#include 	<X11/cursorfont.h>
 
 #include <AL/al.h>
 #include <AL/alc.h>
@@ -3971,7 +3974,7 @@ public:
 #include "./Windows/WTcWindow.h"
 
 #include "./PTL/WTLLTemplate.h"
-#include "./PTL/WTMinLinkedList.h"
+//#include "./PTL/WTMinLinkedList.h"
 #include "./PTL/WTLimitedList.h"
 #include "./PTL/WTcPushPopStack.h"
 
@@ -4051,6 +4054,7 @@ public:
 #include "./Files/Misc/WTvMeshTree.h"
 #include "./Files/Misc/WTcMeshTree.h"
 #include "./Files/Misc/WTcLineArrayData.h"
+#include "./Files/Misc/WTcCircleLineData.h"
 
 #include "./Files/Meshes/WTv2DPolygon.h"
 

@@ -11,10 +11,12 @@ cSphereCollision *cSphereCollision::Sphere(){return this;};
     cMeshCollision *cSphereCollision::Mesh(){return 0;};
     cRayCollision *cSphereCollision::Ray(){return 0;};
     cCompoundCollision *cSphereCollision::Compound(){return 0;};
+	cMouseCollision *cSphereCollision::Mouse(){return 0;};
 #endif
 
 void cSphereCollision::Update(cMatrix4 &New){(void) New;};
 
 uint8 cSphereCollision::Type(){return WT_COLLISION_RADIUS;}
 
-cMouseCollision *cSphereCollision::Mouse(){return 0;};
+
+

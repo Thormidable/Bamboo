@@ -66,14 +66,15 @@ while(mpProcess)
 				}
 			}
 		}
-	trace(liProcessCount << " Processes Processed this Cycle")
+	//trace(liProcessCount << " Processes Processed this Cycle")
 
 	++liPTF;
 	if(liPTF<_PPF) cCameraHandler::Instance()->UpdateNotRenderCameras(); //cCamera::Instance()->UpdateNotRender();
 	}
 	liPTF=0;
 
-	if(cFrameUpdateHandler::Pointer()) cFrameUpdateHandler::Pointer()->FrameUpdate();
+if(cFrameUpdateHandler::Pointer()) cFrameUpdateHandler::Pointer()->FrameUpdate();
+
 
 cCameraHandler::Instance()->RenderCameras();
 
@@ -87,21 +88,21 @@ if(_FPS)
 	gpTimer->Tick();
 	if(gpTimer->GetTimeMod()< _TIME_PER_FRAME)
 	{
-		printf("Time to Process Frame : %f s\n",gpTimer->GetTimeMod());
-		printf("Free Time this frame : %f ms\n",(_TIME_PER_FRAME-gpTimer->GetTimeMod())*OS_TIME_SCALING);
+		//printf("Time to Process Frame : %f s\n",gpTimer->GetTimeMod());
+		//printf("Free Time this frame : %f ms\n",(_TIME_PER_FRAME-gpTimer->GetTimeMod())*OS_TIME_SCALING);
 		gpTimer->SleepWrap((_TIME_PER_FRAME-gpTimer->GetTimeMod())*OS_TIME_SCALING);
-		printf("FPS : %f\n",1.0f/(gpTimer->GetTimeMod()+(_TIME_PER_FRAME-gpTimer->GetTimeMod())*OS_TIME_SCALING/1000));
+		//printf("FPS : %f\n",1.0f/(gpTimer->GetTimeMod()+(_TIME_PER_FRAME-gpTimer->GetTimeMod())*OS_TIME_SCALING/1000));
 	}
 	else
 	{
-	    	printf("FPS : %f\n",1.0f/(gpTimer->GetTimeMod()));
+	    	//printf("FPS : %f\n",1.0f/(gpTimer->GetTimeMod()));
 	}
 
 }
 else
 {
 	gpTimer->Tick();
-	printf("FPS : %f\n",gpTimer->GetCPS());
+	//printf("FPS : %f\n",gpTimer->GetCPS());
 }
 
 }
@@ -111,29 +112,29 @@ else
 cKernel::~cKernel()
 {
     _MOUSE->Unlock();
-	trace("Deleting all cProcess Objects");
+	TRACE("Deleting all cProcess Objects");
 	DeleteAll();
-trace("Deleting cCamera");
+    TRACE("Deleting cCamera");
 	delete cCamera::Instance();
 
-	trace("Deleting cFileHandler");
+	TRACE("Deleting cFileHandler");
 	delete cFileHandler::Instance();
-	trace("Deleting cEventHandler");
+	TRACE("Deleting cEventHandler");
 	delete cEventHandler::Instance();
 
-trace("Deleting cCollisionHandler");
+    TRACE("Deleting cCollisionHandler");
 	delete cCollisionHandler::Instance();
 
 #if WT_FULL_VERSION_BAMBOO
-	trace("Deleting cLightHandler");
+	TRACE("Deleting cLightHandler");
 	delete cLightHandler::Instance();
 #endif
 
-	trace("Deleting cSync");
+	TRACE("Deleting cSync");
 	delete gpTimer;
-	trace("Deleting cWindow");
+	TRACE("Deleting cWindow");
 	delete gpWindow;
-	trace("Delete all Bamboo Objects");
+	TRACE("Delete all Bamboo Objects");
 
 
 }
@@ -171,7 +172,9 @@ cKernel::cKernel()
 	mfTickFreq=1.0f;
 	mbKillProgram=false;
 	cCamera::Instance();
+#if WT_FULL_VERSION_BAMBOO
 	gpElementArray=new cElementArray;
+#endif
 }
 
 

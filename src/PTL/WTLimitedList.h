@@ -123,6 +123,14 @@ public:
 		mpList[li2]=lpTemp;
 		}
 	};
+
+	cLimitedList<cX> *operator=(cLimitedList<cX> *lfX)
+	{
+        Init(lfX->miItems+1);
+	    miItems=lfX->miItems;
+	    memcpy(mpList,lfX->mpList,sizeof(cX)*miItems);
+	    return this;
+	};
 };
 
 /**
@@ -271,6 +279,7 @@ public:
 	    }
 	    return -1;
 	};
+
 };
 
 #endif

@@ -17,13 +17,9 @@ cFile::cFile()
 
 cFile::~cFile()
 {
-	printf("FileName %s\n",mpFileName);
+	TRACE("Deleting FileName: " << mpFileName);
 }
 
-void cFile::Delete()
-{
-	mpFileHandler->Delete(mpNode);
-}
 
 char *cFile::FileName()
 {
@@ -32,3 +28,13 @@ char *cFile::FileName()
 
 void cFile::Load(){}
 
+void cFile::FileName(string lsFileName)
+{
+    strcpy(mpFileName,lsFileName.c_str());
+};
+
+void cFile::Stop()
+{
+	mpFileHandler->Delete(mpNode);
+
+};

@@ -2,7 +2,7 @@
 
 void cPerspectiveMatrix::Viewport()
 {
-	glViewport(0,0,gpWindow->Width(),gpWindow->Height());
+	glViewport(0,0,gpWindow->WindowWidth(),gpWindow->WindowHeight());
 }
 
 cPerspectiveMatrix::cPerspectiveMatrix()

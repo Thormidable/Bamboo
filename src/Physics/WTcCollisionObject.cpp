@@ -153,6 +153,36 @@ void cCollisionObject::Signal(SIGNAL liFlags)
 
 #if WT_FULL_VERSION_BAMBOO
 
+
+	bool cCollisionObject::ModelModel(cCollisionBase *lpOther)
+	{
+	    return ModelModel(Mesh(),(RenderObject()->mmCache),lpOther->Mesh(),(lpOther->RenderObject()->mmCache));
+	};
+
+	bool cCollisionObject::RayRay(cCollisionBase *lpOther)
+	{
+	    return RayRay(Beam(),(RenderObject()->mmCache),lpOther->Beam(),(lpOther->RenderObject()->mmCache));
+	};
+
+	bool cCollisionObject::SphereModel(cCollisionBase *lpOther)
+	{
+	    if(Mesh()){return SphereModel(lpOther->Sphere(),(lpOther->RenderObject()->mmCache),Mesh(),(RenderObject()->mmCache));}
+	    else{return SphereModel(Sphere(),(RenderObject()->mmCache),lpOther->Mesh(),(lpOther->RenderObject()->mmCache));}
+	};
+
+	bool cCollisionObject::SphereRay(cCollisionBase *lpOther)
+	{
+        if(Beam()){return SphereRay(lpOther->Sphere(),(lpOther->RenderObject()->mmCache),Beam(),(RenderObject()->mmCache));}
+	    else{return SphereRay(Sphere(),(RenderObject()->mmCache),lpOther->Beam(),(lpOther->RenderObject()->mmCache));}
+	};
+
+	bool cCollisionObject::RayModel(cCollisionBase *lpOther)
+	{
+	    if(Mesh()){return RayModel(lpOther->Beam(),(lpOther->RenderObject()->mmCache),Mesh(),(RenderObject()->mmCache));}
+	    else{return RayModel(Beam(),(RenderObject()->mmCache),lpOther->Mesh(),(lpOther->RenderObject()->mmCache));}
+	};
+
+
 void cCollisionObject::CheckCollisionDetail()
 {
  	if(cCollisionList::mpOther->Asleep() || cCollisionList::mpOther->IsDelayed()) return;
@@ -324,7 +354,7 @@ bool cCollisionObject::CheckCollision()
 
 bool cCollisionObject::TouchCollision()
 {
-		return SphereSphere(Sphere(),mpFollowing->mmCache,cCollisionList::mpOther->Sphere(),cCollisionList::mpOther->mpFollowing->mmCache);
+		return SphereSphere(Sphere(),mpFollowing->mmCache,cCollisionList::mpOther->Sphere(),cCollisionList::mpOther->RenderObject()->mmCache);
 };
 
 #endif
@@ -350,34 +380,6 @@ cCollisionList *cCollisionObject::CheckCollisionDetail(cCollisionBase *lpOther,c
     return cCollisionList::mpStaticList;
 }
 
-
-	bool cCollisionObject::ModelModel(cCollisionBase *lpOther)
-	{
-	    return ModelModel(Mesh(),(RenderObject()->mmCache),lpOther->Mesh(),(lpOther->RenderObject()->mmCache));
-	};
-
-	bool cCollisionObject::RayRay(cCollisionBase *lpOther)
-	{
-	    return RayRay(Beam(),(RenderObject()->mmCache),lpOther->Beam(),(lpOther->RenderObject()->mmCache));
-	};
-
-	bool cCollisionObject::SphereModel(cCollisionBase *lpOther)
-	{
-	    if(Mesh()){return SphereModel(lpOther->Sphere(),(lpOther->RenderObject()->mmCache),Mesh(),(RenderObject()->mmCache));}
-	    else{return SphereModel(Sphere(),(RenderObject()->mmCache),lpOther->Mesh(),(lpOther->RenderObject()->mmCache));}
-	};
-
-	bool cCollisionObject::SphereRay(cCollisionBase *lpOther)
-	{
-        if(Beam()){return SphereRay(lpOther->Sphere(),(lpOther->RenderObject()->mmCache),Beam(),(RenderObject()->mmCache));}
-	    else{return SphereRay(Sphere(),(RenderObject()->mmCache),lpOther->Beam(),(lpOther->RenderObject()->mmCache));}
-	};
-
-	bool cCollisionObject::RayModel(cCollisionBase *lpOther)
-	{
-	    if(Mesh()){return RayModel(lpOther->Beam(),(lpOther->RenderObject()->mmCache),Mesh(),(RenderObject()->mmCache));}
-	    else{return RayModel(Beam(),(RenderObject()->mmCache),lpOther->Mesh(),(lpOther->RenderObject()->mmCache));}
-	};
 
 
 bool cCollisionObject::SphereSphere(cCollisionBase *lpOther)

@@ -1,9 +1,10 @@
 #include "../../WTBamboo.h"
-//#include <cmath>
+
 
 cLineArrayData::cLineArrayData()
 {
     glGenBuffers(1,&miBufferID);
+	lbBuffer=false;
 }
 
 cLineArrayData::~cLineArrayData()
@@ -42,3 +43,28 @@ void cLineArrayData::Buffer()
 
 	lbBuffer=false;
 }
+
+void cLineArrayData::Equals(cLineArrayData *lpOther)
+{
+    cLimitedList<c3DVf>::operator=(lpOther);
+    lbBuffer=true;
+};
+
+void cLineArrayData::operator=(cLineArrayData *lpOther)
+{
+    cLimitedList<c3DVf>::operator=(lpOther);
+    lbBuffer=true;
+};
+
+void cLineArrayData::operator=(cLineArrayData &lpOther)
+{
+    lbBuffer=true;
+    cLimitedList<c3DVf>::operator=(lpOther);
+};
+
+cLineArrayData::cLineArrayData(cLineArrayData *lpOther)
+{
+    glGenBuffers(1,&miBufferID);
+    cLimitedList<c3DVf>::operator=(lpOther);
+    lbBuffer=true;
+};

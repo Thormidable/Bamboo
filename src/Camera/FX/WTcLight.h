@@ -22,7 +22,7 @@ protected:
  uint32 miAttenuationType;
 
  static cLightHandler *mpLightHandler;
- cMinLN<vLight> *mpNode;
+ cLinkedNode<vLight> *mpNode;
 
   public:
 	/// Constructor, will create a new light source.
@@ -32,6 +32,12 @@ protected:
 
 	/// Will Move the light to Global position lfX,lfY,lfZ.
         void Position(float lfX,float lfY,float lfZ);
+    /// Will Move the light to Global position of the vector lfPos.
+        void Position(float *lfX);
+        /// Will Move the light to Global position of the vector lfPos.
+        void Position(c3DVf *lfPos);
+        /// Will Move the light to Global position of the vector lfPos.
+        void Position(c3DVf &lfPos);
 	/// Will Return the Current position of the light.
 	float *Position(){return mpPosition;};
 

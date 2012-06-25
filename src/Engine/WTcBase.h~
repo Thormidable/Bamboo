@@ -1,7 +1,10 @@
 #ifndef __WTCBASE_H__
 #define __WTCBASE_H__
 
+extern string __scopeSource;
+
 #if WT_OS_TYPE==OS_WIN32
+
 /**
  * \brief This Class is responsible for initialising and starting the Program. This is so the program can be created from a single line.
  * \tparam cX This is the class that will first be called (The Core Process - it must inherit cProcess) and will initialise and start the game.
@@ -19,13 +22,11 @@ public:
  	///Function for Starting the Engine and Game. Will Create a window and initialise all components of the engine. It will create and instance of cX and enter the main loop.
 	static uint32 Start(HINSTANCE hInstance)
 	{
-		if(WT_ENABLE_LOGGING)
-		{
-			LOGGING_INIT()
-			LOGGING_ADD_FILE("main","main.log")
-			LOGGING_SET_SCOPE_SOURCE("main")
-			TRACE("Entering")
-		}
+        LOGGING_INIT()
+        LOGGING_ADD_FILE("main","main.log")
+
+        TRACE("Entering")
+
 		gpSettings =new cS;
 		cSettings *mpCast;
 		mpCast=dynamic_cast<cSettings*>(gpSettings);
@@ -48,13 +49,13 @@ public:
 
 		printf("Whatever it was you were talking about...\n");
 		cCollisionHandler::Instance();
-		trace("Start Updating");
+		TRACE("Start Updating");
 		cKernel::Instance()->Update();
 
 		delete gpSettings;
 		gpSettings=0;
 		delete cKernel::Instance();
-		trace("Finished Bamboo V 1.2");
+		TRACE("Finished Bamboo V 1.2");
 		return gpWindow->msg.wParam;
 	};
 	///This will detect the Version of OpenGL the system is using as well as the GLSL compiler and print the data to the screen.
@@ -79,11 +80,11 @@ public:
       // GLSL
       char *verSHDR = (char*)glGetString(GL_SHADING_LANGUAGE_VERSION);
 
-    trace("***************************************************************************");
-	trace("Renderer: " << glGetString(GL_RENDERER));
-	trace("GL Version : " << verGL);
-	trace("Shading Language : " << verSHDR);
-	trace("***************************************************************************");
+    TRACE("***************************************************************************");
+	TRACE("Renderer: " << glGetString(GL_RENDERER));
+	TRACE("GL Version : " << verGL);
+	TRACE("Shading Language : " << verSHDR);
+	TRACE("***************************************************************************");
 
 
 	};
@@ -93,6 +94,7 @@ public:
 #endif
 
 #if WT_OS_TYPE==OS_LINUX
+
 /**
  * \brief This Class is responsible for initialising and starting the Program. This is so the program can be created from a single line.
  * \tparam cX This is the class that will first be called (The Core Process - it must inherit cProcess) and will initialise and start the game.
@@ -111,7 +113,6 @@ public:
 	{
 			LOGGING_INIT()
 			LOGGING_ADD_FILE("main","main.log")
-			LOGGING_SET_SCOPE_SOURCE("main")
 			TRACE("Entering")
 
 		try {
@@ -151,7 +152,7 @@ public:
 			TRACE("Calling cKernel::Update to start the main loop");
 			cKernel::Instance()->Update();
 
-			delete mpSettings;
+			delete gpSettings;
 
 			TRACE("Exiting cKernel");
 			delete cKernel::Instance();

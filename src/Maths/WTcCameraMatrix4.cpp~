@@ -844,13 +844,17 @@ void cCameraMatrix4::PointAt(vRenderObject *lpObj)
 void cCameraMatrix4::Follow(cMatrix4* lpOther,float lfX,float lfY,float lfZ)
 {
     cMatrix4 lpInv=lpOther->InversionMatrix();
+	lpOther->Display();
+	lpInv.Display();
     memcpy(mpData,lpInv.Matrix(),sizeof(float)*12);
 
     RotateY(3.14159265);
 
-	mpPosition[0]=lpOther->X();
-	mpPosition[1]=lpOther->Y();
-	mpPosition[2]=lpOther->Z();
+	Display();
+
+	mpPosition[0]=-lpOther->X();
+	mpPosition[1]=-lpOther->Y();
+	mpPosition[2]=-lpOther->Z();
     Advance(lfX,lfY,lfZ);
 }
 
@@ -868,9 +872,9 @@ void cCameraMatrix4::Follow(cMatrix4* lpOther,float lfDist)
 
     RotateY(3.14159265);
 
-	mpPosition[0]=lpOther->X();
-	mpPosition[1]=lpOther->Y();
-	mpPosition[2]=lpOther->Z();
+	mpPosition[0]=-lpOther->X();
+	mpPosition[1]=-lpOther->Y();
+	mpPosition[2]=-lpOther->Z();
     Advance(lfDist);
 }
 
@@ -1040,6 +1044,6 @@ float *cCameraMatrix4::ConstructCameraMatrix()
 
 float *cCameraMatrix4::CameraMatrix()
 {
-    #warning comment Make so mpCameraMatrix is unneccessary.
+    #pragma warning (Make so mpCameraMatrix is unneccessary)
  return mpCameraMatrix;
 };

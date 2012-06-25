@@ -1,5 +1,7 @@
 #include "../../WTBamboo.h"
 
+int cMouse::LockedX(){return miLockedX;};
+int cMouse::LockedY(){return miLockedY;};
 
 cMouse::cMouse()
 {
@@ -9,19 +11,22 @@ cMouse::cMouse()
  locked=false;
  miShown=true;
 x=y=xs=ys=cx=cy=0.0f;
+#if WT_OS_TYPE==OS_LINUX
+	mcCursor = XCreateFontCursor(gpWindow->lpDisplay, XC_left_ptr);
+#endif
 }
 
 void cMouse::Update()
 {
 if(locked)
 {
-
 #if WT_OS_TYPE==OS_WIN32
 	xs=x-cx;
 	ys=y-cy;
 	x=cx;
 	y=cy;
-	SetCursorPos(cx+gpWindow->X(),cy+gpWindow->Y());
+	//printf("Render Area : %f %f\n",gpWindow->RenderAreaX(),gpWindow->RenderAreaY());
+	SetCursorPos(cx+gpWindow->WindowX(),cy+gpWindow->WindowY());
 #endif
 #if WT_OS_TYPE==OS_LINUX
 	xs=cx-x;
@@ -31,40 +36,78 @@ if(locked)
 }
 else
 {
-
 	xs=cx-x;
 	ys=cy-y;
-	x=cx;
-	y=cy;
+	miLockedX=x=cx;
+	miLockedY=y=cy;
 }
 }
+
+bool cMouse::Locked(){return locked;};
 
 void cMouse::Lock()
 {
+ if(_MOUSE->locked) return;
+
+ miLockedX=cx;
+ miLockedY=cy;
+
+ //miLockedX=cx;
+ //miLockedY=cy;
 
  locked=true;
- cx=gpWindow->Width()>>1;
- cy=gpWindow->Height()>>1;
- #if WT_OS_TYPE==OS_WIN32
-	SetCursorPos(cx+gpWindow->X(),cy+gpWindow->Y());
+ cx=gpWindow->RenderAreaWidth()*0.5;
+ cy=gpWindow->RenderAreaHeight()*0.5;
+#if WT_OS_TYPE==OS_WIN32
+	SetCursorPos(cx+gpWindow->WindowX(),cy+gpWindow->WindowY());
 #endif
 #if WT_OS_TYPE==OS_LINUX
+	x=cx;
+	y=cy;
 	gpWindow->MovePointer(cx,cy);
 #endif
 }
 
 void cMouse::Unlock()
 {
+if(!_MOUSE->locked) return;
  locked=false;
  cx=x;
  cy=y;
 }
-
+ #if WT_OS_TYPE==OS_WIN32
 void cMouse::Hide()
- {miShown=false;}
+{
+     miShown=false;
+    ShowCursor(miShown);
+}
+#endif
+#if WT_OS_TYPE==OS_LINUX
+void cMouse::Hide()
+ {
+     miShown=false;
+    XUndefineCursor(gpWindow->lpDisplay,gpWindow->lWindow);
+ }
+#endif
 
+
+ #if WT_OS_TYPE==OS_WIN32
 void cMouse::Show()
-{miShown=true;}
+{
+    miShown=true;
+    ShowCursor(miShown);
+}
+#endif
+
+#if WT_OS_TYPE==OS_LINUX
+void cMouse::Show()
+{
+    miShown=true;
+    XDefineCursor(gpWindow->lpDisplay,gpWindow->lWindow,mcCursor);
+}
+#endif
+
+
 
 bool cMouse::Showing()
 {return miShown;}
@@ -78,6 +121,7 @@ bool cMouse::Left(){return left;};
 bool cMouse::Right(){return right;};
 bool cMouse::Middle(){return middle;};
 
+#if WT_FULL_VERSION_BAMBOO
 cCollisionList *cMouse::Selection(cMouseCollisionObject *lpMouse,uint32 liFilter,cCollisionList *lpList)
 {
  return _COLLISION_HANDLER->GenerateCollisionList(lpMouse,liFilter,lpList);
@@ -87,33 +131,57 @@ cCollisionList *cMouse::SelectionDetailed(cMouseCollisionObject *lpMouse,uint32 
 {
     return _COLLISION_HANDLER->GenerateDetailedCollisionList(lpMouse,liFilter,lpList);
 };
-
-/*
-cCollisionList *cMouse::Selection(cViewport *lpViewport,float lfRadius)
+#endif
+void cMouse::UnlockPosition()
 {
-    lpViewport->ViewportWidth();
-    lpViewport->ViewportHeight();
-    lpViewport->ViewportX();
-    lpViewport->ViewportY();
+    if(!_MOUSE->locked) return;
+#if WT_OS_TYPE==OS_WIN32
+    locked=false;
+    cx=miLockedX+gpWindow->WindowX();
+    cy=miLockedY+gpWindow->WindowY();
 
-       c3DVf MouseVector(X());
+    SetCursorPos(cx,cy);
+#endif
+#if WT_OS_TYPE==OS_LINUX
+    locked=false;
+    cx=miLockedX;
+    cy=miLockedY;
+    gpWindow->MovePointer(cx,cy);
+#endif
+}
 
-    if((X()>lpViewport->ViewportX() && X()<lpViewport->ViewportX()+lpViewport->ViewportWidth())&&(Y()>lpViewport->ViewportY() && Y()<lpViewport->ViewportY()+lpViewport->ViewportHeight()))
-    {
-        float lfWidthMod=(((X()-lpViewport->ViewportX())/lpViewport->ViewportWidth())-0.5f)*Width();
-        float lfHeightMod=(((Y()-lpViewport->ViewportY())/lpViewport->ViewportHeight())-0.5f)*Height();
-        float lfDepthMod=(lpViewport->Near());
-        float* lpMatrix=lpViewport->Matrix();
+#if WT_OS_TYPE==OS_WIN32
 
-        c3DVf MouseVector(lpMatrix[0]*lfWidthMod+lpMatrix[4]*lfHeightMod+lpMatrix[8]*lfDepthMod,
-                          lpMatrix[1]*lfWidthMod+lpMatrix[5]*lfHeightMod+lpMatrix[9]*lfDepthMod,
-                          lpMatrix[2]*lfWidthMod+lpMatrix[6]*lfHeightMod+lpMatrix[10]*lfDepthMod);
+void cMouse::SetPos(int lX,int lY)
+{
+if (!Locked())
+         {
+            cx=lX;
+            cy=lY;
+         }
+         else
+         {
+            x=lX;
+            y=lY;
+         }
+};
+void cMouse::SetPos(int lX,int lY,int lZ)
+{
+if (!Locked())
+         {
+            cx=lX;
+            cy=lY;
+            //cz=lZ;
+         }
+         else
+         {
+            x=lX;
+            y=lY;
+            z=lZ;
+         }
+};
+void cMouse::SetLeft(bool lbLeft){left=lbLeft;};
+void cMouse::SetRight(bool lbRight){right=lbRight;};
+void cMouse::SetMiddle(bool lbMiddle){middle=lbMiddle;};
 
-        c3DVf &MouseStart(lpViewport->Position());
-        MouseStart.Invert();
-
-        return cCollisionHandler::GenerateMouseSelection(MouseVector,MouseStart,lfRadius);
-    }
-
-
-};*/
+#endif

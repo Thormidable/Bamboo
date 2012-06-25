@@ -35,7 +35,6 @@ void cImage::SetUp()
  Set2D();
  InitialiseArrays();
  Transparency(true);
- mfPriority=6.0f;
 }
 
 
@@ -51,7 +50,7 @@ void cImage::Height(float lfHeight)
 void cImage::Size(float lfSize)
 {
   mfWidth=lfSize;
-  mfHeight=mfWidth*gpWindow->Ratio();
+  mfHeight=mfWidth*gpWindow->RenderRatio();
 }
 
 
@@ -68,16 +67,16 @@ void cImage::RenderPainter()
     glNormal3f(0.0f,0.0f,1.0f);
 
     glMultiTexCoord2f(GL_TEXTURE0,1.0f,0.0f);
-    glVertex3f(-lfWidth,lfHeight,mfPriority);
+    glVertex3f(-lfWidth,lfHeight,1.0f);
 
     glMultiTexCoord2f(GL_TEXTURE0,0.0f,0.0f);
-    glVertex3f(lfWidth,lfHeight,mfPriority);
+    glVertex3f(lfWidth,lfHeight,1.0f);
 
     glMultiTexCoord2f(GL_TEXTURE0,0.0f,1.0f);
-    glVertex3f(lfWidth,-lfHeight,mfPriority);
+    glVertex3f(lfWidth,-lfHeight,1.0f);
 
     glMultiTexCoord2f(GL_TEXTURE0,1.0f,1.0f);
-    glVertex3f(-lfWidth,-lfHeight,mfPriority);
+    glVertex3f(-lfWidth,-lfHeight,1.0f);
 
 
    glEnd();
@@ -138,16 +137,6 @@ void cImage3D::SetUp()
 	{
 	    return mfHeight;
 	}
-
-float cImage::Priority()
-{
-    return mfPriority-1.0f;
-}
-
-void cImage::Priority(float lfPriority)
-{
-    mfPriority=lfPriority+1.0f;
-}
 
 cImage3D::cImage3D()
 {

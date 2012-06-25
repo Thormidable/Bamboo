@@ -62,7 +62,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">cMouse Class Reference</div>  </div>
 </div>
@@ -75,7 +76,7 @@ Collaboration diagram for cMouse:</div>
 <div class="dyncontent">
 <div class="center"><img src="classc_mouse__coll__graph.png" border="0" usemap="#c_mouse_coll__map" alt="Collaboration graph"/></div>
 <map name="c_mouse_coll__map" id="c_mouse_coll__map">
-<area shape="rect" id="node2" href="classc_texture.html" title="This class stores the data for rendering a 2D texture. This stores and processes the data for a 2D te..." alt="" coords="43,541,115,571"/><area shape="rect" id="node4" href="classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh..." alt="" coords="53,461,104,491"/><area shape="rect" id="node6" href="classv_file.html" title="This is the virtual file for cFile. It is a virtual representation of the base code for files loaded ..." alt="" coords="5,8,56,37"/><area shape="rect" id="node13" href="classc_linked_node.html" title="cLinkedNode\&lt; vFile \&gt;" alt="" coords="71,123,220,152"/><area shape="rect" id="node8" href="classc_file_handler.html" title="This is the handler for the file system. This handles all files loaded from a hdd. It will give allow processes to use files loaded else where, using either the filenames or if loaded from an IMF a file reference. The files are stored in the list mpFiles." alt="" coords="139,365,232,395"/><area shape="rect" id="node11" href="classc_linked_list.html" title="cLinkedList\&lt; vFile \&gt;" alt="" coords="116,269,255,299"/><area shape="rect" id="node17" href="classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="84,8,215,37"/></map>
+<area shape="rect" id="node2" href="classc_texture.html" title="This class stores the data for rendering a 2D texture. This stores and processes the data for a 2D te..." alt="" coords="78,621,150,651"/><area shape="rect" id="node4" href="classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh..." alt="" coords="89,541,139,571"/><area shape="rect" id="node6" href="classv_file.html" title="This is the virtual file for cFile. It is a virtual representation of the base code for files loaded ..." alt="" coords="275,88,326,117"/><area shape="rect" id="node15" href="classc_linked_node.html" title="cLinkedNode\&lt; vFile \&gt;" alt="" coords="50,203,199,232"/><area shape="rect" id="node8" href="classc_signal.html" title="Class for handling Signals sent between objects (cProcess, cRenderObject, cCollisionObject). Allows the user to wake, sleep and kill objects. For cProcess (while cParentStack is enabled) also allows signals to be sent to a process that will recursively affect all the children of that process. Possible signals to be passed in are _S_SLEEP,_S_WAKE,_S_KILL,_S_SLEEP_TREE, _S_WAKE_TREE,_S_KILL_TREE User Specified Signals are controlled by the class cUserSignal." alt="" coords="269,5,333,35"/><area shape="rect" id="node10" href="classc_file_handler.html" title="This is the handler for the file system. This handles all files loaded from a hdd. It will give allow processes to use files loaded else where, using either the filenames or if loaded from an IMF a file reference. The files are stored in the list mpFiles." alt="" coords="67,445,161,475"/><area shape="rect" id="node13" href="classc_linked_list.html" title="cLinkedList\&lt; vFile \&gt;" alt="" coords="19,349,158,379"/><area shape="rect" id="node19" href="classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="50,88,181,117"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classc_mouse-members.html">List of all members.</a></p>
@@ -106,6 +107,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae372f0b8e20928233060adc9a7450a93"></a><!-- doxytag: member="cMouse::Middle" ref="ae372f0b8e20928233060adc9a7450a93" args="()" -->
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_mouse.html#ae372f0b8e20928233060adc9a7450a93">Middle</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Will return the pressed state of the mouses middle button. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac254966f9f860197e4e581066775af74"></a><!-- doxytag: member="cMouse::LockedX" ref="ac254966f9f860197e4e581066775af74" args="()" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_mouse.html#ac254966f9f860197e4e581066775af74">LockedX</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Will return the current position of the cursor. When mouse is Locked, this will retain the last free position of the cursor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52df381bb54181ee574fcf4649353b52"></a><!-- doxytag: member="cMouse::LockedY" ref="a52df381bb54181ee574fcf4649353b52" args="()" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_mouse.html#a52df381bb54181ee574fcf4649353b52">LockedY</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Will return the current position of the cursor. When mouse is Locked, this will retain the last free position of the cursor. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a558d192a5c2df1352d1b8de7275a9359"></a><!-- doxytag: member="cMouse::Update" ref="a558d192a5c2df1352d1b8de7275a9359" args="()" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_mouse.html#a558d192a5c2df1352d1b8de7275a9359">Update</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will Update the mouse variable. Should be called every frame by <a class="el" href="classc_kernel.html" title="Kernel Object. Handles Processes. Tracks, runs and deletes current processes. Has complete control ov...">cKernel</a>. <br/></td></tr>
@@ -124,14 +131,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a869bb420067947a30b57ad649e3f1f14"></a><!-- doxytag: member="cMouse::Unlock" ref="a869bb420067947a30b57ad649e3f1f14" args="()" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_mouse.html#a869bb420067947a30b57ad649e3f1f14">Unlock</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will unlock the mouse cursor from the centre of the window. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a3632592810662e9ab868eba250b7cd"></a><!-- doxytag: member="cMouse::Selection" ref="a2a3632592810662e9ab868eba250b7cd" args="(cPerspectiveControl *lpCamera=_CAMERA, float lfRadius=0.0f)" -->
-<a class="el" href="classc_collision_list.html">cCollisionList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_mouse.html#a2a3632592810662e9ab868eba250b7cd">Selection</a> (<a class="el" href="classc_perspective_control.html">cPerspectiveControl</a> *lpCamera=_CAMERA, float lfRadius=0.0f)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a606b78beca6e7daee0a2142cdb26f9d6"></a><!-- doxytag: member="cMouse::UnlockPosition" ref="a606b78beca6e7daee0a2142cdb26f9d6" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_mouse.html#a606b78beca6e7daee0a2142cdb26f9d6">UnlockPosition</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will unlock the mouse cursor and reposition the cursor at the last co-ordinates. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a237297c2d9c3f12df280ab957571fa18"></a><!-- doxytag: member="cMouse::Selection" ref="a237297c2d9c3f12df280ab957571fa18" args="(cMouseCollisionObject *lpMouse, uint32 liFilter=0, cCollisionList *lpList=0)" -->
+<a class="el" href="classc_collision_list.html">cCollisionList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_mouse.html#a237297c2d9c3f12df280ab957571fa18">Selection</a> (cMouseCollisionObject *lpMouse, uint32 liFilter=0, <a class="el" href="classc_collision_list.html">cCollisionList</a> *lpList=0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will Generate a detailed Mouse Selection Collision List. This list will do a sphere collision check with a beam of radius lfRadius. The Vector of the mouses collision is determined from the <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> and it's main viewport. The list produced will fill mfBeamlengths with the length along the beam to reach the colliding item. The mfDistance in the list is automatically generated and is the distance from the closest point on the Mosue vector. The vector is from the cameras position through the mouse co-ordinates in the viewport. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6306d52aba6df1e6496c038db013442"></a><!-- doxytag: member="cMouse::Pos" ref="ad6306d52aba6df1e6496c038db013442" args="" -->
 tagPOINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_mouse.html#ad6306d52aba6df1e6496c038db013442">Pos</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows only variable. Windows format for mouse position...? <br/></td></tr>
+<tr><td colspan="2"><h2><a name="friends"></a>
+Friends</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e015f676ddfb09a249d209e2fbac01c"></a><!-- doxytag: member="cMouse::cWindow" ref="a1e015f676ddfb09a249d209e2fbac01c" args="" -->
+class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_mouse.html#a1e015f676ddfb09a249d209e2fbac01c">cWindow</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This will store all the input data for a single mouse. It also controls the interpretation of the input and controls the cursor. It allows the user to Lock the cursor to the centre of the screen reading mouse position based on the distance moved every frame. The mouse inputs are buffered meaning that the mouse inputs are consistent for an entire process cycle. It also means that the actual cursor speed can be calculated. </p>
@@ -150,7 +164,7 @@ tagPOINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:08 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Jun 6 2012 10:28:50 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

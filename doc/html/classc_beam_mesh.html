@@ -60,45 +60,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">cBeamMesh Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="cBeamMesh" --><!-- doxytag: inherits="cRenderObject" -->
+<!-- doxytag: class="cBeamMesh" -->
 <p>A Procedurally generated cylindrical Renderable Object. This class will generate a cylinder with specified dimensions and segments. The origin for the cylinder is in the radial center of one end of the cylinder.  
  <a href="classc_beam_mesh.html#details">More...</a></p>
-<div class="dynheader">
-Collaboration diagram for cBeamMesh:</div>
-<div class="dyncontent">
-<div class="center"><img src="classc_beam_mesh__coll__graph.png" border="0" usemap="#c_beam_mesh_coll__map" alt="Collaboration graph"/></div>
-<map name="c_beam_mesh_coll__map" id="c_beam_mesh_coll__map">
-<area shape="rect" id="node2" href="classc_render_object.html" title="This class contains the base code for all renderable objects. Any renderable object should inherit th..." alt="" coords="308,653,417,683"/><area shape="rect" id="node4" href="classc_render_pointer.html" title="This class is a temporary store for a cRenderObjects data. This is the complete render matrix and all..." alt="" coords="209,765,321,795"/><area shape="rect" id="node7" href="classc_shader_program.html" title="A cShaderProgram() is a series of cShader() objects compiled into a program. cShaderProgram is a cFil..." alt="" coords="153,557,271,587"/><area shape="rect" id="node9" href="classc_file.html" title="This is the base code for files to be loaded from a hdd. Any file object loaded from a hddvshould inh..." alt="" coords="56,461,107,491"/><area shape="rect" id="node11" href="classv_file.html" title="This is the virtual file for cFile. It is a virtual representation of the base code for files loaded ..." alt="" coords="5,8,56,37"/><area shape="rect" id="node18" href="classc_linked_node.html" title="cLinkedNode\&lt; vFile \&gt;" alt="" coords="68,123,217,152"/><area shape="rect" id="node13" href="classc_file_handler.html" title="This is the handler for the file system. This handles all files loaded from a hdd. It will give allow processes to use files loaded else where, using either the filenames or if loaded from an IMF a file reference. The files are stored in the list mpFiles." alt="" coords="133,365,227,395"/><area shape="rect" id="node16" href="classc_linked_list.html" title="cLinkedList\&lt; vFile \&gt;" alt="" coords="115,269,253,299"/><area shape="rect" id="node22" href="classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="83,8,213,37"/><area shape="rect" id="node27" href="classc_reference_list.html" title="This will Load from an IMF and store a list of string type references. This will load a list of strin..." alt="" coords="139,461,248,491"/><area shape="rect" id="node29" href="classc_variable_store.html" title="This is the class through which the user will access Variables in cShaderProgram&#39;s." alt="" coords="341,461,448,491"/><area shape="rect" id="node31" href="classc_user_variable.html" title="This is the general class for buffering an instance of a User defined cShaderProgram Variable..." alt="" coords="344,365,448,395"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classc_beam_mesh-members.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf82cda9d282def977903ff877f36a26"></a><!-- doxytag: member="cBeamMesh::cBeamMesh" ref="acf82cda9d282def977903ff877f36a26" args="(float Radius=0.1f, float Length=1.0f, uint16 Segments=6, vRenderNode *lpNode=cCamera::Instance()&#45;&gt;RenderList())" -->
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_beam_mesh.html#acf82cda9d282def977903ff877f36a26">cBeamMesh</a> (float Radius=0.1f, float Length=1.0f, uint16 Segments=6, vRenderNode *lpNode=cCamera::Instance()-&gt;RenderList())</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to Create a Beam with the specified Dimensions. Segments must be an even integer. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d2f2bfef0e3f96597ae6e1e73072030"></a><!-- doxytag: member="cBeamMesh::Length" ref="a1d2f2bfef0e3f96597ae6e1e73072030" args="(float Length)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_beam_mesh.html#a1d2f2bfef0e3f96597ae6e1e73072030">Length</a> (float Length)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Length of the Cylinder. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac11934e813765321e76405cd96304088"></a><!-- doxytag: member="cBeamMesh::Radius" ref="ac11934e813765321e76405cd96304088" args="(float Radius)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_beam_mesh.html#ac11934e813765321e76405cd96304088">Radius</a> (float Radius)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Radius of the Cylinder. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab59d3bb8c0a5c2944a206deaca3d2022"></a><!-- doxytag: member="cBeamMesh::GenerateData" ref="ab59d3bb8c0a5c2944a206deaca3d2022" args="(float Radius, float Length, uint16 Segments)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_beam_mesh.html#ab59d3bb8c0a5c2944a206deaca3d2022">GenerateData</a> (float Radius, float Length, uint16 Segments)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Will regenerate the cylinder with the specified Specifications. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4daa383162c2560c1c5ed47d22484e5"></a><!-- doxytag: member="cBeamMesh::Length" ref="aa4daa383162c2560c1c5ed47d22484e5" args="()" -->
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_beam_mesh.html#aa4daa383162c2560c1c5ed47d22484e5">Length</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current Length of the Cylinder. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6068db701b4835449bd40a437e3ee908"></a><!-- doxytag: member="cBeamMesh::Radius" ref="a6068db701b4835449bd40a437e3ee908" args="()" -->
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_beam_mesh.html#a6068db701b4835449bd40a437e3ee908">Radius</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current Radius of the Cylinder. <br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A Procedurally generated cylindrical Renderable Object. This class will generate a cylinder with specified dimensions and segments. The origin for the cylinder is in the radial center of one end of the cylinder. </p>
@@ -117,7 +88,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:07 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Jun 6 2012 10:27:47 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

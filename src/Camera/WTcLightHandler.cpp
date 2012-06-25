@@ -50,16 +50,16 @@ void cLightHandler::SetupLights()
 
 }
 
-cMinLN<vLight> *cLightHandler::Add(vLight *lpNew)
+cLinkedNode<vLight> *cLightHandler::Add(vLight *lpNew)
 {
 	//trace("cLightHandler::Add")
 	if (!mpLightList)
 	{
-		mpLightList=new cMinLL<vLight>(lpNew);
-		return mpLightList->mpStart;
+		mpLightList=new cLinkedList<vLight>(lpNew);
+		return mpLightList->Start();
 	}
-	mpLightList->InsertE(lpNew);
-	return mpLightList->mpEnd;
+	mpLightList->Insert(lpNew);
+	return mpLightList->End();
 }
 
 void cLightHandler::DeleteAll()
@@ -68,7 +68,7 @@ void cLightHandler::DeleteAll()
 	if(mpLightList) {delete mpLightList; mpLightList=0;}
 }
 
-void cLightHandler::Remove(cMinLN<vLight> *lpOld)
+void cLightHandler::Remove(cLinkedNode<vLight> *lpOld)
 {
 	mpLightList->Delete(lpOld);
 }
@@ -77,10 +77,10 @@ void cLightHandler::PrepareLight()
 {
  //trace("cLightHandler::PrepareLights");
  uint32 liCount=0;
- cMinLN<vLight> *lpCursor=mpLightList->mpStart;
+ cLinkedNode<vLight> *lpCursor=mpLightList->Start();
  while(lpCursor)
  {
-  if(lpCursor->mpData->Awake()) lpCursor->mpData->PrepareLight(liCount++);
+  if(lpCursor->Data()->Awake()) lpCursor->Data()->PrepareLight(liCount++);
   lpCursor=lpCursor->Next();
  }
 }
@@ -117,16 +117,16 @@ void cLightHandler::PrepareLight(cMatrix4 *lpObject)
     cLightSpot *lpLarge;
     uint32 liCount;
 
-    cMinLN<vLight> *lpCursor=mpLightList->mpStart;
+    cLinkedNode<vLight> *lpCursor=mpLightList->Start();
 
     liCount=0;
     while(lpCursor && liCount<WT_OPENGL_LIGHTS)
     {
-      if(lpCursor->mpData->Awake())
+      if(lpCursor->Data()->Awake())
       {
-        lfDist=lpObject->DistanceSq(lpCursor->mpData->Position());
+        lfDist=lpObject->DistanceSq(lpCursor->Data()->Position());
         mpLightSlots[liCount].mfDist=lfDist;
-        mpLightSlots[liCount].mpLight=lpCursor->mpData;
+        mpLightSlots[liCount].mpLight=lpCursor->Data();
         ++liCount;
       }
       lpCursor=lpCursor->Next();
@@ -136,16 +136,16 @@ void cLightHandler::PrepareLight(cMatrix4 *lpObject)
 
     while(lpCursor)
       {
-          if(lpCursor->mpData->Awake())
+          if(lpCursor->Data()->Awake())
           {
 
 
-          lfDist=lpObject->DistanceSq(lpCursor->mpData->Position());
+          lfDist=lpObject->DistanceSq(lpCursor->Data()->Position());
 
           if(lfDist<lpLarge->mfDist)
           {
             lpLarge->mfDist=lfDist;
-            lpLarge->mpLight=lpCursor->mpData;
+            lpLarge->mpLight=lpCursor->Data();
             for(liCount=1;liCount<WT_OPENGL_LIGHTS;++liCount)
             {
                 if(mpLightSlots[liCount].mfDist>lpLarge->mfDist) {lpLarge=&mpLightSlots[liCount]; break;}

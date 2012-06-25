@@ -157,16 +157,6 @@ void cRenderObject::Delete()
 
 }
 
-cRenderOwner &vRenderObject::SetRenderNode(vRenderNode *lpRenderer)
-{
- if(mpRenderer==lpRenderer) return mcOwnerNode;
- //if(mpRenderer) mpRenderer->Remove(mcOwnerNode);
- mpRenderer=lpRenderer;
- mcOwnerNode=lpRenderer->Add(this);
- return mcOwnerNode;
-}
-
-
 void cRenderObject::AdditionalRenderFunctions()
 {
 // UpdateCache();
@@ -523,7 +513,8 @@ cCamera *vRenderObject::Camera()
 
 void vRenderObject::Renderer(vRenderNode *lpNode)
 {
- mcOwnerNode=mpRenderer->MoveItem(this,lpNode);
+ if(mpRenderer) mcOwnerNode=mpRenderer->MoveItem(this,lpNode);
+
 }
 
 cRenderOwner vRenderObject::RenderOwner(){return mcOwnerNode;}
@@ -548,3 +539,16 @@ c3DVf vRenderObject::FindRelativeCoord(c3DVf GlobalPos)
 {
     return mmCache.FindPointRelative(GlobalPos);
 };
+
+void vRenderObject::TreeProcessUserSignal(SIGNAL lsSignal,void *lpData)
+{
+ if(mpProcess) mpProcess->UserSignal(lsSignal,lpData);
+}
+void vRenderObject::TreeProcessSignal(SIGNAL lsSignal)
+{
+ if(mpProcess) mpProcess->Signal(lsSignal);
+}
+void vRenderObject::TreeSignal(SIGNAL lsSignal)
+{
+ Signal(lsSignal);
+}

@@ -7,6 +7,7 @@ using namespace std;
 
 cFile::cFile()
 {
+	memset(mpFileName,0,64*sizeof(uint8));
 	mpFileName[0]=0;
 
 	mpFileHandler=cFileHandler::Instance();
@@ -16,7 +17,7 @@ cFile::cFile()
 
 cFile::~cFile()
 {
-	printf("FileName %s\n",mpFileName);
+	TRACE("Deleting FileName: " << mpFileName);
 }
 
 void cFile::Delete()
@@ -31,3 +32,13 @@ char *cFile::FileName()
 
 void cFile::Load(){}
 
+void cFile::FileName(string lsFileName)
+{
+    strcpy(mpFileName,lsFileName.c_str());
+};
+
+void cFile::Stop()
+{
+	mpFileHandler->Delete(mpNode);
+
+};

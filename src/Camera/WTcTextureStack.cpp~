@@ -22,6 +22,7 @@ cTextureStack::cTextureStack(bool lbNoTextures)
  (void) (lbNoTextures);
  CreateStatic();
  mpTextures=0;
+ miTextures=0;
 }
 
 cTextureSlot::cTextureSlot()
@@ -40,6 +41,8 @@ cTextureStack::~cTextureStack()
 {
  	delete []mpTextures;
 	mpTextures=0;
+	delete mpNoTexture;
+	mpNoTexture=0;
 }
 
 cTextureSlot *cTextureStack::TextureList()
@@ -84,14 +87,42 @@ cTextureSlot &cTextureStack::TextureItem(uint8 liPos)
 	return TextureList()[liPos];
 }
 
-void cTextureSlot::FirstTextureState(uint8 liTexSlot)
+void cTextureSlot::NewTexture(uint8 liTexSlot)
 {
+    	glActiveTexture(GL_TEXTURE0+liTexSlot);
+		if(!liTexSlot)
+		{
+		    glClientActiveTexture(GL_TEXTURE0+liTexSlot);
+		    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+		}
 		glEnable(GL_TEXTURE_2D);
-		glActiveTexture(GL_TEXTURE0+liTexSlot);
-		glClientActiveTexture(GL_TEXTURE0+liTexSlot);
-		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 		mpTexture->BindTexture();
 		glUniform1i(miUniform,liTexSlot);
+}
+
+void cTextureSlot::ClearTexture(uint8 liTexSlot)
+{
+        glActiveTexture(GL_TEXTURE0+liTexSlot);
+		if(!liTexSlot)
+		{
+		    glClientActiveTexture(GL_TEXTURE0+liTexSlot);
+		    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+		}
+
+        glDisableClientState(GL_TEXTURE_2D);
+        glDisable(GL_TEXTURE_2D);
+}
+
+void cTextureSlot::FirstTextureState(uint8 liTexSlot)
+{
+    if(mpTexture)
+    {
+        NewTexture(liTexSlot);
+    }
+    else
+    {
+        ClearTexture(liTexSlot);
+    }
 }
 
 void cTextureSlot::TextureState(cTextureSlot *lpPrevious,uint8 liTexSlot)
@@ -102,25 +133,16 @@ void cTextureSlot::TextureState(cTextureSlot *lpPrevious,uint8 liTexSlot)
   {
 	  if(!lpPrevious->mpTexture)
 	  {
-		glEnable(GL_TEXTURE_2D);
-		glActiveTexture(GL_TEXTURE0+liTexSlot);
-		glClientActiveTexture(GL_TEXTURE0+liTexSlot);
-		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-		mpTexture->BindTexture();
-		glUniform1i(miUniform,liTexSlot);
+		NewTexture(liTexSlot);
 	  }
 	  else
 	  {
-		glActiveTexture(GL_TEXTURE0+liTexSlot);
-		mpTexture->BindTexture();
-		glUniform1i(miUniform,liTexSlot);
+		NewTexture(liTexSlot);
 	  }
   }
   else
   {
-		  glClientActiveTexture(GL_TEXTURE0);
-		  glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-		  glDisable(GL_TEXTURE_2D);
+      ClearTexture(liTexSlot);
   }
  }
 }

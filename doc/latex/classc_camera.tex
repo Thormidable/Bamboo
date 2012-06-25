@@ -4,12 +4,13 @@
 }
 
 
-This class will control the rendering of the render tree. It will handle all the render objects and how to render to the screen. \hyperlink{classc_camera}{cCamera} is the renderer for a single Render List. It will contain a scene graph, and inherits \hyperlink{classc_perspective_control}{cPerspectiveControl} and \hyperlink{classc_signal}{cSignal}. It also inherits \hyperlink{classc_viewport_control}{cViewportControl} and \hyperlink{classc_camera_matrix4}{cCameraMatrix4} through \hyperlink{classc_perspective_control}{cPerspectiveControl} It can be considered as a set of renderable objects with a camera, and will render every thing in its scene graph to the screen. It will not render any objects in another cCamera's scene graph. cRenderObjects and those inheriting it can be passed a \hyperlink{classc_camera}{cCamera} as a parameter on creation to make them exist in the camera. cViewports can be created which will render the same scene graph as their owning \hyperlink{classc_camera}{cCamera} object but from another perspective. The \hyperlink{classc_camera}{cCamera} object renders first, followed by the \hyperlink{classc_viewport}{cViewport} objects in the order they were created. \hyperlink{classc_camera}{cCamera} objects can be positioned and rotated using the functions in \hyperlink{classc_camera_matrix4}{cCameraMatrix4}. The region of the screen it renders to (the viewport) is set using the functions in \hyperlink{classc_viewport_control}{cViewportControl}. The perspective (field of view etc) is set by the functions in \hyperlink{classc_perspective_control}{cPerspectiveControl}.  
+This class will control the rendering of the render tree. It will handle all the render objects and how to render to the screen. \hyperlink{classc_camera}{cCamera} is the renderer for a single Render List. It will contain a scene graph, and inherits \hyperlink{classc_perspective_control}{cPerspectiveControl} and \hyperlink{classc_signal}{cSignal}. It also inherits \hyperlink{classc_viewport_control}{cViewportControl} and \hyperlink{classc_camera_matrix4}{cCameraMatrix4} through \hyperlink{classc_perspective_control}{cPerspectiveControl} It can be considered as a set of renderable objects with a camera, and will render every thing in its scene graph to the screen. It will not render any objects in another cCamera's scene graph. cRenderObjects and those inheriting it can be passed a \hyperlink{classc_camera}{cCamera} as a parameter on creation to make them exist in the camera. cViewports can be created which will render the same scene graph as their owning \hyperlink{classc_camera}{cCamera} object but from another perspective. The \hyperlink{classc_camera}{cCamera} object renders first, followed by the cViewport objects in the order they were created. \hyperlink{classc_camera}{cCamera} objects can be positioned and rotated using the functions in \hyperlink{classc_camera_matrix4}{cCameraMatrix4}. The region of the screen it renders to (the viewport) is set using the functions in \hyperlink{classc_viewport_control}{cViewportControl}. The perspective (field of view etc) is set by the functions in \hyperlink{classc_perspective_control}{cPerspectiveControl}.  
 
 
 
 
-Collaboration diagram for cCamera:\nopagebreak
+Collaboration diagram for cCamera:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -43,12 +44,7 @@ vRenderObject $\ast$ \hyperlink{classc_camera_ac63b2c284eee4b9b7182d85390279336}
 void \hyperlink{classc_camera_a6701644b2d73e607cee85dbc866ba6d9}{Stop} ()}
 \label{classc_camera_a6701644b2d73e607cee85dbc866ba6d9}
 
-\begin{DoxyCompactList}\small\item\em Function for performing \hyperlink{classc_camera}{cCamera} specific actions after receiving a kill signal from via \hyperlink{classc_signal_a545074be1da41d00050bed3cd2fb2305}{cSignal::Signal(SIGNAL)}. \end{DoxyCompactList}\item 
-\hypertarget{classc_camera_ab798297d6aa91192e45f7910da1e0f9b}{
-\hyperlink{classc_particle_handler}{cParticleHandler} $\ast$ \hyperlink{classc_camera_ab798297d6aa91192e45f7910da1e0f9b}{ParticleHandler} ()}
-\label{classc_camera_ab798297d6aa91192e45f7910da1e0f9b}
-
-\begin{DoxyCompactList}\small\item\em Function for returning a pointer to the \hyperlink{classc_particle_handler}{cParticleHandler} for this \hyperlink{classc_camera}{cCamera}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function for performing \hyperlink{classc_camera}{cCamera} specific actions after receiving a kill signal from via \hyperlink{classc_signal_a545074be1da41d00050bed3cd2fb2305}{cSignal::Signal(SIGNAL)}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -57,15 +53,7 @@ static \hyperlink{classc_camera}{cCamera} $\ast$ \hyperlink{classc_camera_a06efa
 \label{classc_camera_a06efab78c09ce37c375837242719bf58}
 
 \begin{DoxyCompactList}\small\item\em This function will return a pointer to the first \hyperlink{classc_camera}{cCamera} object. This can be accessed by calling tjhe macro \_\-CAMERA. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Friends}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{classc_camera_a36b5bd53c16eecf39974e65e00bd408e}{
-class \hyperlink{classc_camera_a36b5bd53c16eecf39974e65e00bd408e}{cViewport}}
-\label{classc_camera_a36b5bd53c16eecf39974e65e00bd408e}
-
-\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-This class will control the rendering of the render tree. It will handle all the render objects and how to render to the screen. \hyperlink{classc_camera}{cCamera} is the renderer for a single Render List. It will contain a scene graph, and inherits \hyperlink{classc_perspective_control}{cPerspectiveControl} and \hyperlink{classc_signal}{cSignal}. It also inherits \hyperlink{classc_viewport_control}{cViewportControl} and \hyperlink{classc_camera_matrix4}{cCameraMatrix4} through \hyperlink{classc_perspective_control}{cPerspectiveControl} It can be considered as a set of renderable objects with a camera, and will render every thing in its scene graph to the screen. It will not render any objects in another cCamera's scene graph. cRenderObjects and those inheriting it can be passed a \hyperlink{classc_camera}{cCamera} as a parameter on creation to make them exist in the camera. cViewports can be created which will render the same scene graph as their owning \hyperlink{classc_camera}{cCamera} object but from another perspective. The \hyperlink{classc_camera}{cCamera} object renders first, followed by the \hyperlink{classc_viewport}{cViewport} objects in the order they were created. \hyperlink{classc_camera}{cCamera} objects can be positioned and rotated using the functions in \hyperlink{classc_camera_matrix4}{cCameraMatrix4}. The region of the screen it renders to (the viewport) is set using the functions in \hyperlink{classc_viewport_control}{cViewportControl}. The perspective (field of view etc) is set by the functions in \hyperlink{classc_perspective_control}{cPerspectiveControl}. 
+This class will control the rendering of the render tree. It will handle all the render objects and how to render to the screen. \hyperlink{classc_camera}{cCamera} is the renderer for a single Render List. It will contain a scene graph, and inherits \hyperlink{classc_perspective_control}{cPerspectiveControl} and \hyperlink{classc_signal}{cSignal}. It also inherits \hyperlink{classc_viewport_control}{cViewportControl} and \hyperlink{classc_camera_matrix4}{cCameraMatrix4} through \hyperlink{classc_perspective_control}{cPerspectiveControl} It can be considered as a set of renderable objects with a camera, and will render every thing in its scene graph to the screen. It will not render any objects in another cCamera's scene graph. cRenderObjects and those inheriting it can be passed a \hyperlink{classc_camera}{cCamera} as a parameter on creation to make them exist in the camera. cViewports can be created which will render the same scene graph as their owning \hyperlink{classc_camera}{cCamera} object but from another perspective. The \hyperlink{classc_camera}{cCamera} object renders first, followed by the cViewport objects in the order they were created. \hyperlink{classc_camera}{cCamera} objects can be positioned and rotated using the functions in \hyperlink{classc_camera_matrix4}{cCameraMatrix4}. The region of the screen it renders to (the viewport) is set using the functions in \hyperlink{classc_viewport_control}{cViewportControl}. The perspective (field of view etc) is set by the functions in \hyperlink{classc_perspective_control}{cPerspectiveControl}. 

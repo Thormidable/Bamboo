@@ -64,8 +64,11 @@ void cParticle::Spawn(cParticleSettings &lpData)
 	for(liCount=0;liCount<3;++liCount)
 	{
 		Color[liCount]=lpData.RGB[liCount]+RANDOM_NUMBER*lpData.RGB[4+liCount];
-		Position[liCount]=lpData.Position[liCount]+RANDOM_NUMBER*lpData.Position[3+liCount];
 	};
+
+	Position=ParticleBallSpeeds(lpData.Position[3],1.0f);
+	Position+=lpData.Position;
+
 	if(lpData.Speed[4]) memcpy(Speed.v,ParticleArcSpeeds(lpData.Speed).v,sizeof(float)*3);
 	else memcpy(Speed.v,ParticleBallSpeeds(lpData.Speed).v,sizeof(float)*3);
 
@@ -104,6 +107,11 @@ cParticle::cParticle()
     Life=0.0f;
 }
 
+cParticleHandler::~cParticleHandler()
+{
+	delete mpAttributeLinker;
+	delete mpAttributes;
+}
 
 cParticleHandler::cParticleHandler() : cRenderObject(true)
 {
@@ -139,13 +147,15 @@ cParticleHandler::cParticleHandler(cCamera *lpCamera) : cRenderObject(lpCamera,t
 
 void cParticleHandler::InitialiseParticleHandler(uint32 liParticles)
 {
+    mpLastShader=0;
+    //mbDepthTest=true;
 	lbRefresh=false;
 	Init(liParticles);
 	Transparency(1);
 
 	mpAttributes=new cManualInterleavedAttributeArray(5);
 
-	mpAttributes->AddComponent(new cInterleavedFloatArray(3,"Bb_Position"));
+	mpAttributes->AddComponent(new cInterleavedVertexArray(3));
 	mpAttributes->AddComponent(new cInterleavedFloatArray(4,"Bb_Color"));
 	mpAttributes->AddComponent(new cInterleavedFloatArray(1,"Bb_Size"));
 	mpAttributes->AddComponent(new cInterleavedFloatArray(3,"Bb_Speed"));
@@ -188,46 +198,43 @@ void cParticleHandler::Refresh()
 		miItems=liFound;
 };
 
-
 void cParticleHandler::RenderPainter()
 {
 	Refresh();
 	SetShaderVariables();
-/*
-	if(mpAttributeLinker->ProgramID()!=mpShader->ID())
-	{
-		mpAttributeLinker->Shader(mpShader);
-	}
 
-	mpAttributes->Elements(Items());
-	mpAttributes->Buffer();
-	mpAttributeLinker->Write();
+   // if(!mbDepthTest) glDisable(GL_DEPTH_TEST);
+    //glDepthMask(GL_FALSE);
 
-	if(miSpaces>gpElementArray->Elements())
-	{
-		gpElementArray->PointData(ExpandCountingArray(gpElementArray->Data(),gpElementArray->Elements(),miSpaces));
-		gpElementArray->Elements(miSpaces);
- 		gpElementArray->Buffer();
-	}
-*/
-	//gpElementArray->Render(miSpaces);
-
-    glBegin(GL_POINTS);
-	uint32 liCount;
-	for(liCount=0;liCount<Items();++liCount)
+	for(uint32 liCount=0;liCount<Items();++liCount)
 	{
         mpList[liCount].UpdatePos();
-
-        glColor4fv(mpList[liCount].Color.Color());
-        glVertex3fv(mpList[liCount].Position.v);
-
 	}
-		glEnd();
 
-	float lpTemp[4]={1.0f,1.0f,1.0f,1.0f};
-	glColor4fv(lpTemp);
+    //CalculateDepth();
+    //InsertionSort(mpList,Items(),CompareDepth);
+    //QuickSort(mpList,0,Items());
+
+    if(mpLastShader!=mpShader && mpShader)
+    {
+        mpLastShader=mpShader;
+        mpAttributeLinker->ShaderAndAttributeArray(mpShader,mpAttributes);
+    }
+	mpAttributes->Elements(Items());
+	mpAttributes->PointData((char*)mpList);
+
+	mpAttributes->Buffer();
+    mpAttributeLinker->Write();
+    glDrawArrays(GL_POINTS,0,Items());
+
+    //glDepthMask(GL_TRUE);
+
+    //if(!mbDepthTest) glEnable(GL_DEPTH_TEST);
+
+ //   glBlendFunc (GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 
 }
+
 
 
 c3DVf ParticleArcSpeeds(c3DVf Vector,float lfSpeedRange, float lfAngleRange)
@@ -296,7 +303,7 @@ float x = cos( phi );
 float y = sin( phi );
 
 c3DVf perturbed = Normal * x * lpSpeedInfo[4] + cross_vector * y * lpSpeedInfo[4] + lpSpeedData * z;
-perturbed*=sqrt(lpSpeedInfo[0]*lpSpeedInfo[0]+lpSpeedInfo[1]*lpSpeedInfo[1]+lpSpeedInfo[2]*lpSpeedInfo[2]);
+//perturbed*=sqrt(lpSpeedInfo[0]*lpSpeedInfo[0]+lpSpeedInfo[1]*lpSpeedInfo[1]+lpSpeedInfo[2]*lpSpeedInfo[2]);
 return perturbed;
 
 };

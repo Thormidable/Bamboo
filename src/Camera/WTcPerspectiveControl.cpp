@@ -13,7 +13,7 @@ cMatrix4 cPerspectiveControl::mm2DProjection;
 
 cPerspectiveControl::cPerspectiveControl()
 {
-	mmPerspective.Setup(1.0f,gpWindow->Ratio(),1.0f,100.0f);
+	mmPerspective.Setup(1.0f,gpWindow->RenderRatio(),1.0f,100.0f);
 	mmPerspective2D.Near(1.0f);
 	mmPerspective2D.Far(10.0f);
 	Identity();
@@ -126,10 +126,10 @@ void cPerspectiveControl::UpdateWindowSize()
 {
  if(Proportional())
  {
-  mfViewportX=mfProportionalX*gpWindow->Width();
-  mfViewportY=mfProportionalY*gpWindow->Height();
-  mfViewportWidth=mfProportionalWidth*gpWindow->Width();
-  mfViewportHeight=mfProportionalHeight*gpWindow->Height();
+  mfViewportX=mfProportionalX*gpWindow->RenderAreaWidth();
+  mfViewportY=mfProportionalY*gpWindow->RenderAreaHeight();
+  mfViewportWidth=mfProportionalWidth*gpWindow->RenderAreaWidth();
+  mfViewportHeight=mfProportionalHeight*gpWindow->RenderAreaHeight();
  }
  UpdateProjectionMatrix();
 }
@@ -192,10 +192,10 @@ void cViewportControl::ClearColor(float lfRed,float lfGreen,float lfBlue,float l
 		mfProportionalWidth=lfWidth;
 		mfProportionalHeight=lfHeight;
 
-		mfViewportHeight=lfHeight*gpWindow->Height();
-		mfViewportWidth=lfWidth*gpWindow->Width();
-		mfViewportX=lfX*gpWindow->Width();
-		mfViewportY=lfY*gpWindow->Height();
+		mfViewportHeight=lfHeight*gpWindow->RenderAreaHeight();
+		mfViewportWidth=lfWidth*gpWindow->RenderAreaWidth();
+		mfViewportX=lfX*gpWindow->RenderAreaWidth();
+		mfViewportY=lfY*gpWindow->RenderAreaHeight();
 	};
 
 	void cViewportControl::ViewportX(float lfX){mfViewportX=lfX;};

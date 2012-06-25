@@ -109,6 +109,8 @@ cParticle::cParticle()
 
 cParticleHandler::~cParticleHandler()
 {
+	delete mpAttributeLinker;
+	delete mpAttributes;
 }
 
 cParticleHandler::cParticleHandler() : cRenderObject(true)
@@ -146,7 +148,7 @@ cParticleHandler::cParticleHandler(cCamera *lpCamera) : cRenderObject(lpCamera,t
 void cParticleHandler::InitialiseParticleHandler(uint32 liParticles)
 {
     mpLastShader=0;
-    mbDepthTest=true;
+    //mbDepthTest=true;
 	lbRefresh=false;
 	Init(liParticles);
 	Transparency(1);
@@ -201,20 +203,11 @@ void cParticleHandler::RenderPainter()
 	Refresh();
 	SetShaderVariables();
 
-    if(!mbDepthTest) glDisable(GL_DEPTH_TEST);
-    //glBlendFunc(GL_ONE, GL_ONE);
-    //glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-    //glBlendFunc(GL_SRC_ALPHA,GL_ONE);
-    glDepthMask(GL_FALSE);
 
 	for(uint32 liCount=0;liCount<Items();++liCount)
 	{
         mpList[liCount].UpdatePos();
 	}
-
-    //CalculateDepth();
-    //InsertionSort(mpList,Items(),CompareDepth);
-    //QuickSort(mpList,0,Items());
 
     if(mpLastShader!=mpShader && mpShader)
     {
@@ -227,12 +220,6 @@ void cParticleHandler::RenderPainter()
 	mpAttributes->Buffer();
     mpAttributeLinker->Write();
     glDrawArrays(GL_POINTS,0,Items());
-
-    glDepthMask(GL_TRUE);
-
-    if(!mbDepthTest) glEnable(GL_DEPTH_TEST);
-
- //   glBlendFunc (GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 
 }
 

@@ -246,21 +246,21 @@ How to use Render Objects</h2>
  *
 </pre></div><p>Currently there are lots of Render Objects:</p>
 <p>class <a class="el" href="classc_model.html" title="A standard Textured Model renderable object.">cModel</a>; <br/>
- class <a class="el" href="classc_landscape.html" title="A height map based, matrix structured Landscape. Landscape is composed of a matrix of square polygons...">cLandscape</a>; <br/>
- class <a class="el" href="classc_beam_mesh.html" title="A Procedurally generated cylindrical Renderable Object. This class will generate a cylinder with spec...">cBeamMesh</a>; <br/>
- class <a class="el" href="classc_image.html" title="A 2D renderable object.">cImage</a>; <br/>
+ class cLandscape; <br/>
+ class cBeamMesh; <br/>
+ class cImage; <br/>
  class cTextureText; <br/>
  class <a class="el" href="classc_line.html" title="A standard renderable Line object.">cLine</a>; <br/>
- class <a class="el" href="classc_particle.html">cParticle</a>; <br/>
+ class cParticle; <br/>
  class cParticleGroup; <br/>
- class <a class="el" href="classc_particle_handler.html">cParticleHandler</a>; <br/>
+ class cParticleHandler; <br/>
  class <a class="el" href="classc_point.html" title="A Renderable object for rendering single points.">cPoint</a>; <br/>
- class <a class="el" href="classc_button.html" title="Renderable Button object for displaying an object as a rendered image. Takes an image and will render...">cButton</a>; <br/>
- class <a class="el" href="classc_text_button.html" title="Renderable Button object for displaying a button as a string of text. Takes a font and will render as...">cTextButton</a>; <br/>
+ class cButton; <br/>
+ class cTextButton; <br/>
  <br/>
  There are also Render Nodes. These do not display on the screen bu manipulate the position of other objects. Essentially they create new co-ordinate systems. This allows objects to be positioned and rotated to other objects or points in space. This allows the 'gluing' or 'linking' of objects together. This allows the creating of models with limbs, or turrets etc. <br/>
  class <a class="el" href="classc_render_node.html" title="This is a dynamic render tree branch. This class stores a dynamic list of cRenderObjects called mpObj...">cRenderNode</a>; <br/>
- class <a class="el" href="classc_node_list.html" title="Node list is a &#39;static&#39; render tree holding data for a series of renderable objects. It counts as a single renderable object.">cNodeList</a>; <br/>
+ class cNodeList; <br/>
  <br/>
  See the relevant documentation for each for how to use them. <br/>
  <br/>
@@ -362,7 +362,7 @@ Detecting Collisions</h2>
 <p>Collision Objects are created using the _CREATE() Macro and killed using the _KILL() Macro, as per a process. They can be slept and woken, like other objects. When Created a Collision Object needs to be linked to a process and a Renderable object. In the initialiser a pointer to a Render Object and a <a class="el" href="classc_process.html" title="This is the base code for a process. This will automatically create a new process. It will hand itself to cKernel to be processed every frame. Any Processes created by the user should inherit this type to be handled by cKernel automatically. Initialisation code should go in the constructor of the user type. Linking to cKernel is performed automatically by cProcess. Update code should go in the function Run(). Coed performed when a process is killed should go in the function Stop(). NOT the destructor. Code to handle Sleeping and Waking signals should go in OnSleep() and OnWake(). Code to handle interaction of two processes should go in either processes UserSignal() function.">cProcess</a> should be handed to the object. Collisions can be Filtered based on an unsigned integer value. When a Collision check is made, a filter can be specified (if not specified or specified as 0 then all collision objects will be checked for a collision) allowing the user only to check against objects the user is interested in. Collisions are very slow and the number of checks should always be minimised. Sphere Collisions are the fastest type, but do not allow any adjustment to fit the object. Objects should be given a filter value to allow them to be searched based on user defined properties. If the objects have no filter they will only be searched when a filter free search is performed. Collision Objects need a media type to define how and when they collide. Objects which are linked to a Renderable Object will be killed when their Renderable object is killed. As such Killing them is not required. This is defined using the Type Function which gives the Collision Object the data it needs and sets the type of collision Object it will be. There are many ways that Type can be set - either handing a pointer to Collision Data object: <br/>
  <br/>
  Types of Collision Data: cCollisionSphere<br/>
- <a class="el" href="classc_mesh_collision.html">cMeshCollision</a><br/>
+ cMeshCollision<br/>
  cCollisionRay<br/>
  cCollisionBeam<br/>
  cCollisionBox<br/>
@@ -418,9 +418,9 @@ Creating Local Co-ordinate systems</h2>
  <span class="comment">//Model is now at 0.0f,0.0f,-10.0f.</span>
 </pre></div><p>To control a Render Object by a Render Node object pass a pointer to the Render Node as the first argument in the Render Objects Constructor. Render Node objects can control any Render Object, including Render Nodes. This means that there can be many levels of Render Nodes before reaching a Renderable Object, making positioning of complex positional relationships easy. <br/>
  <br/>
- <b> <a class="el" href="classc_node_list.html" title="Node list is a &#39;static&#39; render tree holding data for a series of renderable objects. It counts as a single renderable object.">cNodeList</a>:</b> There are also NodeLists. These are static objects. They are initialised to hold a certain number of objects and only support rotations around the local axis. These are good for predictable structure shapes which do not change often. Each object is given a level and will position and rotate itself around the last object with a lower depth value.</p>
+ <b> cNodeList:</b> There are also NodeLists. These are static objects. They are initialised to hold a certain number of objects and only support rotations around the local axis. These are good for predictable structure shapes which do not change often. Each object is given a level and will position and rotate itself around the last object with a lower depth value.</p>
 <div class="fragment"><pre class="fragment"> <span class="comment">//Create a Tree with 14 slots.</span>
- mpNodeList=_CREATE(<a class="code" href="classc_node_list.html" title="Node list is a &#39;static&#39; render tree holding data for a series of renderable objects. It counts as a single renderable object.">cNodeList</a>(14));
+ mpNodeList=_CREATE(cNodeList(14));
 
  <span class="comment">//Create 14 new cModels to fill the NodeList</span>
  uint32 liCount;
@@ -487,7 +487,7 @@ Creating Local Co-ordinate systems</h2>
  <span class="comment">//This can be build into a MeshTree in the IMF Handler so it can be loaded from a file.</span>
 </pre></div> <h2><a class="anchor" id="MultipleCamerasViewports"></a>
 Multiple Cameras and Viewports</h2>
-<p>Bamboo has full support for multiple <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> Objects, <a class="el" href="classc_viewport.html" title="cViewport allows a cCameras Render List to be rendered again from another position and rotation...">cViewport</a> objects and rendering to specified regions. cCameras are seperate cameras. They store a scene graph (tree of vRenderObjects and vRenderNodes) and will render them to the specified region of the screen. cCameras are controlled by signals, so _CREATE() should be used to create them and _KILL() should be used to kill them. Once killed, all objects in their scene graph will be destroyed and so should not be accessed. Each <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> Object has it's own objects so creating a Render Object in one will not affect another. <br/>
+<p>Bamboo has full support for multiple <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> Objects, cViewport objects and rendering to specified regions. cCameras are seperate cameras. They store a scene graph (tree of vRenderObjects and vRenderNodes) and will render them to the specified region of the screen. cCameras are controlled by signals, so _CREATE() should be used to create them and _KILL() should be used to kill them. Once killed, all objects in their scene graph will be destroyed and so should not be accessed. Each <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> Object has it's own objects so creating a Render Object in one will not affect another. <br/>
  cViewports are slightly different. They also render a scene graph to the screen in a specified region, but do not have a scene graph of their own. All cViewports are owned by a <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> object and will render the <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> objects scene graph. This is much more efficient than using a second <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> as only one scene graph is stored and updated. It allows the user to view the same scene as it's camera from a different position, rotation or perspective. All vRenderObjects can be passed a <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> as an argument in their constructor which will make them use the specified <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a>. If they are passed a vRenderNode as a parameter, they will become a child of the <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> which owns the vRenderNode which owns the vRenderObject. the _CAMERA pointer will always point to the first <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> object and will be used as a default when no <a class="el" href="classc_camera.html" title="This class will control the rendering of the render tree. It will handle all the render objects and h...">cCamera</a> is specified. </p>
 <div class="fragment"><pre class="fragment"> <span class="comment">//Create a Model on the default cCamera object and have the cCamera follow it at a distance of 60.</span>
  <a class="code" href="classc_model.html" title="A standard Textured Model renderable object.">cModel</a>* lpModel=_CREATE(<a class="code" href="classc_model.html" title="A standard Textured Model renderable object.">cModel</a>);
@@ -497,11 +497,11 @@ Multiple Cameras and Viewports</h2>
  _CAMERA-&gt;Follow(lpModel,60.0f);
 
  <span class="comment">//Create a Viewport owned by the default cCamera object. and have the cCamera follow it at a distance of 60.</span>
- <a class="code" href="classc_viewport.html" title="cViewport allows a cCameras Render List to be rendered again from another position and rotation...">cViewport</a> *lpViewport=_CREATE(<a class="code" href="classc_viewport.html" title="cViewport allows a cCameras Render List to be rendered again from another position and rotation...">cViewport</a>);
+ cViewport *lpViewport=_CREATE(cViewport);
  <span class="comment">//Set the View port to render to the area X : 100 - 300 and Y : 100 - 400.</span>
- lpViewport-&gt;<a class="code" href="classc_viewport_control.html#aa6a247ab5ceba96ba5fb7e62f437bcab" title="This will set the fixed size of a cViewport Control. Takes X,Y, Width and Height.">Viewport</a>(100.0,100.0,200.0,300.0);
+ lpViewport-&gt;Viewport(100.0,100.0,200.0,300.0);
  <span class="comment">//Set the Viewport to follow the model at a distance of 20</span>
- lpViewport-&gt;<a class="code" href="classc_camera_matrix4.html#aeee787e0f5895a613e8be9efbade408f" title="This will make the camera position itself the distance lfDist behind the matrix lpOther facing in the...">Follow</a>(lpModel,20.0);
+ lpViewport-&gt;Follow(lpModel,20.0);
 
  <span class="comment">//The model will appear twice on screen.</span>
  <span class="comment">//Once across the entire screen at a distance of 60.</span>
@@ -571,7 +571,7 @@ Using the IMF Handler Controls :</h3>
  The "Add Shader Program" button :<br/>
  Shader Programs are not loaded from a file, but generated in the IMF Handler itself. The "Add Shader Program" button will ask for a string reference to identify the shader program. It will then create a new Shader Program in the current Media file. This can be modified by following the instructions in the Shader Program section. <br/>
  The "Add Render Tree" button :<br/>
- This allows the user to generate <a class="el" href="classc_node_list.html" title="Node list is a &#39;static&#39; render tree holding data for a series of renderable objects. It counts as a single renderable object.">cNodeList</a> Objects and store them in an IMF file. <br/>
+ This allows the user to generate cNodeList Objects and store them in an IMF file. <br/>
  The "Save IMF As..." button :<br/>
  Clicking the "Save IMF As..." button will save the current IMF. It will create a dialog to ask for the file name to use. This will write all the objects and references currently loaded into an IMF file. You do not need to add '.imf' to the end of the file name. The files can then be loaded by Bamboo. <br/>
  The "Remove Media" button :<br/>
@@ -693,7 +693,7 @@ Specifics of media types :</h3>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Apr 25 2012 20:37:07 for Bamboo by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Jun 6 2012 10:28:49 for Bamboo by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

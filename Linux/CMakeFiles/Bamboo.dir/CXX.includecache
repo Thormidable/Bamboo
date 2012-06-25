@@ -136,6 +136,8 @@
 
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTv2DPolygon.h
 
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcCircleLineData.h
+
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcLineArrayData.h
 
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTree.h
@@ -236,8 +238,6 @@ boost/shared_ptr.hpp
 
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTMinLinkedList.h
-
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTRadix.h
 
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTcPushPopStack.h
@@ -307,6 +307,8 @@ X11/Xlib.h
 -
 X11/X.h
 -
+X11/cursorfont.h
+-
 AL/al.h
 -
 AL/alc.h
@@ -353,8 +355,6 @@ iomanip
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Windows/WTcWindow.h
 ./PTL/WTLLTemplate.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLLTemplate.h
-./PTL/WTMinLinkedList.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTMinLinkedList.h
 ./PTL/WTLimitedList.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././PTL/WTLimitedList.h
 ./PTL/WTcPushPopStack.h
@@ -483,6 +483,8 @@ iomanip
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcMeshTree.h
 ./Files/Misc/WTcLineArrayData.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcLineArrayData.h
+./Files/Misc/WTcCircleLineData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Files/Misc/WTcCircleLineData.h
 ./Files/Meshes/WTv2DPolygon.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Files/Meshes/WTv2DPolygon.h
 ./Physics/WTcCollisionObject.h
@@ -574,189 +576,195 @@ iomanip
 ./Engine/WTcBase.h
 /media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/.././Engine/WTcBase.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Audio/WTcAudioBuffer.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/WTcRenderObject.cpp
+../WTBamboo.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/../WTBamboo.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Audio/WTcAudioDevice.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Audio/WTcAudioBuffer.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Audio/WTcAudioObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Audio/WTcAudioDevice.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/FX/WTcFog.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Audio/WTcAudioObject.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/FX/WTcLight.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/FX/WTcFog.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/FX/WTcMaterial.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/FX/WTcLight.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/FX/WTcSpotLight.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/FX/WTcMaterial.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/FX/WTvLight.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/FX/WTcSpotLight.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Nodes/WTcNodeList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/FX/WTvLight.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Nodes/WTcRenderNode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Nodes/WTcNodeList.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcAttributeData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Nodes/WTcRenderNode.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcBeamMesh.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcAttributeData.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcBillBoard.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcBeamMesh.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcButton.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcBillBoard.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcImage.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcButton.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcLandscape.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcImage.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcLine.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcLandscape.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcLineArray.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcLine.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcModel.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcLineArray.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcParticle.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcModel.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcParticleGroup.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcParticle.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcParticleSettings.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcParticleGroup.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcPoint.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcParticleSettings.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcStarMap.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcPoint.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcTextureText.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcStarMap.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcCamera.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcTextureText.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcExtraViewport.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcCamera.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcLightHandler.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcExtraViewport.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcPainter.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcLightHandler.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcPerspectiveControl.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcPainter.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcRenderObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcPerspectiveControl.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcRenderOwner.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcRenderObject.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcRenderPointer.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcRenderOwner.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcTextureStack.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcRenderPointer.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTvRenderObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcTextureStack.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Engine/Process/WTcParentStack.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTvRenderObject.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Engine/Process/WTcProcess.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Engine/Process/WTcParentStack.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Engine/WTKernel.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Engine/Process/WTcProcess.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Engine/WTcBase.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Engine/WTKernel.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Engine/WTcFrameRate.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Engine/WTcBase.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Engine/WTcSignal.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Engine/WTcFrameRate.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Audio/WTcAudioData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Engine/WTcSignal.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Audio/WTcSoundObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Audio/WTcAudioData.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcBeamCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Audio/WTcSoundObject.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcCompoundCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcBeamCollision.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcCompoundCollisionFile.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcCompoundCollision.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcMeshCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcCompoundCollisionFile.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcMeshFileCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcMeshCollision.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcMouseCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcMeshFileCollision.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcRayCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcMouseCollision.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcSphereCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcRayCollision.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTvCollisionData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcSphereCollision.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Fonts/WTcFont.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTvCollisionData.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/MeshClasses/WTcCluster.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Fonts/WTcFont.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/MeshClasses/WTcFace.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/MeshClasses/WTcCluster.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/MeshClasses/WTcFullFaceData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/MeshClasses/WTcFace.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/MeshClasses/WTcPlane.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/MeshClasses/WTcFullFaceData.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/MeshClasses/WTcPolygon.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/MeshClasses/WTcPlane.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/MeshClasses/WTcVertex.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/MeshClasses/WTcPolygon.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcAsteroid.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/MeshClasses/WTcVertex.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcIcoSphere.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcAsteroid.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcMesh.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcIcoSphere.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcUVSphere.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcMesh.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcmLandscape.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcUVSphere.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTv2DPolygon.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcmLandscape.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcLineArrayData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTv2DPolygon.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcMeshTree.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcCircleLineData.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcMeshTreeNode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcLineArrayData.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcReferenceList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcMeshTree.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTvMeshTree.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcMeshTreeNode.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTcShader.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcReferenceList.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTcShaderProgram.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTvMeshTree.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTcShaderVariables.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Shaders/WTcShader.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTcUserDefinedShaderVariable.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Shaders/WTcShaderProgram.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Textures/WTcSeamlessTextureClasses.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Shaders/WTcShaderVariables.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Textures/WTcTexture.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Shaders/WTcUserDefinedShaderVariable.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Textures/WTcTextureGenerator.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Textures/WTcSeamlessTextureClasses.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/WTString.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Textures/WTcTexture.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/WTcFile.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Textures/WTcTextureGenerator.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/WTcFileHandler.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/WTString.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/WTcIMFLoader.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/WTcFile.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/WTvFile.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/WTcFileHandler.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/CException.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/WTcIMFLoader.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/WTvFile.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/CException.h
 string
 -
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/GlobalPointers.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/GlobalPointers.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/IMFDefinitions.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/IMFDefinitions.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/WTDefinitions.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/WTDefinitions.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/WTKeyStateDefinitions.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/WTKeyStateDefinitions.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/WTSetDefinitions.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/WTSetDefinitions.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/WTSettings.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/WTSettings.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/WTcFlags.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/WTcFlags.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/log.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/log.h
 string
 -
 ostream
@@ -768,87 +776,85 @@ vector
 boost/shared_ptr.hpp
 -
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTMath.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTMath.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc2DVt.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc2DVt.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc2DVtCode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc2DVtCode.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc3DVt.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc3DVt.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc3DVtCode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc3DVtCode.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc4DVt.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc4DVt.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc4DVtCode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc4DVtCode.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcCameraMatrix4.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcCameraMatrix4.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcColors.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcColors.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcDoubleMatrix4.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcDoubleMatrix4.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcMatrix4.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcMatrix4.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcMatrixStack.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcMatrixStack.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcMomentum.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcMomentum.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcPerspectiveMatrix.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcPerspectiveMatrix.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcPredictiveTracking.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcPredictiveTracking.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcSimplexNoise.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcSimplexNoise.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTLLTemplate.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTLLTemplate.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTLimitedList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTLimitedList.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTMinLinkedList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTRadix.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTRadix.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTcPushPopStack.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTcPushPopStack.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTcSingleton.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTcSingleton.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Physics/WTcCollisionBase.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Physics/WTcCollisionBase.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Physics/WTcCollisionHandler.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Physics/WTcCollisionHandler.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Physics/WTcCollisionList.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Physics/WTcCollisionList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Physics/WTcCollisionObject.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Physics/WTcCollisionObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Physics/WTcMouseCollisionObject.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Physics/WTcMouseCollisionObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././WTOsBits.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././WTOsBits.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/EventHandler/WTcEventHandler.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/EventHandler/WTcEventHandler.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/EventHandler/WTcKeyStore.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/EventHandler/WTcKeyStore.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/EventHandler/WTcKeyToggle.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/EventHandler/WTcKeyToggle.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/EventHandler/WTcMouse.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/EventHandler/WTcMouse.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/WTWindowsKeyCodes.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/WTWindowsKeyCodes.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/WTXWindowsKeyCodes.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/WTXWindowsKeyCodes.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/WTcSync.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/WTcSync.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/WTcWindow.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/WTcWindow.h
-
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../../WTBamboo.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/../WTBamboo.h
 stdint.h
 -
 unistd.h
 -
 ./WTOsBits.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././WTOsBits.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././WTOsBits.h
 ./Global/WTKeyStateDefinitions.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/WTKeyStateDefinitions.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/WTKeyStateDefinitions.h
 windows.h
 -
 glew.h
@@ -864,7 +870,7 @@ al.h
 alc.h
 -
 ./Windows/WTWindowsKeyCodes.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/WTWindowsKeyCodes.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/WTWindowsKeyCodes.h
 GL/glxew.h
 -
 sys/time.h
@@ -875,22 +881,24 @@ X11/Xlib.h
 -
 X11/X.h
 -
+X11/cursorfont.h
+-
 AL/al.h
 -
 AL/alc.h
 -
 ./Windows/WTXWindowsKeyCodes.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/WTXWindowsKeyCodes.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/WTXWindowsKeyCodes.h
 ./Global/WTDefinitions.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/WTDefinitions.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/WTDefinitions.h
 ./Global/WTSettings.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/WTSettings.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/WTSettings.h
 ./Global/WTSetDefinitions.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/WTSetDefinitions.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/WTSetDefinitions.h
 ./Global/IMFDefinitions.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/IMFDefinitions.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/IMFDefinitions.h
 ./Global/WTcFlags.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/WTcFlags.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/WTcFlags.h
 typeinfo
 -
 cmath
@@ -906,247 +914,817 @@ sstream
 iomanip
 -
 ./Global/GlobalPointers.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/GlobalPointers.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/GlobalPointers.h
 ./Global/log.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/log.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/log.h
 ./Global/CException.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Global/CException.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Global/CException.h
 ./PTL/WTcSingleton.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTcSingleton.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTcSingleton.h
 ./PTL/WTRadix.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTRadix.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTRadix.h
 ./Windows/WTcSync.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/WTcSync.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/WTcSync.h
 ./Windows/WTcWindow.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/WTcWindow.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/WTcWindow.h
 ./PTL/WTLLTemplate.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTLLTemplate.h
-./PTL/WTMinLinkedList.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTMinLinkedList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTLLTemplate.h
 ./PTL/WTLimitedList.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTLimitedList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTLimitedList.h
 ./PTL/WTcPushPopStack.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././PTL/WTcPushPopStack.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././PTL/WTcPushPopStack.h
 ./Maths/WTMath.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTMath.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTMath.h
 ./Maths/WTc2DVt.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc2DVt.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc2DVt.h
 ./Maths/WTc3DVt.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc3DVt.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc3DVt.h
 ./Maths/WTc4DVt.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc4DVt.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc4DVt.h
 ./Maths/WTcColors.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcColors.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcColors.h
 ./Maths/WTcMatrix4.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcMatrix4.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcMatrix4.h
 ./Maths/WTcDoubleMatrix4.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcDoubleMatrix4.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcDoubleMatrix4.h
 ./Maths/WTcMomentum.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcMomentum.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcMomentum.h
 ./Maths/WTcPerspectiveMatrix.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcPerspectiveMatrix.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcPerspectiveMatrix.h
 ./Maths/WTcMatrixStack.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcMatrixStack.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcMatrixStack.h
 ./Maths/WTcCameraMatrix4.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcCameraMatrix4.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcCameraMatrix4.h
 ./Maths/WTcPredictiveTracking.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcPredictiveTracking.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcPredictiveTracking.h
 ./Maths/WTcSimplexNoise.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTcSimplexNoise.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTcSimplexNoise.h
 ./Files/WTString.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/WTString.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/WTString.h
 ./Maths/WTc2DVtCode.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc2DVtCode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc2DVtCode.h
 ./Maths/WTc3DVtCode.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc3DVtCode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc3DVtCode.h
 ./Maths/WTc4DVtCode.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Maths/WTc4DVtCode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Maths/WTc4DVtCode.h
 ./Engine/WTcSignal.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Engine/WTcSignal.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Engine/WTcSignal.h
 ./Engine/WTKernel.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Engine/WTKernel.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Engine/WTKernel.h
 ./Engine/Process/WTcParentStack.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Engine/Process/WTcParentStack.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Engine/Process/WTcParentStack.h
 ./Engine/Process/WTcProcess.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Engine/Process/WTcProcess.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Engine/Process/WTcProcess.h
 ./Engine/WTcFrameRate.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Engine/WTcFrameRate.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Engine/WTcFrameRate.h
 ./Files/WTvFile.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/WTvFile.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/WTvFile.h
 ./Files/WTcFileHandler.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/WTcFileHandler.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/WTcFileHandler.h
 ./Files/WTcFile.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/WTcFile.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/WTcFile.h
 ./Files/Misc/WTcReferenceList.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcReferenceList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcReferenceList.h
 ./Files/WTcIMFLoader.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/WTcIMFLoader.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/WTcIMFLoader.h
 ./Files/Meshes/MeshClasses/WTcVertex.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/MeshClasses/WTcVertex.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/MeshClasses/WTcVertex.h
 ./Files/Meshes/MeshClasses/WTcPlane.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/MeshClasses/WTcPlane.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/MeshClasses/WTcPlane.h
 ./Files/Meshes/MeshClasses/WTcFace.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/MeshClasses/WTcFace.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/MeshClasses/WTcFace.h
 ./Files/Meshes/MeshClasses/WTcFullFaceData.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/MeshClasses/WTcFullFaceData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/MeshClasses/WTcFullFaceData.h
 ./Files/Meshes/MeshClasses/WTcPolygon.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/MeshClasses/WTcPolygon.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/MeshClasses/WTcPolygon.h
 ./Files/Meshes/MeshClasses/WTcCluster.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/MeshClasses/WTcCluster.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/MeshClasses/WTcCluster.h
 ./Physics/WTcCollisionBase.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Physics/WTcCollisionBase.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Physics/WTcCollisionBase.h
 ./Files/CollisionMeshes/WTvCollisionData.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTvCollisionData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTvCollisionData.h
 ./Files/CollisionMeshes/WTcSphereCollision.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcSphereCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcSphereCollision.h
 ./Files/CollisionMeshes/WTcMeshCollision.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcMeshCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcMeshCollision.h
 ./Files/CollisionMeshes/WTcBeamCollision.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcBeamCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcBeamCollision.h
 ./Files/CollisionMeshes/WTcRayCollision.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcRayCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcRayCollision.h
 ./Files/CollisionMeshes/WTcMeshFileCollision.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcMeshFileCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcMeshFileCollision.h
 ./Files/CollisionMeshes/WTcCompoundCollision.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcCompoundCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcCompoundCollision.h
 ./Files/CollisionMeshes/WTcCompoundCollisionFile.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcCompoundCollisionFile.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcCompoundCollisionFile.h
 ./Files/CollisionMeshes/WTcMouseCollision.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/CollisionMeshes/WTcMouseCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/CollisionMeshes/WTcMouseCollision.h
 ./Files/Textures/WTcTexture.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Textures/WTcTexture.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Textures/WTcTexture.h
 ./Files/Textures/WTcSeamlessTextureClasses.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Textures/WTcSeamlessTextureClasses.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Textures/WTcSeamlessTextureClasses.h
 ./Files/Textures/WTcTextureGenerator.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Textures/WTcTextureGenerator.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Textures/WTcTextureGenerator.h
 ./Files/Fonts/WTcFont.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Fonts/WTcFont.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Fonts/WTcFont.h
 ./Files/Shaders/WTcShader.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTcShader.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Shaders/WTcShader.h
 ./Files/Shaders/WTcShaderVariables.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTcShaderVariables.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Shaders/WTcShaderVariables.h
 ./Files/Shaders/WTcUserDefinedShaderVariable.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTcUserDefinedShaderVariable.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Shaders/WTcUserDefinedShaderVariable.h
 ./Files/Shaders/WTcShaderProgram.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Shaders/WTcShaderProgram.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Shaders/WTcShaderProgram.h
 ./Camera/FX/WTcFog.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/FX/WTcFog.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/FX/WTcFog.h
 ./Camera/WTcRenderOwner.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcRenderOwner.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcRenderOwner.h
 ./Camera/WTvRenderObject.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTvRenderObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTvRenderObject.h
 ./Files/Meshes/WTcMesh.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcMesh.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcMesh.h
 ./Files/Meshes/WTcAsteroid.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcAsteroid.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcAsteroid.h
 ./Files/Meshes/WTcUVSphere.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcUVSphere.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcUVSphere.h
 ./Files/Meshes/WTcIcoSphere.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcIcoSphere.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcIcoSphere.h
 ./Files/Misc/WTcMeshTreeNode.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcMeshTreeNode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcMeshTreeNode.h
 ./Files/Misc/WTvMeshTree.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTvMeshTree.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTvMeshTree.h
 ./Files/Misc/WTcMeshTree.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcMeshTree.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcMeshTree.h
 ./Files/Misc/WTcLineArrayData.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Misc/WTcLineArrayData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcLineArrayData.h
+./Files/Misc/WTcCircleLineData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Misc/WTcCircleLineData.h
 ./Files/Meshes/WTv2DPolygon.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTv2DPolygon.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTv2DPolygon.h
 ./Physics/WTcCollisionObject.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Physics/WTcCollisionObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Physics/WTcCollisionObject.h
 ./Camera/WTcTextureStack.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcTextureStack.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcTextureStack.h
 ./Camera/WTcPerspectiveControl.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcPerspectiveControl.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcPerspectiveControl.h
 ./Camera/WTcCamera.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcCamera.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcCamera.h
 ./Camera/WTcExtraViewport.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcExtraViewport.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcExtraViewport.h
 ./Camera/WTcRenderPointer.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcRenderPointer.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcRenderPointer.h
 ./Camera/WTcRenderObject.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcRenderObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcRenderObject.h
 ./Physics/WTcMouseCollisionObject.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Physics/WTcMouseCollisionObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Physics/WTcMouseCollisionObject.h
 ./Camera/Nodes/WTcRenderNode.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Nodes/WTcRenderNode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Nodes/WTcRenderNode.h
 ./Camera/Nodes/WTcNodeList.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Nodes/WTcNodeList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Nodes/WTcNodeList.h
 ./Camera/Renderable/WTcAttributeData.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcAttributeData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcAttributeData.h
 ./Files/Meshes/WTcmLandscape.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Meshes/WTcmLandscape.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Meshes/WTcmLandscape.h
 ./Camera/FX/WTcMaterial.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/FX/WTcMaterial.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/FX/WTcMaterial.h
 ./Camera/FX/WTvLight.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/FX/WTvLight.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/FX/WTvLight.h
 ./Camera/WTcLightHandler.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcLightHandler.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcLightHandler.h
 ./Camera/FX/WTcLight.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/FX/WTcLight.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/FX/WTcLight.h
 ./Camera/FX/WTcSpotLight.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/FX/WTcSpotLight.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/FX/WTcSpotLight.h
 ./Camera/Renderable/WTcImage.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcImage.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcImage.h
 ./Camera/Renderable/WTcTextureText.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcTextureText.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcTextureText.h
 ./Camera/Renderable/WTcModel.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcModel.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcModel.h
 ./Camera/Renderable/WTcLandscape.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcLandscape.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcLandscape.h
 ./Camera/Renderable/WTcPoint.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcPoint.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcPoint.h
 ./Camera/Renderable/WTcBillBoard.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcBillBoard.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcBillBoard.h
 ./Camera/Renderable/WTcLine.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcLine.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcLine.h
 ./Camera/Renderable/WTcLineArray.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcLineArray.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcLineArray.h
 ./Camera/Renderable/WTcParticleSettings.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcParticleSettings.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcParticleSettings.h
 ./Camera/Renderable/WTcParticle.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcParticle.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcParticle.h
 ./Camera/Renderable/WTcParticleGroup.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcParticleGroup.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcParticleGroup.h
 ./Camera/Renderable/WTcBeamMesh.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcBeamMesh.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcBeamMesh.h
 ./Camera/Renderable/WTcButton.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcButton.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcButton.h
 ./Camera/Renderable/WTcStarMap.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/Renderable/WTcStarMap.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/Renderable/WTcStarMap.h
 ./Camera/WTcPainter.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Camera/WTcPainter.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Camera/WTcPainter.h
 ./Windows/EventHandler/WTcKeyStore.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/EventHandler/WTcKeyStore.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/EventHandler/WTcKeyStore.h
 ./Windows/EventHandler/WTcKeyToggle.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/EventHandler/WTcKeyToggle.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/EventHandler/WTcKeyToggle.h
 ./Windows/EventHandler/WTcMouse.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/EventHandler/WTcMouse.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/EventHandler/WTcMouse.h
 ./Windows/EventHandler/WTcEventHandler.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Windows/EventHandler/WTcEventHandler.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Windows/EventHandler/WTcEventHandler.h
 ./Audio/WTcAudioDevice.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Audio/WTcAudioDevice.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Audio/WTcAudioDevice.h
 ./Audio/WTcAudioBuffer.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Audio/WTcAudioBuffer.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Audio/WTcAudioBuffer.h
 ./Audio/WTcAudioObject.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Audio/WTcAudioObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Audio/WTcAudioObject.h
 ./Files/Audio/WTcAudioData.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Audio/WTcAudioData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Audio/WTcAudioData.h
 ./Files/Audio/WTcSoundObject.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Files/Audio/WTcSoundObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Files/Audio/WTcSoundObject.h
 ./Physics/WTcCollisionList.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Physics/WTcCollisionList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Physics/WTcCollisionList.h
 ./Physics/WTcCollisionHandler.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Physics/WTcCollisionHandler.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Physics/WTcCollisionHandler.h
 ./Engine/WTcBase.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../.././Engine/WTcBase.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/.././Engine/WTcBase.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/WTcRenderNode.cpp
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Audio/WTcAudioBuffer.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Audio/WTcAudioDevice.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Audio/WTcAudioObject.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/FX/WTcFog.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/FX/WTcLight.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/FX/WTcMaterial.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/FX/WTcSpotLight.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/FX/WTvLight.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Nodes/WTcNodeList.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Nodes/WTcRenderNode.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcAttributeData.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcBeamMesh.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcBillBoard.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcButton.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcImage.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcLandscape.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcLine.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcLineArray.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcModel.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcParticle.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcParticleGroup.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcParticleSettings.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcPoint.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcStarMap.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcTextureText.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcCamera.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcExtraViewport.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcLightHandler.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcPainter.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcPerspectiveControl.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcRenderObject.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcRenderOwner.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcRenderPointer.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcTextureStack.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTvRenderObject.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Engine/Process/WTcParentStack.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Engine/Process/WTcProcess.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Engine/WTKernel.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Engine/WTcBase.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Engine/WTcFrameRate.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Engine/WTcSignal.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Audio/WTcAudioData.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Audio/WTcSoundObject.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcBeamCollision.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcCompoundCollision.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcCompoundCollisionFile.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcMeshCollision.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcMeshFileCollision.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcMouseCollision.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcRayCollision.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcSphereCollision.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTvCollisionData.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Fonts/WTcFont.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/MeshClasses/WTcCluster.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/MeshClasses/WTcFace.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/MeshClasses/WTcFullFaceData.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/MeshClasses/WTcPlane.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/MeshClasses/WTcPolygon.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/MeshClasses/WTcVertex.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcAsteroid.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcIcoSphere.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcMesh.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcUVSphere.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcmLandscape.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTv2DPolygon.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcCircleLineData.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcLineArrayData.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcMeshTree.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcMeshTreeNode.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcReferenceList.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTvMeshTree.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShader.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShaderProgram.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShaderVariables.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcUserDefinedShaderVariable.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Textures/WTcSeamlessTextureClasses.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Textures/WTcTexture.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Textures/WTcTextureGenerator.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/WTString.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/WTcFile.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/WTcFileHandler.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/WTcIMFLoader.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/WTvFile.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/CException.h
+string
+-
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/GlobalPointers.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/IMFDefinitions.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTDefinitions.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTKeyStateDefinitions.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTSetDefinitions.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTSettings.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTcFlags.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/log.h
+string
+-
+ostream
+-
+map
+-
+vector
+-
+boost/shared_ptr.hpp
+-
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTMath.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc2DVt.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc2DVtCode.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc3DVt.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc3DVtCode.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc4DVt.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc4DVtCode.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcCameraMatrix4.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcColors.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcDoubleMatrix4.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMatrix4.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMatrixStack.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMomentum.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcPerspectiveMatrix.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcPredictiveTracking.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcSimplexNoise.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLLTemplate.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLimitedList.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTRadix.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTcPushPopStack.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTcSingleton.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Physics/WTcCollisionBase.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Physics/WTcCollisionHandler.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Physics/WTcCollisionList.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Physics/WTcCollisionObject.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Physics/WTcMouseCollisionObject.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././WTOsBits.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/EventHandler/WTcEventHandler.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/EventHandler/WTcKeyStore.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/EventHandler/WTcKeyToggle.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/EventHandler/WTcMouse.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/WTWindowsKeyCodes.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/WTXWindowsKeyCodes.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/WTcSync.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/WTcWindow.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../../WTBamboo.h
+stdint.h
+-
+unistd.h
+-
+./WTOsBits.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././WTOsBits.h
+./Global/WTKeyStateDefinitions.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTKeyStateDefinitions.h
+windows.h
+-
+glew.h
+-
+glext.h
+-
+wglext.h
+-
+GL/gl.h
+-
+al.h
+-
+alc.h
+-
+./Windows/WTWindowsKeyCodes.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/WTWindowsKeyCodes.h
+GL/glxew.h
+-
+sys/time.h
+-
+X11/keysym.h
+-
+X11/Xlib.h
+-
+X11/X.h
+-
+X11/cursorfont.h
+-
+AL/al.h
+-
+AL/alc.h
+-
+./Windows/WTXWindowsKeyCodes.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/WTXWindowsKeyCodes.h
+./Global/WTDefinitions.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTDefinitions.h
+./Global/WTSettings.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTSettings.h
+./Global/WTSetDefinitions.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTSetDefinitions.h
+./Global/IMFDefinitions.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/IMFDefinitions.h
+./Global/WTcFlags.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/WTcFlags.h
+typeinfo
+-
+cmath
+-
+cstring
+-
+iostream
+-
+fstream
+-
+sstream
+-
+iomanip
+-
+./Global/GlobalPointers.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/GlobalPointers.h
+./Global/log.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/log.h
+./Global/CException.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Global/CException.h
+./PTL/WTcSingleton.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTcSingleton.h
+./PTL/WTRadix.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTRadix.h
+./Windows/WTcSync.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/WTcSync.h
+./Windows/WTcWindow.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/WTcWindow.h
+./PTL/WTLLTemplate.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLLTemplate.h
+./PTL/WTLimitedList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTLimitedList.h
+./PTL/WTcPushPopStack.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././PTL/WTcPushPopStack.h
+./Maths/WTMath.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTMath.h
+./Maths/WTc2DVt.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc2DVt.h
+./Maths/WTc3DVt.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc3DVt.h
+./Maths/WTc4DVt.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc4DVt.h
+./Maths/WTcColors.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcColors.h
+./Maths/WTcMatrix4.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMatrix4.h
+./Maths/WTcDoubleMatrix4.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcDoubleMatrix4.h
+./Maths/WTcMomentum.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMomentum.h
+./Maths/WTcPerspectiveMatrix.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcPerspectiveMatrix.h
+./Maths/WTcMatrixStack.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcMatrixStack.h
+./Maths/WTcCameraMatrix4.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcCameraMatrix4.h
+./Maths/WTcPredictiveTracking.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcPredictiveTracking.h
+./Maths/WTcSimplexNoise.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTcSimplexNoise.h
+./Files/WTString.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/WTString.h
+./Maths/WTc2DVtCode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc2DVtCode.h
+./Maths/WTc3DVtCode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc3DVtCode.h
+./Maths/WTc4DVtCode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Maths/WTc4DVtCode.h
+./Engine/WTcSignal.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Engine/WTcSignal.h
+./Engine/WTKernel.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Engine/WTKernel.h
+./Engine/Process/WTcParentStack.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Engine/Process/WTcParentStack.h
+./Engine/Process/WTcProcess.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Engine/Process/WTcProcess.h
+./Engine/WTcFrameRate.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Engine/WTcFrameRate.h
+./Files/WTvFile.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/WTvFile.h
+./Files/WTcFileHandler.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/WTcFileHandler.h
+./Files/WTcFile.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/WTcFile.h
+./Files/Misc/WTcReferenceList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcReferenceList.h
+./Files/WTcIMFLoader.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/WTcIMFLoader.h
+./Files/Meshes/MeshClasses/WTcVertex.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/MeshClasses/WTcVertex.h
+./Files/Meshes/MeshClasses/WTcPlane.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/MeshClasses/WTcPlane.h
+./Files/Meshes/MeshClasses/WTcFace.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/MeshClasses/WTcFace.h
+./Files/Meshes/MeshClasses/WTcFullFaceData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/MeshClasses/WTcFullFaceData.h
+./Files/Meshes/MeshClasses/WTcPolygon.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/MeshClasses/WTcPolygon.h
+./Files/Meshes/MeshClasses/WTcCluster.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/MeshClasses/WTcCluster.h
+./Physics/WTcCollisionBase.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Physics/WTcCollisionBase.h
+./Files/CollisionMeshes/WTvCollisionData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTvCollisionData.h
+./Files/CollisionMeshes/WTcSphereCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcSphereCollision.h
+./Files/CollisionMeshes/WTcMeshCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcMeshCollision.h
+./Files/CollisionMeshes/WTcBeamCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcBeamCollision.h
+./Files/CollisionMeshes/WTcRayCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcRayCollision.h
+./Files/CollisionMeshes/WTcMeshFileCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcMeshFileCollision.h
+./Files/CollisionMeshes/WTcCompoundCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcCompoundCollision.h
+./Files/CollisionMeshes/WTcCompoundCollisionFile.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcCompoundCollisionFile.h
+./Files/CollisionMeshes/WTcMouseCollision.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/CollisionMeshes/WTcMouseCollision.h
+./Files/Textures/WTcTexture.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Textures/WTcTexture.h
+./Files/Textures/WTcSeamlessTextureClasses.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Textures/WTcSeamlessTextureClasses.h
+./Files/Textures/WTcTextureGenerator.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Textures/WTcTextureGenerator.h
+./Files/Fonts/WTcFont.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Fonts/WTcFont.h
+./Files/Shaders/WTcShader.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShader.h
+./Files/Shaders/WTcShaderVariables.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShaderVariables.h
+./Files/Shaders/WTcUserDefinedShaderVariable.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcUserDefinedShaderVariable.h
+./Files/Shaders/WTcShaderProgram.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Shaders/WTcShaderProgram.h
+./Camera/FX/WTcFog.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/FX/WTcFog.h
+./Camera/WTcRenderOwner.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcRenderOwner.h
+./Camera/WTvRenderObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTvRenderObject.h
+./Files/Meshes/WTcMesh.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcMesh.h
+./Files/Meshes/WTcAsteroid.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcAsteroid.h
+./Files/Meshes/WTcUVSphere.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcUVSphere.h
+./Files/Meshes/WTcIcoSphere.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcIcoSphere.h
+./Files/Misc/WTcMeshTreeNode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcMeshTreeNode.h
+./Files/Misc/WTvMeshTree.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTvMeshTree.h
+./Files/Misc/WTcMeshTree.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcMeshTree.h
+./Files/Misc/WTcLineArrayData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcLineArrayData.h
+./Files/Misc/WTcCircleLineData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Misc/WTcCircleLineData.h
+./Files/Meshes/WTv2DPolygon.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTv2DPolygon.h
+./Physics/WTcCollisionObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Physics/WTcCollisionObject.h
+./Camera/WTcTextureStack.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcTextureStack.h
+./Camera/WTcPerspectiveControl.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcPerspectiveControl.h
+./Camera/WTcCamera.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcCamera.h
+./Camera/WTcExtraViewport.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcExtraViewport.h
+./Camera/WTcRenderPointer.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcRenderPointer.h
+./Camera/WTcRenderObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcRenderObject.h
+./Physics/WTcMouseCollisionObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Physics/WTcMouseCollisionObject.h
+./Camera/Nodes/WTcRenderNode.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Nodes/WTcRenderNode.h
+./Camera/Nodes/WTcNodeList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Nodes/WTcNodeList.h
+./Camera/Renderable/WTcAttributeData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcAttributeData.h
+./Files/Meshes/WTcmLandscape.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Meshes/WTcmLandscape.h
+./Camera/FX/WTcMaterial.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/FX/WTcMaterial.h
+./Camera/FX/WTvLight.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/FX/WTvLight.h
+./Camera/WTcLightHandler.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcLightHandler.h
+./Camera/FX/WTcLight.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/FX/WTcLight.h
+./Camera/FX/WTcSpotLight.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/FX/WTcSpotLight.h
+./Camera/Renderable/WTcImage.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcImage.h
+./Camera/Renderable/WTcTextureText.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcTextureText.h
+./Camera/Renderable/WTcModel.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcModel.h
+./Camera/Renderable/WTcLandscape.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcLandscape.h
+./Camera/Renderable/WTcPoint.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcPoint.h
+./Camera/Renderable/WTcBillBoard.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcBillBoard.h
+./Camera/Renderable/WTcLine.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcLine.h
+./Camera/Renderable/WTcLineArray.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcLineArray.h
+./Camera/Renderable/WTcParticleSettings.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcParticleSettings.h
+./Camera/Renderable/WTcParticle.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcParticle.h
+./Camera/Renderable/WTcParticleGroup.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcParticleGroup.h
+./Camera/Renderable/WTcBeamMesh.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcBeamMesh.h
+./Camera/Renderable/WTcButton.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcButton.h
+./Camera/Renderable/WTcStarMap.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/Renderable/WTcStarMap.h
+./Camera/WTcPainter.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Camera/WTcPainter.h
+./Windows/EventHandler/WTcKeyStore.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/EventHandler/WTcKeyStore.h
+./Windows/EventHandler/WTcKeyToggle.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/EventHandler/WTcKeyToggle.h
+./Windows/EventHandler/WTcMouse.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/EventHandler/WTcMouse.h
+./Windows/EventHandler/WTcEventHandler.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Windows/EventHandler/WTcEventHandler.h
+./Audio/WTcAudioDevice.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Audio/WTcAudioDevice.h
+./Audio/WTcAudioBuffer.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Audio/WTcAudioBuffer.h
+./Audio/WTcAudioObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Audio/WTcAudioObject.h
+./Files/Audio/WTcAudioData.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Audio/WTcAudioData.h
+./Files/Audio/WTcSoundObject.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Files/Audio/WTcSoundObject.h
+./Physics/WTcCollisionList.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Physics/WTcCollisionList.h
+./Physics/WTcCollisionHandler.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Physics/WTcCollisionHandler.h
+./Engine/WTcBase.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../.././Engine/WTcBase.h
+
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/WTcMouse.cpp
 ../../WTBamboo.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Nodes/../../WTBamboo.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/EventHandler/../../WTBamboo.h
 
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/WTcRenderObject.cpp
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/WTcWindow.cpp
 ../WTBamboo.h
-/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/../WTBamboo.h
+/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/../WTBamboo.h
 

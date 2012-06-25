@@ -70,12 +70,6 @@ virtual void RenderToPainter()=0;
 
  virtual void KillAll()=0;
 
- /**
- * \brief Will move the current renderable object from the current cRenderNode to lpNode.
- * \param lpNode The cRenderNode which will now own this renderable object.
- * \return This function returns the new cLinkedNode which now owns this renderable object.
- */
- cRenderOwner &SetRenderNode(vRenderNode *lpNode);
 
 /**
 * \brief This will calculate on the fly the global position matrix of the object. It does not contain Cameras Position Matrix.
@@ -103,7 +97,11 @@ cCamera *Camera();
 		float GetScreenY(cViewport *lpView);
 
 #endif
-
+ 		/**
+ 		* \brief Will move the current renderable object from the current cRenderNode to lpNode.
+ 		* \param lpNode The cRenderNode which will now own this renderable object.
+ 		* This function will not move vRenderNode objects which are owned by cCamera Objects or cViewportObjects.
+ 		*/
 		void Renderer(vRenderNode *lpNode);
 
 		cRenderOwner RenderOwner();
@@ -116,13 +114,13 @@ cCamera *Camera();
 		virtual double GetSizeSq();
 
 		///This will signal all objects with processes above this Node in the tree, with the function UserSignal()
-		virtual void TreeProcessUserSignal(SIGNAL lsSignal,void *lpData){(void) lsSignal; (void) lpData;};
+		virtual void TreeProcessUserSignal(SIGNAL lsSignal,void *lpData);
 
 		///This will signal all objects with processes above this Node in the tree, with the function Signal()
-		virtual void TreeProcessSignal(SIGNAL lsSignal){(void) lsSignal; };
+		virtual void TreeProcessSignal(SIGNAL lsSignal);
 
 
-		virtual void TreeSignal(SIGNAL lsSignal){Signal(lsSignal);};
+		virtual void TreeSignal(SIGNAL lsSignal);
 
         c3DVf FindRelativeCoord(c3DVf GlobalPos);
  };

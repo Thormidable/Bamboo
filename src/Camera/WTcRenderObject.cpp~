@@ -28,6 +28,8 @@ vRenderObject::vRenderObject()
 
 cRenderObject::~cRenderObject()
 {
+    mbAlive=false;
+    mbAwake=false;
     if(mpCollisionObject)
 	{
 		_KILL(mpCollisionObject);
@@ -154,16 +156,6 @@ void cRenderObject::Delete()
 {
 
 }
-
-cRenderOwner &vRenderObject::SetRenderNode(vRenderNode *lpRenderer)
-{
- if(mpRenderer==lpRenderer) return mcOwnerNode;
- //if(mpRenderer) mpRenderer->Remove(mcOwnerNode);
- mpRenderer=lpRenderer;
- mcOwnerNode=lpRenderer->Add(this);
- return mcOwnerNode;
-}
-
 
 void cRenderObject::AdditionalRenderFunctions()
 {
@@ -456,8 +448,8 @@ void cRenderObject::AddTexture(string lsTextureSlot,string lcTextureReference)
 c3DVf vRenderObject::GetScreenPosition()
 {
 	 c3DVf lfReturn;
- if(mpCamera)
- {
+ //if(mpCamera)
+// {
  float lfPos[4];
 
  lfReturn.X(1.0f/mmTotalCache[15]);
@@ -469,7 +461,7 @@ c3DVf vRenderObject::GetScreenPosition()
  lfReturn.X(mpCamera->ViewportX() + mpCamera->ViewportWidth() * (lfPos[0]+1.0f)*0.5f);
  lfReturn.Y(mpCamera->ViewportY() + mpCamera->ViewportHeight() *(lfPos[1]+1.0f)*0.5f);
  lfReturn.Z(mpCamera->Near() + (mpCamera->Far()-mpCamera->Near())*lfPos[2]);
- }
+// }
  return lfReturn;
 }
 
@@ -521,7 +513,8 @@ cCamera *vRenderObject::Camera()
 
 void vRenderObject::Renderer(vRenderNode *lpNode)
 {
- mcOwnerNode=mpRenderer->MoveItem(this,lpNode);
+ if(mpRenderer) mcOwnerNode=mpRenderer->MoveItem(this,lpNode);
+
 }
 
 cRenderOwner vRenderObject::RenderOwner(){return mcOwnerNode;}
@@ -541,3 +534,21 @@ cProcess *vRenderObject::Process()
 {
  return mpProcess;
 };
+
+c3DVf vRenderObject::FindRelativeCoord(c3DVf GlobalPos)
+{
+    return mmCache.FindPointRelative(GlobalPos);
+};
+
+void TreeProcessUserSignal(SIGNAL lsSignal,void *lpData)
+{
+ if(mpProcess) mpProcess->UserSignal(lsSignal,lpData);
+}
+void TreeProcessSignal(SIGNAL lsSignal)
+{
+ if(mpProcess) mpProcess->Signal(lsSignal);
+}
+void TreeSignal(SIGNAL lsSignal)
+{
+ Signal(lsSignal);
+}
