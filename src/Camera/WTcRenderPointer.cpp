@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 
@@ -38,6 +39,7 @@ mpShader=reinterpret_cast<psize>(lpShader);
 ShaderPoint=lpShader;
 miAlpha=lbAlpha;
 }
+
 
 void cRenderPointer::UpdateTexture(uint8 liTexSlot)
 {

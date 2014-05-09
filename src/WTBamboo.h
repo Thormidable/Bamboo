@@ -2,7 +2,6 @@
 #define __WTBAMBOO_H__
 
 
-
 /**
  * \mainpage Starting with @EngineName
  * \section MainPageIntro Introduction
@@ -3941,7 +3940,9 @@ public:
 	#include "./Windows/WTXWindowsKeyCodes.h"
 #endif
 
+//#include <enet/enet.h>
 #include "./Global/WTDefinitions.h"
+//#include "./Global/WTNetworkDefinitions.h"
 #include "./Global/WTSettings.h"
 
 
@@ -3949,14 +3950,15 @@ public:
 #include "./Global/IMFDefinitions.h"
 #include "./Global/WTcFlags.h"
 
+#ifndef _COMPILED_IN_VS
+	#include <dirent.h>
+#endif
 
 #include <typeinfo>
 
 //#include <GL/gl.h>
 
-
-
-
+#include <cstdlib>
 #include <cmath>
 #include <cstring>
 #include <iostream>
@@ -3978,11 +3980,10 @@ public:
 #include "./PTL/WTLimitedList.h"
 #include "./PTL/WTcPushPopStack.h"
 
-
-#include "./Maths/WTMath.h"
 #include "./Maths/WTc2DVt.h"
 #include "./Maths/WTc3DVt.h"
 #include "./Maths/WTc4DVt.h"
+#include "./Maths/WTMath.h"
 #include "./Maths/WTcColors.h"
 #include "./Maths/WTcMatrix4.h"
 #include "./Maths/WTcDoubleMatrix4.h"
@@ -3993,8 +3994,6 @@ public:
 #include "./Maths/WTcPredictiveTracking.h"
 #include "./Maths/WTcSimplexNoise.h"
 #include "./Files/WTString.h"
-
-
 
 #include "./Maths/WTc2DVtCode.h"
 #include "./Maths/WTc3DVtCode.h"
@@ -4009,6 +4008,7 @@ public:
 #include "./Files/WTvFile.h"
 #include "./Files/WTcFileHandler.h"
 #include "./Files/WTcFile.h"
+#include "./Files/WTcParser.h"
 
 #include "./Files/Misc/WTcReferenceList.h"
 
@@ -4055,6 +4055,7 @@ public:
 #include "./Files/Misc/WTcMeshTree.h"
 #include "./Files/Misc/WTcLineArrayData.h"
 #include "./Files/Misc/WTcCircleLineData.h"
+#include "./Files/Misc/WTcSettingsFile.h"
 
 #include "./Files/Meshes/WTv2DPolygon.h"
 
@@ -4116,6 +4117,16 @@ public:
 
 #include "./Engine/WTcBase.h"
 
+#include "./Engine/Process/WTcToggleButton.h"
+#include "./Engine/Process/WTcMessageFeed.h"
+#include "./Engine/Process/WTcTextBoxWidget.h"
+#include "./Engine/Process/WTcSliderWidget.h"
+#include "./Engine/Process/WTcSelectionWidget.h"
+#include "./Engine/Process/WTcSelectionImageWidget.h"
 
-
+/*
+#include "./Networking/WTcNetworkBase.h"
+#include "./Networking/WTcP2PClient.h"
+#include "./Networking/WTcP2PHost.h"
+*/
 #endif

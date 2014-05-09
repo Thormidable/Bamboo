@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 int cMouse::LockedX(){return miLockedX;};
@@ -10,7 +11,7 @@ cMouse::cMouse()
  middle=0;
  locked=false;
  miShown=true;
-x=y=xs=ys=cx=cy=0.0f;
+cz=z=zs=x=y=xs=ys=cx=cy=0;
 #if WT_OS_TYPE==OS_LINUX
 	mcCursor = XCreateFontCursor(gpWindow->lpDisplay, XC_left_ptr);
 #endif
@@ -18,62 +19,84 @@ x=y=xs=ys=cx=cy=0.0f;
 
 void cMouse::Update()
 {
+
 if(locked)
 {
 #if WT_OS_TYPE==OS_WIN32
-	xs=x-cx;
-	ys=y-cy;
-	x=cx;
-	y=cy;
-	//printf("Render Area : %f %f\n",gpWindow->RenderAreaX(),gpWindow->RenderAreaY());
-	SetCursorPos(cx+gpWindow->WindowX(),cy+gpWindow->WindowY());
+	/*xs=cx-x;
+	ys=cy-y;
+	cx=x;
+	cy=y;
+	*/
+    xs=x-cx;
+	ys=gpWindow->RenderAreaHeight()-y-cy;
+	miLockedX=x=cx;
+	miLockedY=y=gpWindow->RenderAreaHeight()-cy;
+    if(cx<gpWindow->RenderAreaWidth()*0.4 || cx>gpWindow->RenderAreaWidth()*0.6 || cy<gpWindow->RenderAreaWidth()*0.4 || cy>gpWindow->RenderAreaHeight()*0.6)
+	{
+        x=gpWindow->RenderAreaWidth()*0.5;
+        y=gpWindow->RenderAreaHeight()*0.5;
+        SetCursorPos(x+gpWindow->WindowX(),y+gpWindow->WindowY());
+	}
 #endif
 #if WT_OS_TYPE==OS_LINUX
-	xs=cx-x;
-	ys=cy-y;
-	gpWindow->MovePointer(cx,cy);
+    xs=x-cx;
+	ys=gpWindow->RenderAreaHeight()-y-cy;
+	miLockedX=x=cx;
+	miLockedY=y=gpWindow->RenderAreaHeight()-cy;
+    if(cx<0.4*gpWindow->RenderAreaWidth() || cx>gpWindow->RenderAreaWidth()*0.6 || cy<0.4*gpWindow->RenderAreaHeight() || cy>gpWindow->RenderAreaHeight()*0.6)
+	{
+	    x=gpWindow->RenderAreaWidth()*0.5;
+        y=gpWindow->RenderAreaHeight()*0.5;
+        gpWindow->MovePointer(x,y);
+	}
 #endif
 }
 else
 {
-	xs=cx-x;
-	ys=cy-y;
+	xs=x-cx;
+	ys=gpWindow->RenderAreaHeight()-y-cy;
 	miLockedX=x=cx;
-	miLockedY=y=cy;
+	miLockedY=y=gpWindow->RenderAreaHeight()-cy;
 }
+zs=cz;
+z+=cz;
+cz=0;
 }
 
 bool cMouse::Locked(){return locked;};
 
 void cMouse::Lock()
 {
+
  if(_MOUSE->locked) return;
 
  miLockedX=cx;
  miLockedY=cy;
 
- //miLockedX=cx;
- //miLockedY=cy;
-
  locked=true;
- cx=gpWindow->RenderAreaWidth()*0.5;
- cy=gpWindow->RenderAreaHeight()*0.5;
+ cx=x=gpWindow->RenderAreaWidth()*0.5;
+ cy=y=gpWindow->RenderAreaHeight()*0.5;
 #if WT_OS_TYPE==OS_WIN32
-	SetCursorPos(cx+gpWindow->WindowX(),cy+gpWindow->WindowY());
+	SetCursorPos(x+gpWindow->WindowX(),y+gpWindow->WindowY());
 #endif
 #if WT_OS_TYPE==OS_LINUX
-	x=cx;
-	y=cy;
-	gpWindow->MovePointer(cx,cy);
+
+	gpWindow->MovePointer(x,y);
 #endif
+
 }
 
 void cMouse::Unlock()
 {
+
 if(!_MOUSE->locked) return;
  locked=false;
  cx=x;
  cy=y;
+
+ //XUngrabPointer(gpWindow->lpDisplay,CurrentTime);
+
 }
  #if WT_OS_TYPE==OS_WIN32
 void cMouse::Hide()
@@ -117,6 +140,7 @@ int cMouse::Y(){return y;};
 int cMouse::Z(){return z;};
 int cMouse::XSpeed(){return xs;};
 int cMouse::YSpeed(){return ys;};
+int cMouse::ZSpeed(){return zs;};
 bool cMouse::Left(){return left;};
 bool cMouse::Right(){return right;};
 bool cMouse::Middle(){return middle;};
@@ -154,31 +178,14 @@ void cMouse::UnlockPosition()
 
 void cMouse::SetPos(int lX,int lY)
 {
-if (!Locked())
-         {
-            cx=lX;
-            cy=lY;
-         }
-         else
-         {
-            x=lX;
-            y=lY;
-         }
+    cx=lX;
+    cy=lY;
 };
-void cMouse::SetPos(int lX,int lY,int lZ)
+
+
+void cMouse::SetWheelPos(int liSize)
 {
-if (!Locked())
-         {
-            cx=lX;
-            cy=lY;
-            //cz=lZ;
-         }
-         else
-         {
-            x=lX;
-            y=lY;
-            z=lZ;
-         }
+    cz+=liSize;
 };
 void cMouse::SetLeft(bool lbLeft){left=lbLeft;};
 void cMouse::SetRight(bool lbRight){right=lbRight;};

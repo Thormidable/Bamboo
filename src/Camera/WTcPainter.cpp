@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 void *cPainter::lpValue=0;
@@ -297,53 +298,86 @@ if(miPos)
      SortByAlpha();
 
     glEnableClientState(GL_VERTEX_ARRAY);
-    glEnableClientState(GL_NORMAL_ARRAY);
+    //glEnableClientState(GL_NORMAL_ARRAY);
     glEnable(GL_DEPTH_TEST);
 
-       ShaderState(mpList[0]->ShaderPoint,0);
-          uint8 liTexSlot;
+    cRenderPointer *lpCurrentRenderPointer=mpList[0];
+    cRenderObject *lpCurrentObject=lpCurrentRenderPointer->mpObject;
+
+       ShaderState(lpCurrentRenderPointer->ShaderPoint,0);
+		uint8 liTexSlot;
         for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
         {
-          mpList[0]->mpObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
+          lpCurrentObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
         }
 
-      if(mpList[0]->miAlpha) glDepthMask(GL_FALSE);
+      if(lpCurrentRenderPointer->miAlpha) glDepthMask(GL_FALSE);
       else glDepthMask(GL_TRUE);
 
       #if WT_FULL_VERSION_BAMBOO
-        if(_LIGHT->AnyLights() && mpList[0]->mpObject->Lighting()) _LIGHT->PrepareLight(&(mpList[0]->mpObject->mmCache));
+        if(_LIGHT->AnyLights() && lpCurrentObject->Lighting()) _LIGHT->PrepareLight(&(lpCurrentObject->mmCache));
       #endif
 
-        if(mpList[0]->mpShader) mpList[0]->mpObject->RenderPainter();
+        if(lpCurrentObject->NormalArray())
+            glEnableClientState(GL_NORMAL_ARRAY);
+        else
+            glDisableClientState(GL_NORMAL_ARRAY);
+        if(lpCurrentObject->UVArray())
+            glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+        else
+            glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+
+        if(lpCurrentRenderPointer->mpShader) lpCurrentObject->RenderPainter();
+
 
      for(liCount=1;liCount<miPos;liCount++)
      {
-          ShaderState(mpList[liCount]->ShaderPoint,mpList[liCount-1]->ShaderPoint);
+         lpCurrentRenderPointer=mpList[liCount];
+         lpCurrentObject=lpCurrentRenderPointer->mpObject;
+         cRenderPointer *lpLastRenderPointer=mpList[liCount-1];
+
+          ShaderState(lpCurrentRenderPointer->ShaderPoint,lpLastRenderPointer->ShaderPoint);
        uint8 liTexSlot;
 
-    if(mpList[liCount]->ShaderPoint!=mpList[liCount-1]->ShaderPoint)
+    if(lpCurrentRenderPointer->ShaderPoint!=lpLastRenderPointer->ShaderPoint)
     {
         for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
         {
-                mpList[liCount]->mpObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
+                lpCurrentObject->TextureItem(liTexSlot).FirstTextureState(liTexSlot);
         }
     }
     else
     {
         for(liTexSlot=0;liTexSlot<WT_TEXTURE_NUMBER_ALLOWED;++liTexSlot)
         {
-                mpList[liCount]->mpObject->TextureItem(liTexSlot).TextureState(&(mpList[liCount-1]->mpObject->TextureItem(liTexSlot)),liTexSlot);
+                lpCurrentObject->TextureItem(liTexSlot).TextureState(&(lpLastRenderPointer->mpObject->TextureItem(liTexSlot)),liTexSlot);
         }
     }
 
-	DepthState(mpList[liCount]->miAlpha,mpList[liCount-1]->miAlpha);
+	DepthState(lpCurrentRenderPointer->miAlpha,lpLastRenderPointer->miAlpha);
 
 
       #if WT_FULL_VERSION_BAMBOO
-        if(_LIGHT->AnyLights() && mpList[liCount]->mpObject->Lighting()) _LIGHT->PrepareLight(&(mpList[liCount]->mpObject->mmCache));
+        if(_LIGHT->AnyLights() && lpCurrentObject->Lighting()) _LIGHT->PrepareLight(&(lpCurrentObject->mmCache));
       #endif
 
-        if(mpList[liCount]->mpShader) mpList[liCount]->mpObject->RenderPainter();
+
+        if(lpCurrentObject->NormalArray()!=lpLastRenderPointer->mpObject->NormalArray())
+        {
+          if(lpCurrentObject->NormalArray())
+            glEnableClientState(GL_NORMAL_ARRAY);
+          else
+            glDisableClientState(GL_NORMAL_ARRAY);
+        }
+        if(lpCurrentObject->UVArray()!=lpLastRenderPointer->mpObject->UVArray())
+        {
+            if(lpCurrentObject->UVArray())
+                glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+            else
+                glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+        }
+
+        if(lpCurrentRenderPointer->mpShader) lpCurrentObject->RenderPainter();
 
      }
 }

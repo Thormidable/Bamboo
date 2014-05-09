@@ -8,7 +8,7 @@ default_target: all
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canoncical targets will work.
+# Disable implicit rules so canonical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -660,30 +660,6 @@ Camera/Renderable/WTcStarMap.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.s
 .PHONY : Camera/Renderable/WTcStarMap.cpp.s
 
-Camera/Renderable/WTcTextureText.o: Camera/Renderable/WTcTextureText.cpp.o
-.PHONY : Camera/Renderable/WTcTextureText.o
-
-# target to build an object file
-Camera/Renderable/WTcTextureText.cpp.o:
-	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o
-.PHONY : Camera/Renderable/WTcTextureText.cpp.o
-
-Camera/Renderable/WTcTextureText.i: Camera/Renderable/WTcTextureText.cpp.i
-.PHONY : Camera/Renderable/WTcTextureText.i
-
-# target to preprocess a source file
-Camera/Renderable/WTcTextureText.cpp.i:
-	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.i
-.PHONY : Camera/Renderable/WTcTextureText.cpp.i
-
-Camera/Renderable/WTcTextureText.s: Camera/Renderable/WTcTextureText.cpp.s
-.PHONY : Camera/Renderable/WTcTextureText.s
-
-# target to generate assembly for a file
-Camera/Renderable/WTcTextureText.cpp.s:
-	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.s
-.PHONY : Camera/Renderable/WTcTextureText.cpp.s
-
 Camera/WTcCamera.o: Camera/WTcCamera.cpp.o
 .PHONY : Camera/WTcCamera.o
 
@@ -900,6 +876,30 @@ Camera/WTcTextureStack.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.s
 .PHONY : Camera/WTcTextureStack.cpp.s
 
+Engine/Process/WTcMessageFeed.o: Engine/Process/WTcMessageFeed.cpp.o
+.PHONY : Engine/Process/WTcMessageFeed.o
+
+# target to build an object file
+Engine/Process/WTcMessageFeed.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcMessageFeed.cpp.o
+.PHONY : Engine/Process/WTcMessageFeed.cpp.o
+
+Engine/Process/WTcMessageFeed.i: Engine/Process/WTcMessageFeed.cpp.i
+.PHONY : Engine/Process/WTcMessageFeed.i
+
+# target to preprocess a source file
+Engine/Process/WTcMessageFeed.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcMessageFeed.cpp.i
+.PHONY : Engine/Process/WTcMessageFeed.cpp.i
+
+Engine/Process/WTcMessageFeed.s: Engine/Process/WTcMessageFeed.cpp.s
+.PHONY : Engine/Process/WTcMessageFeed.s
+
+# target to generate assembly for a file
+Engine/Process/WTcMessageFeed.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcMessageFeed.cpp.s
+.PHONY : Engine/Process/WTcMessageFeed.cpp.s
+
 Engine/Process/WTcParentStack.o: Engine/Process/WTcParentStack.cpp.o
 .PHONY : Engine/Process/WTcParentStack.o
 
@@ -947,6 +947,126 @@ Engine/Process/WTcProcess.s: Engine/Process/WTcProcess.cpp.s
 Engine/Process/WTcProcess.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.s
 .PHONY : Engine/Process/WTcProcess.cpp.s
+
+Engine/Process/WTcSelectionImageWidget.o: Engine/Process/WTcSelectionImageWidget.cpp.o
+.PHONY : Engine/Process/WTcSelectionImageWidget.o
+
+# target to build an object file
+Engine/Process/WTcSelectionImageWidget.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcSelectionImageWidget.cpp.o
+.PHONY : Engine/Process/WTcSelectionImageWidget.cpp.o
+
+Engine/Process/WTcSelectionImageWidget.i: Engine/Process/WTcSelectionImageWidget.cpp.i
+.PHONY : Engine/Process/WTcSelectionImageWidget.i
+
+# target to preprocess a source file
+Engine/Process/WTcSelectionImageWidget.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcSelectionImageWidget.cpp.i
+.PHONY : Engine/Process/WTcSelectionImageWidget.cpp.i
+
+Engine/Process/WTcSelectionImageWidget.s: Engine/Process/WTcSelectionImageWidget.cpp.s
+.PHONY : Engine/Process/WTcSelectionImageWidget.s
+
+# target to generate assembly for a file
+Engine/Process/WTcSelectionImageWidget.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcSelectionImageWidget.cpp.s
+.PHONY : Engine/Process/WTcSelectionImageWidget.cpp.s
+
+Engine/Process/WTcSelectionWidget.o: Engine/Process/WTcSelectionWidget.cpp.o
+.PHONY : Engine/Process/WTcSelectionWidget.o
+
+# target to build an object file
+Engine/Process/WTcSelectionWidget.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcSelectionWidget.cpp.o
+.PHONY : Engine/Process/WTcSelectionWidget.cpp.o
+
+Engine/Process/WTcSelectionWidget.i: Engine/Process/WTcSelectionWidget.cpp.i
+.PHONY : Engine/Process/WTcSelectionWidget.i
+
+# target to preprocess a source file
+Engine/Process/WTcSelectionWidget.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcSelectionWidget.cpp.i
+.PHONY : Engine/Process/WTcSelectionWidget.cpp.i
+
+Engine/Process/WTcSelectionWidget.s: Engine/Process/WTcSelectionWidget.cpp.s
+.PHONY : Engine/Process/WTcSelectionWidget.s
+
+# target to generate assembly for a file
+Engine/Process/WTcSelectionWidget.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcSelectionWidget.cpp.s
+.PHONY : Engine/Process/WTcSelectionWidget.cpp.s
+
+Engine/Process/WTcSliderWidget.o: Engine/Process/WTcSliderWidget.cpp.o
+.PHONY : Engine/Process/WTcSliderWidget.o
+
+# target to build an object file
+Engine/Process/WTcSliderWidget.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcSliderWidget.cpp.o
+.PHONY : Engine/Process/WTcSliderWidget.cpp.o
+
+Engine/Process/WTcSliderWidget.i: Engine/Process/WTcSliderWidget.cpp.i
+.PHONY : Engine/Process/WTcSliderWidget.i
+
+# target to preprocess a source file
+Engine/Process/WTcSliderWidget.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcSliderWidget.cpp.i
+.PHONY : Engine/Process/WTcSliderWidget.cpp.i
+
+Engine/Process/WTcSliderWidget.s: Engine/Process/WTcSliderWidget.cpp.s
+.PHONY : Engine/Process/WTcSliderWidget.s
+
+# target to generate assembly for a file
+Engine/Process/WTcSliderWidget.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcSliderWidget.cpp.s
+.PHONY : Engine/Process/WTcSliderWidget.cpp.s
+
+Engine/Process/WTcTextBoxWidget.o: Engine/Process/WTcTextBoxWidget.cpp.o
+.PHONY : Engine/Process/WTcTextBoxWidget.o
+
+# target to build an object file
+Engine/Process/WTcTextBoxWidget.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcTextBoxWidget.cpp.o
+.PHONY : Engine/Process/WTcTextBoxWidget.cpp.o
+
+Engine/Process/WTcTextBoxWidget.i: Engine/Process/WTcTextBoxWidget.cpp.i
+.PHONY : Engine/Process/WTcTextBoxWidget.i
+
+# target to preprocess a source file
+Engine/Process/WTcTextBoxWidget.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcTextBoxWidget.cpp.i
+.PHONY : Engine/Process/WTcTextBoxWidget.cpp.i
+
+Engine/Process/WTcTextBoxWidget.s: Engine/Process/WTcTextBoxWidget.cpp.s
+.PHONY : Engine/Process/WTcTextBoxWidget.s
+
+# target to generate assembly for a file
+Engine/Process/WTcTextBoxWidget.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcTextBoxWidget.cpp.s
+.PHONY : Engine/Process/WTcTextBoxWidget.cpp.s
+
+Engine/Process/WTcToggleButton.o: Engine/Process/WTcToggleButton.cpp.o
+.PHONY : Engine/Process/WTcToggleButton.o
+
+# target to build an object file
+Engine/Process/WTcToggleButton.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcToggleButton.cpp.o
+.PHONY : Engine/Process/WTcToggleButton.cpp.o
+
+Engine/Process/WTcToggleButton.i: Engine/Process/WTcToggleButton.cpp.i
+.PHONY : Engine/Process/WTcToggleButton.i
+
+# target to preprocess a source file
+Engine/Process/WTcToggleButton.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcToggleButton.cpp.i
+.PHONY : Engine/Process/WTcToggleButton.cpp.i
+
+Engine/Process/WTcToggleButton.s: Engine/Process/WTcToggleButton.cpp.s
+.PHONY : Engine/Process/WTcToggleButton.s
+
+# target to generate assembly for a file
+Engine/Process/WTcToggleButton.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Engine/Process/WTcToggleButton.cpp.s
+.PHONY : Engine/Process/WTcToggleButton.cpp.s
 
 Engine/WTKernel.o: Engine/WTKernel.cpp.o
 .PHONY : Engine/WTKernel.o
@@ -1716,6 +1836,30 @@ Files/Misc/WTcReferenceList.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.s
 .PHONY : Files/Misc/WTcReferenceList.cpp.s
 
+Files/Misc/WTcSettingsFile.o: Files/Misc/WTcSettingsFile.cpp.o
+.PHONY : Files/Misc/WTcSettingsFile.o
+
+# target to build an object file
+Files/Misc/WTcSettingsFile.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Misc/WTcSettingsFile.cpp.o
+.PHONY : Files/Misc/WTcSettingsFile.cpp.o
+
+Files/Misc/WTcSettingsFile.i: Files/Misc/WTcSettingsFile.cpp.i
+.PHONY : Files/Misc/WTcSettingsFile.i
+
+# target to preprocess a source file
+Files/Misc/WTcSettingsFile.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Misc/WTcSettingsFile.cpp.i
+.PHONY : Files/Misc/WTcSettingsFile.cpp.i
+
+Files/Misc/WTcSettingsFile.s: Files/Misc/WTcSettingsFile.cpp.s
+.PHONY : Files/Misc/WTcSettingsFile.s
+
+# target to generate assembly for a file
+Files/Misc/WTcSettingsFile.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/Misc/WTcSettingsFile.cpp.s
+.PHONY : Files/Misc/WTcSettingsFile.cpp.s
+
 Files/Shaders/WTcShader.o: Files/Shaders/WTcShader.cpp.o
 .PHONY : Files/Shaders/WTcShader.o
 
@@ -1955,6 +2099,30 @@ Files/WTcIMFLoader.s: Files/WTcIMFLoader.cpp.s
 Files/WTcIMFLoader.cpp.s:
 	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.s
 .PHONY : Files/WTcIMFLoader.cpp.s
+
+Files/WTcParser.o: Files/WTcParser.cpp.o
+.PHONY : Files/WTcParser.o
+
+# target to build an object file
+Files/WTcParser.cpp.o:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/WTcParser.cpp.o
+.PHONY : Files/WTcParser.cpp.o
+
+Files/WTcParser.i: Files/WTcParser.cpp.i
+.PHONY : Files/WTcParser.i
+
+# target to preprocess a source file
+Files/WTcParser.cpp.i:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/WTcParser.cpp.i
+.PHONY : Files/WTcParser.cpp.i
+
+Files/WTcParser.s: Files/WTcParser.cpp.s
+.PHONY : Files/WTcParser.s
+
+# target to generate assembly for a file
+Files/WTcParser.cpp.s:
+	$(MAKE) -f CMakeFiles/Bamboo.dir/build.make CMakeFiles/Bamboo.dir/Files/WTcParser.cpp.s
+.PHONY : Files/WTcParser.cpp.s
 
 Global/WTSettings.o: Global/WTSettings.cpp.o
 .PHONY : Global/WTSettings.o
@@ -2562,9 +2730,6 @@ help:
 	@echo "... Camera/Renderable/WTcStarMap.o"
 	@echo "... Camera/Renderable/WTcStarMap.i"
 	@echo "... Camera/Renderable/WTcStarMap.s"
-	@echo "... Camera/Renderable/WTcTextureText.o"
-	@echo "... Camera/Renderable/WTcTextureText.i"
-	@echo "... Camera/Renderable/WTcTextureText.s"
 	@echo "... Camera/WTcCamera.o"
 	@echo "... Camera/WTcCamera.i"
 	@echo "... Camera/WTcCamera.s"
@@ -2592,12 +2757,30 @@ help:
 	@echo "... Camera/WTcTextureStack.o"
 	@echo "... Camera/WTcTextureStack.i"
 	@echo "... Camera/WTcTextureStack.s"
+	@echo "... Engine/Process/WTcMessageFeed.o"
+	@echo "... Engine/Process/WTcMessageFeed.i"
+	@echo "... Engine/Process/WTcMessageFeed.s"
 	@echo "... Engine/Process/WTcParentStack.o"
 	@echo "... Engine/Process/WTcParentStack.i"
 	@echo "... Engine/Process/WTcParentStack.s"
 	@echo "... Engine/Process/WTcProcess.o"
 	@echo "... Engine/Process/WTcProcess.i"
 	@echo "... Engine/Process/WTcProcess.s"
+	@echo "... Engine/Process/WTcSelectionImageWidget.o"
+	@echo "... Engine/Process/WTcSelectionImageWidget.i"
+	@echo "... Engine/Process/WTcSelectionImageWidget.s"
+	@echo "... Engine/Process/WTcSelectionWidget.o"
+	@echo "... Engine/Process/WTcSelectionWidget.i"
+	@echo "... Engine/Process/WTcSelectionWidget.s"
+	@echo "... Engine/Process/WTcSliderWidget.o"
+	@echo "... Engine/Process/WTcSliderWidget.i"
+	@echo "... Engine/Process/WTcSliderWidget.s"
+	@echo "... Engine/Process/WTcTextBoxWidget.o"
+	@echo "... Engine/Process/WTcTextBoxWidget.i"
+	@echo "... Engine/Process/WTcTextBoxWidget.s"
+	@echo "... Engine/Process/WTcToggleButton.o"
+	@echo "... Engine/Process/WTcToggleButton.i"
+	@echo "... Engine/Process/WTcToggleButton.s"
 	@echo "... Engine/WTKernel.o"
 	@echo "... Engine/WTKernel.i"
 	@echo "... Engine/WTKernel.s"
@@ -2694,6 +2877,9 @@ help:
 	@echo "... Files/Misc/WTcReferenceList.o"
 	@echo "... Files/Misc/WTcReferenceList.i"
 	@echo "... Files/Misc/WTcReferenceList.s"
+	@echo "... Files/Misc/WTcSettingsFile.o"
+	@echo "... Files/Misc/WTcSettingsFile.i"
+	@echo "... Files/Misc/WTcSettingsFile.s"
 	@echo "... Files/Shaders/WTcShader.o"
 	@echo "... Files/Shaders/WTcShader.i"
 	@echo "... Files/Shaders/WTcShader.s"
@@ -2724,6 +2910,9 @@ help:
 	@echo "... Files/WTcIMFLoader.o"
 	@echo "... Files/WTcIMFLoader.i"
 	@echo "... Files/WTcIMFLoader.s"
+	@echo "... Files/WTcParser.o"
+	@echo "... Files/WTcParser.i"
+	@echo "... Files/WTcParser.s"
 	@echo "... Global/WTSettings.o"
 	@echo "... Global/WTSettings.i"
 	@echo "... Global/WTSettings.s"

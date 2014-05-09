@@ -11,6 +11,7 @@
 #define FACE_TYPE uint16
 #define SEAM_ID_TYPE uint16
 #define SEAM_VOID_VALUE 0xFFFF
+#define NETWORK_SIGNAL_TYPE uint8
 
 #if WT_OS_BITS==OS_32_BIT
 
@@ -73,6 +74,8 @@
 
 #define cAttributeNormalMap cAttributeData<cRGBA>
 
+
+
 #define _PROCESS(TYPE) class TYPE : public cProcess
 
 #define WT_EXIT_SUCCESS 0
@@ -110,9 +113,18 @@
 #define _KEY(_CHOSEN_KEY) cEventHandler::Instance()->Key.GetKey(_CHOSEN_KEY)
 ///This is a quick code for accessing the Keyboard object of type cKeyStore.
 #define _KEYBOARD cEventHandler::Instance()->Keyboard()
+///This is a quick code for accessing the number of Key Presses this frame. See cKeyPressed.
+#define _PRESSED_KEYS() cKeyPressed::PressedKeys()
+///This is a quick code for accessing the actual Key Presses this frame (rather than Key states). See cKeyPressed.
+#define _PRESSED_KEY(Key) cKeyPressed::PressedKey(Key)
+///This is a quick code for accessing the actual key pressed characters. See cKeyPressed.
+#define _PRESSED_KEY_CHARACTER(Key) cKeyPressed::PressedCharacter(Key)
 
-///This is a quick code for Loading an IMF file with cIMF::L0.0oadIMF()
+
+///This is a quick code for Loading an IMF file with cIMF::LoadIMF()
 #define _LOAD_FILE(FileName) cIMF::LoadIMF(FileName)
+///This is a quick code for Loading a text settings file into cSettingsStore.
+#define _LOAD_SETTINGS_FILE(FileName) cSettingsStore::Instance()->Load(FileName)
 ///This is a quick macro for returning the pointer to a file. (cFileHandler::File()).
 #define _GET_FILE(FileType,FileName) (cFileHandler::Instance()->File<FileType>(FileName))
 ///Will activate the shader with the reference. This is a slow and inefficient way to call shaders. Get a pointer and call ->Use().
@@ -136,6 +148,21 @@
 #define _GET_MODELLIST_FILE(Reference) _GET_FILE(cMeshTree,Reference)
 ///Will return a pointer to a cCompoundCollisionFileObject in memory with the text identifier Reference.
 #define _GET_COMPOUND_COLLISION_FILE(Reference) _GET_FILE(cCompoundCollisionFile,Reference)
+
+///Will return a pointer to the Instance of the cSettingsStore class.
+#define _SETTINGS_STORE cSettingsStore::Instance()
+///Will return the float with the name SETTINGNAME which has been loaded from a settings file.
+#define _GET_SETTINGS_FLOAT(SETTINGNAME) cSettingsStore::Instance()->GetFloat(SETTINGNAME)
+///Will return the int32 with the name SETTINGNAME which has been loaded from a settings file.
+#define _GET_SETTINGS_INTEGER(SETTINGNAME) cSettingsStore::Instance()->GetInt(SETTINGNAME)
+///Will return the string with the name SETTINGNAME which has been loaded from a settings file.
+#define _GET_SETTINGS_STRING(SETTINGNAME) cSettingsStore::Instance()->GetString(SETTINGNAME)
+///Will return the float with the name SETTINGNAME which has been loaded from a settings file.
+#define _GET_SETTINGS_FLOAT_ARRAY(SETTINGNAME) cSettingsStore::Instance()->GetFloatArray(SETTINGNAME)
+///Will return the int32 with the name SETTINGNAME which has been loaded from a settings file.
+#define _GET_SETTINGS_INTEGER_ARRAY(SETTINGNAME) cSettingsStore::Instance()->GetIntArray(SETTINGNAME)
+///Will return the string with the name SETTINGNAME which has been loaded from a settings file.
+#define _GET_SETTINGS_STRING_ARRAY(SETTINGNAME) cSettingsStore::Instance()->GetStringArray(SETTINGNAME)
 
 #define _MODEL_POINTER cTexturedModel*
 #define _LAND_POINTER cLandscape*
@@ -277,16 +304,16 @@
 #define WT_LANDSCAPE_TEXTURE_METHOD_INDIVIDUAL 1
 #define WT_LANDSCAPE_TEXTURE_METHOD_RANDOM 2
 
-///Accessor for the Frame Rate class. Returns a pointer to the class for controlling Frame rate.
-#define _FRAME_RATE cFrameRate::Instance()
 ///Returns a float specifying the current time for a frame measured in seconds.
-#define _TIME_PER_FRAME _FRAME_RATE->FrameTime()
+#define _TIME_PER_FRAME cFrameRate::FrameTime()
 ///Returns an unsigned integer specifying the number of frames per second.
-#define _FPS _FRAME_RATE->FramesPerSecond()
+#define _FPS cFrameRate::FramesPerSecond()
 ///Returns an unsigned integer specifying number of processor cycles run for each frame.
-#define _PPF _FRAME_RATE->ProcessesPerFrame()
+#define _PPF cFrameRate::ProcessesPerFrame()
 ///Returns a float specifying the amount of time for each process in seconds.
-#define _PROCESS_TIME _FRAME_RATE->ProcessTime()
+#define _PROCESS_TIME cFrameRate::ProcessTime()
+
+#define _FRAME_DELAY_MS cFrameRate::ProcessTime()
 
 
 
@@ -305,7 +332,7 @@
 		#define UINT_MAX 0xFFFFFFFFFFFFFFFF
 	#endif
 #endif
-	#define OS_TIME_SCALING 1
+	#define OS_TIME_SCALING 3000
 
 	#define SEED_RANDOM_NUMBERS srand(GetTickCount());
 #endif

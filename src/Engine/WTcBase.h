@@ -1,7 +1,9 @@
 #ifndef __WTCBASE_H__
 #define __WTCBASE_H__
 
+#ifdef USE_LOGGING
 extern string __scopeSource;
+#endif
 
 #if WT_OS_TYPE==OS_WIN32
 
@@ -22,24 +24,26 @@ public:
  	///Function for Starting the Engine and Game. Will Create a window and initialise all components of the engine. It will create and instance of cX and enter the main loop.
 	static uint32 Start(HINSTANCE hInstance)
 	{
+     #ifdef USE_LOGGING
         LOGGING_INIT()
         LOGGING_ADD_FILE("main","main.log")
-
         TRACE("Entering")
-
+    try{
+    #endif
 		gpSettings =new cS;
 		cSettings *mpCast;
 		mpCast=dynamic_cast<cSettings*>(gpSettings);
 		mpCast->cSettings::Settings();
 		gpSettings->Settings();
 		if(mpCast) cSettings::SetupVariables();
+
+        cFrameRate::Initialise();
+
 		gpWindow=new cWindow(hInstance);
-
-
 
 		cMainThread::GetGLVersion();
 
-		gpTimer=new cSync();
+		gpTimer=cSync::Instance();
 
 		cEventHandler::Instance();
 
@@ -56,6 +60,14 @@ public:
 		gpSettings=0;
 		delete cKernel::Instance();
 		TRACE("Finished Bamboo V 1.2");
+		#ifdef USE_LOGGING
+            } catch(CException e) {
+                cerr << "Unhandled exception:" << e.message << endl;
+                TRACEERROR("Unhandled exception:" << e.message);
+                return 1;
+            }
+		#endif
+
 		return gpWindow->msg.wParam;
 	};
 	///This will detect the Version of OpenGL the system is using as well as the GLSL compiler and print the data to the screen.
@@ -65,26 +77,14 @@ public:
 	// for all versions
       char* verGL = (char*)glGetString(GL_VERSION); // ver = "3.2.0"
 
-/*      major = verGL[0] - '0';
-      if( major >= 3)
-      {
-       // for GL 3.x
-       glGetIntegerv(GL_MAJOR_VERSION, &major); // major = 3
-       glGetIntegerv(GL_MINOR_VERSION, &minor); // minor = 2
-      }
-      else
-      {
-            minor = verGL[2] - '0';
-      }
-*/
       // GLSL
       char *verSHDR = (char*)glGetString(GL_SHADING_LANGUAGE_VERSION);
 
-    TRACE("***************************************************************************");
-	TRACE("Renderer: " << glGetString(GL_RENDERER));
-	TRACE("GL Version : " << verGL);
-	TRACE("Shading Language : " << verSHDR);
-	TRACE("***************************************************************************");
+            TRACE("***************************************************************************");
+            TRACE("Renderer: " << glGetString(GL_RENDERER));
+            TRACE("GL Version : " << verGL);
+            TRACE("Shading Language : " << verSHDR);
+            TRACE("***************************************************************************");
 
 
 	};
@@ -111,12 +111,13 @@ public:
 	///Function for Starting the Engine and Game. Will Create a window and initialise all components of the engine. It will create and instance of cX and enter the main loop.
 	static uint32 Start()
 	{
+	    #ifdef USE_LOGGING
 			LOGGING_INIT()
 			LOGGING_ADD_FILE("main","main.log")
 			TRACE("Entering")
-
 		try {
-		  	gpSettings =new cS;
+        #endif
+		gpSettings =new cS;
 		cSettings *mpCast;
 		mpCast=dynamic_cast<cSettings*>(gpSettings);
 		mpCast->cSettings::Settings();
@@ -125,22 +126,20 @@ public:
 
 		TRACE("calling glewInit to initialise OpenGL");
 
+cFrameRate::Initialise();
 
 			TRACE("Setting up cWindow...");
 			gpWindow=new cWindow();
 
-
-
 //			cMainThread::GetGLVersion();
 
 			TRACE("Setting up cSync...");
-			gpTimer=new cSync();
+			gpTimer=cSync::Instance();
 
 			TRACE("Setting up cEventHandler...");
 			cEventHandler::Instance();
 
 		glewInit();
-
 
 			TRACE("Creating the cCore process");
 			new cX;
@@ -156,14 +155,16 @@ public:
 
 			TRACE("Exiting cKernel");
 			delete cKernel::Instance();
+        #ifdef USE_LOGGING
 		} catch(CException e) {
 			cerr << "Unhandled exception:" << e.message << endl;
 			TRACEERROR("Unhandled exception:" << e.message);
-			return 1;
+			return EXIT_SUCCESS;
 		}
+		#endif
 
 		TRACE("Exiting program and reporting success")
-		return EXIT_SUCCESS;
+		return 0;
 	};
 	///This will detect the Version of OpenGL the system is using as well as the GLSL compiler and print the data to the screen.
 	static void GetGLVersion()
@@ -187,11 +188,11 @@ int major,minor;
       // GLSL
       char *verSHDR = (char*)glGetString(GL_SHADING_LANGUAGE_VERSION);
 
-    trace("***************************************************************************");
-	trace("Renderer: " << glGetString(GL_RENDERER));
-	trace("GL Version : " << verGL);
-	trace("Shading Language : " << verSHDR);
-	trace("***************************************************************************");
+        TRACE("***************************************************************************");
+        TRACE("Renderer: " << glGetString(GL_RENDERER));
+        TRACE("GL Version : " << verGL);
+        TRACE("Shading Language : " << verSHDR);
+        TRACE("***************************************************************************");
 
 	};
 

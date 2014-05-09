@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classc_perspective_control.html" title="cPerspectiveControl affects how a cViewport or cCamera will render its view. This can be imagined as ..." alt="" coords="215,248,353,277"/>
-<area shape="rect" id="node4" href="$classc_camera_matrix4.html" title="This is a translation matrix for a camera object A Special Matric for Cameras. All the translations a..." alt="" coords="5,101,123,131"/>
-<area shape="rect" id="node7" href="$classc_viewport_control.html" title="The cViewportControl allows the user to control the region of the screen a cCamera or cViewport objec..." alt="" coords="223,101,345,131"/>
-<area shape="rect" id="node9" href="$classc_r_g_b_a.html" title="this is a Color Variable. It can Store 4 components: Red, Green, Blue and Alpha. Alpha of 0..." alt="" coords="251,5,317,35"/>
-<area shape="rect" id="node11" href="$classc_matrix4.html" title="this is a standard 4x4 translation matrix for objects. This is a standard 4x4 translation matrix for ..." alt="" coords="369,101,441,131"/>
-<area shape="rect" id="node14" href="$classc_signal.html" title="Class for handling Signals sent between objects (cProcess, cRenderObject, cCollisionObject). Allows the user to wake, sleep and kill objects. For cProcess (while cParentStack is enabled) also allows signals to be sent to a process that will recursively affect all the children of that process. Possible signals to be passed in are _S_SLEEP,_S_WAKE,_S_KILL,_S_SLEEP_TREE, _S_WAKE_TREE,_S_KILL_TREE User Specified Signals are controlled by the class cUserSignal." alt="" coords="377,248,441,277"/>
-</map>

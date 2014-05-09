@@ -49,9 +49,7 @@ public:
 		delete []mpList;
 		miSpaces=liSpaces;
 		mpList=new cX[miSpaces];
-
 		memset(mpList,0,sizeof(cX)*miSpaces);
-
 		miItems=0;
 	}
 
@@ -74,6 +72,8 @@ public:
 
     /// [] operator to allow access of any item as if it were a normal array.
 	cX &operator[](uint32 liItem){return mpList[liItem];};
+
+    cX &Item(uint32 liItem){return mpList[liItem];};
 
     /// = operator to allow copying a cLimitedList array.
     ///This SHOULD NOT be used with cX classes containing pointers.
@@ -99,6 +99,7 @@ public:
 
     ///Will copy the item pointed to by lpTemp to the array. Note this copies the item. It does not take the item into the array. Add will expand the array if required to add the item.
 	void Add(cX *lpTemp){if(miItems>=miSpaces) ChangeSize(miSpaces*1.5); memcpy(&mpList[miItems++],lpTemp,sizeof(cX));};
+    void Add(cX lpTemp){if(miItems>=miSpaces) ChangeSize(miSpaces*1.5); mpList[miItems++]=lpTemp;};
 
     ///Will Delete the item in position liPos from the array. All items after the removed item will be shuffled down the array, so all data is continuously at the start of the array.
 	void Delete(uint32 liPos)
@@ -121,6 +122,36 @@ public:
 		mpList[li2]=lpTemp;
 		}
 	};
+
+	cLimitedList<cX> *operator=(cLimitedList<cX> *lfX)
+	{
+        Init(lfX->miItems+1);
+	    miItems=lfX->miItems;
+	    memcpy(mpList,lfX->mpList,sizeof(cX)*miItems);
+	    return this;
+	};
+};
+
+
+template<class cX> class cLimitedListCursor : public cLimitedList<cX>
+{
+
+uint32 miCursor;
+public:
+    cLimitedListCursor()
+    {
+        miCursor=0;
+    };
+    void ResetCursor(){miCursor=0;};
+
+    cX *NextItem()
+    {
+        if(miCursor<cLimitedList<cX>::miItems)
+            return &(cLimitedList<cX>::mpList[miCursor++]);
+        ++miCursor;
+        return 0;
+    };
+
 };
 
 /**
@@ -179,11 +210,17 @@ public:
             }
 
             memcpy(lpTemp,mpList,sizeof(cX*)*miItems);
-
+			memset(&lpTemp[miItems],0,sizeof(cX*)*(liSpaces-miSize));
             miSpaces=liSize;
             delete []mpList;
             mpList=lpTemp;
         }
+	};
+
+	void IncreaseSize(uint32 liSize)
+	{
+
+
 	};
 	uint32 Items(){return miItems;};
 	uint32 Spaces(){return miSpaces;};
@@ -199,7 +236,7 @@ public:
 		}
 		miItems=0;
 		miSpaces=0;
-    }
+    };
     ///Deconstructor for this list object. This will calll DeleteAll()
 	~cLimitedPointerList()
 	{
@@ -217,6 +254,21 @@ public:
 	cX **ArrayPos(uint32 liItem){return mpList+liItem;};
 	/// Will Add the pointer lpValue to the list. Once added the Array will control deleting the object pointed to by lpValue. It will also expand the array to acomodate the item as required.
 	void Add(cX *lpValue){if(miItems>=miSpaces) ChangeSize(miSpaces*1.5); mpList[miItems++]=lpValue;};
+	void Add(cX *lpValue,uint32 liPos)
+	{
+		if(miItems>=miSpaces) ChangeSize(miSpaces*1.5);
+
+		if(liPos<miItems)
+		{
+			memmove(&mpList[liPos],&mpList[liPos+1],sizeof(cX *)*(miItems-liPos));
+			mpList[liPos]=lpValue;
+			++miItems;
+		}
+		else
+		{
+			mpList[miItems++]=lpValue;
+		}
+	};
 	/// This will remove the item liPos from the List. It will delete the item and shuffle all the other items in teh list to the front of the list.
 	void Delete(uint32 liPos)
 	{
@@ -224,7 +276,7 @@ public:
 		{
 			delete mpList[liPos]; mpList[liPos]=0;
 			--miItems;
-			if(miItems-liPos) memmove(mpList[liPos],mpList[liPos+2],sizeof(cX*)*miItems-liPos);
+			if(miItems-liPos) memmove(&mpList[liPos],&mpList[liPos+1],sizeof(cX*)*(miItems-liPos));
 		}
 	};
 	///This will remove the Item from the list without deleting it.
@@ -234,7 +286,7 @@ public:
 		{
 			mpList[liPos]=0;
 			--miItems;
-			if(miItems-liPos) memmove(mpList[liPos],mpList[liPos+2],sizeof(cX*)*miItems-liPos);
+			if(miItems-liPos) memmove(&mpList[liPos],&mpList[liPos+1],sizeof(cX*)*(miItems-liPos));
 		}
 	};
     ///This will switch the positions of the items at positions li1 and li2 in the list.
@@ -269,6 +321,29 @@ public:
 	    }
 	    return -1;
 	};
+
+};
+
+
+template<class cX> class cLimitedPointerListCursor : public cLimitedPointerList<cX>
+{
+
+uint32 miCursor;
+public:
+    cLimitedPointerListCursor()
+    {
+        miCursor=0;
+    };
+    void ResetCursor(){miCursor=0;};
+
+    cX *NextItem()
+    {
+        if(miCursor<cLimitedPointerList<cX>::miItems)
+            return cLimitedPointerList<cX>::mpList[miCursor++];
+        ++miCursor;
+        return 0;
+    };
+
 };
 
 #endif

@@ -721,7 +721,7 @@
  * If the model is entirely black it may not have Normals. A Mesh without normals cannot use lighting.
  * If the lighting is not using the correct lights it may be worth checking if lighting is enabled for the current object with cRenderObject::Lighting(bool). \n
  * <b> My Transparent Textures and Images are not working:</b> \n
- * Check that the Texture has an alpha channel to enable transparency. Check that Transparency is enabled with cRenderObject::Transparent(bool) \n
+ * Check that the Texture has an alpha channel to enable transparency. Check that Transparency is enabled with cRenderObject::Transparent(uint8) \n
  * <b>When I change an Objects shader it goes funny:</b> \n
  * Each shader assigns its variables to a location specific to that cShaderProgram. This is done by the graphics card. Variables should be reassigned when an objects shader is changed.
  * */
@@ -3941,7 +3941,9 @@ public:
 	#include "./Windows/WTXWindowsKeyCodes.h"
 #endif
 
+//#include <enet/enet.h>
 #include "./Global/WTDefinitions.h"
+#include "./Global/WTNetworkDefinitions.h"
 #include "./Global/WTSettings.h"
 
 
@@ -3956,7 +3958,7 @@ public:
 
 
 
-
+#include <cstdlib>
 #include <cmath>
 #include <cstring>
 #include <iostream>
@@ -4009,6 +4011,7 @@ public:
 #include "./Files/WTvFile.h"
 #include "./Files/WTcFileHandler.h"
 #include "./Files/WTcFile.h"
+#include "./Files/WTcParser.h"
 
 #include "./Files/Misc/WTcReferenceList.h"
 
@@ -4055,6 +4058,7 @@ public:
 #include "./Files/Misc/WTcMeshTree.h"
 #include "./Files/Misc/WTcLineArrayData.h"
 #include "./Files/Misc/WTcCircleLineData.h"
+#include "./Files/Misc/WTcSettingsFile.h"
 
 #include "./Files/Meshes/WTv2DPolygon.h"
 
@@ -4116,6 +4120,14 @@ public:
 
 #include "./Engine/WTcBase.h"
 
-
-
+#include "./Engine/Process/WTcToggleButton.h"
+#include "./Engine/Process/WTcMessageFeed.h"
+#include "./Engine/Process/WTcTextBoxWidget.h"
+#include "./Engine/Process/WTcSliderWidget.h"
+#include "./Engine/Process/WTcSelectionWidget.h"
+/*
+#include "./Networking/WTcNetworkBase.h"
+#include "./Networking/WTcP2PClient.h"
+#include "./Networking/WTcP2PHost.h"
+*/
 #endif

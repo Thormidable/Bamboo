@@ -4,10 +4,58 @@
 class cRGB;
 class cRGBA;
 
+
+class cRandomTausworthe
+{
+    uint32 s1, s2, s3;
+public:
+    cRandomTausworthe(uint32 seed1,uint32 seed2,uint32 seed3)
+    {
+        s1=seed1;
+        s2=seed2;
+        s3=seed3;
+    };
+
+uint32 GetUInt()
+{
+#define TAUSWORTHE(s,a,b,c,d) ((s&c)<<d) ^ (((s <<a) ^ s)>>b)
+
+    s1 = TAUSWORTHE(s1, 13, 19, 4294967294UL, 12);
+    s2 = TAUSWORTHE(s2, 2, 25, 4294967288UL, 4);
+    s3 = TAUSWORTHE(s3, 3, 11, 4294967280UL, 17);
+
+    return (s1 ^ s2 ^ s3);
+};
+
+float GetFloat(){return static_cast<double>(GetUInt())/static_cast<double>(0xFFFFFFFF);};
+float GetZeroed(){return (GetFloat()-0.5f)*2.0f;};
+
+};
+
+
+template<uint32 tiMult=1664525,uint32 tiInc=1013904223> class cRandomLCG
+{
+    uint32 miState;
+public:
+    cRandomLCG(uint32 seed1)
+    {
+        miState=seed1;
+    };
+
+uint32 GetUInt(){miState=miState*tiMult+tiInc;return miState;};
+float GetFloat(){return  static_cast<double>(GetUInt())/static_cast<double>(0xFFFFFFFF);};
+float GetZeroed(){return (GetFloat()-0.5f)*2.0f;};
+
+};
+
+
 /// This function takes an angle in Degrees and will return it in radians.
 float DegreestoRadians(float lfAngle);
 /// This function takes an angle in radians and will return it in Degrees.
 float RadianstoDegrees(float lfAngle);
+
+bool LineLineIntersect(c3DVf p1,c3DVf p2,c3DVf p3,c3DVf p4,c3DVf *pa,c3DVf *pb,double *mua, double *mub);
+
 
 template<class tType> tType ClampValue(tType lfValue,tType lfClamp)
 {
@@ -368,6 +416,7 @@ template<class T> void QuickSort(T *a,const int& leftarg, const int& rightarg)
 
 float FastSquareRoot(float number);
 float FastSquareRoot(double number);
+
 
 /*
 double inline __declspec (naked) __fastcall FastSquareRoot(double n)

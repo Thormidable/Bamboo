@@ -1,39 +1,34 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
-cFrameRate *cFrameRate::mpInstance=0;
+uint8 cFrameRate::giProcessesPerFrame=4;
+uint8 cFrameRate::giFramesPerSecond=60;
+float cFrameRate::giInvFramesPerSecond=1.0f/60;
+float cFrameRate::giInvProcesesPerSecond=1.0f/240;
 
-cFrameRate *cFrameRate::Instance()
+void cFrameRate::Initialise()
 {
-	if(!mpInstance) mpInstance=new cFrameRate; return mpInstance;
 
-};
-
-#if WT_OS_TYPE==OS_WIN32
-
-cFrameRate::cFrameRate()
-{
   giProcessesPerFrame=WT_STARTING_PROCESSES_PER_FRAME;
   giFramesPerSecond=WT_STARTING_FRAMES_PER_SECOND;
   giInvFramesPerSecond=1.0f/giFramesPerSecond;
   giInvProcesesPerSecond=giInvFramesPerSecond/giProcessesPerFrame;
+
 };
 
-#endif
-
-
-#if WT_OS_TYPE==OS_LINUX
-
-cFrameRate::cFrameRate()
+void cFrameRate::SetFrameRate(uint8 lfFramesPerSecond)
 {
-  giProcessesPerFrame=WT_STARTING_PROCESSES_PER_FRAME;
-  giFramesPerSecond=WT_STARTING_FRAMES_PER_SECOND;
-  giInvFramesPerSecond=1.0f/giFramesPerSecond;
-  giInvProcesesPerSecond=giInvFramesPerSecond/giProcessesPerFrame;
+    giFramesPerSecond=lfFramesPerSecond;
+    giInvFramesPerSecond=1.0f/giFramesPerSecond;
+    giInvProcesesPerSecond=giInvFramesPerSecond/giProcessesPerFrame;
 };
-#endif
-void cFrameRate::SetFrameRate(uint8 lfFramesPerSecond){giFramesPerSecond=lfFramesPerSecond;giInvFramesPerSecond=1.0f/giFramesPerSecond; giInvProcesesPerSecond=giInvFramesPerSecond/giProcessesPerFrame;};
-void cFrameRate::SetProcessesPerFrame(uint8 liPPS){giProcessesPerFrame=liPPS; giInvProcesesPerSecond=giInvFramesPerSecond/giProcessesPerFrame;};
+void cFrameRate::SetProcessesPerFrame(uint8 liPPS)
+{
+    giProcessesPerFrame=liPPS;
+    giInvProcesesPerSecond=giInvFramesPerSecond/giProcessesPerFrame;
+};
 float cFrameRate::FrameTime(){return giInvFramesPerSecond;};
 float cFrameRate::ProcessTime(){return giInvProcesesPerSecond;};
 uint8 cFrameRate::FramesPerSecond(){return giFramesPerSecond;};
 uint8 cFrameRate::ProcessesPerFrame(){return giProcessesPerFrame;};
+

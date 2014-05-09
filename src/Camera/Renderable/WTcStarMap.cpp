@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 void cStarMap::UpdateCache()
@@ -5,14 +6,10 @@ void cStarMap::UpdateCache()
 	//printf("This : %p, mpCollisionObject : %p\n",this,mpCollisionObject);
 	if(mpCollisionObject)
 	{
-		mpCollisionObject->PreUpdateCache();
-
 		mmCache=_MATRIX_STACK->Current();
 		StarMapMatrices();
 		mmTotalCache=_COMBINED_MATRIX;
         mmTotalCache.Multiply(mmCache);
-
-
 
 		mpCollisionObject->PostUpdateCache();
 	}
@@ -92,9 +89,9 @@ void cStarMap::StarMapMatrices()
  mmTotalCache[14]=0.0f;
  //mmTotalCache[15]=1.0f;
 
- mmCache[12]=-_CAMERA->X();
- mmCache[13]=-_CAMERA->Y();
- mmCache[14]=-_CAMERA->Z();
+ mmCache[12]=_CAMERA->X();
+ mmCache[13]=_CAMERA->Y();
+ mmCache[14]=_CAMERA->Z();
  //mmCache[15]=1.0f;
 
 }
@@ -141,6 +138,7 @@ void cStarMap::Initialise(uint32 liParticles,float lfDist)
 
 	mpAttributes=new cManualInterleavedAttributeArray(3);
 
+//Don't forget that If adding Normal_Array or Texture_Coord_Array to set mbNormalArray and mbUVArray.
 	mpAttributes->AddComponent(new cInterleavedVertexArray(3));
 	mpAttributes->AddComponent(new cInterleavedFloatArray(4,"Bb_Color"));
 	mpAttributes->AddComponent(new cInterleavedFloatArray(1,"Bb_Size"));

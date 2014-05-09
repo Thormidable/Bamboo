@@ -31,6 +31,8 @@ bool miShown;
  int cx;
 // This is the real mouses Y position. It will change as the mouse moves, so will not be consistent through out the frame. Should avoid being used.
  int cy;
+
+ int cz;
  // This stores the mouses current left button state.
  bool left;
 // This stores the mouses current right button state.
@@ -44,6 +46,8 @@ bool miShown;
  int xs;
 // This will store the mouses current Y speed. (pixels travelled since last frame).
  int ys;
+
+ float zs;
  //Actual current X and Y values, these track the cursor continuously.
  int miLockedX;
  int miLockedY;
@@ -55,12 +59,14 @@ public:
  int X();
  ///Will return the current Y Position of the mouse cursor in pixels from the bottom edge of the screen.
  int Y();
- ///Will return the current Z Position of the mouse cursor.
+ ///Will return the current Z Position of the mouse cursor (Mouse wheel)
  int Z();
  ///Will return the number of horizontal pixels the cursor moved last frame. Moving Right is positive.
  int XSpeed();
  ///Will return the number of vertical pixels the cursor moved last frame. Moving Up is positive.
  int YSpeed();
+ ///Will reutrn the number of mouse wheel steps the mouse wheel has moved. Positive numbers are away from the user.
+ int ZSpeed();
  ///Will return the pressed state of the mouses left button.
  bool Left();
  ///Will return the pressed state of the mouses right button.
@@ -79,6 +85,7 @@ public:
 
 	void SetPos(int lX,int lY);
 	void SetPos(int lX,int lY,int lZ);
+	void SetWheelPos(int liStep);
 	void SetLeft(bool lbLeft);
 	void SetRight(bool lbLeft);
 	void SetMiddle(bool lbMiddle);

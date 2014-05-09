@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 cIcoSphere::cIcoSphere(cIcoSphere *lpOther) : cMesh(lpOther)
@@ -175,4 +176,73 @@ void cIcoSphere::Radius(float lfNewScale)
     mfSize=lfNewScale;
 
     BufferMesh();
+};
+
+
+cBoxMesh::cBoxMesh(c3DVf lvSize,bool lbNormals,bool lbUV)
+{
+ mvSize=lvSize;
+ Generate();
+ AddData(lbNormals,lbUV);
+ BufferMesh();
+};
+
+cBoxMesh::cBoxMesh(cBoxMesh *lpOther) : cMesh(lpOther)
+{
+ mvSize=lpOther->mvSize;
+};
+
+void cBoxMesh::Generate()
+{
+  if(!mpVertex)
+  {
+      GenerateSpace(8,0,0,12);
+  }
+
+  for(uint8 liX=0;liX<2;++liX)
+  {
+      for(uint8 liY=0;liY<2;++liY)
+      {
+          for(uint8 liZ=0;liZ<2;++liZ)
+          {
+              uint8 liVertex=liX+liY*2+liZ*4;
+              mpVertex[liVertex*3]=(float)(liX*mvSize[0]-mvSize[0]*0.5f);
+              mpVertex[liVertex*3+1]=(float)(liY*mvSize[1]-mvSize[1]*0.5f);
+              mpVertex[liVertex*3+2]=(float)(liZ*mvSize[2]-mvSize[2]*0.5f);
+          }
+      }
+  }
+
+  memcpy(&mpFaces[0],c3DVt<FACE_TYPE>(0,1,2).v,sizeof(c3DVt<FACE_TYPE>));
+  memcpy(&mpFaces[3],c3DVt<FACE_TYPE>(2,3,1).v,sizeof(c3DVt<FACE_TYPE>));
+  memcpy(&mpFaces[6],c3DVt<FACE_TYPE>(6,5,4).v,sizeof(c3DVt<FACE_TYPE>));
+  memcpy(&mpFaces[9],c3DVt<FACE_TYPE>(4,7,6).v,sizeof(c3DVt<FACE_TYPE>));
+  memcpy(&mpFaces[12],c3DVt<FACE_TYPE>(4,5,1).v,sizeof(c3DVt<FACE_TYPE>));
+  memcpy(&mpFaces[15],c3DVt<FACE_TYPE>(1,0,4).v,sizeof(c3DVt<FACE_TYPE>));
+  memcpy(&mpFaces[18],c3DVt<FACE_TYPE>(4,0,3).v,sizeof(c3DVt<FACE_TYPE>));
+  memcpy(&mpFaces[21],c3DVt<FACE_TYPE>(3,7,4).v,sizeof(c3DVt<FACE_TYPE>));
+  memcpy(&mpFaces[24],c3DVt<FACE_TYPE>(3,2,6).v,sizeof(c3DVt<FACE_TYPE>));
+  memcpy(&mpFaces[27],c3DVt<FACE_TYPE>(6,7,3).v,sizeof(c3DVt<FACE_TYPE>));
+  memcpy(&mpFaces[30],c3DVt<FACE_TYPE>(2,1,5).v,sizeof(c3DVt<FACE_TYPE>));
+  memcpy(&mpFaces[33],c3DVt<FACE_TYPE>(5,6,2).v,sizeof(c3DVt<FACE_TYPE>));
+
+};
+
+void cBoxMesh::Scale(c3DVf lvSize)
+{
+    mvSize[0]*=lvSize[0];
+    mvSize[1]*=lvSize[1];
+    mvSize[2]*=lvSize[2];
+
+    Generate();
+    if(mpNormals) CreateNormalArray();
+    if(mpUV) CreateUVSphereMap();
+};
+
+void cBoxMesh::Size(c3DVf lvSize)
+{
+    mvSize=lvSize;
+    Generate();
+    if(mpNormals) CreateNormalArray();
+    if(mpUV) CreateUVSphereMap();
 };

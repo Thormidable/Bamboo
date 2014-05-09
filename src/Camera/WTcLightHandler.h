@@ -60,6 +60,10 @@ void Remove(cLinkedNode<vLight> *lpOld);
  //Will decrease the number of awake lights to avoid having to count
  void MoreAsleep();
 
+ void GlobalAmbient(float *lpPoint);
+ void GlobalAmbient(cRGBA *lpPoint);
+ void GlobalAmbient(cRGBA lpPoint);
+
 };
 
 #endif

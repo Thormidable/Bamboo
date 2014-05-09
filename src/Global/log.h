@@ -2,24 +2,20 @@
 #define __LOG_H__
 
 #define LOG_TRACE
-#define USE_LOGGING
+//#define USE_LOGGING
 
 #define LOG_LEVEL_TRACE
 #define LOG_LEVEL_FIXME
 #define LOG_LEVEL_WARN
 #define LOG_LEVEL_ERROR
 
+#ifdef USE_LOGGING
+
 #ifdef LOG_TRACE
 	#define trace(x) cout << x << endl;
 #else
-	#define trace(x)
+	#define trace(x) ;
 #endif
-
-
-
-#ifdef USE_LOGGING
-
-
 
 #include <string>
 #include <ostream>
@@ -161,6 +157,13 @@ private:
 	sourceMap sources;
 	sinkMap sinks;
 };
+#else
+using namespace std;
+	#define trace(x) cout << x << endl;
+    #define TRACE(x) cout << x << endl;
+    #define FIXME(x) cout << "FIXME: " << x << endl;
+    #define WARN(x) cout << "WARNING: " << x << endl;
+    #define TRACEERROR(x) cout << "TRACEERROR: " << x << endl;
 
 #endif
 

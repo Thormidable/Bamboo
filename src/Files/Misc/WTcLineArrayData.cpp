@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 
@@ -18,9 +19,14 @@ void cLineArrayData::RenderLines()
   if(lbBuffer) Buffer();
   else glBindBuffer(GL_ARRAY_BUFFER, miBufferID);
 
+ //glDisableClientState(GL_NORMAL_ARRAY);
+
   glVertexPointer(3,GL_FLOAT,0,0);
 
   glDrawArrays(GL_LINE_STRIP,0,Items());
+
+ // glEnableClientState(GL_NORMAL_ARRAY);
+
 }
 
 void cLineArrayData::Add(c3DVf lfPoint)
@@ -68,3 +74,4 @@ cLineArrayData::cLineArrayData(cLineArrayData *lpOther)
     cLimitedList<c3DVf>::operator=(lpOther);
     lbBuffer=true;
 };
+

@@ -4,11 +4,15 @@
 #if WT_FULL_VERSION_BAMBOO
 
 using namespace std;
-/// This class is a text renderable object
+/**
+ * \brief This class is for rendering Text strings using a cFont object.
+ * Renders 2D strings of TExt using the specified cFont. Color can be optionally set based on the shader used. Uses a std:string to store the text string.
+ */
 class cText : public cImage
 {
 protected:
  // A character array storing the string this text will use.
+ cFont *mpFont;
  std::string mpString;
 public:
 	/// Creates a text object and gives it a text string to use.
@@ -23,15 +27,6 @@ public:
 	/// Will set the text string the cText object will render.
        //void Text(char *lsText);
        void Text(string lsText);
-		/// Will accept a generic data type to render to the screen (will convert to a string).
-       template <class T> void Value(T &t);
-		///Will add a generic data type to render to the screen.
-       template <class T> void Add(T &t);
-
-       	/// Will accept a generic data type to render to the screen (will convert to a string). Will use the specified amount of precision
-       template <class T> void Value(T &t,uint8 liPrecision);
-		///Will add a generic data type to render to the screen. Will use the specified amount of precision
-       template <class T> void Add(T &t,uint8 liPrecision);
 
 	   /// Will accept a generic data type to render to the screen (will convert to a string).
        template <class T> void Value(T t);
@@ -45,7 +40,13 @@ public:
 	// Will render the text string from the cPainter render list to the screen.
        void RenderPainter();
 
+	   ///Will return the reference of the std::string object.
        std::string &Text();
+
+	   	///Will return the length of the string.
+		uint16 Length();
+		///Will set the length of the string.
+		void Length(uint16 liLength);
 
 
 		///Will Add the Font lcFont to this object using the uniform variable labelled lsFontSlot.
@@ -57,43 +58,6 @@ public:
 		///Will Add the Font with Reference lcFont to the first free default Font slot ("Font0" "Font1" "Font2"). This is slower than AddFont(string,cFont*). Also it allows for mistakes in the naming of samplers in the shader.
 		void AddFont(string lcFont);
 };
-
-//#include <sstream>
-
-template <class T>
-inline void cText::Value ( T &t)
-{
-    std::stringstream ss;
-    ss << t;
-    mpString=ss.str();
-}
-
-
-template <class T>
-inline void cText::Add(T &t)
-{
-     std::stringstream ss;
-     ss << t;
-    mpString += ss.str();
-}
-
-template <class T>
-inline void cText::Value ( T &t,uint8 liPrecision)
-{
-    std::stringstream ss;
-    ss << setprecision(liPrecision) << fixed << t;
-    mpString=ss.str();
-}
-
-
-template <class T>
-inline void cText::Add(T &t,uint8 liPrecision)
-{
-     std::stringstream ss;
-     ss.precision(liPrecision);
-     ss << setprecision(liPrecision) << fixed << t;
-     mpString += ss.str();
-}
 
 
 template <class T>
@@ -131,6 +95,19 @@ inline void cText::Add(T t,uint8 liPrecision)
      ss << setprecision(liPrecision) << fixed << t;
      mpString += ss.str();
 }
+
+
+class cTextMessage : public cText
+{
+    uint32 miFrames;
+    public:
+
+        void Time(float lfTime);
+        void Frames(uint32 liFrames);
+        uint32 Frames();
+        void RenderPainter();
+
+};
 
 #endif
 

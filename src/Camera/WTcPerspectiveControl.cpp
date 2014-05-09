@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 
@@ -230,3 +231,12 @@ void cViewportControl::ClearColor(float lfRed,float lfGreen,float lfBlue,float l
 	};
 
 
+c3DVf cPerspectiveControl::VisualRay(float lfX,float lfY)
+{
+
+float v3DXDist=((2.0f*(lfX-mfViewportX)-mfViewportWidth)/mfViewportWidth)*Width();
+float v3DYDist=((2.0f*(lfY-mfViewportY)-mfViewportHeight)/mfViewportHeight)*Height();
+
+return c3DVf(ZVect()*Near()-XVect()*v3DXDist-YVect()*v3DYDist);
+
+};

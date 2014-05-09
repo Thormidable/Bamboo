@@ -43,13 +43,11 @@ void cWindow::FindRenderArea()
     GetClientRect(hWnd,&Result);
     miRenderWidth=Result.right;
     miRenderHeight=Result.bottom;
-
-   GetWindowRect(hWnd,&Result);
-    miWindowX=Result.left;
-    miWindowY=Result.top;
+/*
+    GetWindowRect(hWnd,&Result);
     miWindowWidth=Result.right-Result.left;
     miWindowHeight=Result.bottom-Result.top;
-
+*/
     POINT lcPoint;
     lcPoint.x=0;
     lcPoint.y=0;
@@ -259,51 +257,34 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
 	switch (message)
 	{
 
-    case WM_CREATE:
-        return 0;
-
-    case WM_CLOSE:
-         gpWindow->mbQuit=true;
-        return 0;
-
-    case WM_DESTROY:
-        return 0;
-
     case WM_PAINT:
          gpWindow->Repaint=true;
          return 0;
 
-
-
-    case WM_SIZE:
-       if (wParam==SIZE_RESTORED)
-         {
-            gpWindow->miWindowWidth=LOWORD(lParam);
-            gpWindow->miWindowHeight=HIWORD(lParam);
-            gpWindow->miInvWindowWidth=1.0f/gpWindow->miWindowWidth;
-            gpWindow->miInvWindowHeight=1.0f/gpWindow->miWindowHeight;
-            //gpWindow->miInvRenderWidth=1.0f/gpWindow->miRenderWidth;
-            //gpWindow->miInvRenderHeight=1.0f/gpWindow->miRenderHeight;
-            gpWindow->mfWindowRatio=((float)gpWindow->miWindowHeight)/gpWindow->miWindowWidth;
-            gpWindow->mfRenderRatio=((float)gpWindow->miRenderHeight)/gpWindow->miRenderWidth;
-            gpWindow->FindRenderArea();
-            cCameraHandler::Instance()->UpdateWindowSize();
-          return 0;
-         }
-        return 0;
-
-    case WM_SIZING:
-         return 0;
-
-    case WM_MOVE:
-         gpWindow->miWindowX=(int16)LOWORD(lParam);
-         gpWindow->miWindowY=(int16)HIWORD(lParam);
-         return 0;
-
-
     case WM_MOUSEMOVE:
          _MOUSE->SetPos((int16)LOWORD(lParam),(int16)HIWORD(lParam));
          return 0;
+
+    case WM_KEYDOWN:
+        _KEYBOARD->SetKeyState(true,wParam);
+       return 0;
+
+
+    case WM_KEYUP:
+         _KEYBOARD->SetKeyState(false,wParam);
+         return 0;
+
+    case WM_MOUSEWHEEL:
+        _MOUSE->SetWheelPos(GET_WHEEL_DELTA_WPARAM(wParam));
+        return 0;
+
+    case WM_MBUTTONDOWN:
+        _MOUSE->SetMiddle(true);
+        return 0;
+
+    case WM_MBUTTONUP:
+        _MOUSE->SetMiddle(false);
+        return 0;
 
     case WM_LBUTTONDOWN:
          _MOUSE->SetLeft(true);
@@ -321,14 +302,39 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
          _MOUSE->SetRight(false);
          return 0;
 
-    case WM_KEYDOWN:
-        _KEYBOARD->SetKeyState(true,wParam);
-       return 0;
+    case WM_SIZE:
+       if (wParam==SIZE_RESTORED)
+         {
+            gpWindow->miWindowWidth=LOWORD(lParam);
+            gpWindow->miWindowHeight=HIWORD(lParam);
+            gpWindow->miInvWindowWidth=1.0f/gpWindow->miWindowWidth;
+            gpWindow->miInvWindowHeight=1.0f/gpWindow->miWindowHeight;
 
+            gpWindow->mfWindowRatio=((float)gpWindow->miWindowHeight)/gpWindow->miWindowWidth;
+            gpWindow->mfRenderRatio=((float)gpWindow->miRenderHeight)/gpWindow->miRenderWidth;
+            gpWindow->FindRenderArea();
+            cCameraHandler::Instance()->UpdateWindowSize();
+          return 0;
+         }
+        return 0;
 
-    case WM_KEYUP:
-         _KEYBOARD->SetKeyState(false,wParam);
+    case WM_SIZING:
          return 0;
+
+    case WM_MOVE:
+            gpWindow->miWindowX=(int16)LOWORD(lParam);
+            gpWindow->miWindowY=(int16)HIWORD(lParam);
+         return 0;
+
+    case WM_CREATE:
+        return 0;
+
+    case WM_CLOSE:
+         gpWindow->mbQuit=true;
+        return 0;
+
+    case WM_DESTROY:
+        return 0;
 
 
     default:
@@ -341,7 +347,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
 
 #if WT_OS_TYPE==OS_LINUX
 
-int cWindow::DisplayAttributes[]={ GLX_RGBA, GLX_DEPTH_SIZE, 24, GLX_DOUBLEBUFFER, None };
+long int cWindow::DisplayAttributes[]={ GLX_RGBA, GLX_DEPTH_SIZE, 24, GLX_DOUBLEBUFFER, None };
 
 cWindow::cWindow()
 {
@@ -425,6 +431,13 @@ void cWindow::HandleMessages()
  	while(XPending(lpDisplay))
 	{
 		XNextEvent(lpDisplay, &Event);
+		if(Event.type == MotionNotify)
+		{
+			_MOUSE->cx=Event.xmotion.x;
+			_MOUSE->cy=Event.xmotion.y;
+
+			break;
+		}
         	if(Event.type == Expose)
 		{
 			XGetWindowAttributes(lpDisplay, lWindow, &gwa);
@@ -454,6 +467,8 @@ void cWindow::HandleMessages()
 			if(Event.xbutton.button==1) _MOUSE->left=true;
 			if(Event.xbutton.button==3) _MOUSE->right=true;
 			if(Event.xbutton.button==2) _MOUSE->middle=true;
+			if(Event.xbutton.button==4) ++(_MOUSE->cz);
+			if(Event.xbutton.button==5) --(_MOUSE->cz);
 			break;
 		}
 		if(Event.type == ButtonRelease)
@@ -461,29 +476,15 @@ void cWindow::HandleMessages()
 			if(Event.xbutton.button==1) _MOUSE->left=false;
 			if(Event.xbutton.button==3) _MOUSE->right=false;
 			if(Event.xbutton.button==2) _MOUSE->middle=false;
-			break;
-		}
-		if(Event.type == MotionNotify)
-		{
-		 if (!_MOUSE->locked)
-         {
-			_MOUSE->cx=Event.xmotion.x;
-			_MOUSE->cy=Event.xmotion.y;
-         }
-         else
-         {
-			_MOUSE->x=Event.xmotion.x;
-			_MOUSE->y=Event.xmotion.y;
-         }
 
 			break;
 		}
 		if(Event.type == ConfigureNotify)
 		{
-			gpWindow->miRenderX=gpWindow->miWindowX=Event.xconfigure.x;
-			gpWindow->miRenderY=gpWindow->miWindowY=Event.xconfigure.y;
-			gpWindow->miRenderWidth=gpWindow->miWindowWidth=Event.xconfigure.width;
-			gpWindow->miRenderHeight=gpWindow->miWindowHeight=Event.xconfigure.height;
+			gpWindow->miWindowX=Event.xconfigure.x;
+			gpWindow->miWindowY=Event.xconfigure.y;
+			gpWindow->miWindowWidth=Event.xconfigure.width;
+			gpWindow->miWindowHeight=Event.xconfigure.height;
 			gpWindow->miInvWindowWidth=1.0f/miWindowWidth;
             gpWindow->miInvWindowHeight=1.0f/miWindowHeight;
 			//gpWindow->Moved=true;
@@ -513,6 +514,7 @@ void cWindow::HandleChanges()
 void cWindow::MovePointer(uint32 liX,uint32 liY)
 {
 XWarpPointer(lpDisplay,None,lWindow,0,0,0,0,liX,liY);
+XFlush( lpDisplay );
 }
 
 void cWindow::GetMouseSpeed()

@@ -27,7 +27,6 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/WTcParticleSettings.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Camera/Renderable/WTcParticleSettings.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/WTcPoint.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Camera/Renderable/WTcPoint.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/WTcStarMap.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Camera/Renderable/WTcStarMap.cpp.o"
-  "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/Renderable/WTcTextureText.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Camera/Renderable/WTcTextureText.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/WTcCamera.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Camera/WTcCamera.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/WTcExtraViewport.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Camera/WTcExtraViewport.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/WTcLightHandler.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Camera/WTcLightHandler.cpp.o"
@@ -37,8 +36,14 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/WTcRenderObject.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Camera/WTcRenderObject.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/WTcRenderPointer.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Camera/WTcRenderPointer.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Camera/WTcTextureStack.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Camera/WTcTextureStack.cpp.o"
+  "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/WTcMessageFeed.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Engine/Process/WTcMessageFeed.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/WTcParentStack.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Engine/Process/WTcParentStack.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/WTcProcess.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Engine/Process/WTcProcess.cpp.o"
+  "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/WTcSelectionImageWidget.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Engine/Process/WTcSelectionImageWidget.cpp.o"
+  "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/WTcSelectionWidget.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Engine/Process/WTcSelectionWidget.cpp.o"
+  "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/WTcSliderWidget.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Engine/Process/WTcSliderWidget.cpp.o"
+  "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/WTcTextBoxWidget.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Engine/Process/WTcTextBoxWidget.cpp.o"
+  "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/Process/WTcToggleButton.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Engine/Process/WTcToggleButton.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/WTKernel.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Engine/WTKernel.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/WTcBase.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Engine/WTcBase.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Engine/WTcFrameRate.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Engine/WTcFrameRate.cpp.o"
@@ -71,6 +76,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/WTcMeshTree.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTree.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/WTcMeshTreeNode.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Files/Misc/WTcMeshTreeNode.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/WTcReferenceList.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Files/Misc/WTcReferenceList.cpp.o"
+  "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Misc/WTcSettingsFile.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Files/Misc/WTcSettingsFile.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/WTcShader.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Files/Shaders/WTcShader.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/WTcShaderProgram.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderProgram.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/Shaders/WTcShaderVariables.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Files/Shaders/WTcShaderVariables.cpp.o"
@@ -81,6 +87,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/WTcFile.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Files/WTcFile.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/WTcFileHandler.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Files/WTcFileHandler.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/WTcIMFLoader.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Files/WTcIMFLoader.cpp.o"
+  "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Files/WTcParser.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Files/WTcParser.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/WTSettings.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Global/WTSettings.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Global/log.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Global/log.cpp.o"
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Maths/WTMath.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Maths/WTMath.cpp.o"
@@ -105,11 +112,6 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/src/Windows/WTcWindow.cpp" "/media/FileStore/My Documents/C++ Code/Bamboo/Bamboo/Linux/CMakeFiles/Bamboo.dir/Windows/WTcWindow.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-SET(CMAKE_TARGET_DEFINITIONS
-  "m32"
-  )
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES

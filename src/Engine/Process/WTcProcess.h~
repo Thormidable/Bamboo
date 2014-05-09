@@ -6,7 +6,8 @@
 * to cKernel to be processed every frame. Any Processes created by the user should inherit this type to be handled by cKernel automatically.
 * Initialisation code should go in the constructor of the user type. Linking to cKernel is performed automatically by cProcess.
 * Update code should go in the function Run().
-* Destruction code should fo in the destructor of the user type.
+* Coed performed when a process is killed should go in the function Stop(). NOT the destructor.
+* Code to handle Sleeping and Waking signals should go in OnSleep() and OnWake().
 * Code to handle interaction of two processes should go in either processes UserSignal() function.
 * \code
 * class cUserProcess : cProcess
@@ -27,7 +28,7 @@
 * Model->Shader(_GET_SHADER("UserShaderProgram"));
 * };
 *
-* Run()
+* void Run()
 * {
 * //Move the Model in the direction it is facing.
 *  Model->Advance(0.1f);
@@ -37,7 +38,7 @@
 *  if(!LifeSpan) _KILL(this);
 * };
 *
-* ~cUserProcess()
+* void Stop()
 * {
 * //Clean Up the Object.
 *  _KILL(MODEL);
@@ -72,7 +73,7 @@ public:
  * This function will change the run state of the current cProcess. It allows other processes to force this process to
  * _S_SLEEP or _S_WAKE or _S_KILL. Any System State signal will be processed in this function.
  */
- void Signal(SIGNAL lbSignal);
+ virtual void Signal(SIGNAL lbSignal);
  /// This Function will kill all currently running cProcess and start the end of the program.
  void KillAll();
 
@@ -82,16 +83,45 @@ public:
   * Process evaluation is unimportant
   *
   */
- virtual void UserSignal(SIGNAL lsSignal,void *lpData);
- // Virtual function for extra processes to be performed when prossess is killed.
- void AdditionalKillFunctionality(){};
- void AdditionalSleepFunctionality(){};
- void AdditionalWakeFunctionality(){};
- /// cProcess Constructor. Will Initialise all generic cProcess variables and add the current process to the process list held by cKernel.
+ virtual bool UserSignal(SIGNAL lsSignal,void *lpData);
+ /**
+ * \brief Virtual function called when a Process is _KILL().
+ * This is called when a process receives the _S_KILL SIGNAL. This allows you to make your renderable objects disappear, spawn new processes such as shrapnel or explosions.
+ * This does not need to be defined in a User defined process, but without it renderable objects will persist. This must be public.
+ */
+ virtual void Stop(){};
+ /**
+ * \brief Virtual function called when a Process is _SLEEP(). Should Sleep renderable objects in the Process and similar.
+ * This is called when a process receives the _S_SLEEP Process. No code will be run in the process until it is sent _S_WAKE so it is important to do any code to prepare for sleeping here.
+ * This must be public.
+ */
+
+ virtual void OnSleep(){};
+ /**
+ * \brief Virtual function called when a Process is _WAKE(). Should Wake renderable objects in the Process and similar.
+ * This is called when a process receives the _S_WAKE Process. It should undo the effects of _S_SLEEP so that objects controlled by this process wake as well.
+ * This must be public.
+ */
+ virtual void OnWake(){};
+ /**
+ * \brief cProcess Constructor. Will Initialise all generic cProcess variables and add the current process to the process list held by cKernel.
+ * In a user defined class this will have the same name as the class name of the user defined class. \n
+ * I.E.
+ * \code
+ * _PROCESS(UserDefinedClass);
+ * {
+ * public:
+ *  UserDefinedClass();
+ * void Run();
+ * void Stop();
+ * };
+ * \endcode
+ * This function must be public. It can take any arguments specified by the user.
+ */
  cProcess();
 
- ///Will return a pointer to the cParentStack owned by this process.
- cParentStack *ParentStack();
+ //Will return a pointer to the cParentStack owned by this process.
+ virtual cParentStack *ParentStack();
 
 
 protected:
@@ -100,9 +130,9 @@ protected:
 
   /** \brief  cProcess destructor. Should not be called by User.
    * Will delete all generic cProcess variables and remove the current process from the process list held by ckernel.
-   * This should only be called by cKernel. Instead use _KILL() or Signal(_S_KILL).
+   * This should only be called by cKernel. Instead use _KILL() or Signal(_S_KILL). This should not contain any user code.
    */
-  template<class T> friend void cLinkedList<T>::Delete(cLinkedNode<T> *lpOld);
+  friend class cLinkedNode<cProcess>;
   ~cProcess();
 };
 

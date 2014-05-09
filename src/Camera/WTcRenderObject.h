@@ -34,10 +34,10 @@ class cRenderObject : public vRenderObject, public cTextureStack
  uint8 miAlpha;
  bool mbLighting;
 
-
-
 protected:
 
+ bool mbNormalArray;
+ bool mbUVArray;
 
 void SetPainterVariables();
   // A Pointer to the cRenderPointer Object for this Renderable Object. Used when cPainter is enabled.
@@ -147,6 +147,7 @@ public:
 cVariableStore *mpVariables;
 cShaderProgram *mpShader;
 
+
 public:
 
 
@@ -176,6 +177,9 @@ public:
   void SetShaderVariables();
 
   cVariableStore* Variables();
+
+      bool NormalArray();
+    bool UVArray();
 
 };
 

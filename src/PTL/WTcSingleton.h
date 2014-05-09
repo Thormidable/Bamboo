@@ -1,9 +1,10 @@
 #ifndef __WTCSINGLETON_H__
 #define __WTCSINGLETON_H__
-/*
+
 template <class cX> class cSingleton
 {
-  static cX *mpInstance=0;
+protected:
+  static cX *mpInstance;
   cSingleton();
 public:
   static cX *Instance()
@@ -14,7 +15,12 @@ public:
     }
     return mpInstance;
   };
+  ~cSingleton()
+  {
+      mpInstance=0;
+  }
 };
-*/
+
+template <class cX> cX *cSingleton<cX>::mpInstance=0;
 
 #endif

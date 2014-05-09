@@ -53,7 +53,7 @@ public:
 	cWindow(HINSTANCE lphInstance);
 
 	friend LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam);
-
+    void GrabMouse();
 #endif
 
 		///This will return the height of the Title bar in pixels. This is Windows only.
@@ -63,7 +63,7 @@ public:
 
 #if WT_OS_TYPE==OS_LINUX
 	Display *lpDisplay;
-	static int32 DisplayAttributes[5];
+	static int DisplayAttributes[];
 	XVisualInfo* VisualInfo;
 	GLXContext glContext;
 	XSetWindowAttributes WindowAttributes;
@@ -77,6 +77,8 @@ public:
 	void MovePointer(uint32 liX,uint32 liY);
 	// This will update the current mouse speeds. see _MOUSE
 	void GetMouseSpeed();
+
+	void GrabMouse();
 #endif
 	// This is a flag telling the system if it is quitting or should quit.
           bool mbQuit;

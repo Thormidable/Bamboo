@@ -42,7 +42,7 @@ public:
        uint8 *Data();
        uint32 TextureNumber();
 
-        void BufferTexture();
+        virtual void BufferTexture();
         virtual void StreamImage(){};
         inline void BindTexture(){glBindTexture(GL_TEXTURE_2D,miTexture);}
 
@@ -89,12 +89,23 @@ public:
 	   ///This will set the entire cTexture to the cRGB lcColor.
        virtual void ColorTexture(cRGB lcColor);
 
+       void CopyImage(c2DVi lvPos,cTexture *lpTexture);
+       void FlipHorizontally();
+       void FlipVertically();
+       void Rotate90CW();
+       void Rotate90CCW();
+       void Rotate90CWClean();
+       void Rotate90CCWClean();
 
 protected:
  uint32 miWidth,miHeight;
  uint8 miDepth,miPixelSize;
  GLuint miTexture;
  uint8 *mpData;
+
+
+    void CopyImageClean(c2DVi lvPos,cTexture *lpTexture);
+    void CopyImageUnbalanced(c2DVi lvPos,cTexture *lpTexture);
 
 };
 
@@ -149,6 +160,72 @@ public:
 
 };
 
+class cGUIFrameBase : public cTexture
+{
+protected:
+    cRGBA mcCol;
+public:
+    cGUIFrameBase(cRGBA lpCol);
+    bool BaseColor(cRGBA lpCol);
+    void WriteBaseColor(cRGBA lpCol);
+    void WriteEdge(cTexture *lpEdge);
+    void WriteCorners(cTexture *lpCorner);
+    void WriteCentres(cTexture *lpCentre);
+    void SortBackColor(cRGBA lpCol);
+};
+
+class cGUIFrameTexture : public cGUIFrameBase
+{
+public:
+    cGUIFrameTexture(c2DVi lvSize,cTexture *lpCorner,cTexture *lpEdge,cTexture *lpCentre=0,cRGBA lpBaseColor=cRGBA(0.0f,0.0f,0.0f,0.0f),uint8 liDepth=32);
+};
+
+class cGUIFrameHorizontalTitleTexture : public cGUIFrameBase
+{
+    uint32 miBreakY;
+public:
+    cGUIFrameHorizontalTitleTexture(c2DVi lvSize,cTexture *lpCorner,cTexture *lpEdge,cTexture *lpBreak,uint32 liBreakHeight,cTexture *lpBreakEdge=0,cTexture *lpCentre=0,cRGBA lpBaseColor=cRGBA(0.0f,0.0f,0.0f,0.0f),uint8 liDepth=32);
+    uint32 Break();
+};
+
+class cGUIFrameVerticalTitleTexture : public cGUIFrameBase
+{
+    uint32 miBreakX;
+public:
+    cGUIFrameVerticalTitleTexture(c2DVi lvSize,cTexture *lpCorner,cTexture *lpEdge,cTexture *lpBreak,uint32 liBreakHeight,cTexture *lpBreakEdge=0,cTexture *lpCentre=0,cRGBA lpBaseColor=cRGBA(0.0f,0.0f,0.0f,0.0f),uint8 liDepth=32);
+    uint32 Break();
+};
+
+class cGUIFrameHandler
+{
+    cTexture *mpCorner;
+    cTexture *mpEdge;
+    cTexture *mpCentre;
+    cTexture *mpBreak;
+    cTexture *mpBreakEdge;
+    cRGBA mpBaseColor;
+
+    uint8 miDepth;
+    static cGUIFrameHandler *mpInstance;
+
+    cLimitedList<cGUIFrameTexture*> mpFrames;
+    cLimitedList<cGUIFrameHorizontalTitleTexture*> mpHorizontal;
+    cLimitedList<cGUIFrameVerticalTitleTexture*> mpVertical;
+
+  public:
+        cGUIFrameHandler();
+        cGUIFrameTexture *GetTexture(c2DVi lvSize);
+        cGUIFrameHorizontalTitleTexture *GetTextureHBreak(c2DVi lvSize,uint32 liPos);
+        cGUIFrameVerticalTitleTexture *GetTextureVBreak(c2DVi lvSize,uint32 liPos);
+        static cGUIFrameHandler *Instance();
+        void Clear();
+        void SetTextures(cTexture *lpCorner,cTexture *lpEdge,cTexture *lpCentre=0,cTexture *lpBreak=0,cTexture *lpBreakEdge=0,cRGBA lpBaseColor=cRGBA(0.0f,0.0f,0.0f,0.0f),uint8 liDepth=32);
+        void BaseColor(cRGBA lcCol=cRGBA(0.0f,0.0f,0.0f,0.0f));
+        void ClearBaseColor();
+        cGUIFrameTexture *GetTexture(uint32 liPos);
+        cGUIFrameHorizontalTitleTexture *GetTextureHBreak(uint32 liPos);
+        cGUIFrameVerticalTitleTexture *GetTextureVBreak(uint32 liPos);
+};
 
 
 

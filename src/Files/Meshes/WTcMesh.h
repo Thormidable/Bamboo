@@ -50,7 +50,6 @@ protected:
 * WT_MESH_FORMAT_NORMALS and WT_MESH_FORMAT_POSITIVE.
 
 */
-uint8 miFormat;
 // This is a pointer to the array holding vertex position data for the mesh.
   float *mpVertex;
 // This is a pointer to the array holding vertex normal vector data for the mesh.
@@ -82,9 +81,6 @@ GLuint mBuffer2;
 
 	cMesh(cMesh *lpMesh);
 	~cMesh();
-
-	/// This will return the models rendering format.
-       void SetFormat();
 
 	/**
 	* \brief This will produce an array of vertex normal data for a mesh.

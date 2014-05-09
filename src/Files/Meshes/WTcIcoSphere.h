@@ -31,4 +31,26 @@ public:
 
 
 };
+
+/**
+ \brief This class will generate a mesh of a box with the specified dimensions.
+ This class will generate a Box with the specified dimensions from edge to edge.
+*/
+class cBoxMesh : public cMesh
+{
+ c3DVf mvSize;
+
+public:
+ ///Constructor, takes a 3 float vector holding the three edge sizes
+ cBoxMesh(c3DVf lvSize,bool lbNormals=false,bool lbUV=false);
+ ///Constructor, takes a pointer to a already existing Box mesh.
+ cBoxMesh(cBoxMesh *lpOther);
+ void Generate();
+ ///Will scale the current mesh by the proportions in the 3 float vector.
+ void Scale(c3DVf lvSize);
+ ///Will set the edge lengths of the current mesh by the values in the 3 float vector.
+ void Size(c3DVf lvSize);
+
+};
+
 #endif

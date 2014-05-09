@@ -2,19 +2,28 @@
 
 using namespace std;
 
+  cFontCharacter **cFontCharacterList::mpList=0;
+  uint8 cFontCharacterList::miItems=0;
+  uint8 cFontCharacterList::miSpaces=0;
+
 
 cFont::cFont(cTextureArray *lpTexture)
 {
  strcpy(mpFileName,lpTexture->mpRef);
 
  miWidth=lpTexture->miWidth;
+ miHeight=lpTexture->miHeight;
  miDepth=lpTexture->miDepth;
 
  mpData=lpTexture->mpData;
 
  glGenTextures(1, &miTexture);
- UpdateTexture();
+ BufferTexture();
 
+ cFontCharacterList::Init();
+ cFontCharacter *lpTemp=cFontCharacterList::GetItem(this);
+ mpCharPos=lpTemp->mpData;
+ 
 }
 
 cFont::~cFont()
@@ -22,39 +31,149 @@ cFont::~cFont()
  if(mpData) {delete []mpData; mpData=0;}
 }
 
-void cFont::UpdateTexture()
+void cFont::BufferTexture()
 {
-glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
-glBindTexture(GL_TEXTURE_2D,miTexture);
+BindTexture();
+
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
 
-if(miDepth==24) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, miWidth,miWidth*IMF_FONT_CHARACTERS, 0, GL_BGR, GL_UNSIGNED_BYTE,mpData);
-if(miDepth==32) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, miWidth,miWidth*IMF_FONT_CHARACTERS, 0, GL_BGRA, GL_UNSIGNED_BYTE,mpData);
+glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+
+glEnable(GL_TEXTURE_2D);
+
+
+if(miDepth==24) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, miWidth,miHeight, 0, GL_BGR, GL_UNSIGNED_BYTE,mpData);
+if(miDepth==32) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, miWidth,miHeight, 0, GL_BGRA, GL_UNSIGNED_BYTE,mpData);
+
+/*
+BindTexture();
+
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+glTexEnvf (GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+
+glEnable(GL_TEXTURE_2D);
+
+if(WT_ALLOW_DYNAMIC_TEXTURES) glTexParameteri(GL_TEXTURE_2D, GL_GENERATE_MIPMAP, GL_TRUE);
+else glGenerateMipmap(GL_TEXTURE_2D);
+
+
+
+if(miDepth==24) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, Width(),Height(), 0, GL_BGR, GL_UNSIGNED_BYTE,mpData);
+if(miDepth==32) glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, Width(),Height(), 0, GL_BGRA, GL_UNSIGNED_BYTE,mpData);
+*/
 }
 
-
-void cFont::BindTexture()
+float cFont::CharacterX(uint8 liChar)
 {
-//  glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
-//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
-glBindTexture(GL_TEXTURE_2D,miTexture);
-}
+ return mpCharPos[liChar].X; 
+};
+
+float cFont::CharacterY(uint8 liChar)
+{
+ return mpCharPos[liChar].Y; 
+};
+
+
 
 uint8 cFont::Character(uint8 lcChar)
 {
 if(lcChar>126 || lcChar<33) return 0xFF;
 return lcChar-33;
-/*
-if(lcChar>96) return lcChar-71; //a-z
-if(lcChar>63) return lcChar-65; //A-Z
-if(lcChar>47) return lcChar+4; //0-9
-return 0xFF;
-*/
+
 }
 
+
+cFontCharacter::cFontCharacter(cFont *lpFont)
+{
+ miSize=lpFont->miCharWidth;
+ mpData[IMF_FONT_CHARACTERS].X=lpFont->miWidth/miSize;
+ mpData[IMF_FONT_CHARACTERS].Y=lpFont->miHeight/miSize;
+ 
+ uint8 liCharacter=0;
+ uint8 liY=0;
+ uint8 liX=0;
+ while(liCharacter<IMF_FONT_CHARACTERS)
+ {
+    mpData[liCharacter].X=liX*mpData[IMF_FONT_CHARACTERS].X;
+    mpData[liCharacter++].Y=liY*mpData[IMF_FONT_CHARACTERS].Y;
+    ++liX;
+    if(liX==lpFont->miCharactersInRow)
+    {
+      liX=0;
+      ++liY;
+    }
+ }
+
+};
+
+float cFontCharacter::X(uint8 liCharacter)
+{
+ return mpData[liCharacter].X;
+};
+
+float cFontCharacter::Y(uint8 liCharacter)
+{
+ return mpData[liCharacter].Y;
+};
+
+uint8 cFontCharacter::Size()
+{
+  return miSize;
+};
+
+
+cFontCharacterList::cFontCharacterList()
+{
+  miItems=0;
+  mpList=new cFontCharacter*[4];
+  miSpaces=4;
+};
+
+void cFontCharacterList::Init()
+{
+  if(!mpList)
+  {
+   mpList=new cFontCharacterList*[4];
+   miSpaces=4;
+   miItems=0;
+  }
+};
+
+cFontCharacter *cFontCharacterList::GetItem(cFont *lpFont)
+{
+  
+ for(uint8 liCount=0;liCount<miItems;++liCount)
+ {
+   if(mpList[liCount]->Size()==lpFont->miCharWidth)
+   {
+     return mpList[liCount];
+   }
+ }
+ 
+ if(miItems==miSpaces-1)
+ {
+   cFontCharacter **lpList=new cFontCharacter*[miSpaces+4];
+   memcpy(lpList,mpList,sizeof(miSpaces));
+   delete []mpList;
+   mpList=lpList;
+   miSpaces+=4;
+ }
+ 
+ mpList[miItems++]=new cFontCharacter(lpFont);
+ 
+ return mpList[miItems-1];
+  
+};
+
+void cFontCharacterList::Clear()
+{
+delete []mpList;  
+mpList=0;
+}

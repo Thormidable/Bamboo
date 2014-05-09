@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 #if WT_FULL_VERSION_BAMBOO
@@ -155,6 +156,7 @@ void cParticleHandler::InitialiseParticleHandler(uint32 liParticles)
 
 	mpAttributes=new cManualInterleavedAttributeArray(5);
 
+    //Don't forget that If adding Normal_Array or Texture_Coord_Array to set mbNormalArray and mbUVArray.
 	mpAttributes->AddComponent(new cInterleavedVertexArray(3));
 	mpAttributes->AddComponent(new cInterleavedFloatArray(4,"Bb_Color"));
 	mpAttributes->AddComponent(new cInterleavedFloatArray(1,"Bb_Size"));
@@ -163,6 +165,8 @@ void cParticleHandler::InitialiseParticleHandler(uint32 liParticles)
 
 	mpAttributes->Elements(0);
 	mpAttributes->PointData((char*)mpList);
+
+
 
 	mpAttributeLinker=new cAttributeLinker(mpAttributes);
 

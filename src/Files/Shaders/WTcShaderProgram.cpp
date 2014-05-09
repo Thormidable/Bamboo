@@ -1,3 +1,5 @@
+
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 
@@ -122,6 +124,11 @@ void cShaderProgram::Link()
 	 }
 	 if(Types[0]) TRACE("No Vertex Shader Linked to Program. This is required.");
 	 if(Types[1]) TRACE("No Fragment Shader Linked to Program. This is required.");
+
+    char lsLogData[1024];
+    GLsizei Length;
+    glGetProgramInfoLog(miProgramID,1024,&Length,lsLogData);
+    TRACE(lsLogData);
 
 	 TRACE("Shader Program failed to Link");
 

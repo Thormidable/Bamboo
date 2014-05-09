@@ -113,12 +113,6 @@ template<class Type> c4DVt<Type> c4DVt<Type>::operator=(c4DVt<Type> *lpValue)
  return lpValue;
 }
 
-template<class Type> c4DVt<Type> c4DVt<Type>::operator=(c4DVt<Type> &lpValue)
-{
- memcpy(v,lpValue.v,4*sizeof(Type));
- return lpValue;
-}
-
 template<class Type> c4DVt<Type> c4DVt<Type>::operator=(c4DVt<Type> lpValue)
 {
  memcpy(v,lpValue.v,4*sizeof(Type));

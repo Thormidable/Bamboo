@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 cRGBA::cRGBA(uint8 *lfRGBA)
@@ -964,3 +965,29 @@ cRGBA::cRGBA(c3DVf lfOther)
         color[3]/=lpOther->A();
         return *this;
     };
+
+bool cRGBA::operator==(float *lpOther)
+{
+    return (!memcmp(lpOther,this,sizeof(cRGBA)));
+};
+bool cRGBA::operator==(cRGBA lpOther)
+{
+    return (!memcmp(&lpOther,this,sizeof(cRGBA)));
+};
+bool cRGBA::operator==(cRGBA *lpOther)
+{
+    return (!memcmp(lpOther,this,sizeof(cRGBA)));
+};
+
+bool cRGB::operator==(float *lpOther)
+{
+    return (!memcmp(lpOther,this,sizeof(cRGB)));
+};
+bool cRGB::operator==(cRGB lpOther)
+{
+    return (!memcmp(&lpOther,this,sizeof(cRGB)));
+};
+bool cRGB::operator==(cRGB *lpOther)
+{
+    return (!memcmp(lpOther,this,sizeof(cRGB)));
+};

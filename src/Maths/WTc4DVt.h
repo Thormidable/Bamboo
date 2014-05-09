@@ -42,7 +42,6 @@ public:
         c4DVt(Type *lf0);
 
        c4DVt<Type> operator=(c4DVt *lpValue);
-       c4DVt<Type> operator=(c4DVt &lpValue);
        c4DVt<Type> operator=(c4DVt lpValue);
        c4DVt<Type> operator=(cRGBA *lpValue);
        c4DVt<Type> operator=(cRGBA &lpValue);

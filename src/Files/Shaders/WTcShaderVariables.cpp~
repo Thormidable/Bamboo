@@ -88,7 +88,7 @@ cShaderVariableSet::cShaderVariableSet()
 
 cShaderVariableSet::~cShaderVariableSet()
 {
-//delete []mpVariables; mpVariables=0;
+delete []mpVariables; mpVariables=0;
 }
 
 int32 cShaderVariableSet::GetID(uint32 liVariableNumber)

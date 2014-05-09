@@ -84,6 +84,12 @@ void SortByBeamLength();
 
 void RecalculateDistances();
 
+///This will reset the Cursor back to the start of the list.
+void ResetCursor();
+
+///This will Set the Cursor to the specified position in the list.
+void SetCursorPosition(int32 liCursorPos);
+
 static bool CompareDistances(cCollisionListObject *lp1,cCollisionListObject *lp2);
 static bool CompareBeamLengths(cCollisionListObject *lp1,cCollisionListObject *lp2);
 

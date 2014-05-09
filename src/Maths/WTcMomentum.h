@@ -169,6 +169,16 @@ public:
 	///Will return the Angular speed about the Local Z Axis
 	float AngularSpeedZ();
 
+    ///Will return the Magnitude of the linear momentum vector.
+    float Magnitude();
+    ///Will return the magnitude of the angular momentum vector.
+    float MagnitudeAngular();
+
+    float MagnitudeSq();
+    ///Will return the magnitude of the angular momentum vector.
+    float MagnitudeAngularSq();
+
+
 	///Will return the Current MomentumVector
 	c3DVf GMomentumVector();
 	///Will return the Current RotationVector

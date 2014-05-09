@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classc_linked_list.html" title="cLinkedList\&lt; cCollisionBase \&gt;" alt="" coords="119,8,316,37"/>
-<area shape="rect" id="node5" href="$classc_linked_node.html" title="cLinkedNode\&lt; cCollisionBase \&gt;" alt="" coords="241,157,449,187"/>
-<area shape="rect" id="node8" href="$classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="340,8,471,37"/>
-</map>

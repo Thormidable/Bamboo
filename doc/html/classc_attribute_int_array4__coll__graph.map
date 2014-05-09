@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classc_int_attribute_store.html" title="More Specific Base class for Attribute Handling classes. Suitable for integer Variables. see cAttributeIntArray1, cAttributeIntArray2, cAttributeIntArray3, cAttributeIntArray4." alt="" coords="9,160,132,189"/>
-<area shape="rect" id="node4" href="$classc_attribute_store.html" title="This is a specific type of cUserVariable for Controlling an array of Attribute Values. This is a virtual class type of cUserVariable. It is still virtual but is specialised for Attribute variables. This will store a pointer to the array of data. This means the user can hand the array to the class and update it, resulting in update every frame. The user must not delete the array or the system will end up reading random data. Attribute Variables are variables which are set for every vertex in the object." alt="" coords="16,83,125,112"/>
-<area shape="rect" id="node6" href="$classc_user_variable.html" title="This is the general class for buffering an instance of a User defined cShaderProgram Variable..." alt="" coords="19,5,123,35"/>
-</map>

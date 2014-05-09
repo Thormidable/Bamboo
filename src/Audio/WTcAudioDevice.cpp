@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 cAudioDevice *cAudioDevice::mpInstance=0;
@@ -19,7 +20,7 @@ cAudioDevice::cAudioDevice()
   alcMakeContextCurrent(mpContext);
   return;
  }
- exit(WT_AUDIO_DEVICE_OPENING_ERROR);
+// exit(WT_AUDIO_DEVICE_OPENING_ERROR);
 }
 
 cAudioDevice::~cAudioDevice()

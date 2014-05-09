@@ -109,11 +109,15 @@ void PositionY(float lfY);
 
  /// This will position the current object to the 2D Vector lpPosition. (X,Y)
  void Position(c2DVf *lpPosition);
+  /// This will position the current object to the 2D Vector lpPosition. (X,Y)
+ void Position(c2DVf lpPosition);
 /// This will position the current object to lfX,lfY. (X,Y)
  void Position(float lfX,float lfY);
 
  /// This will position the current object to the 3D Vector lpPosition. (X,Y,Z)
  void Position(c3DVf *lpPosition);
+ /// This will position the current object to the 3D Vector lpPosition. (X,Y,Z)
+ void Position(c3DVf lpPosition);
  /// This will position the current object to lfX,lfY,lfX. (X,Y,Z)
  void Position(float lfX,float lfY,float lfZ);
 

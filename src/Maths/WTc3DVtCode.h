@@ -430,3 +430,19 @@ template<class Type> float c3DVt<Type>::Angle(c3DVt lpOther)
 {
     return acos(Dot(lpOther)/(lpOther.Magnitude()*Magnitude()));
 };
+
+template<class Type> void c3DVt<Type>::Yaw(float lfAngle)
+{
+    float lfCos=cos(lfAngle);
+    float lfSin=sin(lfAngle);
+
+    float lfX,lfZ;
+
+    lfX=lfCos*v[0]-lfSin*v[2];
+    lfZ=lfSin*v[0]+lfCos*v[2];
+
+    v[0]=lfX;
+    v[2]=lfZ;
+
+}
+

@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 #include <cmath>
 
@@ -58,7 +59,7 @@ void cImage::RenderPainter()
 {
  if(Textures())
  {
-     ResizeArrays();
+     //ResizeArrays();
      SetShaderVariables();
     float lfWidth=mfWidth*0.5f;
     float lfHeight=mfHeight*0.5f;
@@ -118,25 +119,17 @@ void cImage::ResizeArrays()
 }
 
 
-void cImage3D::SetUp()
+
+float cImage::Width()
 {
- Set3D();
- InitialiseArrays();
- Transparency(true);
+  return mfWidth;
 }
 
 
-
-	float cImage::Width()
-	{
-	  return mfWidth;
-	}
-
-
-	float cImage::Height()
-	{
-	    return mfHeight;
-	}
+float cImage::Height()
+{
+    return mfHeight;
+}
 
 cImage3D::cImage3D()
 {
@@ -152,6 +145,15 @@ cImage3D::cImage3D(cCamera *lpCamera): cImage(lpCamera)
 {
 
 }
+
+void cImage3D::SetUp()
+{
+ Set3D();
+ InitialiseArrays();
+ Transparency(true);
+}
+
+
 
 
 void cImage3D::RenderPainter()

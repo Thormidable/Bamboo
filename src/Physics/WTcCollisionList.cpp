@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 
@@ -27,7 +28,16 @@ void cCollisionList::AddCollision(cCollisionListObject *lpObj)
     Add(lpObj);
 };
 
+void cCollisionList::ResetCursor()
+{
+    miCurPos=-1;
+};
 
+void cCollisionList::SetCursorPosition(int32 liCursorPos)
+{
+    if(--liCursorPos<miItems) miCurPos=liCursorPos;
+    else miCurPos=miItems-2;
+};
 
 cCollisionBase *cCollisionList::NextCollisionItem()
 {

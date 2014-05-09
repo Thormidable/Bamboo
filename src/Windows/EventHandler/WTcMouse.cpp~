@@ -10,7 +10,7 @@ cMouse::cMouse()
  middle=0;
  locked=false;
  miShown=true;
-x=y=xs=ys=cx=cy=0.0f;
+cz=z=zs=x=y=xs=ys=cx=cy=0;
 #if WT_OS_TYPE==OS_LINUX
 	mcCursor = XCreateFontCursor(gpWindow->lpDisplay, XC_left_ptr);
 #endif
@@ -21,25 +21,28 @@ void cMouse::Update()
 if(locked)
 {
 #if WT_OS_TYPE==OS_WIN32
-	xs=x-cx;
-	ys=y-cy;
-	x=cx;
-	y=cy;
-	SetCursorPos(cx+gpWindow->RenderAreaX(),cy+gpWindow->RenderAreaY());
-#endif
-#if WT_OS_TYPE==OS_LINUX
 	xs=cx-x;
 	ys=cy-y;
-	gpWindow->MovePointer(cx,cy);
+	cx=x;
+	cy=y;
+	SetCursorPos(x+gpWindow->WindowX(),y+gpWindow->WindowY());
+#endif
+#if WT_OS_TYPE==OS_LINUX
+	xs=x-cx;
+	ys=y-cy;
+	gpWindow->MovePointer(x,y);
 #endif
 }
 else
 {
-	xs=cx-x;
-	ys=cy-y;
+	xs=x-cx;
+	ys=gpWindow->RenderAreaHeight()-y-cy;
 	miLockedX=x=cx;
-	miLockedY=y=cy;
+	miLockedY=y=gpWindow->RenderAreaHeight()-cy;
 }
+zs=cz;
+z+=cz;
+cz=0;
 }
 
 bool cMouse::Locked(){return locked;};
@@ -51,19 +54,15 @@ void cMouse::Lock()
  miLockedX=cx;
  miLockedY=cy;
 
- //miLockedX=cx;
- //miLockedY=cy;
-
  locked=true;
- cx=gpWindow->RenderAreaWidth()>>1;
- cy=gpWindow->RenderAreaHeight()>>1;
+ cx=x=gpWindow->RenderAreaWidth()*0.5;
+ cy=y=gpWindow->RenderAreaHeight()*0.5;
 #if WT_OS_TYPE==OS_WIN32
-	SetCursorPos(cx+gpWindow->RenderAreaX(),cy+gpWindow->RenderAreaY());
+	SetCursorPos(x+gpWindow->WindowX(),y+gpWindow->WindowY());
 #endif
 #if WT_OS_TYPE==OS_LINUX
-	x=cx;
-	y=cy;
-	gpWindow->MovePointer(cx,cy);
+
+	gpWindow->MovePointer(x,y);
 #endif
 }
 
@@ -116,10 +115,12 @@ int cMouse::Y(){return y;};
 int cMouse::Z(){return z;};
 int cMouse::XSpeed(){return xs;};
 int cMouse::YSpeed(){return ys;};
+int cMouse::ZSpeed(){return zs;};
 bool cMouse::Left(){return left;};
 bool cMouse::Right(){return right;};
 bool cMouse::Middle(){return middle;};
 
+#if WT_FULL_VERSION_BAMBOO
 cCollisionList *cMouse::Selection(cMouseCollisionObject *lpMouse,uint32 liFilter,cCollisionList *lpList)
 {
  return _COLLISION_HANDLER->GenerateCollisionList(lpMouse,liFilter,lpList);
@@ -129,14 +130,14 @@ cCollisionList *cMouse::SelectionDetailed(cMouseCollisionObject *lpMouse,uint32 
 {
     return _COLLISION_HANDLER->GenerateDetailedCollisionList(lpMouse,liFilter,lpList);
 };
-
+#endif
 void cMouse::UnlockPosition()
 {
     if(!_MOUSE->locked) return;
 #if WT_OS_TYPE==OS_WIN32
     locked=false;
-    cx=miLockedX+gpWindow->BorderThickness()+10;
-    cy=miLockedY+gpWindow->TitleBarHeight()+10;
+    cx=miLockedX+gpWindow->WindowX();
+    cy=miLockedY+gpWindow->WindowY();
 
     SetCursorPos(cx,cy);
 #endif
@@ -152,31 +153,14 @@ void cMouse::UnlockPosition()
 
 void cMouse::SetPos(int lX,int lY)
 {
-if (!Locked())
-         {
-            cx=lX;
-            cy=lY;
-         }
-         else
-         {
-            x=lX;
-            y=lY;
-         }
+    cx=lX;
+    cy=lY;
 };
-void cMouse::SetPos(int lX,int lY,int lZ)
+
+
+void cMouse::SetWheelPos(int liSize)
 {
-if (!Locked())
-         {
-            cx=lX;
-            cy=lY;
-            //cz=lZ;
-         }
-         else
-         {
-            x=lX;
-            y=lY;
-            z=lZ;
-         }
+    cz+=liSize;
 };
 void cMouse::SetLeft(bool lbLeft){left=lbLeft;};
 void cMouse::SetRight(bool lbRight){right=lbRight;};

@@ -37,11 +37,11 @@ protected:
        	// Updates arrays to make the image of size mfSize.
        void ResizeArrays();
 
-	   cImage(vRenderNode *lpRenderNode);
 public:
  	/// Constructor for cImage. Will Create an Empty cImage Object.
        cImage();
 	   cImage(cCamera *lpCamera);
+	   cImage(vRenderNode *lpRenderNode);
 	// This function will set this object to being a 2D object and initialise the arrays.
        virtual void SetUp();
 	//Destructor for cImage.

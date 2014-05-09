@@ -136,4 +136,26 @@ protected:
   virtual ~cProcess();
 };
 
+template<class tType> void cKernel::KillOtherProcesses()
+{
+ cLinkedNode<cProcess> *lpStep=mpProcess->Start();
+ while(lpStep)
+ {
+  if(!dynamic_cast<tType*>(lpStep->Data())) lpStep->Data()->Signal(_S_KILL);
+  lpStep=lpStep->Next();
+ }
+
+};
+
+template<class tType> void cKernel::KillType()
+{
+ cLinkedNode<cProcess> *lpStep=mpProcess->Start();
+ while(lpStep)
+ {
+  if(dynamic_cast<tType*>(lpStep->Data())) lpStep->Data()->Signal(_S_KILL);
+  lpStep=lpStep->Next();
+ }
+
+};
+
 #endif

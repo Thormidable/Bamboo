@@ -1,4 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classc_limited_list.html" title="cLimitedList\&lt; cPlane \&gt;" alt="" coords="5,101,160,131"/>
-<area shape="rect" id="node4" href="$classc_plane.html" title="A class for handling plane data fir 3D mesh objects. Is composed of 4 floats, X,Y,Z,N. X,Y,Z components of the Normalised normal vector and distance above the origin along the line of the Normal." alt="" coords="52,5,113,35"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classc_linked_list.html" title="cLinkedList\&lt; vFile \&gt;" alt="" coords="5,88,144,117"/>
-<area shape="rect" id="node5" href="$classc_linked_node.html" title="cLinkedNode\&lt; vFile \&gt;" alt="" coords="101,237,251,267"/>
-<area shape="rect" id="node8" href="$classv_file.html" title="This is the virtual file for cFile. It is a virtual representation of the base code for files loaded ..." alt="" coords="199,88,249,117"/>
-<area shape="rect" id="node10" href="$classc_signal.html" title="Class for handling Signals sent between objects (cProcess, cRenderObject, cCollisionObject). Allows the user to wake, sleep and kill objects. For cProcess (while cParentStack is enabled) also allows signals to be sent to a process that will recursively affect all the children of that process. Possible signals to be passed in are _S_SLEEP,_S_WAKE,_S_KILL,_S_SLEEP_TREE, _S_WAKE_TREE,_S_KILL_TREE User Specified Signals are controlled by the class cUserSignal." alt="" coords="192,5,256,35"/>
-<area shape="rect" id="node12" href="$classc_linked_node.html" title="This is a node class to allow templating of the cLinkedList class. This node will store pointers to t..." alt="" coords="273,88,404,117"/>
-</map>

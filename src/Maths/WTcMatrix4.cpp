@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 cMatrix4 cMatrix4::mpTemp;
@@ -656,6 +657,16 @@ void cMatrix4::Position(c2DVf *lpPosition)
 void cMatrix4::Position(c3DVf *lpPosition)
 {
  memcpy(&mpData[13],lpPosition->v,sizeof(float)*3);
+}
+
+void cMatrix4::Position(c2DVf lpPosition)
+{
+ memcpy(&mpData[13],lpPosition.v,sizeof(float)*2);
+}
+
+void cMatrix4::Position(c3DVf lpPosition)
+{
+ memcpy(&mpData[13],lpPosition.v,sizeof(float)*3);
 }
 
 void cMatrix4::PositionX(float lfX)
@@ -1939,9 +1950,9 @@ cCameraMatrix4 &cMatrix4::ConvertToCameraMatrix()
     cCameraMatrix4::mpTemp.mpData[11]=0.0f;
     cCameraMatrix4::mpTemp.mpData[15]=1.0f;
 
-    cCameraMatrix4::mpTemp.mpPosition[0]=-mpData[12];
-    cCameraMatrix4::mpTemp.mpPosition[1]=-mpData[13];
-    cCameraMatrix4::mpTemp.mpPosition[2]=-mpData[14];
+    cCameraMatrix4::mpTemp.mpCameraPosition[0]=-mpData[12];
+    cCameraMatrix4::mpTemp.mpCameraPosition[1]=-mpData[13];
+    cCameraMatrix4::mpTemp.mpCameraPosition[2]=-mpData[14];
 
     return cCameraMatrix4::mpTemp;
 

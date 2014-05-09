@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classc_sphere_collision.html" title="cSphereCollision" alt="" coords="5,101,125,131"/>
-<area shape="rect" id="node4" href="$classv_collision_data.html" title="Virtual Class so cCollisionObject can access the Collision data object it needs." alt="" coords="12,5,119,35"/>
-<area shape="rect" id="node6" href="$classc_limited_pointer_list.html" title="cLimitedPointerList\&lt; cCompoundCollisionNode \&gt;" alt="" coords="149,101,456,131"/>
-<area shape="rect" id="node8" href="$classc_compound_collision_node.html" title="This is the storage class for cCompouncCollision objects. You will not interact with it directly..." alt="" coords="216,5,389,35"/>
-</map>

@@ -1,3 +1,5 @@
+
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 
@@ -257,21 +259,50 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
 	switch (message)
 	{
 
-    case WM_CREATE:
-        return 0;
-
-    case WM_CLOSE:
-         gpWindow->mbQuit=true;
-        return 0;
-
-    case WM_DESTROY:
-        return 0;
-
     case WM_PAINT:
          gpWindow->Repaint=true;
          return 0;
 
+    case WM_MOUSEMOVE:
+         _MOUSE->SetPos((int16)LOWORD(lParam),(int16)HIWORD(lParam));
+         return 0;
 
+    case WM_KEYDOWN:
+        _KEYBOARD->SetKeyState(true,wParam);
+       return 0;
+
+
+    case WM_KEYUP:
+         _KEYBOARD->SetKeyState(false,wParam);
+         return 0;
+
+    case WM_MOUSEWHEEL:
+        _MOUSE->SetWheelPos(GET_WHEEL_DELTA_WPARAM(wParam));
+        return 0;
+
+    case WM_MBUTTONDOWN:
+        _MOUSE->SetMiddle(true);
+        return 0;
+
+    case WM_MBUTTONUP:
+        _MOUSE->SetMiddle(false);
+        return 0;
+
+    case WM_LBUTTONDOWN:
+         _MOUSE->SetLeft(true);
+         return 0;
+
+    case WM_LBUTTONUP:
+         _MOUSE->SetLeft(false);
+         return 0;
+
+    case WM_RBUTTONDOWN:
+         _MOUSE->SetRight(true);
+         return 0;
+
+    case WM_RBUTTONUP:
+         _MOUSE->SetRight(false);
+         return 0;
 
     case WM_SIZE:
        if (wParam==SIZE_RESTORED)
@@ -297,35 +328,24 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
             gpWindow->miWindowY=(int16)HIWORD(lParam);
          return 0;
 
+    case WM_CREATE:
+        return 0;
 
-    case WM_MOUSEMOVE:
-         _MOUSE->SetPos((int16)LOWORD(lParam),(int16)HIWORD(lParam));
-         return 0;
+    case WM_CLOSE:
+         gpWindow->mbQuit=true;
+        return 0;
 
-    case WM_LBUTTONDOWN:
-         _MOUSE->SetLeft(true);
-         return 0;
+    case WM_DESTROY:
+        return 0;
 
-    case WM_LBUTTONUP:
-         _MOUSE->SetLeft(false);
-         return 0;
+    case WM_ENTERSIZEMOVE:
+        return 0;
 
-    case WM_RBUTTONDOWN:
-         _MOUSE->SetRight(true);
-         return 0;
+    case WM_EXITSIZEMOVE:
+    return 0;
 
-    case WM_RBUTTONUP:
-         _MOUSE->SetRight(false);
-         return 0;
-
-    case WM_KEYDOWN:
-        _KEYBOARD->SetKeyState(true,wParam);
-       return 0;
-
-
-    case WM_KEYUP:
-         _KEYBOARD->SetKeyState(false,wParam);
-         return 0;
+    case WM_MOVING:
+    return 0;
 
 
     default:
@@ -369,7 +389,7 @@ lRoot=DefaultRootWindow(lpDisplay);
 VisualInfo=glXChooseVisual(lpDisplay,0,DisplayAttributes);
 
 WindowAttributes.colormap = XCreateColormap(lpDisplay, lRoot,VisualInfo->visual, AllocNone);
-WindowAttributes.event_mask = ExposureMask | KeyPressMask | KeyReleaseMask | ButtonPressMask | ButtonReleaseMask | StructureNotifyMask | PointerMotionMask;
+WindowAttributes.event_mask = ExposureMask | KeyPressMask | KeyReleaseMask | ButtonPressMask | ButtonReleaseMask | StructureNotifyMask | PointerMotionMask | LeaveNotify;
 
 
 InitialiseOpenGL();
@@ -422,82 +442,86 @@ void cWindow::HandleMessages()
  	while(XPending(lpDisplay))
 	{
 		XNextEvent(lpDisplay, &Event);
-        	if(Event.type == Expose)
+		switch(Event.type)
 		{
-			XGetWindowAttributes(lpDisplay, lWindow, &gwa);
-			glViewport(0, 0, gwa.width, gwa.height);
-			glXSwapBuffers(lpDisplay, lWindow);
-		break;
-		}
-		//Key stuff
+		    case MotionNotify:
+		    {
+                _MOUSE->cx=Event.xmotion.x;
+                _MOUSE->cy=Event.xmotion.y;
+                break;
+		    };
+		    case Expose:
+		    {
+		        XGetWindowAttributes(lpDisplay, lWindow, &gwa);
+                glViewport(0, 0, gwa.width, gwa.height);
+                glXSwapBuffers(lpDisplay, lWindow);
+                break;
+		    };
+		    case KeyPress:
+		    {
+		      	uint32 liKeySym=XLookupKeysym(&Event.xkey,0);
+                _KEYBOARD->SetKeyState(true,liKeySym&0xFF) ;
+                break;
+		    };
+		    case KeyRelease:
+		    {
+                uint32 liKeySym=XLookupKeysym(&Event.xkey,0);
+                _KEYBOARD->SetKeyState(false,liKeySym&0xFF);
+                break;
+		    };
+		    case ButtonPress:
+		    {
+                if(Event.xbutton.button==1) _MOUSE->left=true;
+                if(Event.xbutton.button==3) _MOUSE->right=true;
+                if(Event.xbutton.button==2) _MOUSE->middle=true;
+                if(Event.xbutton.button==4) ++(_MOUSE->cz);
+                if(Event.xbutton.button==5) --(_MOUSE->cz);
+                break;
+		    };
+		    case ButtonRelease:
+		    {
+                if(Event.xbutton.button==1) _MOUSE->left=false;
+                if(Event.xbutton.button==3) _MOUSE->right=false;
+                if(Event.xbutton.button==2) _MOUSE->middle=false;
+                break;
+		    };
+		    case ConfigureNotify:
+		    {
+                gpWindow->miWindowX=Event.xconfigure.x;
+                gpWindow->miWindowY=Event.xconfigure.y;
+                gpWindow->miWindowWidth=Event.xconfigure.width;
+                gpWindow->miWindowHeight=Event.xconfigure.height;
+                gpWindow->miInvWindowWidth=1.0f/miWindowWidth;
+                gpWindow->miInvWindowHeight=1.0f/miWindowHeight;
+                //gpWindow->Moved=true;
+                gpWindow->Resized=true;
+                gpWindow->mfRenderRatio=gpWindow->mfWindowRatio=((float)gpWindow->miWindowHeight)/gpWindow->miWindowWidth;
+                FindRenderArea();
+                cCameraHandler::Instance()->UpdateWindowSize();
+                break;
+		    };
+		    case DestroyNotify:
+		    {
+                gpWindow->mbQuit=true;
+                break;
+		    };
+		    case LeaveNotify:
+		    {
+                if(_MOUSE->Locked())
+                {
+                    MovePointer(_MOUSE->X(),_MOUSE->Y());
+                }
+		        break;
+		    };
+		    case EnterNotify:
+		    {
 
-		if(Event.type == KeyPress)
-		{
-		  uint32 liKeySym=XLookupKeysym(&Event.xkey,0);
-		  _KEYBOARD->SetKeyState(true,liKeySym&0xFF) ;
-		  break;
-		}
-		if(Event.type == KeyRelease)
-		{
-		  uint32 liKeySym=XLookupKeysym(&Event.xkey,0);
-		  _KEYBOARD->SetKeyState(false,liKeySym&0xFF);
-		  break;
-		}
+		    };
+		};
 
-
-		//Mouse Stuff
-		if(Event.type == ButtonPress)
-		{
-			if(Event.xbutton.button==1) _MOUSE->left=true;
-			if(Event.xbutton.button==3) _MOUSE->right=true;
-			if(Event.xbutton.button==2) _MOUSE->middle=true;
-			break;
-		}
-		if(Event.type == ButtonRelease)
-		{
-			if(Event.xbutton.button==1) _MOUSE->left=false;
-			if(Event.xbutton.button==3) _MOUSE->right=false;
-			if(Event.xbutton.button==2) _MOUSE->middle=false;
-			break;
-		}
-		if(Event.type == MotionNotify)
-		{
-		 if (!_MOUSE->locked)
-         {
-			_MOUSE->cx=Event.xmotion.x;
-			_MOUSE->cy=Event.xmotion.y;
-         }
-         else
-         {
-			_MOUSE->x=Event.xmotion.x;
-			_MOUSE->y=Event.xmotion.y;
-         }
-
-			break;
-		}
-		if(Event.type == ConfigureNotify)
-		{
-			gpWindow->miWindowX=Event.xconfigure.x;
-			gpWindow->miWindowY=Event.xconfigure.y;
-			gpWindow->miWindowWidth=Event.xconfigure.width;
-			gpWindow->miWindowHeight=Event.xconfigure.height;
-			gpWindow->miInvWindowWidth=1.0f/miWindowWidth;
-            gpWindow->miInvWindowHeight=1.0f/miWindowHeight;
-			//gpWindow->Moved=true;
-			gpWindow->Resized=true;
-			gpWindow->mfRenderRatio=gpWindow->mfWindowRatio=((float)gpWindow->miWindowHeight)/gpWindow->miWindowWidth;
-			FindRenderArea();
-			cCameraHandler::Instance()->UpdateWindowSize();
-
-			break;
-		}
-		if(Event.type == DestroyNotify)
-		{
-			gpWindow->mbQuit=true;
-			break;
 		}
 }
-}
+
 
 void cWindow::HandleChanges()
 {
@@ -507,9 +531,21 @@ void cWindow::HandleChanges()
 //}
 }
 
+#if WT_OS_TYPE==OS_WIN32
+
+#endif
+
+#if WT_OS_TYPE==OS_LINUX
+void cWindow::GrabMouse()
+{
+    XGrabPointer(lpDisplay,lWindow,true,0,GrabModeAsync,GrabModeAsync,lWindow,None,CurrentTime);
+}
+#endif
+
 void cWindow::MovePointer(uint32 liX,uint32 liY)
 {
 XWarpPointer(lpDisplay,None,lWindow,0,0,0,0,liX,liY);
+XFlush( lpDisplay );
 }
 
 void cWindow::GetMouseSpeed()

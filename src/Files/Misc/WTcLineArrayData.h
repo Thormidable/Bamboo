@@ -3,6 +3,7 @@
 /**
 * \brief A data for use by cLineArray objects.
 * This will draw a line from the first point added to the last point added to the class. It will draw a straight line from each point to the next point to travel from the first point to the last point.
+* Inherits from cLimitedList. List can be modified using the cLimitedList functions.
 */
 class cLineArrayData : public cLimitedList<c3DVf>
 {

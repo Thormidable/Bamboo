@@ -22,7 +22,7 @@ protected:
  static cCameraMatrix4 mpTemp;
 
  // Bah Hacky Hacky HAcky Hack. Suk.
- float mpCameraMatrix[16];
+ static float mpCameraMatrix[16];
  // This is a static 4x4 matrix to allow fast zeroing of this 4x4 matrix.
  static float mpZero[];
  // This is a static 4x4 matrix to allow fast restoration of this matrix to an identity matrix.
@@ -38,7 +38,8 @@ public:
  float* Position();
 
 /// The position of this matrix has been seperated from the rest of the matrix as the camera should rotate around 0,0,0, not itself
-float mpPosition[3];
+float mpCameraPosition[3];
+static float mpGlobalPosition[3];
 
  /// This will return the X position of this objects matrix.
  float X();
@@ -47,6 +48,12 @@ float Y();
 /// This will return the Z position of this objects matrix.
 float Z();
 
+///This will return the X Axis Vector of the camera. Must be assembled, so has more overhead than may be expected.
+c3DVf XVect();
+///This will return the Y Axis Vector of the camera. Must be assembled, so has more overhead than may be expected.
+c3DVf YVect();
+///This will return the Z Axis Vector of the camera. Must be assembled, so has more overhead than may be expected.
+c3DVf ZVect();
 
 
  /// This will set this objects matrix position vector to be the same as lpPosition.
@@ -246,13 +253,11 @@ uint32 Distance2D(float *lpOther);
  cCameraMatrix4();
  /// This will return the determinant of this matrix.
  float Determinant();
-
+///This will return the Constructed Camera Matrix.
 float *ConstructCameraMatrix();
 
  void Display();
 
-     ///This will return the pointer to the Corrected Camera Matrix.
-	float *CameraMatrix();
 };
 
 

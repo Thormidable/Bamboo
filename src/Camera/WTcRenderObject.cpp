@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 cRenderObject::cRenderObject(cCamera *lpCamera)
@@ -23,7 +24,7 @@ vRenderObject::vRenderObject()
 {
  mpCollisionObject=0;
  mpProcess=0;
-
+ mmTotalCache.Identity();
 }
 
 cRenderObject::~cRenderObject()
@@ -148,6 +149,9 @@ mpVariables=0;
 	mpRenderer->Camera()->Painter()->Add(mpPainterData);
 	mpPainterData->SetObject(this);
 
+    mbNormalArray=false;
+    mbUVArray=false;
+
  Transparency(0);
  Lighting(1);
 }
@@ -232,7 +236,7 @@ void vRenderObject::UpdateCache()
 	//printf("This : %p, mpCollisionObject : %p\n",this,mpCollisionObject);
 	if(mpCollisionObject)
 	{
-		mpCollisionObject->PreUpdateCache();
+		//mpCollisionObject->PreUpdateCache();
 
 		mmCache=_MATRIX_STACK->Current();
 		mmTotalCache=_COMBINED_MATRIX;
@@ -443,6 +447,16 @@ void cRenderObject::AddTexture(string lsTextureSlot,string lcTextureReference)
 	AddTexture(lsTextureSlot,_GET_TEXTURE_FILE(lcTextureReference.c_str()));
 };
 
+bool cRenderObject::NormalArray()
+{
+    return mbNormalArray;
+};
+
+bool cRenderObject::UVArray()
+{
+    return mbUVArray;
+};
+
 #if WT_FULL_VERSION_BAMBOO
 
 c3DVf vRenderObject::GetScreenPosition()
@@ -502,6 +516,9 @@ float vRenderObject::GetScreenY(cViewport *lpView)
 {
   return lpView->ViewportY() + lpView->ViewportHeight() * ((mmTotalCache[13]/mmTotalCache[15])+1.0f)*0.5f;
 };
+
+bool NormalArray();
+bool UVArray();
 
 #endif
 

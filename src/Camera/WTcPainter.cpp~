@@ -114,7 +114,9 @@ for(liPass=0;liPass<25;liPass+=8)
   //Fill the Buckets.
   for(liFindPos=0;liFindPos<miPos;++liFindPos)
   {
-    //Believes something is not initialised. lpStarts?
+    //Believes something is not initialised.
+    //On first pass, mmTotalCache is based un uninitialised values.
+	  //Not necessary to fix.
 	mpBucket[(lpStarts[(mpList[liFindPos]->miDist>>liPass)&0xff])++]=mpList[liFindPos];
   }
 

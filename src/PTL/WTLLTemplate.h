@@ -42,6 +42,8 @@ public:
 	cLinkedNode<T> *Next(){return mpNext;}
 	/// This will return a pointer to the previous node in the linked list. see cLinkedList.
 	cLinkedNode<T> *Previous(){return mpPrev;}
+	///Will return a pointer to this nodes current list
+	cLinkedList<T> *List(){return mpList;}
 
 	T *Data(){return mpData;};
 };
@@ -54,6 +56,7 @@ public:
 */
 template<class T> class cLinkedList
 {
+protected:
 /// This is a pointer to the first cLinkedNode in the list.
        cLinkedNode<T> *mpStart;
 	/// This is a pointer to the last cLinkedNode in the list.
@@ -64,7 +67,9 @@ template<class T> class cLinkedList
 public:
 
 	void StitchOut(cLinkedNode<T> *lpNode);
+	static void StitchOutStatic(cLinkedNode<T> *lpNode);
 	void StitchIn(cLinkedNode<T> *lpNode);
+	//This will insert the data item lpNode immediately after the Node lpPos.
 	void StitchIn(cLinkedNode<T> *lpNode,cLinkedNode<T> *lpPos);
 
 
@@ -92,15 +97,15 @@ public:
        //Insert New item Before or After Cursor
        cLinkedNode<T> *Insert(T *lpData);
 
-	//void Insert(cLinkedNode<T> *lpNode,cLinkedNode<T> *lpPosition);
+		cLinkedNode<T> *Insert(T *lpNode,cLinkedNode<T> *lpPosition);
 	/// This will delete the cLinkedNode pointed to by lpOld and remove it from the list including mpData.
         void Delete(cLinkedNode<T> *lpOld);
 
 	void Initialise();
 
 	/// This will Move the node lpFrom to be before lpPosition.
-	void Move(cLinkedNode<T> *lpFrom,cLinkedNode<T> *lpPosition);
-	void Move(cLinkedNode<T> *lpFrom,cLinkedList<T> *lpPosition);
+	static void Move(cLinkedNode<T> *lpFrom,cLinkedNode<T> *lpPosition);
+	static void Move(cLinkedNode<T> *lpFrom,cLinkedList<T> *lpPosition);
 
 	void ClearAll();
 	void DeleteAll();
@@ -131,9 +136,10 @@ if(mpStart)
  mpTemp=mpStart;
  while(mpTemp->mpNext && mpTemp!=mpEnd)
  {
-	 cLinkedNode<T> *lpKill;
+  cLinkedNode<T> *lpKill;
   lpKill=mpTemp;
   mpTemp=mpTemp->mpNext;
+
 
   delete lpKill;
  }
@@ -154,7 +160,10 @@ template<class T> void cLinkedList<T>::Remove(cLinkedNode<T> *lpNode)
 
 template<class T> void cLinkedList<T>::StitchOut(cLinkedNode<T> *lpNode)
 {
-if(lpNode->mpList!=this) {lpNode->mpList->StitchOut(lpNode); return;}
+if(lpNode->mpList!=this)
+{
+    lpNode->mpList->StitchOut(lpNode); return;
+}
 // if lpNode is Not the end
 if (lpNode!=mpEnd) {lpNode->mpNext->mpPrev=lpNode->mpPrev;}
 // if lpNode is the End
@@ -170,6 +179,12 @@ else
 if (lpNode!=mpStart){lpNode->mpPrev->mpNext=lpNode->mpNext;}
 else {mpStart=lpNode->mpNext; if(mpStart) mpStart->mpPrev=0; }
 
+}
+
+
+template<class T> void cLinkedList<T>::StitchOutStatic(cLinkedNode<T> *lpNode)
+{
+    lpNode->mpList->StitchOut(lpNode); return;
 }
 
 template<class T> cLinkedList<T>::cLinkedList()
@@ -287,6 +302,34 @@ template<class T> cLinkedNode<T> *cLinkedList<T>::Insert(T *lpData)
 
 	//++miSize;
 	return mpTemp;
+}
+
+template<class T> cLinkedNode<T> *cLinkedList<T>::Insert(T *lpData,cLinkedNode<T> *lpPos)
+{
+	if(lpPos)
+	{
+		mpTemp=new cLinkedNode<T>(lpData);
+		StitchIn(mpTemp,lpPos);
+		return mpTemp;
+	}
+	else
+	{
+		mpTemp=new cLinkedNode<T>(lpData);
+		mpTemp->List(this);
+		if(mpStart)
+		{
+			mpTemp->mpNext=mpStart;
+			mpStart->mpPrev=mpTemp;
+			mpStart=mpTemp;
+		}
+		else
+		{
+			mpStart=mpTemp;
+			mpEnd=mpTemp;
+			mpTemp->mpPrev=mpTemp->mpNext=0;
+		}
+		return mpTemp;
+	}
 }
 
 template<class T> void cLinkedList<T>::Display()

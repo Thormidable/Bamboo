@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 using namespace std;
@@ -94,13 +95,31 @@ void cIMF::LoadIMF(const char *lpPath)
 			FileStream.read((char *) lpTexture.mpRef,liTemp*sizeof(char));
 			lpTexture.mpRef[liTemp]=0;
 
-			FileStream.read((char *) &(lpTexture.miWidth),sizeof(uint32));
-			FileStream.read((char *) &(lpTexture.miDepth),sizeof(uint32));
+            printf("Loading Font : %s\n",lpTexture.mpRef);
 
-			lpTexture.mpData=new uint8[IMF_FONT_CHARACTERS*lpTexture.miWidth*lpTexture.miWidth*lpTexture.miDepth>>3];
-			FileStream.read((char *) lpTexture.mpData,IMF_FONT_CHARACTERS*lpTexture.miWidth*lpTexture.miWidth*lpTexture.miDepth>>3);
+//Old Font Format
+//			FileStream.read((char *) &(lpTexture.miWidth),sizeof(uint32));
+//			FileStream.read((char *) &(lpTexture.miDepth),sizeof(uint32));
+//          lpTexture.mpData=new uint8[IMF_FONT_CHARACTERS*lpTexture.miWidth*lpTexture.miWidth*lpTexture.miDepth>>3];
+//			FileStream.read((char *) lpTexture.mpData,IMF_FONT_CHARACTERS*lpTexture.miWidth*lpTexture.miWidth*lpTexture.miDepth>>3);
+//          new cFont(&lpTexture);
 
-			new cFont(&lpTexture);
+
+//New Font Format
+		FileStream.read((char *) &(lpTexture.miWidth),sizeof(uint32));
+		FileStream.read((char *) &(lpTexture.miHeight),sizeof(uint32));
+		FileStream.read((char *) &(lpTexture.miDepth),sizeof(uint32));
+		lpTexture.mpData=new uint8[lpTexture.miWidth*lpTexture.miHeight*lpTexture.miDepth>>3];
+		FileStream.read((char *) lpTexture.mpData,lpTexture.miWidth*lpTexture.miHeight*sizeof(uint8)*lpTexture.miDepth>>3);
+
+		cFont *lpFont=new cFont(&lpTexture);
+
+		FileStream.read((char *) &(lpFont->miCharWidth),sizeof(uint8));
+		FileStream.read((char *) &(lpFont->miCharactersInRow),sizeof(uint16));
+		FileStream.read((char *) &(lpFont->miCharactersInColumn),sizeof(uint16));
+
+			lpFont->GetCharMap();
+
                 }break;
 #if WT_FULL_VERSION_BAMBOO
                 case IMF_TYPE_TREE :
@@ -218,5 +237,3 @@ void cIMF::LoadIMF(const char *lpPath)
      }
 	FileStream.close();
 }
-
-

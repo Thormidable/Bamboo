@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 
@@ -20,6 +21,7 @@ uint32 cShaderVariableSet::GetUniformPosition(string Name)
  uint32 liCount;
  for(liCount=0;liCount<miVariables;++liCount)
  {
+
 	if(mpVariables[liCount].Uniform() && CompareVariables(mpVariables[liCount].Start(),Name.c_str()," ,;"))
 	{
 	    return liCount+1;

@@ -1,19 +1,42 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 #include <cmath>
 
+c3DVf cCameraMatrix4::XVect()
+{
+    return c3DVf(mpData[0],mpData[4],mpData[8]);
+};
+
+c3DVf cCameraMatrix4::YVect()
+{
+    return c3DVf(mpData[1],mpData[5],mpData[9]);
+};
+
+c3DVf cCameraMatrix4::ZVect()
+{
+    return c3DVf(mpData[2],mpData[6],mpData[10]);
+}
 cCameraMatrix4 cCameraMatrix4::mpTemp;
 
 float cCameraMatrix4::mpZero[]={0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
-float cCameraMatrix4::mpIdentity[]={1.0f,0.0f,0.0f,0.0f,0.0f,1.0f,0.0f,0.0f,0.0f,0.0f,1.0f,0.0f,0.0f,0.0f,0.0f,1.0f};
+float cCameraMatrix4::mpIdentity[]={1.0f,0.0f,0.0f,0.0f,
+                                    0.0f,1.0f,0.0f,0.0f,
+                                    0.0f,0.0f,1.0f,0.0f,
+                                    0.0f,0.0f,0.0f,1.0f};
+float cCameraMatrix4::mpGlobalPosition[3]={0.0f,0.0f,0.0f};
+float cCameraMatrix4::mpCameraMatrix[]={1.0f,0.0f,0.0f,0.0f,
+                                    0.0f,1.0f,0.0f,0.0f,
+                                    0.0f,0.0f,1.0f,0.0f,
+                                    0.0f,0.0f,0.0f,1.0f};
 
 cCameraMatrix4::cCameraMatrix4()
 {
 
 
  Zero();
- mpPosition[0]=0.0f;
- mpPosition[1]=0.0f;
- mpPosition[2]=0.0f;
+ mpCameraPosition[0]=0.0f;
+ mpCameraPosition[1]=0.0f;
+ mpCameraPosition[2]=0.0f;
 }
 
 cCameraMatrix4 cCameraMatrix4::operator+(float &lVal)
@@ -405,43 +428,43 @@ float &cCameraMatrix4::operator()(uint16 liColumn,uint16 liRow)
 
 void cCameraMatrix4::Position(float lfX,float lfY)
 {
- mpPosition[0]=-lfX;
- mpPosition[1]=-lfY;
+ mpCameraPosition[0]=-lfX;
+ mpCameraPosition[1]=-lfY;
 }
 
 void cCameraMatrix4::Position(float lfX,float lfY,float lfZ)
 {
- mpPosition[0]=-lfX;
- mpPosition[1]=-lfY;
- mpPosition[2]=-lfZ;
+ mpCameraPosition[0]=-lfX;
+ mpCameraPosition[1]=-lfY;
+ mpCameraPosition[2]=-lfZ;
 }
 
 
 void cCameraMatrix4::Position(c2DVf *lpPosition)
 {
- mpPosition[0]=-lpPosition->v[0];
- mpPosition[1]=-lpPosition->v[1];
+ mpCameraPosition[0]=-lpPosition->v[0];
+ mpCameraPosition[1]=-lpPosition->v[1];
 }
 
 
 void cCameraMatrix4::Position(c3DVf *lpPosition)
 {
- mpPosition[0]=-lpPosition->v[0];
- mpPosition[1]=-lpPosition->v[1];
- mpPosition[2]=-lpPosition->v[2];
+ mpCameraPosition[0]=-lpPosition->v[0];
+ mpCameraPosition[1]=-lpPosition->v[1];
+ mpCameraPosition[2]=-lpPosition->v[2];
 }
 
 void cCameraMatrix4::PositionX(float lfX)
 {
- mpPosition[0]=-lfX;
+ mpCameraPosition[0]=-lfX;
 }
 void cCameraMatrix4::PositionY(float lfY)
 {
- mpPosition[1]=-lfY;
+ mpCameraPosition[1]=-lfY;
 }
 void cCameraMatrix4::PositionZ(float lfZ)
 {
- mpPosition[2]=-lfZ;
+ mpCameraPosition[2]=-lfZ;
 }
 
 void cCameraMatrix4::Rotate(float lfAngle)
@@ -677,47 +700,47 @@ memcpy(mpData,mpTemp.mpData,7*sizeof(float));
 
 void cCameraMatrix4::AdvanceX(float lfDistance)
 {
-mpPosition[0]+=mpData[0]*lfDistance;
-mpPosition[1]+=mpData[4]*lfDistance;
-mpPosition[2]+=mpData[8]*lfDistance;
+mpCameraPosition[0]+=mpData[0]*lfDistance;
+mpCameraPosition[1]+=mpData[4]*lfDistance;
+mpCameraPosition[2]+=mpData[8]*lfDistance;
 }
 
 void cCameraMatrix4::AdvanceY(float lfDistance)
 {
-mpPosition[0]+=mpData[1]*lfDistance;
-mpPosition[1]+=mpData[5]*lfDistance;
-mpPosition[2]+=mpData[9]*lfDistance;
+mpCameraPosition[0]+=mpData[1]*lfDistance;
+mpCameraPosition[1]+=mpData[5]*lfDistance;
+mpCameraPosition[2]+=mpData[9]*lfDistance;
 }
 
 void cCameraMatrix4::AdvanceZ(float lfDistance)
 {
-mpPosition[0]+=mpData[2]*lfDistance;
-mpPosition[1]+=mpData[6]*lfDistance;
-mpPosition[2]+=mpData[10]*lfDistance;
+mpCameraPosition[0]+=mpData[2]*lfDistance;
+mpCameraPosition[1]+=mpData[6]*lfDistance;
+mpCameraPosition[2]+=mpData[10]*lfDistance;
 }
 
 
 void cCameraMatrix4::Advance(float lfX,float lfY,float lfZ)
 {
-mpPosition[0]+=mpData[0]*lfX+mpData[1]*lfY+mpData[2]*lfZ;
-mpPosition[1]+=mpData[4]*lfX+mpData[5]*lfY+mpData[6]*lfZ;
-mpPosition[2]+=mpData[8]*lfX+mpData[9]*lfY+mpData[10]*lfZ;
+mpCameraPosition[0]+=mpData[0]*lfX+mpData[1]*lfY+mpData[2]*lfZ;
+mpCameraPosition[1]+=mpData[4]*lfX+mpData[5]*lfY+mpData[6]*lfZ;
+mpCameraPosition[2]+=mpData[8]*lfX+mpData[9]*lfY+mpData[10]*lfZ;
 }
 
 void cCameraMatrix4::GAdvanceX(float lfDistance)
-{mpPosition[0]-=lfDistance;}
+{mpCameraPosition[0]-=lfDistance;}
 
 void cCameraMatrix4::GAdvanceY(float lfDistance)
-{mpPosition[1]-=lfDistance;}
+{mpCameraPosition[1]-=lfDistance;}
 
 void cCameraMatrix4::GAdvanceZ(float lfDistance)
-{mpPosition[2]-=lfDistance;}
+{mpCameraPosition[2]-=lfDistance;}
 
 void cCameraMatrix4::GAdvance(float lfX,float lfY,float lfZ)
 {
- mpPosition[0]-=lfX;
- mpPosition[1]=-lfY;
- mpPosition[2]=-lfZ;
+ mpCameraPosition[0]-=lfX;
+ mpCameraPosition[1]=-lfY;
+ mpCameraPosition[2]=-lfZ;
 }
 
 void cCameraMatrix4::GRotateX(float lfAngle,float lfX,float lfY,float lfZ)
@@ -739,14 +762,15 @@ mpTemp.mpData[10]=mpData[6]*lfSin+mpData[10]*lfCos;
 memcpy(&mpData[4],&mpTemp.mpData[4],7*sizeof(float));
 
 
-mpPosition[0]-=lfX;
-mpPosition[1]-=lfY;
-mpPosition[2]-=lfZ;
+//mpCameraPosition[0]-=lfX;
+mpCameraPosition[1]+=lfY;
+mpCameraPosition[2]+=lfZ;
 
-mpTemp.mpData[13] = mpPosition[1]*lfCos-mpPosition[2]*lfSin;
-mpTemp.mpData[14] = mpPosition[1]*lfSin+mpPosition[2]*lfCos;
-mpPosition[1]=mpTemp.mpData[13]+lfY;
-mpPosition[2]=mpTemp.mpData[14]+lfZ;
+mpTemp.mpData[13] = mpCameraPosition[1]*lfCos-mpCameraPosition[2]*lfSin;
+mpTemp.mpData[14] = mpCameraPosition[1]*lfSin+mpCameraPosition[2]*lfCos;
+//mpCameraPosition[0]+=lfX;
+mpCameraPosition[1]=mpTemp.mpData[13]-lfY;
+mpCameraPosition[2]=mpTemp.mpData[14]-lfZ;
 
 }
 
@@ -771,12 +795,12 @@ mpTemp.mpData[10]=mpData[10]*lfCos-mpData[2]*lfSin;
 memcpy(mpData,mpTemp.mpData,11*sizeof(float));
 
 
-mpPosition[0]-=lfX;
-mpPosition[2]-=lfZ;
-mpTemp.mpData[12]=mpPosition[0]*lfCos+mpPosition[2]*lfSin;
-mpTemp.mpData[14]=mpPosition[2]*lfCos-mpPosition[0]*lfSin;
-mpPosition[0]=mpTemp.mpData[12]+lfX;
-mpPosition[2]=mpTemp.mpData[14]+lfZ;
+mpCameraPosition[0]+=lfX;
+mpCameraPosition[2]+=lfZ;
+mpTemp.mpData[12]=mpCameraPosition[0]*lfCos-mpCameraPosition[2]*lfSin;
+mpTemp.mpData[14]=mpCameraPosition[2]*lfCos+mpCameraPosition[0]*lfSin;
+mpCameraPosition[0]=mpTemp.mpData[12]-lfX;
+mpCameraPosition[2]=mpTemp.mpData[14]-lfZ;
 
 }
 
@@ -798,12 +822,12 @@ mpTemp.mpData[6]=mpData[2]*lfSin+mpData[6]*lfCos;
 
 memcpy(mpData,mpTemp.mpData,7*sizeof(float));
 
-mpPosition[0]-=lfX;
-mpPosition[1]-=lfY;
-mpTemp.mpData[12]=mpPosition[0]*lfCos-mpPosition[1]*lfSin;
-mpTemp.mpData[13]=mpPosition[0]*lfSin+mpPosition[1]*lfCos;
-mpPosition[0]=mpTemp.mpData[12]+lfX;
-mpPosition[1]=mpTemp.mpData[13]+lfY;
+mpCameraPosition[0]+=lfX;
+mpCameraPosition[1]+=lfY;
+mpTemp.mpData[12]=mpCameraPosition[0]*lfCos-mpCameraPosition[1]*lfSin;
+mpTemp.mpData[13]=mpCameraPosition[0]*lfSin+mpCameraPosition[1]*lfCos;
+mpCameraPosition[0]=mpTemp.mpData[12]-lfX;
+mpCameraPosition[1]=mpTemp.mpData[13]-lfY;
 }
 
 
@@ -850,9 +874,9 @@ void cCameraMatrix4::Follow(cMatrix4* lpOther,float lfX,float lfY,float lfZ)
     RotateY(3.14159265);
 
 
-	mpPosition[0]=-lpOther->X();
-	mpPosition[1]=-lpOther->Y();
-	mpPosition[2]=-lpOther->Z();
+	mpCameraPosition[0]=lpOther->X();
+	mpCameraPosition[1]=lpOther->Y();
+	mpCameraPosition[2]=lpOther->Z();
     Advance(lfX,lfY,lfZ);
 }
 
@@ -870,9 +894,9 @@ void cCameraMatrix4::Follow(cMatrix4* lpOther,float lfDist)
 
     RotateY(3.14159265);
 
-	mpPosition[0]=-lpOther->X();
-	mpPosition[1]=-lpOther->Y();
-	mpPosition[2]=-lpOther->Z();
+	mpCameraPosition[0]=lpOther->X();
+	mpCameraPosition[1]=lpOther->Y();
+	mpCameraPosition[2]=lpOther->Z();
     Advance(lfDist);
 }
 
@@ -888,9 +912,9 @@ void cCameraMatrix4::PointAt(float *mpPos)
 
 c3DVf Z;
 
-Z[0]=mpPos[0]+mpPosition[0];
-Z[1]=mpPos[1]+mpPosition[1];
-Z[2]=mpPos[2]+mpPosition[2];
+Z[0]=mpPos[0]+mpCameraPosition[0];
+Z[1]=mpPos[1]+mpCameraPosition[1];
+Z[2]=mpPos[2]+mpCameraPosition[2];
 
 double Yaw=atan2(Z[0],-Z[2]);
 
@@ -960,9 +984,9 @@ cMatrix4 &cCameraMatrix4::ConvertToMatrix()
     cMatrix4::mpTemp.mpData[11]=0.0f;
     cMatrix4::mpTemp.mpData[15]=1.0f;
 
-    cMatrix4::mpTemp.mpData[12]=-mpPosition[0];
-    cMatrix4::mpTemp.mpData[13]=-mpPosition[1];
-    cMatrix4::mpTemp.mpData[14]=-mpPosition[2];
+    cMatrix4::mpTemp.mpData[12]=-mpCameraPosition[0];
+    cMatrix4::mpTemp.mpData[13]=-mpCameraPosition[1];
+    cMatrix4::mpTemp.mpData[14]=-mpCameraPosition[2];
     return cMatrix4::mpTemp;
 }
 
@@ -971,7 +995,7 @@ void cCameraMatrix4::Display()
 
  printf("\n");
  printf("[%f %f %f %f,\n %f %f %f %f,\n %f %f %f %f,\n %f %f %f %f]\n",mpData[0],mpData[4],mpData[8],mpData[12],mpData[1],mpData[5],mpData[9],mpData[13],mpData[2],mpData[6],mpData[10],mpData[14],mpData[3],mpData[7],mpData[11],mpData[15]);
- printf("Position : %f %f %f\n",mpPosition[0],mpPosition[1],mpPosition[2]);
+ printf("Position : %f %f %f\n",mpCameraPosition[0],mpCameraPosition[1],mpCameraPosition[2]);
 }
 
 
@@ -979,12 +1003,12 @@ void cCameraMatrix4::Display()
 void cCameraMatrix4::Equals(cCameraMatrix4 *lpOther)
 {
     memcpy(mpData,lpOther->mpData,sizeof(float)*16);
-    memcpy(mpPosition,lpOther->mpPosition,sizeof(float)*3);
+    memcpy(mpCameraPosition,lpOther->mpCameraPosition,sizeof(float)*3);
 }
 void cCameraMatrix4::Equals(cCameraMatrix4 &lpOther)
 {
     memcpy(mpData,lpOther.mpData,sizeof(float)*16);
-    memcpy(mpPosition,lpOther.mpPosition,sizeof(float)*3);
+    memcpy(mpCameraPosition,lpOther.mpCameraPosition,sizeof(float)*3);
 }
 void cCameraMatrix4::Equals(cMatrix4 *lpOther)
 {
@@ -1003,7 +1027,7 @@ void cCameraMatrix4::Multiply(cCameraMatrix4 &lpOther)
 {
     operator*(lpOther);
 	memcpy(mpData,mpTemp.Matrix(),sizeof(float)*16);
-	memcpy(mpPosition,mpTemp.Position(),sizeof(float)*3);
+	memcpy(mpCameraPosition,mpTemp.Position(),sizeof(float)*3);
 }
 void cCameraMatrix4::Multiply(cMatrix4 *lpOther)
 {
@@ -1011,7 +1035,7 @@ void cCameraMatrix4::Multiply(cMatrix4 *lpOther)
 	lcTemp=lpOther->ConvertToCameraMatrix();
     operator*(lcTemp);
 	memcpy(mpData,mpTemp.Matrix(),sizeof(float)*16);
-	memcpy(mpPosition,mpTemp.Position(),sizeof(float)*3);
+	memcpy(mpCameraPosition,mpTemp.Position(),sizeof(float)*3);
 }
 void cCameraMatrix4::Multiply(cMatrix4 &lpOther)
 {
@@ -1019,29 +1043,29 @@ void cCameraMatrix4::Multiply(cMatrix4 &lpOther)
 	lcTemp=lpOther.ConvertToCameraMatrix();
     operator*(lcTemp);
 	memcpy(mpData,mpTemp.Matrix(),sizeof(float)*16);
-	memcpy(mpPosition,mpTemp.Position(),sizeof(float)*3);
+	memcpy(mpCameraPosition,mpTemp.Position(),sizeof(float)*3);
 }
 
   float *cCameraMatrix4::Matrix(){return mpData;};
-  float *cCameraMatrix4::Position(){return mpPosition;};
-  float cCameraMatrix4::X(){return mpPosition[0];};
-  float cCameraMatrix4::Y(){return mpPosition[1];};
-  float cCameraMatrix4::Z(){return mpPosition[2];};
+  float *cCameraMatrix4::Position()
+  {
+    mpGlobalPosition[0]=-mpCameraPosition[0];
+    mpGlobalPosition[1]=-mpCameraPosition[1];
+    mpGlobalPosition[2]=-mpCameraPosition[2];
+    return mpGlobalPosition;
+  };
+  float cCameraMatrix4::X(){return -mpCameraPosition[0];};
+  float cCameraMatrix4::Y(){return -mpCameraPosition[1];};
+  float cCameraMatrix4::Z(){return -mpCameraPosition[2];};
 
 float *cCameraMatrix4::ConstructCameraMatrix()
 {
 
  memcpy(mpCameraMatrix,mpData,sizeof(float)*16);
 
- mpCameraMatrix[12]=mpPosition[0]*mpData[0]+mpPosition[1]*mpData[4]+mpPosition[2]*mpData[8];
- mpCameraMatrix[13]=mpPosition[0]*mpData[1]+mpPosition[1]*mpData[5]+mpPosition[2]*mpData[9];
- mpCameraMatrix[14]=mpPosition[0]*mpData[2]+mpPosition[1]*mpData[6]+mpPosition[2]*mpData[10];
- //mpTemp[15]=mpPosition[0]*mpData[3]+mpPosition[1]*mpData[7]+mpPosition[2]*mpData[11];
+ mpCameraMatrix[12]=mpCameraPosition[0]*mpData[0]+mpCameraPosition[1]*mpData[4]+mpCameraPosition[2]*mpData[8];
+ mpCameraMatrix[13]=mpCameraPosition[0]*mpData[1]+mpCameraPosition[1]*mpData[5]+mpCameraPosition[2]*mpData[9];
+ mpCameraMatrix[14]=mpCameraPosition[0]*mpData[2]+mpCameraPosition[1]*mpData[6]+mpCameraPosition[2]*mpData[10];
+
  return mpCameraMatrix;
 }
-
-float *cCameraMatrix4::CameraMatrix()
-{
-    #pragma warning (Make so mpCameraMatrix is unneccessary)
- return mpCameraMatrix;
-};

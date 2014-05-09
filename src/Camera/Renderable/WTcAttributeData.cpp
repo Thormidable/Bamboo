@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 cTBNVectors::cTBNVectors(cMesh *lpMesh)
  {
@@ -5,6 +6,14 @@ cTBNVectors::cTBNVectors(cMesh *lpMesh)
 	Bitangent=new cAttributeData<c3DVf>(lpMesh->Verteces(),"Bb_Binormal");
 	Normal=new cAttributeData<c3DVf>(lpMesh->Verteces(),"Bb_Normal");
 	GenerateTBNVectors(lpMesh);
+ };
+
+ cTBNVectors::~cTBNVectors()
+ {
+    delete Tangent;
+    delete Bitangent;
+    delete Normal;
+    Tangent=Bitangent=Normal;
  };
 
  void cTBNVectors::LinkToShader(cRenderObject *lpObj)

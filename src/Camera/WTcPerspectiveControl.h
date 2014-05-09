@@ -183,6 +183,8 @@ public:
     /// This Updates the perspective matrices with the specified parameters.
 	virtual void UpdateProjectionMatrix();
 
+	c3DVf VisualRay(float lfX,float lfY);
+
 };
 
 

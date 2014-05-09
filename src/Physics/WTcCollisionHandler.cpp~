@@ -2,6 +2,8 @@
 
 cCollisionHandler *cCollisionHandler::spInstance=0;
 
+uint8 cCollisionHandlerBSP::msCoords[3]={0,0,0};
+
 cCollisionHandler *cCollisionHandler::Instance()
 {
  if(!spInstance)
@@ -12,63 +14,193 @@ cCollisionHandler *cCollisionHandler::Instance()
  return spInstance;
 }
 
-uint32 cCollisionHandlerType::FindSlot(cCollisionObject *lpObj)
+uint32 cCollisionHandlerType::FindSlot(cCollisionBase *lpObj)
 {
  return lpObj->CollisionFilter();
 }
 
-cCollisionList *cCollisionHandlerBSP::GenerateCollisionList(cCollisionObject *lpCheck,uint32 lpCol)
+cCollisionList *cCollisionHandlerBSP::GeneratePossibleCollisionList(cCollisionBase *lpCheck,uint32 lpCol,cCollisionList *lpList)
 {
+    if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpCheck);
+	else cCollisionList::mpStaticList=lpList;
+	if(lpCheck->Awake() && !lpCheck->IsDelayed())
+	{
+        ResetCursors();
 
-	cCollisionList *lpList=new cCollisionList;
-	ResetCursors();
+        uint32 liSlot=FindSlot(lpCheck);
 
-	uint32 liSlot=FindSlot(lpCheck);
+        while(NextListItem(liSlot))
+        {
+            if(mpColCur->Data()->CollisionFilter()==lpCol || !lpCol)
+            {
+                if(mpColCur->Data()!=lpCheck) cCollisionList::mpStaticList->AddCollision(mpColCur->Data());
+            }
+        }
+	}
 
-	while(NextListItem(liSlot)) {if(mpColCur->Data()->Collision(lpCheck,lpCol))lpList->AddCollision(mpColCur->Data());}
+	return cCollisionList::mpStaticList;
+};
 
-	return lpList;
+cCollisionList *cCollisionHandlerBSP::GenerateDetailedCollisionList(cCollisionBase *lpCheck,uint32 lpCol,cCollisionList *lpList)
+{
+       if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpCheck);
+	else cCollisionList::mpStaticList=lpList;
+
+	if(lpCheck->Awake() && !lpCheck->IsDelayed())
+	{
+	    ResetSlotCursor(lpCheck->RenderObject()->GetCachedGlobalMatrix());
+	    {
+            while(miCurCurrentSlot)
+            {
+                ResetCursors();
+                uint32 liSlot=NextSlot();
+
+                while(NextListItem(liSlot))
+                {
+                    if(mpColCur->Data()->CollisionFilter()==lpCol || !lpCol)
+                    {
+                        cCollisionList::mpOther=mpColCur->Data();
+                        if(mpColCur->Data()!=lpCheck) lpCheck->CheckCollisionDetail();
+                    }
+                }
+            }
+	    }
+	}
+	return cCollisionList::mpStaticList;
 }
 
-cCollisionList *cCollisionHandlerType::GenerateCollisionList(cCollisionObject *lpObj,uint32 lpType)
+cCollisionList *cCollisionHandlerBSP::GenerateCollisionList(cCollisionBase *lpCheck,uint32 lpCol,cCollisionList *lpList)
 {
-	cCollisionList *lpList=new cCollisionList;
-	ResetCursors();
-if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE)
-{
-	if(lpType)
-	{
-	while(NextListItem(lpType))
-		{
-			printf("mpCollCur mpFollowing : %p\n",mpColCur->Data()->Following());
-			printf("lpObj mpFollowing : %p\n",lpObj->Following());
-			if(mpColCur->Data()!=lpObj)
-			{
-				if(mpColCur->Data()->Collision(lpObj))
-				{
-					lpList->AddCollision(mpColCur->Data());
+    if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpCheck);
+	else cCollisionList::mpStaticList=lpList;
 
-				}
-			}
-		}
+	if(lpCheck->Awake() && !lpCheck->IsDelayed())
+	{
+	    ResetSlotCursor(lpCheck->RenderObject()->GetCachedGlobalMatrix());
+	    {
+            while(miCurCurrentSlot)
+            {
+                ResetCursors();
+                uint32 liSlot=NextSlot();
+
+                while(NextListItem(liSlot))
+                {
+                    if(mpColCur->Data()->CollisionFilter()==lpCol || !lpCol)
+                    {
+                        cCollisionList::mpOther=mpColCur->Data();
+                        if(lpCheck->CheckCollision()) cCollisionList::mpStaticList->AddCollision();
+                    }
+                }
+            }
+	    }
 	}
-	else
-	{
-	while(NextListItem())
-	{
-
-		if(mpColCur->Data()!=lpObj)
-		{
-			if(mpColCur->Data()->Collision(lpObj))
-			{
-				lpList->AddCollision(mpColCur->Data());
-			}
-
-		}
-  	}
-	}
+	return cCollisionList::mpStaticList;
 }
-  return lpList;
+
+cCollisionList *cCollisionHandlerType::GeneratePossibleCollisionList(cCollisionBase *lpObj,uint32 lpType,cCollisionList *lpList)
+{
+  if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpObj);
+	else cCollisionList::mpStaticList=lpList;
+
+  if(lpObj->Awake() && !lpObj->IsDelayed())
+  {
+        ResetCursors();
+        if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE)
+        {
+            if(lpType)
+            {
+            while(NextListItem(lpType))
+                {
+                    if(mpColCur->Data()!=lpObj)
+                    {
+                        cCollisionList::mpStaticList->AddCollision(mpColCur->Data());
+                    }
+                }
+            }
+            else
+            {
+            while(NextListItem())
+            {
+                if(mpColCur->Data()!=lpObj)
+                {
+                 cCollisionList::mpStaticList->AddCollision(mpColCur->Data());
+                }
+            }
+            }
+        }
+  }
+  return cCollisionList::mpStaticList;
+};
+
+cCollisionList *cCollisionHandlerType::GenerateCollisionList(cCollisionBase *lpObj,uint32 lpType,cCollisionList *lpList)
+{
+	if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpObj);
+	else cCollisionList::mpStaticList=lpList;
+
+  if(lpObj->Awake() && !lpObj->IsDelayed())
+  {
+        ResetCursors();
+        if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE)
+        {
+            if(lpType)
+            {
+            while(NextListItem(lpType))
+                {
+
+                    if(mpColCur->Data()!=lpObj)
+                    {
+                        cCollisionList::mpOther=mpColCur->Data();
+                        if(lpObj->CheckCollision()) cCollisionList::mpStaticList->AddCollision();
+                    }
+                }
+            }
+            else
+            {
+            while(NextListItem())
+            {
+
+                if(mpColCur->Data()!=lpObj)
+                {
+                    cCollisionList::mpOther=mpColCur->Data();
+                    if(lpObj->CheckCollision()) cCollisionList::mpStaticList->AddCollision();
+                }
+            }
+            }
+        }
+  }
+  return cCollisionList::mpStaticList;
+}
+cCollisionList *cCollisionHandlerType::GenerateDetailedCollisionList(cCollisionBase *lpObj,uint32 lpType,cCollisionList *lpList)
+{
+	if(!lpList) cCollisionList::mpStaticList=new cCollisionList(lpObj);
+	else cCollisionList::mpStaticList=lpList;
+    if(lpObj->Awake() && !lpObj->IsDelayed())
+	{
+        ResetCursors();
+        if(lpType<WT_COLLISION_HANDLER_ARRAY_SIZE && lpType)
+        {
+            while(NextListItem(lpType))
+                {
+                    if(mpColCur->Data()!=lpObj)
+                    {
+                        cCollisionList::mpOther=mpColCur->Data();
+                        lpObj->CheckCollisionDetail();
+                    }
+                }
+        }
+        else
+        {
+            while(NextListItem())
+            {
+                if(mpColCur->Data()!=lpObj)
+                {
+                    cCollisionList::mpOther=mpColCur->Data();
+                    lpObj->CheckCollisionDetail();
+                }
+            }
+        }
+	}
+  return cCollisionList::mpStaticList;
 }
 
 cCollisionHandler::~cCollisionHandler()
@@ -89,12 +221,17 @@ cCollisionHandlerType::~cCollisionHandlerType()
 
 cCollisionHandlerBSP::~cCollisionHandlerBSP()
 {
+/*
+    //Already Handled in cCollisionHandlerType
 	for(miCurPos=0;miCurPos<WT_COLLISION_HANDLER_ARRAY_SIZE;++miCurPos)
 	{
 		mpList[miCurPos].ClearAll();
 		mpList[miCurPos].Initialise();
 	}
 	delete []mpList;mpList=0;
+*/
+	if(mpSlotArray) delete []mpSlotArray;
+	if(mpCurSlotArray) delete []mpCurSlotArray;
 }
 
 
@@ -116,6 +253,10 @@ for(++miCurPos;miCurPos<WT_COLLISION_HANDLER_ARRAY_SIZE && !NextListItem(miCurPo
 bool cCollisionHandlerType::NextListItem(uint32 lpType)
 {
  miCurPos=lpType;
+ if(miCurPos>=WT_COLLISION_HANDLER_ARRAY_SIZE)
+ {
+   printf("ERROR HANDLER : ERROR HANDLER : ERROR HANDLER : ERROR HANDLER : %u\n",miCurPos);
+ }
  if(!mpColCur) {mpColCur=mpList[miCurPos].Start();}
  else {mpColCur=mpColCur->Next();}
  if(mpColCur) return true;
@@ -123,16 +264,16 @@ bool cCollisionHandlerType::NextListItem(uint32 lpType)
 
 }
 
-void cCollisionHandlerType::RemoveFromList(cLinkedNode<cCollisionObject> *lpOld)
+void cCollisionHandlerType::RemoveFromList(cLinkedNode<cCollisionBase> *lpOld)
 {
  if(lpOld->Data())
  mpList[FindSlot(lpOld->Data())].Remove(lpOld);
 
 }
 
-cLinkedNode<cCollisionObject> *cCollisionHandlerType::Add(cCollisionObject *lpObject)
+cLinkedNode<cCollisionBase> *cCollisionHandlerType::Add(cCollisionBase *lpObject)
 {
-
+//printf("Slot : %u, Max : %u\n",FindSlot(lpObject),WT_COLLISION_HANDLER_ARRAY_SIZE);
 return mpList[FindSlot(lpObject)].Insert(lpObject);
 }
 
@@ -141,9 +282,9 @@ return mpList[FindSlot(lpObject)].Insert(lpObject);
 
 cCollisionHandlerType::cCollisionHandlerType()
 {
-mpList=new cLinkedList<cCollisionObject>[WT_COLLISION_HANDLER_ARRAY_SIZE];
-ResetCursors();
 if(!spInstance) spInstance=this;
+mpList=new cLinkedList<cCollisionBase>[WT_COLLISION_HANDLER_ARRAY_SIZE];
+ResetCursors();
 
 }
 
@@ -151,7 +292,10 @@ if(!spInstance) spInstance=this;
 cCollisionHandlerBSP::cCollisionHandlerBSP()
 {
 	mfCentre[1]=mfCentre[2]=mfCentre[0]=0.0f;
-
+	mfOffSet[1]=mfOffSet[2]=mfOffSet[0]=WT_COLLISION_HANDLER_SIZE*WT_COLLISION_SPACE_SIZE*0.5f;
+    mpSlotArray=0;
+    mpCurSlotArray=0;
+    GenerateSlotArray();
 }
 
 void cCollisionHandlerType::ResetCursors()
@@ -160,7 +304,7 @@ miCurPos=0;
 mpColCur=0;
 }
 
-void cCollisionHandlerType::Remove(cLinkedNode<cCollisionObject> *lpOld)
+void cCollisionHandlerType::Remove(cLinkedNode<cCollisionBase> *lpOld)
 {
  lpOld->Data()->Signal(_S_KILL);
 }
@@ -168,58 +312,339 @@ void cCollisionHandlerType::Remove(cLinkedNode<cCollisionObject> *lpOld)
 
 
 
-uint32 cCollisionHandlerBSP::mpAxisOrder[3]={0,2,1};
+uint8 cCollisionHandlerBSP::mpAxisOrder[3]={0,2,1};
 
 uint32 cCollisionHandlerBSP::FindSlot(float *lpPos)
 {
 
 uint32 liCount;
-uint32 liCount2=0;
+uint32 liCount2=1;
 float lfPos;
 uint32 liPosition=0;
 uint32 liRound;
 
 for(liCount=0;liCount<WT_COLLISION_HANDLER_DIMENSIONS;++liCount)
 {
- lfPos=lpPos[mpAxisOrder[liCount]]-mfCentre[mpAxisOrder[liCount]]+(WT_COLLISION_HANDLER_SIZE*WT_COLLISION_SPACE_SIZE/2);
- lfPos=lfPos*WT_COLLISION_SPACE_SIZE_INV;
+ //lfPos=(lpPos[mpAxisOrder[liCount]]-mfCentre[mpAxisOrder[liCount]]+mfOffSet[mpAxisOrder[liCount]]);
+ lfPos=(lpPos[mpAxisOrder[liCount]]-mfCentre[mpAxisOrder[liCount]]+mfOffSet[mpAxisOrder[liCount]])*WT_COLLISION_SPACE_SIZE_INV;
 
 if(lfPos<0.0f){liRound=0;}
  else
  {
 
-   if(lfPos>WT_COLLISION_HANDLER_SIZE) {liRound=WT_COLLISION_HANDLER_SIZE;}
+   if(lfPos>(WT_COLLISION_HANDLER_SIZE-1)) {liRound=WT_COLLISION_HANDLER_SIZE-1;}
     else {liRound=lfPos;}
  }
 
-  if(!liCount) liCount2=1;
-  else  liCount2*=WT_COLLISION_HANDLER_SIZE;
+    liPosition+=liRound*liCount2;
+    liCount2*=WT_COLLISION_HANDLER_SIZE;
 
-  liPosition+=liRound*liCount2;
 }
 
 return liPosition;
 
 }
 
-uint32 cCollisionHandlerBSP::FindSlot(cCollisionObject *lpObj)
+
+void cCollisionHandlerBSP::FindSlotCoord(float *lpPos)
+{
+
+
+float lfPos;
+uint32 liRound;
+mbEdgecase=false;
+for(uint32 liCount=0;liCount<WT_COLLISION_HANDLER_DIMENSIONS;++liCount)
+{
+
+ //lfPos=(lpPos[mpAxisOrder[liCount]]-mfCentre[mpAxisOrder[liCount]]+mfOffSet[mpAxisOrder[liCount]])*(WT_COLLISION_HANDLER_SIZE/2);
+  lfPos=(lpPos[mpAxisOrder[liCount]]-mfCentre[mpAxisOrder[liCount]]+mfOffSet[mpAxisOrder[liCount]])*WT_COLLISION_SPACE_SIZE_INV;
+if(lfPos<1.0f){liRound=0; mbEdgecase=true;}
+else
+{
+  liRound=lfPos; 
+  if(liRound>=WT_COLLISION_HANDLER_SIZE-1){liRound=WT_COLLISION_HANDLER_SIZE-1; mbEdgecase=true;}
+}
+
+msCoords[liCount]=liRound;
+
+}
+
+}
+
+uint32 cCollisionHandlerBSP::FindSlot(cCollisionBase *lpObj)
 {
 	return FindSlot(lpObj->RenderObject()->GetCachedGlobalMatrix());
 }
 
 
 
-cLinkedList<cCollisionObject> *cCollisionHandlerBSP::FindSlot(uint32 *lpPos)
+cLinkedList<cCollisionBase> *cCollisionHandlerBSP::FindSlot(uint32 *lpPos)
 {
  uint32 liTemp=0;
  uint32 liState=1;
 uint32 liCount;
  for(liCount=0;liCount<WT_COLLISION_HANDLER_DIMENSIONS;++liCount)
  {
-  liTemp+=liState*lpPos[mpAxisOrder[liCount]];
+  if(lpPos[mpAxisOrder[liCount]]>=WT_COLLISION_HANDLER_SIZE) liTemp+=liState*(WT_COLLISION_HANDLER_SIZE-1);
+  else  liTemp+=liState*lpPos[mpAxisOrder[liCount]];
   liState*=WT_COLLISION_HANDLER_SIZE;
  }
  return &mpList[liTemp];
 
 }
+
+
+void cCollisionHandlerBSP::ResetSlotCursor(float *lpPos)
+{
+    lpPos=&lpPos[12];
+    FindSlotCoord(lpPos);
+    if(mbEdgecase)
+    {
+        switch(WT_COLLISION_HANDLER_DIMENSIONS)
+        {
+
+          case WT_COLLISION_HANDLER_DIMENSIONS_1D:
+          {
+                uint8 liX;
+                uint8 liX2;
+                miCurCurrentSlot=0;
+                if(!msCoords[0]){liX=0;liX2=1;}
+                else
+                {
+                    liX=msCoords[0]-1;
+                    if(msCoords[0]>WT_COLLISION_HANDLER_SIZE-2) liX2=WT_COLLISION_HANDLER_SIZE-1;
+                    else liX2=msCoords[0]+1;
+                }
+              while(liX<liX2)
+              {
+                mpCurSlotArray[miCurCurrentSlot++]=liX;
+                ++liX;
+              }
+          };break;
+          case WT_COLLISION_HANDLER_DIMENSIONS_2D:
+          {
+                uint8 liX,liY;
+                uint8 liX2,liY2;
+                miCurCurrentSlot=0;
+
+                if(!msCoords[0]){liX=0;liX2=1;}
+                else
+                {
+                    liX=msCoords[0]-1;
+                    if(msCoords[0]>WT_COLLISION_HANDLER_SIZE-2) liX2=WT_COLLISION_HANDLER_SIZE-1;
+                    else liX2=msCoords[0]+1;
+                }
+                if(!msCoords[1]){liY=0; liY2=1;}
+                else
+                {
+                    liY=msCoords[1]-1;
+                    if(msCoords[1]>WT_COLLISION_HANDLER_SIZE-2) liY2=WT_COLLISION_HANDLER_SIZE-1;
+                    else liY2=msCoords[1]+1;
+                }
+
+              while(liX<liX2)
+              {
+                  while(liY<liY2)
+                  {
+                        mpCurSlotArray[miCurCurrentSlot++]=liX+liY*WT_COLLISION_HANDLER_SIZE;
+                        ++liY;
+                  }
+                ++liX;
+              }
+          };break;
+          case WT_COLLISION_HANDLER_DIMENSIONS_3D:
+          {
+                uint8 liX,liY,liZ;
+                uint8 liX2,liY2,liZ2;
+                miCurCurrentSlot=0;
+
+                if(!msCoords[0]){liX=0;liX2=1;}
+                else
+                {
+                    liX=msCoords[0]-1;
+                    if(msCoords[0]>WT_COLLISION_HANDLER_SIZE-2) liX2=WT_COLLISION_HANDLER_SIZE-1;
+                    else liX2=msCoords[0]+1;
+                }
+                if(!msCoords[1]){liY=0;liY2=1;}
+                else
+                {
+                    liY=msCoords[1]-1;
+                    if(msCoords[1]>WT_COLLISION_HANDLER_SIZE-2) liY2=WT_COLLISION_HANDLER_SIZE-1;
+                    else liY2=msCoords[1]+1;
+                }
+                if(!msCoords[2]){liZ=0;liZ2=1;}
+                else
+                {
+                    liZ=msCoords[2]-1;
+                    if(msCoords[2]>WT_COLLISION_HANDLER_SIZE-2) liZ2=WT_COLLISION_HANDLER_SIZE-1;
+                    else liZ2=msCoords[2]+1;
+                }
+
+              while(liX<liX2)
+              {
+                  while(liY<liY2)
+                  {
+                      while(liZ<liZ2)
+                      {
+                        mpCurSlotArray[miCurCurrentSlot++]=liX+liY*WT_COLLISION_HANDLER_SIZE+liZ*WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+                            if(mpCurSlotArray[miCurCurrentSlot-1]>WT_COLLISION_HANDLER_ARRAY_SIZE)
+                                {
+                                    printf("ERROR : ERROR EdgeCase : %u\n",miCurCurrentSlot-1);
+                                }
+                        ++liZ;
+                      }
+                    ++liY;
+                  }
+                ++liX;
+              }
+          };break;
+        };
+    }
+    else
+    {
+        miCurCentreSlot=msCoords[0]+msCoords[1]*WT_COLLISION_HANDLER_SIZE+msCoords[2]*WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        switch(WT_COLLISION_HANDLER_DIMENSIONS)
+        {
+          case WT_COLLISION_HANDLER_DIMENSIONS_1D:
+          {
+              miCurCurrentSlot=3;
+              for(uint8 liCount=0;liCount<3;++liCount)
+              {
+                  mpCurSlotArray[liCount]=mpSlotArray[liCount]+miCurCentreSlot;
+              }
+          };break;
+          case WT_COLLISION_HANDLER_DIMENSIONS_2D:
+          {
+              miCurCurrentSlot=9;
+              for(uint8 liCount=0;liCount<9;++liCount)
+              {
+                  mpCurSlotArray[liCount]=mpSlotArray[liCount]+miCurCentreSlot;
+              }
+
+          };break;
+          case WT_COLLISION_HANDLER_DIMENSIONS_3D:
+          {
+              miCurCurrentSlot=27;
+              for(uint8 liCount=0;liCount<27;++liCount)
+              {
+                  mpCurSlotArray[liCount]=mpSlotArray[liCount]+miCurCentreSlot;
+                  if(mpCurSlotArray[liCount]>WT_COLLISION_HANDLER_ARRAY_SIZE)
+                    {
+                        printf("ERROR : ERROR MiddleCase : %u\n",miCurCentreSlot-1);
+			printf("mpCurSlotArray[%u] : %u\n",liCount,mpCurSlotArray[liCount]);
+                    }
+              }
+          };break;
+        };
+    }
+};
+
+uint32 cCollisionHandlerBSP::NextSlot()
+{
+    if(mpCurSlotArray[miCurCurrentSlot-1]>WT_COLLISION_HANDLER_ARRAY_SIZE)
+    {
+        printf("ERROR : ERROR : %u\n",miCurCurrentSlot-1);
+    }
+ return mpCurSlotArray[--miCurCurrentSlot];
+};
+
+void cCollisionHandlerBSP::GenerateSlotArray()
+{
+switch(WT_COLLISION_HANDLER_DIMENSIONS)
+{
+    case WT_COLLISION_HANDLER_DIMENSIONS_1D:
+    {
+        if(mpSlotArray)
+        {
+            delete []mpSlotArray;
+            delete []mpCurSlotArray;
+        }
+        mpSlotArray= new int16[3];
+        mpCurSlotArray=new uint32[3];
+        mpSlotArray[0]=-1;
+        mpSlotArray[1]=0;
+        mpSlotArray[2]=1;
+    };break;
+    case WT_COLLISION_HANDLER_DIMENSIONS_2D:
+    {
+        if(mpSlotArray)
+        {
+            delete []mpSlotArray;
+            delete []mpCurSlotArray;
+        }
+        mpSlotArray= new int16[9];
+        mpCurSlotArray=new uint32[9];
+        mpSlotArray[0]=-WT_COLLISION_HANDLER_SIZE-1;
+        mpSlotArray[1]=-WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[2]=1-WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[3]=-1;
+        mpSlotArray[4]=0;
+        mpSlotArray[5]=1;
+        mpSlotArray[6]=WT_COLLISION_HANDLER_SIZE-1;
+        mpSlotArray[7]=WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[8]=WT_COLLISION_HANDLER_SIZE+1;
+    };break;
+    case WT_COLLISION_HANDLER_DIMENSIONS_3D:
+    {
+        if(mpSlotArray)
+        {
+            delete []mpSlotArray;
+            delete []mpCurSlotArray;
+        }
+        mpSlotArray= new int16[27];
+        mpCurSlotArray=new uint32[27];
+        mpSlotArray[0]=-WT_COLLISION_HANDLER_SIZE-1-WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[1]=-WT_COLLISION_HANDLER_SIZE-WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[2]=1-WT_COLLISION_HANDLER_SIZE-WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[3]=-1-WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[4]=-WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[5]=1-WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[6]=WT_COLLISION_HANDLER_SIZE-1-WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[7]=WT_COLLISION_HANDLER_SIZE-WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[8]=WT_COLLISION_HANDLER_SIZE+1-WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+
+        mpSlotArray[9]=-WT_COLLISION_HANDLER_SIZE-1;
+        mpSlotArray[10]=-WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[11]=1-WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[12]=-1;
+        mpSlotArray[13]=0;
+        mpSlotArray[14]=1;
+        mpSlotArray[15]=WT_COLLISION_HANDLER_SIZE-1;
+        mpSlotArray[16]=WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[17]=WT_COLLISION_HANDLER_SIZE+1;
+
+        mpSlotArray[18]=-WT_COLLISION_HANDLER_SIZE-1+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[19]=-WT_COLLISION_HANDLER_SIZE+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[20]=1-WT_COLLISION_HANDLER_SIZE+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[21]=-1+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[22]=WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[23]=1+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[24]=WT_COLLISION_HANDLER_SIZE-1+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[25]=WT_COLLISION_HANDLER_SIZE+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+        mpSlotArray[26]=WT_COLLISION_HANDLER_SIZE+1+WT_COLLISION_HANDLER_SIZE*WT_COLLISION_HANDLER_SIZE;
+
+    };break;
+};
+
+};
+
+c3DVf cCollisionHandlerBSP::FindSlotCentre(uint8 liX,uint8 liY,uint8 liZ)
+{
+    c3DVf lfReturn;
+    lfReturn[0]=liX*WT_COLLISION_SPACE_SIZE+mfCentre[mpAxisOrder[0]]-mfOffSet[mpAxisOrder[0]];
+    lfReturn[1]=liY*WT_COLLISION_SPACE_SIZE+mfCentre[mpAxisOrder[1]]-mfOffSet[mpAxisOrder[1]];
+    lfReturn[2]=liZ*WT_COLLISION_SPACE_SIZE+mfCentre[mpAxisOrder[2]]-mfOffSet[mpAxisOrder[2]];
+    return lfReturn;
+
+};
+
+c3DVf cCollisionHandlerBSP::FindSlotCentre(uint8 *lpX)
+{
+    c3DVf lfReturn;
+    lfReturn[0]=lpX[0]*WT_COLLISION_SPACE_SIZE+mfCentre[mpAxisOrder[0]]-mfOffSet[mpAxisOrder[0]];
+    lfReturn[1]=lpX[1]*WT_COLLISION_SPACE_SIZE+mfCentre[mpAxisOrder[1]]-mfOffSet[mpAxisOrder[1]];
+    lfReturn[2]=lpX[2]*WT_COLLISION_SPACE_SIZE+mfCentre[mpAxisOrder[2]]-mfOffSet[mpAxisOrder[2]];
+    return lfReturn;
+
+};
 

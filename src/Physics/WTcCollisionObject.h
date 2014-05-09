@@ -16,7 +16,7 @@ protected:
 	 * An Object can be enabled by calling
 	 *
 	 */
-	uint8 miDelay;
+	int8 miDelay;
 	//This is the user assigned type of collision for the purposes of filtering, undesired collisions.
 	uint32 miID;
 	//This is a pointer to the Renderable Object this Collision Object is following.
@@ -38,8 +38,8 @@ public:
 
 	///This will return whether the CollisionObject was created this frame (and so unable to track locations as Global position is unknown)
 	bool IsDelayed();
-	void Delay(uint8 liDelay);
-	uint8 Delay();
+	void Delay(int8 liDelay);
+	int8 Delay();
 
 
 	///The Signal Function to allow cCollisionObject to receive Signals.
@@ -114,10 +114,8 @@ public:
 	float *GetPos();
 
 
-	/// This will remove the cCollisionObject from it's Spatial Slots before its position is updated.
-	void PreUpdateCache();
 	/// This will Add the cCollisionObject to the relevant Spatial Slots after it has found it's new position.
-	void PostUpdateCache();
+	virtual void PostUpdateCache();
 
 
 
@@ -165,9 +163,9 @@ public:
 	///This will use the cCompoundCollisionFile pointed to by lpData.
 	cCompoundCollision *SetTypeCompound(cCompoundCollisionFile *lpData);
 
-
-
     #endif
+
+    void ForceInitialisation(cMatrix4 &lmGlobal);
 
     void Stop();
 

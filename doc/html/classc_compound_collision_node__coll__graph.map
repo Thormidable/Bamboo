@@ -1,4 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classv_collision_data.html" title="Virtual Class so cCollisionObject can access the Collision data object it needs." alt="" coords="5,5,112,35"/>
-<area shape="rect" id="node4" href="$classc_matrix4.html" title="this is a standard 4x4 translation matrix for objects. This is a standard 4x4 translation matrix for ..." alt="" coords="151,5,223,35"/>
-</map>

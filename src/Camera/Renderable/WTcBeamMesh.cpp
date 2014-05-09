@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 #if WT_FULL_VERSION_BAMBOO
@@ -70,7 +71,7 @@ cBeam::cBeam(float Radius,float Length,uint16 Segments,cCamera *lpNode) : cRende
 void cBeam::RenderBeam()
 {
 	glDisable(GL_CULL_FACE);
-	glDisable(GL_NORMAL_ARRAY);
+	//glDisable(GL_NORMAL_ARRAY);
 
 	glBindBuffer(GL_ARRAY_BUFFER, mBuffer1);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
@@ -80,7 +81,7 @@ void cBeam::RenderBeam()
 
 	glDrawElements(GL_TRIANGLE_STRIP,miSegments*4-3,GL_UNSIGNED_SHORT,0);
 
-	glEnable(GL_NORMAL_ARRAY);
+	//glEnable(GL_NORMAL_ARRAY);
 	glEnable(GL_CULL_FACE);
 }
 

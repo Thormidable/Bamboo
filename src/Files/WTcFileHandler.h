@@ -52,4 +52,38 @@ template<class cX> cX *cFileHandler::File(const char *lpFilename)
 	return 0;
 }
 
+
+class cDirectoryFileList
+{
+protected:
+	cLimitedList<string*> mcFileList;
+	cLimitedList<string*> mcDirectoryList;
+	cLimitedList<string*> mcUnknownList;
+
+  public:
+    cDirectoryFileList(string lsDirectoryPath);
+    ~cDirectoryFileList();
+
+    void ResizeFiles(uint16 liFiles);
+    void ResizeDirectories(uint16 liDirectories);
+    void ResizeUnknowns(uint16 liUnknowns);
+    void AddFile(string lsFile);
+    void AddDirectory(string lsDirectory);
+    void AddUnknown(string lsUnknown);
+
+    uint16 Files(){return mcFileList.Items();};
+    uint16 Directories(){return mcDirectoryList.Items();};
+    uint16 Unknowns(){return mcUnknownList.Items();};
+
+    string File(uint16 liFile){return *mcFileList[liFile];};
+    string Directory(uint16 liFile){return *mcDirectoryList[liFile];};
+    string Unknown(uint16 liFile){return *mcUnknownList[liFile];};
+
+    void Clear();
+
+};
+
+
 #endif
+
+

@@ -24,6 +24,7 @@ protected:
 
 // This stores the current instance of cCamera. This means that only one cCamera object will exist at any one time. This is returned by cCamera::Instance(). Future expansions will allow multiple cCamera objects.
 static cCamera *mpInstance;
+static cCamera *mpCurrentCamera;
 
 	/*
 	* This points to the top level cRenderNode. This is the start of the scene graph and any cMatrix4 translations made

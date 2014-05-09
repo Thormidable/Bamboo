@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2BAFB3EE-9FDE-453A-AA17-AECC1F999381}</ProjectGuid>
+    <RootNamespace>Bamboo</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)../../lib/</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <TargetName>Bamboo_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)../../lib/</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <TargetName>Bamboo</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>C:\Program Files\Microsoft SDKs\Windows\v7.1\Include;E:\Wills\C++Code\Bamboo\Includes\OpenAL 1.1 SDK\include;E:\Wills\C++Code\Bamboo\Includes\GLEW\include;E:\Wills\C++Code\Bamboo\Includes\boost_1_47_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_COMPILED_IN_VS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>OpenAL32.lib;OpenGL32.lib;glew32s.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.lib</OutputFile>
+      <AdditionalLibraryDirectories>C:\Program Files\Microsoft SDKs\Windows\v7.1\Lib;E:\Wills\C++Code\Bamboo\Includes\GLEW\lib;E:\Wills\C++Code\Bamboo\Includes\OpenAL 1.1 SDK\libs\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>C:\Program Files\Microsoft SDKs\Windows\v7.1\Include;E:\Wills\C++Code\Bamboo\Includes\OpenAL 1.1 SDK\include;E:\Wills\C++Code\Bamboo\Includes\GLEW\include;E:\Wills\C++Code\Bamboo\Includes\boost_1_47_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_COMPILED_IN_VS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>OpenGL32.lib;OpenAL32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\Microsoft SDKs\Windows\v7.1\Lib;E:\Wills\C++Code\Bamboo\Includes\GLEW\lib;E:\Wills\C++Code\Bamboo\Includes\OpenAL 1.1 SDK\libs\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcBillBoard.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcLineArray.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcParticleSettings.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\Process\WTcMessageFeed.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\Process\WTcSelectionImageWidget.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\Process\WTcSliderWidget.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\Process\WTcTextBoxWidget.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\Process\WTcToggleButton.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Meshes\WTcAsteroid.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Meshes\WTcIcoSphere.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Meshes\WTcUVSphere.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Misc\WTcCircleLineData.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Misc\WTcLineArrayData.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Misc\WTcSettingsFile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Textures\WTcSeamlessTextureClasses.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Textures\WTcTextureGenerator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\WTcParser.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Global\log.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <None Include="..\..\src\Global\WTNetworkDefinitions.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </None>
+    <ClCompile Include="..\..\src\Maths\WTcDoubleMatrix4.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <None Include="..\..\src\Networking\WTcNetworkBase.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </None>
+    <None Include="..\..\src\Networking\WTcP2PClient.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </None>
+    <None Include="..\..\src\Networking\WTcP2PHost.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </None>
+    <ClCompile Include="..\..\src\Physics\WTcMouseCollisionObject.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PTL\WTcSingleton.cpp" />
+    <ClCompile Include="..\..\src\Windows\EventHandler\WTcKeyToggle.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcAttributeData.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Audio\WTcAudioBuffer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Audio\WTcAudioData.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Audio\WTcAudioDevice.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Audio\WTcAudioObject.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\WTcBase.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\CollisionMeshes\WTcBeamCollision.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcBeamMesh.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcButton.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\WTcCamera.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Maths\WTcCameraMatrix4.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Meshes\MeshClasses\WTcCluster.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Physics\WTcCollisionBase.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Physics\WTcCollisionHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Physics\WTcCollisionList.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Physics\WTcCollisionObject.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Maths\WTcColors.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\CollisionMeshes\WTcCompoundCollision.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\CollisionMeshes\WTcCompoundCollisionFile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Windows\EventHandler\WTcEventHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\WTcExtraViewport.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Meshes\MeshClasses\WTcFace.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\WTcFile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\WTcFileHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\FX\WTcFog.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Fonts\WTcFont.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\WTcFrameRate.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Meshes\MeshClasses\WTcFullFaceData.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcImage.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\WTcIMFLoader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Windows\EventHandler\WTcKeyStore.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcLandscape.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\FX\WTcLight.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\WTcLightHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcLine.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\FX\WTcMaterial.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Maths\WTcMatrix4.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Maths\WTcMatrixStack.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Meshes\WTcMesh.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\CollisionMeshes\WTcMeshCollision.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\CollisionMeshes\WTcMeshFileCollision.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Misc\WTcMeshTree.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Misc\WTcMeshTreeNode.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Meshes\WTcmLandscape.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcModel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Maths\WTcMomentum.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Windows\EventHandler\WTcMouse.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Nodes\WTcNodeList.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\WTcPainter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\Process\WTcParentStack.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcParticle.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcParticleGroup.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\WTcPerspectiveControl.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Maths\WTcPerspectiveMatrix.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Meshes\MeshClasses\WTcPlane.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcPoint.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Meshes\MeshClasses\WTcPolygon.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Maths\WTcPredictiveTracking.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\Process\WTcProcess.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\CollisionMeshes\WTcRayCollision.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Misc\WTcReferenceList.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Nodes\WTcRenderNode.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\WTcRenderNodeObject.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\WTcRenderObject.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\WTcRenderPointer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Shaders\WTcShader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Shaders\WTcShaderProgram.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Shaders\WTcShaderVariables.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\WTcSignal.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Audio\WTcSoundObject.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\CollisionMeshes\WTcSphereCollision.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\FX\WTcSpotLight.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcStarMap.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Windows\WTcSync.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Textures\WTcTexture.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\WTcTextureStack.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcTextureText.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Shaders\WTcUserDefinedShaderVariable.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Meshes\MeshClasses\WTcVertex.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Windows\WTcWindow.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\WTKernel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Maths\WTMath.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PTL\WTRadix.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Global\WTSettings.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\WTString.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\Meshes\WTv2DPolygon.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Files\CollisionMeshes\WTvCollisionData.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Global\CException.h" />
+    <ClInclude Include="..\..\src\Global\GlobalPointers.h" />
+    <ClInclude Include="..\..\src\Global\IMFDefinitions.h" />
+    <ClInclude Include="..\..\src\Global\log.h" />
+    <ClInclude Include="..\..\src\Networking\WTcNetworkBase.h" />
+    <ClInclude Include="..\..\src\Networking\WTcP2PClient.h" />
+    <ClInclude Include="..\..\src\Networking\WTcP2PHost.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\..\src\WTBamboo.h" />
+    <ClInclude Include="..\..\src\Maths\WTc2DVt.h" />
+    <ClInclude Include="..\..\src\Maths\WTc2DVtCode.h" />
+    <ClInclude Include="..\..\src\Maths\WTc3DVt.h" />
+    <ClInclude Include="..\..\src\Maths\WTc3DVtCode.h" />
+    <ClInclude Include="..\..\src\Maths\WTc4DVt.h" />
+    <ClInclude Include="..\..\src\Maths\WTc4DVtCode.h" />
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcAttributeData.h" />
+    <ClInclude Include="..\..\src\Audio\WTcAudioBuffer.h" />
+    <ClInclude Include="..\..\src\Files\Audio\WTcAudioData.h" />
+    <ClInclude Include="..\..\src\Audio\WTcAudioDevice.h" />
+    <ClInclude Include="..\..\src\Audio\WTcAudioObject.h" />
+    <ClInclude Include="..\..\src\Engine\WTcBase.h" />
+    <ClInclude Include="..\..\src\Files\CollisionMeshes\WTcBeamCollision.h" />
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcBeamMesh.h" />
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcButton.h" />
+    <ClInclude Include="..\..\src\Camera\WTcCamera.h" />
+    <ClInclude Include="..\..\src\Maths\WTcCameraMatrix4.h" />
+    <ClInclude Include="..\..\src\Files\Meshes\MeshClasses\WTcCluster.h" />
+    <ClInclude Include="..\..\src\Physics\WTcCollisionBase.h" />
+    <ClInclude Include="..\..\src\Physics\WTcCollisionHandler.h" />
+    <ClInclude Include="..\..\src\Physics\WTcCollisionList.h" />
+    <ClInclude Include="..\..\src\Physics\WTcCollisionObject.h" />
+    <ClInclude Include="..\..\src\Maths\WTcColors.h" />
+    <ClInclude Include="..\..\src\Files\CollisionMeshes\WTcCompoundCollision.h" />
+    <ClInclude Include="..\..\src\Files\CollisionMeshes\WTcCompoundCollisionFile.h" />
+    <ClInclude Include="..\..\src\Windows\EventHandler\WTcEventHandler.h" />
+    <ClInclude Include="..\..\src\Camera\WTcExtraViewport.h" />
+    <ClInclude Include="..\..\src\Files\Meshes\MeshClasses\WTcFace.h" />
+    <ClInclude Include="..\..\src\Files\WTcFile.h" />
+    <ClInclude Include="..\..\src\Files\WTcFileHandler.h" />
+    <ClInclude Include="..\..\src\Global\WTcFlags.h" />
+    <ClInclude Include="..\..\src\Camera\FX\WTcFog.h" />
+    <ClInclude Include="..\..\src\Files\Fonts\WTcFont.h" />
+    <ClInclude Include="..\..\src\Engine\WTcFrameRate.h" />
+    <ClInclude Include="..\..\src\Files\Meshes\MeshClasses\WTcFullFaceData.h" />
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcImage.h" />
+    <ClInclude Include="..\..\src\Files\WTcIMFLoader.h" />
+    <ClInclude Include="..\..\src\Windows\EventHandler\WTcKeyStore.h" />
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcLandscape.h" />
+    <ClInclude Include="..\..\src\Camera\FX\WTcLight.h" />
+    <ClInclude Include="..\..\src\Camera\WTcLightHandler.h" />
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcLine.h" />
+    <ClInclude Include="..\..\src\Camera\FX\WTcMaterial.h" />
+    <ClInclude Include="..\..\src\Maths\WTcMatrix4.h" />
+    <ClInclude Include="..\..\src\Maths\WTcMatrixStack.h" />
+    <ClInclude Include="..\..\src\Files\Meshes\WTcMesh.h" />
+    <ClInclude Include="..\..\src\Files\CollisionMeshes\WTcMeshCollision.h" />
+    <ClInclude Include="..\..\src\Files\CollisionMeshes\WTcMeshFileCollision.h" />
+    <ClInclude Include="..\..\src\Files\Misc\WTcMeshTree.h" />
+    <ClInclude Include="..\..\src\Files\Misc\WTcMeshTreeNode.h" />
+    <ClInclude Include="..\..\src\Files\Meshes\WTcmLandscape.h" />
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcModel.h" />
+    <ClInclude Include="..\..\src\Maths\WTcMomentum.h" />
+    <ClInclude Include="..\..\src\Windows\EventHandler\WTcMouse.h" />
+    <ClInclude Include="..\..\src\Camera\Nodes\WTcNodeList.h" />
+    <ClInclude Include="..\..\src\Camera\WTcPainter.h" />
+    <ClInclude Include="..\..\src\Engine\Process\WTcParentStack.h" />
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcParticle.h" />
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcParticleGroup.h" />
+    <ClInclude Include="..\..\src\Camera\WTcPerspectiveControl.h" />
+    <ClInclude Include="..\..\src\Maths\WTcPerspectiveMatrix.h" />
+    <ClInclude Include="..\..\src\Files\Meshes\MeshClasses\WTcPlane.h" />
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcPoint.h" />
+    <ClInclude Include="..\..\src\Files\Meshes\MeshClasses\WTcPolygon.h" />
+    <ClInclude Include="..\..\src\Maths\WTcPredictiveTracking.h" />
+    <ClInclude Include="..\..\src\Engine\Process\WTcProcess.h" />
+    <ClInclude Include="..\..\src\PTL\WTcPushPopStack.h" />
+    <ClInclude Include="..\..\src\Files\CollisionMeshes\WTcRayCollision.h" />
+    <ClInclude Include="..\..\src\Files\Misc\WTcReferenceList.h" />
+    <ClInclude Include="..\..\src\Camera\Nodes\WTcRenderNode.h" />
+    <ClInclude Include="..\..\src\Camera\WTcRenderObject.h" />
+    <ClInclude Include="..\..\src\Camera\WTcRenderOwner.h" />
+    <ClInclude Include="..\..\src\Camera\WTcRenderPointer.h" />
+    <ClInclude Include="..\..\src\Files\Shaders\WTcShader.h" />
+    <ClInclude Include="..\..\src\Files\Shaders\WTcShaderProgram.h" />
+    <ClInclude Include="..\..\src\Files\Shaders\WTcShaderVariables.h" />
+    <ClInclude Include="..\..\src\Engine\WTcSignal.h" />
+    <ClInclude Include="..\..\src\PTL\WTcSingleton.h" />
+    <ClInclude Include="..\..\src\Files\Audio\WTcSoundObject.h" />
+    <ClInclude Include="..\..\src\Files\CollisionMeshes\WTcSphereCollision.h" />
+    <ClInclude Include="..\..\src\Camera\FX\WTcSpotLight.h" />
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcStarMap.h" />
+    <ClInclude Include="..\..\src\Windows\WTcSync.h" />
+    <ClInclude Include="..\..\src\Files\Textures\WTcTexture.h" />
+    <ClInclude Include="..\..\src\Camera\WTcTextureStack.h" />
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcTextureText.h" />
+    <ClInclude Include="..\..\src\Files\Shaders\WTcUserDefinedShaderVariable.h" />
+    <ClInclude Include="..\..\src\Files\Meshes\MeshClasses\WTcVertex.h" />
+    <ClInclude Include="..\..\src\Windows\WTcWindow.h" />
+    <ClInclude Include="..\..\src\Global\WTDefinitions.h" />
+    <ClInclude Include="..\..\src\Global\WTGameSettings.h" />
+    <ClInclude Include="..\..\src\Engine\WTKernel.h" />
+    <ClInclude Include="..\..\src\PTL\WTLimitedList.h" />
+    <ClInclude Include="..\..\src\PTL\WTLLTemplate.h" />
+    <ClInclude Include="..\..\src\Maths\WTMath.h" />
+    <ClInclude Include="..\..\src\PTL\WTMatrixTemplate.h" />
+    <ClInclude Include="..\..\src\PTL\WTMinLinkedList.h" />
+    <ClInclude Include="..\..\src\WTOsBits.h" />
+    <ClInclude Include="..\..\src\PTL\WTRadix.h" />
+    <ClInclude Include="..\..\src\Global\WTSetDefinitions.h" />
+    <ClInclude Include="..\..\src\Global\WTSettings.h" />
+    <ClInclude Include="..\..\src\Files\WTString.h" />
+    <ClInclude Include="..\..\src\Files\Meshes\WTv2DPolygon.h" />
+    <ClInclude Include="..\..\src\Files\CollisionMeshes\WTvCollisionData.h" />
+    <ClInclude Include="..\..\src\Files\WTvFile.h" />
+    <ClInclude Include="..\..\src\Camera\FX\WTvLight.h" />
+    <ClInclude Include="..\..\src\Files\Misc\WTvMeshTree.h" />
+    <ClInclude Include="..\..\src\Camera\WTvRenderObject.h" />
+    <ClInclude Include="..\..\src\Files\Textures\WTvTexture.h" />
+    <ClInclude Include="..\..\src\Windows\WTWindowsKeyCodes.h" />
+    <ClInclude Include="..\..\src\Windows\WTXWindowsKeyCodes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

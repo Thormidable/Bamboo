@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 	#if WT_FULL_VERSION_BAMBOO
@@ -535,5 +536,22 @@ void cMomentum::Equals(cMomentum *lpOther)
 
 float *cMomentum::GSpeeds(){return mfMomentum;};
 float *cMomentum::AngularSpeeds(){return &mfMomentum[3];};
+
+float cMomentum::Magnitude()
+{
+    return sqrt(mfMomentum[0]*mfMomentum[0]+mfMomentum[1]*mfMomentum[1]+mfMomentum[2]*mfMomentum[2]);
+};
+float cMomentum::MagnitudeAngular()
+{
+    return sqrt(mfMomentum[3]*mfMomentum[3]+mfMomentum[4]*mfMomentum[4]+mfMomentum[5]*mfMomentum[5]);
+};
+float cMomentum::MagnitudeSq()
+{
+    return mfMomentum[0]*mfMomentum[0]+mfMomentum[1]*mfMomentum[1]+mfMomentum[2]*mfMomentum[2];
+};
+float cMomentum::MagnitudeAngularSq()
+{
+    return mfMomentum[3]*mfMomentum[3]+mfMomentum[4]*mfMomentum[4]+mfMomentum[5]*mfMomentum[5];
+};
 
 #endif

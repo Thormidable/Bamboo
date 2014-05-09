@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 
@@ -167,6 +168,7 @@ void cShader::LoadIMF(ifstream &FileStream)
         {
             mpVariables[liCount].UpdateStart(lpShaderText);
         }
+
 }
 
 
@@ -185,6 +187,7 @@ printf("Code Finished\n");
 */
 void cShader::BufferAndCompile()
 {
+
 
 if(miShaderType == IMF_SHADER_TYPE_NULL) {miShaderID=0; return;}
 if(miShaderType == IMF_SHADER_TYPE_VERTEX)
@@ -205,9 +208,9 @@ int liID;
  glGetShaderiv(miShaderID, GL_COMPILE_STATUS, &liID);
  if(!liID)
   {TRACE("Shader " << mpFileName << " Failed to Compile");
-    char lpLog[256];
+    char lpLog[1024];
     GLsizei liLength;
-    glGetShaderInfoLog(miShaderID,256,&liLength,lpLog);
+    glGetShaderInfoLog(miShaderID,1024,&liLength,lpLog);
     trace(lpLog);
   }
  else trace("Shader " << mpFileName << " Compiled Successfully");

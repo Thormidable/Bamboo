@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 void cReferenceList::LoadIMF(ifstream &FileStream)

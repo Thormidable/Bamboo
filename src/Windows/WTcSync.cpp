@@ -1,3 +1,4 @@
+#include "stdafx.h"
 /*=============================*\
             EXCALIBUR
 
@@ -38,7 +39,7 @@ Copyright (c) 2007 Alice Blunt
 
 #include "../WTBamboo.h"
 
-
+cSync *cSync::mpInstance=0;
 
 void cSync::SleepWrap(uint32 liMS)
 {
@@ -66,6 +67,12 @@ cSync::cSync():
 	mfTimeMod=0.0f;
 	mfTimeAcc=0.0f;
 	mfCPS=0.0f;
+}
+
+cSync *cSync::Instance()
+{
+    if(!mpInstance) mpInstance=new cSync;
+    return mpInstance;
 }
 
 // Synchroniser class destructor
@@ -98,4 +105,40 @@ void cSync::Tick()
 	// Increment time accumulator and get cycles per second
 	mfTimeAcc+=mfTimeMod;
 	mfCPS=1.0f/mfTimeMod;
+}
+
+void cSync::EnforceFrameRate()
+{
+    Tick();
+    int32 liSleepTime=(_TIME_PER_FRAME-GetTimeMod())*OS_TIME_SCALING;
+	if(liSleepTime>0)
+	{
+        //printf("Time to Process Frame : %f s\n",gpTimer->GetTimeMod());
+        //	printf("Free Time this frame : %f ms\n",(_TIME_PER_FRAME-gpTimer->GetTimeMod())*OS_TIME_SCALING);
+        SleepWrap(liSleepTime);
+	}
+}
+
+uint32 cSync::GetCurrentTime()
+{
+#if WT_OS_TYPE==OS_LINUX
+	static timeval* lpTimeVal=static_cast<timeval*>(mpTimeVal);
+	gettimeofday(lpTimeVal,NULL);
+	return lpTimeVal->tv_usec*0.001f;
+#endif
+#if WT_OS_TYPE==OS_WIN32
+	return (int)(timeGetTime()&UINT_MAX)*0.001f;
+#endif
+}
+
+uint32 cSync::GetCurrentUs()
+{
+#if WT_OS_TYPE==OS_LINUX
+	static timeval* lpTimeVal=static_cast<timeval*>(mpTimeVal);
+	gettimeofday(lpTimeVal,NULL);
+	return lpTimeVal->tv_usec;
+#endif
+#if WT_OS_TYPE==OS_WIN32
+	return (int)(timeGetTime()&UINT_MAX);
+#endif
 }

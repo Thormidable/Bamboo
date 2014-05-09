@@ -51,6 +51,10 @@ public:
     cRGBA operator=(cRGBA lpOther);
     cRGBA operator=(cRGBA *lpOther);
 
+    bool operator==(float *lpOther);
+    bool operator==(cRGBA lpOther);
+    bool operator==(cRGBA *lpOther);
+
     cRGBA operator+(float lfOther);
     cRGBA operator+(float *lpOther);
     cRGBA operator+(cRGB lpOther);
@@ -231,6 +235,9 @@ public:
     cRGB operator/=(c3DVf lpOther);
     cRGB operator/=(c3DVf *lpOther);
 
+    bool operator==(float *lpOther);
+    bool operator==(cRGB lpOther);
+    bool operator==(cRGB *lpOther);
 
 		///Array operator to allow the user to access components by position. R=0, G=1, B=2;
     float &operator[](uint32);

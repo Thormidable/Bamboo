@@ -48,46 +48,57 @@ Copyright (c) 2007 Alice Blunt
 class cSync
 {
 private:
-	/// This is a pointer to the current cSync instance.
+	// This is a pointer to the current cSync instance.
 	static cSync *mpInstance;
 #if WT_OS_TYPE==OS_LINUX
-	/// This is a Linux specific variable. It stores the last ticks time value.
+	// This is a Linux specific variable. It stores the last ticks time value.
 
 	float mfLastf;
-	/// This is a Linux specific variable. It stores the current ticks time value.
+	// This is a Linux specific variable. It stores the current ticks time value.
 	float mfCurrf;
 
-	/// This is Linux specific variable. It stores a pointer to the time value.
+	// This is Linux specific variable. It stores a pointer to the time value.
 	timeval* mpTimeVal;
 #endif
 	// General timing vars
-	/// This is the integer representation of the last ticks time.
+	// This is the integer representation of the last ticks time.
 	int miLastTime;
-	/// This is the integer representation of the current ticks time.
+	// This is the integer representation of the current ticks time.
 	int miCurrTime;
 
-	/// This is the time in seconds between the last two ticks.
+	// This is the time in seconds between the last two ticks.
 	float mfTimeMod;
-	/// This is the total time in seconds accumalated since the timer was started.
+	// This is the total time in seconds accumalated since the timer was started.
 	float mfTimeAcc;
-	/// This is the current cycles per second
+	// This is the current cycles per second
 	float mfCPS;
-public:
 	cSync();
-	~cSync();
+public:
 
+    ~cSync();
 	///This will tick the system and recalculate the current system speed.
 	void Tick();
 
 	/// This will will sleep wrap the system by liMS miliseconds
 	void SleepWrap(uint32 lMS);
 	// Accessors
-	/// This will return mfTimeMod.
+	/// This will return seconds between last two ticks
 	inline float GetTimeMod(){ return mfTimeMod;}
-	/// This will reutrn mfTimeAcc.
+	/// This will return the number of seconds since the timer was started.
 	inline float GetTimeAcc(){ return mfTimeAcc;}
-	/// This will return mfCPS.
+	/// This will return Current Cycles per Second.
 	inline float GetCPS(){ return mfCPS;}
+
+	///This will calculate and perform a sleep to enforce the specified FPS.
+	void EnforceFrameRate();
+
+	///This will return a pointer to the current instance of the cSync class.
+	static cSync *Instance();
+
+    ///This will return the current time in ms.
+	uint32 GetCurrentTime();
+	///This will return the current time in us
+	uint32 GetCurrentUs();
 };
 
 

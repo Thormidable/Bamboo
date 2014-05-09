@@ -122,6 +122,8 @@ public:
 	   ///This will invert this vector (multiply each component by -1.0f).
 	   c3DVt<Type> Invert();
 
+	   void Yaw(float lfAngle);
+
 };
 
 

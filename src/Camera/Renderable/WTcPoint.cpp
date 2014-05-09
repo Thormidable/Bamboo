@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 
@@ -23,7 +24,6 @@ cPoint::cPoint(cCamera *lpCamera) : cRenderObject(lpCamera,true)
 void cPoint::RenderPainter()
 {
     SetShaderVariables();
-  //glPointSize(mfPointSize);
   glBegin(GL_POINTS);
     glColor4fv(mfColor.Color());
     glVertex3f(0.0f,0.0f,0.0f);

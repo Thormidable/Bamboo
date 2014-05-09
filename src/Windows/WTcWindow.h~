@@ -54,15 +54,16 @@ public:
 
 	friend LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam);
 
-	///This will return the height of the Title bar in pixels. This is Windows only.
+#endif
+
+		///This will return the height of the Title bar in pixels. This is Windows only.
     uint32 TitleBarHeight();
     ///This will return the size of the window border in pixels. This is Windows only.
     uint32 BorderThickness();
-#endif
 
 #if WT_OS_TYPE==OS_LINUX
 	Display *lpDisplay;
-	static int32 DisplayAttributes[5];
+	static long int DisplayAttributes[];
 	XVisualInfo* VisualInfo;
 	GLXContext glContext;
 	XSetWindowAttributes WindowAttributes;

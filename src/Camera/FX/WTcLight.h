@@ -3,6 +3,15 @@
 
 #if WT_FULL_VERSION_BAMBOO
 // Creates an OpenGL light effect
+/**
+ \brief Creates a Bamboo Light Object.
+ The light will take a position, Ambient, Diffuse and Specular components.
+ Ambient is the general minimum light level from the light.
+ Diffuse is the general light put off by the light (Shown on planes pointing roughly towards the light).
+ Specular is the much more intense light only reflected on planes almost perpendicular to the source.
+ These are fed to the Shader system through : gl_LightSource. This will be moved to a more general light system.
+ The cLightHandler will select the n most important light sources for each object and only use them. As such any number of lights can be used and to the user it will appear that they are all operating.
+*/
 class cLight : public vLight
 {
 protected:

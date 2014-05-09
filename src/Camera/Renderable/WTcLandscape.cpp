@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 #if WT_FULL_VERSION_BAMBOO
@@ -7,6 +8,9 @@ cLandscape::cLandscape(cmLandscape *lpModel,cCamera *lpCamera) : cRenderObject(l
 {
  mpLandscape=lpModel;
 	mb3D=true;
+
+	mbNormalArray=true;
+	mbUVArray=true;
 }
 
 
@@ -14,11 +18,15 @@ cLandscape::cLandscape(cmLandscape *lpModel)
 {
  mpLandscape=lpModel;
 	mb3D=true;
+	mbNormalArray=true;
+	mbUVArray=true;
 }
 
 void cLandscape::Landscape(string lsLandscape)
 {
  mpLandscape=_GET_LANDSCAPE_FILE(lsLandscape.c_str());
+ mbNormalArray=true;
+	mbUVArray=true;
 }
 
 

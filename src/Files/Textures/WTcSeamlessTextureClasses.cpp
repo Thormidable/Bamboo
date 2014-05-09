@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 using namespace std;
@@ -206,8 +207,8 @@ void cSeamList::MapTexture(cTexture **lpTextures,c2DVf lfPosition)
 
  SEAM_ID_TYPE liBaseSeam=mpList[liClosest].ClosestSeamID(lfPosition);
 
- cSeamTranslation lpTranslation[miSeamSets];
- bool lbTranslation[miSeamSets];
+ cSeamTranslation *lpTranslation = new cSeamTranslation[miSeamSets];
+ bool *lbTranslation = new bool[miSeamSets];
  for(SEAM_ID_TYPE liLoop=0;liLoop<miSeamSets;++liLoop)
  {
      lbTranslation[liLoop]=false;
@@ -248,6 +249,8 @@ void cSeamList::MapTexture(cTexture **lpTextures,c2DVf lfPosition)
      }
  }
 
+ delete []lbTranslation;
+ delete []lpTranslation;
 };
 
 int32 cSeamList::FindSeamMirror(SEAM_ID_TYPE liBase,SEAM_ID_TYPE liOther,c2DVf lfPosition)
@@ -301,7 +304,7 @@ void cSeamAreaMap::GenerateMap(cSeamList *lpList)
           lpList->Item(liCount).Data[1].miTemplate);
  }
 
- SEAM_ID_TYPE lpTemp[mpTexture->Width()*mpTexture->Height()];
+ SEAM_ID_TYPE *lpTemp=new SEAM_ID_TYPE[mpTexture->Width()*mpTexture->Height()];
  memcpy(lpTemp,mpMap,sizeof(SEAM_ID_TYPE)*mpTexture->Width()*mpTexture->Height());
 
  bool lbUpdated=true;
@@ -324,6 +327,7 @@ void cSeamAreaMap::GenerateMap(cSeamList *lpList)
      }
   memcpy(mpMap,lpTemp,sizeof(SEAM_ID_TYPE)*mpTexture->Width()*mpTexture->Height());
  }
+ delete []lpTemp;
 };
 
 SEAM_ID_TYPE cSeamAreaMap::GetPixel(uint32 liX,uint32 liY)

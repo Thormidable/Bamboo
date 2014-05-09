@@ -47,8 +47,8 @@ class cAudioObject : public cSignal
  float mfGain;
  float mfPitch;
 
-~cAudioObject();
 public:
+~cAudioObject();
  /// This will create an OpenAL source for this object, without linking any cAudioBuffers to it.
  cAudioObject();
  /// This will create an OpenAL source and link this object to a buffer.

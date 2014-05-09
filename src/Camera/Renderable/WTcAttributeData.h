@@ -55,6 +55,12 @@ public:
 
 	///Will return the data item at position liPos.
 	tType &Get(uint32 liPos){return mpData[liPos];};
+
+	~cAttributeData()
+	{
+        delete []mpData;
+        mpData=0;
+	}
 };
 
 /**
@@ -72,6 +78,7 @@ class cTBNVectors
  void GenerateTBNVectors(cMesh *lpMesh);
 public:
  cTBNVectors(cMesh *lpMesh);
+ ~cTBNVectors();
  ///This will Link the TBN data to the object lpObj. This will use the default names for the various arrays of data.
  void LinkToShader(cRenderObject *lpObj);
 

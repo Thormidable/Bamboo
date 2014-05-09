@@ -41,6 +41,16 @@ void cText::AddFont(string lcFont)
  AddFont(_GET_FONT_FILE(lcFont.c_str()));
 }
 
+uint16 cText::Length()
+{
+	return mpString.length();
+}
+
+void cText::Length(uint16 liLength)
+{
+	mpString.resize(liLength);
+};
+
 
 void cText::RenderPainter()
 {
@@ -52,25 +62,34 @@ void cText::RenderPainter()
 
  float lfHeight=mfHeight*0.5f;
  uint32 liCount;
+ float lfXRange,lfYRange;
+ 
+ cFont *lpFont=static_cast<cFont*>(mpTextures[0]->mpTexture);
+ 
+ lfXRange=lpFont->CharacterX();
+ lfYRange=lpFont->CharacterY();
+ 
+ glBegin(GL_QUADS);
+ glNormal3f(0.0f,0.0f,1.0f);
+
   for(liCount=0;liCount<mpString.length();++liCount)
   {
-	float liRange;
+	
      if(mpString[liCount]!=32)
      {
-		 liRange=IMF_FONT_SCALE*(cFont::Character(mpString[liCount])); //(or /64)
-          glBegin(GL_QUADS);
-          glNormal3f(0.0f,0.0f,1.0f);
-          glMultiTexCoord2f(GL_TEXTURE0,0,liRange+IMF_FONT_SCALE);   glVertex3f(-mfWidth*(liCount-0.5f),lfHeight,mfPriority);
-          glMultiTexCoord2f(GL_TEXTURE0,0,liRange);            glVertex3f(-mfWidth*(liCount-0.5f),-lfHeight,mfPriority);
-          glMultiTexCoord2f(GL_TEXTURE0,1,liRange);            glVertex3f(-mfWidth*(liCount+0.5f),-lfHeight,mfPriority);
-          glMultiTexCoord2f(GL_TEXTURE0,1,liRange+IMF_FONT_SCALE);   glVertex3f(-mfWidth*(liCount+0.5f),lfHeight,mfPriority);
-
-          glEnd();
+	uint8 liCharacter=cFont::Character(mpString[liCount]);
+	  float lfX=lpFont->CharacterX(liCharacter);
+	  float lfY=lpFont->CharacterY(liCharacter);
+          glMultiTexCoord2f(GL_TEXTURE0,lfX,lfY+lfYRange);   		glVertex3f(-mfHeight*(liCount-0.5f),lfHeight,1.0f);
+          glMultiTexCoord2f(GL_TEXTURE0,lfX,lfY);            		glVertex3f(-mfHeight*(liCount-0.5f),-lfHeight,1.0f);
+          glMultiTexCoord2f(GL_TEXTURE0,lfX+lfXRange,lfY);            	glVertex3f(-mfHeight*(liCount+0.5f),-lfHeight,1.0f);
+          glMultiTexCoord2f(GL_TEXTURE0,lfX+lfXRange,lfY+lfYRange);   	glVertex3f(-mfHeight*(liCount+0.5f),lfHeight,1.0f);
 
     }
 
   }
  }
+ glEnd();
 }
 
 std::string &cText::Text()
@@ -78,12 +97,6 @@ std::string &cText::Text()
  return mpString;
 }
 
-
-/*
-void cText::Text(char *lsText)
-{
- mpString=lsText;
-}*/
 
 void cText::Text(string lsText)
 {
@@ -115,6 +128,22 @@ cText::cText()
 
 
 }
+
+
+
+void cTextMessage::Time(float lfTime)
+{
+miFrames=lfTime*_FPS;
+};
+
+void cTextMessage::Frames(uint32 liFrames){miFrames=liFrames;};
+uint32 cTextMessage::Frames(){return miFrames;};
+void cTextMessage::RenderPainter()
+{
+    cText::RenderPainter();
+    --miFrames;
+    if(!miFrames) _KILL_THIS();
+};
 
 
 #endif

@@ -12,6 +12,7 @@ namespace cIMF
 {
  /// This is the function which will load an IMF file from memory.
  void LoadIMF(const char *lpPath);
+
 };
 
 #endif

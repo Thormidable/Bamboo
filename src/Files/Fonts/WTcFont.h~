@@ -1,23 +1,66 @@
 #ifndef __WTCFONT_H__
 #define __WTCFONT_H__
 
+class cFontCharacter;
+class cFont;
+class cFontCharacterList
+{
+  
+  static cFontCharacter **mpList;
+  static uint8 miItems;
+  static uint8 miSpaces;
+  cFontCharacterList();
+public:
+   static cFontCharacter *GetItem(cFont *lpFont);
+   static void Clear();
+   static void Init();
+   
+};
+
+class cFontCharacterPos
+{
+public:
+    float X,Y;
+};
+
+class cFontCharacter
+{
+  friend class cFont;
+  
+ uint8 miSize;
+
+  cFontCharacterPos mpData[IMF_FONT_CHARACTERS+1];
+public:
+  
+  cFontCharacter(cFont *lpFont);
+  float X(uint8 liCharacter);
+  float Y(uint8 liCharacter);
+  uint8 Size();
+  
+};
+
+
 /** \brief This class will store the data for a Font ready to be used for rendering cText.
  * This should come from an IMF file and be composed of an image of 93 character images stacked vertically.
  * This is a file class and should be handled entirely by the engine.
  */
 class cFont : public cTexture
 {
+  friend class cFontCharacter;
+  cFontCharacterPos *mpCharPos;
  public:
 
     ~cFont();
     //
     cFont(cTextureArray *lpData);
-    uint8 Character(uint8 lcChar);
-    uint32 Height(){return miWidth;}
-    void UpdateTexture();
-    void BindTexture();
+    static uint8 Character(uint8 lcChar);
+    void BufferTexture();
+    float CharacterX(uint8 liChar=IMF_FONT_CHARACTERS);
+    float CharacterY(uint8 liChar=IMF_FONT_CHARACTERS);
+    uint32 miCharWidth;
+    uint16 miCharactersInRow;
+    uint16 miCharactersInColumn;
 
 };
-
 
 #endif

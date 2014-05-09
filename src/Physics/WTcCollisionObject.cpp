@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 
@@ -21,26 +22,30 @@ void cCollisionObject::CollisionFilter(uint32 liID)
 
 if(mpOwner)
 {
-  cCollisionHandler::Instance()->mpList[miID].StitchOut(mpOwner);
-  miID=liID;
-  cCollisionHandler::Instance()->mpList[miID].StitchIn(mpOwner);
+  if(liID!=miID)
+  {
+    mpOwner->List()->StitchOut(mpOwner);
+    miID=liID;
+    cCollisionHandler::Instance()->mpList[miID].StitchIn(mpOwner);
+  }
 }
 else miID=liID;
 }
 
 
 
-void cCollisionObject::PreUpdateCache()
-{
-
-if(mpOwner) cCollisionHandler::Instance()->mpList[cCollisionHandler::Instance()->FindSlot(this)].StitchOut(mpOwner);
-if(miDelay) --miDelay;
-}
-
 void cCollisionObject::PostUpdateCache()
 {
-
-if(mpOwner) cCollisionHandler::Instance()->mpList[cCollisionHandler::Instance()->FindSlot(this)].StitchIn(mpOwner);
+ if(miDelay) --miDelay;
+if(cCollisionHandler::Instance()->RequiresSlotUpdate())
+{
+ cLinkedList<cCollisionBase> *lpList=&(cCollisionHandler::Instance()->mpList[cCollisionHandler::Instance()->FindSlot(this)]);
+    if(mpOwner && lpList!=mpOwner->List())
+    {
+        mpOwner->List()->StitchOut(mpOwner);
+        lpList->StitchIn(mpOwner);
+    }
+}
 
 if(mpObject) mpObject->Update(mpFollowing->mmCache);
 
@@ -118,8 +123,8 @@ void cCollisionObject::Initialise(vRenderObject *lpFollow,cProcess *lpLinked,uin
 
 
 	bool cCollisionObject::IsDelayed(){return miDelay;};
-	void cCollisionObject::Delay(uint8 liDelay){miDelay=liDelay;};
-	uint8 cCollisionObject::Delay(){return miDelay;};
+	void cCollisionObject::Delay(int8 liDelay){miDelay=liDelay;};
+	int8 cCollisionObject::Delay(){return miDelay;};
 
 
 
@@ -387,3 +392,11 @@ bool cCollisionObject::SphereSphere(cCollisionBase *lpOther)
     return SphereSphere(Sphere(),RenderObject()->mmCache,lpOther->Sphere(),lpOther->RenderObject()->mmCache);
 };
 
+void cCollisionObject::ForceInitialisation(cMatrix4 &lmGlobal)
+{
+    if(mpFollowing)
+    {
+        mpFollowing->mmCache=lmGlobal;
+        miDelay=0;
+    }
+};

@@ -89,8 +89,18 @@ template<class tType> tType *FindProcess(tType *lpStart);
 /// This Function will reset FindProcess() to search from the start of the process List.
  void ResetFindProcess();
 
+///This will return a pointer to the Currently Running cProcess (Ensure you are beneath a call to cProcess::Run()). This is undefined during Rendering or within the cFrameUpdateHandler system.
+ cProcess *CurrentProcess();
+
+ template<class tType> void KillOtherProcesses();
+ template<class tType> void KillType();
 };
 
+/**
+ * \brief This class will allow the user to update a function on a regular basis without giving it the overhead of a process
+ * Simply inherit this class into the class that is desired and define void FrameUpdate(). This will be called once per rendered frame (less than processes).
+ * Expansions to allow, smoother distribution of tasks over several frames will be enabled in a future edition.
+ */
 class cFrameUpdateType
 {
 
@@ -112,6 +122,7 @@ public:
   void FrameUpdate();
 
 };
+
 
 
 template<class tType> tType *cKernel::FindProcess()

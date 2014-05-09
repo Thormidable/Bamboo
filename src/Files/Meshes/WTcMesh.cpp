@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 void cMeshArray::LoadIMF(ifstream &FileStream)
@@ -56,6 +57,7 @@ cMeshArray::~cMeshArray()
 
 cMesh::cMesh(cMeshArray *lpMesh)
 {
+
     glGenBuffers(1,&mBuffer1);
 	glGenBuffers(1,&mBuffer2);
 
@@ -69,10 +71,11 @@ cMesh::cMesh(cMeshArray *lpMesh)
 
 	miFaces=lpMesh->miFaces;
 	miVertex=lpMesh->miVertex;
-	SetFormat();
 
 	BufferMesh();
 	FindSize();
+
+
 
 
 }
@@ -148,14 +151,7 @@ void cMesh::ResetPosition()
 FindSize();
 }
 
-void cMesh::SetFormat()
-{
-	miFormat=0;
-	if(mpVertex) miFormat=miFormat|WT_MESH_FORMAT_VERTECES;
-	if(mpUV) miFormat=miFormat|WT_MESH_FORMAT_UVS;
-	if(mpNormals) miFormat=miFormat|WT_MESH_FORMAT_NORMALS;
 
-}
 
 //This operates Exclusively on a triangulated array
 void cMesh::CreateNormalArray()
@@ -193,6 +189,8 @@ for(uint32 liCount=0;liCount<miVertex;++liCount)
 }
 
 RemoveDuplicateVerteces(0.0001f);
+
+
 
 }
 
@@ -295,12 +293,13 @@ void cMesh::CreateNormalArrayFlat()
 	  //   printf("DotProd : %u %f\n",liCount,Vert.Dot(&mpNormals[liCount*3]));
         //printf("Vertex/Norm %u: %f %f %f,%f %f %f\n",liCount,mpVertex[liCount*3],mpVertex[liCount*3+1],mpVertex[liCount*3+2],mpNormals[liCount*3],mpNormals[liCount*3+1],mpNormals[liCount*3+2]);
 	}
+
 }
 
 void cMesh::ForceNormalDirectionStart(uint32 liFurthest,uint32 liFace)
 {
     c3DVf v1;
-    bool lbDone[miFaces];
+    bool *lbDone = new bool[miFaces];
     for(uint32 liCount=0;liCount<miFaces;++liCount)
 	{
         lbDone[liCount]=false;
@@ -710,14 +709,16 @@ for(uint32 liCount=0;liCount<miVertex;liCount++)
 	if(lpVert[1]>=0.0f || (lpUV[0]<0.0f && lpUV[1]<0.0f))
 	{
 		c2DVf lvPos(0.3f,0.3f);
-		lvPos+=(lfVec*lfAlpha*0.5f/(3.141569f*lfScale));
+		lfVec*=lfAlpha*0.5f/(3.141569f*lfScale);
+		lvPos+=lfVec;
 		lpUV[0]=lvPos[0];
 		lpUV[1]=lvPos[1];
 	}
 	else
 	{
 	    c2DVf lvPos(0.75f,0.75f);
-		lvPos+=(lfVec*((3.141569-fabs(lfAlpha))*0.5f/(3.141569f*lfScale)));
+		lfVec*=((3.141569-fabs(lfAlpha))*0.5f/(3.141569f*lfScale));
+		lvPos+=lfVec;
 		lpUV[0]=lvPos[0];
 		lpUV[1]=lvPos[1];
 	}
@@ -728,9 +729,6 @@ for(uint32 liCount=0;liCount<miVertex;liCount++)
 
 void cMesh::BufferMesh()
 {
-//	trace("Entering cMesh::BufferMesh")
-	//if (!mpBufferIDs) mpBufferIDs= new uint32[2];
-
 	uint8 liSize=3;
 	if(mpNormals) liSize+=3;
 	if(mpUV) liSize+=2;
@@ -749,19 +747,17 @@ void cMesh::RenderMesh()
 	glBindBuffer(GL_ARRAY_BUFFER, mBuffer1);
 
 	glVertexPointer(3,GL_FLOAT,0,0);
-	uint8 liSize=3;
 	if(mpNormals)
 	{
-		glNormalPointer(GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*liSize*sizeof(float)));
-		liSize+=3;
+		glNormalPointer(GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*3*sizeof(float)));
 	}
-	else glDisableClientState(GL_NORMAL_ARRAY);
+
 	if(mpUV)
 	{
-	    glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*liSize*sizeof(float)));
+	    if(mpNormals) glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*6*sizeof(float)));
+	    else glTexCoordPointer(2,GL_FLOAT,0,reinterpret_cast<const GLvoid*>(miVertex*3*sizeof(float)));
 	}
-	else glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-
+	
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBuffer2);
 	glDrawElements(GL_TRIANGLES,miFaces*3,GL_UNSIGNED_SHORT,0);
 
@@ -796,7 +792,8 @@ cMesh::cMesh()
     miModelCentre[0]=miModelCentre[1]=miModelCentre[2]=0.0f; mpVertex=0;mpNormals=0;mpUV=0;mpFaces=0;miFaces=0;miVertex=0;
     glGenBuffers(1,&mBuffer1);
 	glGenBuffers(1,&mBuffer2);
-	};
+
+};
 
 	uint8 cMesh::VertexSize()
 	{
@@ -826,6 +823,8 @@ cMesh::cMesh()
 	    if(lsFileName=="") strcpy(lpNew->mpFileName,"GeneratedMesh");
 	    else strcpy(lpNew->mpFileName,lsFileName.c_str());
 
+        BufferMesh();
+
 	    return lpNew;
 	}
 
@@ -850,6 +849,7 @@ cMesh::cMesh()
 	    if(lsFileName=="") strcpy(mpFileName,"GeneratedMesh");
 	    else strcpy(mpFileName,lsFileName.c_str());
 
+        BufferMesh();
 	}
 
 
@@ -1424,6 +1424,7 @@ void cMesh::GenerateSpace(uint16 liVerteces,bool lbNormal,bool lbUV,uint32 liFac
 
     mpFaces=new uint16[liFaces*3];
     miFaces=liFaces;
+
 };
 
 void cMesh::RemoveErrorFaces(float lfRange)
@@ -1459,6 +1460,9 @@ cMesh *cMesh::operator=(cMesh *lpOther)
 
     memcpy(mpFaces,lpOther->mpFaces,sizeof(FACE_TYPE)*miFaces*3);
     memcpy(mpVertex,lpOther->mpVertex,sizeof(float)*miVertex*miSize);
+
+    BufferMesh();
+
  return this;
 };
 
@@ -1489,6 +1493,7 @@ cMesh::cMesh(cMesh *lpOther)
     //SetFormat();
     BufferMesh();
     FindSize();
+
 };
 
 void cMesh::AddData(bool lbNormals,bool lbUV)
@@ -1516,4 +1521,5 @@ else
     mpNormals=0;
     mpUV=0;
 }
+
 }

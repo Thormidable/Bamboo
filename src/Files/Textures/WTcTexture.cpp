@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 using namespace std;
@@ -792,3 +793,526 @@ void cDynamicTexture::ColorTexture(cRGB lcColor)
    cTexture::ColorTexture(lcColor);
    mbChanged=true;
 }
+
+cGUIFrameTexture::cGUIFrameTexture(c2DVi lvSize,cTexture *lpCorner,cTexture *lpEdge,cTexture *lpCentre,cRGBA lpBaseColor,uint8 liDepth) : cGUIFrameBase(lpBaseColor)
+{
+    miWidth=lvSize[0];
+    miHeight=lvSize[1];
+    miDepth=liDepth;
+    miPixelSize=miDepth>>3;
+
+    mpData=new uint8[miWidth*miHeight*miPixelSize];
+    memset(mpData,0,miWidth*miHeight*miPixelSize);
+
+    WriteBaseColor(lpBaseColor);
+    WriteEdge(lpEdge);
+    WriteCorners(lpCorner);
+    WriteCentres(lpCentre);
+    SortBackColor(lpBaseColor);
+BufferTexture();
+
+
+};
+
+cGUIFrameHorizontalTitleTexture::cGUIFrameHorizontalTitleTexture(c2DVi lvSize,cTexture *lpCorner,cTexture *lpEdge,cTexture *lpBreak,uint32 liBreakHeight,cTexture *lpBreakEdge,cTexture *lpCentre,cRGBA lpBaseColor,uint8 liDepth) : cGUIFrameBase(lpBaseColor)
+{
+    miBreakY=liBreakHeight;
+    miWidth=lvSize[0];
+    miHeight=lvSize[1];
+    miDepth=liDepth;
+    miPixelSize=miDepth>>3;
+    mpData=new uint8[miWidth*miHeight*miPixelSize];
+    memset(mpData,0,miWidth*miHeight*miPixelSize);
+
+    WriteBaseColor(lpBaseColor);
+    WriteEdge(lpEdge);
+    WriteCorners(lpCorner);
+
+if(lpBreakEdge)
+{
+    uint16 liY=miHeight-lpBreakEdge->Height()*0.5f-liBreakHeight;
+    for(uint16 liCount=0;liCount<miWidth;liCount+=lpBreakEdge->Width())
+    {
+        CopyImage(c2DVi(liCount,liY),lpBreakEdge);
+    }
+}
+
+if(lpBreak)
+{
+    lpBreak->Rotate90CW();
+    CopyImage(c2DVi(0,miHeight-lpBreak->Height()*0.5f-liBreakHeight),lpBreak);
+    lpBreak->FlipHorizontally();
+    CopyImage(c2DVi(miWidth-lpBreak->Width(),miHeight-lpBreak->Height()*0.5f-liBreakHeight),lpBreak);
+    lpBreak->FlipHorizontally();
+    lpBreak->Rotate90CCW();
+}
+
+if(lpCentre)
+{
+    CopyImage(c2DVi(miWidth/2,0),lpCentre);
+    lpCentre->Rotate90CW();
+    CopyImage(c2DVi(0,miHeight-liBreakHeight*0.5f),lpCentre);
+    CopyImage(c2DVi(0,(miHeight-liBreakHeight)*0.5f),lpCentre);
+    lpCentre->Rotate90CW();
+    CopyImage(c2DVi(miWidth/2,miHeight-lpCentre->Height()),lpCentre);
+    lpCentre->Rotate90CW();
+    CopyImage(c2DVi(miWidth-lpCentre->Width(),miHeight-liBreakHeight*0.5f),lpCentre);
+    CopyImage(c2DVi(miWidth-lpCentre->Width(),(miHeight-liBreakHeight)*0.5f),lpCentre);
+    lpCentre->Rotate90CW();
+}
+
+SortBackColor(lpBaseColor);
+
+BufferTexture();
+
+};
+
+uint32 cGUIFrameHorizontalTitleTexture::Break(){return miBreakY;}
+
+void cGUIFrameHandler::BaseColor(cRGBA lcCol)
+{
+    mpBaseColor=lcCol;
+};
+
+void cGUIFrameHandler::ClearBaseColor()
+{
+    mpBaseColor=cRGBA(0.0f,0.0f,0.0f,0.0f);
+};
+
+
+void cGUIFrameBase::WriteBaseColor(cRGBA lpBaseColor)
+{
+if(lpBaseColor.A()>0.0f)
+{
+    uint8 lcColor[4];
+    lcColor[0]=lpBaseColor.R()*255;
+    lcColor[1]=lpBaseColor.G()*255;
+    lcColor[2]=lpBaseColor.B()*255;
+    lcColor[3]=lpBaseColor.A()*255;
+
+    uint8 *lpBase=mpData;
+    for(uint32 liPos=0;liPos<miWidth*miHeight;++liPos)
+    {
+        memcpy(lpBase,lcColor,miPixelSize);
+        lpBase+=miPixelSize;
+    }
+}
+else memset(mpData,0,miWidth*miHeight*miPixelSize);
+}
+
+void cGUIFrameBase::WriteEdge(cTexture *lpEdge)
+{
+if(lpEdge)
+{
+        for(uint16 liX=0;liX<miWidth;liX+=lpEdge->Width()){CopyImage(c2DVi(liX,0),lpEdge);}
+        lpEdge->Rotate90CW();
+        for(uint16 liX=0;liX<miHeight;liX+=lpEdge->Height()){CopyImage(c2DVi(0,liX),lpEdge);}
+        lpEdge->Rotate90CW();
+        for(uint16 liX=0;liX<miWidth;liX+=lpEdge->Width()){CopyImage(c2DVi(liX,miHeight-lpEdge->Height()),lpEdge);}
+        lpEdge->Rotate90CW();
+        for(uint16 liX=0;liX<miHeight;liX+=lpEdge->Height()){CopyImage(c2DVi(miWidth-lpEdge->Width(),liX),lpEdge);}
+        lpEdge->Rotate90CW();
+}
+}
+void cGUIFrameBase::WriteCorners(cTexture *lpCorner)
+{
+if(lpCorner)
+{
+    CopyImage(c2DVi(0,0),lpCorner);
+    lpCorner->FlipVertically();
+    CopyImage(c2DVi(0,miHeight-lpCorner->Height()),lpCorner);
+    lpCorner->FlipHorizontally();
+    CopyImage(c2DVi(miWidth-lpCorner->Width(),miHeight-lpCorner->Height()),lpCorner);
+    lpCorner->FlipVertically();
+    CopyImage(c2DVi(miWidth-lpCorner->Width(),0),lpCorner);
+    lpCorner->FlipHorizontally();
+}
+}
+
+void cGUIFrameBase::WriteCentres(cTexture *lpCentre)
+{
+if(lpCentre)
+{
+    CopyImage(c2DVi(miWidth/2,0),lpCentre);
+    lpCentre->Rotate90CW();
+    CopyImage(c2DVi(0,miHeight/2),lpCentre);
+    lpCentre->Rotate90CW();
+    CopyImage(c2DVi(miWidth/2,miHeight-lpCentre->Height()),lpCentre);
+    lpCentre->Rotate90CW();
+    CopyImage(c2DVi(miWidth-lpCentre->Width(),miHeight/2),lpCentre);
+    lpCentre->Rotate90CW();
+}
+}
+
+cGUIFrameVerticalTitleTexture::cGUIFrameVerticalTitleTexture(c2DVi lvSize,cTexture *lpCorner,cTexture *lpEdge,cTexture *lpBreak,uint32 liBreakHeight,cTexture *lpBreakEdge,cTexture *lpCentre,cRGBA lpBaseColor,uint8 liDepth)  : cGUIFrameBase(lpBaseColor)
+{
+    miBreakX=liBreakHeight;
+    miWidth=lvSize[0];
+    miHeight=lvSize[1];
+    miDepth=liDepth;
+    miPixelSize=miDepth>>3;
+    mpData=new uint8[miWidth*miHeight*miPixelSize];
+
+    WriteBaseColor(lpBaseColor);
+    WriteEdge(lpEdge);
+    WriteCorners(lpCorner);
+
+
+if(lpBreakEdge)
+{
+    lpBreakEdge->Rotate90CW();
+    for(uint16 liCount=0;liCount<miHeight;liCount+=lpBreakEdge->Height())
+    {
+        CopyImage(c2DVi(liBreakHeight,liCount),lpBreakEdge);
+    }
+    lpBreakEdge->Rotate90CCW();
+}
+
+if(lpBreak)
+{
+    CopyImage(c2DVi(liBreakHeight,0),lpBreak);
+    lpBreak->FlipVertically();
+    CopyImage(c2DVi(liBreakHeight,miHeight-lpBreak->Height()),lpBreak);
+    lpBreak->FlipVertically();
+}
+
+if(lpCentre)
+{
+
+    CopyImage(c2DVi(liBreakHeight*0.5,0),lpCentre);
+    CopyImage(c2DVi((miWidth-liBreakHeight)*0.5f+liBreakHeight,0),lpCentre);
+    lpCentre->Rotate90CW();
+
+    CopyImage(c2DVi(0,miHeight/2),lpCentre);
+    lpCentre->Rotate90CW();
+
+    CopyImage(c2DVi((miWidth-liBreakHeight)*0.5f+liBreakHeight,miHeight-lpCentre->Height()),lpCentre);
+    CopyImage(c2DVi(liBreakHeight*0.5,miHeight-lpCentre->Height()),lpCentre);
+    lpCentre->Rotate90CW();
+
+    CopyImage(c2DVi(miWidth-lpCentre->Width(),miHeight/2),lpCentre);
+    lpCentre->Rotate90CW();
+
+}
+
+SortBackColor(lpBaseColor);
+
+BufferTexture();
+
+};
+
+uint32 cGUIFrameVerticalTitleTexture::Break(){return miBreakX;}
+
+void cTexture::CopyImage(c2DVi lvPos,cTexture *lpTexture)
+{
+    uint8 liMoveSize;
+    if(miDepth==lpTexture->miDepth) {CopyImageClean(lvPos,lpTexture); return;}
+    if(miDepth>lpTexture->miDepth) {CopyImageUnbalanced(lvPos,lpTexture); return;}
+
+    //Runs when this is RGB and lpTexture is RGBA
+    liMoveSize=3;
+
+    c2DVi liBasePos;
+    c2DVi liTop;
+    c2DVi liTex;
+    if(miWidth<lvPos[0]+lpTexture->Width()) liTop[0]=miWidth;
+    else liTop[0]=lvPos[0]+lpTexture->Width();
+    if(miHeight<lvPos[1]+lpTexture->Height()) liTop[1]=miHeight;
+    else liTop[1]=lvPos[1]+lpTexture->Height();
+
+
+    for(liBasePos[0]=lvPos[0];liBasePos[0]<liTop[0];++liBasePos[0])
+    {
+        for(liBasePos[1]=lvPos[1];liBasePos[1]<liTop[1];++liBasePos[1])
+        {
+            float lfScale=(float)lpTexture->GetPixel(liTex)[3]/255.0f;
+            mpData[(liBasePos[0]+liBasePos[1]*miWidth)*miPixelSize]=lpTexture->GetPixel(liTex)[0]*lfScale;
+            mpData[(liBasePos[0]+liBasePos[1]*miWidth)*miPixelSize+1]=lpTexture->GetPixel(liTex)[1]*lfScale;
+            mpData[(liBasePos[0]+liBasePos[1]*miWidth)*miPixelSize+2]=lpTexture->GetPixel(liTex)[2]*lfScale;
+            ++liTex[1];
+        }
+        liTex[1]=0;
+        ++liTex[0];
+    }
+}
+
+void cTexture::CopyImageUnbalanced(c2DVi lvPos,cTexture *lpTexture)
+{
+    uint8 liMoveSize;
+    liMoveSize=3;
+
+    c2DVi liBasePos;
+    c2DVi liTop;
+    c2DVi liTex;
+    if(miWidth<lvPos[0]+lpTexture->Width()) liTop[0]=miWidth;
+    else liTop[0]=lvPos[0]+lpTexture->Width();
+    if(miHeight<lvPos[1]+lpTexture->Height()) liTop[1]=miHeight;
+    else liTop[1]=lvPos[1]+lpTexture->Height();
+
+
+    for(liBasePos[0]=lvPos[0];liBasePos[0]<liTop[0];++liBasePos[0])
+    {
+        for(liBasePos[1]=lvPos[1];liBasePos[1]<liTop[1];++liBasePos[1])
+        {
+            memcpy(&mpData[(liBasePos[0]+liBasePos[1]*miWidth)*miPixelSize],lpTexture->GetPixel(liTex),liMoveSize);
+            mpData[(liBasePos[0]+liBasePos[1]*miWidth)*miPixelSize+3]=255;
+            ++liTex[1];
+        }
+        liTex[1]=0;
+        ++liTex[0];
+    }
+}
+
+
+void cTexture::CopyImageClean(c2DVi lvPos,cTexture *lpTexture)
+{
+    c2DVi liBasePos;
+    c2DVi liTop;
+    c2DVi liTex;
+    if(miWidth<lvPos[0]+lpTexture->Width()) liTop[0]=miWidth;
+    else liTop[0]=lvPos[0]+lpTexture->Width();
+    if(miHeight<lvPos[1]+lpTexture->Height()) liTop[1]=miHeight;
+    else liTop[1]=lvPos[1]+lpTexture->Height();
+
+
+    for(liBasePos[0]=lvPos[0];liBasePos[0]<liTop[0];++liBasePos[0])
+    {
+        for(liBasePos[1]=lvPos[1];liBasePos[1]<liTop[1];++liBasePos[1])
+        {
+            memcpy(&mpData[(liBasePos[0]+liBasePos[1]*miWidth)*miPixelSize],lpTexture->GetPixel(liTex),miPixelSize);
+            ++liTex[1];
+        }
+        liTex[1]=0;
+        ++liTex[0];
+    }
+}
+
+
+
+void cTexture::FlipHorizontally()
+{
+    uint8 *lpTemp = new uint8[miPixelSize];
+    for(uint16 liX=0;liX<miWidth>>1;++liX)
+    {
+        for(uint16 liY=0;liY<miHeight;++liY)
+        {
+            memcpy(lpTemp,&mpData[(liY*miWidth+liX)*miPixelSize],miPixelSize);
+            memcpy(&mpData[(liY*miWidth+liX)*miPixelSize],&mpData[(liY*miWidth+(miWidth-liX-1))*miPixelSize],miPixelSize);
+            memcpy(&mpData[(liY*miWidth+(miWidth-liX-1))*miPixelSize],lpTemp,miPixelSize);
+        }
+    }
+	delete []lpTemp;
+};
+void cTexture::FlipVertically()
+{
+    uint8 *lpTemp = new uint8[miPixelSize*miWidth];
+    for(uint16 liY=0;liY<miHeight>>1;++liY)
+    {
+        memcpy(lpTemp,&mpData[(liY*miWidth)*miPixelSize],miPixelSize*miWidth);
+        memcpy(&mpData[liY*miWidth*miPixelSize],&mpData[(miHeight-liY-1)*miWidth*miPixelSize],miPixelSize*miWidth);
+        memcpy(&mpData[(miHeight-liY-1)*miWidth*miPixelSize],lpTemp,miPixelSize*miWidth);
+    }
+	delete []lpTemp;
+};
+void cTexture::Rotate90CCWClean()
+{
+    uint8 *lpTemp = new uint8[miPixelSize];
+
+    for(uint16 liX=0;liX<(miWidth+1)>>1;++liX)
+    {
+        for(uint16 liY=0;liY<(miHeight+1)>>1;++liY)
+        {
+            memcpy(lpTemp,&mpData[(liX+liY*miWidth)*miPixelSize],miPixelSize);
+            memcpy(&mpData[(liX+liY*miWidth)*miPixelSize],&mpData[((miWidth-liX-1)+liY*miWidth)*miPixelSize],miPixelSize);
+            memcpy(&mpData[((miWidth-liX-1)+liY*miWidth)*miPixelSize],&mpData[((miWidth-liX-1)+(miHeight-liY-1)*miWidth)*miPixelSize],miPixelSize);
+            memcpy(&mpData[((miWidth-liX-1)+(miHeight-liY-1)*miWidth)*miPixelSize],&mpData[(liX+(miHeight-liY-1)*miWidth)*miPixelSize],miPixelSize);
+            memcpy(&mpData[(liX+(miHeight-liY-1)*miWidth)*miPixelSize],lpTemp,miPixelSize);
+        }
+    }
+
+    uint16 liTemp=miWidth;
+    miWidth=miHeight;
+    miHeight=liTemp;
+	delete []lpTemp;
+};
+void cTexture::Rotate90CWClean()
+{
+    uint8 *lpTemp = new uint8[miPixelSize];
+
+    for(uint16 liX=0;liX<(miWidth+1)>>1;++liX)
+    {
+        for(uint16 liY=0;liY<(miHeight+1)>>1;++liY)
+        {
+            memcpy(lpTemp,&mpData[(liX+liY*miWidth)*miPixelSize],miPixelSize);
+            memcpy(&mpData[(liX+liY*miWidth)*miPixelSize],&mpData[(liX+(miHeight-liY-1)*miWidth)*miPixelSize],miPixelSize);
+            memcpy(&mpData[(liX+(miHeight-liY-1)*miWidth)*miPixelSize],&mpData[((miWidth-liX-1)+(miHeight-liY-1)*miWidth)*miPixelSize],miPixelSize);
+            memcpy(&mpData[((miWidth-liX-1)+(miHeight-liY-1)*miWidth)*miPixelSize],&mpData[((miWidth-liX-1)+liY*miWidth)*miPixelSize],miPixelSize);
+            memcpy(&mpData[((miWidth-liX-1)+liY*miWidth)*miPixelSize],lpTemp,miPixelSize);
+        }
+    }
+
+    uint16 liTemp=miWidth;
+    miWidth=miHeight;
+    miHeight=liTemp;
+	delete []lpTemp;
+};
+
+
+void cTexture::Rotate90CCW()
+{
+    if(miWidth==miHeight){Rotate90CCWClean(); return;}
+
+    uint8 *lpTemp=new uint8[miWidth*miHeight*miPixelSize];
+
+    for(uint16 liX=0;liX<miWidth;++liX)
+    {
+        for(uint16 liY=0;liY<miHeight;++liY)
+        {
+            memcpy(&lpTemp[(liX*miHeight+(miHeight-liY-1))*miPixelSize],&mpData[(liX+liY*miWidth)*miPixelSize],miPixelSize);
+        }
+    }
+
+    delete []mpData;
+    mpData=lpTemp;
+
+    uint16 liTemp=miWidth;
+    miWidth=miHeight;
+    miHeight=liTemp;
+};
+
+
+void cTexture::Rotate90CW()
+{
+    if(miWidth==miHeight){ Rotate90CWClean(); return;}
+
+    uint8 *lpTemp=new uint8[miWidth*miHeight*miPixelSize];
+
+    for(uint16 liX=0;liX<miWidth;++liX)
+    {
+        for(uint16 liY=0;liY<miHeight;++liY)
+        {
+            memcpy(&lpTemp[((miWidth-liX-1)*miHeight+liY)*miPixelSize],&mpData[(liX+liY*miWidth)*miPixelSize],miPixelSize);
+        }
+    }
+
+    delete []mpData;
+    mpData=lpTemp;
+
+
+    uint16 liTemp=miWidth;
+    miWidth=miHeight;
+    miHeight=liTemp;
+};
+
+    cGUIFrameHandler *cGUIFrameHandler::mpInstance=0;
+
+cGUIFrameHandler::cGUIFrameHandler()
+{
+    mpCorner=0;
+    mpEdge=0;
+    mpCentre=0;
+    mpBreak=0;
+    mpBreakEdge=0;
+    miDepth=32;
+    mpBaseColor=cRGBA(0.0f,0.0f,0.0f,0.0f);
+};
+
+cGUIFrameBase::cGUIFrameBase(cRGBA lpCol)
+{
+    mcCol=lpCol;
+};
+
+
+bool cGUIFrameBase::BaseColor(cRGBA lpCol)
+{
+    return mcCol==lpCol;
+};
+
+cGUIFrameTexture *cGUIFrameHandler::GetTexture(c2DVi lvSize)
+{
+    for(uint32 liCount=0;liCount<mpFrames.Items();++liCount)
+    {
+        if(mpFrames[liCount]->Width()==lvSize[0] && mpFrames[liCount]->Height()==lvSize[1] && mpFrames[liCount]->BaseColor(mpBaseColor))
+        {
+            return mpFrames[liCount];
+        }
+    }
+
+    mpFrames.Add(new cGUIFrameTexture(lvSize,mpCorner,mpEdge,mpCentre,mpBaseColor,miDepth));
+    return mpFrames[mpFrames.Items()-1];
+};
+cGUIFrameHandler *cGUIFrameHandler::Instance()
+{
+    if(!mpInstance) mpInstance=new cGUIFrameHandler();
+    return mpInstance;
+};
+void cGUIFrameHandler::Clear()
+{
+    mpFrames.Init(2);
+    mpHorizontal.Init(2);
+    mpVertical.Init(2);
+};
+
+void cGUIFrameHandler::SetTextures(cTexture *lpCorner,cTexture *lpEdge,cTexture *lpCentre,cTexture *lpBreak,cTexture *lpBreakEdge,cRGBA lpBase,uint8 liDepth)
+{
+    mpCorner=lpCorner;
+    mpEdge=lpEdge;
+    mpCentre=lpCentre;
+    mpBreak=lpBreak;
+    mpBreakEdge=lpBreakEdge;
+    mpBaseColor=lpBase;
+    miDepth=liDepth;
+};
+
+cGUIFrameHorizontalTitleTexture *cGUIFrameHandler::GetTextureHBreak(c2DVi lvSize,uint32 liPos)
+{
+    for(uint32 liCount=0;liCount<mpHorizontal.Items();++liCount)
+    {
+        if(mpHorizontal[liCount]->Width()==lvSize[0] && mpHorizontal[liCount]->Height()==lvSize[1] && mpHorizontal[liCount]->Break()==liPos && mpHorizontal[liCount]->BaseColor(mpBaseColor))
+        {
+            return mpHorizontal[liCount];
+        }
+    }
+
+    mpHorizontal.Add(new cGUIFrameHorizontalTitleTexture(lvSize,mpCorner,mpEdge,mpBreak,liPos,mpBreakEdge,mpCentre,mpBaseColor,miDepth));
+    return mpHorizontal[mpHorizontal.Items()-1];
+};
+
+cGUIFrameVerticalTitleTexture *cGUIFrameHandler::GetTextureVBreak(c2DVi lvSize,uint32 liPos)
+{
+    for(uint32 liCount=0;liCount<mpVertical.Items();++liCount)
+    {
+        if(mpVertical[liCount]->Width()==lvSize[0] && mpVertical[liCount]->Height()==lvSize[1] && mpVertical[liCount]->Break()==liPos && mpVertical[liCount]->BaseColor(mpBaseColor))
+        {
+            return mpVertical[liCount];
+        }
+    }
+
+    mpVertical.Add(new cGUIFrameVerticalTitleTexture(lvSize,mpCorner,mpEdge,mpBreak,liPos,mpBreakEdge,mpCentre,mpBaseColor,miDepth));
+    return mpVertical[mpVertical.Items()-1];
+};
+
+void cGUIFrameBase::SortBackColor(cRGBA lpCol)
+{
+    uint8 liCol[4]={lpCol[0]*255,lpCol[1]*255,lpCol[2]*255,lpCol[3]*255};
+    for(uint32 liCount=0;liCount<miWidth*miHeight;++liCount)
+    {
+        if(mpData[liCount*miPixelSize]!=mpData[liCount*miPixelSize+2])
+        {
+            memcpy(&mpData[liCount*miPixelSize],liCol,miPixelSize);
+        }
+    }
+};
+
+cGUIFrameTexture *cGUIFrameHandler::GetTexture(uint32 liPos)
+{
+    return mpFrames[liPos];
+};
+cGUIFrameHorizontalTitleTexture *cGUIFrameHandler::GetTextureHBreak(uint32 liPos)
+{
+    return mpHorizontal[liPos];
+};
+cGUIFrameVerticalTitleTexture *cGUIFrameHandler::GetTextureVBreak(uint32 liPos)
+{
+    return mpVertical[liPos];
+};

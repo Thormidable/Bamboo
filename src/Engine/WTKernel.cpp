@@ -1,4 +1,5 @@
 
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 cWindow *gpWindow;
@@ -75,35 +76,10 @@ while(mpProcess)
 
 if(cFrameUpdateHandler::Pointer()) cFrameUpdateHandler::Pointer()->FrameUpdate();
 
-
 cCameraHandler::Instance()->RenderCameras();
 
-
-
-
-
-
-if(_FPS)
-{
-	gpTimer->Tick();
-	if(gpTimer->GetTimeMod()< _TIME_PER_FRAME)
-	{
-		//printf("Time to Process Frame : %f s\n",gpTimer->GetTimeMod());
-		//printf("Free Time this frame : %f ms\n",(_TIME_PER_FRAME-gpTimer->GetTimeMod())*OS_TIME_SCALING);
-		gpTimer->SleepWrap((_TIME_PER_FRAME-gpTimer->GetTimeMod())*OS_TIME_SCALING);
-		//printf("FPS : %f\n",1.0f/(gpTimer->GetTimeMod()+(_TIME_PER_FRAME-gpTimer->GetTimeMod())*OS_TIME_SCALING/1000));
-	}
-	else
-	{
-	    	//printf("FPS : %f\n",1.0f/(gpTimer->GetTimeMod()));
-	}
-
-}
-else
-{
-	gpTimer->Tick();
-	//printf("FPS : %f\n",gpTimer->GetCPS());
-}
+if(_FPS) gpTimer->EnforceFrameRate();
+else gpTimer->Tick();
 
 }
 
@@ -185,6 +161,10 @@ void cKernel::KillProgram()
  mbKillProgram=true;
 };
 
+cProcess *cKernel::CurrentProcess()
+{
+    return mpCursor->Data();
+};
 
 
   cFrameUpdateHandler *cFrameUpdateHandler::mpInstance=0;

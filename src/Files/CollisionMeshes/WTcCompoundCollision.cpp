@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../../WTBamboo.h"
 
 #if WT_FULL_VERSION_BAMBOO
@@ -32,12 +33,6 @@ vCollisionData *cCompoundCollision::GetObject(uint32 liPos)
 {
     return mpList[liPos]->mpObject;
 }
-/*
-cMatrix4 &cCompoundCollisionMobile::GetMatrix(uint32 liPos)
-{
-    return mpList[liPos]->mmCollisionMatrix;
-};
-*/
 
 cCompoundCollisionNode::cCompoundCollisionNode()
 {

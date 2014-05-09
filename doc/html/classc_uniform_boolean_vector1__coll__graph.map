@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classc_boolean_uniform_store.html" title="More Specific Base class for Uniform Handling classes. Suitable for Boolean Variables see cUniformBoo..." alt="" coords="12,160,164,189"/>
-<area shape="rect" id="node4" href="$classc_uniform_store.html" title="This is a specific type of cUserVariable for Controlling Uniform variables. This is a virtual class t..." alt="" coords="35,83,141,112"/>
-<area shape="rect" id="node6" href="$classc_user_variable.html" title="This is the general class for buffering an instance of a User defined cShaderProgram Variable..." alt="" coords="36,5,140,35"/>
-</map>

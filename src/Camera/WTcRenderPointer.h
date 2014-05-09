@@ -1,6 +1,8 @@
 #ifndef __WTCRENDERPOINTER_H__
 #define __WTCRENDERPOINTER_H__
 
+class cModel;
+
 /// This class is a temporary store for a cRenderObjects data. This is the complete render matrix and all other data required to render the object.
 /**
  * \brief This is a storage class for the cPainter class.

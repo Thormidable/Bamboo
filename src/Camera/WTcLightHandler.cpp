@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 #if WT_FULL_VERSION_BAMBOO
@@ -43,7 +44,7 @@ void cLightHandler::SetupLights()
  float lpPointer[4]={0.5f,0.5f,0.5f,0.0f};
  trace("cLightHandler::SetupLights");
  glLightModelfv(GL_LIGHT_MODEL_AMBIENT,lpPointer);
- glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER,GL_FALSE);
+ glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER,GL_TRUE);
 // glLightModelf(GL_LIGHT_MODEL_TWO_SIDE,0.0f);
 
  glEnable(GL_LIGHTING);
@@ -162,5 +163,19 @@ void cLightHandler::PrepareLight(cMatrix4 *lpObject)
  }
  else PrepareLight();
 }
+
+void cLightHandler::GlobalAmbient(float *lpPoint)
+{
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT,lpPoint);
+};
+
+void cLightHandler::GlobalAmbient(cRGBA *lpPoint)
+{
+    GlobalAmbient(lpPoint->Color());
+};
+void cLightHandler::GlobalAmbient(cRGBA lpPoint)
+{
+    GlobalAmbient(lpPoint.Color());
+};
 
 #endif

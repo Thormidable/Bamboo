@@ -1,6 +1,8 @@
+#include "stdafx.h"
 #include "../WTBamboo.h"
 
 float cCameraHandler::sfCamera_Zoom=0.0f;
+cCamera *cCamera::mpCurrentCamera=0;
 
 cCamera::cCamera()
 {
@@ -90,6 +92,7 @@ void cCamera::RenderObjects()
 
 void cCamera::Render()
 {
+    mpCurrentCamera=this;
 	UpdateRenderSettings();
 	UpdateRenderState();
 	ClearViewport();
