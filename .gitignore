@@ -38,3 +38,5 @@ _ReSharper*/
 doc/html/search/*.html
 obj/**/*.o
 *~
+*.opensdf
+*.sdf
