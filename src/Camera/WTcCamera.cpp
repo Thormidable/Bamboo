@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 
 float cCameraHandler::sfCamera_Zoom=0.0f;

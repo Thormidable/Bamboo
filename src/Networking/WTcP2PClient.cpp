@@ -1,5 +1,5 @@
 
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 
 void cP2PClient::StartConnection(uint16 liChannels,void (*lpHandlePackets)(NETWORK_SIGNAL_TYPE lsSignal,uint8 *lpData,uint16 liSize),void (*lpHandleConnection)())

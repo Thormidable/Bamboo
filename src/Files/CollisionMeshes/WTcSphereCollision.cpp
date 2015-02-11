@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../../WTBamboo.h"
 
 cSphereCollision::cSphereCollision(){mfSize=0.0f;};

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 
 cTextureSlot *cTextureStack::mpNoTexture=0;

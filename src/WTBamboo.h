@@ -3913,9 +3913,9 @@ public:
 
     #define GLEW_STATIC 1
 
-	#include <glew.h>
+	#include "glew.h"
     #include <glext.h>
-    #include <wglext.h>
+    #include "wglext.h"
     #include <GL/gl.h>
 
     #include <al.h>

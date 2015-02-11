@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 
 char *Find(char* lcPath,char *lcFind)

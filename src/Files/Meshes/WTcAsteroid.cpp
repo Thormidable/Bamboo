@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../../WTBamboo.h"
 
 cAsteroid::cAsteroid(float lfRandomRange, uint8 liSubdivisions,float lfAsteroidSize)

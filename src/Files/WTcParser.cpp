@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 
 cPushPopStack<cBracketData> cParser::BracketStack;

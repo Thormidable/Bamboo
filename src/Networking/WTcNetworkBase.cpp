@@ -1,5 +1,5 @@
 
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 
 bool cNetworkBase::sbENetInitialised=0;

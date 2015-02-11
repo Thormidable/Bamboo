@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 #include <fstream>
 #include <cstdio>

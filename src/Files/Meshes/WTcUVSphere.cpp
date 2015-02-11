@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../../WTBamboo.h"
 
 cUVSphere::cUVSphere(uint8 liSubdivisions,float lfUVSphereSize,bool lbNormals,bool UVCoords)

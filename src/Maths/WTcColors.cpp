@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 
 cRGBA::cRGBA(uint8 *lfRGBA)

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 
 NETWORK_SIGNAL_TYPE cPacketCodes::AddClient=WT_PACKET_CODE_ADD_CLIENT;

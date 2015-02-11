@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 
 cDoubleMatrix4 cDoubleMatrix4::mpTemp;

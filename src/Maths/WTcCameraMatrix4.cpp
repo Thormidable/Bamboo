@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 #include <cmath>
 
@@ -874,9 +874,9 @@ void cCameraMatrix4::Follow(cMatrix4* lpOther,float lfX,float lfY,float lfZ)
     RotateY(3.14159265);
 
 
-	mpCameraPosition[0]=lpOther->X();
-	mpCameraPosition[1]=lpOther->Y();
-	mpCameraPosition[2]=lpOther->Z();
+	mpCameraPosition[0]=-lpOther->X();
+	mpCameraPosition[1]=-lpOther->Y();
+	mpCameraPosition[2]=-lpOther->Z();
     Advance(lfX,lfY,lfZ);
 }
 

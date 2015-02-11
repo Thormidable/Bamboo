@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 
 cAudioListener *cAudioListener::mpInstance=0;

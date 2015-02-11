@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../../WTBamboo.h"
 
 cEventHandler *cEventHandler::mpInstance=0;

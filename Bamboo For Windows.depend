@@ -1,1 +1,1104 @@
 # depslib dependency file v1.0
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\meshes\meshclasses\wtcplane.cpp
+	"stdafx.h"
+	"../../../WTBamboo.h"
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\wtbamboo.h
+	<stdint.h>
+	<unistd.h>
+	"./WTOsBits.h"
+	"./Global/WTKeyStateDefinitions.h"
+	<windows.h>
+	<glew.h>
+	<glext.h>
+	<wglext.h>
+	<GL/gl.h>
+	<al.h>
+	<alc.h>
+	"./Windows/WTWindowsKeyCodes.h"
+	<GL/glxew.h>
+	<sys/time.h>
+	<X11/keysym.h>
+	<X11/Xlib.h>
+	<X11/X.h>
+	<X11/cursorfont.h>
+	<AL/al.h>
+	<AL/alc.h>
+	"./Windows/WTXWindowsKeyCodes.h"
+	"./Global/WTDefinitions.h"
+	"./Global/WTSettings.h"
+	"./Global/WTSetDefinitions.h"
+	"./Global/IMFDefinitions.h"
+	"./Global/WTcFlags.h"
+	<dirent.h>
+	<typeinfo>
+	<cstdlib>
+	<cmath>
+	<cstring>
+	<iostream>
+	<fstream>
+	<sstream>
+	<iomanip>
+	"./Global/GlobalPointers.h"
+	"./Global/log.h"
+	"./Global/CException.h"
+	"./PTL/WTcSingleton.h"
+	"./PTL/WTRadix.h"
+	"./Windows/WTcSync.h"
+	"./Windows/WTcWindow.h"
+	"./PTL/WTLLTemplate.h"
+	"./PTL/WTLimitedList.h"
+	"./PTL/WTcPushPopStack.h"
+	"./Maths/WTc2DVt.h"
+	"./Maths/WTc3DVt.h"
+	"./Maths/WTc4DVt.h"
+	"./Maths/WTMath.h"
+	"./Maths/WTcColors.h"
+	"./Maths/WTcMatrix4.h"
+	"./Maths/WTcDoubleMatrix4.h"
+	"./Maths/WTcMomentum.h"
+	"./Maths/WTcPerspectiveMatrix.h"
+	"./Maths/WTcMatrixStack.h"
+	"./Maths/WTcCameraMatrix4.h"
+	"./Maths/WTcPredictiveTracking.h"
+	"./Maths/WTcSimplexNoise.h"
+	"./Files/WTString.h"
+	"./Maths/WTc2DVtCode.h"
+	"./Maths/WTc3DVtCode.h"
+	"./Maths/WTc4DVtCode.h"
+	"./Engine/WTcSignal.h"
+	"./Engine/WTKernel.h"
+	"./Engine/Process/WTcParentStack.h"
+	"./Engine/Process/WTcProcess.h"
+	"./Engine/WTcFrameRate.h"
+	"./Files/WTvFile.h"
+	"./Files/WTcFileHandler.h"
+	"./Files/WTcFile.h"
+	"./Files/WTcParser.h"
+	"./Files/Misc/WTcReferenceList.h"
+	"./Files/WTcIMFLoader.h"
+	"./Files/Meshes/MeshClasses/WTcVertex.h"
+	"./Files/Meshes/MeshClasses/WTcPlane.h"
+	"./Files/Meshes/MeshClasses/WTcFace.h"
+	"./Files/Meshes/MeshClasses/WTcFullFaceData.h"
+	"./Files/Meshes/MeshClasses/WTcPolygon.h"
+	"./Files/Meshes/MeshClasses/WTcCluster.h"
+	"./Physics/WTcCollisionBase.h"
+	"./Files/CollisionMeshes/WTvCollisionData.h"
+	"./Files/CollisionMeshes/WTcSphereCollision.h"
+	"./Files/CollisionMeshes/WTcMeshCollision.h"
+	"./Files/CollisionMeshes/WTcBeamCollision.h"
+	"./Files/CollisionMeshes/WTcRayCollision.h"
+	"./Files/CollisionMeshes/WTcMeshFileCollision.h"
+	"./Files/CollisionMeshes/WTcCompoundCollision.h"
+	"./Files/CollisionMeshes/WTcCompoundCollisionFile.h"
+	"./Files/CollisionMeshes/WTcMouseCollision.h"
+	"./Files/Textures/WTcTexture.h"
+	"./Files/Textures/WTcSeamlessTextureClasses.h"
+	"./Files/Textures/WTcTextureGenerator.h"
+	"./Files/Fonts/WTcFont.h"
+	"./Files/Shaders/WTcShader.h"
+	"./Files/Shaders/WTcShaderVariables.h"
+	"./Files/Shaders/WTcUserDefinedShaderVariable.h"
+	"./Files/Shaders/WTcShaderProgram.h"
+	"./Camera/FX/WTcFog.h"
+	"./Camera/WTcRenderOwner.h"
+	"./Camera/WTvRenderObject.h"
+	"./Files/Meshes/WTcMesh.h"
+	"./Files/Meshes/WTcAsteroid.h"
+	"./Files/Meshes/WTcUVSphere.h"
+	"./Files/Meshes/WTcIcoSphere.h"
+	"./Files/Misc/WTcMeshTreeNode.h"
+	"./Files/Misc/WTvMeshTree.h"
+	"./Files/Misc/WTcMeshTree.h"
+	"./Files/Misc/WTcLineArrayData.h"
+	"./Files/Misc/WTcCircleLineData.h"
+	"./Files/Misc/WTcSettingsFile.h"
+	"./Files/Meshes/WTv2DPolygon.h"
+	"./Physics/WTcCollisionObject.h"
+	"./Camera/WTcTextureStack.h"
+	"./Camera/WTcPerspectiveControl.h"
+	"./Camera/WTcCamera.h"
+	"./Camera/WTcExtraViewport.h"
+	"./Camera/WTcRenderPointer.h"
+	"./Camera/WTcRenderObject.h"
+	"./Physics/WTcMouseCollisionObject.h"
+	"./Camera/Nodes/WTcRenderNode.h"
+	"./Camera/Nodes/WTcNodeList.h"
+	"./Camera/Renderable/WTcAttributeData.h"
+	"./Files/Meshes/WTcmLandscape.h"
+	"./Camera/FX/WTcMaterial.h"
+	"./Camera/FX/WTvLight.h"
+	"./Camera/WTcLightHandler.h"
+	"./Camera/FX/WTcLight.h"
+	"./Camera/FX/WTcSpotLight.h"
+	"./Camera/Renderable/WTcImage.h"
+	"./Camera/Renderable/WTcTextureText.h"
+	"./Camera/Renderable/WTcModel.h"
+	"./Camera/Renderable/WTcLandscape.h"
+	"./Camera/Renderable/WTcPoint.h"
+	"./Camera/Renderable/WTcBillBoard.h"
+	"./Camera/Renderable/WTcLine.h"
+	"./Camera/Renderable/WTcLineArray.h"
+	"./Camera/Renderable/WTcParticleSettings.h"
+	"./Camera/Renderable/WTcParticle.h"
+	"./Camera/Renderable/WTcParticleGroup.h"
+	"./Camera/Renderable/WTcBeamMesh.h"
+	"./Camera/Renderable/WTcButton.h"
+	"./Camera/Renderable/WTcStarMap.h"
+	"./Camera/WTcPainter.h"
+	"./Windows/EventHandler/WTcKeyStore.h"
+	"./Windows/EventHandler/WTcKeyToggle.h"
+	"./Windows/EventHandler/WTcMouse.h"
+	"./Windows/EventHandler/WTcEventHandler.h"
+	"./Audio/WTcAudioDevice.h"
+	"./Audio/WTcAudioBuffer.h"
+	"./Audio/WTcAudioObject.h"
+	"./Files/Audio/WTcAudioData.h"
+	"./Files/Audio/WTcSoundObject.h"
+	"./Physics/WTcCollisionList.h"
+	"./Physics/WTcCollisionHandler.h"
+	"./Engine/WTcBase.h"
+	"./Engine/Process/WTcToggleButton.h"
+	"./Engine/Process/WTcMessageFeed.h"
+	"./Engine/Process/WTcTextBoxWidget.h"
+	"./Engine/Process/WTcSliderWidget.h"
+	"./Engine/Process/WTcSelectionWidget.h"
+	"./Engine/Process/WTcSelectionImageWidget.h"
+	"./Networking/WTcNetworkBase.h"
+	"./Networking/WTcP2PClient.h"
+	"./Networking/WTcP2PHost.h"
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\wtosbits.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\global\wtkeystatedefinitions.h
+
+1314256674 f:\wills\c++code\bamboo\includes\glew\include\glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1319525319 f:\wills\c++code\bamboo\includes\glew\include\glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1319525288 f:\wills\c++code\bamboo\includes\glew\include\wglext.h
+	<windows.h>
+
+1165588258 f:\wills\c++code\bamboo\includes\openal 1.1 sdk\include\al.h
+
+1176469368 f:\wills\c++code\bamboo\includes\openal 1.1 sdk\include\alc.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\windows\wtwindowskeycodes.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\windows\wtxwindowskeycodes.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\global\wtdefinitions.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\global\wtsettings.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\global\wtsetdefinitions.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\global\imfdefinitions.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\global\wtcflags.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\global\globalpointers.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\global\log.h
+	<string>
+	<ostream>
+	<map>
+	<vector>
+	<boost/shared_ptr.hpp>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\shared_ptr.hpp
+	<boost/smart_ptr/shared_ptr.hpp>
+
+1300823470 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\shared_ptr.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/shared_ptr_nmt.hpp>
+	<boost/config/no_tr1/memory.hpp>
+	<boost/assert.hpp>
+	<boost/checked_delete.hpp>
+	<boost/throw_exception.hpp>
+	<boost/smart_ptr/detail/shared_count.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/smart_ptr/detail/sp_convertible.hpp>
+	<boost/smart_ptr/detail/spinlock_pool.hpp>
+	<boost/memory_order.hpp>
+	<algorithm>
+	<functional>
+	<typeinfo>
+	<cstddef>
+	<iosfwd>
+	<ostream>
+	<boost/smart_ptr/detail/operator_bool.hpp>
+
+1309996658 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config.hpp
+	<boost/config/select_compiler_config.hpp>
+	<boost/config/select_stdlib_config.hpp>
+	<boost/config/select_platform_config.hpp>
+	<boost/config/suffix.hpp>
+
+1303715448 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config\select_compiler_config.hpp
+
+1303715448 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config\select_stdlib_config.hpp
+	<cstddef>
+	<stddef.h>
+	<boost/config/no_tr1/utility.hpp>
+
+1129721920 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config\no_tr1\utility.hpp
+	<utility>
+
+1285906784 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config\select_platform_config.hpp
+	<boost/config/posix_features.hpp>
+
+1129281386 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config\posix_features.hpp
+	<unistd.h>
+
+1303715448 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config\suffix.hpp
+	<limits.h>
+	<cstddef>
+	"boost/type.hpp"
+	"boost/non_type.hpp"
+	<typeinfo>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\shared_ptr_nmt.hpp
+	<boost/assert.hpp>
+	<boost/checked_delete.hpp>
+	<boost/throw_exception.hpp>
+	<boost/smart_ptr/detail/atomic_count.hpp>
+	<memory>
+	<algorithm>
+	<functional>
+	<new>
+
+1297768732 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\assert.hpp
+	<boost/current_function.hpp>
+	<assert.h>
+	<boost/current_function.hpp>
+	<cstdlib>
+	<iostream>
+	<boost/current_function.hpp>
+
+1195996040 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\current_function.hpp
+
+1092312788 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\checked_delete.hpp
+
+1291858820 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\throw_exception.hpp
+	<boost/exception/detail/attribute_noreturn.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/config.hpp>
+	<exception>
+	<boost/exception/exception.hpp>
+	<boost/current_function.hpp>
+
+1260984418 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\exception\detail\attribute_noreturn.hpp
+
+1274183638 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\detail\workaround.hpp
+	<boost/config.hpp>
+
+1310258758 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\exception\exception.hpp
+
+1240118270 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/sp_has_sync.hpp>
+	<boost/smart_ptr/detail/atomic_count_pthreads.hpp>
+	<boost/smart_ptr/detail/atomic_count_gcc_x86.hpp>
+	<boost/smart_ptr/detail/atomic_count_win32.hpp>
+	<boost/smart_ptr/detail/atomic_count_sync.hpp>
+	<boost/smart_ptr/detail/atomic_count_gcc.hpp>
+	<boost/smart_ptr/detail/atomic_count_pthreads.hpp>
+
+1300823706 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_has_sync.hpp
+
+1240118270 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_pthreads.hpp
+	<pthread.h>
+
+1240118270 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_gcc_x86.hpp
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_win32.hpp
+	<boost/detail/interlocked.hpp>
+
+1309996658 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\detail\interlocked.hpp
+	<boost/config.hpp>
+	<windows.h>
+
+1240118270 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_sync.hpp
+	<ia64intrin.h>
+
+1240118270 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_gcc.hpp
+	<ext/atomicity.h>
+	<bits/atomicity.h>
+
+1129721920 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config\no_tr1\memory.hpp
+	<memory>
+
+1300822692 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\shared_count.hpp
+	<boost/config.hpp>
+	<boost/checked_delete.hpp>
+	<boost/throw_exception.hpp>
+	<boost/smart_ptr/bad_weak_ptr.hpp>
+	<boost/smart_ptr/detail/sp_counted_base.hpp>
+	<boost/smart_ptr/detail/sp_counted_impl.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/config/no_tr1/memory.hpp>
+	<functional>
+	<new>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\bad_weak_ptr.hpp
+	<exception>
+
+1238145046 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/sp_has_sync.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_nt.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_spin.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_pt.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_nt.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_x86.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_ia64.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_acc_ia64.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_cw_ppc.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_ppc.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_mips.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_sync.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_sparc.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_w32.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_nt.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_spin.hpp>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_nt.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1287941094 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\detail\sp_typeinfo.hpp
+	<boost/config.hpp>
+	<boost/current_function.hpp>
+	<functional>
+	<typeinfo>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_spin.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<boost/smart_ptr/detail/spinlock_pool.hpp>
+
+1300822176 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_pool.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/spinlock.hpp>
+	<cstddef>
+
+1300824834 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/sp_has_sync.hpp>
+	<boost/smart_ptr/detail/spinlock_pt.hpp>
+	<boost/smart_ptr/detail/spinlock_gcc_arm.hpp>
+	<boost/smart_ptr/detail/spinlock_sync.hpp>
+	<boost/smart_ptr/detail/spinlock_w32.hpp>
+	<boost/smart_ptr/detail/spinlock_pt.hpp>
+	<boost/smart_ptr/detail/spinlock_nt.hpp>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_pt.hpp
+	<pthread.h>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_gcc_arm.hpp
+	<boost/smart_ptr/detail/yield_k.hpp>
+
+1278778026 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\yield_k.hpp
+	<boost/config.hpp>
+	<windows.h>
+	<sched.h>
+	<time.h>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_sync.hpp
+	<boost/smart_ptr/detail/yield_k.hpp>
+	<ia64intrin.h>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_w32.hpp
+	<boost/detail/interlocked.hpp>
+	<boost/smart_ptr/detail/yield_k.hpp>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_nt.hpp
+	<boost/assert.hpp>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_pt.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<pthread.h>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_gcc_x86.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_gcc_ia64.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_acc_ia64.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<machine/sys/inline.h>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_cw_ppc.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_gcc_ppc.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1238145046 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_gcc_mips.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_sync.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<limits.h>
+	<ia64intrin.h>
+
+1259594234 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_gcc_sparc.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<inttypes.h>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_w32.hpp
+	<boost/detail/interlocked.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/detail/sp_typeinfo.hpp>
+
+1300822692 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_impl.hpp
+	<boost/config.hpp>
+	<boost/checked_delete.hpp>
+	<boost/smart_ptr/detail/sp_counted_base.hpp>
+	<boost/smart_ptr/detail/quick_allocator.hpp>
+	<memory>
+	<cstddef>
+
+1260794660 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\quick_allocator.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/lightweight_mutex.hpp>
+	<boost/type_traits/type_with_alignment.hpp>
+	<boost/type_traits/alignment_of.hpp>
+	<new>
+	<cstddef>
+
+1235993852 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\lightweight_mutex.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/lwm_nop.hpp>
+	<boost/smart_ptr/detail/lwm_pthreads.hpp>
+	<boost/smart_ptr/detail/lwm_win32_cs.hpp>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\lwm_nop.hpp
+
+1259594702 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\lwm_pthreads.hpp
+	<boost/assert.hpp>
+	<pthread.h>
+
+1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\lwm_win32_cs.hpp
+	<windows.h>
+
+1274877242 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_convertible.hpp
+	<boost/config.hpp>
+
+1259844638 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\memory_order.hpp
+
+1235994322 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\operator_bool.hpp
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\global\cexception.h
+	<string>
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\ptl\wtcsingleton.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\ptl\wtradix.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\windows\wtcsync.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\windows\wtcwindow.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\ptl\wtlltemplate.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\ptl\wtlimitedlist.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\ptl\wtcpushpopstack.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtc2dvt.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtc3dvt.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtc4dvt.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtmath.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtccolors.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtcmatrix4.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtcdoublematrix4.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtcmomentum.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtcperspectivematrix.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtcmatrixstack.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtccameramatrix4.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtcpredictivetracking.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtcsimplexnoise.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\wtstring.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtc2dvtcode.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtc3dvtcode.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\maths\wtc4dvtcode.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\engine\wtcsignal.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\engine\wtkernel.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\engine\process\wtcparentstack.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\engine\process\wtcprocess.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\engine\wtcframerate.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\wtvfile.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\wtcfilehandler.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\wtcfile.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\wtcparser.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\misc\wtcreferencelist.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\wtcimfloader.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\meshes\meshclasses\wtcvertex.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\meshes\meshclasses\wtcplane.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\meshes\meshclasses\wtcface.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\meshes\meshclasses\wtcfullfacedata.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\meshes\meshclasses\wtcpolygon.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\meshes\meshclasses\wtccluster.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\physics\wtccollisionbase.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtcspherecollision.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtcmeshcollision.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtcbeamcollision.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtcraycollision.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtcmeshfilecollision.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtccompoundcollision.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtccompoundcollisionfile.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtcmousecollision.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\textures\wtctexture.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\textures\wtcseamlesstextureclasses.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\textures\wtctexturegenerator.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\fonts\wtcfont.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\shaders\wtcshader.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\shaders\wtcshadervariables.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\fx\wtcfog.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\wtcrenderowner.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\wtvrenderobject.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\meshes\wtcmesh.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\meshes\wtcasteroid.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\meshes\wtcuvsphere.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\meshes\wtcicosphere.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\misc\wtcmeshtreenode.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\misc\wtvmeshtree.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\misc\wtcmeshtree.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\misc\wtclinearraydata.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\misc\wtccirclelinedata.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\misc\wtcsettingsfile.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\meshes\wtv2dpolygon.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\physics\wtccollisionobject.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\wtctexturestack.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\wtcperspectivecontrol.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\wtccamera.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\wtcextraviewport.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\wtcrenderpointer.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\wtcrenderobject.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\physics\wtcmousecollisionobject.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\nodes\wtcrendernode.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\nodes\wtcnodelist.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcattributedata.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\meshes\wtcmlandscape.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\fx\wtcmaterial.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\fx\wtvlight.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\wtclighthandler.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\fx\wtclight.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\fx\wtcspotlight.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcimage.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtctexturetext.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcmodel.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtclandscape.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcpoint.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcbillboard.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcline.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtclinearray.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcparticlesettings.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcparticle.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcbutton.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcstarmap.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\camera\wtcpainter.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\windows\eventhandler\wtckeystore.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\windows\eventhandler\wtckeytoggle.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\windows\eventhandler\wtcmouse.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\windows\eventhandler\wtceventhandler.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\audio\wtcaudiodevice.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\audio\wtcaudiobuffer.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\audio\wtcaudioobject.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\audio\wtcaudiodata.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\files\audio\wtcsoundobject.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\physics\wtccollisionlist.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\physics\wtccollisionhandler.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\engine\wtcbase.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\engine\process\wtctogglebutton.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\engine\process\wtcmessagefeed.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\engine\process\wtctextboxwidget.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\engine\process\wtcsliderwidget.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\engine\process\wtcselectionwidget.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\engine\process\wtcselectionimagewidget.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\networking\wtcnetworkbase.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\networking\wtcp2pclient.h
+
+1423391348 f:\wills\c++code\bamboo\bamboo\src\networking\wtcp2phost.h
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\maths\wtmath.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\physics\wtccollisionlist.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\audio\wtcaudiobuffer.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\audio\wtcaudiodevice.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\audio\wtcaudioobject.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\fx\wtcfog.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\fx\wtclight.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\fx\wtcmaterial.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\fx\wtcspotlight.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\nodes\wtcnodelist.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\nodes\wtcrendernode.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcbeammesh.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcbutton.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcimage.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+	<cmath>
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtclandscape.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcline.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcmodel.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcparticle.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcparticlegroup.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcpoint.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\renderable\wtcstarmap.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\wtccamera.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\wtcextraviewport.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\wtclighthandler.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\wtcpainter.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\wtcperspectivecontrol.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\wtcrendernodeobject.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\wtcrenderobject.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\wtcrenderpointer.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\wtctexturestack.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\engine\process\wtcparentstack.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\engine\process\wtcprocess.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\engine\wtcbase.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\engine\wtcframerate.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\engine\wtcsignal.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\engine\wtkernel.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\audio\wtcaudiodata.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\audio\wtcsoundobject.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtcbeamcollision.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtccompoundcollision.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtccompoundcollisionfile.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtcmeshcollision.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtcmeshfilecollision.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtcraycollision.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtcspherecollision.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\collisionmeshes\wtvcollisiondata.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\fonts\wtcfont.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\meshes\meshclasses\wtccluster.cpp
+	"stdafx.h"
+	"../../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\meshes\meshclasses\wtcface.cpp
+	"stdafx.h"
+	"../../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\meshes\meshclasses\wtcfullfacedata.cpp
+	"stdafx.h"
+	"../../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\meshes\meshclasses\wtcpolygon.cpp
+	"stdafx.h"
+	"../../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\meshes\meshclasses\wtcvertex.cpp
+	"stdafx.h"
+	"../../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\meshes\wtcmesh.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\meshes\wtcmlandscape.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\meshes\wtv2dpolygon.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\misc\wtcmeshtree.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\misc\wtcmeshtreenode.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\misc\wtcreferencelist.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\shaders\wtcshader.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\shaders\wtcshaderprogram.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\shaders\wtcshadervariables.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\shaders\wtcuserdefinedshadervariable.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\textures\wtctexture.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\wtcfile.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+	<fstream>
+	<cstdio>
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\wtcfilehandler.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\wtcimfloader.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\files\wtstring.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\global\log.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\global\wtsettings.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\maths\wtccameramatrix4.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+	<cmath>
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\maths\wtccolors.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\maths\wtcmatrix4.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\maths\wtcmatrixstack.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\maths\wtcmomentum.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\maths\wtcperspectivematrix.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\physics\wtccollisionbase.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\physics\wtccollisionhandler.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\physics\wtccollisionobject.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\ptl\wtradix.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\windows\eventhandler\wtceventhandler.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\windows\eventhandler\wtckeystore.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\windows\eventhandler\wtcmouse.cpp
+	"stdafx.h"
+	"../../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\windows\wtcsync.cpp
+	"stdafx.h"
+	<windows.h>
+	<unistd.h>
+	<sys/time.h>
+	"../WTBamboo.h"
+
+1423391348 source:f:\wills\c++code\bamboo\bamboo\src\windows\wtcwindow.cpp
+	"stdafx.h"
+	"../WTBamboo.h"
+

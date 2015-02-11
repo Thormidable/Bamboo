@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../../WTBamboo.h"
 
 cIcoSphere::cIcoSphere(cIcoSphere *lpOther) : cMesh(lpOther)

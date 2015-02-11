@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "../WTBamboo.h"
 
 uint8 cFrameRate::giProcessesPerFrame=4;
