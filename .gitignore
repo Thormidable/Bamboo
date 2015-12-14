@@ -41,3 +41,5 @@ obj/**/*.o
 *.opensdf
 *.sdf
 obj/**/*.o
+**/*.a
+**/*.lib
