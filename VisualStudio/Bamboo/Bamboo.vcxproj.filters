@@ -375,6 +375,12 @@
     <ClCompile Include="..\..\src\Files\WTcParser.cpp">
       <Filter>Source Files\Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Maths\WTcMomentumFRI.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Camera\Renderable\WTcVoxelModel.cpp">
+      <Filter>Source Files\Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Global\CException.h">
@@ -738,6 +744,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Networking\WTcNetworkBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Maths\WTcMomentumFRI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Camera\Renderable\WTcVoxelModel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

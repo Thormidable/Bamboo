@@ -3,6 +3,8 @@
 	"stdafx.h"
 	"../../../WTBamboo.h"
 
+1423391348 WTBamboo.h"
+
 1423391348 f:\wills\c++code\bamboo\bamboo\src\wtbamboo.h
 	<stdint.h>
 	<unistd.h>
@@ -169,6 +171,8 @@
 	"./Networking/WTcP2PClient.h"
 	"./Networking/WTcP2PHost.h"
 
+1423391348 ing/WTcP2PHost.h"
+
 1423391348 f:\wills\c++code\bamboo\bamboo\src\wtosbits.h
 
 1423391348 f:\wills\c++code\bamboo\bamboo\src\global\wtkeystatedefinitions.h
@@ -181,6 +185,8 @@
 	<OpenGL/glu.h>
 	<GL/glu.h>
 
+1423391348 
+
 1319525319 f:\wills\c++code\bamboo\includes\glew\include\glext.h
 	<windows.h>
 	<stddef.h>
@@ -191,8 +197,12 @@
 	<stdint.h>
 	<inttypes.h>
 
+1259594234 h>
+
 1319525288 f:\wills\c++code\bamboo\includes\glew\include\wglext.h
 	<windows.h>
+
+1235992936 >
 
 1165588258 f:\wills\c++code\bamboo\includes\openal 1.1 sdk\include\al.h
 
@@ -221,8 +231,12 @@
 	<vector>
 	<boost/shared_ptr.hpp>
 
+1423391348 red_ptr.hpp>
+
 1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\shared_ptr.hpp
 	<boost/smart_ptr/shared_ptr.hpp>
+
+1235992936 rt_ptr/shared_ptr.hpp>
 
 1300823470 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\shared_ptr.hpp
 	<boost/config.hpp>
@@ -244,11 +258,15 @@
 	<ostream>
 	<boost/smart_ptr/detail/operator_bool.hpp>
 
+1300823470 rt_ptr/detail/operator_bool.hpp>
+
 1309996658 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config.hpp
 	<boost/config/select_compiler_config.hpp>
 	<boost/config/select_stdlib_config.hpp>
 	<boost/config/select_platform_config.hpp>
 	<boost/config/suffix.hpp>
+
+1309996658 fig/suffix.hpp>
 
 1303715448 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config\select_compiler_config.hpp
 
@@ -257,11 +275,15 @@
 	<stddef.h>
 	<boost/config/no_tr1/utility.hpp>
 
+1303715448 fig/no_tr1/utility.hpp>
+
 1129721920 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config\no_tr1\utility.hpp
 	<utility>
 
 1285906784 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config\select_platform_config.hpp
 	<boost/config/posix_features.hpp>
+
+1285906784 fig/posix_features.hpp>
 
 1129281386 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config\posix_features.hpp
 	<unistd.h>
@@ -283,6 +305,8 @@
 	<functional>
 	<new>
 
+1300822692 l>
+
 1297768732 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\assert.hpp
 	<boost/current_function.hpp>
 	<assert.h>
@@ -290,6 +314,8 @@
 	<cstdlib>
 	<iostream>
 	<boost/current_function.hpp>
+
+1291858820 rent_function.hpp>
 
 1195996040 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\current_function.hpp
 
@@ -308,6 +334,8 @@
 1274183638 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\detail\workaround.hpp
 	<boost/config.hpp>
 
+1274877242 fig.hpp>
+
 1310258758 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\exception\exception.hpp
 
 1240118270 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count.hpp
@@ -320,6 +348,8 @@
 	<boost/smart_ptr/detail/atomic_count_gcc.hpp>
 	<boost/smart_ptr/detail/atomic_count_pthreads.hpp>
 
+1240118270 rt_ptr/detail/atomic_count_pthreads.hpp>
+
 1300823706 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_has_sync.hpp
 
 1240118270 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_pthreads.hpp
@@ -330,6 +360,8 @@
 1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_win32.hpp
 	<boost/detail/interlocked.hpp>
 
+1235992936 ail/interlocked.hpp>
+
 1309996658 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\detail\interlocked.hpp
 	<boost/config.hpp>
 	<windows.h>
@@ -337,9 +369,13 @@
 1240118270 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_sync.hpp
 	<ia64intrin.h>
 
+1235992936 n.h>
+
 1240118270 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\atomic_count_gcc.hpp
 	<ext/atomicity.h>
 	<bits/atomicity.h>
+
+1240118270 icity.h>
 
 1129721920 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\config\no_tr1\memory.hpp
 	<memory>
@@ -378,8 +414,12 @@
 	<boost/smart_ptr/detail/sp_counted_base_nt.hpp>
 	<boost/smart_ptr/detail/sp_counted_base_spin.hpp>
 
+1238145046 rt_ptr/detail/sp_counted_base_spin.hpp>
+
 1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_nt.hpp
 	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 ail/sp_typeinfo.hpp>
 
 1287941094 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\detail\sp_typeinfo.hpp
 	<boost/config.hpp>
@@ -390,6 +430,8 @@
 1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_spin.hpp
 	<boost/detail/sp_typeinfo.hpp>
 	<boost/smart_ptr/detail/spinlock_pool.hpp>
+
+1235992936 rt_ptr/detail/spinlock_pool.hpp>
 
 1300822176 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_pool.hpp
 	<boost/config.hpp>
@@ -406,11 +448,15 @@
 	<boost/smart_ptr/detail/spinlock_pt.hpp>
 	<boost/smart_ptr/detail/spinlock_nt.hpp>
 
+1300824834 rt_ptr/detail/spinlock_nt.hpp>
+
 1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_pt.hpp
 	<pthread.h>
 
 1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_gcc_arm.hpp
 	<boost/smart_ptr/detail/yield_k.hpp>
+
+1235992936 rt_ptr/detail/yield_k.hpp>
 
 1278778026 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\yield_k.hpp
 	<boost/config.hpp>
@@ -429,6 +475,8 @@
 1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\spinlock_nt.hpp
 	<boost/assert.hpp>
 
+1235992936 ert.hpp>
+
 1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_pt.hpp
 	<boost/detail/sp_typeinfo.hpp>
 	<pthread.h>
@@ -442,6 +490,8 @@
 1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_acc_ia64.hpp
 	<boost/detail/sp_typeinfo.hpp>
 	<machine/sys/inline.h>
+
+1235992936 ys/inline.h>
 
 1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\sp_counted_base_cw_ppc.hpp
 	<boost/detail/sp_typeinfo.hpp>
@@ -487,6 +537,8 @@
 	<boost/smart_ptr/detail/lwm_nop.hpp>
 	<boost/smart_ptr/detail/lwm_pthreads.hpp>
 	<boost/smart_ptr/detail/lwm_win32_cs.hpp>
+
+1235993852 rt_ptr/detail/lwm_win32_cs.hpp>
 
 1235992936 c:\silkcircuit\bamboo\includes\boost_1_47_0\boost\smart_ptr\detail\lwm_nop.hpp
 
@@ -763,6 +815,8 @@
 	"stdafx.h"
 	"../WTBamboo.h"
 
+1423391348 oo.h"
+
 1423391348 source:f:\wills\c++code\bamboo\bamboo\src\physics\wtccollisionlist.cpp
 	"stdafx.h"
 	"../WTBamboo.h"
@@ -782,6 +836,8 @@
 1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\fx\wtcfog.cpp
 	"stdafx.h"
 	"../../WTBamboo.h"
+
+1423391348 amboo.h"
 
 1423391348 source:f:\wills\c++code\bamboo\bamboo\src\camera\fx\wtclight.cpp
 	"stdafx.h"
@@ -1100,5 +1156,1107 @@
 
 1423391348 source:f:\wills\c++code\bamboo\bamboo\src\windows\wtcwindow.cpp
 	"stdafx.h"
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/WTcPlane.cpp
+	"../../../WTBamboo.h"
+
+1424895801 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/WTBamboo.h
+	<stdint.h>
+	<unistd.h>
+	"./WTOsBits.h"
+	"./Global/WTKeyStateDefinitions.h"
+	<windows.h>
+	"glew.h"
+	<glext.h>
+	"wglext.h"
+	<GL/gl.h>
+	<al.h>
+	<alc.h>
+	"./Windows/WTWindowsKeyCodes.h"
+	<GL/glxew.h>
+	<sys/time.h>
+	<X11/keysym.h>
+	<X11/Xlib.h>
+	<X11/X.h>
+	<X11/cursorfont.h>
+	<AL/al.h>
+	<AL/alc.h>
+	"./Windows/WTXWindowsKeyCodes.h"
+	"./Global/WTDefinitions.h"
+	"./Global/WTSettings.h"
+	"./Global/WTSetDefinitions.h"
+	"./Global/IMFDefinitions.h"
+	"./Global/WTcFlags.h"
+	<dirent.h>
+	<typeinfo>
+	<cstdlib>
+	<cmath>
+	<cstring>
+	<iostream>
+	<fstream>
+	<sstream>
+	<iomanip>
+	"./Global/GlobalPointers.h"
+	"./Global/log.h"
+	"./Global/CException.h"
+	"./PTL/WTcSingleton.h"
+	"./PTL/WTRadix.h"
+	"./Windows/WTcSync.h"
+	"./Windows/WTcWindow.h"
+	"./PTL/WTLLTemplate.h"
+	"./PTL/WTLimitedList.h"
+	"./PTL/WTcPushPopStack.h"
+	"./Maths/WTc2DVt.h"
+	"./Maths/WTc3DVt.h"
+	"./Maths/WTc4DVt.h"
+	"./Maths/WTMath.h"
+	"./Maths/WTcColors.h"
+	"./Maths/WTcMatrix4.h"
+	"./Maths/WTcDoubleMatrix4.h"
+	"./Maths/WTcMomentum.h"
+	"./Maths/WTcMomentumFRI.h"
+	"./Maths/WTcPerspectiveMatrix.h"
+	"./Maths/WTcMatrixStack.h"
+	"./Maths/WTcCameraMatrix4.h"
+	"./Maths/WTcPredictiveTracking.h"
+	"./Maths/WTcSimplexNoise.h"
+	"./Files/WTString.h"
+	"./Maths/WTc2DVtCode.h"
+	"./Maths/WTc3DVtCode.h"
+	"./Maths/WTc4DVtCode.h"
+	"./Engine/WTcSignal.h"
+	"./Engine/WTKernel.h"
+	"./Engine/Process/WTcParentStack.h"
+	"./Engine/Process/WTcProcess.h"
+	"./Engine/WTcFrameRate.h"
+	"./Files/WTvFile.h"
+	"./Files/WTcFileHandler.h"
+	"./Files/WTcFile.h"
+	"./Files/WTcParser.h"
+	"./Files/Misc/WTcReferenceList.h"
+	"./Files/WTcIMFLoader.h"
+	"./Files/Meshes/MeshClasses/WTcVertex.h"
+	"./Files/Meshes/MeshClasses/WTcPlane.h"
+	"./Files/Meshes/MeshClasses/WTcFace.h"
+	"./Files/Meshes/MeshClasses/WTcFullFaceData.h"
+	"./Files/Meshes/MeshClasses/WTcPolygon.h"
+	"./Files/Meshes/MeshClasses/WTcCluster.h"
+	"./Physics/WTcCollisionBase.h"
+	"./Files/CollisionMeshes/WTvCollisionData.h"
+	"./Files/CollisionMeshes/WTcSphereCollision.h"
+	"./Files/CollisionMeshes/WTcMeshCollision.h"
+	"./Files/CollisionMeshes/WTcBeamCollision.h"
+	"./Files/CollisionMeshes/WTcRayCollision.h"
+	"./Files/CollisionMeshes/WTcMeshFileCollision.h"
+	"./Files/CollisionMeshes/WTcCompoundCollision.h"
+	"./Files/CollisionMeshes/WTcCompoundCollisionFile.h"
+	"./Files/CollisionMeshes/WTcMouseCollision.h"
+	"./Files/Textures/WTcTexture.h"
+	"./Files/Textures/WTcSeamlessTextureClasses.h"
+	"./Files/Textures/WTcTextureGenerator.h"
+	"./Files/Fonts/WTcFont.h"
+	"./Files/Shaders/WTcShader.h"
+	"./Files/Shaders/WTcShaderVariables.h"
+	"./Files/Shaders/WTcUserDefinedShaderVariable.h"
+	"./Files/Shaders/WTcShaderProgram.h"
+	"./Camera/FX/WTcFog.h"
+	"./Camera/WTcRenderOwner.h"
+	"./Camera/WTvRenderObject.h"
+	"./Files/Meshes/WTcMesh.h"
+	"./Files/Meshes/WTcAsteroid.h"
+	"./Files/Meshes/WTcUVSphere.h"
+	"./Files/Meshes/WTcIcoSphere.h"
+	"./Files/Misc/WTcMeshTreeNode.h"
+	"./Files/Misc/WTvMeshTree.h"
+	"./Files/Misc/WTcMeshTree.h"
+	"./Files/Misc/WTcLineArrayData.h"
+	"./Files/Misc/WTcCircleLineData.h"
+	"./Files/Misc/WTcSettingsFile.h"
+	"./Files/Meshes/WTv2DPolygon.h"
+	"./Physics/WTcCollisionObject.h"
+	"./Camera/WTcTextureStack.h"
+	"./Camera/WTcPerspectiveControl.h"
+	"./Camera/WTcCamera.h"
+	"./Camera/WTcExtraViewport.h"
+	"./Camera/WTcRenderPointer.h"
+	"./Camera/WTcRenderObject.h"
+	"./Physics/WTcMouseCollisionObject.h"
+	"./Camera/Nodes/WTcRenderNode.h"
+	"./Camera/Nodes/WTcNodeList.h"
+	"./Camera/Renderable/WTcAttributeData.h"
+	"./Files/Meshes/WTcmLandscape.h"
+	"./Camera/FX/WTcMaterial.h"
+	"./Camera/FX/WTvLight.h"
+	"./Camera/WTcLightHandler.h"
+	"./Camera/FX/WTcLight.h"
+	"./Camera/FX/WTcSpotLight.h"
+	"./Camera/Renderable/WTcImage.h"
+	"./Camera/Renderable/WTcTextureText.h"
+	"./Camera/Renderable/WTcModel.h"
+	"./Camera/Renderable/WTcLandscape.h"
+	"./Camera/Renderable/WTcPoint.h"
+	"./Camera/Renderable/WTcBillBoard.h"
+	"./Camera/Renderable/WTcLine.h"
+	"./Camera/Renderable/WTcLineArray.h"
+	"./Camera/Renderable/WTcParticleSettings.h"
+	"./Camera/Renderable/WTcParticle.h"
+	"./Camera/Renderable/WTcParticleGroup.h"
+	"./Camera/Renderable/WTcBeamMesh.h"
+	"./Camera/Renderable/WTcButton.h"
+	"./Camera/Renderable/WTcStarMap.h"
+	"./Camera/WTcPainter.h"
+	"./Windows/EventHandler/WTcKeyStore.h"
+	"./Windows/EventHandler/WTcKeyToggle.h"
+	"./Windows/EventHandler/WTcMouse.h"
+	"./Windows/EventHandler/WTcEventHandler.h"
+	"./Audio/WTcAudioDevice.h"
+	"./Audio/WTcAudioBuffer.h"
+	"./Audio/WTcAudioObject.h"
+	"./Files/Audio/WTcAudioData.h"
+	"./Files/Audio/WTcSoundObject.h"
+	"./Physics/WTcCollisionList.h"
+	"./Physics/WTcCollisionHandler.h"
+	"./Engine/WTcBase.h"
+	"./Engine/Process/WTcToggleButton.h"
+	"./Engine/Process/WTcMessageFeed.h"
+	"./Engine/Process/WTcTextBoxWidget.h"
+	"./Engine/Process/WTcSliderWidget.h"
+	"./Engine/Process/WTcSelectionWidget.h"
+	"./Engine/Process/WTcSelectionImageWidget.h"
+	"./Networking/WTcNetworkBase.h"
+	"./Networking/WTcP2PClient.h"
+	"./Networking/WTcP2PHost.h"
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/WTOsBits.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Global/WTKeyStateDefinitions.h
+
+1314260274 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/GLEW/include/glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1319528919 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/GLEW/include/glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1319528888 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/GLEW/include/wglext.h
+	<windows.h>
+
+1165588258 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/OpenAL 1.1 SDK/include/al.h
+
+1176472968 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/OpenAL 1.1 SDK/include/alc.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/WTWindowsKeyCodes.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/WTXWindowsKeyCodes.h
+
+1424971985 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Global/WTDefinitions.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Global/WTSettings.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Global/WTSetDefinitions.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Global/IMFDefinitions.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Global/WTcFlags.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Global/GlobalPointers.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Global/log.h
+	<string>
+	<ostream>
+	<map>
+	<vector>
+	<boost/shared_ptr.hpp>
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Global/CException.h
+	<string>
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/PTL/WTcSingleton.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/PTL/WTRadix.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/WTcSync.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/WTcWindow.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/PTL/WTLLTemplate.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/PTL/WTLimitedList.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/PTL/WTcPushPopStack.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTc2DVt.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTc3DVt.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTc4DVt.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTMath.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcColors.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcMatrix4.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcDoubleMatrix4.h
+
+1424895613 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcMomentum.h
+
+1424898787 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcMomentumFRI.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcPerspectiveMatrix.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcMatrixStack.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcCameraMatrix4.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcPredictiveTracking.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcSimplexNoise.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/WTString.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTc2DVtCode.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTc3DVtCode.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTc4DVtCode.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/WTcSignal.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/WTKernel.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcParentStack.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcProcess.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/WTcFrameRate.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/WTvFile.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/WTcFileHandler.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/WTcFile.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/WTcParser.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTcReferenceList.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/WTcIMFLoader.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/WTcVertex.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/WTcPlane.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/WTcFace.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/WTcFullFaceData.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/WTcPolygon.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/WTcCluster.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Physics/WTcCollisionBase.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTvCollisionData.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcSphereCollision.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcMeshCollision.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcBeamCollision.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcRayCollision.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcMeshFileCollision.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcCompoundCollision.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcCompoundCollisionFile.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcMouseCollision.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Textures/WTcTexture.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Textures/WTcSeamlessTextureClasses.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Textures/WTcTextureGenerator.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Fonts/WTcFont.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Shaders/WTcShader.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Shaders/WTcShaderVariables.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Shaders/WTcUserDefinedShaderVariable.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Shaders/WTcShaderProgram.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/FX/WTcFog.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcRenderOwner.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTvRenderObject.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/WTcMesh.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/WTcAsteroid.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/WTcUVSphere.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/WTcIcoSphere.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTcMeshTreeNode.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTvMeshTree.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTcMeshTree.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTcLineArrayData.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTcCircleLineData.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTcSettingsFile.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/WTv2DPolygon.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Physics/WTcCollisionObject.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcTextureStack.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcPerspectiveControl.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcCamera.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcExtraViewport.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcRenderPointer.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcRenderObject.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Physics/WTcMouseCollisionObject.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Nodes/WTcRenderNode.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Nodes/WTcNodeList.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcAttributeData.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/WTcmLandscape.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/FX/WTcMaterial.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/FX/WTvLight.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcLightHandler.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/FX/WTcLight.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/FX/WTcSpotLight.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcImage.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcTextureText.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcModel.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcLandscape.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcPoint.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcBillBoard.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcLine.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcLineArray.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcParticleSettings.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcParticle.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcParticleGroup.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcBeamMesh.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcButton.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcStarMap.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcPainter.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/EventHandler/WTcKeyStore.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/EventHandler/WTcKeyToggle.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/EventHandler/WTcMouse.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/EventHandler/WTcEventHandler.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Audio/WTcAudioDevice.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Audio/WTcAudioBuffer.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Audio/WTcAudioObject.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Audio/WTcAudioData.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Audio/WTcSoundObject.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Physics/WTcCollisionList.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Physics/WTcCollisionHandler.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/WTcBase.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcToggleButton.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcMessageFeed.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcTextBoxWidget.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcSliderWidget.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcSelectionWidget.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcSelectionImageWidget.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Networking/WTcNetworkBase.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Networking/WTcP2PClient.h
+
+1423391348 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Networking/WTcP2PHost.h
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTMath.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Physics/WTcCollisionList.cpp
+	"../WTBamboo.h"
+
+1423677355 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Audio/WTcAudioBuffer.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Audio/WTcAudioDevice.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Audio/WTcAudioObject.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/FX/WTcFog.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/FX/WTcLight.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/FX/WTcMaterial.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/FX/WTcSpotLight.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Nodes/WTcNodeList.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Nodes/WTcRenderNode.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcAttributeData.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcBeamMesh.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcBillBoard.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcButton.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcImage.cpp
+	"../../WTBamboo.h"
+	<cmath>
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcLandscape.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcLine.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcLineArray.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcModel.cpp
+	"../../WTBamboo.h"
+
+1424897968 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcParticle.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcParticleGroup.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcParticleSettings.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcPoint.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/Renderable/WTcStarMap.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcCamera.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcExtraViewport.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcLightHandler.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcPainter.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcPerspectiveControl.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcRenderNodeObject.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcRenderObject.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcRenderPointer.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Camera/WTcTextureStack.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcMessageFeed.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcParentStack.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcProcess.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcSelectionImageWidget.cpp
+	"../../WTBamboo.h"
+
+1423391348 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcSelectionWidget.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcSliderWidget.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcTextBoxWidget.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/Process/WTcToggleButton.cpp
+	"../../WTBamboo.h"
+
+1423677423 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/WTcBase.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/WTcFrameRate.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/WTcSignal.cpp
+	"../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Engine/WTKernel.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Audio/WTcAudioData.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Audio/WTcSoundObject.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcBeamCollision.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcCompoundCollision.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcCompoundCollisionFile.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcMeshCollision.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcMeshFileCollision.cpp
+	"../../WTBamboo.h"
+
+1423391348 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcMouseCollision.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcRayCollision.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTcSphereCollision.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/CollisionMeshes/WTvCollisionData.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Fonts/WTcFont.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/WTcCluster.cpp
+	"../../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/WTcFace.cpp
+	"../../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/WTcFullFaceData.cpp
+	"../../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/WTcPolygon.cpp
+	"../../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/MeshClasses/WTcVertex.cpp
+	"../../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/WTcAsteroid.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/WTcIcoSphere.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/WTcMesh.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/WTcmLandscape.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/WTcUVSphere.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Meshes/WTv2DPolygon.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTcCircleLineData.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTcLineArrayData.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTcMeshTree.cpp
+	"../../WTBamboo.h"
+
+1423677419 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTcMeshTreeNode.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTcReferenceList.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Misc/WTcSettingsFile.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Shaders/WTcShader.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Shaders/WTcShaderProgram.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Shaders/WTcShaderVariables.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Shaders/WTcUserDefinedShaderVariable.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Textures/WTcSeamlessTextureClasses.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Textures/WTcTexture.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/Textures/WTcTextureGenerator.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/WTcFile.cpp
+	"../WTBamboo.h"
+	<fstream>
+	<cstdio>
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/WTcFileHandler.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/WTcIMFLoader.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/WTcParser.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Files/WTString.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Global/log.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Global/WTSettings.cpp
+	"../WTBamboo.h"
+
+1423680927 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcCameraMatrix4.cpp
+	"../WTBamboo.h"
+	<cmath>
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcColors.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcDoubleMatrix4.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcMatrix4.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcMatrixStack.cpp
+	"../WTBamboo.h"
+
+1424895926 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcMomentum.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcPerspectiveMatrix.cpp
+	"../WTBamboo.h"
+
+1424894828 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcPredictiveTracking.cpp
+	"../WTBamboo.h"
+
+1423391348 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcSimplexNoise.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Physics/WTcCollisionBase.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Physics/WTcCollisionHandler.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Physics/WTcCollisionObject.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Physics/WTcMouseCollisionObject.cpp
+	"../WTBamboo.h"
+
+1423391348 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/PTL/WTcSingleton.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/PTL/WTRadix.cpp
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/EventHandler/WTcEventHandler.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/EventHandler/WTcKeyStore.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/EventHandler/WTcKeyToggle.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/EventHandler/WTcMouse.cpp
+	"../../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/WTcSync.cpp
+	<windows.h>
+	<unistd.h>
+	<sys/time.h>
+	"../WTBamboo.h"
+
+1423677420 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Windows/WTcWindow.cpp
+	"../WTBamboo.h"
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/shared_ptr.hpp
+	<boost/smart_ptr/shared_ptr.hpp>
+
+1300823470 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/shared_ptr.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/shared_ptr_nmt.hpp>
+	<boost/config/no_tr1/memory.hpp>
+	<boost/assert.hpp>
+	<boost/checked_delete.hpp>
+	<boost/throw_exception.hpp>
+	<boost/smart_ptr/detail/shared_count.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/smart_ptr/detail/sp_convertible.hpp>
+	<boost/smart_ptr/detail/spinlock_pool.hpp>
+	<boost/memory_order.hpp>
+	<algorithm>
+	<functional>
+	<typeinfo>
+	<cstddef>
+	<iosfwd>
+	<ostream>
+	<boost/smart_ptr/detail/operator_bool.hpp>
+
+1310000258 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/config.hpp
+	<boost/config/select_compiler_config.hpp>
+	<boost/config/select_stdlib_config.hpp>
+	<boost/config/select_platform_config.hpp>
+	<boost/config/suffix.hpp>
+
+1303719048 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/config/select_compiler_config.hpp
+
+1303719048 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/config/select_stdlib_config.hpp
+	<cstddef>
+	<stddef.h>
+	<boost/config/no_tr1/utility.hpp>
+
+1129725520 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/config/no_tr1/utility.hpp
+	<utility>
+
+1285910384 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/config/select_platform_config.hpp
+	<boost/config/posix_features.hpp>
+
+1129284986 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/config/posix_features.hpp
+	<unistd.h>
+
+1303719048 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/config/suffix.hpp
+	<limits.h>
+	<cstddef>
+	"boost/type.hpp"
+	"boost/non_type.hpp"
+	<typeinfo>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/shared_ptr_nmt.hpp
+	<boost/assert.hpp>
+	<boost/checked_delete.hpp>
+	<boost/throw_exception.hpp>
+	<boost/smart_ptr/detail/atomic_count.hpp>
+	<memory>
+	<algorithm>
+	<functional>
+	<new>
+
+1297768732 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/assert.hpp
+	<boost/current_function.hpp>
+	<assert.h>
+	<boost/current_function.hpp>
+	<cstdlib>
+	<iostream>
+	<boost/current_function.hpp>
+
+1195996040 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/current_function.hpp
+
+1092316388 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/checked_delete.hpp
+
+1291858820 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/throw_exception.hpp
+	<boost/exception/detail/attribute_noreturn.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/config.hpp>
+	<exception>
+	<boost/exception/exception.hpp>
+	<boost/current_function.hpp>
+
+1260984418 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/exception/detail/attribute_noreturn.hpp
+
+1274187238 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/detail/workaround.hpp
+	<boost/config.hpp>
+
+1310262358 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/exception/exception.hpp
+
+1240121870 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/atomic_count.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/sp_has_sync.hpp>
+	<boost/smart_ptr/detail/atomic_count_pthreads.hpp>
+	<boost/smart_ptr/detail/atomic_count_gcc_x86.hpp>
+	<boost/smart_ptr/detail/atomic_count_win32.hpp>
+	<boost/smart_ptr/detail/atomic_count_sync.hpp>
+	<boost/smart_ptr/detail/atomic_count_gcc.hpp>
+	<boost/smart_ptr/detail/atomic_count_pthreads.hpp>
+
+1300823706 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_has_sync.hpp
+
+1240121870 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/atomic_count_pthreads.hpp
+	<pthread.h>
+
+1240121870 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/atomic_count_gcc_x86.hpp
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/atomic_count_win32.hpp
+	<boost/detail/interlocked.hpp>
+
+1310000258 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/detail/interlocked.hpp
+	<boost/config.hpp>
+	<windows.h>
+
+1240121870 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/atomic_count_sync.hpp
+	<ia64intrin.h>
+
+1240121870 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/atomic_count_gcc.hpp
+	<ext/atomicity.h>
+	<bits/atomicity.h>
+
+1129725520 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/config/no_tr1/memory.hpp
+	<memory>
+
+1300822692 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/shared_count.hpp
+	<boost/config.hpp>
+	<boost/checked_delete.hpp>
+	<boost/throw_exception.hpp>
+	<boost/smart_ptr/bad_weak_ptr.hpp>
+	<boost/smart_ptr/detail/sp_counted_base.hpp>
+	<boost/smart_ptr/detail/sp_counted_impl.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/config/no_tr1/memory.hpp>
+	<functional>
+	<new>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/bad_weak_ptr.hpp
+	<exception>
+
+1238145046 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/sp_has_sync.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_nt.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_spin.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_pt.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_nt.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_x86.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_ia64.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_acc_ia64.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_cw_ppc.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_ppc.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_mips.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_sync.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_gcc_sparc.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_w32.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_nt.hpp>
+	<boost/smart_ptr/detail/sp_counted_base_spin.hpp>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base_nt.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1287944694 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/detail/sp_typeinfo.hpp
+	<boost/config.hpp>
+	<boost/current_function.hpp>
+	<functional>
+	<typeinfo>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base_spin.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<boost/smart_ptr/detail/spinlock_pool.hpp>
+
+1300822176 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/spinlock_pool.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/spinlock.hpp>
+	<cstddef>
+
+1300824834 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/spinlock.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/sp_has_sync.hpp>
+	<boost/smart_ptr/detail/spinlock_pt.hpp>
+	<boost/smart_ptr/detail/spinlock_gcc_arm.hpp>
+	<boost/smart_ptr/detail/spinlock_sync.hpp>
+	<boost/smart_ptr/detail/spinlock_w32.hpp>
+	<boost/smart_ptr/detail/spinlock_pt.hpp>
+	<boost/smart_ptr/detail/spinlock_nt.hpp>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/spinlock_pt.hpp
+	<pthread.h>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/spinlock_gcc_arm.hpp
+	<boost/smart_ptr/detail/yield_k.hpp>
+
+1278781626 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/yield_k.hpp
+	<boost/config.hpp>
+	<windows.h>
+	<sched.h>
+	<time.h>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/spinlock_sync.hpp
+	<boost/smart_ptr/detail/yield_k.hpp>
+	<ia64intrin.h>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/spinlock_w32.hpp
+	<boost/detail/interlocked.hpp>
+	<boost/smart_ptr/detail/yield_k.hpp>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/spinlock_nt.hpp
+	<boost/assert.hpp>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base_pt.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<pthread.h>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base_gcc_x86.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base_gcc_ia64.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base_acc_ia64.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<machine/sys/inline.h>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base_cw_ppc.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base_gcc_ppc.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1238145046 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base_gcc_mips.hpp
+	<boost/detail/sp_typeinfo.hpp>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base_sync.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<limits.h>
+	<ia64intrin.h>
+
+1259594234 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base_gcc_sparc.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<inttypes.h>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_base_w32.hpp
+	<boost/detail/interlocked.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/detail/sp_typeinfo.hpp>
+
+1300822692 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_counted_impl.hpp
+	<boost/config.hpp>
+	<boost/checked_delete.hpp>
+	<boost/smart_ptr/detail/sp_counted_base.hpp>
+	<boost/smart_ptr/detail/quick_allocator.hpp>
+	<memory>
+	<cstddef>
+
+1260794660 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/quick_allocator.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/lightweight_mutex.hpp>
+	<boost/type_traits/type_with_alignment.hpp>
+	<boost/type_traits/alignment_of.hpp>
+	<new>
+	<cstddef>
+
+1235993852 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/lightweight_mutex.hpp
+	<boost/config.hpp>
+	<boost/smart_ptr/detail/lwm_nop.hpp>
+	<boost/smart_ptr/detail/lwm_pthreads.hpp>
+	<boost/smart_ptr/detail/lwm_win32_cs.hpp>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/lwm_nop.hpp
+
+1259594702 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/lwm_pthreads.hpp
+	<boost/assert.hpp>
+	<pthread.h>
+
+1235992936 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/lwm_win32_cs.hpp
+	<windows.h>
+
+1274880842 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/sp_convertible.hpp
+	<boost/config.hpp>
+
+1259844638 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/memory_order.hpp
+
+1235994322 /media/thormidable/FileStore/Wills/C++Code/Bamboo/Includes/boost_1_47_0/boost/smart_ptr/detail/operator_bool.hpp
+
+1424898184 source:/media/thormidable/FileStore/Wills/C++Code/Bamboo/Bamboo/src/Maths/WTcMomentumFRI.cpp
 	"../WTBamboo.h"
 

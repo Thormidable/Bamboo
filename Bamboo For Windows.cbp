@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="./lib/BambooWin_d" prefix_auto="1" extension_auto="1" />
+				<Option output="lib/Bamboo" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj/Debug/" />
 				<Option type="2" />
@@ -17,7 +17,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="./lib/BambooWin" prefix_auto="1" extension_auto="1" />
+				<Option output="./lib/Bamboo" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj/Release/" />
 				<Option type="2" />
@@ -34,9 +34,13 @@
 			<Add option="-Wall" />
 			<Add directory="../Includes/OpenAL 1.1 SDK/include" />
 			<Add directory="../Includes/GLEW/include" />
-			<Add directory="C:/SilkCircuit/Bamboo/Includes/boost_1_47_0" />
+			<Add directory="../Includes/boost_1_47_0" />
 		</Compiler>
 		<Linker>
+			<Add library="X11" />
+			<Add library="GLEW" />
+			<Add library="GL" />
+			<Add library="openal" />
 			<Add directory="../Includes/OpenAL 1.1 SDK/libs" />
 			<Add directory="../Includes/GLEW/lib" />
 		</Linker>
@@ -257,6 +261,7 @@
 		<Unit filename="src/Maths/WTcMatrixStack.h" />
 		<Unit filename="src/Maths/WTcMomentum.cpp" />
 		<Unit filename="src/Maths/WTcMomentum.h" />
+		<Unit filename="src/Maths/WTcMomentumFRI.cpp" />
 		<Unit filename="src/Maths/WTcPerspectiveMatrix.cpp" />
 		<Unit filename="src/Maths/WTcPerspectiveMatrix.h" />
 		<Unit filename="src/Maths/WTcPredictiveTracking.cpp" />
