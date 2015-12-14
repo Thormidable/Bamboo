@@ -40,3 +40,4 @@ obj/**/*.o
 *~
 *.opensdf
 *.sdf
+obj/**/*.o
