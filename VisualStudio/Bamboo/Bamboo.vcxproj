@@ -632,6 +632,8 @@
     <ClInclude Include="..\..\src\Global\GlobalPointers.h" />
     <ClInclude Include="..\..\src\Global\IMFDefinitions.h" />
     <ClInclude Include="..\..\src\Global\log.h" />
+    <ClInclude Include="..\..\src\Maths\WTcHammingWeight.cpp" />
+    <ClInclude Include="..\..\src\Maths\WTcHammingWeight.h" />
     <ClInclude Include="..\..\src\Maths\WTcMomentumFRI.h" />
     <ClInclude Include="..\..\src\Networking\WTcNetworkBase.h" />
     <ClInclude Include="..\..\src\Networking\WTcP2PClient.h" />

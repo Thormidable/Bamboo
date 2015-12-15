@@ -3994,6 +3994,7 @@ public:
 #include "./Maths/WTcCameraMatrix4.h"
 #include "./Maths/WTcPredictiveTracking.h"
 #include "./Maths/WTcSimplexNoise.h"
+#include "./Maths/WTcHammingWeight.h"
 #include "./Files/WTString.h"
 
 #include "./Maths/WTc2DVtCode.h"
