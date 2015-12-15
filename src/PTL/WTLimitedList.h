@@ -72,8 +72,10 @@ public:
 
     /// [] operator to allow access of any item as if it were a normal array.
 	cX &operator[](uint32 liItem){return mpList[liItem];};
+	const cX &operator[](uint32 liItem) const{ return mpList[liItem]; };
 
     cX &Item(uint32 liItem){return mpList[liItem];};
+	const cX &Item(uint32 liItem) const{ return mpList[liItem]; };
 
     /// = operator to allow copying a cLimitedList array.
     ///This SHOULD NOT be used with cX classes containing pointers.
@@ -91,9 +93,9 @@ public:
 	};
 
 	///Returns the number of items this array can currently hold.
-	uint32 Spaces(){return miSpaces;};
+	uint32 Spaces() const { return miSpaces; };
 	///Returns the number of items this array is currently holding.
-	uint32 Items(){return miItems;};
+	uint32 Items() const {return miItems;};
 	///Sets the number of items this array is currently holding. Should be used with caution.
 	void SetItems(uint32 liItems){miItems=liItems;};
 
@@ -123,7 +125,7 @@ public:
 		}
 	};
 
-	cLimitedList<cX> *operator=(cLimitedList<cX> *lfX)
+	cLimitedList<cX> *operator=(const cLimitedList<cX> *lfX)
 	{
         Init(lfX->miItems+1);
 	    miItems=lfX->miItems;

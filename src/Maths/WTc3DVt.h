@@ -11,11 +11,11 @@ public:
 	Type v[3];
 
 	///Return this Vectors X Value
-	Type X();
+	Type X()const;
 	///Return this Vectors Y Value
-	Type Y();
+	Type Y()const;
 	///Return this Vectors Z Value
-	Type Z();
+	Type Z()const;
 
 	///Set this Vectors X Value
 	void X(Type lfX);
@@ -26,22 +26,18 @@ public:
 
 
 	/// This will return the absolute size of this vector.
-       Type Magnitude();
+	Type Magnitude()const;
        /// This will return the squared absolute size of this vector.
-       Type MagnitudeSq();
+	   Type MagnitudeSq()const;
 
        /// This will return the Distance between this point and the point at lpOther.
-       Type Distance(c3DVt<Type> lpOther);
+	   Type Distance(const c3DVt<Type> &lpOther)const;       
        /// This will return the Distance between this point and the point at lpOther.
-       Type Distance(c3DVt<Type> *lpOther);
-       /// This will return the Distance between this point and the point at lpOther.
-       Type Distance(Type *lpOther);
+	   Type Distance(const Type *lpOther)const;
        /// This will return the Squared Distance between this point and the point at lpOther.
-       Type DistanceSq(c3DVt<Type> lpOther);
+	   Type DistanceSq(const c3DVt<Type> &lpOther)const;
        /// This will return the Squared Distance between this point and the point at lpOther.
-       Type DistanceSq(c3DVt<Type> *lpOther);
-       /// This will return the Squared Distance between this point and the point at lpOther.
-       Type DistanceSq(Type *lpOther);
+	   Type DistanceSq(const Type *lpOther)const;
 
 	/// This will make the magnitude of this vector 1 while maintaining its direction.
        void Normalise();
@@ -50,10 +46,9 @@ public:
         c3DVt(Type lf0=0,Type lf1=0,Type lf2=0);
 		///Constructor to initialise the object from an array of three Types.
         c3DVt(Type *lf0);
-		///Constructor to initialise from a c3DVf pointer
-		c3DVt(c3DVt *lfVect);
 		///Constructor to initialise from a c3DVf reference
         c3DVt(const c3DVt &lfVect);
+
 		template<class Other> c3DVt(const c3DVt<Other> &lfVect)
 		{
 			v[0] = static_cast<Type>(lfVect[0]);
@@ -61,66 +56,56 @@ public:
 			v[2] = static_cast<Type>(lfVect[2]);
 		}
 
-       c3DVt<Type> operator=(c3DVt *lpValue);
-       //c3DVt<Type> operator=(c3DVt &lpValue);
-       c3DVt<Type> operator=(c3DVt lpValue);
-       c3DVt<Type> operator=(cRGB *lpValue);
-       c3DVt<Type> operator=(cRGB &lpValue);
-       Type *operator=(Type *lpValue);
+       c3DVt<Type> &operator=(const c3DVt &lpValue);
+       c3DVt<Type> &operator=(const cRGB lpValue);
+       c3DVt<Type> &operator=(const cRGB &lpValue);
+	   c3DVt<Type> &operator=(const Type *lpValue);
+	   c3DVt<Type> &operator=(Type lpValue);
 
-       c3DVt<Type> operator+=(c3DVt lpValue);
-       c3DVt<Type> operator+=(c3DVt *lpValue);
-       c3DVt<Type> operator+=(Type *lpValue);
-       c3DVt<Type> operator+=(Type lpValue);
+	   c3DVt<Type> &operator+=(const c3DVt &lpValue);
+	   c3DVt<Type> &operator+=(const Type *lpValue);
+	   c3DVt<Type> &operator+=(Type lpValue);
 
-       c3DVt<Type> operator-=(c3DVt lpValue);
-       c3DVt<Type> operator-=(c3DVt *lpValue);
-       c3DVt<Type> operator-=(Type *lpValue);
-       c3DVt<Type> operator-=(Type lpValue);
+	   c3DVt<Type> &operator-=(const c3DVt &lpValue);
+	   c3DVt<Type> &operator-=(const Type *lpValue);
+	   c3DVt<Type> &operator-=(Type lpValue);
 
-       c3DVt<Type> operator*=(c3DVt lpValue);
-       c3DVt<Type> operator*=(c3DVt *lpValue);
-       c3DVt<Type> operator*=(Type *lpValue);
-       c3DVt<Type> operator*=(Type lpValue);
+	   c3DVt<Type> &operator*=(const c3DVt &lpValue);
+	   c3DVt<Type> &operator*=(const Type *lpValue);
+	   c3DVt<Type> &operator*=(Type lpValue);
 
-       c3DVt<Type> operator/=(c3DVt lpValue);
-       c3DVt<Type> operator/=(c3DVt *lpValue);
-       c3DVt<Type> operator/=(Type *lpValue);
-       c3DVt<Type> operator/=(Type lpValue);
+	   c3DVt<Type> &operator/=(const c3DVt &lpValue);
+	   c3DVt<Type> &operator/=(const Type *lpValue);
+	   c3DVt<Type> &operator/=(Type lpValue);
 
-       c3DVt<Type> operator-(c3DVt lpValue);
-       c3DVt<Type> operator-(c3DVt *lpValue);
-       c3DVt<Type> operator-(Type *lpValue);
-       c3DVt<Type> operator-(Type lpValue);
-
-       c3DVt<Type> operator+(c3DVt lpValue);
-       c3DVt<Type> operator+(c3DVt *lpValue);
-       c3DVt<Type> operator+(Type *lpValue);
-       c3DVt<Type> operator+(Type lpValue);
+	   c3DVt<Type> operator-(const c3DVt &lpValue)const;	   
+	   c3DVt<Type> operator-(const Type *lpValue)const;
+	   c3DVt<Type> operator-(Type lpValue)const;
+				   
+	   c3DVt<Type> operator+(const c3DVt &lpValue)const;
+	   c3DVt<Type> operator+(const Type *lpValue)const;
+	   c3DVt<Type> operator+(Type lpValue)const;
 
        ///Will Find the cross Product of this vector and the vector lpValue.
-       c3DVt<Type> operator*(c3DVt lpValue);
-       c3DVt<Type> operator*(c3DVt *lpValue);
-       c3DVt<Type> operator*(Type *lpValue);
-	   c3DVt<Type> operator*(Type lpValue);
+	   c3DVt<Type> operator*(const c3DVt &lpValue)const;
+	   c3DVt<Type> operator*(const Type *lpValue)const;
+	   c3DVt<Type> operator*(Type lpValue)const;
 
-       c3DVt<Type> operator/(Type lpValue);
-	   c3DVt<Type> operator/(Type *lpValue);
-	   c3DVt<Type> operator/(c3DVt lpValue);
-	   c3DVt<Type> operator/(c3DVt *lpValue);
+	   c3DVt<Type> operator/(const c3DVt &lpValue)const;
+	   c3DVt<Type> operator/(const Type *lpValue)const;
+	   c3DVt<Type> operator/(Type lpValue)const;
 
-	   bool operator==(Type *lpValue);
-	   bool operator==(c3DVt<Type> lpValue);
+	   bool operator==(const Type *lpValue)const;
+	   bool operator==(const c3DVt &lpValue)const;
 
 
 
 
 	   ///Will Findthe Dot Product of this vector and the vector lpValue.
-       Type Dot(c3DVt lpValue);
-       Type Dot(Type *lpValue);
-       Type Dot(c3DVt *lpValue);
+       Type Dot(const c3DVt &lpValue) const;
+	   Type Dot(const Type *lpValue) const;	   
 
-       float Angle(c3DVt lpOther);
+	   float Angle(const c3DVt &lpOther) const;
 
 	   ///Allows the User to access the components as if an array of values.
        Type &operator[](uint32 liPos);
