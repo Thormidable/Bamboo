@@ -262,6 +262,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </None>
+    <ClCompile Include="..\..\src\Maths\WTcHammingWeight.cpp" />
     <ClCompile Include="..\..\src\Maths\WTcMomentumFRI.cpp" />
     <ClCompile Include="..\..\src\Physics\WTcMouseCollisionObject.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -632,7 +633,6 @@
     <ClInclude Include="..\..\src\Global\GlobalPointers.h" />
     <ClInclude Include="..\..\src\Global\IMFDefinitions.h" />
     <ClInclude Include="..\..\src\Global\log.h" />
-    <ClInclude Include="..\..\src\Maths\WTcHammingWeight.cpp" />
     <ClInclude Include="..\..\src\Maths\WTcHammingWeight.h" />
     <ClInclude Include="..\..\src\Maths\WTcMomentumFRI.h" />
     <ClInclude Include="..\..\src\Networking\WTcNetworkBase.h" />

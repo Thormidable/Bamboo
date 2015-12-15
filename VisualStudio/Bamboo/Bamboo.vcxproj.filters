@@ -389,6 +389,9 @@
     <ClCompile Include="..\..\src\Camera\Renderable\WTcVoxelModel.cpp">
       <Filter>Source Files\Camera\Renderable</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Maths\WTcHammingWeight.cpp">
+      <Filter>Source Files\Maths</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Camera\Renderable\WTcVoxelOctTree.h">
@@ -762,9 +765,6 @@
     </ClInclude>
     <ClInclude Include="..\..\src\Physics\WTcCollisionObject.h">
       <Filter>Source Files\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\Maths\WTcHammingWeight.cpp">
-      <Filter>Source Files\Maths</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Maths\WTcHammingWeight.h">
       <Filter>Source Files\Maths</Filter>
