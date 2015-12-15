@@ -36,6 +36,11 @@ public:
 
 		c2DVt(c2DVt *lfVect);
         c2DVt(const c2DVt &lfVect);
+		template<class Other> c2DVt(const c2DVt<Other> &lfVect)
+		{
+			v[0] = static_cast<Type>(lfVect[0]);
+			v[1] = static_cast<Type>(lfVect[1]);
+		}
 
        c2DVt<Type> operator=(c2DVt *lpValue);
        c2DVt<Type> operator=(c2DVt lpValue);
@@ -103,6 +108,7 @@ public:
 
 	   ///Allows the User to access the components as if an array of values.
        Type &operator[](uint32 liPos);
+	   const Type &operator[](uint32 liPos) const;
 
 	   void Equals(c2DVt *lpValue);
        void Equals(c2DVt lpValue);

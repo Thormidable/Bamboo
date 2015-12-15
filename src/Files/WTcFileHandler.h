@@ -71,13 +71,13 @@ protected:
     void AddDirectory(string lsDirectory);
     void AddUnknown(string lsUnknown);
 
-    uint16 Files(){return mcFileList.Items();};
-    uint16 Directories(){return mcDirectoryList.Items();};
-    uint16 Unknowns(){return mcUnknownList.Items();};
+    uint32 Files(){return mcFileList.Items();};
+    uint32 Directories(){return mcDirectoryList.Items();};
+    uint32 Unknowns(){return mcUnknownList.Items();};
 
-    string File(uint16 liFile){return *mcFileList[liFile];};
-    string Directory(uint16 liFile){return *mcDirectoryList[liFile];};
-    string Unknown(uint16 liFile){return *mcUnknownList[liFile];};
+    string File(uint32 liFile){return *mcFileList[liFile];};
+    string Directory(uint32 liFile){return *mcDirectoryList[liFile];};
+    string Unknown(uint32 liFile){return *mcUnknownList[liFile];};
 
     void Clear();
 

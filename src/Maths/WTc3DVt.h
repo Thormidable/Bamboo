@@ -54,6 +54,12 @@ public:
 		c3DVt(c3DVt *lfVect);
 		///Constructor to initialise from a c3DVf reference
         c3DVt(const c3DVt &lfVect);
+		template<class Other> c3DVt(const c3DVt<Other> &lfVect)
+		{
+			v[0] = static_cast<Type>(lfVect[0]);
+			v[1] = static_cast<Type>(lfVect[1]);
+			v[2] = static_cast<Type>(lfVect[2]);
+		}
 
        c3DVt<Type> operator=(c3DVt *lpValue);
        //c3DVt<Type> operator=(c3DVt &lpValue);
@@ -118,6 +124,7 @@ public:
 
 	   ///Allows the User to access the components as if an array of values.
        Type &operator[](uint32 liPos);
+	   const Type &operator[](uint32 liPos) const;
 
 	   ///This will invert this vector (multiply each component by -1.0f).
 	   c3DVt<Type> Invert();

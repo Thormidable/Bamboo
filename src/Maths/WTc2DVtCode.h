@@ -24,6 +24,8 @@ template<class Type> void c2DVt<Type>::Normalise()
 }
 
 template<class Type> Type &c2DVt<Type>::operator[](uint32 liPos){return v[liPos];};
+template<class Type> const Type &c2DVt<Type>::operator[](uint32 liPos) const{ return v[liPos]; };
+
 
 template<class Type> c2DVt<Type> c2DVt<Type>::operator=(c2DVt<Type> *lpValue)
 {

@@ -65,12 +65,15 @@
 #define c2DVd c2DVt<double>
 #define c2DVf c2DVt<float>
 #define c2DVi c2DVt<int32>
+#define c2DVu c2DVt<uint32>
 #define c3DVd c3DVt<double>
 #define c3DVf c3DVt<float>
 #define c3DVi c3DVt<int32>
+#define c3DVu c3DVt<uint32>
 #define c4DVd c4DVt<double>
 #define c4DVf c4DVt<float>
 #define c4DVi c4DVt<int32>
+#define c4DVu c4DVt<uint32>
 
 #define cAttributeNormalMap cAttributeData<cRGBA>
 

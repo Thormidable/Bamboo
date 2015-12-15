@@ -114,6 +114,7 @@ template<class Type> c3DVt<Type> c3DVt<Type>::operator*=(Type lpValue)
 };
 
 template<class Type> Type &c3DVt<Type>::operator[](uint32 liPos){return v[liPos];};
+template<class Type> const Type &c3DVt<Type>::operator[](uint32 liPos) const{ return v[liPos]; };
 
 template<class Type> c3DVt<Type> c3DVt<Type>::operator=(c3DVt<Type> *lpValue)
 {

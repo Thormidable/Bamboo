@@ -3988,6 +3988,7 @@ public:
 #include "./Maths/WTcMatrix4.h"
 #include "./Maths/WTcDoubleMatrix4.h"
 #include "./Maths/WTcMomentum.h"
+#include "./Maths/WTcMomentumFRI.h"
 #include "./Maths/WTcPerspectiveMatrix.h"
 #include "./Maths/WTcMatrixStack.h"
 #include "./Maths/WTcCameraMatrix4.h"
@@ -4098,6 +4099,11 @@ public:
 	 #include "./Camera/Renderable/WTcBeamMesh.h"
 	 #include "./Camera/Renderable/WTcButton.h"
 	 #include "./Camera/Renderable/WTcStarMap.h"
+
+	#include "./Camera/Renderable/WTcVoxelOctTreeBase.h"
+    #include "./Camera/Renderable/WTcVoxelOctTreeLevel.h"
+    #include "./Camera/Renderable/WTcVoxelOctTree.h"
+	#include "./Camera/Renderable/WTcVoxelModel.h"
 
 #include "./Camera/WTcPainter.h"
 

@@ -27,8 +27,8 @@ uint32 GetUInt()
     return (s1 ^ s2 ^ s3);
 };
 
-float GetFloat(){return static_cast<double>(GetUInt())/static_cast<double>(0xFFFFFFFF);};
-float GetZeroed(){return (GetFloat()-0.5f)*2.0f;};
+float32 GetFloat(){ return static_cast<float32>(static_cast<float64>(GetUInt()) / static_cast<float64>(0xFFFFFFFF)); };
+float32 GetZeroed(){ return (GetFloat() - 0.5f)*2.0f; };
 
 };
 
@@ -43,8 +43,8 @@ public:
     };
 
 uint32 GetUInt(){miState=miState*tiMult+tiInc;return miState;};
-float GetFloat(){return  static_cast<double>(GetUInt())/static_cast<double>(0xFFFFFFFF);};
-float GetZeroed(){return (GetFloat()-0.5f)*2.0f;};
+float32 GetFloat(){ return static_cast<float32>(static_cast<float64>(GetUInt()) / static_cast<float64>(0xFFFFFFFF)); };
+float32 GetZeroed(){return (GetFloat()-0.5f)*2.0f;};
 
 };
 
@@ -163,7 +163,7 @@ for(i=1; i < max;i++)
 
 };
 
-template<class tType> void ShellSort(tType *arr, long max,bool (*Comparison)(tType*,tType*))
+template<class tType, typename tLambda> void ShellSort(tType *arr, long max, tLambda Comparison)
 {
 
 uint32 i, j;
@@ -371,7 +371,7 @@ for(i=1; i < max;i++)
 }
 }
 // SHELL SORT
-template<class tType> void ShellSort(tType **arr, long max,bool(*Comparison)(tType*,tType*))
+template<class tType, typename tLambda> void ShellSort(tType **arr, long max, tLambda Comparison)
 {
 int i, j;
 tType *index;

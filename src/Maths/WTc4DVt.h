@@ -39,7 +39,7 @@ public:
 		///Constructor to allow the User to initialise 0-4 components
         c4DVt(Type lf0=0,Type lf1=0,Type lf2=0,Type lf3=0);
 		///Constructor to initialise the object from an array of three Types.
-        c4DVt(Type *lf0);
+		c4DVt(Type *lf0);
 
        c4DVt<Type> operator=(c4DVt *lpValue);
        c4DVt<Type> operator=(c4DVt lpValue);
@@ -83,7 +83,16 @@ public:
 
 	   ///Allows the User to access the components as if an array of values.
        Type &operator[](uint32 liPos);
+	   const Type &operator[](uint32 liPos) const;
+
         c4DVt(c4DVt *lfVect);
         c4DVt(const c4DVt &lfVect);
+		template<class Other> c4DVt(const c4DVt<Other> &lOther)
+		{
+			v[0] = static_cast<Type>(lOther[0]);
+			v[1] = static_cast<Type>(lOther[1]);
+			v[2] = static_cast<Type>(lOther[2]);
+			v[3] = static_cast<Type>(lOther[3]);
+		}
 };
 #endif

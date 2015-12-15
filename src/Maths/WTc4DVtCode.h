@@ -106,6 +106,7 @@ template<class Type> c4DVt<Type> c4DVt<Type>::operator*(Type *lfV)
 };*/
 
 template<class Type> Type &c4DVt<Type>::operator[](uint32 liPos){return v[liPos];};
+template<class Type> const Type &c4DVt<Type>::operator[](uint32 liPos) const{ return v[liPos]; };
 
 template<class Type> c4DVt<Type> c4DVt<Type>::operator=(c4DVt<Type> *lpValue)
 {
