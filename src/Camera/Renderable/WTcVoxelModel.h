@@ -18,6 +18,6 @@ public:
 
  void GenerateVoxelMesh(cMesh *lpMesh);
 
- cVoxelOctTree<uint8> mcVoxelModel;
+ cVoxelOctTreeBase<uint8> *mcVoxelModel;
 };
 

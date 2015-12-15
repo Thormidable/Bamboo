@@ -5,7 +5,7 @@ template <class cX> class cSingleton
 {
 protected:
   static cX *mpInstance;
-  cSingleton();
+  cSingleton(){};
 public:
   static cX *Instance()
   {

@@ -9,5 +9,6 @@ cVoxelModel::cVoxelModel(cCamera *lpCamera) : cModel(lpCamera){}
 
 void cVoxelModel::GenerateVoxelMesh(cMesh *lpMesh)
 {
-	mcVoxelModel.GenerateTree(*lpMesh);
+	mcVoxelModel = cVoxelOctTreeBase<uint8>::GenerateTree(lpMesh);
+	mcVoxelModel->GenerateMeshFromTree();
 }
