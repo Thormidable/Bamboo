@@ -353,6 +353,17 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,WPARAM wParam, LPARAM lParam)
     }
 }
 
+
+void CreateConsole()
+{
+	AllocConsole();
+	HANDLE StdOutHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	int32 CRT = _open_osfhandle(reinterpret_cast<intptr_t>(StdOutHandle), _O_TEXT);
+	FILE* StdOut = _fdopen(CRT, "w");
+	setvbuf(StdOut, nullptr, _IONBF, 1);
+	*stdout = *StdOut;
+}
+
 #endif
 
 

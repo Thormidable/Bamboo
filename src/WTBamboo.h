@@ -3910,7 +3910,8 @@ public:
 
 #if WT_OS_TYPE==OS_WIN32
 	#include <windows.h>
-
+	#include <io.h>
+	#include <Fcntl.h>
     #define GLEW_STATIC 1
 
 	#include "glew.h"
