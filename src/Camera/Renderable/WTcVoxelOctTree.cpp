@@ -236,24 +236,76 @@ template<uint8 tLevels, class tD> cMesh *cVoxelOctTree<tLevels, tD>::GenerateMes
 {
  // Level 1 put vertex at the centre of mass of all incomplete blocks of nodes.
 //  Level 2 put a vertex between all fully solid and fully empty blocks. (three maybe four cases allows it to do hard edges too...)
-	cMesh *lpNew = new cMesh;
+	cMeshArray *lpMeshArray = new cMeshArray;
 
 	cLimitedList<c3DVf> lVerteces(OctSize()*OctSize());
+	cLimitedList<c3DVt<FACE_TYPE> > lFaces(OctSize()*OctSize());
+
 	lVerteces.SetItems(0);
 
 	c3DVf *lpList = VoxelBlockCentreOfMass::Instance()->mfCentre;
+	uint8 *lpSurroundingList = VoxelBlockCentreOfMass::Instance()->mSurroundingConnections;
 
 	auto Func = [&](cVoxelOctTreeLevel<1, tD> &lNode,const c3DVf &lCentre)
 	{
 		if (lNode.NodeLayout() != 0 && lNode.NodeLayout() != 0xFF)
 		{
 			lVerteces.Add(lCentre + lpList[lNode.NodeLayout()] * lNode.NodeSize());
+			
+			uint32 lCoreVertex = lVerteces.Items()-1;			
+			float32 lStep = -1.0f;
+			uint8 lBit = 1;
+			uint8 lLocalVerteces = 0;
+			for (uint8 lUp = 0; lUp < 2; ++lUp)
+			{
+				for (uint8 lDim = 0; lDim < 3; ++lDim)
+				{
+					if (lpSurroundingList[lNode.NodeLayout()]&lBit)
+					{
+						c3DVf lNewCentre = lCentre;
+						lNewCentre.v[lDim] += lStep;
+						uint8 lID = 0;
+						if (GetNode(lNewCentre.v[0] - 0.5f, lNewCentre.v[1] - 0.5f, lNewCentre.v[2] - 0.5f)> 0) lID += 0x1;
+						if (GetNode(lNewCentre.v[0] - 0.5f, lNewCentre.v[1] - 0.5f, lNewCentre.v[2] + 0.5f)> 0) lID += 0x2;
+						if (GetNode(lNewCentre.v[0] - 0.5f, lNewCentre.v[1] + 0.5f, lNewCentre.v[2] - 0.5f)> 0) lID += 0x4;
+						if (GetNode(lNewCentre.v[0] - 0.5f, lNewCentre.v[1] + 0.5f, lNewCentre.v[2] + 0.5f)> 0) lID += 0x8;
+						if (GetNode(lNewCentre.v[0] + 0.5f, lNewCentre.v[1] - 0.5f, lNewCentre.v[2] - 0.5f) > 0) lID += 0x10;
+						if (GetNode(lNewCentre.v[0] + 0.5f, lNewCentre.v[1] - 0.5f, lNewCentre.v[2] + 0.5f) > 0) lID += 0x20;
+						if (GetNode(lNewCentre.v[0] + 0.5f, lNewCentre.v[1] + 0.5f, lNewCentre.v[2] - 0.5f) > 0) lID += 0x40;
+						if (GetNode(lNewCentre.v[0] + 0.5f, lNewCentre.v[1] + 0.5f, lNewCentre.v[2] + 0.5f) > 0) lID += 0x80;
+
+						lVerteces.Add(lNewCentre + lpList[lID] * lNode.NodeSize());
+
+						if (!(++lLocalVerteces % 2))
+						{
+							lFaces.Add(c3DVt<FACE_TYPE>(lCoreVertex, lVerteces.Items() - 1, lVerteces.Items() - 2));
+						}
+					}
+
+					lFaces.Add(c3DVt<FACE_TYPE>(lCoreVertex, lVerteces.Items() - 1, lCoreVertex + 1));
+
+					lBit = lBit << 1;
+				}
+				lStep = 1.0f;
+			}
 		}
 	};
 
-	IterateAllOneLevelCentre<1>(Func, c3DVf(0,0,0));
+	IterateAllOneLevelCentre<1>(Func, c3DVf(0,0,0), (VoxelSkipFlags::EMPTY|VoxelSkipFlags::DENSE));
 
-	return lpNew;
+	lpMeshArray->mpVertex = new float[lVerteces.Items() * 3];
+	memcpy(lpMeshArray->mpVertex, lVerteces.mpList, sizeof(float32) * 3 * lVerteces.Items());
+
+	lpMeshArray->mpFaces = new FACE_TYPE[lFaces.Items() * 3];
+	memcpy(lpMeshArray->mpFaces, lFaces.mpList, sizeof(FACE_TYPE) * 3 * lFaces.Items());
+
+	string lTemp("InternalGenerateVoxelMesh");
+	lpMeshArray->mpRef = new char[lTemp.length()+1];
+	memcpy(lpMeshArray->mpRef, lTemp.data(), lTemp.length()+1);
+
+	cMesh *lpReturn = new cMesh(lpMeshArray);
+	
+	return lpReturn; 
 }
 
 
@@ -263,39 +315,39 @@ template<uint8 tLevels, class tD> cVoxelOctTree<tLevels,tD>::~cVoxelOctTree()
 	delete[] mpCentres;
 }
 
-template<uint8 tLevels, class tD>  void cVoxelOctTree<tLevels, tD>::IterateAllLevels(typename cVoxelOctTreeBase<tD>::LevelIterator LevelCheck)
+template<uint8 tLevels, class tD>  void cVoxelOctTree<tLevels, tD>::IterateAllLevels(LevelIterator LevelCheck, VoxelSkip lSkip)
 {
 	for (uint8 liNode = 0; liNode < miNodes; ++liNode)
 	{
-		mpNodes[liNode].IterateAllLevels(LevelCheck);
+		if(!mpNodes[liNode].ShouldSkip(lSkip)) mpNodes[liNode].IterateAllLevels(LevelCheck, lSkip);
 	}
 }
 
-template<uint8 tLevels, class tD>  void cVoxelOctTree<tLevels, tD>::IterateAllNodes(typename cVoxelOctTreeBase<tD>::NodeIterator NodeCheckFunction)
+template<uint8 tLevels, class tD>  void cVoxelOctTree<tLevels, tD>::IterateAllNodes(NodeIterator NodeCheckFunction, VoxelSkip lSkip)
 {
 	for (uint8 liNode = 0; liNode < miNodes; ++liNode)
 	{
-		mpNodes[liNode].IterateAllNodes(NodeCheckFunction);
+		if (!mpNodes[liNode].ShouldSkip(lSkip)) mpNodes[liNode].IterateAllNodes(NodeCheckFunction, lSkip);
 	}
 }
 
 
-template<uint8 tLevels, class tD> template<uint8 tTargetLevel, typename FuncType> void cVoxelOctTree<tLevels, tD>::IterateAllOneLevel(FuncType lOperate)
+template<uint8 tLevels, class tD> template<uint8 tTargetLevel, typename FuncType> void cVoxelOctTree<tLevels, tD>::IterateAllOneLevel(FuncType lOperate, VoxelSkip lSkip)
 {
 	if (tTargetLevel > tLevels) return;
 
 	for (uint32 lNode = 0; lNode < miNodes; ++lNode)
 	{
-		mpNodes[lNode].IterateAllOneLevel<tTargetLevel>(lOperate);
+		if (!mpNodes[lNode].ShouldSkip(lSkip)) mpNodes[lNode].IterateAllOneLevel<tTargetLevel>(lOperate, lSkip);
 	}
 }
-template<uint8 tLevels, class tD> template<uint8 tTargetLevel, typename FuncType> void cVoxelOctTree<tLevels, tD>::IterateAllOneLevelCentre(FuncType lOperate,const c3DVf &lcCentre)
+template<uint8 tLevels, class tD> template<uint8 tTargetLevel, typename FuncType> void cVoxelOctTree<tLevels, tD>::IterateAllOneLevelCentre(FuncType lOperate, const c3DVf &lcCentre, VoxelSkip lSkip)
 {
 	if (tTargetLevel > tLevels) return;
 
 	for (uint32 lNode = 0; lNode < miNodes; ++lNode)
 	{
-		mpNodes[lNode].IterateAllOneLevelCentre<tTargetLevel>(lOperate, cVoxelOctTreeLevel<tLevels, tD>::NewCentre(c3DVf(), lNode));
+		if (!mpNodes[lNode].ShouldSkip(lSkip)) mpNodes[lNode].IterateAllOneLevelCentre<tTargetLevel>(lOperate, cVoxelOctTreeLevel<tLevels, tD>::NewCentre(c3DVf(), lNode), lSkip);
 	}
 }
 
@@ -304,4 +356,3 @@ template class cVoxelOctTree<7, uint8 >;
 template class cVoxelOctTree<6, uint8 >;
 template class cVoxelOctTree<5, uint8 >;
 template class cVoxelOctTree<4, uint8 >;
-

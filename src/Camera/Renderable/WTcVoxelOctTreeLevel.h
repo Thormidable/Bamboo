@@ -7,31 +7,7 @@ template<uint8 tLevel, class tD> class cVoxelOctTreeLevelGeneric;
 template<uint8 tLevel, class tD> class cVoxelOctTreeLevel : public cVoxelOctTreeLevelGeneric<tLevel, tD>
 {
 public:
-	template<uint8 tTargetLevel, typename FuncType> void IterateAllOneLevel(FuncType lOperate)
-	{
-		if (tLevel == tTargetLevel)
-		{
-			lOperate(*reinterpret_cast<cVoxelOctTreeLevel<tTargetLevel, tD>*>(this));
-			return;
-		}
-		for (uint8 lNode = 0; lNode < 8; ++lNode)
-		{
-			mcNodes[lNode].IterateAllOneLevel<tTargetLevel>(lOperate);
-		}
-	}
 
-	template<uint8 tTargetLevel, typename FuncType> void IterateAllOneLevelCentre(FuncType lOperate,c3DVf lcCentre)
-	{
-		if (tLevel == tTargetLevel)
-		{
-			lOperate(*reinterpret_cast<cVoxelOctTreeLevel<tTargetLevel, tD>*>(this),lcCentre);
-			return;
-		}
-		for (uint8 lNode = 0; lNode < 8; ++lNode)
-		{ 
-			mcNodes[lNode].IterateAllOneLevelCentre<tTargetLevel>(lOperate, NewCentre(lcCentre, lNode));
-		}
-	}
 };
 
 template<uint8 tLevel, class tD> class cVoxelOctTreeLevelGeneric : public cVoxelOctTreeLevelBase<tD>, public cVoxelIteratorTypes<tD>, public cVoxelBaseFunctions
@@ -60,11 +36,44 @@ public:
 	
 	tD &GetNode(uint32 liX, uint32 liY, uint32 liZ);
 
-	void IterateAllLevels(LevelIterator NodeCheckFunction);
-	void IterateAllNodes(NodeIterator NodeCheckFunction);
+	void IterateAllLevels(LevelIterator NodeCheckFunction, VoxelSkip lSKip = VoxelSkipFlags::EMPTY);	
+	void IterateAllNodes(NodeIterator NodeCheckFunction, VoxelSkip lSkip = VoxelSkipFlags::EMPTY);
+
+	template<uint8 tTargetLevel, typename FuncType> void IterateAllOneLevel(FuncType lOperate, VoxelSkip lSkip = VoxelSkipFlags::EMPTY)
+	{
+		if (tLevel == tTargetLevel)
+		{
+			lOperate(*reinterpret_cast<cVoxelOctTreeLevel<tTargetLevel, tD>*>(this));
+			return;
+		}
+		for (uint8 lNode = 0; lNode < 8; ++lNode)
+		{
+			if (!mcNodes[lNode].ShouldSkip(lSkip)) mcNodes[lNode].IterateAllOneLevel<tTargetLevel>(lOperate, lSkip);
+		}
+	}
+
+	template<uint8 tTargetLevel, typename FuncType> void IterateAllOneLevelCentre(FuncType lOperate, c3DVf lcCentre, VoxelSkip lSkip = VoxelSkipFlags::EMPTY)
+	{
+		if (tLevel == tTargetLevel)
+		{
+			lOperate(*reinterpret_cast<cVoxelOctTreeLevel<tTargetLevel, tD>*>(this), lcCentre);
+			return;
+		}
+		for (uint8 lNode = 0; lNode < 8; ++lNode)
+		{
+			if (!mcNodes[lNode].ShouldSkip(lSkip)) mcNodes[lNode].IterateAllOneLevelCentre<tTargetLevel>(lOperate, NewCentre(lcCentre, lNode), lSkip);
+		}
+	}
+
+	bool GenerateCounts();
+
+};
 
 
-
+template<class tD> class cVoxelOctTreeLevel<1, tD> : public cVoxelOctTreeLevelGeneric<1, tD>
+{
+public:
+	uint8 NodeLayout();
 	bool GenerateCounts();
 
 };
@@ -73,34 +82,40 @@ template<class tD> class cVoxelOctTreeLevel<0, tD> : public cVoxelIteratorTypes<
 {
 private:
 		tD mNode;
+
 public:
 	
 	static const uint32 NodeSize(){ return pow(2, 0); };
 	static const uint8 TreeLevel(){ return 0; };
 	static const uint32 LevelBitMask(){ return 0x1 << 0; }
+	bool ContainsVoxels(){ return mNode > 0; };
+	bool ParitallyFull(){ return false; };
+	bool IsDense(){ return mNode > 0; };;
+	bool IsEmpty(){ return mNode == 0; };
+	bool ShouldSkip(VoxelSkip lSkip){ return false; };
 
-	void IterateAllLevels(LevelIterator NodeCheckFunction);
-	void IterateAllNodes(NodeIterator NodeCheckFunction);
+	void IterateAllLevels(LevelIterator NodeCheckFunction, VoxelSkip lSkip = VoxelSkipFlags::EMPTY);
+	void IterateAllNodes(NodeIterator NodeCheckFunction, VoxelSkip lSkip = VoxelSkipFlags::EMPTY);
 
-	template<uint8 tTargetLevel, typename FuncType> void IterateAllOneLevel(FuncType lOperate)
+	template<uint8 tTargetLevel, typename FuncType> void IterateAllOneLevel(FuncType lOperate, VoxelSkip lSkip = VoxelSkipFlags::EMPTY)
 	{
 		if (0 == tTargetLevel)
 		{
 			lOperate(*reinterpret_cast<cVoxelOctTreeLevel<tTargetLevel, tD>*>(this));
-			return;
 		}
 	}
 
-	template<uint8 tTargetLevel, typename FuncType> void IterateAllOneLevelCentre(FuncType lOperate,c3DVf lcCentre)
+	template<uint8 tTargetLevel, typename FuncType> void IterateAllOneLevelCentre(FuncType lOperate, c3DVf lcCentre, VoxelSkip lSkip = VoxelSkipFlags::EMPTY)
 	{
 		if (0 == tTargetLevel)
 		{
 			lOperate(*reinterpret_cast<cVoxelOctTreeLevel<tTargetLevel, tD>*>(this),lcCentre);
-			return;
 		}
 	}
 
-	tD &GetNode(uint32 liX, uint32 liY, uint32 liZ);
+
 	bool GenerateCounts();
+
+	tD &GetNode(uint32 liX, uint32 liY, uint32 liZ);
 };
 

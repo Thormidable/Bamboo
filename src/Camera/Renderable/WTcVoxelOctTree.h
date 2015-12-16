@@ -1,7 +1,6 @@
 
 #pragma once
 
-
 template<class tD> class cVoxelOctTreeBase : public cVoxelIteratorTypes<tD>
 {
 public:
@@ -13,8 +12,8 @@ public:
 
 	virtual tD &GetNode(float32 liX, float32 liY, float32 liZ) = 0;
 
-	virtual void IterateAllLevels(LevelIterator NodeCheckFunction) = 0;
-	virtual void IterateAllNodes(NodeIterator NodeCheckFunction) = 0;
+	virtual void IterateAllLevels(LevelIterator NodeCheckFunction, VoxelSkip lSkip = VoxelSkipFlags::EMPTY) = 0;
+	virtual void IterateAllNodes(NodeIterator NodeCheckFunction, VoxelSkip lSkip = VoxelSkipFlags::EMPTY) = 0;
 
 	virtual void GenerateCounts() = 0;
 	
@@ -31,7 +30,7 @@ protected:
 	virtual void GenerateTree(const cLimitedList<PolygonInfo> &lFace) = 0;
 };
 
-template<uint8 tLevels,class tD> class cVoxelOctTree  : public cVoxelOctTreeBase<tD>, public cVoxelBaseFunctions
+template<uint8 tLevels,class tD> class cVoxelOctTree  : public cVoxelOctTreeBase<tD>, public cVoxelBaseFunctions, public cVoxelIteratorTypes<tD>
 {
 public:
 	cVoxelOctTreeLevel<tLevels,tD> *mpNodes;
@@ -51,11 +50,11 @@ public:
 
 	void GenerateCounts() override;
 
-	void IterateAllLevels(typename cVoxelOctTreeBase<tD>::LevelIterator NodeCheckFunction) override;
-	void IterateAllNodes(typename cVoxelOctTreeBase<tD>::NodeIterator NodeCheckFunction) override;
+	void IterateAllLevels(LevelIterator NodeCheckFunction, VoxelSkip lSkip = VoxelSkipFlags::EMPTY) override;
+	void IterateAllNodes(NodeIterator NodeCheckFunction, VoxelSkip lSkip = VoxelSkipFlags::EMPTY) override;
 
-	template<uint8 tTargetLevel, typename FuncType> void IterateAllOneLevel(FuncType lOperate);
-	template<uint8 tTargetLevel, typename FuncType> void IterateAllOneLevelCentre(FuncType lOperate,const c3DVf &lcCentre);
+	template<uint8 tTargetLevel, typename FuncType> void IterateAllOneLevel(FuncType lOperate, VoxelSkip lSkip = VoxelSkipFlags::EMPTY );
+	template<uint8 tTargetLevel, typename FuncType> void IterateAllOneLevelCentre(FuncType lOperate, const c3DVf &lcCentre, VoxelSkip lSkip = VoxelSkipFlags::EMPTY);
 	
 	cMesh *GenerateMeshFromTree();
 

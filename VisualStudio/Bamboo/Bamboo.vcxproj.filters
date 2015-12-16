@@ -445,9 +445,6 @@
     <ClInclude Include="..\..\src\Audio\WTcAudioObject.h">
       <Filter>Source Files\Audio</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Windows\WTXWindowsKeyCodes.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\Global\CException.h">
       <Filter>Source Files</Filter>
     </ClInclude>
@@ -533,9 +530,6 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Maths\WTcMomentumFRI.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\Windows\EventHandler\WTcMouse.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Networking\WTcNetworkBase.h">
@@ -649,9 +643,6 @@
     <ClInclude Include="..\..\src\Files\Meshes\MeshClasses\WTcVertex.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Windows\WTcWindow.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\Global\WTDefinitions.h">
       <Filter>Source Files</Filter>
     </ClInclude>
@@ -707,9 +698,6 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Files\Textures\WTvTexture.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\Windows\WTWindowsKeyCodes.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Files\CollisionMeshes\WTcBeamCollision.h">
@@ -768,6 +756,18 @@
     </ClInclude>
     <ClInclude Include="..\..\src\Maths\WTcHammingWeight.h">
       <Filter>Source Files\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Windows\WTWindowsKeyCodes.h">
+      <Filter>Source Files\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Windows\WTXWindowsKeyCodes.h">
+      <Filter>Source Files\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Windows\WTcWindow.h">
+      <Filter>Source Files\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Windows\EventHandler\WTcMouse.h">
+      <Filter>Source Files\OS</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

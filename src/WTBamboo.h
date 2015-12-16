@@ -3965,6 +3965,7 @@ public:
 #include <fstream>
 #include <sstream>
 #include <iomanip>
+#include <stdio.h>
 
 #include "./Global/GlobalPointers.h"
 #include "./Global/log.h"

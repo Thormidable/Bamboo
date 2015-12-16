@@ -10,5 +10,5 @@ cVoxelModel::cVoxelModel(cCamera *lpCamera) : cModel(lpCamera){}
 void cVoxelModel::GenerateVoxelMesh(cMesh *lpMesh)
 {
 	mcVoxelModel = cVoxelOctTreeBase<uint8>::GenerateTree(lpMesh);
-	mcVoxelModel->GenerateMeshFromTree();
+	Mesh(mcVoxelModel->GenerateMeshFromTree());
 }
