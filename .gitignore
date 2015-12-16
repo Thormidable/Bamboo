@@ -43,3 +43,5 @@ obj/**/*.o
 obj/**/*.o
 **/*.a
 **/*.lib
+doc/html/*
+doc/latex/*
