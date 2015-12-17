@@ -29,11 +29,11 @@ public:
 		return lcTemp;
 	};
 
-	static inline uint8 GetNodeMask(uint32 lX, uint32 lY, uint32 lZ)
+	inline uint8 GetLocalNodeID(uint32 lX, uint32 lY, uint32 lZ)
 	{
-		return GetNodeMask(lX&LevelBitMask(), lY&LevelBitMask(), lZ&LevelBitMask());
+		return GetNodeID((lX&LevelBitMask())>0, (lY&LevelBitMask())>0, (lZ&LevelBitMask())>0);
 	}
-	
+		
 	tD &GetNode(uint32 liX, uint32 liY, uint32 liZ);
 
 	void IterateAllLevels(LevelIterator NodeCheckFunction, VoxelSkip lSKip = VoxelSkipFlags::EMPTY);	

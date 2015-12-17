@@ -44,6 +44,7 @@ template<uint8 tLevel, class tD> bool cVoxelOctTreeLevelGeneric<tLevel, tD>::Gen
 template<class tD> uint8 cVoxelOctTreeLevel<1,tD>::NodeLayout(){ return LevelBeneathValid; };
 template<class tD> bool cVoxelOctTreeLevel<1, tD>::GenerateCounts()
 {
+	LevelBeneathValid = 0;
 	uint8 lID = 1;
 	for (uint8 liNode = 0; liNode < 8; ++liNode)
 	{
@@ -76,7 +77,7 @@ template<uint8 tLevel, class tD> void cVoxelOctTreeLevelGeneric<tLevel, tD>::Ite
 
 template<uint8 tLevel, class tD> tD &cVoxelOctTreeLevelGeneric<tLevel, tD>::GetNode(uint32 liX, uint32 liY, uint32 liZ)
 {
-	return mcNodes[GetNodeID(liX,liY,liZ)].GetNode(liX,liY,liZ);
+	return mcNodes[GetLocalNodeID(liX, liY, liZ)].GetNode(liX, liY, liZ);
 }
 
 
@@ -84,7 +85,10 @@ template<uint8 tLevel, class tD> tD &cVoxelOctTreeLevelGeneric<tLevel, tD>::GetN
 
 template<class tD> bool cVoxelOctTreeLevel<0, tD>::GenerateCounts() { return mNode>0; }
 
-template<class tD> tD &cVoxelOctTreeLevel<0, tD>::GetNode(uint32 liX, uint32 liY, uint32 liZ) { return mNode; }
+template<class tD> tD &cVoxelOctTreeLevel<0, tD>::GetNode(uint32 liX, uint32 liY, uint32 liZ) 
+{
+	return mNode; 
+}
 
 template<class tD> void cVoxelOctTreeLevel<0, tD>::IterateAllLevels(LevelIterator LevelCheckFunction, VoxelSkip lSkip)
 {

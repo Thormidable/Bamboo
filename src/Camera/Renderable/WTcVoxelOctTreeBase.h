@@ -23,9 +23,9 @@ public:
 		if (lZ) lReturn += 1;
 		return lReturn;
 	}
-	static inline bool GetXFromNodeID(uint8 lNodeID){return lNodeID&0x4;}
-	static inline bool GetYFromNodeID(uint8 lNodeID){ return lNodeID&0x2; }
-	static inline bool GetZFromNodeID(uint8 lNodeID){return lNodeID&0x1;}
+	static inline bool GetXFromNodeID(uint8 lNodeID){return (lNodeID&0x4)>0;}
+	static inline bool GetYFromNodeID(uint8 lNodeID){ return (lNodeID&0x2)>0; }
+	static inline bool GetZFromNodeID(uint8 lNodeID){return (lNodeID&0x1)>0;}
 	
 	static inline uint8 GetXBitMask (){ return 0xF0;}
 	static inline uint8 GetYBitMask (){ return 0xCC;}

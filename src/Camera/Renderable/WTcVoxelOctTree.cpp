@@ -129,7 +129,7 @@ template<class tD> cVoxelOctTreeBase<tD> *cVoxelOctTreeBase<tD>::GenerateTree(cM
 	//PreCalculations for RayCasting
 
 	cLimitedList<PolygonInfo> lFace(lcMesh.Faces());
-
+	lFace.SetItems(lcMesh.Faces());
 	c3DVf lMaxSize(0, 0, 0);
 
 	for (uint32 lPolygon = 0; lPolygon < lcMesh.Faces(); ++lPolygon)
@@ -155,7 +155,7 @@ template<class tD> cVoxelOctTreeBase<tD> *cVoxelOctTreeBase<tD>::GenerateTree(cM
 		}
 	}
 
-	cVoxelOctTreeBase<tD> *lpNewObject = GetVoxelOctTree(lMaxSize.X(), lMaxSize.Y(), lMaxSize.Z());
+	cVoxelOctTreeBase<tD> *lpNewObject = GetVoxelOctTree(lMaxSize.X()*2, lMaxSize.Y()*2, lMaxSize.Z()*2);
 
 	lpNewObject->GenerateTree(lFace);
 
@@ -164,7 +164,14 @@ template<class tD> cVoxelOctTreeBase<tD> *cVoxelOctTreeBase<tD>::GenerateTree(cM
 
 template<uint8 tLevels, class tD> void cVoxelOctTree<tLevels, tD>::GenerateTree(const cLimitedList<PolygonInfo> &lFace)
 {
-	IterateAllNodes([](tD &lcValue){lcValue = 1; });
+	IterateAllNodes([](tD &lcValue){lcValue = 1; },VoxelSkipFlags::NONE);
+
+	uint64 ltCounts = 0;
+	IterateAllOneLevel<0>(
+		[&](cVoxelOctTreeLevel<0, uint8> &lcValue)
+	{
+		if (lcValue.GetNode(0, 0, 0) == 1) ++ltCounts;
+	}, VoxelSkipFlags::EMPTY);
 
 	//Do RayCasts
 	c3DVf lcStart;
@@ -198,28 +205,31 @@ template<uint8 tLevels, class tD> void cVoxelOctTree<tLevels, tD>::GenerateTree(
 				}
 			}
 
-			if (lcCollisions.Items() % 2 > 0)
-			{
-				throw; 
-			}
-
-			float32 lStart = -mNodeHalfDims[2];
+			float32 lCur = -mNodeHalfDims[2];
 			if (lcCollisions.Items() > 0)
 			{
 				ShellSort(lcCollisions.mpList, lcCollisions.Items(),
 					[](c3DVf *l1, c3DVf *l2)->bool
 				{
-					return l1->Z() < l2->Z();
+					return l1->Z() > l2->Z();
 				});
+
 
 				for (uint32 lCol = 0; lCol < lcCollisions.Items(); lCol += 2)
 				{
-					for (float32 lCur = lStart; lCur < lcCollisions[lCol].Z(); lCur+=1.0f){ GetNode(lX, lY, lCur) = 0; }
-					if (lCol + 1 < lcCollisions.Items()) lStart = lcCollisions[lCol + 1].Z() + 1.0f;
+					for (; lCur < lcCollisions[lCol].Z() && lCur < mNodeHalfDims[2]; lCur += 1.0f)
+					{
+						GetNode(lX, lY, lCur) = 0; 
+					}
+					if (lCol + 1 < lcCollisions.Items())
+					{
+						while (lCur >= lcCollisions[lCol + 1].Z()) ++lCol;
+						lCur = floor(lcCollisions[lCol + 1].Z() + 1.0f);
+					}
 				}
 			}
 
-			for (float32 lCur = lStart; lCur < mNodeHalfDims[2]; lCur += 1.0f)
+			for (; lCur < mNodeHalfDims[2]; lCur += 1.0f)
 			{
 				GetNode(lX, lY, lCur) = 0;
 			}
@@ -227,6 +237,17 @@ template<uint8 tLevels, class tD> void cVoxelOctTree<tLevels, tD>::GenerateTree(
 
 		}
 	}
+
+
+	uint64 lCounts = 0;
+	IterateAllOneLevel<0>(
+	[&](cVoxelOctTreeLevel<0, uint8> &lcValue)
+	{
+		if (lcValue.GetNode(0, 0, 0) > 0)
+		{
+			++lCounts;
+		}
+	}, VoxelSkipFlags::EMPTY);
 
 	GenerateCounts();
 }
@@ -293,6 +314,10 @@ template<uint8 tLevels, class tD> cMesh *cVoxelOctTree<tLevels, tD>::GenerateMes
 
 	IterateAllOneLevelCentre<1>(Func, c3DVf(0,0,0), (VoxelSkipFlags::EMPTY|VoxelSkipFlags::DENSE));
 
+
+	lpMeshArray->miVertex = lVerteces.Items();
+	lpMeshArray->miFaces = lFaces.Items();
+
 	lpMeshArray->mpVertex = new float[lVerteces.Items() * 3];
 	memcpy(lpMeshArray->mpVertex, lVerteces.mpList, sizeof(float32) * 3 * lVerteces.Items());
 
@@ -305,6 +330,8 @@ template<uint8 tLevels, class tD> cMesh *cVoxelOctTree<tLevels, tD>::GenerateMes
 
 	cMesh *lpReturn = new cMesh(lpMeshArray);
 	
+	lpReturn->BufferMesh();
+
 	return lpReturn; 
 }
 

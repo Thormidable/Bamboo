@@ -4,8 +4,8 @@
 
 const uint8 cVoxelBaseFunctions::lNodeMask[8] = { 1, 1 << 1, 1 << 2, 1 << 3, 1 << 4, 1 << 5, 1 << 6, 1 << 7 };
 
-template<class tD> bool cVoxelOctTreeLevelBase<tD>::ContainsVoxels(){ return LevelBeneathValid>0; };
-template<class tD> bool cVoxelOctTreeLevelBase<tD>::ParitallyFull(){ return LevelBeneathValid>0 && LevelBeneathValid <0xFF; };
+template<class tD> bool cVoxelOctTreeLevelBase<tD>::ContainsVoxels(){ return !IsEmpty(); };
+template<class tD> bool cVoxelOctTreeLevelBase<tD>::ParitallyFull(){ return !IsEmpty() && !IsDense(); };
 template<class tD> bool cVoxelOctTreeLevelBase<tD>::IsDense(){ return LevelBeneathValid == 0xFF; };
 template<class tD> bool cVoxelOctTreeLevelBase<tD>::IsEmpty(){ return LevelBeneathValid == 0; };
 template<class tD> bool cVoxelOctTreeLevelBase<tD>::ShouldSkip(VoxelSkip lSkip)
